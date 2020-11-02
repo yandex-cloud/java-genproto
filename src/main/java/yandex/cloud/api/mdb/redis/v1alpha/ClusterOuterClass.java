@@ -4503,7 +4503,7 @@ public final class ClusterOuterClass {
      * Configuration of a Redis 5.0 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+     * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
      */
     boolean hasRedisConfig50();
     /**
@@ -4511,7 +4511,7 @@ public final class ClusterOuterClass {
      * Configuration of a Redis 5.0 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+     * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
      */
     yandex.cloud.api.mdb.redis.v1alpha.config.Redis50.RedisConfigSet5_0 getRedisConfig50();
     /**
@@ -4519,7 +4519,7 @@ public final class ClusterOuterClass {
      * Configuration of a Redis 5.0 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+     * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
      */
     yandex.cloud.api.mdb.redis.v1alpha.config.Redis50.RedisConfigSet5_0OrBuilder getRedisConfig50OrBuilder();
 
@@ -4739,7 +4739,7 @@ public final class ClusterOuterClass {
      * Configuration of a Redis 5.0 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+     * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
      */
     public boolean hasRedisConfig50() {
       return redisConfigCase_ == 2;
@@ -4749,7 +4749,7 @@ public final class ClusterOuterClass {
      * Configuration of a Redis 5.0 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+     * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
      */
     public yandex.cloud.api.mdb.redis.v1alpha.config.Redis50.RedisConfigSet5_0 getRedisConfig50() {
       if (redisConfigCase_ == 2) {
@@ -4762,7 +4762,7 @@ public final class ClusterOuterClass {
      * Configuration of a Redis 5.0 server.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+     * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
      */
     public yandex.cloud.api.mdb.redis.v1alpha.config.Redis50.RedisConfigSet5_0OrBuilder getRedisConfig50OrBuilder() {
       if (redisConfigCase_ == 2) {
@@ -5293,7 +5293,7 @@ public final class ClusterOuterClass {
        * Configuration of a Redis 5.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
        */
       public boolean hasRedisConfig50() {
         return redisConfigCase_ == 2;
@@ -5303,7 +5303,7 @@ public final class ClusterOuterClass {
        * Configuration of a Redis 5.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
        */
       public yandex.cloud.api.mdb.redis.v1alpha.config.Redis50.RedisConfigSet5_0 getRedisConfig50() {
         if (redisConfig50Builder_ == null) {
@@ -5323,7 +5323,7 @@ public final class ClusterOuterClass {
        * Configuration of a Redis 5.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
        */
       public Builder setRedisConfig50(yandex.cloud.api.mdb.redis.v1alpha.config.Redis50.RedisConfigSet5_0 value) {
         if (redisConfig50Builder_ == null) {
@@ -5343,7 +5343,7 @@ public final class ClusterOuterClass {
        * Configuration of a Redis 5.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
        */
       public Builder setRedisConfig50(
           yandex.cloud.api.mdb.redis.v1alpha.config.Redis50.RedisConfigSet5_0.Builder builderForValue) {
@@ -5361,7 +5361,7 @@ public final class ClusterOuterClass {
        * Configuration of a Redis 5.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
        */
       public Builder mergeRedisConfig50(yandex.cloud.api.mdb.redis.v1alpha.config.Redis50.RedisConfigSet5_0 value) {
         if (redisConfig50Builder_ == null) {
@@ -5387,7 +5387,7 @@ public final class ClusterOuterClass {
        * Configuration of a Redis 5.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
        */
       public Builder clearRedisConfig50() {
         if (redisConfig50Builder_ == null) {
@@ -5410,7 +5410,7 @@ public final class ClusterOuterClass {
        * Configuration of a Redis 5.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
        */
       public yandex.cloud.api.mdb.redis.v1alpha.config.Redis50.RedisConfigSet5_0.Builder getRedisConfig50Builder() {
         return getRedisConfig50FieldBuilder().getBuilder();
@@ -5420,7 +5420,7 @@ public final class ClusterOuterClass {
        * Configuration of a Redis 5.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
        */
       public yandex.cloud.api.mdb.redis.v1alpha.config.Redis50.RedisConfigSet5_0OrBuilder getRedisConfig50OrBuilder() {
         if ((redisConfigCase_ == 2) && (redisConfig50Builder_ != null)) {
@@ -5437,7 +5437,7 @@ public final class ClusterOuterClass {
        * Configuration of a Redis 5.0 server.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2;</code>
+       * <code>.yandex.cloud.mdb.redis.v1alpha.config.RedisConfigSet5_0 redis_config_5_0 = 2[json_name = "redisConfig_5_0"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.redis.v1alpha.config.Redis50.RedisConfigSet5_0, yandex.cloud.api.mdb.redis.v1alpha.config.Redis50.RedisConfigSet5_0.Builder, yandex.cloud.api.mdb.redis.v1alpha.config.Redis50.RedisConfigSet5_0OrBuilder> 
@@ -9740,33 +9740,33 @@ public final class ClusterOuterClass {
       "OR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOP" +
       "PED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004nam" +
       "e\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001" +
-      "(\t\"\304\001\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022T\n" +
+      "(\t\"\325\001\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022e\n" +
       "\020redis_config_5_0\030\002 \001(\01328.yandex.cloud.m" +
       "db.redis.v1alpha.config.RedisConfigSet5_" +
-      "0H\000\022<\n\tresources\030\003 \001(\0132).yandex.cloud.md" +
-      "b.redis.v1alpha.ResourcesB\016\n\014redis_confi" +
-      "g\"\257\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002" +
-      " \001(\t\022\017\n\007zone_id\030\003 \001(\t\022\021\n\tsubnet_id\030\004 \001(\t" +
-      "\022<\n\tresources\030\005 \001(\0132).yandex.cloud.mdb.r" +
-      "edis.v1alpha.Resources\0227\n\004role\030\006 \001(\0162).y" +
-      "andex.cloud.mdb.redis.v1alpha.Host.Role\022" +
-      ";\n\006health\030\007 \001(\0162+.yandex.cloud.mdb.redis" +
-      ".v1alpha.Host.Health\0229\n\010services\030\010 \003(\0132\'" +
-      ".yandex.cloud.mdb.redis.v1alpha.Service\"" +
-      "1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n" +
-      "\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000" +
-      "\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\357\001\n\007" +
-      "Service\022:\n\004type\030\001 \001(\0162,.yandex.cloud.mdb" +
-      ".redis.v1alpha.Service.Type\022>\n\006health\030\002 " +
-      "\001(\0162..yandex.cloud.mdb.redis.v1alpha.Ser" +
-      "vice.Health\"5\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020" +
-      "\000\022\t\n\005REDIS\020\001\022\014\n\010SENTINEL\020\002\"1\n\006Health\022\022\n\016" +
-      "HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\":\n" +
-      "\tResources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021" +
-      "\n\tdisk_size\030\002 \001(\003Bn\n\"yandex.cloud.api.md" +
-      "b.redis.v1alphaZHgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/mdb/redis/v1al" +
-      "pha;redisb\006proto3"
+      "0H\000R\017redisConfig_5_0\022<\n\tresources\030\003 \001(\0132" +
+      ").yandex.cloud.mdb.redis.v1alpha.Resourc" +
+      "esB\016\n\014redis_config\"\257\003\n\004Host\022\014\n\004name\030\001 \001(" +
+      "\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022\021" +
+      "\n\tsubnet_id\030\004 \001(\t\022<\n\tresources\030\005 \001(\0132).y" +
+      "andex.cloud.mdb.redis.v1alpha.Resources\022" +
+      "7\n\004role\030\006 \001(\0162).yandex.cloud.mdb.redis.v" +
+      "1alpha.Host.Role\022;\n\006health\030\007 \001(\0162+.yande" +
+      "x.cloud.mdb.redis.v1alpha.Host.Health\0229\n" +
+      "\010services\030\010 \003(\0132\'.yandex.cloud.mdb.redis" +
+      ".v1alpha.Service\"1\n\004Role\022\020\n\014ROLE_UNKNOWN" +
+      "\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n" +
+      "\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014" +
+      "\n\010DEGRADED\020\003\"\357\001\n\007Service\022:\n\004type\030\001 \001(\0162," +
+      ".yandex.cloud.mdb.redis.v1alpha.Service." +
+      "Type\022>\n\006health\030\002 \001(\0162..yandex.cloud.mdb." +
+      "redis.v1alpha.Service.Health\"5\n\004Type\022\024\n\020" +
+      "TYPE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\014\n\010SENTINE" +
+      "L\020\002\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALI" +
+      "VE\020\001\022\010\n\004DEAD\020\002\":\n\tResources\022\032\n\022resource_" +
+      "preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003Bn\n\"ya" +
+      "ndex.cloud.api.mdb.redis.v1alphaZHgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/mdb/redis/v1alpha;redisb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

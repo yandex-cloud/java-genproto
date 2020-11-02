@@ -84,7 +84,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Name of the Apache Kafka® cluster.
-     * The name must be unique within the folder. 1-63 characters long.
+     * The name must be unique within the folder. 1-63 characters long. Value must match the regular expression `[a-zA-Z0-9_-]*`.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -93,7 +93,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Name of the Apache Kafka® cluster.
-     * The name must be unique within the folder. 1-63 characters long.
+     * The name must be unique within the folder. 1-63 characters long. Value must match the regular expression `[a-zA-Z0-9_-]*`.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -1124,7 +1124,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Name of the Apache Kafka® cluster.
-     * The name must be unique within the folder. 1-63 characters long.
+     * The name must be unique within the folder. 1-63 characters long. Value must match the regular expression `[a-zA-Z0-9_-]*`.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -1144,7 +1144,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Name of the Apache Kafka® cluster.
-     * The name must be unique within the folder. 1-63 characters long.
+     * The name must be unique within the folder. 1-63 characters long. Value must match the regular expression `[a-zA-Z0-9_-]*`.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -2438,7 +2438,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the Apache Kafka® cluster.
-       * The name must be unique within the folder. 1-63 characters long.
+       * The name must be unique within the folder. 1-63 characters long. Value must match the regular expression `[a-zA-Z0-9_-]*`.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2458,7 +2458,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the Apache Kafka® cluster.
-       * The name must be unique within the folder. 1-63 characters long.
+       * The name must be unique within the folder. 1-63 characters long. Value must match the regular expression `[a-zA-Z0-9_-]*`.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2479,7 +2479,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the Apache Kafka® cluster.
-       * The name must be unique within the folder. 1-63 characters long.
+       * The name must be unique within the folder. 1-63 characters long. Value must match the regular expression `[a-zA-Z0-9_-]*`.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2497,7 +2497,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the Apache Kafka® cluster.
-       * The name must be unique within the folder. 1-63 characters long.
+       * The name must be unique within the folder. 1-63 characters long. Value must match the regular expression `[a-zA-Z0-9_-]*`.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -2511,7 +2511,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Name of the Apache Kafka® cluster.
-       * The name must be unique within the folder. 1-63 characters long.
+       * The name must be unique within the folder. 1-63 characters long. Value must match the regular expression `[a-zA-Z0-9_-]*`.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -4522,7 +4522,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Version of Apache Kafka® used in the cluster.
+     * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -4530,7 +4530,7 @@ public final class ClusterOuterClass {
     java.lang.String getVersion();
     /**
      * <pre>
-     * Version of Apache Kafka® used in the cluster.
+     * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -6637,7 +6637,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object version_;
     /**
      * <pre>
-     * Version of Apache Kafka® used in the cluster.
+     * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -6656,7 +6656,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Version of Apache Kafka® used in the cluster.
+     * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
      * </pre>
      *
      * <code>string version = 1;</code>
@@ -7285,7 +7285,7 @@ public final class ClusterOuterClass {
       private java.lang.Object version_ = "";
       /**
        * <pre>
-       * Version of Apache Kafka® used in the cluster.
+       * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -7304,7 +7304,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of Apache Kafka® used in the cluster.
+       * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -7324,7 +7324,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of Apache Kafka® used in the cluster.
+       * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -7341,7 +7341,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of Apache Kafka® used in the cluster.
+       * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -7354,7 +7354,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Version of Apache Kafka® used in the cluster.
+       * Version of Apache Kafka® used in the cluster. Possible values: `2.1`, `2.6`.
        * </pre>
        *
        * <code>string version = 1;</code>
@@ -8105,10 +8105,6 @@ public final class ClusterOuterClass {
         getDiskTypeIdBytes();
   }
   /**
-   * <pre>
-   * Computational resources.
-   * </pre>
-   *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.Resources}
    */
   public  static final class Resources extends
@@ -8476,10 +8472,6 @@ public final class ClusterOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Computational resources.
-     * </pre>
-     *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.Resources}
      */
     public static final class Builder extends
@@ -9138,7 +9130,7 @@ public final class ClusterOuterClass {
   }
   /**
    * <pre>
-   * Kafka broker configuration.
+   * Kafka version 2.1 broker configuration.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.KafkaConfig2_1}
@@ -9861,7 +9853,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Kafka broker configuration.
+     * Kafka version 2.1 broker configuration.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.KafkaConfig2_1}
@@ -11602,7 +11594,7 @@ public final class ClusterOuterClass {
   }
   /**
    * <pre>
-   * Kafka 2.6 broker configuration.
+   * Kafka version 2.6 broker configuration.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.KafkaConfig2_6}
@@ -12325,7 +12317,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Kafka 2.6 broker configuration.
+     * Kafka version 2.6 broker configuration.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.KafkaConfig2_6}
@@ -13918,7 +13910,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Resources allocated to the host.
+     * Computational resources allocated to the host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -13926,7 +13918,7 @@ public final class ClusterOuterClass {
     boolean hasResources();
     /**
      * <pre>
-     * Resources allocated to the host.
+     * Computational resources allocated to the host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -13934,7 +13926,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources getResources();
     /**
      * <pre>
-     * Resources allocated to the host.
+     * Computational resources allocated to the host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -14548,7 +14540,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources resources_;
     /**
      * <pre>
-     * Resources allocated to the host.
+     * Computational resources allocated to the host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -14558,7 +14550,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Resources allocated to the host.
+     * Computational resources allocated to the host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -14568,7 +14560,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Resources allocated to the host.
+     * Computational resources allocated to the host.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -15433,7 +15425,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.Resources.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ResourcesOrBuilder> resourcesBuilder_;
       /**
        * <pre>
-       * Resources allocated to the host.
+       * Computational resources allocated to the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -15443,7 +15435,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to the host.
+       * Computational resources allocated to the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -15457,7 +15449,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to the host.
+       * Computational resources allocated to the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -15477,7 +15469,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to the host.
+       * Computational resources allocated to the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -15495,7 +15487,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to the host.
+       * Computational resources allocated to the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -15517,7 +15509,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to the host.
+       * Computational resources allocated to the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -15535,7 +15527,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to the host.
+       * Computational resources allocated to the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -15547,7 +15539,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to the host.
+       * Computational resources allocated to the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>
@@ -15562,7 +15554,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Resources allocated to the host.
+       * Computational resources allocated to the host.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.Resources resources = 5;</code>

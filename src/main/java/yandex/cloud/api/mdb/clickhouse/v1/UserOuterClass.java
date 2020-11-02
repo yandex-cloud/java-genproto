@@ -6871,7 +6871,7 @@ public final class UserOuterClass {
      * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
      */
     boolean hasOutputFormatJsonQuote64BitIntegers();
     /**
@@ -6882,7 +6882,7 @@ public final class UserOuterClass {
      * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
      */
     com.google.protobuf.BoolValue getOutputFormatJsonQuote64BitIntegers();
     /**
@@ -6893,7 +6893,7 @@ public final class UserOuterClass {
      * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
      */
     com.google.protobuf.BoolValueOrBuilder getOutputFormatJsonQuote64BitIntegersOrBuilder();
 
@@ -7004,6 +7004,45 @@ public final class UserOuterClass {
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getEmptyResultForAggregationByEmptySetOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     */
+    boolean hasJoinedSubqueryRequiresAlias();
+    /**
+     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     */
+    com.google.protobuf.BoolValue getJoinedSubqueryRequiresAlias();
+    /**
+     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getJoinedSubqueryRequiresAliasOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     */
+    boolean hasJoinUseNulls();
+    /**
+     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     */
+    com.google.protobuf.BoolValue getJoinUseNulls();
+    /**
+     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getJoinUseNullsOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     */
+    boolean hasTransformNullIn();
+    /**
+     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     */
+    com.google.protobuf.BoolValue getTransformNullIn();
+    /**
+     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getTransformNullInOrBuilder();
 
     /**
      * <pre>
@@ -8375,6 +8414,45 @@ public final class UserOuterClass {
               int rawValue = input.readEnum();
 
               joinOverflowMode_ = rawValue;
+              break;
+            }
+            case 746: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (joinedSubqueryRequiresAlias_ != null) {
+                subBuilder = joinedSubqueryRequiresAlias_.toBuilder();
+              }
+              joinedSubqueryRequiresAlias_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(joinedSubqueryRequiresAlias_);
+                joinedSubqueryRequiresAlias_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 754: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (joinUseNulls_ != null) {
+                subBuilder = joinUseNulls_.toBuilder();
+              }
+              joinUseNulls_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(joinUseNulls_);
+                joinUseNulls_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 762: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (transformNullIn_ != null) {
+                subBuilder = transformNullIn_.toBuilder();
+              }
+              transformNullIn_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(transformNullIn_);
+                transformNullIn_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -12090,7 +12168,7 @@ public final class UserOuterClass {
      * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
      */
     public boolean hasOutputFormatJsonQuote64BitIntegers() {
       return outputFormatJsonQuote64BitIntegers_ != null;
@@ -12103,7 +12181,7 @@ public final class UserOuterClass {
      * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
      */
     public com.google.protobuf.BoolValue getOutputFormatJsonQuote64BitIntegers() {
       return outputFormatJsonQuote64BitIntegers_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : outputFormatJsonQuote64BitIntegers_;
@@ -12116,7 +12194,7 @@ public final class UserOuterClass {
      * Default value: **false** (quoting 64-bit integers is disabled).
      * </pre>
      *
-     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+     * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
      */
     public com.google.protobuf.BoolValueOrBuilder getOutputFormatJsonQuote64BitIntegersOrBuilder() {
       return getOutputFormatJsonQuote64BitIntegers();
@@ -12252,6 +12330,69 @@ public final class UserOuterClass {
      */
     public com.google.protobuf.BoolValueOrBuilder getEmptyResultForAggregationByEmptySetOrBuilder() {
       return getEmptyResultForAggregationByEmptySet();
+    }
+
+    public static final int JOINED_SUBQUERY_REQUIRES_ALIAS_FIELD_NUMBER = 93;
+    private com.google.protobuf.BoolValue joinedSubqueryRequiresAlias_;
+    /**
+     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     */
+    public boolean hasJoinedSubqueryRequiresAlias() {
+      return joinedSubqueryRequiresAlias_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     */
+    public com.google.protobuf.BoolValue getJoinedSubqueryRequiresAlias() {
+      return joinedSubqueryRequiresAlias_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinedSubqueryRequiresAlias_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getJoinedSubqueryRequiresAliasOrBuilder() {
+      return getJoinedSubqueryRequiresAlias();
+    }
+
+    public static final int JOIN_USE_NULLS_FIELD_NUMBER = 94;
+    private com.google.protobuf.BoolValue joinUseNulls_;
+    /**
+     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     */
+    public boolean hasJoinUseNulls() {
+      return joinUseNulls_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     */
+    public com.google.protobuf.BoolValue getJoinUseNulls() {
+      return joinUseNulls_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinUseNulls_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getJoinUseNullsOrBuilder() {
+      return getJoinUseNulls();
+    }
+
+    public static final int TRANSFORM_NULL_IN_FIELD_NUMBER = 95;
+    private com.google.protobuf.BoolValue transformNullIn_;
+    /**
+     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     */
+    public boolean hasTransformNullIn() {
+      return transformNullIn_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     */
+    public com.google.protobuf.BoolValue getTransformNullIn() {
+      return transformNullIn_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : transformNullIn_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getTransformNullInOrBuilder() {
+      return getTransformNullIn();
     }
 
     public static final int HTTP_CONNECTION_TIMEOUT_FIELD_NUMBER = 65;
@@ -12830,6 +12971,15 @@ public final class UserOuterClass {
       if (joinOverflowMode_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.OVERFLOW_MODE_UNSPECIFIED.getNumber()) {
         output.writeEnum(92, joinOverflowMode_);
       }
+      if (joinedSubqueryRequiresAlias_ != null) {
+        output.writeMessage(93, getJoinedSubqueryRequiresAlias());
+      }
+      if (joinUseNulls_ != null) {
+        output.writeMessage(94, getJoinUseNulls());
+      }
+      if (transformNullIn_ != null) {
+        output.writeMessage(95, getTransformNullIn());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -13198,6 +13348,18 @@ public final class UserOuterClass {
       if (joinOverflowMode_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.OverflowMode.OVERFLOW_MODE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(92, joinOverflowMode_);
+      }
+      if (joinedSubqueryRequiresAlias_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(93, getJoinedSubqueryRequiresAlias());
+      }
+      if (joinUseNulls_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(94, getJoinUseNulls());
+      }
+      if (transformNullIn_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(95, getTransformNullIn());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13581,6 +13743,21 @@ public final class UserOuterClass {
         result = result && getEmptyResultForAggregationByEmptySet()
             .equals(other.getEmptyResultForAggregationByEmptySet());
       }
+      result = result && (hasJoinedSubqueryRequiresAlias() == other.hasJoinedSubqueryRequiresAlias());
+      if (hasJoinedSubqueryRequiresAlias()) {
+        result = result && getJoinedSubqueryRequiresAlias()
+            .equals(other.getJoinedSubqueryRequiresAlias());
+      }
+      result = result && (hasJoinUseNulls() == other.hasJoinUseNulls());
+      if (hasJoinUseNulls()) {
+        result = result && getJoinUseNulls()
+            .equals(other.getJoinUseNulls());
+      }
+      result = result && (hasTransformNullIn() == other.hasTransformNullIn());
+      if (hasTransformNullIn()) {
+        result = result && getTransformNullIn()
+            .equals(other.getTransformNullIn());
+      }
       result = result && (hasHttpConnectionTimeout() == other.hasHttpConnectionTimeout());
       if (hasHttpConnectionTimeout()) {
         result = result && getHttpConnectionTimeout()
@@ -13933,6 +14110,18 @@ public final class UserOuterClass {
       if (hasEmptyResultForAggregationByEmptySet()) {
         hash = (37 * hash) + EMPTY_RESULT_FOR_AGGREGATION_BY_EMPTY_SET_FIELD_NUMBER;
         hash = (53 * hash) + getEmptyResultForAggregationByEmptySet().hashCode();
+      }
+      if (hasJoinedSubqueryRequiresAlias()) {
+        hash = (37 * hash) + JOINED_SUBQUERY_REQUIRES_ALIAS_FIELD_NUMBER;
+        hash = (53 * hash) + getJoinedSubqueryRequiresAlias().hashCode();
+      }
+      if (hasJoinUseNulls()) {
+        hash = (37 * hash) + JOIN_USE_NULLS_FIELD_NUMBER;
+        hash = (53 * hash) + getJoinUseNulls().hashCode();
+      }
+      if (hasTransformNullIn()) {
+        hash = (37 * hash) + TRANSFORM_NULL_IN_FIELD_NUMBER;
+        hash = (53 * hash) + getTransformNullIn().hashCode();
       }
       if (hasHttpConnectionTimeout()) {
         hash = (37 * hash) + HTTP_CONNECTION_TIMEOUT_FIELD_NUMBER;
@@ -14550,6 +14739,24 @@ public final class UserOuterClass {
           emptyResultForAggregationByEmptySet_ = null;
           emptyResultForAggregationByEmptySetBuilder_ = null;
         }
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          joinedSubqueryRequiresAlias_ = null;
+        } else {
+          joinedSubqueryRequiresAlias_ = null;
+          joinedSubqueryRequiresAliasBuilder_ = null;
+        }
+        if (joinUseNullsBuilder_ == null) {
+          joinUseNulls_ = null;
+        } else {
+          joinUseNulls_ = null;
+          joinUseNullsBuilder_ = null;
+        }
+        if (transformNullInBuilder_ == null) {
+          transformNullIn_ = null;
+        } else {
+          transformNullIn_ = null;
+          transformNullInBuilder_ = null;
+        }
         if (httpConnectionTimeoutBuilder_ == null) {
           httpConnectionTimeout_ = null;
         } else {
@@ -14986,6 +15193,21 @@ public final class UserOuterClass {
         } else {
           result.emptyResultForAggregationByEmptySet_ = emptyResultForAggregationByEmptySetBuilder_.build();
         }
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          result.joinedSubqueryRequiresAlias_ = joinedSubqueryRequiresAlias_;
+        } else {
+          result.joinedSubqueryRequiresAlias_ = joinedSubqueryRequiresAliasBuilder_.build();
+        }
+        if (joinUseNullsBuilder_ == null) {
+          result.joinUseNulls_ = joinUseNulls_;
+        } else {
+          result.joinUseNulls_ = joinUseNullsBuilder_.build();
+        }
+        if (transformNullInBuilder_ == null) {
+          result.transformNullIn_ = transformNullIn_;
+        } else {
+          result.transformNullIn_ = transformNullInBuilder_.build();
+        }
         if (httpConnectionTimeoutBuilder_ == null) {
           result.httpConnectionTimeout_ = httpConnectionTimeout_;
         } else {
@@ -15315,6 +15537,15 @@ public final class UserOuterClass {
         }
         if (other.hasEmptyResultForAggregationByEmptySet()) {
           mergeEmptyResultForAggregationByEmptySet(other.getEmptyResultForAggregationByEmptySet());
+        }
+        if (other.hasJoinedSubqueryRequiresAlias()) {
+          mergeJoinedSubqueryRequiresAlias(other.getJoinedSubqueryRequiresAlias());
+        }
+        if (other.hasJoinUseNulls()) {
+          mergeJoinUseNulls(other.getJoinUseNulls());
+        }
+        if (other.hasTransformNullIn()) {
+          mergeTransformNullIn(other.getTransformNullIn());
         }
         if (other.hasHttpConnectionTimeout()) {
           mergeHttpConnectionTimeout(other.getHttpConnectionTimeout());
@@ -27993,7 +28224,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public boolean hasOutputFormatJsonQuote64BitIntegers() {
         return outputFormatJsonQuote64BitIntegersBuilder_ != null || outputFormatJsonQuote64BitIntegers_ != null;
@@ -28006,7 +28237,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public com.google.protobuf.BoolValue getOutputFormatJsonQuote64BitIntegers() {
         if (outputFormatJsonQuote64BitIntegersBuilder_ == null) {
@@ -28023,7 +28254,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public Builder setOutputFormatJsonQuote64BitIntegers(com.google.protobuf.BoolValue value) {
         if (outputFormatJsonQuote64BitIntegersBuilder_ == null) {
@@ -28046,7 +28277,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public Builder setOutputFormatJsonQuote64BitIntegers(
           com.google.protobuf.BoolValue.Builder builderForValue) {
@@ -28067,7 +28298,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public Builder mergeOutputFormatJsonQuote64BitIntegers(com.google.protobuf.BoolValue value) {
         if (outputFormatJsonQuote64BitIntegersBuilder_ == null) {
@@ -28092,7 +28323,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public Builder clearOutputFormatJsonQuote64BitIntegers() {
         if (outputFormatJsonQuote64BitIntegersBuilder_ == null) {
@@ -28113,7 +28344,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public com.google.protobuf.BoolValue.Builder getOutputFormatJsonQuote64BitIntegersBuilder() {
         
@@ -28128,7 +28359,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getOutputFormatJsonQuote64BitIntegersOrBuilder() {
         if (outputFormatJsonQuote64BitIntegersBuilder_ != null) {
@@ -28146,7 +28377,7 @@ public final class UserOuterClass {
        * Default value: **false** (quoting 64-bit integers is disabled).
        * </pre>
        *
-       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63;</code>
+       * <code>.google.protobuf.BoolValue output_format_json_quote_64bit_integers = 63[json_name = "outputFormatJsonQuote_64bitIntegers"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
@@ -28718,6 +28949,357 @@ public final class UserOuterClass {
           emptyResultForAggregationByEmptySet_ = null;
         }
         return emptyResultForAggregationByEmptySetBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue joinedSubqueryRequiresAlias_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> joinedSubqueryRequiresAliasBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public boolean hasJoinedSubqueryRequiresAlias() {
+        return joinedSubqueryRequiresAliasBuilder_ != null || joinedSubqueryRequiresAlias_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public com.google.protobuf.BoolValue getJoinedSubqueryRequiresAlias() {
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          return joinedSubqueryRequiresAlias_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinedSubqueryRequiresAlias_;
+        } else {
+          return joinedSubqueryRequiresAliasBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public Builder setJoinedSubqueryRequiresAlias(com.google.protobuf.BoolValue value) {
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          joinedSubqueryRequiresAlias_ = value;
+          onChanged();
+        } else {
+          joinedSubqueryRequiresAliasBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public Builder setJoinedSubqueryRequiresAlias(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          joinedSubqueryRequiresAlias_ = builderForValue.build();
+          onChanged();
+        } else {
+          joinedSubqueryRequiresAliasBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public Builder mergeJoinedSubqueryRequiresAlias(com.google.protobuf.BoolValue value) {
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          if (joinedSubqueryRequiresAlias_ != null) {
+            joinedSubqueryRequiresAlias_ =
+              com.google.protobuf.BoolValue.newBuilder(joinedSubqueryRequiresAlias_).mergeFrom(value).buildPartial();
+          } else {
+            joinedSubqueryRequiresAlias_ = value;
+          }
+          onChanged();
+        } else {
+          joinedSubqueryRequiresAliasBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public Builder clearJoinedSubqueryRequiresAlias() {
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          joinedSubqueryRequiresAlias_ = null;
+          onChanged();
+        } else {
+          joinedSubqueryRequiresAlias_ = null;
+          joinedSubqueryRequiresAliasBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getJoinedSubqueryRequiresAliasBuilder() {
+        
+        onChanged();
+        return getJoinedSubqueryRequiresAliasFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getJoinedSubqueryRequiresAliasOrBuilder() {
+        if (joinedSubqueryRequiresAliasBuilder_ != null) {
+          return joinedSubqueryRequiresAliasBuilder_.getMessageOrBuilder();
+        } else {
+          return joinedSubqueryRequiresAlias_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : joinedSubqueryRequiresAlias_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue joined_subquery_requires_alias = 93;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getJoinedSubqueryRequiresAliasFieldBuilder() {
+        if (joinedSubqueryRequiresAliasBuilder_ == null) {
+          joinedSubqueryRequiresAliasBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getJoinedSubqueryRequiresAlias(),
+                  getParentForChildren(),
+                  isClean());
+          joinedSubqueryRequiresAlias_ = null;
+        }
+        return joinedSubqueryRequiresAliasBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue joinUseNulls_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> joinUseNullsBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public boolean hasJoinUseNulls() {
+        return joinUseNullsBuilder_ != null || joinUseNulls_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public com.google.protobuf.BoolValue getJoinUseNulls() {
+        if (joinUseNullsBuilder_ == null) {
+          return joinUseNulls_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : joinUseNulls_;
+        } else {
+          return joinUseNullsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public Builder setJoinUseNulls(com.google.protobuf.BoolValue value) {
+        if (joinUseNullsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          joinUseNulls_ = value;
+          onChanged();
+        } else {
+          joinUseNullsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public Builder setJoinUseNulls(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (joinUseNullsBuilder_ == null) {
+          joinUseNulls_ = builderForValue.build();
+          onChanged();
+        } else {
+          joinUseNullsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public Builder mergeJoinUseNulls(com.google.protobuf.BoolValue value) {
+        if (joinUseNullsBuilder_ == null) {
+          if (joinUseNulls_ != null) {
+            joinUseNulls_ =
+              com.google.protobuf.BoolValue.newBuilder(joinUseNulls_).mergeFrom(value).buildPartial();
+          } else {
+            joinUseNulls_ = value;
+          }
+          onChanged();
+        } else {
+          joinUseNullsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public Builder clearJoinUseNulls() {
+        if (joinUseNullsBuilder_ == null) {
+          joinUseNulls_ = null;
+          onChanged();
+        } else {
+          joinUseNulls_ = null;
+          joinUseNullsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getJoinUseNullsBuilder() {
+        
+        onChanged();
+        return getJoinUseNullsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getJoinUseNullsOrBuilder() {
+        if (joinUseNullsBuilder_ != null) {
+          return joinUseNullsBuilder_.getMessageOrBuilder();
+        } else {
+          return joinUseNulls_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : joinUseNulls_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue join_use_nulls = 94;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getJoinUseNullsFieldBuilder() {
+        if (joinUseNullsBuilder_ == null) {
+          joinUseNullsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getJoinUseNulls(),
+                  getParentForChildren(),
+                  isClean());
+          joinUseNulls_ = null;
+        }
+        return joinUseNullsBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue transformNullIn_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> transformNullInBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public boolean hasTransformNullIn() {
+        return transformNullInBuilder_ != null || transformNullIn_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public com.google.protobuf.BoolValue getTransformNullIn() {
+        if (transformNullInBuilder_ == null) {
+          return transformNullIn_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : transformNullIn_;
+        } else {
+          return transformNullInBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public Builder setTransformNullIn(com.google.protobuf.BoolValue value) {
+        if (transformNullInBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          transformNullIn_ = value;
+          onChanged();
+        } else {
+          transformNullInBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public Builder setTransformNullIn(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (transformNullInBuilder_ == null) {
+          transformNullIn_ = builderForValue.build();
+          onChanged();
+        } else {
+          transformNullInBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public Builder mergeTransformNullIn(com.google.protobuf.BoolValue value) {
+        if (transformNullInBuilder_ == null) {
+          if (transformNullIn_ != null) {
+            transformNullIn_ =
+              com.google.protobuf.BoolValue.newBuilder(transformNullIn_).mergeFrom(value).buildPartial();
+          } else {
+            transformNullIn_ = value;
+          }
+          onChanged();
+        } else {
+          transformNullInBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public Builder clearTransformNullIn() {
+        if (transformNullInBuilder_ == null) {
+          transformNullIn_ = null;
+          onChanged();
+        } else {
+          transformNullIn_ = null;
+          transformNullInBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getTransformNullInBuilder() {
+        
+        onChanged();
+        return getTransformNullInFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getTransformNullInOrBuilder() {
+        if (transformNullInBuilder_ != null) {
+          return transformNullInBuilder_.getMessageOrBuilder();
+        } else {
+          return transformNullIn_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : transformNullIn_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue transform_null_in = 95;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getTransformNullInFieldBuilder() {
+        if (transformNullInBuilder_ == null) {
+          transformNullInBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getTransformNullIn(),
+                  getParentForChildren(),
+                  isClean());
+          transformNullIn_ = null;
+        }
+        return transformNullInBuilder_;
       }
 
       private com.google.protobuf.Int64Value httpConnectionTimeout_ = null;
@@ -32104,7 +32686,7 @@ public final class UserOuterClass {
       "rmission\022>\n\010settings\030\004 \001(\0132,.yandex.clou" +
       "d.mdb.clickhouse.v1.UserSettings\0229\n\006quot" +
       "as\030\005 \003(\0132).yandex.cloud.mdb.clickhouse.v" +
-      "1.UserQuota\"\3678\n\014UserSettings\0226\n\010readonly" +
+      "1.UserQuota\"\313:\n\014UserSettings\0226\n\010readonly" +
       "\030\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
       "\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.google.protobu" +
       "f.BoolValue\022;\n\rinsert_quorum\030\003 \001(\0132\033.goo" +
@@ -32243,62 +32825,68 @@ public final class UserOuterClass {
       "format_values_interpret_expressions\030= \001(" +
       "\0132\032.google.protobuf.BoolValue\022L\n(input_f" +
       "ormat_defaults_for_omitted_fields\030> \001(\0132" +
-      "\032.google.protobuf.BoolValue\022K\n\'output_fo" +
+      "\032.google.protobuf.BoolValue\022p\n\'output_fo" +
       "rmat_json_quote_64bit_integers\030? \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\022F\n\"output_forma" +
-      "t_json_quote_denormals\030@ \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\022J\n&low_cardinality_allo" +
-      "w_in_native_format\030N \001(\0132\032.google.protob" +
-      "uf.BoolValue\022M\n)empty_result_for_aggrega" +
-      "tion_by_empty_set\030O \001(\0132\032.google.protobu" +
-      "f.BoolValue\022<\n\027http_connection_timeout\030A" +
-      " \001(\0132\033.google.protobuf.Int64Value\0229\n\024htt" +
-      "p_receive_timeout\030B \001(\0132\033.google.protobu" +
-      "f.Int64Value\0226\n\021http_send_timeout\030C \001(\0132" +
-      "\033.google.protobuf.Int64Value\022;\n\027enable_h" +
-      "ttp_compression\030D \001(\0132\032.google.protobuf." +
-      "BoolValue\022A\n\035send_progress_in_http_heade" +
-      "rs\030E \001(\0132\032.google.protobuf.BoolValue\022C\n\036" +
-      "http_headers_progress_interval\030F \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\0228\n\024add_http_co" +
-      "rs_header\030G \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\022J\n\nquota_mode\030P \001(\01626.yandex.cloud.m" +
-      "db.clickhouse.v1.UserSettings.QuotaMode\"" +
-      "_\n\014OverflowMode\022\035\n\031OVERFLOW_MODE_UNSPECI" +
-      "FIED\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023OVERF" +
-      "LOW_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflowMode" +
-      "\022&\n\"GROUP_BY_OVERFLOW_MODE_UNSPECIFIED\020\000" +
-      "\022 \n\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 \n\034GR" +
-      "OUP_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROUP_BY" +
-      "_OVERFLOW_MODE_ANY\020\003\"\322\001\n\026DistributedProd" +
-      "uctMode\022(\n$DISTRIBUTED_PRODUCT_MODE_UNSP" +
-      "ECIFIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MODE_DE" +
-      "NY\020\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOCAL\020\002" +
-      "\022#\n\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020\003\022\"\n" +
-      "\036DISTRIBUTED_PRODUCT_MODE_ALLOW\020\004\"q\n\tQuo" +
-      "taMode\022\032\n\026QUOTA_MODE_UNSPECIFIED\020\000\022\026\n\022QU" +
-      "OTA_MODE_DEFAULT\020\001\022\024\n\020QUOTA_MODE_KEYED\020\002" +
-      "\022\032\n\026QUOTA_MODE_KEYED_BY_IP\020\003\"\266\002\n\033CountDi" +
-      "stinctImplementation\022-\n)COUNT_DISTINCT_I" +
-      "MPLEMENTATION_UNSPECIFIED\020\000\022&\n\"COUNT_DIS" +
-      "TINCT_IMPLEMENTATION_UNIQ\020\001\022/\n+COUNT_DIS" +
-      "TINCT_IMPLEMENTATION_UNIQ_COMBINED\020\002\0222\n." +
-      "COUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBI" +
-      "NED_64\020\003\022-\n)COUNT_DISTINCT_IMPLEMENTATIO" +
-      "N_UNIQ_HLL_12\020\004\022,\n(COUNT_DISTINCT_IMPLEM" +
-      "ENTATION_UNIQ_EXACT\020\005\"\356\002\n\tUserQuota\022B\n\021i" +
-      "nterval_duration\030\001 \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\n\372\3071\006>=1000\0225\n\007queries\030\002 \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\0224" +
-      "\n\006errors\030\003 \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\007\372\3071\003>=0\0229\n\013result_rows\030\004 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n\tread_" +
-      "rows\030\005 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\007\372\3071\003>=0\022<\n\016execution_time\030\006 \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\007\372\3071\003>=0Bs\n\"yandex" +
-      ".cloud.api.mdb.clickhouse.v1ZMgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/m" +
-      "db/clickhouse/v1;clickhouseb\006proto3"
+      "oogle.protobuf.BoolValueR#outputFormatJs" +
+      "onQuote_64bitIntegers\022F\n\"output_format_j" +
+      "son_quote_denormals\030@ \001(\0132\032.google.proto" +
+      "buf.BoolValue\022J\n&low_cardinality_allow_i" +
+      "n_native_format\030N \001(\0132\032.google.protobuf." +
+      "BoolValue\022M\n)empty_result_for_aggregatio" +
+      "n_by_empty_set\030O \001(\0132\032.google.protobuf.B" +
+      "oolValue\022B\n\036joined_subquery_requires_ali" +
+      "as\030] \001(\0132\032.google.protobuf.BoolValue\0222\n\016" +
+      "join_use_nulls\030^ \001(\0132\032.google.protobuf.B" +
+      "oolValue\0225\n\021transform_null_in\030_ \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\022<\n\027http_connecti" +
+      "on_timeout\030A \001(\0132\033.google.protobuf.Int64" +
+      "Value\0229\n\024http_receive_timeout\030B \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\0226\n\021http_send_ti" +
+      "meout\030C \001(\0132\033.google.protobuf.Int64Value" +
+      "\022;\n\027enable_http_compression\030D \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\022A\n\035send_progress_i" +
+      "n_http_headers\030E \001(\0132\032.google.protobuf.B" +
+      "oolValue\022C\n\036http_headers_progress_interv" +
+      "al\030F \001(\0132\033.google.protobuf.Int64Value\0228\n" +
+      "\024add_http_cors_header\030G \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\022J\n\nquota_mode\030P \001(\01626.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.UserSetting" +
+      "s.QuotaMode\"_\n\014OverflowMode\022\035\n\031OVERFLOW_" +
+      "MODE_UNSPECIFIED\020\000\022\027\n\023OVERFLOW_MODE_THRO" +
+      "W\020\001\022\027\n\023OVERFLOW_MODE_BREAK\020\002\"\241\001\n\023GroupBy" +
+      "OverflowMode\022&\n\"GROUP_BY_OVERFLOW_MODE_U" +
+      "NSPECIFIED\020\000\022 \n\034GROUP_BY_OVERFLOW_MODE_T" +
+      "HROW\020\001\022 \n\034GROUP_BY_OVERFLOW_MODE_BREAK\020\002" +
+      "\022\036\n\032GROUP_BY_OVERFLOW_MODE_ANY\020\003\"\322\001\n\026Dis" +
+      "tributedProductMode\022(\n$DISTRIBUTED_PRODU" +
+      "CT_MODE_UNSPECIFIED\020\000\022!\n\035DISTRIBUTED_PRO" +
+      "DUCT_MODE_DENY\020\001\022\"\n\036DISTRIBUTED_PRODUCT_" +
+      "MODE_LOCAL\020\002\022#\n\037DISTRIBUTED_PRODUCT_MODE" +
+      "_GLOBAL\020\003\022\"\n\036DISTRIBUTED_PRODUCT_MODE_AL" +
+      "LOW\020\004\"q\n\tQuotaMode\022\032\n\026QUOTA_MODE_UNSPECI" +
+      "FIED\020\000\022\026\n\022QUOTA_MODE_DEFAULT\020\001\022\024\n\020QUOTA_" +
+      "MODE_KEYED\020\002\022\032\n\026QUOTA_MODE_KEYED_BY_IP\020\003" +
+      "\"\266\002\n\033CountDistinctImplementation\022-\n)COUN" +
+      "T_DISTINCT_IMPLEMENTATION_UNSPECIFIED\020\000\022" +
+      "&\n\"COUNT_DISTINCT_IMPLEMENTATION_UNIQ\020\001\022" +
+      "/\n+COUNT_DISTINCT_IMPLEMENTATION_UNIQ_CO" +
+      "MBINED\020\002\0222\n.COUNT_DISTINCT_IMPLEMENTATIO" +
+      "N_UNIQ_COMBINED_64\020\003\022-\n)COUNT_DISTINCT_I" +
+      "MPLEMENTATION_UNIQ_HLL_12\020\004\022,\n(COUNT_DIS" +
+      "TINCT_IMPLEMENTATION_UNIQ_EXACT\020\005\"\356\002\n\tUs" +
+      "erQuota\022B\n\021interval_duration\030\001 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\n\372\3071\006>=1000\0225\n\007q" +
+      "ueries\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\007\372\3071\003>=0\0224\n\006errors\030\003 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\003>=0\0229\n\013result_rows\030" +
+      "\004 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
+      ">=0\0227\n\tread_rows\030\005 \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\007\372\3071\003>=0\022<\n\016execution_time\030\006" +
+      " \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>" +
+      "=0Bs\n\"yandex.cloud.api.mdb.clickhouse.v1" +
+      "ZMgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/mdb/clickhouse/v1;clickhouseb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -32337,7 +32925,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_descriptor,
-        new java.lang.String[] { "Readonly", "AllowDdl", "InsertQuorum", "ConnectTimeout", "ReceiveTimeout", "SendTimeout", "InsertQuorumTimeout", "SelectSequentialConsistency", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "ReplicationAlterPartitionsSync", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "Compile", "MinCountToCompile", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "LowCardinalityAllowInNativeFormat", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "QuotaMode", });
+        new java.lang.String[] { "Readonly", "AllowDdl", "InsertQuorum", "ConnectTimeout", "ReceiveTimeout", "SendTimeout", "InsertQuorumTimeout", "SelectSequentialConsistency", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "ReplicationAlterPartitionsSync", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "Compile", "MinCountToCompile", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "LowCardinalityAllowInNativeFormat", "EmptyResultForAggregationByEmptySet", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "QuotaMode", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable = new

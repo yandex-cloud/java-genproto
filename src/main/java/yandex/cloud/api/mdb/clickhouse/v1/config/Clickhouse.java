@@ -224,6 +224,43 @@ public final class Clickhouse {
     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaOrBuilder getKafkaOrBuilder();
 
     /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> 
+        getKafkaTopicsList();
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic getKafkaTopics(int index);
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     */
+    int getKafkaTopicsCount();
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder> 
+        getKafkaTopicsOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder getKafkaTopicsOrBuilder(
+        int index);
+
+    /**
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+     */
+    boolean hasRabbitmq();
+    /**
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq getRabbitmq();
+    /**
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.RabbitmqOrBuilder getRabbitmqOrBuilder();
+
+    /**
      * <pre>
      * Maximum number of inbound connections.
      * </pre>
@@ -961,6 +998,7 @@ public final class Clickhouse {
       compression_ = java.util.Collections.emptyList();
       dictionaries_ = java.util.Collections.emptyList();
       graphiteRollup_ = java.util.Collections.emptyList();
+      kafkaTopics_ = java.util.Collections.emptyList();
       timezone_ = "";
       geobaseUri_ = "";
       textLogLevel_ = 0;
@@ -1406,6 +1444,28 @@ public final class Clickhouse {
 
               break;
             }
+            case 290: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                kafkaTopics_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              kafkaTopics_.add(
+                  input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.parser(), extensionRegistry));
+              break;
+            }
+            case 298: {
+              yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.Builder subBuilder = null;
+              if (rabbitmq_ != null) {
+                subBuilder = rabbitmq_.toBuilder();
+              }
+              rabbitmq_ = input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rabbitmq_);
+                rabbitmq_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1429,6 +1489,9 @@ public final class Clickhouse {
         }
         if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           graphiteRollup_ = java.util.Collections.unmodifiableList(graphiteRollup_);
+        }
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          kafkaTopics_ = java.util.Collections.unmodifiableList(kafkaTopics_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -4930,6 +4993,1437 @@ public final class Clickhouse {
 
       @java.lang.Override
       public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface KafkaTopicOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      java.lang.String getName();
+      /**
+       * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      boolean hasSettings();
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka getSettings();
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaOrBuilder getSettingsOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic}
+     */
+    public  static final class KafkaTopic extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic)
+        KafkaTopicOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use KafkaTopic.newBuilder() to construct.
+      private KafkaTopic(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private KafkaTopic() {
+        name_ = "";
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private KafkaTopic(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              case 18: {
+                yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.Builder subBuilder = null;
+                if (settings_ != null) {
+                  subBuilder = settings_.toBuilder();
+                }
+                settings_ = input.readMessage(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(settings_);
+                  settings_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.class, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder.class);
+      }
+
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int SETTINGS_FIELD_NUMBER = 2;
+      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka settings_;
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public boolean hasSettings() {
+        return settings_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka getSettings() {
+        return settings_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.getDefaultInstance() : settings_;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaOrBuilder getSettingsOrBuilder() {
+        return getSettings();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getNameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (settings_ != null) {
+          output.writeMessage(2, getSettings());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getNameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (settings_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getSettings());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic) obj;
+
+        boolean result = true;
+        result = result && getName()
+            .equals(other.getName());
+        result = result && (hasSettings() == other.hasSettings());
+        if (hasSettings()) {
+          result = result && getSettings()
+              .equals(other.getSettings());
+        }
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        if (hasSettings()) {
+          hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
+          hash = (53 * hash) + getSettings().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic)
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.class, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+
+          if (settingsBuilder_ == null) {
+            settings_ = null;
+          } else {
+            settings_ = null;
+            settingsBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic build() {
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic buildPartial() {
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic result = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic(this);
+          result.name_ = name_;
+          if (settingsBuilder_ == null) {
+            result.settings_ = settings_;
+          } else {
+            result.settings_ = settingsBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic) {
+            return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic other) {
+          if (other == yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.getDefaultInstance()) return this;
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.hasSettings()) {
+            mergeSettings(other.getSettings());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka settings_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaOrBuilder> settingsBuilder_;
+        /**
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+         */
+        public boolean hasSettings() {
+          return settingsBuilder_ != null || settings_ != null;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+         */
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka getSettings() {
+          if (settingsBuilder_ == null) {
+            return settings_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.getDefaultInstance() : settings_;
+          } else {
+            return settingsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder setSettings(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka value) {
+          if (settingsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            settings_ = value;
+            onChanged();
+          } else {
+            settingsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder setSettings(
+            yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.Builder builderForValue) {
+          if (settingsBuilder_ == null) {
+            settings_ = builderForValue.build();
+            onChanged();
+          } else {
+            settingsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder mergeSettings(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka value) {
+          if (settingsBuilder_ == null) {
+            if (settings_ != null) {
+              settings_ =
+                yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.newBuilder(settings_).mergeFrom(value).buildPartial();
+            } else {
+              settings_ = value;
+            }
+            onChanged();
+          } else {
+            settingsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+         */
+        public Builder clearSettings() {
+          if (settingsBuilder_ == null) {
+            settings_ = null;
+            onChanged();
+          } else {
+            settings_ = null;
+            settingsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+         */
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.Builder getSettingsBuilder() {
+          
+          onChanged();
+          return getSettingsFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+         */
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaOrBuilder getSettingsOrBuilder() {
+          if (settingsBuilder_ != null) {
+            return settingsBuilder_.getMessageOrBuilder();
+          } else {
+            return settings_ == null ?
+                yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.getDefaultInstance() : settings_;
+          }
+        }
+        /**
+         * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka settings = 2 [(.yandex.cloud.required) = true];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaOrBuilder> 
+            getSettingsFieldBuilder() {
+          if (settingsBuilder_ == null) {
+            settingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Kafka.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaOrBuilder>(
+                    getSettings(),
+                    getParentForChildren(),
+                    isClean());
+            settings_ = null;
+          }
+          return settingsBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic)
+      private static final yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic();
+      }
+
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<KafkaTopic>
+          PARSER = new com.google.protobuf.AbstractParser<KafkaTopic>() {
+        @java.lang.Override
+        public KafkaTopic parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new KafkaTopic(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<KafkaTopic> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<KafkaTopic> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface RabbitmqOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string username = 1;</code>
+       */
+      java.lang.String getUsername();
+      /**
+       * <code>string username = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getUsernameBytes();
+
+      /**
+       * <code>string password = 2;</code>
+       */
+      java.lang.String getPassword();
+      /**
+       * <code>string password = 2;</code>
+       */
+      com.google.protobuf.ByteString
+          getPasswordBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq}
+     */
+    public  static final class Rabbitmq extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq)
+        RabbitmqOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Rabbitmq.newBuilder() to construct.
+      private Rabbitmq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Rabbitmq() {
+        username_ = "";
+        password_ = "";
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Rabbitmq(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                username_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                password_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Rabbitmq_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Rabbitmq_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.class, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.Builder.class);
+      }
+
+      public static final int USERNAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object username_;
+      /**
+       * <code>string username = 1;</code>
+       */
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          username_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string username = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUsernameBytes() {
+        java.lang.Object ref = username_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          username_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PASSWORD_FIELD_NUMBER = 2;
+      private volatile java.lang.Object password_;
+      /**
+       * <code>string password = 2;</code>
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string password = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getUsernameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
+        }
+        if (!getPasswordBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getUsernameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
+        }
+        if (!getPasswordBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq other = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq) obj;
+
+        boolean result = true;
+        result = result && getUsername()
+            .equals(other.getUsername());
+        result = result && getPassword()
+            .equals(other.getPassword());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+        hash = (53 * hash) + getUsername().hashCode();
+        hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+        hash = (53 * hash) + getPassword().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq)
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.RabbitmqOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Rabbitmq_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Rabbitmq_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.class, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          username_ = "";
+
+          password_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Rabbitmq_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq build() {
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq buildPartial() {
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq result = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq(this);
+          result.username_ = username_;
+          result.password_ = password_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq) {
+            return mergeFrom((yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq other) {
+          if (other == yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.getDefaultInstance()) return this;
+          if (!other.getUsername().isEmpty()) {
+            username_ = other.username_;
+            onChanged();
+          }
+          if (!other.getPassword().isEmpty()) {
+            password_ = other.password_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object username_ = "";
+        /**
+         * <code>string username = 1;</code>
+         */
+        public java.lang.String getUsername() {
+          java.lang.Object ref = username_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            username_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string username = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getUsernameBytes() {
+          java.lang.Object ref = username_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            username_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string username = 1;</code>
+         */
+        public Builder setUsername(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          username_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string username = 1;</code>
+         */
+        public Builder clearUsername() {
+          
+          username_ = getDefaultInstance().getUsername();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string username = 1;</code>
+         */
+        public Builder setUsernameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          username_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object password_ = "";
+        /**
+         * <code>string password = 2;</code>
+         */
+        public java.lang.String getPassword() {
+          java.lang.Object ref = password_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            password_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string password = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+            getPasswordBytes() {
+          java.lang.Object ref = password_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            password_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string password = 2;</code>
+         */
+        public Builder setPassword(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          password_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string password = 2;</code>
+         */
+        public Builder clearPassword() {
+          
+          password_ = getDefaultInstance().getPassword();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string password = 2;</code>
+         */
+        public Builder setPasswordBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          password_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq)
+      private static final yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq();
+      }
+
+      public static yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Rabbitmq>
+          PARSER = new com.google.protobuf.AbstractParser<Rabbitmq>() {
+        @java.lang.Override
+        public Rabbitmq parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Rabbitmq(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Rabbitmq> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Rabbitmq> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -26629,6 +28123,7 @@ public final class Clickhouse {
     }
 
     private int bitField0_;
+    private int bitField1_;
     public static final int LOG_LEVEL_FIELD_NUMBER = 1;
     private int logLevel_;
     /**
@@ -26889,6 +28384,62 @@ public final class Clickhouse {
      */
     public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaOrBuilder getKafkaOrBuilder() {
       return getKafka();
+    }
+
+    public static final int KAFKA_TOPICS_FIELD_NUMBER = 36;
+    private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> kafkaTopics_;
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     */
+    public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> getKafkaTopicsList() {
+      return kafkaTopics_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder> 
+        getKafkaTopicsOrBuilderList() {
+      return kafkaTopics_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     */
+    public int getKafkaTopicsCount() {
+      return kafkaTopics_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic getKafkaTopics(int index) {
+      return kafkaTopics_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder getKafkaTopicsOrBuilder(
+        int index) {
+      return kafkaTopics_.get(index);
+    }
+
+    public static final int RABBITMQ_FIELD_NUMBER = 37;
+    private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq rabbitmq_;
+    /**
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+     */
+    public boolean hasRabbitmq() {
+      return rabbitmq_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq getRabbitmq() {
+      return rabbitmq_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.getDefaultInstance() : rabbitmq_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+     */
+    public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.RabbitmqOrBuilder getRabbitmqOrBuilder() {
+      return getRabbitmq();
     }
 
     public static final int MAX_CONNECTIONS_FIELD_NUMBER = 6;
@@ -27989,6 +29540,12 @@ public final class Clickhouse {
       if (kafka_ != null) {
         output.writeMessage(35, getKafka());
       }
+      for (int i = 0; i < kafkaTopics_.size(); i++) {
+        output.writeMessage(36, kafkaTopics_.get(i));
+      }
+      if (rabbitmq_ != null) {
+        output.writeMessage(37, getRabbitmq());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -28136,6 +29693,14 @@ public final class Clickhouse {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(35, getKafka());
       }
+      for (int i = 0; i < kafkaTopics_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(36, kafkaTopics_.get(i));
+      }
+      if (rabbitmq_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(37, getRabbitmq());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -28168,6 +29733,13 @@ public final class Clickhouse {
       if (hasKafka()) {
         result = result && getKafka()
             .equals(other.getKafka());
+      }
+      result = result && getKafkaTopicsList()
+          .equals(other.getKafkaTopicsList());
+      result = result && (hasRabbitmq() == other.hasRabbitmq());
+      if (hasRabbitmq()) {
+        result = result && getRabbitmq()
+            .equals(other.getRabbitmq());
       }
       result = result && (hasMaxConnections() == other.hasMaxConnections());
       if (hasMaxConnections()) {
@@ -28336,6 +29908,14 @@ public final class Clickhouse {
       if (hasKafka()) {
         hash = (37 * hash) + KAFKA_FIELD_NUMBER;
         hash = (53 * hash) + getKafka().hashCode();
+      }
+      if (getKafkaTopicsCount() > 0) {
+        hash = (37 * hash) + KAFKA_TOPICS_FIELD_NUMBER;
+        hash = (53 * hash) + getKafkaTopicsList().hashCode();
+      }
+      if (hasRabbitmq()) {
+        hash = (37 * hash) + RABBITMQ_FIELD_NUMBER;
+        hash = (53 * hash) + getRabbitmq().hashCode();
       }
       if (hasMaxConnections()) {
         hash = (37 * hash) + MAX_CONNECTIONS_FIELD_NUMBER;
@@ -28584,6 +30164,7 @@ public final class Clickhouse {
           getCompressionFieldBuilder();
           getDictionariesFieldBuilder();
           getGraphiteRollupFieldBuilder();
+          getKafkaTopicsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -28620,6 +30201,18 @@ public final class Clickhouse {
         } else {
           kafka_ = null;
           kafkaBuilder_ = null;
+        }
+        if (kafkaTopicsBuilder_ == null) {
+          kafkaTopics_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          kafkaTopicsBuilder_.clear();
+        }
+        if (rabbitmqBuilder_ == null) {
+          rabbitmq_ = null;
+        } else {
+          rabbitmq_ = null;
+          rabbitmqBuilder_ = null;
         }
         if (maxConnectionsBuilder_ == null) {
           maxConnections_ = null;
@@ -28812,6 +30405,7 @@ public final class Clickhouse {
         int from_bitField0_ = bitField0_;
         int from_bitField1_ = bitField1_;
         int to_bitField0_ = 0;
+        int to_bitField1_ = 0;
         result.logLevel_ = logLevel_;
         if (mergeTreeBuilder_ == null) {
           result.mergeTree_ = mergeTree_;
@@ -28849,6 +30443,20 @@ public final class Clickhouse {
           result.kafka_ = kafka_;
         } else {
           result.kafka_ = kafkaBuilder_.build();
+        }
+        if (kafkaTopicsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+            kafkaTopics_ = java.util.Collections.unmodifiableList(kafkaTopics_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.kafkaTopics_ = kafkaTopics_;
+        } else {
+          result.kafkaTopics_ = kafkaTopicsBuilder_.build();
+        }
+        if (rabbitmqBuilder_ == null) {
+          result.rabbitmq_ = rabbitmq_;
+        } else {
+          result.rabbitmq_ = rabbitmqBuilder_.build();
         }
         if (maxConnectionsBuilder_ == null) {
           result.maxConnections_ = maxConnections_;
@@ -28984,6 +30592,7 @@ public final class Clickhouse {
           result.backgroundSchedulePoolSize_ = backgroundSchedulePoolSizeBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
+        result.bitField1_ = to_bitField1_;
         onBuilt();
         return result;
       }
@@ -29118,6 +30727,35 @@ public final class Clickhouse {
         }
         if (other.hasKafka()) {
           mergeKafka(other.getKafka());
+        }
+        if (kafkaTopicsBuilder_ == null) {
+          if (!other.kafkaTopics_.isEmpty()) {
+            if (kafkaTopics_.isEmpty()) {
+              kafkaTopics_ = other.kafkaTopics_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureKafkaTopicsIsMutable();
+              kafkaTopics_.addAll(other.kafkaTopics_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.kafkaTopics_.isEmpty()) {
+            if (kafkaTopicsBuilder_.isEmpty()) {
+              kafkaTopicsBuilder_.dispose();
+              kafkaTopicsBuilder_ = null;
+              kafkaTopics_ = other.kafkaTopics_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              kafkaTopicsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getKafkaTopicsFieldBuilder() : null;
+            } else {
+              kafkaTopicsBuilder_.addAllMessages(other.kafkaTopics_);
+            }
+          }
+        }
+        if (other.hasRabbitmq()) {
+          mergeRabbitmq(other.getRabbitmq());
         }
         if (other.hasMaxConnections()) {
           mergeMaxConnections(other.getMaxConnections());
@@ -30571,6 +32209,363 @@ public final class Clickhouse {
           kafka_ = null;
         }
         return kafkaBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> kafkaTopics_ =
+        java.util.Collections.emptyList();
+      private void ensureKafkaTopicsIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          kafkaTopics_ = new java.util.ArrayList<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic>(kafkaTopics_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder> kafkaTopicsBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> getKafkaTopicsList() {
+        if (kafkaTopicsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(kafkaTopics_);
+        } else {
+          return kafkaTopicsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public int getKafkaTopicsCount() {
+        if (kafkaTopicsBuilder_ == null) {
+          return kafkaTopics_.size();
+        } else {
+          return kafkaTopicsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic getKafkaTopics(int index) {
+        if (kafkaTopicsBuilder_ == null) {
+          return kafkaTopics_.get(index);
+        } else {
+          return kafkaTopicsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public Builder setKafkaTopics(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic value) {
+        if (kafkaTopicsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKafkaTopicsIsMutable();
+          kafkaTopics_.set(index, value);
+          onChanged();
+        } else {
+          kafkaTopicsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public Builder setKafkaTopics(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder builderForValue) {
+        if (kafkaTopicsBuilder_ == null) {
+          ensureKafkaTopicsIsMutable();
+          kafkaTopics_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          kafkaTopicsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public Builder addKafkaTopics(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic value) {
+        if (kafkaTopicsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKafkaTopicsIsMutable();
+          kafkaTopics_.add(value);
+          onChanged();
+        } else {
+          kafkaTopicsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public Builder addKafkaTopics(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic value) {
+        if (kafkaTopicsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureKafkaTopicsIsMutable();
+          kafkaTopics_.add(index, value);
+          onChanged();
+        } else {
+          kafkaTopicsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public Builder addKafkaTopics(
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder builderForValue) {
+        if (kafkaTopicsBuilder_ == null) {
+          ensureKafkaTopicsIsMutable();
+          kafkaTopics_.add(builderForValue.build());
+          onChanged();
+        } else {
+          kafkaTopicsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public Builder addKafkaTopics(
+          int index, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder builderForValue) {
+        if (kafkaTopicsBuilder_ == null) {
+          ensureKafkaTopicsIsMutable();
+          kafkaTopics_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          kafkaTopicsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public Builder addAllKafkaTopics(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic> values) {
+        if (kafkaTopicsBuilder_ == null) {
+          ensureKafkaTopicsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, kafkaTopics_);
+          onChanged();
+        } else {
+          kafkaTopicsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public Builder clearKafkaTopics() {
+        if (kafkaTopicsBuilder_ == null) {
+          kafkaTopics_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          kafkaTopicsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public Builder removeKafkaTopics(int index) {
+        if (kafkaTopicsBuilder_ == null) {
+          ensureKafkaTopicsIsMutable();
+          kafkaTopics_.remove(index);
+          onChanged();
+        } else {
+          kafkaTopicsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder getKafkaTopicsBuilder(
+          int index) {
+        return getKafkaTopicsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder getKafkaTopicsOrBuilder(
+          int index) {
+        if (kafkaTopicsBuilder_ == null) {
+          return kafkaTopics_.get(index);  } else {
+          return kafkaTopicsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder> 
+           getKafkaTopicsOrBuilderList() {
+        if (kafkaTopicsBuilder_ != null) {
+          return kafkaTopicsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(kafkaTopics_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder addKafkaTopicsBuilder() {
+        return getKafkaTopicsFieldBuilder().addBuilder(
+            yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder addKafkaTopicsBuilder(
+          int index) {
+        return getKafkaTopicsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.KafkaTopic kafka_topics = 36;</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder> 
+           getKafkaTopicsBuilderList() {
+        return getKafkaTopicsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder> 
+          getKafkaTopicsFieldBuilder() {
+        if (kafkaTopicsBuilder_ == null) {
+          kafkaTopicsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopic.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.KafkaTopicOrBuilder>(
+                  kafkaTopics_,
+                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  getParentForChildren(),
+                  isClean());
+          kafkaTopics_ = null;
+        }
+        return kafkaTopicsBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq rabbitmq_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.RabbitmqOrBuilder> rabbitmqBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+       */
+      public boolean hasRabbitmq() {
+        return rabbitmqBuilder_ != null || rabbitmq_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq getRabbitmq() {
+        if (rabbitmqBuilder_ == null) {
+          return rabbitmq_ == null ? yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.getDefaultInstance() : rabbitmq_;
+        } else {
+          return rabbitmqBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+       */
+      public Builder setRabbitmq(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq value) {
+        if (rabbitmqBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rabbitmq_ = value;
+          onChanged();
+        } else {
+          rabbitmqBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+       */
+      public Builder setRabbitmq(
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.Builder builderForValue) {
+        if (rabbitmqBuilder_ == null) {
+          rabbitmq_ = builderForValue.build();
+          onChanged();
+        } else {
+          rabbitmqBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+       */
+      public Builder mergeRabbitmq(yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq value) {
+        if (rabbitmqBuilder_ == null) {
+          if (rabbitmq_ != null) {
+            rabbitmq_ =
+              yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.newBuilder(rabbitmq_).mergeFrom(value).buildPartial();
+          } else {
+            rabbitmq_ = value;
+          }
+          onChanged();
+        } else {
+          rabbitmqBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+       */
+      public Builder clearRabbitmq() {
+        if (rabbitmqBuilder_ == null) {
+          rabbitmq_ = null;
+          onChanged();
+        } else {
+          rabbitmq_ = null;
+          rabbitmqBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.Builder getRabbitmqBuilder() {
+        
+        onChanged();
+        return getRabbitmqFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+       */
+      public yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.RabbitmqOrBuilder getRabbitmqOrBuilder() {
+        if (rabbitmqBuilder_ != null) {
+          return rabbitmqBuilder_.getMessageOrBuilder();
+        } else {
+          return rabbitmq_ == null ?
+              yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.getDefaultInstance() : rabbitmq_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Rabbitmq rabbitmq = 37;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.RabbitmqOrBuilder> 
+          getRabbitmqFieldBuilder() {
+        if (rabbitmqBuilder_ == null) {
+          rabbitmqBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.Rabbitmq.Builder, yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.RabbitmqOrBuilder>(
+                  getRabbitmq(),
+                  getParentForChildren(),
+                  isClean());
+          rabbitmq_ = null;
+        }
+        return rabbitmqBuilder_;
       }
 
       private com.google.protobuf.Int64Value maxConnections_ = null;
@@ -36088,6 +38083,16 @@ public final class Clickhouse {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Rabbitmq_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Rabbitmq_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Compression_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -36189,8 +38194,8 @@ public final class Clickhouse {
       "\n6yandex/cloud/mdb/clickhouse/v1/config/" +
       "clickhouse.proto\022%yandex.cloud.mdb.click" +
       "house.v1.config\032\036google/protobuf/wrapper" +
-      "s.proto\032\035yandex/cloud/validation.proto\"\206" +
-      ";\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
+      "s.proto\032\035yandex/cloud/validation.proto\"\335" +
+      "=\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
       ".yandex.cloud.mdb.clickhouse.v1.config.C" +
       "lickhouseConfig.LogLevel\022U\n\nmerge_tree\030\002" +
       " \001(\0132A.yandex.cloud.mdb.clickhouse.v1.co" +
@@ -36203,193 +38208,201 @@ public final class Clickhouse {
       " \003(\0132F.yandex.cloud.mdb.clickhouse.v1.co" +
       "nfig.ClickhouseConfig.GraphiteRollup\022L\n\005" +
       "kafka\030# \001(\0132=.yandex.cloud.mdb.clickhous" +
-      "e.v1.config.ClickhouseConfig.Kafka\022>\n\017ma" +
-      "x_connections\030\006 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\010\372\3071\004>=10\022E\n\026max_concurrent_que" +
-      "ries\030\007 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\010\372\3071\004>=10\0227\n\022keep_alive_timeout\030\010 \001(\0132\033." +
-      "google.protobuf.Int64Value\022<\n\027uncompress" +
-      "ed_cache_size\030\t \001(\0132\033.google.protobuf.In" +
-      "t64Value\022E\n\017mark_cache_size\030\n \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\017\372\3071\013>5368709120\022" +
-      ";\n\026max_table_size_to_drop\030\013 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022?\n\032max_partition_si" +
-      "ze_to_drop\030\r \001(\0132\033.google.protobuf.Int64" +
-      "Value\022M\n$builtin_dictionaries_reload_int" +
-      "erval\030\014 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\002\030\001\022\020\n\010timezone\030\016 \001(\t\022\023\n\013geobase_uri\030\017 " +
-      "\001(\t\022=\n\030query_log_retention_size\030\020 \001(\0132\033." +
-      "google.protobuf.Int64Value\022=\n\030query_log_" +
-      "retention_time\030\021 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022<\n\030query_thread_log_enabled\030\022 " +
-      "\001(\0132\032.google.protobuf.BoolValue\022D\n\037query" +
-      "_thread_log_retention_size\030\023 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022D\n\037query_thread_lo" +
-      "g_retention_time\030\024 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022<\n\027part_log_retention_size\030\025" +
-      " \001(\0132\033.google.protobuf.Int64Value\022<\n\027par" +
-      "t_log_retention_time\030\026 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\0226\n\022metric_log_enabled\030\027 " +
-      "\001(\0132\032.google.protobuf.BoolValue\022>\n\031metri" +
-      "c_log_retention_size\030\030 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022>\n\031metric_log_retention_" +
-      "time\030\031 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "5\n\021trace_log_enabled\030\032 \001(\0132\032.google.prot" +
-      "obuf.BoolValue\022=\n\030trace_log_retention_si" +
-      "ze\030\033 \001(\0132\033.google.protobuf.Int64Value\022=\n" +
-      "\030trace_log_retention_time\030\034 \001(\0132\033.google" +
-      ".protobuf.Int64Value\0224\n\020text_log_enabled" +
-      "\030\035 \001(\0132\032.google.protobuf.BoolValue\022<\n\027te" +
-      "xt_log_retention_size\030\036 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022<\n\027text_log_retention_t" +
-      "ime\030\037 \001(\0132\033.google.protobuf.Int64Value\022X" +
-      "\n\016text_log_level\030  \001(\0162@.yandex.cloud.md" +
+      "e.v1.config.ClickhouseConfig.Kafka\022X\n\014ka" +
+      "fka_topics\030$ \003(\0132B.yandex.cloud.mdb.clic" +
+      "khouse.v1.config.ClickhouseConfig.KafkaT" +
+      "opic\022R\n\010rabbitmq\030% \001(\0132@.yandex.cloud.md" +
       "b.clickhouse.v1.config.ClickhouseConfig." +
-      "LogLevel\022A\n\024background_pool_size\030! \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\006\372\3071\002>0\022J\n\035b" +
-      "ackground_schedule_pool_size\030\" \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\006\372\3071\002>0\032\212\004\n\tMerg" +
-      "eTree\022D\n\037replicated_deduplication_window" +
-      "\030\001 \001(\0132\033.google.protobuf.Int64Value\022L\n\'r" +
-      "eplicated_deduplication_window_seconds\030\002" +
-      " \001(\0132\033.google.protobuf.Int64Value\022:\n\025par" +
-      "ts_to_delay_insert\030\003 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022:\n\025parts_to_throw_insert\030\004" +
-      " \001(\0132\033.google.protobuf.Int64Value\022C\n\036max" +
-      "_replicated_merges_in_queue\030\005 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022^\n9number_of_free" +
-      "_entries_in_pool_to_lower_max_size_of_me" +
-      "rge\030\006 \001(\0132\033.google.protobuf.Int64Value\022L" +
-      "\n\'max_bytes_to_merge_at_min_space_in_poo" +
-      "l\030\007 \001(\0132\033.google.protobuf.Int64Value\032\352\004\n" +
-      "\005Kafka\022i\n\021security_protocol\030\001 \001(\0162N.yand" +
-      "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
-      "ouseConfig.Kafka.SecurityProtocol\022c\n\016sas" +
-      "l_mechanism\030\002 \001(\0162K.yandex.cloud.mdb.cli" +
-      "ckhouse.v1.config.ClickhouseConfig.Kafka" +
-      ".SaslMechanism\022\025\n\rsasl_username\030\003 \001(\t\022\025\n" +
-      "\rsasl_password\030\004 \001(\t\"\267\001\n\020SecurityProtoco" +
-      "l\022!\n\035SECURITY_PROTOCOL_UNSPECIFIED\020\000\022\037\n\033" +
-      "SECURITY_PROTOCOL_PLAINTEXT\020\001\022\031\n\025SECURIT" +
-      "Y_PROTOCOL_SSL\020\002\022$\n SECURITY_PROTOCOL_SA" +
-      "SL_PLAINTEXT\020\003\022\036\n\032SECURITY_PROTOCOL_SASL" +
-      "_SSL\020\004\"\250\001\n\rSaslMechanism\022\036\n\032SASL_MECHANI" +
-      "SM_UNSPECIFIED\020\000\022\031\n\025SASL_MECHANISM_GSSAP" +
-      "I\020\001\022\030\n\024SASL_MECHANISM_PLAIN\020\002\022 \n\034SASL_ME" +
-      "CHANISM_SCRAM_SHA_256\020\003\022 \n\034SASL_MECHANIS" +
-      "M_SCRAM_SHA_512\020\004\032\333\001\n\013Compression\022Z\n\006met" +
-      "hod\030\001 \001(\0162J.yandex.cloud.mdb.clickhouse." +
-      "v1.config.ClickhouseConfig.Compression.M" +
-      "ethod\022\036\n\rmin_part_size\030\002 \001(\003B\007\372\3071\003>=1\022\033\n" +
-      "\023min_part_size_ratio\030\003 \001(\001\"3\n\006Method\022\026\n\022" +
-      "METHOD_UNSPECIFIED\020\000\022\007\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\032" +
-      "\240\032\n\022ExternalDictionary\022\022\n\004name\030\001 \001(\tB\004\350\307" +
-      "1\001\022m\n\tstructure\030\002 \001(\0132T.yandex.cloud.mdb" +
-      ".clickhouse.v1.config.ClickhouseConfig.E" +
-      "xternalDictionary.StructureB\004\350\3071\001\022g\n\006lay" +
-      "out\030\003 \001(\0132Q.yandex.cloud.mdb.clickhouse." +
-      "v1.config.ClickhouseConfig.ExternalDicti" +
-      "onary.LayoutB\004\350\3071\001\022\030\n\016fixed_lifetime\030\004 \001" +
-      "(\003H\000\022j\n\016lifetime_range\030\005 \001(\0132P.yandex.cl" +
-      "oud.mdb.clickhouse.v1.config.ClickhouseC" +
-      "onfig.ExternalDictionary.RangeH\000\022l\n\013http" +
-      "_source\030\006 \001(\0132U.yandex.cloud.mdb.clickho" +
-      "use.v1.config.ClickhouseConfig.ExternalD" +
-      "ictionary.HttpSourceH\001\022n\n\014mysql_source\030\007" +
-      " \001(\0132V.yandex.cloud.mdb.clickhouse.v1.co" +
-      "nfig.ClickhouseConfig.ExternalDictionary" +
-      ".MysqlSourceH\001\022x\n\021clickhouse_source\030\010 \001(" +
-      "\0132[.yandex.cloud.mdb.clickhouse.v1.confi" +
-      "g.ClickhouseConfig.ExternalDictionary.Cl" +
-      "ickhouseSourceH\001\022r\n\016mongodb_source\030\t \001(\013" +
-      "2X.yandex.cloud.mdb.clickhouse.v1.config" +
-      ".ClickhouseConfig.ExternalDictionary.Mon" +
-      "godbSourceH\001\022x\n\021postgresql_source\030\n \001(\0132" +
-      "[.yandex.cloud.mdb.clickhouse.v1.config." +
-      "ClickhouseConfig.ExternalDictionary.Post" +
-      "gresqlSourceH\001\0325\n\nHttpSource\022\021\n\003url\030\001 \001(" +
-      "\tB\004\350\3071\001\022\024\n\006format\030\002 \001(\tB\004\350\3071\001\032\223\003\n\013MysqlS" +
-      "ource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004" +
-      "\350\3071\001\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030" +
-      "\004 \001(\t\022\020\n\010password\030\005 \001(\t\022x\n\010replicas\030\006 \003(" +
-      "\0132^.yandex.cloud.mdb.clickhouse.v1.confi" +
-      "g.ClickhouseConfig.ExternalDictionary.My" +
-      "sqlSource.ReplicaB\006\202\3101\002>0\022\r\n\005where\030\007 \001(\t" +
-      "\022\030\n\020invalidate_query\030\010 \001(\t\032\177\n\007Replica\022\033\n" +
-      "\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253\022\034\n\010priority\030\002" +
-      " \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65" +
-      "535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\032\246\001\n\020" +
-      "ClickhouseSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005ta" +
-      "ble\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<" +
-      "=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030" +
-      "\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\r\n\005where\030\007" +
-      " \001(\t\032\231\001\n\rMongodbSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001" +
-      "\022\030\n\ncollection\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\t" +
-      "B\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-655" +
-      "35\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t" +
-      "\032\213\003\n\020PostgresqlSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022" +
-      "\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\025\n\005hosts\030\003 \003(\tB\006\202\3101" +
-      "\002>0\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005" +
-      " \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\030\n\020invalida" +
-      "te_query\030\007 \001(\t\022u\n\010ssl_mode\030\010 \001(\0162c.yande" +
+      "Rabbitmq\022>\n\017max_connections\030\006 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\010\372\3071\004>=10\022E\n\026max_" +
+      "concurrent_queries\030\007 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\010\372\3071\004>=10\0227\n\022keep_alive_ti" +
+      "meout\030\010 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022<\n\027uncompressed_cache_size\030\t \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022E\n\017mark_cache_siz" +
+      "e\030\n \001(\0132\033.google.protobuf.Int64ValueB\017\372\307" +
+      "1\013>5368709120\022;\n\026max_table_size_to_drop\030" +
+      "\013 \001(\0132\033.google.protobuf.Int64Value\022?\n\032ma" +
+      "x_partition_size_to_drop\030\r \001(\0132\033.google." +
+      "protobuf.Int64Value\022M\n$builtin_dictionar" +
+      "ies_reload_interval\030\014 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\002\030\001\022\020\n\010timezone\030\016 \001(\t\022\023\n\013" +
+      "geobase_uri\030\017 \001(\t\022=\n\030query_log_retention" +
+      "_size\030\020 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022=\n\030query_log_retention_time\030\021 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022<\n\030query_thread_" +
+      "log_enabled\030\022 \001(\0132\032.google.protobuf.Bool" +
+      "Value\022D\n\037query_thread_log_retention_size" +
+      "\030\023 \001(\0132\033.google.protobuf.Int64Value\022D\n\037q" +
+      "uery_thread_log_retention_time\030\024 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022<\n\027part_log_re" +
+      "tention_size\030\025 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022<\n\027part_log_retention_time\030\026 \001(\013" +
+      "2\033.google.protobuf.Int64Value\0226\n\022metric_" +
+      "log_enabled\030\027 \001(\0132\032.google.protobuf.Bool" +
+      "Value\022>\n\031metric_log_retention_size\030\030 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022>\n\031metric_" +
+      "log_retention_time\030\031 \001(\0132\033.google.protob" +
+      "uf.Int64Value\0225\n\021trace_log_enabled\030\032 \001(\013" +
+      "2\032.google.protobuf.BoolValue\022=\n\030trace_lo" +
+      "g_retention_size\030\033 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022=\n\030trace_log_retention_time\030" +
+      "\034 \001(\0132\033.google.protobuf.Int64Value\0224\n\020te" +
+      "xt_log_enabled\030\035 \001(\0132\032.google.protobuf.B" +
+      "oolValue\022<\n\027text_log_retention_size\030\036 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022<\n\027text_l" +
+      "og_retention_time\030\037 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022X\n\016text_log_level\030  \001(\0162@.y" +
+      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
+      "ckhouseConfig.LogLevel\022A\n\024background_poo" +
+      "l_size\030! \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\006\372\3071\002>0\022J\n\035background_schedule_pool_si" +
+      "ze\030\" \001(\0132\033.google.protobuf.Int64ValueB\006\372" +
+      "\3071\002>0\032\212\004\n\tMergeTree\022D\n\037replicated_dedupl" +
+      "ication_window\030\001 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022L\n\'replicated_deduplication_wi" +
+      "ndow_seconds\030\002 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022:\n\025parts_to_delay_insert\030\003 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022:\n\025parts_to_" +
+      "throw_insert\030\004 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022C\n\036max_replicated_merges_in_queu" +
+      "e\030\005 \001(\0132\033.google.protobuf.Int64Value\022^\n9" +
+      "number_of_free_entries_in_pool_to_lower_" +
+      "max_size_of_merge\030\006 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022L\n\'max_bytes_to_merge_at_mi" +
+      "n_space_in_pool\030\007 \001(\0132\033.google.protobuf." +
+      "Int64Value\032\352\004\n\005Kafka\022i\n\021security_protoco" +
+      "l\030\001 \001(\0162N.yandex.cloud.mdb.clickhouse.v1" +
+      ".config.ClickhouseConfig.Kafka.SecurityP" +
+      "rotocol\022c\n\016sasl_mechanism\030\002 \001(\0162K.yandex" +
+      ".cloud.mdb.clickhouse.v1.config.Clickhou" +
+      "seConfig.Kafka.SaslMechanism\022\025\n\rsasl_use" +
+      "rname\030\003 \001(\t\022\025\n\rsasl_password\030\004 \001(\t\"\267\001\n\020S" +
+      "ecurityProtocol\022!\n\035SECURITY_PROTOCOL_UNS" +
+      "PECIFIED\020\000\022\037\n\033SECURITY_PROTOCOL_PLAINTEX" +
+      "T\020\001\022\031\n\025SECURITY_PROTOCOL_SSL\020\002\022$\n SECURI" +
+      "TY_PROTOCOL_SASL_PLAINTEXT\020\003\022\036\n\032SECURITY" +
+      "_PROTOCOL_SASL_SSL\020\004\"\250\001\n\rSaslMechanism\022\036" +
+      "\n\032SASL_MECHANISM_UNSPECIFIED\020\000\022\031\n\025SASL_M" +
+      "ECHANISM_GSSAPI\020\001\022\030\n\024SASL_MECHANISM_PLAI" +
+      "N\020\002\022 \n\034SASL_MECHANISM_SCRAM_SHA_256\020\003\022 \n" +
+      "\034SASL_MECHANISM_SCRAM_SHA_512\020\004\032w\n\nKafka" +
+      "Topic\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022U\n\010settings\030\002 " +
+      "\001(\0132=.yandex.cloud.mdb.clickhouse.v1.con" +
+      "fig.ClickhouseConfig.KafkaB\004\350\3071\001\032.\n\010Rabb" +
+      "itmq\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t" +
+      "\032\333\001\n\013Compression\022Z\n\006method\030\001 \001(\0162J.yande" +
       "x.cloud.mdb.clickhouse.v1.config.Clickho" +
-      "useConfig.ExternalDictionary.PostgresqlS" +
-      "ource.SslMode\"g\n\007SslMode\022\030\n\024SSL_MODE_UNS" +
-      "PECIFIED\020\000\022\013\n\007DISABLE\020\001\022\t\n\005ALLOW\020\002\022\n\n\006PR" +
-      "EFER\020\003\022\r\n\tVERIFY_CA\020\004\022\017\n\013VERIFY_FULL\020\005\032\336" +
-      "\006\n\tStructure\022c\n\002id\030\001 \001(\0132W.yandex.cloud." +
+      "useConfig.Compression.Method\022\036\n\rmin_part" +
+      "_size\030\002 \001(\003B\007\372\3071\003>=1\022\033\n\023min_part_size_ra" +
+      "tio\030\003 \001(\001\"3\n\006Method\022\026\n\022METHOD_UNSPECIFIE" +
+      "D\020\000\022\007\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\032\240\032\n\022ExternalDicti" +
+      "onary\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022m\n\tstructure\030\002" +
+      " \001(\0132T.yandex.cloud.mdb.clickhouse.v1.co" +
+      "nfig.ClickhouseConfig.ExternalDictionary" +
+      ".StructureB\004\350\3071\001\022g\n\006layout\030\003 \001(\0132Q.yande" +
+      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
+      "useConfig.ExternalDictionary.LayoutB\004\350\3071" +
+      "\001\022\030\n\016fixed_lifetime\030\004 \001(\003H\000\022j\n\016lifetime_" +
+      "range\030\005 \001(\0132P.yandex.cloud.mdb.clickhous" +
+      "e.v1.config.ClickhouseConfig.ExternalDic" +
+      "tionary.RangeH\000\022l\n\013http_source\030\006 \001(\0132U.y" +
+      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
+      "ckhouseConfig.ExternalDictionary.HttpSou" +
+      "rceH\001\022n\n\014mysql_source\030\007 \001(\0132V.yandex.clo" +
+      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
+      "nfig.ExternalDictionary.MysqlSourceH\001\022x\n" +
+      "\021clickhouse_source\030\010 \001(\0132[.yandex.cloud." +
       "mdb.clickhouse.v1.config.ClickhouseConfi" +
-      "g.ExternalDictionary.Structure.Id\022e\n\003key" +
-      "\030\003 \001(\0132X.yandex.cloud.mdb.clickhouse.v1." +
-      "config.ClickhouseConfig.ExternalDictiona" +
-      "ry.Structure.Key\022q\n\trange_min\030\004 \001(\0132^.ya" +
-      "ndex.cloud.mdb.clickhouse.v1.config.Clic" +
-      "khouseConfig.ExternalDictionary.Structur" +
-      "e.Attribute\022q\n\trange_max\030\005 \001(\0132^.yandex." +
-      "cloud.mdb.clickhouse.v1.config.Clickhous" +
-      "eConfig.ExternalDictionary.Structure.Att" +
-      "ribute\022z\n\nattributes\030\002 \003(\0132^.yandex.clou" +
-      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
-      "fig.ExternalDictionary.Structure.Attribu" +
-      "teB\006\202\3101\002>0\032\204\001\n\tAttribute\022\022\n\004name\030\001 \001(\tB\004" +
-      "\350\3071\001\022\022\n\004type\030\002 \001(\tB\004\350\3071\001\022\022\n\nnull_value\030\003" +
-      " \001(\t\022\022\n\nexpression\030\004 \001(\t\022\024\n\014hierarchical" +
-      "\030\005 \001(\010\022\021\n\tinjective\030\006 \001(\010\032\030\n\002Id\022\022\n\004name\030" +
-      "\001 \001(\tB\004\350\3071\001\032\201\001\n\003Key\022z\n\nattributes\030\001 \003(\0132" +
-      "^.yandex.cloud.mdb.clickhouse.v1.config." +
-      "ClickhouseConfig.ExternalDictionary.Stru" +
-      "cture.AttributeB\006\202\3101\002>0\032\213\002\n\006Layout\022j\n\004ty" +
-      "pe\030\001 \001(\0162V.yandex.cloud.mdb.clickhouse.v" +
-      "1.config.ClickhouseConfig.ExternalDictio" +
-      "nary.Layout.TypeB\004\350\3071\001\022\025\n\rsize_in_cells\030" +
-      "\002 \001(\003\"~\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\010\n\004F" +
-      "LAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX_KEY_HASHED\020" +
-      "\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CACHE\020\005\022\025\n\021COMPLE" +
-      "X_KEY_CACHE\020\006\032!\n\005Range\022\013\n\003min\030\001 \001(\003\022\013\n\003m" +
-      "ax\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001B\016\n\006source\022\004\300\301" +
-      "1\001\032\364\002\n\016GraphiteRollup\022\022\n\004name\030\001 \001(\tB\004\350\3071" +
-      "\001\022h\n\010patterns\030\002 \003(\0132N.yandex.cloud.mdb.c" +
-      "lickhouse.v1.config.ClickhouseConfig.Gra" +
-      "phiteRollup.PatternB\006\202\3101\002>0\032\343\001\n\007Pattern\022" +
-      "\016\n\006regexp\030\001 \001(\t\022\026\n\010function\030\002 \001(\tB\004\350\3071\001\022" +
-      "s\n\tretention\030\003 \003(\0132X.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.config.ClickhouseConfig.Grap" +
-      "hiteRollup.Pattern.RetentionB\006\202\3101\002>0\032;\n\t" +
-      "Retention\022\023\n\003age\030\001 \001(\003B\006\372\3071\002>0\022\031\n\tprecis" +
-      "ion\030\002 \001(\003B\006\372\3071\002>0\"d\n\010LogLevel\022\031\n\025LOG_LEV" +
-      "EL_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017" +
-      "\n\013INFORMATION\020\003\022\013\n\007WARNING\020\004\022\t\n\005ERROR\020\005\"" +
-      "\215\002\n\023ClickhouseConfigSet\022W\n\020effective_con" +
-      "fig\030\001 \001(\01327.yandex.cloud.mdb.clickhouse." +
-      "v1.config.ClickhouseConfigB\004\350\3071\001\022L\n\013user" +
-      "_config\030\002 \001(\01327.yandex.cloud.mdb.clickho" +
-      "use.v1.config.ClickhouseConfig\022O\n\016defaul" +
-      "t_config\030\003 \001(\01327.yandex.cloud.mdb.clickh" +
-      "ouse.v1.config.ClickhouseConfigB\201\001\n)yand" +
-      "ex.cloud.api.mdb.clickhouse.v1.configZTg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/mdb/clickhouse/v1/config;clickho" +
-      "useb\006proto3"
+      "g.ExternalDictionary.ClickhouseSourceH\001\022" +
+      "r\n\016mongodb_source\030\t \001(\0132X.yandex.cloud.m" +
+      "db.clickhouse.v1.config.ClickhouseConfig" +
+      ".ExternalDictionary.MongodbSourceH\001\022x\n\021p" +
+      "ostgresql_source\030\n \001(\0132[.yandex.cloud.md" +
+      "b.clickhouse.v1.config.ClickhouseConfig." +
+      "ExternalDictionary.PostgresqlSourceH\001\0325\n" +
+      "\nHttpSource\022\021\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006format" +
+      "\030\002 \001(\tB\004\350\3071\001\032\223\003\n\013MysqlSource\022\020\n\002db\030\001 \001(\t" +
+      "B\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\031\n\004port\030\003 \001(" +
+      "\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010password" +
+      "\030\005 \001(\t\022x\n\010replicas\030\006 \003(\0132^.yandex.cloud." +
+      "mdb.clickhouse.v1.config.ClickhouseConfi" +
+      "g.ExternalDictionary.MysqlSource.Replica" +
+      "B\006\202\3101\002>0\022\r\n\005where\030\007 \001(\t\022\030\n\020invalidate_qu" +
+      "ery\030\010 \001(\t\032\177\n\007Replica\022\033\n\004host\030\001 \001(\tB\r\350\3071\001" +
+      "\212\3101\005<=253\022\034\n\010priority\030\002 \001(\003B\n\350\3071\001\372\3071\002>0\022" +
+      "\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t" +
+      "\022\020\n\010password\030\005 \001(\t\032\246\001\n\020ClickhouseSource\022" +
+      "\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\033" +
+      "\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(" +
+      "\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010pa" +
+      "ssword\030\006 \001(\t\022\r\n\005where\030\007 \001(\t\032\231\001\n\rMongodbS" +
+      "ource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\030\n\ncollection\030\002 " +
+      "\001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<=253\022\031" +
+      "\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB" +
+      "\004\350\3071\001\022\020\n\010password\030\006 \001(\t\032\213\003\n\020PostgresqlSo" +
+      "urce\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350" +
+      "\3071\001\022\025\n\005hosts\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004port\030\004 \001(\003" +
+      "B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010pas" +
+      "sword\030\006 \001(\t\022\030\n\020invalidate_query\030\007 \001(\t\022u\n" +
+      "\010ssl_mode\030\010 \001(\0162c.yandex.cloud.mdb.click" +
+      "house.v1.config.ClickhouseConfig.Externa" +
+      "lDictionary.PostgresqlSource.SslMode\"g\n\007" +
+      "SslMode\022\030\n\024SSL_MODE_UNSPECIFIED\020\000\022\013\n\007DIS" +
+      "ABLE\020\001\022\t\n\005ALLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVERIFY_" +
+      "CA\020\004\022\017\n\013VERIFY_FULL\020\005\032\336\006\n\tStructure\022c\n\002i" +
+      "d\030\001 \001(\0132W.yandex.cloud.mdb.clickhouse.v1" +
+      ".config.ClickhouseConfig.ExternalDiction" +
+      "ary.Structure.Id\022e\n\003key\030\003 \001(\0132X.yandex.c" +
+      "loud.mdb.clickhouse.v1.config.Clickhouse" +
+      "Config.ExternalDictionary.Structure.Key\022" +
+      "q\n\trange_min\030\004 \001(\0132^.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.config.ClickhouseConfig.Exte" +
+      "rnalDictionary.Structure.Attribute\022q\n\tra" +
+      "nge_max\030\005 \001(\0132^.yandex.cloud.mdb.clickho" +
+      "use.v1.config.ClickhouseConfig.ExternalD" +
+      "ictionary.Structure.Attribute\022z\n\nattribu" +
+      "tes\030\002 \003(\0132^.yandex.cloud.mdb.clickhouse." +
+      "v1.config.ClickhouseConfig.ExternalDicti" +
+      "onary.Structure.AttributeB\006\202\3101\002>0\032\204\001\n\tAt" +
+      "tribute\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030\002 \001(" +
+      "\tB\004\350\3071\001\022\022\n\nnull_value\030\003 \001(\t\022\022\n\nexpressio" +
+      "n\030\004 \001(\t\022\024\n\014hierarchical\030\005 \001(\010\022\021\n\tinjecti" +
+      "ve\030\006 \001(\010\032\030\n\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201\001\n\003K" +
+      "ey\022z\n\nattributes\030\001 \003(\0132^.yandex.cloud.md" +
+      "b.clickhouse.v1.config.ClickhouseConfig." +
+      "ExternalDictionary.Structure.AttributeB\006" +
+      "\202\3101\002>0\032\213\002\n\006Layout\022j\n\004type\030\001 \001(\0162V.yandex" +
+      ".cloud.mdb.clickhouse.v1.config.Clickhou" +
+      "seConfig.ExternalDictionary.Layout.TypeB" +
+      "\004\350\3071\001\022\025\n\rsize_in_cells\030\002 \001(\003\"~\n\004Type\022\024\n\020" +
+      "TYPE_UNSPECIFIED\020\000\022\010\n\004FLAT\020\001\022\n\n\006HASHED\020\002" +
+      "\022\026\n\022COMPLEX_KEY_HASHED\020\003\022\020\n\014RANGE_HASHED" +
+      "\020\004\022\t\n\005CACHE\020\005\022\025\n\021COMPLEX_KEY_CACHE\020\006\032!\n\005" +
+      "Range\022\013\n\003min\030\001 \001(\003\022\013\n\003max\030\002 \001(\003B\020\n\010lifet" +
+      "ime\022\004\300\3011\001B\016\n\006source\022\004\300\3011\001\032\364\002\n\016GraphiteRo" +
+      "llup\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022h\n\010patterns\030\002 \003" +
+      "(\0132N.yandex.cloud.mdb.clickhouse.v1.conf" +
+      "ig.ClickhouseConfig.GraphiteRollup.Patte" +
+      "rnB\006\202\3101\002>0\032\343\001\n\007Pattern\022\016\n\006regexp\030\001 \001(\t\022\026" +
+      "\n\010function\030\002 \001(\tB\004\350\3071\001\022s\n\tretention\030\003 \003(" +
+      "\0132X.yandex.cloud.mdb.clickhouse.v1.confi" +
+      "g.ClickhouseConfig.GraphiteRollup.Patter" +
+      "n.RetentionB\006\202\3101\002>0\032;\n\tRetention\022\023\n\003age\030" +
+      "\001 \001(\003B\006\372\3071\002>0\022\031\n\tprecision\030\002 \001(\003B\006\372\3071\002>0" +
+      "\"d\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022" +
+      "\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003\022\013" +
+      "\n\007WARNING\020\004\022\t\n\005ERROR\020\005\"\215\002\n\023ClickhouseCon" +
+      "figSet\022W\n\020effective_config\030\001 \001(\01327.yande" +
+      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
+      "useConfigB\004\350\3071\001\022L\n\013user_config\030\002 \001(\01327.y" +
+      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
+      "ckhouseConfig\022O\n\016default_config\030\003 \001(\01327." +
+      "yandex.cloud.mdb.clickhouse.v1.config.Cl" +
+      "ickhouseConfigB\201\001\n)yandex.cloud.api.mdb." +
+      "clickhouse.v1.configZTgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/mdb/click" +
+      "house/v1/config;clickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -36410,7 +38423,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor,
-        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "BackgroundPoolSize", "BackgroundSchedulePoolSize", });
+        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "BackgroundPoolSize", "BackgroundSchedulePoolSize", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_fieldAccessorTable = new
@@ -36423,14 +38436,26 @@ public final class Clickhouse {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_descriptor,
         new java.lang.String[] { "SecurityProtocol", "SaslMechanism", "SaslUsername", "SaslPassword", });
-    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Compression_descriptor =
+    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(2);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_descriptor,
+        new java.lang.String[] { "Name", "Settings", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Rabbitmq_descriptor =
+      internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(3);
+    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Rabbitmq_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Rabbitmq_descriptor,
+        new java.lang.String[] { "Username", "Password", });
+    internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Compression_descriptor =
+      internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(4);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Compression_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Compression_descriptor,
         new java.lang.String[] { "Method", "MinPartSize", "MinPartSizeRatio", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_descriptor =
-      internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(3);
+      internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(5);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_descriptor,
@@ -36508,7 +38533,7 @@ public final class Clickhouse {
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_Range_descriptor,
         new java.lang.String[] { "Min", "Max", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_GraphiteRollup_descriptor =
-      internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(4);
+      internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(6);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_GraphiteRollup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_GraphiteRollup_descriptor,
