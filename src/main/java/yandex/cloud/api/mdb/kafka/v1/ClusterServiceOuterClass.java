@@ -665,12 +665,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
-     * The expression must specify:
-     * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
-     * Example of a filter: `name NOT IN 'test,beta'`.
+     * Filter support is not currently implemented. Any filters are ignored.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -678,12 +673,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
-     * The expression must specify:
-     * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
-     * Example of a filter: `name NOT IN 'test,beta'`.
+     * Filter support is not currently implemented. Any filters are ignored.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -895,12 +885,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
-     * The expression must specify:
-     * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
-     * Example of a filter: `name NOT IN 'test,beta'`.
+     * Filter support is not currently implemented. Any filters are ignored.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -919,12 +904,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
-     * The expression must specify:
-     * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-     * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
-     * Example of a filter: `name NOT IN 'test,beta'`.
+     * Filter support is not currently implemented. Any filters are ignored.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1530,12 +1510,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * The expression must specify:
-       * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
-       * Example of a filter: `name NOT IN 'test,beta'`.
+       * Filter support is not currently implemented. Any filters are ignored.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1554,12 +1529,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * The expression must specify:
-       * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
-       * Example of a filter: `name NOT IN 'test,beta'`.
+       * Filter support is not currently implemented. Any filters are ignored.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1579,12 +1549,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * The expression must specify:
-       * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
-       * Example of a filter: `name NOT IN 'test,beta'`.
+       * Filter support is not currently implemented. Any filters are ignored.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1601,12 +1566,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * The expression must specify:
-       * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
-       * Example of a filter: `name NOT IN 'test,beta'`.
+       * Filter support is not currently implemented. Any filters are ignored.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1619,12 +1579,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * The expression must specify:
-       * 1. The field name to filter by. Currently you can only use filtering with the [Cluster.name] field.
-       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
-       * 3. The value. Мust be 1-63 characters long and match the regular expression `^[a-zA-Z0-9_-]+$`.
-       * Example of a filter: `name NOT IN 'test,beta'`.
+       * Filter support is not currently implemented. Any filters are ignored.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>

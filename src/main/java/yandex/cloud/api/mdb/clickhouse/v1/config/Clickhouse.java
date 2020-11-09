@@ -365,7 +365,7 @@ public final class Clickhouse {
      * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+     * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
     boolean hasMarkCacheSize();
     /**
@@ -373,7 +373,7 @@ public final class Clickhouse {
      * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+     * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
     com.google.protobuf.Int64Value getMarkCacheSize();
     /**
@@ -381,7 +381,7 @@ public final class Clickhouse {
      * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+     * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMarkCacheSizeOrBuilder();
 
@@ -28581,7 +28581,7 @@ public final class Clickhouse {
      * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+     * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
     public boolean hasMarkCacheSize() {
       return markCacheSize_ != null;
@@ -28591,7 +28591,7 @@ public final class Clickhouse {
      * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+     * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
     public com.google.protobuf.Int64Value getMarkCacheSize() {
       return markCacheSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : markCacheSize_;
@@ -28601,7 +28601,7 @@ public final class Clickhouse {
      * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+     * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getMarkCacheSizeOrBuilder() {
       return getMarkCacheSize();
@@ -33188,7 +33188,7 @@ public final class Clickhouse {
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public boolean hasMarkCacheSize() {
         return markCacheSizeBuilder_ != null || markCacheSize_ != null;
@@ -33198,7 +33198,7 @@ public final class Clickhouse {
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public com.google.protobuf.Int64Value getMarkCacheSize() {
         if (markCacheSizeBuilder_ == null) {
@@ -33212,7 +33212,7 @@ public final class Clickhouse {
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public Builder setMarkCacheSize(com.google.protobuf.Int64Value value) {
         if (markCacheSizeBuilder_ == null) {
@@ -33232,7 +33232,7 @@ public final class Clickhouse {
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public Builder setMarkCacheSize(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -33250,7 +33250,7 @@ public final class Clickhouse {
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public Builder mergeMarkCacheSize(com.google.protobuf.Int64Value value) {
         if (markCacheSizeBuilder_ == null) {
@@ -33272,7 +33272,7 @@ public final class Clickhouse {
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public Builder clearMarkCacheSize() {
         if (markCacheSizeBuilder_ == null) {
@@ -33290,7 +33290,7 @@ public final class Clickhouse {
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMarkCacheSizeBuilder() {
         
@@ -33302,7 +33302,7 @@ public final class Clickhouse {
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMarkCacheSizeOrBuilder() {
         if (markCacheSizeBuilder_ != null) {
@@ -33317,7 +33317,7 @@ public final class Clickhouse {
        * Approximate size (in bytes) of the cache of "marks" used by MergeTree tables.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;5368709120"];</code>
+       * <code>.google.protobuf.Int64Value mark_cache_size = 10 [(.yandex.cloud.value) = "&gt;0"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -38194,7 +38194,7 @@ public final class Clickhouse {
       "\n6yandex/cloud/mdb/clickhouse/v1/config/" +
       "clickhouse.proto\022%yandex.cloud.mdb.click" +
       "house.v1.config\032\036google/protobuf/wrapper" +
-      "s.proto\032\035yandex/cloud/validation.proto\"\335" +
+      "s.proto\032\035yandex/cloud/validation.proto\"\324" +
       "=\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
       ".yandex.cloud.mdb.clickhouse.v1.config.C" +
       "lickhouseConfig.LogLevel\022U\n\nmerge_tree\030\002" +
@@ -38219,190 +38219,190 @@ public final class Clickhouse {
       "uf.Int64ValueB\010\372\3071\004>=10\0227\n\022keep_alive_ti" +
       "meout\030\010 \001(\0132\033.google.protobuf.Int64Value" +
       "\022<\n\027uncompressed_cache_size\030\t \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022E\n\017mark_cache_siz" +
-      "e\030\n \001(\0132\033.google.protobuf.Int64ValueB\017\372\307" +
-      "1\013>5368709120\022;\n\026max_table_size_to_drop\030" +
-      "\013 \001(\0132\033.google.protobuf.Int64Value\022?\n\032ma" +
-      "x_partition_size_to_drop\030\r \001(\0132\033.google." +
-      "protobuf.Int64Value\022M\n$builtin_dictionar" +
-      "ies_reload_interval\030\014 \001(\0132\033.google.proto" +
-      "buf.Int64ValueB\002\030\001\022\020\n\010timezone\030\016 \001(\t\022\023\n\013" +
-      "geobase_uri\030\017 \001(\t\022=\n\030query_log_retention" +
-      "_size\030\020 \001(\0132\033.google.protobuf.Int64Value" +
-      "\022=\n\030query_log_retention_time\030\021 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022<\n\030query_thread_" +
-      "log_enabled\030\022 \001(\0132\032.google.protobuf.Bool" +
-      "Value\022D\n\037query_thread_log_retention_size" +
-      "\030\023 \001(\0132\033.google.protobuf.Int64Value\022D\n\037q" +
-      "uery_thread_log_retention_time\030\024 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022<\n\027part_log_re" +
-      "tention_size\030\025 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022<\n\027part_log_retention_time\030\026 \001(\013" +
-      "2\033.google.protobuf.Int64Value\0226\n\022metric_" +
-      "log_enabled\030\027 \001(\0132\032.google.protobuf.Bool" +
-      "Value\022>\n\031metric_log_retention_size\030\030 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022>\n\031metric_" +
-      "log_retention_time\030\031 \001(\0132\033.google.protob" +
-      "uf.Int64Value\0225\n\021trace_log_enabled\030\032 \001(\013" +
-      "2\032.google.protobuf.BoolValue\022=\n\030trace_lo" +
-      "g_retention_size\030\033 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022=\n\030trace_log_retention_time\030" +
-      "\034 \001(\0132\033.google.protobuf.Int64Value\0224\n\020te" +
-      "xt_log_enabled\030\035 \001(\0132\032.google.protobuf.B" +
-      "oolValue\022<\n\027text_log_retention_size\030\036 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022<\n\027text_l" +
-      "og_retention_time\030\037 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022X\n\016text_log_level\030  \001(\0162@.y" +
-      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
-      "ckhouseConfig.LogLevel\022A\n\024background_poo" +
-      "l_size\030! \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\006\372\3071\002>0\022J\n\035background_schedule_pool_si" +
-      "ze\030\" \001(\0132\033.google.protobuf.Int64ValueB\006\372" +
-      "\3071\002>0\032\212\004\n\tMergeTree\022D\n\037replicated_dedupl" +
-      "ication_window\030\001 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022L\n\'replicated_deduplication_wi" +
-      "ndow_seconds\030\002 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022:\n\025parts_to_delay_insert\030\003 \001(\0132\033" +
-      ".google.protobuf.Int64Value\022:\n\025parts_to_" +
-      "throw_insert\030\004 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022C\n\036max_replicated_merges_in_queu" +
-      "e\030\005 \001(\0132\033.google.protobuf.Int64Value\022^\n9" +
-      "number_of_free_entries_in_pool_to_lower_" +
-      "max_size_of_merge\030\006 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022L\n\'max_bytes_to_merge_at_mi" +
-      "n_space_in_pool\030\007 \001(\0132\033.google.protobuf." +
-      "Int64Value\032\352\004\n\005Kafka\022i\n\021security_protoco" +
-      "l\030\001 \001(\0162N.yandex.cloud.mdb.clickhouse.v1" +
-      ".config.ClickhouseConfig.Kafka.SecurityP" +
-      "rotocol\022c\n\016sasl_mechanism\030\002 \001(\0162K.yandex" +
-      ".cloud.mdb.clickhouse.v1.config.Clickhou" +
-      "seConfig.Kafka.SaslMechanism\022\025\n\rsasl_use" +
-      "rname\030\003 \001(\t\022\025\n\rsasl_password\030\004 \001(\t\"\267\001\n\020S" +
-      "ecurityProtocol\022!\n\035SECURITY_PROTOCOL_UNS" +
-      "PECIFIED\020\000\022\037\n\033SECURITY_PROTOCOL_PLAINTEX" +
-      "T\020\001\022\031\n\025SECURITY_PROTOCOL_SSL\020\002\022$\n SECURI" +
-      "TY_PROTOCOL_SASL_PLAINTEXT\020\003\022\036\n\032SECURITY" +
-      "_PROTOCOL_SASL_SSL\020\004\"\250\001\n\rSaslMechanism\022\036" +
-      "\n\032SASL_MECHANISM_UNSPECIFIED\020\000\022\031\n\025SASL_M" +
-      "ECHANISM_GSSAPI\020\001\022\030\n\024SASL_MECHANISM_PLAI" +
-      "N\020\002\022 \n\034SASL_MECHANISM_SCRAM_SHA_256\020\003\022 \n" +
-      "\034SASL_MECHANISM_SCRAM_SHA_512\020\004\032w\n\nKafka" +
-      "Topic\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022U\n\010settings\030\002 " +
-      "\001(\0132=.yandex.cloud.mdb.clickhouse.v1.con" +
-      "fig.ClickhouseConfig.KafkaB\004\350\3071\001\032.\n\010Rabb" +
-      "itmq\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t" +
-      "\032\333\001\n\013Compression\022Z\n\006method\030\001 \001(\0162J.yande" +
-      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
-      "useConfig.Compression.Method\022\036\n\rmin_part" +
-      "_size\030\002 \001(\003B\007\372\3071\003>=1\022\033\n\023min_part_size_ra" +
-      "tio\030\003 \001(\001\"3\n\006Method\022\026\n\022METHOD_UNSPECIFIE" +
-      "D\020\000\022\007\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\032\240\032\n\022ExternalDicti" +
-      "onary\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022m\n\tstructure\030\002" +
-      " \001(\0132T.yandex.cloud.mdb.clickhouse.v1.co" +
-      "nfig.ClickhouseConfig.ExternalDictionary" +
-      ".StructureB\004\350\3071\001\022g\n\006layout\030\003 \001(\0132Q.yande" +
-      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
-      "useConfig.ExternalDictionary.LayoutB\004\350\3071" +
-      "\001\022\030\n\016fixed_lifetime\030\004 \001(\003H\000\022j\n\016lifetime_" +
-      "range\030\005 \001(\0132P.yandex.cloud.mdb.clickhous" +
-      "e.v1.config.ClickhouseConfig.ExternalDic" +
-      "tionary.RangeH\000\022l\n\013http_source\030\006 \001(\0132U.y" +
-      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
-      "ckhouseConfig.ExternalDictionary.HttpSou" +
-      "rceH\001\022n\n\014mysql_source\030\007 \001(\0132V.yandex.clo" +
+      "le.protobuf.Int64Value\022<\n\017mark_cache_siz" +
+      "e\030\n \001(\0132\033.google.protobuf.Int64ValueB\006\372\307" +
+      "1\002>0\022;\n\026max_table_size_to_drop\030\013 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022?\n\032max_partiti" +
+      "on_size_to_drop\030\r \001(\0132\033.google.protobuf." +
+      "Int64Value\022M\n$builtin_dictionaries_reloa" +
+      "d_interval\030\014 \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\002\030\001\022\020\n\010timezone\030\016 \001(\t\022\023\n\013geobase_u" +
+      "ri\030\017 \001(\t\022=\n\030query_log_retention_size\030\020 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022=\n\030query" +
+      "_log_retention_time\030\021 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022<\n\030query_thread_log_enabl" +
+      "ed\030\022 \001(\0132\032.google.protobuf.BoolValue\022D\n\037" +
+      "query_thread_log_retention_size\030\023 \001(\0132\033." +
+      "google.protobuf.Int64Value\022D\n\037query_thre" +
+      "ad_log_retention_time\030\024 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022<\n\027part_log_retention_s" +
+      "ize\030\025 \001(\0132\033.google.protobuf.Int64Value\022<" +
+      "\n\027part_log_retention_time\030\026 \001(\0132\033.google" +
+      ".protobuf.Int64Value\0226\n\022metric_log_enabl" +
+      "ed\030\027 \001(\0132\032.google.protobuf.BoolValue\022>\n\031" +
+      "metric_log_retention_size\030\030 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022>\n\031metric_log_reten" +
+      "tion_time\030\031 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\0225\n\021trace_log_enabled\030\032 \001(\0132\032.google" +
+      ".protobuf.BoolValue\022=\n\030trace_log_retenti" +
+      "on_size\030\033 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022=\n\030trace_log_retention_time\030\034 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\0224\n\020text_log_en" +
+      "abled\030\035 \001(\0132\032.google.protobuf.BoolValue\022" +
+      "<\n\027text_log_retention_size\030\036 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022<\n\027text_log_retent" +
+      "ion_time\030\037 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022X\n\016text_log_level\030  \001(\0162@.yandex.clo" +
       "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
-      "nfig.ExternalDictionary.MysqlSourceH\001\022x\n" +
-      "\021clickhouse_source\030\010 \001(\0132[.yandex.cloud." +
-      "mdb.clickhouse.v1.config.ClickhouseConfi" +
-      "g.ExternalDictionary.ClickhouseSourceH\001\022" +
-      "r\n\016mongodb_source\030\t \001(\0132X.yandex.cloud.m" +
+      "nfig.LogLevel\022A\n\024background_pool_size\030! " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0" +
+      "\022J\n\035background_schedule_pool_size\030\" \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\006\372\3071\002>0\032\212\004\n" +
+      "\tMergeTree\022D\n\037replicated_deduplication_w" +
+      "indow\030\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022L\n\'replicated_deduplication_window_seco" +
+      "nds\030\002 \001(\0132\033.google.protobuf.Int64Value\022:" +
+      "\n\025parts_to_delay_insert\030\003 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022:\n\025parts_to_throw_ins" +
+      "ert\030\004 \001(\0132\033.google.protobuf.Int64Value\022C" +
+      "\n\036max_replicated_merges_in_queue\030\005 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022^\n9number_of" +
+      "_free_entries_in_pool_to_lower_max_size_" +
+      "of_merge\030\006 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022L\n\'max_bytes_to_merge_at_min_space_i" +
+      "n_pool\030\007 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\032\352\004\n\005Kafka\022i\n\021security_protocol\030\001 \001(\0162N" +
+      ".yandex.cloud.mdb.clickhouse.v1.config.C" +
+      "lickhouseConfig.Kafka.SecurityProtocol\022c" +
+      "\n\016sasl_mechanism\030\002 \001(\0162K.yandex.cloud.md" +
+      "b.clickhouse.v1.config.ClickhouseConfig." +
+      "Kafka.SaslMechanism\022\025\n\rsasl_username\030\003 \001" +
+      "(\t\022\025\n\rsasl_password\030\004 \001(\t\"\267\001\n\020SecurityPr" +
+      "otocol\022!\n\035SECURITY_PROTOCOL_UNSPECIFIED\020" +
+      "\000\022\037\n\033SECURITY_PROTOCOL_PLAINTEXT\020\001\022\031\n\025SE" +
+      "CURITY_PROTOCOL_SSL\020\002\022$\n SECURITY_PROTOC" +
+      "OL_SASL_PLAINTEXT\020\003\022\036\n\032SECURITY_PROTOCOL" +
+      "_SASL_SSL\020\004\"\250\001\n\rSaslMechanism\022\036\n\032SASL_ME" +
+      "CHANISM_UNSPECIFIED\020\000\022\031\n\025SASL_MECHANISM_" +
+      "GSSAPI\020\001\022\030\n\024SASL_MECHANISM_PLAIN\020\002\022 \n\034SA" +
+      "SL_MECHANISM_SCRAM_SHA_256\020\003\022 \n\034SASL_MEC" +
+      "HANISM_SCRAM_SHA_512\020\004\032w\n\nKafkaTopic\022\022\n\004" +
+      "name\030\001 \001(\tB\004\350\3071\001\022U\n\010settings\030\002 \001(\0132=.yan" +
+      "dex.cloud.mdb.clickhouse.v1.config.Click" +
+      "houseConfig.KafkaB\004\350\3071\001\032.\n\010Rabbitmq\022\020\n\010u" +
+      "sername\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\032\333\001\n\013Comp" +
+      "ression\022Z\n\006method\030\001 \001(\0162J.yandex.cloud.m" +
       "db.clickhouse.v1.config.ClickhouseConfig" +
-      ".ExternalDictionary.MongodbSourceH\001\022x\n\021p" +
-      "ostgresql_source\030\n \001(\0132[.yandex.cloud.md" +
-      "b.clickhouse.v1.config.ClickhouseConfig." +
-      "ExternalDictionary.PostgresqlSourceH\001\0325\n" +
-      "\nHttpSource\022\021\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006format" +
-      "\030\002 \001(\tB\004\350\3071\001\032\223\003\n\013MysqlSource\022\020\n\002db\030\001 \001(\t" +
-      "B\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\031\n\004port\030\003 \001(" +
-      "\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010password" +
-      "\030\005 \001(\t\022x\n\010replicas\030\006 \003(\0132^.yandex.cloud." +
-      "mdb.clickhouse.v1.config.ClickhouseConfi" +
-      "g.ExternalDictionary.MysqlSource.Replica" +
-      "B\006\202\3101\002>0\022\r\n\005where\030\007 \001(\t\022\030\n\020invalidate_qu" +
-      "ery\030\010 \001(\t\032\177\n\007Replica\022\033\n\004host\030\001 \001(\tB\r\350\3071\001" +
-      "\212\3101\005<=253\022\034\n\010priority\030\002 \001(\003B\n\350\3071\001\372\3071\002>0\022" +
-      "\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t" +
-      "\022\020\n\010password\030\005 \001(\t\032\246\001\n\020ClickhouseSource\022" +
-      "\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\033" +
-      "\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(" +
-      "\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010pa" +
-      "ssword\030\006 \001(\t\022\r\n\005where\030\007 \001(\t\032\231\001\n\rMongodbS" +
-      "ource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\030\n\ncollection\030\002 " +
-      "\001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<=253\022\031" +
-      "\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB" +
-      "\004\350\3071\001\022\020\n\010password\030\006 \001(\t\032\213\003\n\020PostgresqlSo" +
-      "urce\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350" +
-      "\3071\001\022\025\n\005hosts\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004port\030\004 \001(\003" +
-      "B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010pas" +
-      "sword\030\006 \001(\t\022\030\n\020invalidate_query\030\007 \001(\t\022u\n" +
-      "\010ssl_mode\030\010 \001(\0162c.yandex.cloud.mdb.click" +
-      "house.v1.config.ClickhouseConfig.Externa" +
-      "lDictionary.PostgresqlSource.SslMode\"g\n\007" +
-      "SslMode\022\030\n\024SSL_MODE_UNSPECIFIED\020\000\022\013\n\007DIS" +
-      "ABLE\020\001\022\t\n\005ALLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVERIFY_" +
-      "CA\020\004\022\017\n\013VERIFY_FULL\020\005\032\336\006\n\tStructure\022c\n\002i" +
-      "d\030\001 \001(\0132W.yandex.cloud.mdb.clickhouse.v1" +
-      ".config.ClickhouseConfig.ExternalDiction" +
-      "ary.Structure.Id\022e\n\003key\030\003 \001(\0132X.yandex.c" +
-      "loud.mdb.clickhouse.v1.config.Clickhouse" +
-      "Config.ExternalDictionary.Structure.Key\022" +
-      "q\n\trange_min\030\004 \001(\0132^.yandex.cloud.mdb.cl" +
+      ".Compression.Method\022\036\n\rmin_part_size\030\002 \001" +
+      "(\003B\007\372\3071\003>=1\022\033\n\023min_part_size_ratio\030\003 \001(\001" +
+      "\"3\n\006Method\022\026\n\022METHOD_UNSPECIFIED\020\000\022\007\n\003LZ" +
+      "4\020\001\022\010\n\004ZSTD\020\002\032\240\032\n\022ExternalDictionary\022\022\n\004" +
+      "name\030\001 \001(\tB\004\350\3071\001\022m\n\tstructure\030\002 \001(\0132T.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.config.Clic" +
+      "khouseConfig.ExternalDictionary.Structur" +
+      "eB\004\350\3071\001\022g\n\006layout\030\003 \001(\0132Q.yandex.cloud.m" +
+      "db.clickhouse.v1.config.ClickhouseConfig" +
+      ".ExternalDictionary.LayoutB\004\350\3071\001\022\030\n\016fixe" +
+      "d_lifetime\030\004 \001(\003H\000\022j\n\016lifetime_range\030\005 \001" +
+      "(\0132P.yandex.cloud.mdb.clickhouse.v1.conf" +
+      "ig.ClickhouseConfig.ExternalDictionary.R" +
+      "angeH\000\022l\n\013http_source\030\006 \001(\0132U.yandex.clo" +
+      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
+      "nfig.ExternalDictionary.HttpSourceH\001\022n\n\014" +
+      "mysql_source\030\007 \001(\0132V.yandex.cloud.mdb.cl" +
       "ickhouse.v1.config.ClickhouseConfig.Exte" +
-      "rnalDictionary.Structure.Attribute\022q\n\tra" +
-      "nge_max\030\005 \001(\0132^.yandex.cloud.mdb.clickho" +
+      "rnalDictionary.MysqlSourceH\001\022x\n\021clickhou" +
+      "se_source\030\010 \001(\0132[.yandex.cloud.mdb.click" +
+      "house.v1.config.ClickhouseConfig.Externa" +
+      "lDictionary.ClickhouseSourceH\001\022r\n\016mongod" +
+      "b_source\030\t \001(\0132X.yandex.cloud.mdb.clickh" +
+      "ouse.v1.config.ClickhouseConfig.External" +
+      "Dictionary.MongodbSourceH\001\022x\n\021postgresql" +
+      "_source\030\n \001(\0132[.yandex.cloud.mdb.clickho" +
       "use.v1.config.ClickhouseConfig.ExternalD" +
-      "ictionary.Structure.Attribute\022z\n\nattribu" +
-      "tes\030\002 \003(\0132^.yandex.cloud.mdb.clickhouse." +
+      "ictionary.PostgresqlSourceH\001\0325\n\nHttpSour" +
+      "ce\022\021\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006format\030\002 \001(\tB\004\350" +
+      "\3071\001\032\223\003\n\013MysqlSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n" +
+      "\005table\030\002 \001(\tB\004\350\3071\001\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-" +
+      "65535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\022x\n" +
+      "\010replicas\030\006 \003(\0132^.yandex.cloud.mdb.click" +
+      "house.v1.config.ClickhouseConfig.Externa" +
+      "lDictionary.MysqlSource.ReplicaB\006\202\3101\002>0\022" +
+      "\r\n\005where\030\007 \001(\t\022\030\n\020invalidate_query\030\010 \001(\t" +
+      "\032\177\n\007Replica\022\033\n\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253" +
+      "\022\034\n\010priority\030\002 \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003" +
+      " \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010passw" +
+      "ord\030\005 \001(\t\032\246\001\n\020ClickhouseSource\022\020\n\002db\030\001 \001" +
+      "(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 " +
+      "\001(\tB\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-" +
+      "65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 " +
+      "\001(\t\022\r\n\005where\030\007 \001(\t\032\231\001\n\rMongodbSource\022\020\n\002" +
+      "db\030\001 \001(\tB\004\350\3071\001\022\030\n\ncollection\030\002 \001(\tB\004\350\3071\001" +
+      "\022\033\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 " +
+      "\001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010" +
+      "password\030\006 \001(\t\032\213\003\n\020PostgresqlSource\022\020\n\002d" +
+      "b\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\025\n\005ho" +
+      "sts\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-6" +
+      "5535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001" +
+      "(\t\022\030\n\020invalidate_query\030\007 \001(\t\022u\n\010ssl_mode" +
+      "\030\010 \001(\0162c.yandex.cloud.mdb.clickhouse.v1." +
+      "config.ClickhouseConfig.ExternalDictiona" +
+      "ry.PostgresqlSource.SslMode\"g\n\007SslMode\022\030" +
+      "\n\024SSL_MODE_UNSPECIFIED\020\000\022\013\n\007DISABLE\020\001\022\t\n" +
+      "\005ALLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVERIFY_CA\020\004\022\017\n\013V" +
+      "ERIFY_FULL\020\005\032\336\006\n\tStructure\022c\n\002id\030\001 \001(\0132W" +
+      ".yandex.cloud.mdb.clickhouse.v1.config.C" +
+      "lickhouseConfig.ExternalDictionary.Struc" +
+      "ture.Id\022e\n\003key\030\003 \001(\0132X.yandex.cloud.mdb." +
+      "clickhouse.v1.config.ClickhouseConfig.Ex" +
+      "ternalDictionary.Structure.Key\022q\n\trange_" +
+      "min\030\004 \001(\0132^.yandex.cloud.mdb.clickhouse." +
       "v1.config.ClickhouseConfig.ExternalDicti" +
-      "onary.Structure.AttributeB\006\202\3101\002>0\032\204\001\n\tAt" +
-      "tribute\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030\002 \001(" +
-      "\tB\004\350\3071\001\022\022\n\nnull_value\030\003 \001(\t\022\022\n\nexpressio" +
-      "n\030\004 \001(\t\022\024\n\014hierarchical\030\005 \001(\010\022\021\n\tinjecti" +
-      "ve\030\006 \001(\010\032\030\n\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201\001\n\003K" +
-      "ey\022z\n\nattributes\030\001 \003(\0132^.yandex.cloud.md" +
+      "onary.Structure.Attribute\022q\n\trange_max\030\005" +
+      " \001(\0132^.yandex.cloud.mdb.clickhouse.v1.co" +
+      "nfig.ClickhouseConfig.ExternalDictionary" +
+      ".Structure.Attribute\022z\n\nattributes\030\002 \003(\013" +
+      "2^.yandex.cloud.mdb.clickhouse.v1.config" +
+      ".ClickhouseConfig.ExternalDictionary.Str" +
+      "ucture.AttributeB\006\202\3101\002>0\032\204\001\n\tAttribute\022\022" +
+      "\n\004name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030\002 \001(\tB\004\350\3071\001\022\022" +
+      "\n\nnull_value\030\003 \001(\t\022\022\n\nexpression\030\004 \001(\t\022\024" +
+      "\n\014hierarchical\030\005 \001(\010\022\021\n\tinjective\030\006 \001(\010\032" +
+      "\030\n\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201\001\n\003Key\022z\n\natt" +
+      "ributes\030\001 \003(\0132^.yandex.cloud.mdb.clickho" +
+      "use.v1.config.ClickhouseConfig.ExternalD" +
+      "ictionary.Structure.AttributeB\006\202\3101\002>0\032\213\002" +
+      "\n\006Layout\022j\n\004type\030\001 \001(\0162V.yandex.cloud.md" +
       "b.clickhouse.v1.config.ClickhouseConfig." +
-      "ExternalDictionary.Structure.AttributeB\006" +
-      "\202\3101\002>0\032\213\002\n\006Layout\022j\n\004type\030\001 \001(\0162V.yandex" +
-      ".cloud.mdb.clickhouse.v1.config.Clickhou" +
-      "seConfig.ExternalDictionary.Layout.TypeB" +
-      "\004\350\3071\001\022\025\n\rsize_in_cells\030\002 \001(\003\"~\n\004Type\022\024\n\020" +
-      "TYPE_UNSPECIFIED\020\000\022\010\n\004FLAT\020\001\022\n\n\006HASHED\020\002" +
-      "\022\026\n\022COMPLEX_KEY_HASHED\020\003\022\020\n\014RANGE_HASHED" +
-      "\020\004\022\t\n\005CACHE\020\005\022\025\n\021COMPLEX_KEY_CACHE\020\006\032!\n\005" +
-      "Range\022\013\n\003min\030\001 \001(\003\022\013\n\003max\030\002 \001(\003B\020\n\010lifet" +
-      "ime\022\004\300\3011\001B\016\n\006source\022\004\300\3011\001\032\364\002\n\016GraphiteRo" +
-      "llup\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022h\n\010patterns\030\002 \003" +
-      "(\0132N.yandex.cloud.mdb.clickhouse.v1.conf" +
-      "ig.ClickhouseConfig.GraphiteRollup.Patte" +
-      "rnB\006\202\3101\002>0\032\343\001\n\007Pattern\022\016\n\006regexp\030\001 \001(\t\022\026" +
-      "\n\010function\030\002 \001(\tB\004\350\3071\001\022s\n\tretention\030\003 \003(" +
-      "\0132X.yandex.cloud.mdb.clickhouse.v1.confi" +
-      "g.ClickhouseConfig.GraphiteRollup.Patter" +
-      "n.RetentionB\006\202\3101\002>0\032;\n\tRetention\022\023\n\003age\030" +
-      "\001 \001(\003B\006\372\3071\002>0\022\031\n\tprecision\030\002 \001(\003B\006\372\3071\002>0" +
-      "\"d\n\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022" +
-      "\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003\022\013" +
-      "\n\007WARNING\020\004\022\t\n\005ERROR\020\005\"\215\002\n\023ClickhouseCon" +
-      "figSet\022W\n\020effective_config\030\001 \001(\01327.yande" +
+      "ExternalDictionary.Layout.TypeB\004\350\3071\001\022\025\n\r" +
+      "size_in_cells\030\002 \001(\003\"~\n\004Type\022\024\n\020TYPE_UNSP" +
+      "ECIFIED\020\000\022\010\n\004FLAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPL" +
+      "EX_KEY_HASHED\020\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CAC" +
+      "HE\020\005\022\025\n\021COMPLEX_KEY_CACHE\020\006\032!\n\005Range\022\013\n\003" +
+      "min\030\001 \001(\003\022\013\n\003max\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001" +
+      "B\016\n\006source\022\004\300\3011\001\032\364\002\n\016GraphiteRollup\022\022\n\004n" +
+      "ame\030\001 \001(\tB\004\350\3071\001\022h\n\010patterns\030\002 \003(\0132N.yand" +
+      "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
+      "ouseConfig.GraphiteRollup.PatternB\006\202\3101\002>" +
+      "0\032\343\001\n\007Pattern\022\016\n\006regexp\030\001 \001(\t\022\026\n\010functio" +
+      "n\030\002 \001(\tB\004\350\3071\001\022s\n\tretention\030\003 \003(\0132X.yande" +
       "x.cloud.mdb.clickhouse.v1.config.Clickho" +
-      "useConfigB\004\350\3071\001\022L\n\013user_config\030\002 \001(\01327.y" +
-      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
-      "ckhouseConfig\022O\n\016default_config\030\003 \001(\01327." +
-      "yandex.cloud.mdb.clickhouse.v1.config.Cl" +
-      "ickhouseConfigB\201\001\n)yandex.cloud.api.mdb." +
-      "clickhouse.v1.configZTgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/mdb/click" +
-      "house/v1/config;clickhouseb\006proto3"
+      "useConfig.GraphiteRollup.Pattern.Retenti" +
+      "onB\006\202\3101\002>0\032;\n\tRetention\022\023\n\003age\030\001 \001(\003B\006\372\307" +
+      "1\002>0\022\031\n\tprecision\030\002 \001(\003B\006\372\3071\002>0\"d\n\010LogLe" +
+      "vel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020" +
+      "\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003\022\013\n\007WARNING" +
+      "\020\004\022\t\n\005ERROR\020\005\"\215\002\n\023ClickhouseConfigSet\022W\n" +
+      "\020effective_config\030\001 \001(\01327.yandex.cloud.m" +
+      "db.clickhouse.v1.config.ClickhouseConfig" +
+      "B\004\350\3071\001\022L\n\013user_config\030\002 \001(\01327.yandex.clo" +
+      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
+      "nfig\022O\n\016default_config\030\003 \001(\01327.yandex.cl" +
+      "oud.mdb.clickhouse.v1.config.ClickhouseC" +
+      "onfigB\201\001\n)yandex.cloud.api.mdb.clickhous" +
+      "e.v1.configZTgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/mdb/clickhouse/v1/" +
+      "config;clickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

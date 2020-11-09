@@ -6167,7 +6167,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The number of messages accumulated on a log partition before messages are flushed to disk.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -6176,7 +6176,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The number of messages accumulated on a log partition before messages are flushed to disk.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -6185,7 +6185,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The number of messages accumulated on a log partition before messages are flushed to disk.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -6195,7 +6195,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -6204,7 +6204,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -6213,7 +6213,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -6249,7 +6249,7 @@ public final class TopicOuterClass {
      * <pre>
      * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
      * It is helpful if you need to control the size of log due to limited disk space.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -6259,7 +6259,7 @@ public final class TopicOuterClass {
      * <pre>
      * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
      * It is helpful if you need to control the size of log due to limited disk space.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -6269,7 +6269,7 @@ public final class TopicOuterClass {
      * <pre>
      * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
      * It is helpful if you need to control the size of log due to limited disk space.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -6279,7 +6279,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The number of milliseconds to keep a log segment's file before deleting it.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -6288,7 +6288,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The number of milliseconds to keep a log segment's file before deleting it.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -6297,7 +6297,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The number of milliseconds to keep a log segment's file before deleting it.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -6745,7 +6745,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The number of messages accumulated on a log partition before messages are flushed to disk.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -6756,7 +6756,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The number of messages accumulated on a log partition before messages are flushed to disk.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -6767,7 +6767,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The number of messages accumulated on a log partition before messages are flushed to disk.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -6781,7 +6781,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -6792,7 +6792,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -6803,7 +6803,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -6851,7 +6851,7 @@ public final class TopicOuterClass {
      * <pre>
      * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
      * It is helpful if you need to control the size of log due to limited disk space.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -6863,7 +6863,7 @@ public final class TopicOuterClass {
      * <pre>
      * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
      * It is helpful if you need to control the size of log due to limited disk space.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -6875,7 +6875,7 @@ public final class TopicOuterClass {
      * <pre>
      * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
      * It is helpful if you need to control the size of log due to limited disk space.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -6889,7 +6889,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The number of milliseconds to keep a log segment's file before deleting it.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -6900,7 +6900,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The number of milliseconds to keep a log segment's file before deleting it.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -6911,7 +6911,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * The number of milliseconds to keep a log segment's file before deleting it.
-     * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -7894,7 +7894,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -7905,7 +7905,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -7920,7 +7920,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -7941,7 +7941,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -7960,7 +7960,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -7983,7 +7983,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -8002,7 +8002,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -8015,7 +8015,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -8031,7 +8031,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_messages] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_messages] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_messages = 5;</code>
@@ -8056,7 +8056,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -8067,7 +8067,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -8082,7 +8082,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -8103,7 +8103,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -8122,7 +8122,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -8145,7 +8145,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -8164,7 +8164,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -8177,7 +8177,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -8193,7 +8193,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The maximum time in milliseconds that a message in the topic is kept in memory before flushed to disk.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_flush_interval_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_flush_interval_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value flush_ms = 6;</code>
@@ -8372,7 +8372,7 @@ public final class TopicOuterClass {
        * <pre>
        * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
        * It is helpful if you need to control the size of log due to limited disk space.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -8384,7 +8384,7 @@ public final class TopicOuterClass {
        * <pre>
        * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
        * It is helpful if you need to control the size of log due to limited disk space.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -8400,7 +8400,7 @@ public final class TopicOuterClass {
        * <pre>
        * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
        * It is helpful if you need to control the size of log due to limited disk space.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -8422,7 +8422,7 @@ public final class TopicOuterClass {
        * <pre>
        * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
        * It is helpful if you need to control the size of log due to limited disk space.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -8442,7 +8442,7 @@ public final class TopicOuterClass {
        * <pre>
        * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
        * It is helpful if you need to control the size of log due to limited disk space.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -8466,7 +8466,7 @@ public final class TopicOuterClass {
        * <pre>
        * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
        * It is helpful if you need to control the size of log due to limited disk space.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -8486,7 +8486,7 @@ public final class TopicOuterClass {
        * <pre>
        * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
        * It is helpful if you need to control the size of log due to limited disk space.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -8500,7 +8500,7 @@ public final class TopicOuterClass {
        * <pre>
        * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
        * It is helpful if you need to control the size of log due to limited disk space.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -8517,7 +8517,7 @@ public final class TopicOuterClass {
        * <pre>
        * The maximum size a partition can grow to before Kafka will discard old log segments to free up space if the `delete` [cleanup_policy] is in effect.
        * It is helpful if you need to control the size of log due to limited disk space.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_bytes] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_bytes] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_bytes = 8;</code>
@@ -8542,7 +8542,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of milliseconds to keep a log segment's file before deleting it.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -8553,7 +8553,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of milliseconds to keep a log segment's file before deleting it.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -8568,7 +8568,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of milliseconds to keep a log segment's file before deleting it.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -8589,7 +8589,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of milliseconds to keep a log segment's file before deleting it.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -8608,7 +8608,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of milliseconds to keep a log segment's file before deleting it.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -8631,7 +8631,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of milliseconds to keep a log segment's file before deleting it.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -8650,7 +8650,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of milliseconds to keep a log segment's file before deleting it.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -8663,7 +8663,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of milliseconds to keep a log segment's file before deleting it.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
@@ -8679,7 +8679,7 @@ public final class TopicOuterClass {
       /**
        * <pre>
        * The number of milliseconds to keep a log segment's file before deleting it.
-       * This setting overrides the cluster-level [KafkaConfig2_1.log_retention_ms] setting on the topic level.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_retention_ms] setting on the topic level.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
