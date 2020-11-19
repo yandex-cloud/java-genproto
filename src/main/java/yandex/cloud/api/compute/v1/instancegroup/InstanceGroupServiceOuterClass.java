@@ -1165,7 +1165,9 @@ public final class InstanceGroupServiceOuterClass {
 
     /**
      * <pre>
-     * Flag that inhibits deletion of the instance group
+     * Flag prohibiting deletion of the instance group.
+     * Allowed values:&lt;/br&gt;- `false`: The instance group can be deleted.&lt;/br&gt;- `true`: The instance group cannot be deleted.
+     * The default is `false`.
      * </pre>
      *
      * <code>bool deletion_protection = 14;</code>
@@ -1897,7 +1899,9 @@ public final class InstanceGroupServiceOuterClass {
     private boolean deletionProtection_;
     /**
      * <pre>
-     * Flag that inhibits deletion of the instance group
+     * Flag prohibiting deletion of the instance group.
+     * Allowed values:&lt;/br&gt;- `false`: The instance group can be deleted.&lt;/br&gt;- `true`: The instance group cannot be deleted.
+     * The default is `false`.
      * </pre>
      *
      * <code>bool deletion_protection = 14;</code>
@@ -4249,7 +4253,9 @@ public final class InstanceGroupServiceOuterClass {
       private boolean deletionProtection_ ;
       /**
        * <pre>
-       * Flag that inhibits deletion of the instance group
+       * Flag prohibiting deletion of the instance group.
+       * Allowed values:&lt;/br&gt;- `false`: The instance group can be deleted.&lt;/br&gt;- `true`: The instance group cannot be deleted.
+       * The default is `false`.
        * </pre>
        *
        * <code>bool deletion_protection = 14;</code>
@@ -4259,7 +4265,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Flag that inhibits deletion of the instance group
+       * Flag prohibiting deletion of the instance group.
+       * Allowed values:&lt;/br&gt;- `false`: The instance group can be deleted.&lt;/br&gt;- `true`: The instance group cannot be deleted.
+       * The default is `false`.
        * </pre>
        *
        * <code>bool deletion_protection = 14;</code>
@@ -4272,7 +4280,9 @@ public final class InstanceGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * Flag that inhibits deletion of the instance group
+       * Flag prohibiting deletion of the instance group.
+       * Allowed values:&lt;/br&gt;- `false`: The instance group can be deleted.&lt;/br&gt;- `true`: The instance group cannot be deleted.
+       * The default is `false`.
        * </pre>
        *
        * <code>bool deletion_protection = 14;</code>

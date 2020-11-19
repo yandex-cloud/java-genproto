@@ -473,7 +473,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
      */
     boolean hasMaxHeapTableSize();
     /**
@@ -482,7 +482,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
      */
     com.google.protobuf.Int64Value getMaxHeapTableSize();
     /**
@@ -491,7 +491,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxHeapTableSizeOrBuilder();
 
@@ -1348,6 +1348,34 @@ public final class Mysql80 {
      * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getSlaveParallelWorkersOrBuilder();
+
+    /**
+     * <pre>
+     * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+     */
+    boolean hasRegexpTimeLimit();
+    /**
+     * <pre>
+     * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+     */
+    com.google.protobuf.Int64Value getRegexpTimeLimit();
+    /**
+     * <pre>
+     * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getRegexpTimeLimitOrBuilder();
   }
   /**
    * <pre>
@@ -1995,6 +2023,19 @@ public final class Mysql80 {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(slaveParallelWorkers_);
                 slaveParallelWorkers_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 402: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (regexpTimeLimit_ != null) {
+                subBuilder = regexpTimeLimit_.toBuilder();
+              }
+              regexpTimeLimit_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(regexpTimeLimit_);
+                regexpTimeLimit_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3394,7 +3435,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
      */
     public boolean hasMaxHeapTableSize() {
       return maxHeapTableSize_ != null;
@@ -3405,7 +3446,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
      */
     public com.google.protobuf.Int64Value getMaxHeapTableSize() {
       return maxHeapTableSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxHeapTableSize_;
@@ -3416,7 +3457,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getMaxHeapTableSizeOrBuilder() {
       return getMaxHeapTableSize();
@@ -4580,6 +4621,42 @@ public final class Mysql80 {
       return getSlaveParallelWorkers();
     }
 
+    public static final int REGEXP_TIME_LIMIT_FIELD_NUMBER = 50;
+    private com.google.protobuf.Int64Value regexpTimeLimit_;
+    /**
+     * <pre>
+     * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+     */
+    public boolean hasRegexpTimeLimit() {
+      return regexpTimeLimit_ != null;
+    }
+    /**
+     * <pre>
+     * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+     */
+    public com.google.protobuf.Int64Value getRegexpTimeLimit() {
+      return regexpTimeLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : regexpTimeLimit_;
+    }
+    /**
+     * <pre>
+     * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getRegexpTimeLimitOrBuilder() {
+      return getRegexpTimeLimit();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4745,6 +4822,9 @@ public final class Mysql80 {
       }
       if (slaveParallelWorkers_ != null) {
         output.writeMessage(49, getSlaveParallelWorkers());
+      }
+      if (regexpTimeLimit_ != null) {
+        output.writeMessage(50, getRegexpTimeLimit());
       }
       unknownFields.writeTo(output);
     }
@@ -4955,6 +5035,10 @@ public final class Mysql80 {
       if (slaveParallelWorkers_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(49, getSlaveParallelWorkers());
+      }
+      if (regexpTimeLimit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(50, getRegexpTimeLimit());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5188,6 +5272,11 @@ public final class Mysql80 {
         result = result && getSlaveParallelWorkers()
             .equals(other.getSlaveParallelWorkers());
       }
+      result = result && (hasRegexpTimeLimit() == other.hasRegexpTimeLimit());
+      if (hasRegexpTimeLimit()) {
+        result = result && getRegexpTimeLimit()
+            .equals(other.getRegexpTimeLimit());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5380,6 +5469,10 @@ public final class Mysql80 {
       if (hasSlaveParallelWorkers()) {
         hash = (37 * hash) + SLAVE_PARALLEL_WORKERS_FIELD_NUMBER;
         hash = (53 * hash) + getSlaveParallelWorkers().hashCode();
+      }
+      if (hasRegexpTimeLimit()) {
+        hash = (37 * hash) + REGEXP_TIME_LIMIT_FIELD_NUMBER;
+        hash = (53 * hash) + getRegexpTimeLimit().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5780,6 +5873,12 @@ public final class Mysql80 {
           slaveParallelWorkers_ = null;
           slaveParallelWorkersBuilder_ = null;
         }
+        if (regexpTimeLimitBuilder_ == null) {
+          regexpTimeLimit_ = null;
+        } else {
+          regexpTimeLimit_ = null;
+          regexpTimeLimitBuilder_ = null;
+        }
         return this;
       }
 
@@ -6027,6 +6126,11 @@ public final class Mysql80 {
         } else {
           result.slaveParallelWorkers_ = slaveParallelWorkersBuilder_.build();
         }
+        if (regexpTimeLimitBuilder_ == null) {
+          result.regexpTimeLimit_ = regexpTimeLimit_;
+        } else {
+          result.regexpTimeLimit_ = regexpTimeLimitBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -6233,6 +6337,9 @@ public final class Mysql80 {
         }
         if (other.hasSlaveParallelWorkers()) {
           mergeSlaveParallelWorkers(other.getSlaveParallelWorkers());
+        }
+        if (other.hasRegexpTimeLimit()) {
+          mergeRegexpTimeLimit(other.getRegexpTimeLimit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8698,7 +8805,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public boolean hasMaxHeapTableSize() {
         return maxHeapTableSizeBuilder_ != null || maxHeapTableSize_ != null;
@@ -8709,7 +8816,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public com.google.protobuf.Int64Value getMaxHeapTableSize() {
         if (maxHeapTableSizeBuilder_ == null) {
@@ -8724,7 +8831,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public Builder setMaxHeapTableSize(com.google.protobuf.Int64Value value) {
         if (maxHeapTableSizeBuilder_ == null) {
@@ -8745,7 +8852,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public Builder setMaxHeapTableSize(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -8764,7 +8871,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public Builder mergeMaxHeapTableSize(com.google.protobuf.Int64Value value) {
         if (maxHeapTableSizeBuilder_ == null) {
@@ -8787,7 +8894,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public Builder clearMaxHeapTableSize() {
         if (maxHeapTableSizeBuilder_ == null) {
@@ -8806,7 +8913,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxHeapTableSizeBuilder() {
         
@@ -8819,7 +8926,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxHeapTableSizeOrBuilder() {
         if (maxHeapTableSizeBuilder_ != null) {
@@ -8835,7 +8942,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -13646,6 +13753,168 @@ public final class Mysql80 {
         }
         return slaveParallelWorkersBuilder_;
       }
+
+      private com.google.protobuf.Int64Value regexpTimeLimit_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> regexpTimeLimitBuilder_;
+      /**
+       * <pre>
+       * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public boolean hasRegexpTimeLimit() {
+        return regexpTimeLimitBuilder_ != null || regexpTimeLimit_ != null;
+      }
+      /**
+       * <pre>
+       * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public com.google.protobuf.Int64Value getRegexpTimeLimit() {
+        if (regexpTimeLimitBuilder_ == null) {
+          return regexpTimeLimit_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : regexpTimeLimit_;
+        } else {
+          return regexpTimeLimitBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public Builder setRegexpTimeLimit(com.google.protobuf.Int64Value value) {
+        if (regexpTimeLimitBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          regexpTimeLimit_ = value;
+          onChanged();
+        } else {
+          regexpTimeLimitBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public Builder setRegexpTimeLimit(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (regexpTimeLimitBuilder_ == null) {
+          regexpTimeLimit_ = builderForValue.build();
+          onChanged();
+        } else {
+          regexpTimeLimitBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public Builder mergeRegexpTimeLimit(com.google.protobuf.Int64Value value) {
+        if (regexpTimeLimitBuilder_ == null) {
+          if (regexpTimeLimit_ != null) {
+            regexpTimeLimit_ =
+              com.google.protobuf.Int64Value.newBuilder(regexpTimeLimit_).mergeFrom(value).buildPartial();
+          } else {
+            regexpTimeLimit_ = value;
+          }
+          onChanged();
+        } else {
+          regexpTimeLimitBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public Builder clearRegexpTimeLimit() {
+        if (regexpTimeLimitBuilder_ == null) {
+          regexpTimeLimit_ = null;
+          onChanged();
+        } else {
+          regexpTimeLimit_ = null;
+          regexpTimeLimitBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getRegexpTimeLimitBuilder() {
+        
+        onChanged();
+        return getRegexpTimeLimitFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getRegexpTimeLimitOrBuilder() {
+        if (regexpTimeLimitBuilder_ != null) {
+          return regexpTimeLimitBuilder_.getMessageOrBuilder();
+        } else {
+          return regexpTimeLimit_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : regexpTimeLimit_;
+        }
+      }
+      /**
+       * <pre>
+       * The time limit for regular expression matching operations performed by REGEXP_LIKE and similar functions
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/replication-options-replica.html#sysvar_regexp_time_limit).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value regexp_time_limit = 50 [(.yandex.cloud.value) = "0-1048576"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getRegexpTimeLimitFieldBuilder() {
+        if (regexpTimeLimitBuilder_ == null) {
+          regexpTimeLimitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getRegexpTimeLimit(),
+                  getParentForChildren(),
+                  isClean());
+          regexpTimeLimit_ = null;
+        }
+        return regexpTimeLimitBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14911,7 +15180,7 @@ public final class Mysql80 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "8_0.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\350\"\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\260#\n\016MysqlConf" +
       "ig8_0\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -14940,99 +15209,101 @@ public final class Mysql80 {
       "\3071\0061-1200\022I\n\024group_concat_max_len\030\017 \001(\0132" +
       "\033.google.protobuf.Int64ValueB\016\372\3071\n4-3355" +
       "4432\022G\n\016tmp_table_size\030\020 \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueB\022\372\3071\0161024-134217728\022L\n" +
+      "otobuf.Int64ValueB\022\372\3071\0161024-134217728\022M\n" +
       "\023max_heap_table_size\030\021 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\022\372\3071\0161024-134217728\022\031\n\021d" +
-      "efault_time_zone\030\022 \001(\t\022\034\n\024character_set_" +
-      "server\030\023 \001(\t\022\030\n\020collation_server\030\024 \001(\t\022>" +
-      "\n\032innodb_adaptive_hash_index\030\025 \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\022:\n\026innodb_numa_in" +
-      "terleave\030\026 \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\022R\n\026innodb_log_buffer_size\030\027 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\025\372\3071\0211048576-268" +
-      "435456\022S\n\024innodb_log_file_size\030\030 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\030\372\3071\024268435456" +
-      "-4294967296\022G\n\022innodb_io_capacity\030\031 \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\016\372\3071\n100-10" +
-      "0000\022K\n\026innodb_io_capacity_max\030\032 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\016\372\3071\n100-10000" +
-      "0\022E\n\026innodb_read_io_threads\030\033 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\010\372\3071\0041-16\022F\n\027inno" +
-      "db_write_io_threads\030\034 \001(\0132\033.google.proto" +
-      "buf.Int64ValueB\010\372\3071\0041-16\022C\n\024innodb_purge" +
-      "_threads\030\035 \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\010\372\3071\0041-16\022J\n\031innodb_thread_concurren" +
-      "cy\030\036 \001(\0132\033.google.protobuf.Int64ValueB\n\372" +
-      "\3071\0060-1000\022W\n\036innodb_temp_data_file_max_s" +
-      "ize\030\037 \001(\0132\033.google.protobuf.Int64ValueB\022" +
-      "\372\3071\0160-107374182400\022D\n\021thread_cache_size\030" +
-      "  \001(\0132\033.google.protobuf.Int64ValueB\014\372\3071\010" +
-      "10-10000\022F\n\014thread_stack\030! \001(\0132\033.google." +
-      "protobuf.Int64ValueB\023\372\3071\017131072-16777216" +
-      "\022H\n\020join_buffer_size\030\" \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\021\372\3071\r1024-16777216\022H\n\020so" +
-      "rt_buffer_size\030# \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\021\372\3071\r1024-16777216\022K\n\026table_de" +
-      "finition_cache\030$ \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\016\372\3071\n400-524288\022E\n\020table_open_" +
-      "cache\030% \001(\0132\033.google.protobuf.Int64Value" +
-      "B\016\372\3071\n400-524288\022I\n\032table_open_cache_ins" +
-      "tances\030& \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\010\372\3071\0041-32\022C\n\037explicit_defaults_for_tim" +
-      "estamp\030\' \001(\0132\032.google.protobuf.BoolValue" +
-      "\022J\n\030auto_increment_increment\030( \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\013\372\3071\0071-65535\022G\n\025" +
-      "auto_increment_offset\030) \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\013\372\3071\0071-65535\022<\n\013sync_bi" +
-      "nlog\030* \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\n\372\3071\0060-4096\022I\n\021binlog_cache_size\030+ \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\021\372\3071\r4096-67" +
-      "108864\022R\n\036binlog_group_commit_sync_delay" +
-      "\030, \001(\0132\033.google.protobuf.Int64ValueB\r\372\3071" +
-      "\t0-1000000\022Y\n\020binlog_row_image\030- \001(\0162?.y" +
+      "obuf.Int64ValueB\023\372\3071\01716384-134217728\022\031\n\021" +
+      "default_time_zone\030\022 \001(\t\022\034\n\024character_set" +
+      "_server\030\023 \001(\t\022\030\n\020collation_server\030\024 \001(\t\022" +
+      ">\n\032innodb_adaptive_hash_index\030\025 \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\022:\n\026innodb_numa_i" +
+      "nterleave\030\026 \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\022R\n\026innodb_log_buffer_size\030\027 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\025\372\3071\0211048576-26" +
+      "8435456\022S\n\024innodb_log_file_size\030\030 \001(\0132\033." +
+      "google.protobuf.Int64ValueB\030\372\3071\02426843545" +
+      "6-4294967296\022G\n\022innodb_io_capacity\030\031 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\016\372\3071\n100-1" +
+      "00000\022K\n\026innodb_io_capacity_max\030\032 \001(\0132\033." +
+      "google.protobuf.Int64ValueB\016\372\3071\n100-1000" +
+      "00\022E\n\026innodb_read_io_threads\030\033 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\010\372\3071\0041-16\022F\n\027inn" +
+      "odb_write_io_threads\030\034 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\010\372\3071\0041-16\022C\n\024innodb_purg" +
+      "e_threads\030\035 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\010\372\3071\0041-16\022J\n\031innodb_thread_concurre" +
+      "ncy\030\036 \001(\0132\033.google.protobuf.Int64ValueB\n" +
+      "\372\3071\0060-1000\022W\n\036innodb_temp_data_file_max_" +
+      "size\030\037 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\022\372\3071\0160-107374182400\022D\n\021thread_cache_size" +
+      "\030  \001(\0132\033.google.protobuf.Int64ValueB\014\372\3071" +
+      "\01010-10000\022F\n\014thread_stack\030! \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\023\372\3071\017131072-1677721" +
+      "6\022H\n\020join_buffer_size\030\" \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\021\372\3071\r1024-16777216\022H\n\020s" +
+      "ort_buffer_size\030# \001(\0132\033.google.protobuf." +
+      "Int64ValueB\021\372\3071\r1024-16777216\022K\n\026table_d" +
+      "efinition_cache\030$ \001(\0132\033.google.protobuf." +
+      "Int64ValueB\016\372\3071\n400-524288\022E\n\020table_open" +
+      "_cache\030% \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\016\372\3071\n400-524288\022I\n\032table_open_cache_in" +
+      "stances\030& \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\010\372\3071\0041-32\022C\n\037explicit_defaults_for_ti" +
+      "mestamp\030\' \001(\0132\032.google.protobuf.BoolValu" +
+      "e\022J\n\030auto_increment_increment\030( \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\013\372\3071\0071-65535\022G\n" +
+      "\025auto_increment_offset\030) \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\013\372\3071\0071-65535\022<\n\013sync_b" +
+      "inlog\030* \001(\0132\033.google.protobuf.Int64Value" +
+      "B\n\372\3071\0060-4096\022I\n\021binlog_cache_size\030+ \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\021\372\3071\r4096-6" +
+      "7108864\022R\n\036binlog_group_commit_sync_dela" +
+      "y\030, \001(\0132\033.google.protobuf.Int64ValueB\r\372\307" +
+      "1\t0-1000000\022Y\n\020binlog_row_image\030- \001(\0162?." +
+      "yandex.cloud.mdb.mysql.v1.config.MysqlCo" +
+      "nfig8_0.BinlogRowImage\022@\n\034binlog_rows_qu" +
+      "ery_log_events\030. \001(\0132\032.google.protobuf.B" +
+      "oolValue\022W\n)rpl_semi_sync_master_wait_fo" +
+      "r_slave_count\030/ \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\0031-2\022_\n\023slave_parallel_type" +
+      "\0300 \001(\0162B.yandex.cloud.mdb.mysql.v1.confi" +
+      "g.MysqlConfig8_0.SlaveParallelType\022E\n\026sl" +
+      "ave_parallel_workers\0301 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\010\372\3071\0040-64\022E\n\021regexp_time" +
+      "_limit\0302 \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\r\372\3071\t0-1048576\"\210\004\n\007SQLMode\022\027\n\023SQLMODE_" +
+      "UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_DATES\020\001\022\017" +
+      "\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVISION_BY" +
+      "_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020\n\014IGNO" +
+      "RE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZERO\020\006\022\030\n" +
+      "\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGINE_SUB" +
+      "STITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTRACTION\020\t" +
+      "\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_DATE\020\013\022" +
+      "\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_F" +
+      "ULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n\rREA" +
+      "L_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020\023\022\027\n\023S" +
+      "TRICT_TRANS_TABLES\020\024\022\034\n\030TIME_TRUNCATE_FR" +
+      "ACTIONAL\020\025\022\010\n\004ANSI\020\026\022\017\n\013TRADITIONAL\020\027\022\024\n" +
+      "\020NO_DIR_IN_CREATE\020\030\"t\n\nAuthPlugin\022\033\n\027AUT" +
+      "H_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_P" +
+      "ASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020\002\022\023\n\017" +
+      "SHA256_PASSWORD\020\003\"x\n\024TransactionIsolatio" +
+      "n\022%\n!TRANSACTION_ISOLATION_UNSPECIFIED\020\000" +
+      "\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE_READ\020" +
+      "\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowImage\022 \n" +
+      "\034BINLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020" +
+      "\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParal" +
+      "lelType\022#\n\037SLAVE_PARALLEL_TYPE_UNSPECIFI" +
+      "ED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"\360\001" +
+      "\n\021MysqlConfigSet8_0\022J\n\020effective_config\030" +
+      "\001 \001(\01320.yandex.cloud.mdb.mysql.v1.config" +
+      ".MysqlConfig8_0\022E\n\013user_config\030\002 \001(\01320.y" +
       "andex.cloud.mdb.mysql.v1.config.MysqlCon" +
-      "fig8_0.BinlogRowImage\022@\n\034binlog_rows_que" +
-      "ry_log_events\030. \001(\0132\032.google.protobuf.Bo" +
-      "olValue\022W\n)rpl_semi_sync_master_wait_for" +
-      "_slave_count\030/ \001(\0132\033.google.protobuf.Int" +
-      "64ValueB\007\372\3071\0031-2\022_\n\023slave_parallel_type\030" +
-      "0 \001(\0162B.yandex.cloud.mdb.mysql.v1.config" +
-      ".MysqlConfig8_0.SlaveParallelType\022E\n\026sla" +
-      "ve_parallel_workers\0301 \001(\0132\033.google.proto" +
-      "buf.Int64ValueB\010\372\3071\0040-64\"\210\004\n\007SQLMode\022\027\n\023" +
-      "SQLMODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_D" +
-      "ATES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIV" +
-      "ISION_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004" +
-      "\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_Z" +
-      "ERO\020\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_EN" +
-      "GINE_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTR" +
-      "ACTION\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN" +
-      "_DATE\020\013\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_C" +
-      "HAR_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020" +
-      "\021\022\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLE" +
-      "S\020\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\034\n\030TIME_TRU" +
-      "NCATE_FRACTIONAL\020\025\022\010\n\004ANSI\020\026\022\017\n\013TRADITIO" +
-      "NAL\020\027\022\024\n\020NO_DIR_IN_CREATE\020\030\"t\n\nAuthPlugi" +
-      "n\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_" +
-      "NATIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWO" +
-      "RD\020\002\022\023\n\017SHA256_PASSWORD\020\003\"x\n\024Transaction" +
-      "Isolation\022%\n!TRANSACTION_ISOLATION_UNSPE" +
-      "CIFIED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATAB" +
-      "LE_READ\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRow" +
-      "Image\022 \n\034BINLOG_ROW_IMAGE_UNSPECIFIED\020\000\022" +
-      "\010\n\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021Sl" +
-      "aveParallelType\022#\n\037SLAVE_PARALLEL_TYPE_U" +
-      "NSPECIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CL" +
-      "OCK\020\002\"\360\001\n\021MysqlConfigSet8_0\022J\n\020effective" +
-      "_config\030\001 \001(\01320.yandex.cloud.mdb.mysql.v" +
-      "1.config.MysqlConfig8_0\022E\n\013user_config\030\002" +
-      " \001(\01320.yandex.cloud.mdb.mysql.v1.config." +
-      "MysqlConfig8_0\022H\n\016default_config\030\003 \001(\01320" +
-      ".yandex.cloud.mdb.mysql.v1.config.MysqlC" +
-      "onfig8_0Br\n$yandex.cloud.api.mdb.mysql.v" +
-      "1.configZJgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/mdb/mysql/v1/config;m" +
-      "ysqlb\006proto3"
+      "fig8_0\022H\n\016default_config\030\003 \001(\01320.yandex." +
+      "cloud.mdb.mysql.v1.config.MysqlConfig8_0" +
+      "Br\n$yandex.cloud.api.mdb.mysql.v1.config" +
+      "ZJgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/mdb/mysql/v1/config;mysqlb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15053,7 +15324,7 @@ public final class Mysql80 {
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig8_0_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig8_0_descriptor,
-        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", });
+        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "RegexpTimeLimit", });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet8_0_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet8_0_fieldAccessorTable = new

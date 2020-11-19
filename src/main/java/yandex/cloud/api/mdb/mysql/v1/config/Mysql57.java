@@ -473,7 +473,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
      */
     boolean hasMaxHeapTableSize();
     /**
@@ -482,7 +482,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
      */
     com.google.protobuf.Int64Value getMaxHeapTableSize();
     /**
@@ -491,7 +491,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxHeapTableSizeOrBuilder();
 
@@ -3477,7 +3477,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
      */
     public boolean hasMaxHeapTableSize() {
       return maxHeapTableSize_ != null;
@@ -3488,7 +3488,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
      */
     public com.google.protobuf.Int64Value getMaxHeapTableSize() {
       return maxHeapTableSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxHeapTableSize_;
@@ -3499,7 +3499,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getMaxHeapTableSizeOrBuilder() {
       return getMaxHeapTableSize();
@@ -8781,7 +8781,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public boolean hasMaxHeapTableSize() {
         return maxHeapTableSizeBuilder_ != null || maxHeapTableSize_ != null;
@@ -8792,7 +8792,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public com.google.protobuf.Int64Value getMaxHeapTableSize() {
         if (maxHeapTableSizeBuilder_ == null) {
@@ -8807,7 +8807,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public Builder setMaxHeapTableSize(com.google.protobuf.Int64Value value) {
         if (maxHeapTableSizeBuilder_ == null) {
@@ -8828,7 +8828,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public Builder setMaxHeapTableSize(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -8847,7 +8847,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public Builder mergeMaxHeapTableSize(com.google.protobuf.Int64Value value) {
         if (maxHeapTableSizeBuilder_ == null) {
@@ -8870,7 +8870,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public Builder clearMaxHeapTableSize() {
         if (maxHeapTableSizeBuilder_ == null) {
@@ -8889,7 +8889,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxHeapTableSizeBuilder() {
         
@@ -8902,7 +8902,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxHeapTableSizeOrBuilder() {
         if (maxHeapTableSizeBuilder_ != null) {
@@ -8918,7 +8918,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -14994,7 +14994,7 @@ public final class Mysql57 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "5_7.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\375#\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\376#\n\016MysqlConf" +
       "ig5_7\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -15023,103 +15023,103 @@ public final class Mysql57 {
       "\3071\0061-1200\022I\n\024group_concat_max_len\030\017 \001(\0132" +
       "\033.google.protobuf.Int64ValueB\016\372\3071\n4-3355" +
       "4432\022G\n\016tmp_table_size\030\020 \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueB\022\372\3071\0161024-134217728\022L\n" +
+      "otobuf.Int64ValueB\022\372\3071\0161024-134217728\022M\n" +
       "\023max_heap_table_size\030\021 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\022\372\3071\0161024-134217728\022\031\n\021d" +
-      "efault_time_zone\030\022 \001(\t\022\034\n\024character_set_" +
-      "server\030\023 \001(\t\022\030\n\020collation_server\030\024 \001(\t\022>" +
-      "\n\032innodb_adaptive_hash_index\030\025 \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\022:\n\026innodb_numa_in" +
-      "terleave\030\026 \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\022R\n\026innodb_log_buffer_size\030\027 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\025\372\3071\0211048576-268" +
-      "435456\022S\n\024innodb_log_file_size\030\030 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\030\372\3071\024268435456" +
-      "-4294967296\022G\n\022innodb_io_capacity\030\031 \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\016\372\3071\n100-10" +
-      "0000\022K\n\026innodb_io_capacity_max\030\032 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\016\372\3071\n100-10000" +
-      "0\022E\n\026innodb_read_io_threads\030\033 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\010\372\3071\0041-16\022F\n\027inno" +
-      "db_write_io_threads\030\034 \001(\0132\033.google.proto" +
-      "buf.Int64ValueB\010\372\3071\0041-16\022C\n\024innodb_purge" +
-      "_threads\030\035 \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\010\372\3071\0041-16\022J\n\031innodb_thread_concurren" +
-      "cy\030\036 \001(\0132\033.google.protobuf.Int64ValueB\n\372" +
-      "\3071\0060-1000\022W\n\036innodb_temp_data_file_max_s" +
-      "ize\030\037 \001(\0132\033.google.protobuf.Int64ValueB\022" +
-      "\372\3071\0160-107374182400\022D\n\021thread_cache_size\030" +
-      "  \001(\0132\033.google.protobuf.Int64ValueB\014\372\3071\010" +
-      "10-10000\022F\n\014thread_stack\030! \001(\0132\033.google." +
-      "protobuf.Int64ValueB\023\372\3071\017131072-16777216" +
-      "\022H\n\020join_buffer_size\030\" \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\021\372\3071\r1024-16777216\022H\n\020so" +
-      "rt_buffer_size\030# \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\021\372\3071\r1024-16777216\022K\n\026table_de" +
-      "finition_cache\030$ \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\016\372\3071\n400-524288\022E\n\020table_open_" +
-      "cache\030% \001(\0132\033.google.protobuf.Int64Value" +
-      "B\016\372\3071\n400-524288\022I\n\032table_open_cache_ins" +
-      "tances\030& \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\010\372\3071\0041-32\022C\n\037explicit_defaults_for_tim" +
-      "estamp\030\' \001(\0132\032.google.protobuf.BoolValue" +
-      "\022J\n\030auto_increment_increment\030( \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\013\372\3071\0071-65535\022G\n\025" +
-      "auto_increment_offset\030) \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\013\372\3071\0071-65535\022<\n\013sync_bi" +
-      "nlog\030* \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\n\372\3071\0060-4096\022I\n\021binlog_cache_size\030+ \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\021\372\3071\r4096-67" +
-      "108864\022R\n\036binlog_group_commit_sync_delay" +
-      "\030, \001(\0132\033.google.protobuf.Int64ValueB\r\372\3071" +
-      "\t0-1000000\022Y\n\020binlog_row_image\030- \001(\0162?.y" +
-      "andex.cloud.mdb.mysql.v1.config.MysqlCon" +
-      "fig5_7.BinlogRowImage\022@\n\034binlog_rows_que" +
-      "ry_log_events\030. \001(\0132\032.google.protobuf.Bo" +
-      "olValue\022W\n)rpl_semi_sync_master_wait_for" +
-      "_slave_count\030/ \001(\0132\033.google.protobuf.Int" +
-      "64ValueB\007\372\3071\0031-2\022_\n\023slave_parallel_type\030" +
-      "0 \001(\0162B.yandex.cloud.mdb.mysql.v1.config" +
-      ".MysqlConfig5_7.SlaveParallelType\022E\n\026sla" +
-      "ve_parallel_workers\0301 \001(\0132\033.google.proto" +
-      "buf.Int64ValueB\010\372\3071\0040-64\"\231\005\n\007SQLMode\022\027\n\023" +
-      "SQLMODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_D" +
-      "ATES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIV" +
-      "ISION_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004" +
-      "\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_Z" +
-      "ERO\020\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_EN" +
-      "GINE_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTR" +
-      "ACTION\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN" +
-      "_DATE\020\013\022\024\n\020NO_FIELD_OPTIONS\020\014\022\022\n\016NO_KEY_" +
-      "OPTIONS\020\r\022\024\n\020NO_TABLE_OPTIONS\020\016\022\026\n\022ONLY_" +
-      "FULL_GROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_FULL_LENG" +
-      "TH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n\rREAL_AS_FLO" +
-      "AT\020\022\022\025\n\021STRICT_ALL_TABLES\020\023\022\027\n\023STRICT_TR" +
-      "ANS_TABLES\020\024\022\010\n\004ANSI\020\025\022\017\n\013TRADITIONAL\020\026\022" +
-      "\007\n\003DB2\020\027\022\t\n\005MAXDB\020\030\022\t\n\005MSSQL\020\031\022\014\n\010MYSQL3" +
-      "23\020\032\022\013\n\007MYSQL40\020\033\022\n\n\006ORACLE\020\034\022\016\n\nPOSTGRE" +
-      "SQL\020\035\022\027\n\023NO_AUTO_CREATE_USER\020\036\022\024\n\020NO_DIR" +
-      "_IN_CREATE\020\037\"x\n\nAuthPlugin\022\033\n\027AUTH_PLUGI" +
-      "N_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSWORD" +
-      "\020\001\022\035\n\025CACHING_SHA2_PASSWORD\020\002\032\002\010\001\022\023\n\017SHA" +
-      "256_PASSWORD\020\003\"x\n\024TransactionIsolation\022%" +
-      "\n!TRANSACTION_ISOLATION_UNSPECIFIED\020\000\022\022\n" +
-      "\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE_READ\020\002\022\020" +
-      "\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowImage\022 \n\034BI" +
-      "NLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022\013" +
-      "\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParallel" +
-      "Type\022#\n\037SLAVE_PARALLEL_TYPE_UNSPECIFIED\020" +
-      "\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"\360\001\n\021M" +
-      "ysqlConfigSet5_7\022J\n\020effective_config\030\001 \001" +
-      "(\01320.yandex.cloud.mdb.mysql.v1.config.My" +
-      "sqlConfig5_7\022E\n\013user_config\030\002 \001(\01320.yand" +
-      "ex.cloud.mdb.mysql.v1.config.MysqlConfig" +
-      "5_7\022H\n\016default_config\030\003 \001(\01320.yandex.clo" +
-      "ud.mdb.mysql.v1.config.MysqlConfig5_7Br\n" +
-      "$yandex.cloud.api.mdb.mysql.v1.configZJg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/mdb/mysql/v1/config;mysqlb\006proto" +
-      "3"
+      "obuf.Int64ValueB\023\372\3071\01716384-134217728\022\031\n\021" +
+      "default_time_zone\030\022 \001(\t\022\034\n\024character_set" +
+      "_server\030\023 \001(\t\022\030\n\020collation_server\030\024 \001(\t\022" +
+      ">\n\032innodb_adaptive_hash_index\030\025 \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\022:\n\026innodb_numa_i" +
+      "nterleave\030\026 \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\022R\n\026innodb_log_buffer_size\030\027 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\025\372\3071\0211048576-26" +
+      "8435456\022S\n\024innodb_log_file_size\030\030 \001(\0132\033." +
+      "google.protobuf.Int64ValueB\030\372\3071\02426843545" +
+      "6-4294967296\022G\n\022innodb_io_capacity\030\031 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\016\372\3071\n100-1" +
+      "00000\022K\n\026innodb_io_capacity_max\030\032 \001(\0132\033." +
+      "google.protobuf.Int64ValueB\016\372\3071\n100-1000" +
+      "00\022E\n\026innodb_read_io_threads\030\033 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\010\372\3071\0041-16\022F\n\027inn" +
+      "odb_write_io_threads\030\034 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\010\372\3071\0041-16\022C\n\024innodb_purg" +
+      "e_threads\030\035 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\010\372\3071\0041-16\022J\n\031innodb_thread_concurre" +
+      "ncy\030\036 \001(\0132\033.google.protobuf.Int64ValueB\n" +
+      "\372\3071\0060-1000\022W\n\036innodb_temp_data_file_max_" +
+      "size\030\037 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\022\372\3071\0160-107374182400\022D\n\021thread_cache_size" +
+      "\030  \001(\0132\033.google.protobuf.Int64ValueB\014\372\3071" +
+      "\01010-10000\022F\n\014thread_stack\030! \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\023\372\3071\017131072-1677721" +
+      "6\022H\n\020join_buffer_size\030\" \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\021\372\3071\r1024-16777216\022H\n\020s" +
+      "ort_buffer_size\030# \001(\0132\033.google.protobuf." +
+      "Int64ValueB\021\372\3071\r1024-16777216\022K\n\026table_d" +
+      "efinition_cache\030$ \001(\0132\033.google.protobuf." +
+      "Int64ValueB\016\372\3071\n400-524288\022E\n\020table_open" +
+      "_cache\030% \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\016\372\3071\n400-524288\022I\n\032table_open_cache_in" +
+      "stances\030& \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\010\372\3071\0041-32\022C\n\037explicit_defaults_for_ti" +
+      "mestamp\030\' \001(\0132\032.google.protobuf.BoolValu" +
+      "e\022J\n\030auto_increment_increment\030( \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\013\372\3071\0071-65535\022G\n" +
+      "\025auto_increment_offset\030) \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\013\372\3071\0071-65535\022<\n\013sync_b" +
+      "inlog\030* \001(\0132\033.google.protobuf.Int64Value" +
+      "B\n\372\3071\0060-4096\022I\n\021binlog_cache_size\030+ \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\021\372\3071\r4096-6" +
+      "7108864\022R\n\036binlog_group_commit_sync_dela" +
+      "y\030, \001(\0132\033.google.protobuf.Int64ValueB\r\372\307" +
+      "1\t0-1000000\022Y\n\020binlog_row_image\030- \001(\0162?." +
+      "yandex.cloud.mdb.mysql.v1.config.MysqlCo" +
+      "nfig5_7.BinlogRowImage\022@\n\034binlog_rows_qu" +
+      "ery_log_events\030. \001(\0132\032.google.protobuf.B" +
+      "oolValue\022W\n)rpl_semi_sync_master_wait_fo" +
+      "r_slave_count\030/ \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\0031-2\022_\n\023slave_parallel_type" +
+      "\0300 \001(\0162B.yandex.cloud.mdb.mysql.v1.confi" +
+      "g.MysqlConfig5_7.SlaveParallelType\022E\n\026sl" +
+      "ave_parallel_workers\0301 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\010\372\3071\0040-64\"\231\005\n\007SQLMode\022\027\n" +
+      "\023SQLMODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_" +
+      "DATES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DI" +
+      "VISION_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020" +
+      "\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_" +
+      "ZERO\020\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_E" +
+      "NGINE_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBT" +
+      "RACTION\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_I" +
+      "N_DATE\020\013\022\024\n\020NO_FIELD_OPTIONS\020\014\022\022\n\016NO_KEY" +
+      "_OPTIONS\020\r\022\024\n\020NO_TABLE_OPTIONS\020\016\022\026\n\022ONLY" +
+      "_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_FULL_LEN" +
+      "GTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n\rREAL_AS_FL" +
+      "OAT\020\022\022\025\n\021STRICT_ALL_TABLES\020\023\022\027\n\023STRICT_T" +
+      "RANS_TABLES\020\024\022\010\n\004ANSI\020\025\022\017\n\013TRADITIONAL\020\026" +
+      "\022\007\n\003DB2\020\027\022\t\n\005MAXDB\020\030\022\t\n\005MSSQL\020\031\022\014\n\010MYSQL" +
+      "323\020\032\022\013\n\007MYSQL40\020\033\022\n\n\006ORACLE\020\034\022\016\n\nPOSTGR" +
+      "ESQL\020\035\022\027\n\023NO_AUTO_CREATE_USER\020\036\022\024\n\020NO_DI" +
+      "R_IN_CREATE\020\037\"x\n\nAuthPlugin\022\033\n\027AUTH_PLUG" +
+      "IN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSWOR" +
+      "D\020\001\022\035\n\025CACHING_SHA2_PASSWORD\020\002\032\002\010\001\022\023\n\017SH" +
+      "A256_PASSWORD\020\003\"x\n\024TransactionIsolation\022" +
+      "%\n!TRANSACTION_ISOLATION_UNSPECIFIED\020\000\022\022" +
+      "\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE_READ\020\002\022" +
+      "\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowImage\022 \n\034B" +
+      "INLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001\022" +
+      "\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParalle" +
+      "lType\022#\n\037SLAVE_PARALLEL_TYPE_UNSPECIFIED" +
+      "\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"\360\001\n\021" +
+      "MysqlConfigSet5_7\022J\n\020effective_config\030\001 " +
+      "\001(\01320.yandex.cloud.mdb.mysql.v1.config.M" +
+      "ysqlConfig5_7\022E\n\013user_config\030\002 \001(\01320.yan" +
+      "dex.cloud.mdb.mysql.v1.config.MysqlConfi" +
+      "g5_7\022H\n\016default_config\030\003 \001(\01320.yandex.cl" +
+      "oud.mdb.mysql.v1.config.MysqlConfig5_7Br" +
+      "\n$yandex.cloud.api.mdb.mysql.v1.configZJ" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/mdb/mysql/v1/config;mysqlb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
