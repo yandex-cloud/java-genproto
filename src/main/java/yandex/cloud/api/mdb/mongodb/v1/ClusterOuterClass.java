@@ -369,6 +369,41 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.mdb.mongodb.v1.MaintenanceOperation planned_operation = 15;</code>
      */
     yandex.cloud.api.mdb.mongodb.v1.Maintenance.MaintenanceOperationOrBuilder getPlannedOperationOrBuilder();
+
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 16;</code>
+     */
+    java.util.List<java.lang.String>
+        getSecurityGroupIdsList();
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 16;</code>
+     */
+    int getSecurityGroupIdsCount();
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 16;</code>
+     */
+    java.lang.String getSecurityGroupIds(int index);
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 16;</code>
+     */
+    com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index);
   }
   /**
    * <pre>
@@ -397,6 +432,7 @@ public final class ClusterOuterClass {
       health_ = 0;
       status_ = 0;
       sharded_ = false;
+      securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -550,6 +586,15 @@ public final class ClusterOuterClass {
 
               break;
             }
+            case 130: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+                securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00008000;
+              }
+              securityGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -567,6 +612,9 @@ public final class ClusterOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
           monitoring_ = java.util.Collections.unmodifiableList(monitoring_);
+        }
+        if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1674,6 +1722,51 @@ public final class ClusterOuterClass {
       return getPlannedOperation();
     }
 
+    public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 16;
+    private com.google.protobuf.LazyStringList securityGroupIds_;
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 16;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSecurityGroupIdsList() {
+      return securityGroupIds_;
+    }
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 16;</code>
+     */
+    public int getSecurityGroupIdsCount() {
+      return securityGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 16;</code>
+     */
+    public java.lang.String getSecurityGroupIds(int index) {
+      return securityGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * User security groups
+     * </pre>
+     *
+     * <code>repeated string security_group_ids = 16;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSecurityGroupIdsBytes(int index) {
+      return securityGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1735,6 +1828,9 @@ public final class ClusterOuterClass {
       }
       if (plannedOperation_ != null) {
         output.writeMessage(15, getPlannedOperation());
+      }
+      for (int i = 0; i < securityGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, securityGroupIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1806,6 +1902,14 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getPlannedOperation());
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < securityGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(securityGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getSecurityGroupIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1861,6 +1965,8 @@ public final class ClusterOuterClass {
         result = result && getPlannedOperation()
             .equals(other.getPlannedOperation());
       }
+      result = result && getSecurityGroupIdsList()
+          .equals(other.getSecurityGroupIdsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1914,6 +2020,10 @@ public final class ClusterOuterClass {
       if (hasPlannedOperation()) {
         hash = (37 * hash) + PLANNED_OPERATION_FIELD_NUMBER;
         hash = (53 * hash) + getPlannedOperation().hashCode();
+      }
+      if (getSecurityGroupIdsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2124,6 +2234,8 @@ public final class ClusterOuterClass {
           plannedOperation_ = null;
           plannedOperationBuilder_ = null;
         }
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00008000);
         return this;
       }
 
@@ -2192,6 +2304,11 @@ public final class ClusterOuterClass {
         } else {
           result.plannedOperation_ = plannedOperationBuilder_.build();
         }
+        if (((bitField0_ & 0x00008000) == 0x00008000)) {
+          securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00008000);
+        }
+        result.securityGroupIds_ = securityGroupIds_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2312,6 +2429,16 @@ public final class ClusterOuterClass {
         }
         if (other.hasPlannedOperation()) {
           mergePlannedOperation(other.getPlannedOperation());
+        }
+        if (!other.securityGroupIds_.isEmpty()) {
+          if (securityGroupIds_.isEmpty()) {
+            securityGroupIds_ = other.securityGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00008000);
+          } else {
+            ensureSecurityGroupIdsIsMutable();
+            securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4104,6 +4231,136 @@ public final class ClusterOuterClass {
           plannedOperation_ = null;
         }
         return plannedOperationBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSecurityGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00008000) == 0x00008000)) {
+          securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
+          bitField0_ |= 0x00008000;
+         }
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 16;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSecurityGroupIdsList() {
+        return securityGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 16;</code>
+       */
+      public int getSecurityGroupIdsCount() {
+        return securityGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 16;</code>
+       */
+      public java.lang.String getSecurityGroupIds(int index) {
+        return securityGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 16;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSecurityGroupIdsBytes(int index) {
+        return securityGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 16;</code>
+       */
+      public Builder setSecurityGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 16;</code>
+       */
+      public Builder addSecurityGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 16;</code>
+       */
+      public Builder addAllSecurityGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSecurityGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, securityGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 16;</code>
+       */
+      public Builder clearSecurityGroupIds() {
+        securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * User security groups
+       * </pre>
+       *
+       * <code>repeated string security_group_ids = 16;</code>
+       */
+      public Builder addSecurityGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSecurityGroupIdsIsMutable();
+        securityGroupIds_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -34906,7 +35163,7 @@ public final class ClusterOuterClass {
       "/cloud/mdb/mongodb/v1/config/mongodb4_2." +
       "proto\0323yandex/cloud/mdb/mongodb/v1/confi" +
       "g/mongodb4_4.proto\032-yandex/cloud/mdb/mon" +
-      "godb/v1/maintenance.proto\"\354\007\n\007Cluster\022\n\n" +
+      "godb/v1/maintenance.proto\"\210\010\n\007Cluster\022\n\n" +
       "\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_" +
       "at\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004" +
       "name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022@\n\006label" +
@@ -34924,153 +35181,154 @@ public final class ClusterOuterClass {
       "andex.cloud.mdb.mongodb.v1.MaintenanceWi" +
       "ndow\022L\n\021planned_operation\030\017 \001(\01321.yandex" +
       ".cloud.mdb.mongodb.v1.MaintenanceOperati" +
-      "on\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_" +
-      "UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTAB" +
-      "LE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005AL" +
-      "IVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022" +
-      "\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUN" +
-      "NING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPP" +
-      "ING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMoni" +
-      "toring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(" +
-      "\t\022\014\n\004link\030\003 \001(\t\"\260\004\n\rClusterConfig\022\017\n\007ver" +
-      "sion\030\001 \001(\t\022%\n\035feature_compatibility_vers" +
-      "ion\030\005 \001(\t\022K\n\013mongodb_3_6\030\002 \001(\0132\'.yandex." +
-      "cloud.mdb.mongodb.v1.Mongodb3_6H\000R\013mongo" +
-      "db_3_6\022K\n\013mongodb_4_0\030\004 \001(\0132\'.yandex.clo" +
-      "ud.mdb.mongodb.v1.Mongodb4_0H\000R\013mongodb_" +
-      "4_0\022K\n\013mongodb_4_2\030\007 \001(\0132\'.yandex.cloud." +
-      "mdb.mongodb.v1.Mongodb4_2H\000R\013mongodb_4_2" +
-      "\022K\n\013mongodb_4_4\030\010 \001(\0132\'.yandex.cloud.mdb" +
-      ".mongodb.v1.Mongodb4_4H\000R\013mongodb_4_4\0223\n" +
-      "\023backup_window_start\030\003 \001(\0132\026.google.type" +
-      ".TimeOfDay\022>\n\031backup_retain_period_days\030" +
-      "\t \001(\0132\033.google.protobuf.Int64Value\0223\n\006ac" +
-      "cess\030\006 \001(\0132#.yandex.cloud.mdb.mongodb.v1" +
-      ".AccessB\t\n\007mongodb\"\262\007\n\nMongodb3_6\022>\n\006mon" +
-      "god\030\001 \001(\0132..yandex.cloud.mdb.mongodb.v1." +
-      "Mongodb3_6.Mongod\022B\n\010mongocfg\030\002 \001(\01320.ya" +
-      "ndex.cloud.mdb.mongodb.v1.Mongodb3_6.Mon" +
-      "goCfg\022>\n\006mongos\030\003 \001(\0132..yandex.cloud.mdb" +
-      ".mongodb.v1.Mongodb3_6.Mongos\022F\n\nmongoin" +
-      "fra\030\004 \001(\01322.yandex.cloud.mdb.mongodb.v1." +
-      "Mongodb3_6.MongoInfra\032\213\001\n\006Mongod\022F\n\006conf" +
-      "ig\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1.c" +
-      "onfig.MongodConfigSet3_6\0229\n\tresources\030\002 " +
-      "\001(\0132&.yandex.cloud.mdb.mongodb.v1.Resour" +
-      "ces\032\217\001\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.yande" +
-      "x.cloud.mdb.mongodb.v1.config.MongoCfgCo" +
-      "nfigSet3_6\0229\n\tresources\030\002 \001(\0132&.yandex.c" +
-      "loud.mdb.mongodb.v1.Resources\032\213\001\n\006Mongos" +
-      "\022F\n\006config\030\001 \001(\01326.yandex.cloud.mdb.mong" +
-      "odb.v1.config.MongosConfigSet3_6\0229\n\treso" +
-      "urces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v" +
-      "1.Resources\032\351\001\n\nMongoInfra\022M\n\rconfig_mon" +
-      "gos\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v1." +
-      "config.MongosConfigSet3_6\022Q\n\017config_mong" +
-      "ocfg\030\002 \001(\01328.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongoCfgConfigSet3_6\0229\n\tresource" +
-      "s\030\003 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Re" +
-      "sources\"\262\007\n\nMongodb4_0\022>\n\006mongod\030\001 \001(\0132." +
-      ".yandex.cloud.mdb.mongodb.v1.Mongodb4_0." +
-      "Mongod\022B\n\010mongocfg\030\002 \001(\01320.yandex.cloud." +
-      "mdb.mongodb.v1.Mongodb4_0.MongoCfg\022>\n\006mo" +
-      "ngos\030\003 \001(\0132..yandex.cloud.mdb.mongodb.v1" +
-      ".Mongodb4_0.Mongos\022F\n\nmongoinfra\030\004 \001(\01322" +
-      ".yandex.cloud.mdb.mongodb.v1.Mongodb4_0." +
-      "MongoInfra\032\213\001\n\006Mongod\022F\n\006config\030\001 \001(\01326." +
+      "on\022\032\n\022security_group_ids\030\020 \003(\t\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n" +
+      "\013Environment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020" +
+      "\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Heal" +
+      "th\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEA" +
+      "D\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UN" +
+      "KNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ER" +
+      "ROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STO" +
+      "PPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004na" +
+      "me\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 " +
+      "\001(\t\"\260\004\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022%" +
+      "\n\035feature_compatibility_version\030\005 \001(\t\022K\n" +
+      "\013mongodb_3_6\030\002 \001(\0132\'.yandex.cloud.mdb.mo" +
+      "ngodb.v1.Mongodb3_6H\000R\013mongodb_3_6\022K\n\013mo" +
+      "ngodb_4_0\030\004 \001(\0132\'.yandex.cloud.mdb.mongo" +
+      "db.v1.Mongodb4_0H\000R\013mongodb_4_0\022K\n\013mongo" +
+      "db_4_2\030\007 \001(\0132\'.yandex.cloud.mdb.mongodb." +
+      "v1.Mongodb4_2H\000R\013mongodb_4_2\022K\n\013mongodb_" +
+      "4_4\030\010 \001(\0132\'.yandex.cloud.mdb.mongodb.v1." +
+      "Mongodb4_4H\000R\013mongodb_4_4\0223\n\023backup_wind" +
+      "ow_start\030\003 \001(\0132\026.google.type.TimeOfDay\022>" +
+      "\n\031backup_retain_period_days\030\t \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\0223\n\006access\030\006 \001(\0132#" +
+      ".yandex.cloud.mdb.mongodb.v1.AccessB\t\n\007m" +
+      "ongodb\"\262\007\n\nMongodb3_6\022>\n\006mongod\030\001 \001(\0132.." +
+      "yandex.cloud.mdb.mongodb.v1.Mongodb3_6.M" +
+      "ongod\022B\n\010mongocfg\030\002 \001(\01320.yandex.cloud.m" +
+      "db.mongodb.v1.Mongodb3_6.MongoCfg\022>\n\006mon" +
+      "gos\030\003 \001(\0132..yandex.cloud.mdb.mongodb.v1." +
+      "Mongodb3_6.Mongos\022F\n\nmongoinfra\030\004 \001(\01322." +
+      "yandex.cloud.mdb.mongodb.v1.Mongodb3_6.M" +
+      "ongoInfra\032\213\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.y" +
+      "andex.cloud.mdb.mongodb.v1.config.Mongod" +
+      "ConfigSet3_6\0229\n\tresources\030\002 \001(\0132&.yandex" +
+      ".cloud.mdb.mongodb.v1.Resources\032\217\001\n\010Mong" +
+      "oCfg\022H\n\006config\030\001 \001(\01328.yandex.cloud.mdb." +
+      "mongodb.v1.config.MongoCfgConfigSet3_6\0229" +
+      "\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mon" +
+      "godb.v1.Resources\032\213\001\n\006Mongos\022F\n\006config\030\001" +
+      " \001(\01326.yandex.cloud.mdb.mongodb.v1.confi" +
+      "g.MongosConfigSet3_6\0229\n\tresources\030\002 \001(\0132" +
+      "&.yandex.cloud.mdb.mongodb.v1.Resources\032" +
+      "\351\001\n\nMongoInfra\022M\n\rconfig_mongos\030\001 \001(\01326." +
       "yandex.cloud.mdb.mongodb.v1.config.Mongo" +
-      "dConfigSet4_0\0229\n\tresources\030\002 \001(\0132&.yande" +
-      "x.cloud.mdb.mongodb.v1.Resources\032\217\001\n\010Mon" +
-      "goCfg\022H\n\006config\030\001 \001(\01328.yandex.cloud.mdb" +
-      ".mongodb.v1.config.MongoCfgConfigSet4_0\022" +
-      "9\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mo" +
-      "ngodb.v1.Resources\032\213\001\n\006Mongos\022F\n\006config\030" +
-      "\001 \001(\01326.yandex.cloud.mdb.mongodb.v1.conf" +
-      "ig.MongosConfigSet4_0\0229\n\tresources\030\002 \001(\013" +
-      "2&.yandex.cloud.mdb.mongodb.v1.Resources" +
-      "\032\351\001\n\nMongoInfra\022M\n\rconfig_mongos\030\001 \001(\01326" +
+      "sConfigSet3_6\022Q\n\017config_mongocfg\030\002 \001(\01328" +
       ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
-      "osConfigSet4_0\022Q\n\017config_mongocfg\030\002 \001(\0132" +
-      "8.yandex.cloud.mdb.mongodb.v1.config.Mon" +
-      "goCfgConfigSet4_0\0229\n\tresources\030\003 \001(\0132&.y" +
-      "andex.cloud.mdb.mongodb.v1.Resources\"\262\007\n" +
-      "\nMongodb4_2\022>\n\006mongod\030\001 \001(\0132..yandex.clo" +
-      "ud.mdb.mongodb.v1.Mongodb4_2.Mongod\022B\n\010m" +
-      "ongocfg\030\002 \001(\01320.yandex.cloud.mdb.mongodb" +
-      ".v1.Mongodb4_2.MongoCfg\022>\n\006mongos\030\003 \001(\0132" +
-      "..yandex.cloud.mdb.mongodb.v1.Mongodb4_2" +
-      ".Mongos\022F\n\nmongoinfra\030\004 \001(\01322.yandex.clo" +
-      "ud.mdb.mongodb.v1.Mongodb4_2.MongoInfra\032" +
-      "\213\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.yandex.clou" +
-      "d.mdb.mongodb.v1.config.MongodConfigSet4" +
-      "_2\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb" +
-      ".mongodb.v1.Resources\032\217\001\n\010MongoCfg\022H\n\006co" +
-      "nfig\030\001 \001(\01328.yandex.cloud.mdb.mongodb.v1" +
-      ".config.MongoCfgConfigSet4_2\0229\n\tresource" +
-      "s\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Re" +
-      "sources\032\213\001\n\006Mongos\022F\n\006config\030\001 \001(\01326.yan" +
-      "dex.cloud.mdb.mongodb.v1.config.MongosCo" +
-      "nfigSet4_2\0229\n\tresources\030\002 \001(\0132&.yandex.c" +
-      "loud.mdb.mongodb.v1.Resources\032\351\001\n\nMongoI" +
-      "nfra\022M\n\rconfig_mongos\030\001 \001(\01326.yandex.clo" +
-      "ud.mdb.mongodb.v1.config.MongosConfigSet" +
-      "4_2\022Q\n\017config_mongocfg\030\002 \001(\01328.yandex.cl" +
-      "oud.mdb.mongodb.v1.config.MongoCfgConfig" +
-      "Set4_2\0229\n\tresources\030\003 \001(\0132&.yandex.cloud" +
-      ".mdb.mongodb.v1.Resources\"\262\007\n\nMongodb4_4" +
-      "\022>\n\006mongod\030\001 \001(\0132..yandex.cloud.mdb.mong" +
-      "odb.v1.Mongodb4_4.Mongod\022B\n\010mongocfg\030\002 \001" +
-      "(\01320.yandex.cloud.mdb.mongodb.v1.Mongodb" +
-      "4_4.MongoCfg\022>\n\006mongos\030\003 \001(\0132..yandex.cl" +
-      "oud.mdb.mongodb.v1.Mongodb4_4.Mongos\022F\n\n" +
-      "mongoinfra\030\004 \001(\01322.yandex.cloud.mdb.mong" +
-      "odb.v1.Mongodb4_4.MongoInfra\032\213\001\n\006Mongod\022" +
-      "F\n\006config\030\001 \001(\01326.yandex.cloud.mdb.mongo" +
-      "db.v1.config.MongodConfigSet4_4\0229\n\tresou" +
-      "rces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1" +
-      ".Resources\032\217\001\n\010MongoCfg\022H\n\006config\030\001 \001(\0132" +
-      "8.yandex.cloud.mdb.mongodb.v1.config.Mon" +
-      "goCfgConfigSet4_4\0229\n\tresources\030\002 \001(\0132&.y" +
-      "andex.cloud.mdb.mongodb.v1.Resources\032\213\001\n" +
-      "\006Mongos\022F\n\006config\030\001 \001(\01326.yandex.cloud.m" +
-      "db.mongodb.v1.config.MongosConfigSet4_4\022" +
-      "9\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mo" +
-      "ngodb.v1.Resources\032\351\001\n\nMongoInfra\022M\n\rcon" +
-      "fig_mongos\030\001 \001(\01326.yandex.cloud.mdb.mong" +
-      "odb.v1.config.MongosConfigSet4_4\022Q\n\017conf" +
-      "ig_mongocfg\030\002 \001(\01328.yandex.cloud.mdb.mon" +
-      "godb.v1.config.MongoCfgConfigSet4_4\0229\n\tr" +
-      "esources\030\003 \001(\0132&.yandex.cloud.mdb.mongod" +
-      "b.v1.Resources\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n" +
-      "\ncluster_id\030\002 \001(\t\"\336\004\n\004Host\022\014\n\004name\030\001 \001(\t" +
-      "\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0229\n" +
-      "\tresources\030\004 \001(\0132&.yandex.cloud.mdb.mong" +
-      "odb.v1.Resources\0224\n\004role\030\005 \001(\0162&.yandex." +
-      "cloud.mdb.mongodb.v1.Host.Role\0228\n\006health" +
-      "\030\006 \001(\0162(.yandex.cloud.mdb.mongodb.v1.Hos" +
-      "t.Health\0226\n\010services\030\007 \003(\0132$.yandex.clou" +
-      "d.mdb.mongodb.v1.Service\022\021\n\tsubnet_id\030\010 " +
-      "\001(\t\022\030\n\020assign_public_ip\030\t \001(\010\022\022\n\nshard_n" +
-      "ame\030\n \001(\t\0224\n\004type\030\013 \001(\0162&.yandex.cloud.m" +
-      "db.mongodb.v1.Host.Type\"R\n\004Type\022\024\n\020TYPE_" +
-      "UNSPECIFIED\020\000\022\n\n\006MONGOD\020\001\022\n\n\006MONGOS\020\002\022\014\n" +
-      "\010MONGOCFG\020\003\022\016\n\nMONGOINFRA\020\004\"4\n\004Role\022\020\n\014R" +
-      "OLE_UNKNOWN\020\000\022\013\n\007PRIMARY\020\001\022\r\n\tSECONDARY\020" +
-      "\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE" +
-      "\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\366\001\n\007Service\0227" +
-      "\n\004type\030\001 \001(\0162).yandex.cloud.mdb.mongodb." +
-      "v1.Service.Type\022;\n\006health\030\002 \001(\0162+.yandex" +
-      ".cloud.mdb.mongodb.v1.Service.Health\"B\n\004" +
-      "Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006MONGOD\020\001\022\n" +
-      "\n\006MONGOS\020\002\022\014\n\010MONGOCFG\020\003\"1\n\006Health\022\022\n\016HE" +
-      "ALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tR" +
-      "esources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\t" +
-      "disk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n" +
-      "\006Access\022\021\n\tdata_lens\030\001 \001(\010Bj\n\037yandex.clo" +
-      "ud.api.mdb.mongodb.v1ZGgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/mdb/mong" +
-      "odb/v1;mongodbb\006proto3"
+      "oCfgConfigSet3_6\0229\n\tresources\030\003 \001(\0132&.ya" +
+      "ndex.cloud.mdb.mongodb.v1.Resources\"\262\007\n\n" +
+      "Mongodb4_0\022>\n\006mongod\030\001 \001(\0132..yandex.clou" +
+      "d.mdb.mongodb.v1.Mongodb4_0.Mongod\022B\n\010mo" +
+      "ngocfg\030\002 \001(\01320.yandex.cloud.mdb.mongodb." +
+      "v1.Mongodb4_0.MongoCfg\022>\n\006mongos\030\003 \001(\0132." +
+      ".yandex.cloud.mdb.mongodb.v1.Mongodb4_0." +
+      "Mongos\022F\n\nmongoinfra\030\004 \001(\01322.yandex.clou" +
+      "d.mdb.mongodb.v1.Mongodb4_0.MongoInfra\032\213" +
+      "\001\n\006Mongod\022F\n\006config\030\001 \001(\01326.yandex.cloud" +
+      ".mdb.mongodb.v1.config.MongodConfigSet4_" +
+      "0\0229\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb." +
+      "mongodb.v1.Resources\032\217\001\n\010MongoCfg\022H\n\006con" +
+      "fig\030\001 \001(\01328.yandex.cloud.mdb.mongodb.v1." +
+      "config.MongoCfgConfigSet4_0\0229\n\tresources" +
+      "\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Res" +
+      "ources\032\213\001\n\006Mongos\022F\n\006config\030\001 \001(\01326.yand" +
+      "ex.cloud.mdb.mongodb.v1.config.MongosCon" +
+      "figSet4_0\0229\n\tresources\030\002 \001(\0132&.yandex.cl" +
+      "oud.mdb.mongodb.v1.Resources\032\351\001\n\nMongoIn" +
+      "fra\022M\n\rconfig_mongos\030\001 \001(\01326.yandex.clou" +
+      "d.mdb.mongodb.v1.config.MongosConfigSet4" +
+      "_0\022Q\n\017config_mongocfg\030\002 \001(\01328.yandex.clo" +
+      "ud.mdb.mongodb.v1.config.MongoCfgConfigS" +
+      "et4_0\0229\n\tresources\030\003 \001(\0132&.yandex.cloud." +
+      "mdb.mongodb.v1.Resources\"\262\007\n\nMongodb4_2\022" +
+      ">\n\006mongod\030\001 \001(\0132..yandex.cloud.mdb.mongo" +
+      "db.v1.Mongodb4_2.Mongod\022B\n\010mongocfg\030\002 \001(" +
+      "\01320.yandex.cloud.mdb.mongodb.v1.Mongodb4" +
+      "_2.MongoCfg\022>\n\006mongos\030\003 \001(\0132..yandex.clo" +
+      "ud.mdb.mongodb.v1.Mongodb4_2.Mongos\022F\n\nm" +
+      "ongoinfra\030\004 \001(\01322.yandex.cloud.mdb.mongo" +
+      "db.v1.Mongodb4_2.MongoInfra\032\213\001\n\006Mongod\022F" +
+      "\n\006config\030\001 \001(\01326.yandex.cloud.mdb.mongod" +
+      "b.v1.config.MongodConfigSet4_2\0229\n\tresour" +
+      "ces\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1." +
+      "Resources\032\217\001\n\010MongoCfg\022H\n\006config\030\001 \001(\01328" +
+      ".yandex.cloud.mdb.mongodb.v1.config.Mong" +
+      "oCfgConfigSet4_2\0229\n\tresources\030\002 \001(\0132&.ya" +
+      "ndex.cloud.mdb.mongodb.v1.Resources\032\213\001\n\006" +
+      "Mongos\022F\n\006config\030\001 \001(\01326.yandex.cloud.md" +
+      "b.mongodb.v1.config.MongosConfigSet4_2\0229" +
+      "\n\tresources\030\002 \001(\0132&.yandex.cloud.mdb.mon" +
+      "godb.v1.Resources\032\351\001\n\nMongoInfra\022M\n\rconf" +
+      "ig_mongos\030\001 \001(\01326.yandex.cloud.mdb.mongo" +
+      "db.v1.config.MongosConfigSet4_2\022Q\n\017confi" +
+      "g_mongocfg\030\002 \001(\01328.yandex.cloud.mdb.mong" +
+      "odb.v1.config.MongoCfgConfigSet4_2\0229\n\tre" +
+      "sources\030\003 \001(\0132&.yandex.cloud.mdb.mongodb" +
+      ".v1.Resources\"\262\007\n\nMongodb4_4\022>\n\006mongod\030\001" +
+      " \001(\0132..yandex.cloud.mdb.mongodb.v1.Mongo" +
+      "db4_4.Mongod\022B\n\010mongocfg\030\002 \001(\01320.yandex." +
+      "cloud.mdb.mongodb.v1.Mongodb4_4.MongoCfg" +
+      "\022>\n\006mongos\030\003 \001(\0132..yandex.cloud.mdb.mong" +
+      "odb.v1.Mongodb4_4.Mongos\022F\n\nmongoinfra\030\004" +
+      " \001(\01322.yandex.cloud.mdb.mongodb.v1.Mongo" +
+      "db4_4.MongoInfra\032\213\001\n\006Mongod\022F\n\006config\030\001 " +
+      "\001(\01326.yandex.cloud.mdb.mongodb.v1.config" +
+      ".MongodConfigSet4_4\0229\n\tresources\030\002 \001(\0132&" +
+      ".yandex.cloud.mdb.mongodb.v1.Resources\032\217" +
+      "\001\n\010MongoCfg\022H\n\006config\030\001 \001(\01328.yandex.clo" +
+      "ud.mdb.mongodb.v1.config.MongoCfgConfigS" +
+      "et4_4\0229\n\tresources\030\002 \001(\0132&.yandex.cloud." +
+      "mdb.mongodb.v1.Resources\032\213\001\n\006Mongos\022F\n\006c" +
+      "onfig\030\001 \001(\01326.yandex.cloud.mdb.mongodb.v" +
+      "1.config.MongosConfigSet4_4\0229\n\tresources" +
+      "\030\002 \001(\0132&.yandex.cloud.mdb.mongodb.v1.Res" +
+      "ources\032\351\001\n\nMongoInfra\022M\n\rconfig_mongos\030\001" +
+      " \001(\01326.yandex.cloud.mdb.mongodb.v1.confi" +
+      "g.MongosConfigSet4_4\022Q\n\017config_mongocfg\030" +
+      "\002 \001(\01328.yandex.cloud.mdb.mongodb.v1.conf" +
+      "ig.MongoCfgConfigSet4_4\0229\n\tresources\030\003 \001" +
+      "(\0132&.yandex.cloud.mdb.mongodb.v1.Resourc" +
+      "es\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030" +
+      "\002 \001(\t\"\336\004\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_" +
+      "id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0229\n\tresources\030\004" +
+      " \001(\0132&.yandex.cloud.mdb.mongodb.v1.Resou" +
+      "rces\0224\n\004role\030\005 \001(\0162&.yandex.cloud.mdb.mo" +
+      "ngodb.v1.Host.Role\0228\n\006health\030\006 \001(\0162(.yan" +
+      "dex.cloud.mdb.mongodb.v1.Host.Health\0226\n\010" +
+      "services\030\007 \003(\0132$.yandex.cloud.mdb.mongod" +
+      "b.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assig" +
+      "n_public_ip\030\t \001(\010\022\022\n\nshard_name\030\n \001(\t\0224\n" +
+      "\004type\030\013 \001(\0162&.yandex.cloud.mdb.mongodb.v" +
+      "1.Host.Type\"R\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020" +
+      "\000\022\n\n\006MONGOD\020\001\022\n\n\006MONGOS\020\002\022\014\n\010MONGOCFG\020\003\022" +
+      "\016\n\nMONGOINFRA\020\004\"4\n\004Role\022\020\n\014ROLE_UNKNOWN\020" +
+      "\000\022\013\n\007PRIMARY\020\001\022\r\n\tSECONDARY\020\002\"?\n\006Health\022" +
+      "\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002" +
+      "\022\014\n\010DEGRADED\020\003\"\366\001\n\007Service\0227\n\004type\030\001 \001(\016" +
+      "2).yandex.cloud.mdb.mongodb.v1.Service.T" +
+      "ype\022;\n\006health\030\002 \001(\0162+.yandex.cloud.mdb.m" +
+      "ongodb.v1.Service.Health\"B\n\004Type\022\024\n\020TYPE" +
+      "_UNSPECIFIED\020\000\022\n\n\006MONGOD\020\001\022\n\n\006MONGOS\020\002\022\014" +
+      "\n\010MONGOCFG\020\003\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN" +
+      "\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022" +
+      "resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 " +
+      "\001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n\006Access\022\021\n\td" +
+      "ata_lens\030\001 \001(\010Bj\n\037yandex.cloud.api.mdb.m" +
+      "ongodb.v1ZGgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/mdb/mongodb/v1;mongo" +
+      "dbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -35097,7 +35355,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", "MaintenanceWindow", "PlannedOperation", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", });
     internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_mongodb_v1_Cluster_LabelsEntry_fieldAccessorTable = new

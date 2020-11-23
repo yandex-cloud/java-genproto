@@ -528,6 +528,24 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.KMSProviderOrBuilder getKmsProviderOrBuilder();
 
+    /**
+     * <pre>
+     * Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
+     * </pre>
+     *
+     * <code>string log_group_id = 18;</code>
+     */
+    java.lang.String getLogGroupId();
+    /**
+     * <pre>
+     * Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
+     * </pre>
+     *
+     * <code>string log_group_id = 18;</code>
+     */
+    com.google.protobuf.ByteString
+        getLogGroupIdBytes();
+
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster.InternetGatewayCase getInternetGatewayCase();
   }
   /**
@@ -557,6 +575,7 @@ public final class ClusterOuterClass {
       serviceAccountId_ = "";
       nodeServiceAccountId_ = "";
       releaseChannel_ = 0;
+      logGroupId_ = "";
     }
 
     @java.lang.Override
@@ -725,6 +744,12 @@ public final class ClusterOuterClass {
                 kmsProvider_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 146: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              logGroupId_ = s;
               break;
             }
             default: {
@@ -1810,6 +1835,48 @@ public final class ClusterOuterClass {
       return getKmsProvider();
     }
 
+    public static final int LOG_GROUP_ID_FIELD_NUMBER = 18;
+    private volatile java.lang.Object logGroupId_;
+    /**
+     * <pre>
+     * Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
+     * </pre>
+     *
+     * <code>string log_group_id = 18;</code>
+     */
+    public java.lang.String getLogGroupId() {
+      java.lang.Object ref = logGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        logGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
+     * </pre>
+     *
+     * <code>string log_group_id = 18;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLogGroupIdBytes() {
+      java.lang.Object ref = logGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        logGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1877,6 +1944,9 @@ public final class ClusterOuterClass {
       }
       if (kmsProvider_ != null) {
         output.writeMessage(17, getKmsProvider());
+      }
+      if (!getLogGroupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, logGroupId_);
       }
       unknownFields.writeTo(output);
     }
@@ -1953,6 +2023,9 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getKmsProvider());
       }
+      if (!getLogGroupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, logGroupId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2013,6 +2086,8 @@ public final class ClusterOuterClass {
         result = result && getKmsProvider()
             .equals(other.getKmsProvider());
       }
+      result = result && getLogGroupId()
+          .equals(other.getLogGroupId());
       result = result && getInternetGatewayCase().equals(
           other.getInternetGatewayCase());
       if (!result) return false;
@@ -2079,6 +2154,8 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + KMS_PROVIDER_FIELD_NUMBER;
         hash = (53 * hash) + getKmsProvider().hashCode();
       }
+      hash = (37 * hash) + LOG_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLogGroupId().hashCode();
       switch (internetGatewayCase_) {
         case 12:
           hash = (37 * hash) + GATEWAY_IPV4_ADDRESS_FIELD_NUMBER;
@@ -2297,6 +2374,8 @@ public final class ClusterOuterClass {
           kmsProvider_ = null;
           kmsProviderBuilder_ = null;
         }
+        logGroupId_ = "";
+
         internetGatewayCase_ = 0;
         internetGateway_ = null;
         return this;
@@ -2367,6 +2446,7 @@ public final class ClusterOuterClass {
         } else {
           result.kmsProvider_ = kmsProviderBuilder_.build();
         }
+        result.logGroupId_ = logGroupId_;
         result.bitField0_ = to_bitField0_;
         result.internetGatewayCase_ = internetGatewayCase_;
         onBuilt();
@@ -2470,6 +2550,10 @@ public final class ClusterOuterClass {
         }
         if (other.hasKmsProvider()) {
           mergeKmsProvider(other.getKmsProvider());
+        }
+        if (!other.getLogGroupId().isEmpty()) {
+          logGroupId_ = other.logGroupId_;
+          onChanged();
         }
         switch (other.getInternetGatewayCase()) {
           case GATEWAY_IPV4_ADDRESS: {
@@ -4338,6 +4422,95 @@ public final class ClusterOuterClass {
           kmsProvider_ = null;
         }
         return kmsProviderBuilder_;
+      }
+
+      private java.lang.Object logGroupId_ = "";
+      /**
+       * <pre>
+       * Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
+       * </pre>
+       *
+       * <code>string log_group_id = 18;</code>
+       */
+      public java.lang.String getLogGroupId() {
+        java.lang.Object ref = logGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          logGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
+       * </pre>
+       *
+       * <code>string log_group_id = 18;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLogGroupIdBytes() {
+        java.lang.Object ref = logGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          logGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
+       * </pre>
+       *
+       * <code>string log_group_id = 18;</code>
+       */
+      public Builder setLogGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        logGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
+       * </pre>
+       *
+       * <code>string log_group_id = 18;</code>
+       */
+      public Builder clearLogGroupId() {
+        
+        logGroupId_ = getDefaultInstance().getLogGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Log group where cluster stores cluster system logs, like audit, events, or controlplane logs.
+       * </pre>
+       *
+       * <code>string log_group_id = 18;</code>
+       */
+      public Builder setLogGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        logGroupId_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13364,7 +13537,7 @@ public final class ClusterOuterClass {
       "dex.cloud.k8s.v1\032\037google/protobuf/timest" +
       "amp.proto\032%yandex/cloud/k8s/v1/maintenan" +
       "ce.proto\032!yandex/cloud/k8s/v1/version.pr" +
-      "oto\032\035yandex/cloud/validation.proto\"\313\007\n\007C" +
+      "oto\032\035yandex/cloud/validation.proto\"\341\007\n\007C" +
       "luster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n" +
       "\ncreated_at\030\003 \001(\0132\032.google.protobuf.Time" +
       "stamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t" +
@@ -13382,49 +13555,50 @@ public final class ClusterOuterClass {
       "oud.k8s.v1.ReleaseChannel\022:\n\016network_pol" +
       "icy\030\020 \001(\0132\".yandex.cloud.k8s.v1.NetworkP" +
       "olicy\0226\n\014kms_provider\030\021 \001(\0132 .yandex.clo" +
-      "ud.k8s.v1.KMSProvider\032-\n\013LabelsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\207\001\n\006Status\022" +
-      "\026\n\022STATUS_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020" +
-      "\001\022\013\n\007RUNNING\020\002\022\017\n\013RECONCILING\020\003\022\014\n\010STOPP" +
-      "ING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010DELETING\020\006\022\014\n\010STAR" +
-      "TING\020\007\"<\n\006Health\022\026\n\022HEALTH_UNSPECIFIED\020\000" +
-      "\022\013\n\007HEALTHY\020\001\022\r\n\tUNHEALTHY\020\002B\022\n\020internet" +
-      "_gateway\"\257\003\n\006Master\0228\n\014zonal_master\030\001 \001(" +
-      "\0132 .yandex.cloud.k8s.v1.ZonalMasterH\000\022>\n" +
-      "\017regional_master\030\007 \001(\0132#.yandex.cloud.k8" +
-      "s.v1.RegionalMasterH\000\022\017\n\007version\030\002 \001(\t\0227" +
-      "\n\tendpoints\030\003 \001(\0132$.yandex.cloud.k8s.v1." +
-      "MasterEndpoints\0224\n\013master_auth\030\004 \001(\0132\037.y" +
-      "andex.cloud.k8s.v1.MasterAuth\0226\n\014version" +
-      "_info\030\005 \001(\0132 .yandex.cloud.k8s.v1.Versio" +
-      "nInfo\022H\n\022maintenance_policy\030\006 \001(\0132,.yand" +
-      "ex.cloud.k8s.v1.MasterMaintenancePolicy\022" +
-      "\032\n\022security_group_ids\030\010 \003(\tB\r\n\013master_ty" +
-      "pe\",\n\nMasterAuth\022\036\n\026cluster_ca_certifica" +
-      "te\030\001 \001(\t\"X\n\013ZonalMaster\022\017\n\007zone_id\030\001 \001(\t" +
-      "\022\033\n\023internal_v4_address\030\002 \001(\t\022\033\n\023externa" +
-      "l_v4_address\030\003 \001(\t\"]\n\016RegionalMaster\022\021\n\t" +
-      "region_id\030\001 \001(\t\022\033\n\023internal_v4_address\030\002" +
-      " \001(\t\022\033\n\023external_v4_address\030\003 \001(\t\"M\n\017Mas" +
-      "terEndpoints\022\034\n\024internal_v4_endpoint\030\001 \001" +
-      "(\t\022\034\n\024external_v4_endpoint\030\002 \001(\t\"\320\001\n\022IPA" +
-      "llocationPolicy\022\037\n\027cluster_ipv4_cidr_blo" +
-      "ck\030\001 \001(\t\0226\n\030node_ipv4_cidr_mask_size\030\005 \001" +
-      "(\003B\024\372\3071\0200,24,25,26,27,28\022\037\n\027service_ipv4" +
-      "_cidr_block\030\002 \001(\t\022\037\n\027cluster_ipv6_cidr_b" +
-      "lock\030\006 \001(\t\022\037\n\027service_ipv6_cidr_block\030\007 " +
-      "\001(\t\"s\n\027MasterMaintenancePolicy\022\024\n\014auto_u" +
-      "pgrade\030\001 \001(\010\022B\n\022maintenance_window\030\002 \001(\013" +
-      "2&.yandex.cloud.k8s.v1.MaintenanceWindow" +
-      "\"\200\001\n\rNetworkPolicy\022=\n\010provider\030\001 \001(\0162+.y" +
-      "andex.cloud.k8s.v1.NetworkPolicy.Provide" +
-      "r\"0\n\010Provider\022\030\n\024PROVIDER_UNSPECIFIED\020\000\022" +
-      "\n\n\006CALICO\020\001\"\035\n\013KMSProvider\022\016\n\006key_id\030\001 \001" +
-      "(\t*U\n\016ReleaseChannel\022\037\n\033RELEASE_CHANNEL_" +
-      "UNSPECIFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022\n\n" +
-      "\006STABLE\020\003BV\n\027yandex.cloud.api.k8s.v1Z;gi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/k8s/v1;k8sb\006proto3"
+      "ud.k8s.v1.KMSProvider\022\024\n\014log_group_id\030\022 " +
+      "\001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"\207\001\n\006Status\022\026\n\022STATUS_UNSPECIF" +
+      "IED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022\017\n\013" +
+      "RECONCILING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020\005" +
+      "\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\"<\n\006Health\022\026" +
+      "\n\022HEALTH_UNSPECIFIED\020\000\022\013\n\007HEALTHY\020\001\022\r\n\tU" +
+      "NHEALTHY\020\002B\022\n\020internet_gateway\"\257\003\n\006Maste" +
+      "r\0228\n\014zonal_master\030\001 \001(\0132 .yandex.cloud.k" +
+      "8s.v1.ZonalMasterH\000\022>\n\017regional_master\030\007" +
+      " \001(\0132#.yandex.cloud.k8s.v1.RegionalMaste" +
+      "rH\000\022\017\n\007version\030\002 \001(\t\0227\n\tendpoints\030\003 \001(\0132" +
+      "$.yandex.cloud.k8s.v1.MasterEndpoints\0224\n" +
+      "\013master_auth\030\004 \001(\0132\037.yandex.cloud.k8s.v1" +
+      ".MasterAuth\0226\n\014version_info\030\005 \001(\0132 .yand" +
+      "ex.cloud.k8s.v1.VersionInfo\022H\n\022maintenan" +
+      "ce_policy\030\006 \001(\0132,.yandex.cloud.k8s.v1.Ma" +
+      "sterMaintenancePolicy\022\032\n\022security_group_" +
+      "ids\030\010 \003(\tB\r\n\013master_type\",\n\nMasterAuth\022\036" +
+      "\n\026cluster_ca_certificate\030\001 \001(\t\"X\n\013ZonalM" +
+      "aster\022\017\n\007zone_id\030\001 \001(\t\022\033\n\023internal_v4_ad" +
+      "dress\030\002 \001(\t\022\033\n\023external_v4_address\030\003 \001(\t" +
+      "\"]\n\016RegionalMaster\022\021\n\tregion_id\030\001 \001(\t\022\033\n" +
+      "\023internal_v4_address\030\002 \001(\t\022\033\n\023external_v" +
+      "4_address\030\003 \001(\t\"M\n\017MasterEndpoints\022\034\n\024in" +
+      "ternal_v4_endpoint\030\001 \001(\t\022\034\n\024external_v4_" +
+      "endpoint\030\002 \001(\t\"\320\001\n\022IPAllocationPolicy\022\037\n" +
+      "\027cluster_ipv4_cidr_block\030\001 \001(\t\0226\n\030node_i" +
+      "pv4_cidr_mask_size\030\005 \001(\003B\024\372\3071\0200,24,25,26" +
+      ",27,28\022\037\n\027service_ipv4_cidr_block\030\002 \001(\t\022" +
+      "\037\n\027cluster_ipv6_cidr_block\030\006 \001(\t\022\037\n\027serv" +
+      "ice_ipv6_cidr_block\030\007 \001(\t\"s\n\027MasterMaint" +
+      "enancePolicy\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n\022ma" +
+      "intenance_window\030\002 \001(\0132&.yandex.cloud.k8" +
+      "s.v1.MaintenanceWindow\"\200\001\n\rNetworkPolicy" +
+      "\022=\n\010provider\030\001 \001(\0162+.yandex.cloud.k8s.v1" +
+      ".NetworkPolicy.Provider\"0\n\010Provider\022\030\n\024P" +
+      "ROVIDER_UNSPECIFIED\020\000\022\n\n\006CALICO\020\001\"\035\n\013KMS" +
+      "Provider\022\016\n\006key_id\030\001 \001(\t*U\n\016ReleaseChann" +
+      "el\022\037\n\033RELEASE_CHANNEL_UNSPECIFIED\020\000\022\t\n\005R" +
+      "APID\020\001\022\013\n\007REGULAR\020\002\022\n\n\006STABLE\020\003BV\n\027yande" +
+      "x.cloud.api.k8s.v1Z;github.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/k8s/v1;k8sb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13447,7 +13621,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_k8s_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Health", "NetworkId", "Master", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "KmsProvider", "InternetGateway", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Health", "NetworkId", "Master", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "KmsProvider", "LogGroupId", "InternetGateway", });
     internal_static_yandex_cloud_k8s_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_Cluster_LabelsEntry_fieldAccessorTable = new

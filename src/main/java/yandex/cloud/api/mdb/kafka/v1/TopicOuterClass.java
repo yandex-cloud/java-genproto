@@ -3629,6 +3629,118 @@ public final class TopicOuterClass {
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getRetentionMsOrBuilder();
+
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    boolean hasMaxMessageBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    com.google.protobuf.Int64Value getMaxMessageBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxMessageBytesOrBuilder();
+
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    boolean hasMinInsyncReplicas();
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    com.google.protobuf.Int64Value getMinInsyncReplicas();
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMinInsyncReplicasOrBuilder();
+
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    boolean hasSegmentBytes();
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    com.google.protobuf.Int64Value getSegmentBytes();
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSegmentBytesOrBuilder();
+
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    boolean hasPreallocate();
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    com.google.protobuf.BoolValue getPreallocate();
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder();
   }
   /**
    * <pre>
@@ -3774,6 +3886,58 @@ public final class TopicOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(retentionMs_);
                 retentionMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxMessageBytes_ != null) {
+                subBuilder = maxMessageBytes_.toBuilder();
+              }
+              maxMessageBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxMessageBytes_);
+                maxMessageBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (minInsyncReplicas_ != null) {
+                subBuilder = minInsyncReplicas_.toBuilder();
+              }
+              minInsyncReplicas_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(minInsyncReplicas_);
+                minInsyncReplicas_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (segmentBytes_ != null) {
+                subBuilder = segmentBytes_.toBuilder();
+              }
+              segmentBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(segmentBytes_);
+                segmentBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (preallocate_ != null) {
+                subBuilder = preallocate_.toBuilder();
+              }
+              preallocate_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(preallocate_);
+                preallocate_ = subBuilder.buildPartial();
               }
 
               break;
@@ -4246,6 +4410,150 @@ public final class TopicOuterClass {
       return getRetentionMs();
     }
 
+    public static final int MAX_MESSAGE_BYTES_FIELD_NUMBER = 10;
+    private com.google.protobuf.Int64Value maxMessageBytes_;
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    public boolean hasMaxMessageBytes() {
+      return maxMessageBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    public com.google.protobuf.Int64Value getMaxMessageBytes() {
+      return maxMessageBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxMessageBytes_;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxMessageBytesOrBuilder() {
+      return getMaxMessageBytes();
+    }
+
+    public static final int MIN_INSYNC_REPLICAS_FIELD_NUMBER = 11;
+    private com.google.protobuf.Int64Value minInsyncReplicas_;
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    public boolean hasMinInsyncReplicas() {
+      return minInsyncReplicas_ != null;
+    }
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    public com.google.protobuf.Int64Value getMinInsyncReplicas() {
+      return minInsyncReplicas_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minInsyncReplicas_;
+    }
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMinInsyncReplicasOrBuilder() {
+      return getMinInsyncReplicas();
+    }
+
+    public static final int SEGMENT_BYTES_FIELD_NUMBER = 12;
+    private com.google.protobuf.Int64Value segmentBytes_;
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    public boolean hasSegmentBytes() {
+      return segmentBytes_ != null;
+    }
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    public com.google.protobuf.Int64Value getSegmentBytes() {
+      return segmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : segmentBytes_;
+    }
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getSegmentBytesOrBuilder() {
+      return getSegmentBytes();
+    }
+
+    public static final int PREALLOCATE_FIELD_NUMBER = 13;
+    private com.google.protobuf.BoolValue preallocate_;
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    public boolean hasPreallocate() {
+      return preallocate_ != null;
+    }
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    public com.google.protobuf.BoolValue getPreallocate() {
+      return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
+    }
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+      return getPreallocate();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4286,6 +4594,18 @@ public final class TopicOuterClass {
       }
       if (retentionMs_ != null) {
         output.writeMessage(9, getRetentionMs());
+      }
+      if (maxMessageBytes_ != null) {
+        output.writeMessage(10, getMaxMessageBytes());
+      }
+      if (minInsyncReplicas_ != null) {
+        output.writeMessage(11, getMinInsyncReplicas());
+      }
+      if (segmentBytes_ != null) {
+        output.writeMessage(12, getSegmentBytes());
+      }
+      if (preallocate_ != null) {
+        output.writeMessage(13, getPreallocate());
       }
       unknownFields.writeTo(output);
     }
@@ -4331,6 +4651,22 @@ public final class TopicOuterClass {
       if (retentionMs_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getRetentionMs());
+      }
+      if (maxMessageBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getMaxMessageBytes());
+      }
+      if (minInsyncReplicas_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getMinInsyncReplicas());
+      }
+      if (segmentBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getSegmentBytes());
+      }
+      if (preallocate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getPreallocate());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4385,6 +4721,26 @@ public final class TopicOuterClass {
         result = result && getRetentionMs()
             .equals(other.getRetentionMs());
       }
+      result = result && (hasMaxMessageBytes() == other.hasMaxMessageBytes());
+      if (hasMaxMessageBytes()) {
+        result = result && getMaxMessageBytes()
+            .equals(other.getMaxMessageBytes());
+      }
+      result = result && (hasMinInsyncReplicas() == other.hasMinInsyncReplicas());
+      if (hasMinInsyncReplicas()) {
+        result = result && getMinInsyncReplicas()
+            .equals(other.getMinInsyncReplicas());
+      }
+      result = result && (hasSegmentBytes() == other.hasSegmentBytes());
+      if (hasSegmentBytes()) {
+        result = result && getSegmentBytes()
+            .equals(other.getSegmentBytes());
+      }
+      result = result && (hasPreallocate() == other.hasPreallocate());
+      if (hasPreallocate()) {
+        result = result && getPreallocate()
+            .equals(other.getPreallocate());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -4427,6 +4783,22 @@ public final class TopicOuterClass {
       if (hasRetentionMs()) {
         hash = (37 * hash) + RETENTION_MS_FIELD_NUMBER;
         hash = (53 * hash) + getRetentionMs().hashCode();
+      }
+      if (hasMaxMessageBytes()) {
+        hash = (37 * hash) + MAX_MESSAGE_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxMessageBytes().hashCode();
+      }
+      if (hasMinInsyncReplicas()) {
+        hash = (37 * hash) + MIN_INSYNC_REPLICAS_FIELD_NUMBER;
+        hash = (53 * hash) + getMinInsyncReplicas().hashCode();
+      }
+      if (hasSegmentBytes()) {
+        hash = (37 * hash) + SEGMENT_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentBytes().hashCode();
+      }
+      if (hasPreallocate()) {
+        hash = (37 * hash) + PREALLOCATE_FIELD_NUMBER;
+        hash = (53 * hash) + getPreallocate().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4611,6 +4983,30 @@ public final class TopicOuterClass {
           retentionMs_ = null;
           retentionMsBuilder_ = null;
         }
+        if (maxMessageBytesBuilder_ == null) {
+          maxMessageBytes_ = null;
+        } else {
+          maxMessageBytes_ = null;
+          maxMessageBytesBuilder_ = null;
+        }
+        if (minInsyncReplicasBuilder_ == null) {
+          minInsyncReplicas_ = null;
+        } else {
+          minInsyncReplicas_ = null;
+          minInsyncReplicasBuilder_ = null;
+        }
+        if (segmentBytesBuilder_ == null) {
+          segmentBytes_ = null;
+        } else {
+          segmentBytes_ = null;
+          segmentBytesBuilder_ = null;
+        }
+        if (preallocateBuilder_ == null) {
+          preallocate_ = null;
+        } else {
+          preallocate_ = null;
+          preallocateBuilder_ = null;
+        }
         return this;
       }
 
@@ -4673,6 +5069,26 @@ public final class TopicOuterClass {
           result.retentionMs_ = retentionMs_;
         } else {
           result.retentionMs_ = retentionMsBuilder_.build();
+        }
+        if (maxMessageBytesBuilder_ == null) {
+          result.maxMessageBytes_ = maxMessageBytes_;
+        } else {
+          result.maxMessageBytes_ = maxMessageBytesBuilder_.build();
+        }
+        if (minInsyncReplicasBuilder_ == null) {
+          result.minInsyncReplicas_ = minInsyncReplicas_;
+        } else {
+          result.minInsyncReplicas_ = minInsyncReplicasBuilder_.build();
+        }
+        if (segmentBytesBuilder_ == null) {
+          result.segmentBytes_ = segmentBytes_;
+        } else {
+          result.segmentBytes_ = segmentBytesBuilder_.build();
+        }
+        if (preallocateBuilder_ == null) {
+          result.preallocate_ = preallocate_;
+        } else {
+          result.preallocate_ = preallocateBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4748,6 +5164,18 @@ public final class TopicOuterClass {
         }
         if (other.hasRetentionMs()) {
           mergeRetentionMs(other.getRetentionMs());
+        }
+        if (other.hasMaxMessageBytes()) {
+          mergeMaxMessageBytes(other.getMaxMessageBytes());
+        }
+        if (other.hasMinInsyncReplicas()) {
+          mergeMinInsyncReplicas(other.getMinInsyncReplicas());
+        }
+        if (other.hasSegmentBytes()) {
+          mergeSegmentBytes(other.getSegmentBytes());
+        }
+        if (other.hasPreallocate()) {
+          mergePreallocate(other.getPreallocate());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6023,6 +6451,654 @@ public final class TopicOuterClass {
         }
         return retentionMsBuilder_;
       }
+
+      private com.google.protobuf.Int64Value maxMessageBytes_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxMessageBytesBuilder_;
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public boolean hasMaxMessageBytes() {
+        return maxMessageBytesBuilder_ != null || maxMessageBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public com.google.protobuf.Int64Value getMaxMessageBytes() {
+        if (maxMessageBytesBuilder_ == null) {
+          return maxMessageBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxMessageBytes_;
+        } else {
+          return maxMessageBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public Builder setMaxMessageBytes(com.google.protobuf.Int64Value value) {
+        if (maxMessageBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxMessageBytes_ = value;
+          onChanged();
+        } else {
+          maxMessageBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public Builder setMaxMessageBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxMessageBytesBuilder_ == null) {
+          maxMessageBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxMessageBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public Builder mergeMaxMessageBytes(com.google.protobuf.Int64Value value) {
+        if (maxMessageBytesBuilder_ == null) {
+          if (maxMessageBytes_ != null) {
+            maxMessageBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(maxMessageBytes_).mergeFrom(value).buildPartial();
+          } else {
+            maxMessageBytes_ = value;
+          }
+          onChanged();
+        } else {
+          maxMessageBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public Builder clearMaxMessageBytes() {
+        if (maxMessageBytesBuilder_ == null) {
+          maxMessageBytes_ = null;
+          onChanged();
+        } else {
+          maxMessageBytes_ = null;
+          maxMessageBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxMessageBytesBuilder() {
+        
+        onChanged();
+        return getMaxMessageBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxMessageBytesOrBuilder() {
+        if (maxMessageBytesBuilder_ != null) {
+          return maxMessageBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return maxMessageBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxMessageBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxMessageBytesFieldBuilder() {
+        if (maxMessageBytesBuilder_ == null) {
+          maxMessageBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxMessageBytes(),
+                  getParentForChildren(),
+                  isClean());
+          maxMessageBytes_ = null;
+        }
+        return maxMessageBytesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value minInsyncReplicas_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minInsyncReplicasBuilder_;
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public boolean hasMinInsyncReplicas() {
+        return minInsyncReplicasBuilder_ != null || minInsyncReplicas_ != null;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public com.google.protobuf.Int64Value getMinInsyncReplicas() {
+        if (minInsyncReplicasBuilder_ == null) {
+          return minInsyncReplicas_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minInsyncReplicas_;
+        } else {
+          return minInsyncReplicasBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public Builder setMinInsyncReplicas(com.google.protobuf.Int64Value value) {
+        if (minInsyncReplicasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minInsyncReplicas_ = value;
+          onChanged();
+        } else {
+          minInsyncReplicasBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public Builder setMinInsyncReplicas(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (minInsyncReplicasBuilder_ == null) {
+          minInsyncReplicas_ = builderForValue.build();
+          onChanged();
+        } else {
+          minInsyncReplicasBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public Builder mergeMinInsyncReplicas(com.google.protobuf.Int64Value value) {
+        if (minInsyncReplicasBuilder_ == null) {
+          if (minInsyncReplicas_ != null) {
+            minInsyncReplicas_ =
+              com.google.protobuf.Int64Value.newBuilder(minInsyncReplicas_).mergeFrom(value).buildPartial();
+          } else {
+            minInsyncReplicas_ = value;
+          }
+          onChanged();
+        } else {
+          minInsyncReplicasBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public Builder clearMinInsyncReplicas() {
+        if (minInsyncReplicasBuilder_ == null) {
+          minInsyncReplicas_ = null;
+          onChanged();
+        } else {
+          minInsyncReplicas_ = null;
+          minInsyncReplicasBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMinInsyncReplicasBuilder() {
+        
+        onChanged();
+        return getMinInsyncReplicasFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMinInsyncReplicasOrBuilder() {
+        if (minInsyncReplicasBuilder_ != null) {
+          return minInsyncReplicasBuilder_.getMessageOrBuilder();
+        } else {
+          return minInsyncReplicas_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : minInsyncReplicas_;
+        }
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMinInsyncReplicasFieldBuilder() {
+        if (minInsyncReplicasBuilder_ == null) {
+          minInsyncReplicasBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMinInsyncReplicas(),
+                  getParentForChildren(),
+                  isClean());
+          minInsyncReplicas_ = null;
+        }
+        return minInsyncReplicasBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value segmentBytes_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> segmentBytesBuilder_;
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public boolean hasSegmentBytes() {
+        return segmentBytesBuilder_ != null || segmentBytes_ != null;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64Value getSegmentBytes() {
+        if (segmentBytesBuilder_ == null) {
+          return segmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : segmentBytes_;
+        } else {
+          return segmentBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public Builder setSegmentBytes(com.google.protobuf.Int64Value value) {
+        if (segmentBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          segmentBytes_ = value;
+          onChanged();
+        } else {
+          segmentBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public Builder setSegmentBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (segmentBytesBuilder_ == null) {
+          segmentBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          segmentBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public Builder mergeSegmentBytes(com.google.protobuf.Int64Value value) {
+        if (segmentBytesBuilder_ == null) {
+          if (segmentBytes_ != null) {
+            segmentBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(segmentBytes_).mergeFrom(value).buildPartial();
+          } else {
+            segmentBytes_ = value;
+          }
+          onChanged();
+        } else {
+          segmentBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public Builder clearSegmentBytes() {
+        if (segmentBytesBuilder_ == null) {
+          segmentBytes_ = null;
+          onChanged();
+        } else {
+          segmentBytes_ = null;
+          segmentBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSegmentBytesBuilder() {
+        
+        onChanged();
+        return getSegmentBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSegmentBytesOrBuilder() {
+        if (segmentBytesBuilder_ != null) {
+          return segmentBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return segmentBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : segmentBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSegmentBytesFieldBuilder() {
+        if (segmentBytesBuilder_ == null) {
+          segmentBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSegmentBytes(),
+                  getParentForChildren(),
+                  isClean());
+          segmentBytes_ = null;
+        }
+        return segmentBytesBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue preallocate_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> preallocateBuilder_;
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public boolean hasPreallocate() {
+        return preallocateBuilder_ != null || preallocate_ != null;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public com.google.protobuf.BoolValue getPreallocate() {
+        if (preallocateBuilder_ == null) {
+          return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
+        } else {
+          return preallocateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public Builder setPreallocate(com.google.protobuf.BoolValue value) {
+        if (preallocateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          preallocate_ = value;
+          onChanged();
+        } else {
+          preallocateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public Builder setPreallocate(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (preallocateBuilder_ == null) {
+          preallocate_ = builderForValue.build();
+          onChanged();
+        } else {
+          preallocateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public Builder mergePreallocate(com.google.protobuf.BoolValue value) {
+        if (preallocateBuilder_ == null) {
+          if (preallocate_ != null) {
+            preallocate_ =
+              com.google.protobuf.BoolValue.newBuilder(preallocate_).mergeFrom(value).buildPartial();
+          } else {
+            preallocate_ = value;
+          }
+          onChanged();
+        } else {
+          preallocateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public Builder clearPreallocate() {
+        if (preallocateBuilder_ == null) {
+          preallocate_ = null;
+          onChanged();
+        } else {
+          preallocate_ = null;
+          preallocateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPreallocateBuilder() {
+        
+        onChanged();
+        return getPreallocateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+        if (preallocateBuilder_ != null) {
+          return preallocateBuilder_.getMessageOrBuilder();
+        } else {
+          return preallocate_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
+        }
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_1.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPreallocateFieldBuilder() {
+        if (preallocateBuilder_ == null) {
+          preallocateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPreallocate(),
+                  getParentForChildren(),
+                  isClean());
+          preallocate_ = null;
+        }
+        return preallocateBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6303,6 +7379,118 @@ public final class TopicOuterClass {
      * <code>.google.protobuf.Int64Value retention_ms = 9;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getRetentionMsOrBuilder();
+
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    boolean hasMaxMessageBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    com.google.protobuf.Int64Value getMaxMessageBytes();
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxMessageBytesOrBuilder();
+
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    boolean hasMinInsyncReplicas();
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    com.google.protobuf.Int64Value getMinInsyncReplicas();
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMinInsyncReplicasOrBuilder();
+
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    boolean hasSegmentBytes();
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    com.google.protobuf.Int64Value getSegmentBytes();
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSegmentBytesOrBuilder();
+
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    boolean hasPreallocate();
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    com.google.protobuf.BoolValue getPreallocate();
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder();
   }
   /**
    * <pre>
@@ -6448,6 +7636,58 @@ public final class TopicOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(retentionMs_);
                 retentionMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxMessageBytes_ != null) {
+                subBuilder = maxMessageBytes_.toBuilder();
+              }
+              maxMessageBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxMessageBytes_);
+                maxMessageBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (minInsyncReplicas_ != null) {
+                subBuilder = minInsyncReplicas_.toBuilder();
+              }
+              minInsyncReplicas_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(minInsyncReplicas_);
+                minInsyncReplicas_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (segmentBytes_ != null) {
+                subBuilder = segmentBytes_.toBuilder();
+              }
+              segmentBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(segmentBytes_);
+                segmentBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (preallocate_ != null) {
+                subBuilder = preallocate_.toBuilder();
+              }
+              preallocate_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(preallocate_);
+                preallocate_ = subBuilder.buildPartial();
               }
 
               break;
@@ -6920,6 +8160,150 @@ public final class TopicOuterClass {
       return getRetentionMs();
     }
 
+    public static final int MAX_MESSAGE_BYTES_FIELD_NUMBER = 10;
+    private com.google.protobuf.Int64Value maxMessageBytes_;
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    public boolean hasMaxMessageBytes() {
+      return maxMessageBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    public com.google.protobuf.Int64Value getMaxMessageBytes() {
+      return maxMessageBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxMessageBytes_;
+    }
+    /**
+     * <pre>
+     * The largest record batch size allowed in topic.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMaxMessageBytesOrBuilder() {
+      return getMaxMessageBytes();
+    }
+
+    public static final int MIN_INSYNC_REPLICAS_FIELD_NUMBER = 11;
+    private com.google.protobuf.Int64Value minInsyncReplicas_;
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    public boolean hasMinInsyncReplicas() {
+      return minInsyncReplicas_ != null;
+    }
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    public com.google.protobuf.Int64Value getMinInsyncReplicas() {
+      return minInsyncReplicas_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minInsyncReplicas_;
+    }
+    /**
+     * <pre>
+     * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+     * to be considered successful (when a producer sets acks to "all").
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMinInsyncReplicasOrBuilder() {
+      return getMinInsyncReplicas();
+    }
+
+    public static final int SEGMENT_BYTES_FIELD_NUMBER = 12;
+    private com.google.protobuf.Int64Value segmentBytes_;
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    public boolean hasSegmentBytes() {
+      return segmentBytes_ != null;
+    }
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    public com.google.protobuf.Int64Value getSegmentBytes() {
+      return segmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : segmentBytes_;
+    }
+    /**
+     * <pre>
+     * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+     * at a time so a larger segment size means fewer files but less granular control over retention.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getSegmentBytesOrBuilder() {
+      return getSegmentBytes();
+    }
+
+    public static final int PREALLOCATE_FIELD_NUMBER = 13;
+    private com.google.protobuf.BoolValue preallocate_;
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    public boolean hasPreallocate() {
+      return preallocate_ != null;
+    }
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    public com.google.protobuf.BoolValue getPreallocate() {
+      return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
+    }
+    /**
+     * <pre>
+     * True if we should preallocate the file on disk when creating a new log segment.
+     * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+      return getPreallocate();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6960,6 +8344,18 @@ public final class TopicOuterClass {
       }
       if (retentionMs_ != null) {
         output.writeMessage(9, getRetentionMs());
+      }
+      if (maxMessageBytes_ != null) {
+        output.writeMessage(10, getMaxMessageBytes());
+      }
+      if (minInsyncReplicas_ != null) {
+        output.writeMessage(11, getMinInsyncReplicas());
+      }
+      if (segmentBytes_ != null) {
+        output.writeMessage(12, getSegmentBytes());
+      }
+      if (preallocate_ != null) {
+        output.writeMessage(13, getPreallocate());
       }
       unknownFields.writeTo(output);
     }
@@ -7005,6 +8401,22 @@ public final class TopicOuterClass {
       if (retentionMs_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getRetentionMs());
+      }
+      if (maxMessageBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getMaxMessageBytes());
+      }
+      if (minInsyncReplicas_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getMinInsyncReplicas());
+      }
+      if (segmentBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getSegmentBytes());
+      }
+      if (preallocate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getPreallocate());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7059,6 +8471,26 @@ public final class TopicOuterClass {
         result = result && getRetentionMs()
             .equals(other.getRetentionMs());
       }
+      result = result && (hasMaxMessageBytes() == other.hasMaxMessageBytes());
+      if (hasMaxMessageBytes()) {
+        result = result && getMaxMessageBytes()
+            .equals(other.getMaxMessageBytes());
+      }
+      result = result && (hasMinInsyncReplicas() == other.hasMinInsyncReplicas());
+      if (hasMinInsyncReplicas()) {
+        result = result && getMinInsyncReplicas()
+            .equals(other.getMinInsyncReplicas());
+      }
+      result = result && (hasSegmentBytes() == other.hasSegmentBytes());
+      if (hasSegmentBytes()) {
+        result = result && getSegmentBytes()
+            .equals(other.getSegmentBytes());
+      }
+      result = result && (hasPreallocate() == other.hasPreallocate());
+      if (hasPreallocate()) {
+        result = result && getPreallocate()
+            .equals(other.getPreallocate());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7101,6 +8533,22 @@ public final class TopicOuterClass {
       if (hasRetentionMs()) {
         hash = (37 * hash) + RETENTION_MS_FIELD_NUMBER;
         hash = (53 * hash) + getRetentionMs().hashCode();
+      }
+      if (hasMaxMessageBytes()) {
+        hash = (37 * hash) + MAX_MESSAGE_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxMessageBytes().hashCode();
+      }
+      if (hasMinInsyncReplicas()) {
+        hash = (37 * hash) + MIN_INSYNC_REPLICAS_FIELD_NUMBER;
+        hash = (53 * hash) + getMinInsyncReplicas().hashCode();
+      }
+      if (hasSegmentBytes()) {
+        hash = (37 * hash) + SEGMENT_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getSegmentBytes().hashCode();
+      }
+      if (hasPreallocate()) {
+        hash = (37 * hash) + PREALLOCATE_FIELD_NUMBER;
+        hash = (53 * hash) + getPreallocate().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7285,6 +8733,30 @@ public final class TopicOuterClass {
           retentionMs_ = null;
           retentionMsBuilder_ = null;
         }
+        if (maxMessageBytesBuilder_ == null) {
+          maxMessageBytes_ = null;
+        } else {
+          maxMessageBytes_ = null;
+          maxMessageBytesBuilder_ = null;
+        }
+        if (minInsyncReplicasBuilder_ == null) {
+          minInsyncReplicas_ = null;
+        } else {
+          minInsyncReplicas_ = null;
+          minInsyncReplicasBuilder_ = null;
+        }
+        if (segmentBytesBuilder_ == null) {
+          segmentBytes_ = null;
+        } else {
+          segmentBytes_ = null;
+          segmentBytesBuilder_ = null;
+        }
+        if (preallocateBuilder_ == null) {
+          preallocate_ = null;
+        } else {
+          preallocate_ = null;
+          preallocateBuilder_ = null;
+        }
         return this;
       }
 
@@ -7347,6 +8819,26 @@ public final class TopicOuterClass {
           result.retentionMs_ = retentionMs_;
         } else {
           result.retentionMs_ = retentionMsBuilder_.build();
+        }
+        if (maxMessageBytesBuilder_ == null) {
+          result.maxMessageBytes_ = maxMessageBytes_;
+        } else {
+          result.maxMessageBytes_ = maxMessageBytesBuilder_.build();
+        }
+        if (minInsyncReplicasBuilder_ == null) {
+          result.minInsyncReplicas_ = minInsyncReplicas_;
+        } else {
+          result.minInsyncReplicas_ = minInsyncReplicasBuilder_.build();
+        }
+        if (segmentBytesBuilder_ == null) {
+          result.segmentBytes_ = segmentBytes_;
+        } else {
+          result.segmentBytes_ = segmentBytesBuilder_.build();
+        }
+        if (preallocateBuilder_ == null) {
+          result.preallocate_ = preallocate_;
+        } else {
+          result.preallocate_ = preallocateBuilder_.build();
         }
         onBuilt();
         return result;
@@ -7422,6 +8914,18 @@ public final class TopicOuterClass {
         }
         if (other.hasRetentionMs()) {
           mergeRetentionMs(other.getRetentionMs());
+        }
+        if (other.hasMaxMessageBytes()) {
+          mergeMaxMessageBytes(other.getMaxMessageBytes());
+        }
+        if (other.hasMinInsyncReplicas()) {
+          mergeMinInsyncReplicas(other.getMinInsyncReplicas());
+        }
+        if (other.hasSegmentBytes()) {
+          mergeSegmentBytes(other.getSegmentBytes());
+        }
+        if (other.hasPreallocate()) {
+          mergePreallocate(other.getPreallocate());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8697,6 +10201,654 @@ public final class TopicOuterClass {
         }
         return retentionMsBuilder_;
       }
+
+      private com.google.protobuf.Int64Value maxMessageBytes_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxMessageBytesBuilder_;
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public boolean hasMaxMessageBytes() {
+        return maxMessageBytesBuilder_ != null || maxMessageBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public com.google.protobuf.Int64Value getMaxMessageBytes() {
+        if (maxMessageBytesBuilder_ == null) {
+          return maxMessageBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxMessageBytes_;
+        } else {
+          return maxMessageBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public Builder setMaxMessageBytes(com.google.protobuf.Int64Value value) {
+        if (maxMessageBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxMessageBytes_ = value;
+          onChanged();
+        } else {
+          maxMessageBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public Builder setMaxMessageBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxMessageBytesBuilder_ == null) {
+          maxMessageBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxMessageBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public Builder mergeMaxMessageBytes(com.google.protobuf.Int64Value value) {
+        if (maxMessageBytesBuilder_ == null) {
+          if (maxMessageBytes_ != null) {
+            maxMessageBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(maxMessageBytes_).mergeFrom(value).buildPartial();
+          } else {
+            maxMessageBytes_ = value;
+          }
+          onChanged();
+        } else {
+          maxMessageBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public Builder clearMaxMessageBytes() {
+        if (maxMessageBytesBuilder_ == null) {
+          maxMessageBytes_ = null;
+          onChanged();
+        } else {
+          maxMessageBytes_ = null;
+          maxMessageBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxMessageBytesBuilder() {
+        
+        onChanged();
+        return getMaxMessageBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxMessageBytesOrBuilder() {
+        if (maxMessageBytesBuilder_ != null) {
+          return maxMessageBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return maxMessageBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxMessageBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The largest record batch size allowed in topic.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_message_bytes = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxMessageBytesFieldBuilder() {
+        if (maxMessageBytesBuilder_ == null) {
+          maxMessageBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxMessageBytes(),
+                  getParentForChildren(),
+                  isClean());
+          maxMessageBytes_ = null;
+        }
+        return maxMessageBytesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value minInsyncReplicas_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minInsyncReplicasBuilder_;
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public boolean hasMinInsyncReplicas() {
+        return minInsyncReplicasBuilder_ != null || minInsyncReplicas_ != null;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public com.google.protobuf.Int64Value getMinInsyncReplicas() {
+        if (minInsyncReplicasBuilder_ == null) {
+          return minInsyncReplicas_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minInsyncReplicas_;
+        } else {
+          return minInsyncReplicasBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public Builder setMinInsyncReplicas(com.google.protobuf.Int64Value value) {
+        if (minInsyncReplicasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minInsyncReplicas_ = value;
+          onChanged();
+        } else {
+          minInsyncReplicasBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public Builder setMinInsyncReplicas(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (minInsyncReplicasBuilder_ == null) {
+          minInsyncReplicas_ = builderForValue.build();
+          onChanged();
+        } else {
+          minInsyncReplicasBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public Builder mergeMinInsyncReplicas(com.google.protobuf.Int64Value value) {
+        if (minInsyncReplicasBuilder_ == null) {
+          if (minInsyncReplicas_ != null) {
+            minInsyncReplicas_ =
+              com.google.protobuf.Int64Value.newBuilder(minInsyncReplicas_).mergeFrom(value).buildPartial();
+          } else {
+            minInsyncReplicas_ = value;
+          }
+          onChanged();
+        } else {
+          minInsyncReplicasBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public Builder clearMinInsyncReplicas() {
+        if (minInsyncReplicasBuilder_ == null) {
+          minInsyncReplicas_ = null;
+          onChanged();
+        } else {
+          minInsyncReplicas_ = null;
+          minInsyncReplicasBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMinInsyncReplicasBuilder() {
+        
+        onChanged();
+        return getMinInsyncReplicasFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMinInsyncReplicasOrBuilder() {
+        if (minInsyncReplicasBuilder_ != null) {
+          return minInsyncReplicasBuilder_.getMessageOrBuilder();
+        } else {
+          return minInsyncReplicas_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : minInsyncReplicas_;
+        }
+      }
+      /**
+       * <pre>
+       * This configuration specifies the minimum number of replicas that must acknowledge a write to topic for the write
+       * to be considered successful (when a producer sets acks to "all").
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_insync_replicas = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMinInsyncReplicasFieldBuilder() {
+        if (minInsyncReplicasBuilder_ == null) {
+          minInsyncReplicasBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMinInsyncReplicas(),
+                  getParentForChildren(),
+                  isClean());
+          minInsyncReplicas_ = null;
+        }
+        return minInsyncReplicasBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value segmentBytes_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> segmentBytesBuilder_;
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public boolean hasSegmentBytes() {
+        return segmentBytesBuilder_ != null || segmentBytes_ != null;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64Value getSegmentBytes() {
+        if (segmentBytesBuilder_ == null) {
+          return segmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : segmentBytes_;
+        } else {
+          return segmentBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public Builder setSegmentBytes(com.google.protobuf.Int64Value value) {
+        if (segmentBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          segmentBytes_ = value;
+          onChanged();
+        } else {
+          segmentBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public Builder setSegmentBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (segmentBytesBuilder_ == null) {
+          segmentBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          segmentBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public Builder mergeSegmentBytes(com.google.protobuf.Int64Value value) {
+        if (segmentBytesBuilder_ == null) {
+          if (segmentBytes_ != null) {
+            segmentBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(segmentBytes_).mergeFrom(value).buildPartial();
+          } else {
+            segmentBytes_ = value;
+          }
+          onChanged();
+        } else {
+          segmentBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public Builder clearSegmentBytes() {
+        if (segmentBytesBuilder_ == null) {
+          segmentBytes_ = null;
+          onChanged();
+        } else {
+          segmentBytes_ = null;
+          segmentBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSegmentBytesBuilder() {
+        
+        onChanged();
+        return getSegmentBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSegmentBytesOrBuilder() {
+        if (segmentBytesBuilder_ != null) {
+          return segmentBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return segmentBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : segmentBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * This configuration controls the segment file size for the log. Retention and cleaning is always done a file
+       * at a time so a larger segment size means fewer files but less granular control over retention.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_segment_bytes] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value segment_bytes = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSegmentBytesFieldBuilder() {
+        if (segmentBytesBuilder_ == null) {
+          segmentBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSegmentBytes(),
+                  getParentForChildren(),
+                  isClean());
+          segmentBytes_ = null;
+        }
+        return segmentBytesBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue preallocate_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> preallocateBuilder_;
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public boolean hasPreallocate() {
+        return preallocateBuilder_ != null || preallocate_ != null;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public com.google.protobuf.BoolValue getPreallocate() {
+        if (preallocateBuilder_ == null) {
+          return preallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
+        } else {
+          return preallocateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public Builder setPreallocate(com.google.protobuf.BoolValue value) {
+        if (preallocateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          preallocate_ = value;
+          onChanged();
+        } else {
+          preallocateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public Builder setPreallocate(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (preallocateBuilder_ == null) {
+          preallocate_ = builderForValue.build();
+          onChanged();
+        } else {
+          preallocateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public Builder mergePreallocate(com.google.protobuf.BoolValue value) {
+        if (preallocateBuilder_ == null) {
+          if (preallocate_ != null) {
+            preallocate_ =
+              com.google.protobuf.BoolValue.newBuilder(preallocate_).mergeFrom(value).buildPartial();
+          } else {
+            preallocate_ = value;
+          }
+          onChanged();
+        } else {
+          preallocateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public Builder clearPreallocate() {
+        if (preallocateBuilder_ == null) {
+          preallocate_ = null;
+          onChanged();
+        } else {
+          preallocate_ = null;
+          preallocateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPreallocateBuilder() {
+        
+        onChanged();
+        return getPreallocateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPreallocateOrBuilder() {
+        if (preallocateBuilder_ != null) {
+          return preallocateBuilder_.getMessageOrBuilder();
+        } else {
+          return preallocate_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : preallocate_;
+        }
+      }
+      /**
+       * <pre>
+       * True if we should preallocate the file on disk when creating a new log segment.
+       * This setting overrides the cluster-level [KafkaConfig2_6.log_preallocate] setting on the topic level.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue preallocate = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPreallocateFieldBuilder() {
+        if (preallocateBuilder_ == null) {
+          preallocateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPreallocate(),
+                  getParentForChildren(),
+                  isClean());
+          preallocate_ = null;
+        }
+        return preallocateBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8799,7 +10951,7 @@ public final class TopicOuterClass {
       ".cloud.mdb.kafka.v1.TopicConfig2_1H\000\022E\n\020" +
       "topic_config_2_6\030\005 \001(\0132).yandex.cloud.md" +
       "b.kafka.v1.TopicConfig2_6H\000B\016\n\014topic_con" +
-      "fig\"\265\005\n\016TopicConfig2_1\022O\n\016cleanup_policy" +
+      "fig\"\214\007\n\016TopicConfig2_1\022O\n\016cleanup_policy" +
       "\030\001 \001(\01627.yandex.cloud.mdb.kafka.v1.Topic" +
       "Config2_1.CleanupPolicy\022D\n\020compression_t" +
       "ype\030\002 \001(\0162*.yandex.cloud.mdb.kafka.v1.Co" +
@@ -8812,31 +10964,42 @@ public final class TopicOuterClass {
       "mpaction_lag_ms\030\007 \001(\0132\033.google.protobuf." +
       "Int64Value\0224\n\017retention_bytes\030\010 \001(\0132\033.go" +
       "ogle.protobuf.Int64Value\0221\n\014retention_ms" +
-      "\030\t \001(\0132\033.google.protobuf.Int64Value\"\215\001\n\r" +
-      "CleanupPolicy\022\036\n\032CLEANUP_POLICY_UNSPECIF" +
-      "IED\020\000\022\031\n\025CLEANUP_POLICY_DELETE\020\001\022\032\n\026CLEA" +
-      "NUP_POLICY_COMPACT\020\002\022%\n!CLEANUP_POLICY_C" +
-      "OMPACT_AND_DELETE\020\003\"\265\005\n\016TopicConfig2_6\022O" +
-      "\n\016cleanup_policy\030\001 \001(\01627.yandex.cloud.md" +
-      "b.kafka.v1.TopicConfig2_6.CleanupPolicy\022" +
-      "D\n\020compression_type\030\002 \001(\0162*.yandex.cloud" +
-      ".mdb.kafka.v1.CompressionType\0228\n\023delete_" +
-      "retention_ms\030\003 \001(\0132\033.google.protobuf.Int" +
-      "64Value\0229\n\024file_delete_delay_ms\030\004 \001(\0132\033." +
-      "google.protobuf.Int64Value\0223\n\016flush_mess" +
-      "ages\030\005 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "-\n\010flush_ms\030\006 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\022:\n\025min_compaction_lag_ms\030\007 \001(\0132\033." +
-      "google.protobuf.Int64Value\0224\n\017retention_" +
-      "bytes\030\010 \001(\0132\033.google.protobuf.Int64Value" +
-      "\0221\n\014retention_ms\030\t \001(\0132\033.google.protobuf" +
-      ".Int64Value\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP" +
-      "_POLICY_UNSPECIFIED\020\000\022\031\n\025CLEANUP_POLICY_" +
-      "DELETE\020\001\022\032\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n!" +
-      "CLEANUP_POLICY_COMPACT_AND_DELETE\020\003Bd\n\035y" +
-      "andex.cloud.api.mdb.kafka.v1ZCgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/m" +
-      "db/kafka/v1;kafkab\006proto3"
+      "\030\t \001(\0132\033.google.protobuf.Int64Value\0226\n\021m" +
+      "ax_message_bytes\030\n \001(\0132\033.google.protobuf" +
+      ".Int64Value\0228\n\023min_insync_replicas\030\013 \001(\013" +
+      "2\033.google.protobuf.Int64Value\0222\n\rsegment" +
+      "_bytes\030\014 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022/\n\013preallocate\030\r \001(\0132\032.google.protobuf" +
+      ".BoolValue\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP_" +
+      "POLICY_UNSPECIFIED\020\000\022\031\n\025CLEANUP_POLICY_D" +
+      "ELETE\020\001\022\032\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n!C" +
+      "LEANUP_POLICY_COMPACT_AND_DELETE\020\003\"\214\007\n\016T" +
+      "opicConfig2_6\022O\n\016cleanup_policy\030\001 \001(\01627." +
+      "yandex.cloud.mdb.kafka.v1.TopicConfig2_6" +
+      ".CleanupPolicy\022D\n\020compression_type\030\002 \001(\016" +
+      "2*.yandex.cloud.mdb.kafka.v1.Compression" +
+      "Type\0228\n\023delete_retention_ms\030\003 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\0229\n\024file_delete_de" +
+      "lay_ms\030\004 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\0223\n\016flush_messages\030\005 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022-\n\010flush_ms\030\006 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022:\n\025min_compaction_" +
+      "lag_ms\030\007 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\0224\n\017retention_bytes\030\010 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\0221\n\014retention_ms\030\t \001(\0132\033." +
+      "google.protobuf.Int64Value\0226\n\021max_messag" +
+      "e_bytes\030\n \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\0228\n\023min_insync_replicas\030\013 \001(\0132\033.google" +
+      ".protobuf.Int64Value\0222\n\rsegment_bytes\030\014 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022/\n\013prea" +
+      "llocate\030\r \001(\0132\032.google.protobuf.BoolValu" +
+      "e\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP_POLICY_UN" +
+      "SPECIFIED\020\000\022\031\n\025CLEANUP_POLICY_DELETE\020\001\022\032" +
+      "\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n!CLEANUP_PO" +
+      "LICY_COMPACT_AND_DELETE\020\003Bd\n\035yandex.clou" +
+      "d.api.mdb.kafka.v1ZCgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/mdb/kafka/v" +
+      "1;kafkab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8870,13 +11033,13 @@ public final class TopicOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig2_1_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig2_1_descriptor,
-        new java.lang.String[] { "CleanupPolicy", "CompressionType", "DeleteRetentionMs", "FileDeleteDelayMs", "FlushMessages", "FlushMs", "MinCompactionLagMs", "RetentionBytes", "RetentionMs", });
+        new java.lang.String[] { "CleanupPolicy", "CompressionType", "DeleteRetentionMs", "FileDeleteDelayMs", "FlushMessages", "FlushMs", "MinCompactionLagMs", "RetentionBytes", "RetentionMs", "MaxMessageBytes", "MinInsyncReplicas", "SegmentBytes", "Preallocate", });
     internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig2_6_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig2_6_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_TopicConfig2_6_descriptor,
-        new java.lang.String[] { "CleanupPolicy", "CompressionType", "DeleteRetentionMs", "FileDeleteDelayMs", "FlushMessages", "FlushMs", "MinCompactionLagMs", "RetentionBytes", "RetentionMs", });
+        new java.lang.String[] { "CleanupPolicy", "CompressionType", "DeleteRetentionMs", "FileDeleteDelayMs", "FlushMessages", "FlushMs", "MinCompactionLagMs", "RetentionBytes", "RetentionMs", "MaxMessageBytes", "MinInsyncReplicas", "SegmentBytes", "Preallocate", });
     com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.mdb.kafka.v1.Common.getDescriptor();

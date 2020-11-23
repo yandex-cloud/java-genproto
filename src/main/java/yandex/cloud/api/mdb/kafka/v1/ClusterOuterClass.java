@@ -9127,6 +9127,62 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getLogRetentionMsOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    boolean hasLogSegmentBytes();
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    com.google.protobuf.Int64Value getLogSegmentBytes();
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLogSegmentBytesOrBuilder();
+
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    boolean hasLogPreallocate();
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    com.google.protobuf.BoolValue getLogPreallocate();
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder();
   }
   /**
    * <pre>
@@ -9265,6 +9321,32 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(logRetentionMs_);
                 logRetentionMs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (logSegmentBytes_ != null) {
+                subBuilder = logSegmentBytes_.toBuilder();
+              }
+              logSegmentBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logSegmentBytes_);
+                logSegmentBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (logPreallocate_ != null) {
+                subBuilder = logPreallocate_.toBuilder();
+              }
+              logPreallocate_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logPreallocate_);
+                logPreallocate_ = subBuilder.buildPartial();
               }
 
               break;
@@ -9584,6 +9666,78 @@ public final class ClusterOuterClass {
       return getLogRetentionMs();
     }
 
+    public static final int LOG_SEGMENT_BYTES_FIELD_NUMBER = 9;
+    private com.google.protobuf.Int64Value logSegmentBytes_;
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    public boolean hasLogSegmentBytes() {
+      return logSegmentBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    public com.google.protobuf.Int64Value getLogSegmentBytes() {
+      return logSegmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logSegmentBytes_;
+    }
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getLogSegmentBytesOrBuilder() {
+      return getLogSegmentBytes();
+    }
+
+    public static final int LOG_PREALLOCATE_FIELD_NUMBER = 10;
+    private com.google.protobuf.BoolValue logPreallocate_;
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    public boolean hasLogPreallocate() {
+      return logPreallocate_ != null;
+    }
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    public com.google.protobuf.BoolValue getLogPreallocate() {
+      return logPreallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logPreallocate_;
+    }
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
+      return getLogPreallocate();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9621,6 +9775,12 @@ public final class ClusterOuterClass {
       }
       if (logRetentionMs_ != null) {
         output.writeMessage(8, getLogRetentionMs());
+      }
+      if (logSegmentBytes_ != null) {
+        output.writeMessage(9, getLogSegmentBytes());
+      }
+      if (logPreallocate_ != null) {
+        output.writeMessage(10, getLogPreallocate());
       }
       unknownFields.writeTo(output);
     }
@@ -9662,6 +9822,14 @@ public final class ClusterOuterClass {
       if (logRetentionMs_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getLogRetentionMs());
+      }
+      if (logSegmentBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getLogSegmentBytes());
+      }
+      if (logPreallocate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getLogPreallocate());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9715,6 +9883,16 @@ public final class ClusterOuterClass {
         result = result && getLogRetentionMs()
             .equals(other.getLogRetentionMs());
       }
+      result = result && (hasLogSegmentBytes() == other.hasLogSegmentBytes());
+      if (hasLogSegmentBytes()) {
+        result = result && getLogSegmentBytes()
+            .equals(other.getLogSegmentBytes());
+      }
+      result = result && (hasLogPreallocate() == other.hasLogPreallocate());
+      if (hasLogPreallocate()) {
+        result = result && getLogPreallocate()
+            .equals(other.getLogPreallocate());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -9755,6 +9933,14 @@ public final class ClusterOuterClass {
       if (hasLogRetentionMs()) {
         hash = (37 * hash) + LOG_RETENTION_MS_FIELD_NUMBER;
         hash = (53 * hash) + getLogRetentionMs().hashCode();
+      }
+      if (hasLogSegmentBytes()) {
+        hash = (37 * hash) + LOG_SEGMENT_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getLogSegmentBytes().hashCode();
+      }
+      if (hasLogPreallocate()) {
+        hash = (37 * hash) + LOG_PREALLOCATE_FIELD_NUMBER;
+        hash = (53 * hash) + getLogPreallocate().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9937,6 +10123,18 @@ public final class ClusterOuterClass {
           logRetentionMs_ = null;
           logRetentionMsBuilder_ = null;
         }
+        if (logSegmentBytesBuilder_ == null) {
+          logSegmentBytes_ = null;
+        } else {
+          logSegmentBytes_ = null;
+          logSegmentBytesBuilder_ = null;
+        }
+        if (logPreallocateBuilder_ == null) {
+          logPreallocate_ = null;
+        } else {
+          logPreallocate_ = null;
+          logPreallocateBuilder_ = null;
+        }
         return this;
       }
 
@@ -9998,6 +10196,16 @@ public final class ClusterOuterClass {
           result.logRetentionMs_ = logRetentionMs_;
         } else {
           result.logRetentionMs_ = logRetentionMsBuilder_.build();
+        }
+        if (logSegmentBytesBuilder_ == null) {
+          result.logSegmentBytes_ = logSegmentBytes_;
+        } else {
+          result.logSegmentBytes_ = logSegmentBytesBuilder_.build();
+        }
+        if (logPreallocateBuilder_ == null) {
+          result.logPreallocate_ = logPreallocate_;
+        } else {
+          result.logPreallocate_ = logPreallocateBuilder_.build();
         }
         onBuilt();
         return result;
@@ -10070,6 +10278,12 @@ public final class ClusterOuterClass {
         }
         if (other.hasLogRetentionMs()) {
           mergeLogRetentionMs(other.getLogRetentionMs());
+        }
+        if (other.hasLogSegmentBytes()) {
+          mergeLogSegmentBytes(other.getLogSegmentBytes());
+        }
+        if (other.hasLogPreallocate()) {
+          mergeLogPreallocate(other.getLogPreallocate());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11316,6 +11530,330 @@ public final class ClusterOuterClass {
         }
         return logRetentionMsBuilder_;
       }
+
+      private com.google.protobuf.Int64Value logSegmentBytes_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logSegmentBytesBuilder_;
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public boolean hasLogSegmentBytes() {
+        return logSegmentBytesBuilder_ != null || logSegmentBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public com.google.protobuf.Int64Value getLogSegmentBytes() {
+        if (logSegmentBytesBuilder_ == null) {
+          return logSegmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logSegmentBytes_;
+        } else {
+          return logSegmentBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public Builder setLogSegmentBytes(com.google.protobuf.Int64Value value) {
+        if (logSegmentBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logSegmentBytes_ = value;
+          onChanged();
+        } else {
+          logSegmentBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public Builder setLogSegmentBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (logSegmentBytesBuilder_ == null) {
+          logSegmentBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          logSegmentBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public Builder mergeLogSegmentBytes(com.google.protobuf.Int64Value value) {
+        if (logSegmentBytesBuilder_ == null) {
+          if (logSegmentBytes_ != null) {
+            logSegmentBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(logSegmentBytes_).mergeFrom(value).buildPartial();
+          } else {
+            logSegmentBytes_ = value;
+          }
+          onChanged();
+        } else {
+          logSegmentBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public Builder clearLogSegmentBytes() {
+        if (logSegmentBytesBuilder_ == null) {
+          logSegmentBytes_ = null;
+          onChanged();
+        } else {
+          logSegmentBytes_ = null;
+          logSegmentBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLogSegmentBytesBuilder() {
+        
+        onChanged();
+        return getLogSegmentBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLogSegmentBytesOrBuilder() {
+        if (logSegmentBytesBuilder_ != null) {
+          return logSegmentBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return logSegmentBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : logSegmentBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLogSegmentBytesFieldBuilder() {
+        if (logSegmentBytesBuilder_ == null) {
+          logSegmentBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLogSegmentBytes(),
+                  getParentForChildren(),
+                  isClean());
+          logSegmentBytes_ = null;
+        }
+        return logSegmentBytesBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue logPreallocate_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logPreallocateBuilder_;
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public boolean hasLogPreallocate() {
+        return logPreallocateBuilder_ != null || logPreallocate_ != null;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public com.google.protobuf.BoolValue getLogPreallocate() {
+        if (logPreallocateBuilder_ == null) {
+          return logPreallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logPreallocate_;
+        } else {
+          return logPreallocateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public Builder setLogPreallocate(com.google.protobuf.BoolValue value) {
+        if (logPreallocateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logPreallocate_ = value;
+          onChanged();
+        } else {
+          logPreallocateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public Builder setLogPreallocate(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (logPreallocateBuilder_ == null) {
+          logPreallocate_ = builderForValue.build();
+          onChanged();
+        } else {
+          logPreallocateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public Builder mergeLogPreallocate(com.google.protobuf.BoolValue value) {
+        if (logPreallocateBuilder_ == null) {
+          if (logPreallocate_ != null) {
+            logPreallocate_ =
+              com.google.protobuf.BoolValue.newBuilder(logPreallocate_).mergeFrom(value).buildPartial();
+          } else {
+            logPreallocate_ = value;
+          }
+          onChanged();
+        } else {
+          logPreallocateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public Builder clearLogPreallocate() {
+        if (logPreallocateBuilder_ == null) {
+          logPreallocate_ = null;
+          onChanged();
+        } else {
+          logPreallocate_ = null;
+          logPreallocateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getLogPreallocateBuilder() {
+        
+        onChanged();
+        return getLogPreallocateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
+        if (logPreallocateBuilder_ != null) {
+          return logPreallocateBuilder_.getMessageOrBuilder();
+        } else {
+          return logPreallocate_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : logPreallocate_;
+        }
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getLogPreallocateFieldBuilder() {
+        if (logPreallocateBuilder_ == null) {
+          logPreallocateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getLogPreallocate(),
+                  getParentForChildren(),
+                  isClean());
+          logPreallocate_ = null;
+        }
+        return logPreallocateBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11393,7 +11931,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * The number of messages accumulated on a log partition before messages are flushed to disk.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -11402,7 +11940,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * The number of messages accumulated on a log partition before messages are flushed to disk.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -11411,7 +11949,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * The number of messages accumulated on a log partition before messages are flushed to disk.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -11422,7 +11960,7 @@ public final class ClusterOuterClass {
      * <pre>
      * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
      * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -11432,7 +11970,7 @@ public final class ClusterOuterClass {
      * <pre>
      * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
      * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -11442,7 +11980,7 @@ public final class ClusterOuterClass {
      * <pre>
      * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
      * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -11479,9 +12017,9 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
      * This setting is helpful if you need to control the size of a log due to limited disk space.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -11489,9 +12027,9 @@ public final class ClusterOuterClass {
     boolean hasLogRetentionBytes();
     /**
      * <pre>
-     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
      * This setting is helpful if you need to control the size of a log due to limited disk space.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -11499,9 +12037,9 @@ public final class ClusterOuterClass {
     com.google.protobuf.Int64Value getLogRetentionBytes();
     /**
      * <pre>
-     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
      * This setting is helpful if you need to control the size of a log due to limited disk space.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -11565,7 +12103,7 @@ public final class ClusterOuterClass {
      * <pre>
      * The number of milliseconds to keep a log segment file before deleting it.
      * If not set, the value of [log_retention_minutes] is used.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
@@ -11575,7 +12113,7 @@ public final class ClusterOuterClass {
      * <pre>
      * The number of milliseconds to keep a log segment file before deleting it.
      * If not set, the value of [log_retention_minutes] is used.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
@@ -11585,12 +12123,68 @@ public final class ClusterOuterClass {
      * <pre>
      * The number of milliseconds to keep a log segment file before deleting it.
      * If not set, the value of [log_retention_minutes] is used.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getLogRetentionMsOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    boolean hasLogSegmentBytes();
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    com.google.protobuf.Int64Value getLogSegmentBytes();
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getLogSegmentBytesOrBuilder();
+
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    boolean hasLogPreallocate();
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    com.google.protobuf.BoolValue getLogPreallocate();
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder();
   }
   /**
    * <pre>
@@ -11733,6 +12327,32 @@ public final class ClusterOuterClass {
 
               break;
             }
+            case 74: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (logSegmentBytes_ != null) {
+                subBuilder = logSegmentBytes_.toBuilder();
+              }
+              logSegmentBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logSegmentBytes_);
+                logSegmentBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (logPreallocate_ != null) {
+                subBuilder = logPreallocate_.toBuilder();
+              }
+              logPreallocate_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logPreallocate_);
+                logPreallocate_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -11795,7 +12415,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * The number of messages accumulated on a log partition before messages are flushed to disk.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -11806,7 +12426,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * The number of messages accumulated on a log partition before messages are flushed to disk.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -11817,7 +12437,7 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * The number of messages accumulated on a log partition before messages are flushed to disk.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -11832,7 +12452,7 @@ public final class ClusterOuterClass {
      * <pre>
      * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
      * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -11844,7 +12464,7 @@ public final class ClusterOuterClass {
      * <pre>
      * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
      * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -11856,7 +12476,7 @@ public final class ClusterOuterClass {
      * <pre>
      * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
      * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -11905,9 +12525,9 @@ public final class ClusterOuterClass {
     private com.google.protobuf.Int64Value logRetentionBytes_;
     /**
      * <pre>
-     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
      * This setting is helpful if you need to control the size of a log due to limited disk space.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -11917,9 +12537,9 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
      * This setting is helpful if you need to control the size of a log due to limited disk space.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -11929,9 +12549,9 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+     * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
      * This setting is helpful if you need to control the size of a log due to limited disk space.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -12015,7 +12635,7 @@ public final class ClusterOuterClass {
      * <pre>
      * The number of milliseconds to keep a log segment file before deleting it.
      * If not set, the value of [log_retention_minutes] is used.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
@@ -12027,7 +12647,7 @@ public final class ClusterOuterClass {
      * <pre>
      * The number of milliseconds to keep a log segment file before deleting it.
      * If not set, the value of [log_retention_minutes] is used.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
@@ -12039,13 +12659,85 @@ public final class ClusterOuterClass {
      * <pre>
      * The number of milliseconds to keep a log segment file before deleting it.
      * If not set, the value of [log_retention_minutes] is used.
-     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getLogRetentionMsOrBuilder() {
       return getLogRetentionMs();
+    }
+
+    public static final int LOG_SEGMENT_BYTES_FIELD_NUMBER = 9;
+    private com.google.protobuf.Int64Value logSegmentBytes_;
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    public boolean hasLogSegmentBytes() {
+      return logSegmentBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    public com.google.protobuf.Int64Value getLogSegmentBytes() {
+      return logSegmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logSegmentBytes_;
+    }
+    /**
+     * <pre>
+     * The maximum size of a single log file.
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getLogSegmentBytesOrBuilder() {
+      return getLogSegmentBytes();
+    }
+
+    public static final int LOG_PREALLOCATE_FIELD_NUMBER = 10;
+    private com.google.protobuf.BoolValue logPreallocate_;
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    public boolean hasLogPreallocate() {
+      return logPreallocate_ != null;
+    }
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    public com.google.protobuf.BoolValue getLogPreallocate() {
+      return logPreallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logPreallocate_;
+    }
+    /**
+     * <pre>
+     * Should pre allocate file when create new segment?
+     * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
+      return getLogPreallocate();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -12085,6 +12777,12 @@ public final class ClusterOuterClass {
       }
       if (logRetentionMs_ != null) {
         output.writeMessage(8, getLogRetentionMs());
+      }
+      if (logSegmentBytes_ != null) {
+        output.writeMessage(9, getLogSegmentBytes());
+      }
+      if (logPreallocate_ != null) {
+        output.writeMessage(10, getLogPreallocate());
       }
       unknownFields.writeTo(output);
     }
@@ -12126,6 +12824,14 @@ public final class ClusterOuterClass {
       if (logRetentionMs_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getLogRetentionMs());
+      }
+      if (logSegmentBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getLogSegmentBytes());
+      }
+      if (logPreallocate_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getLogPreallocate());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12179,6 +12885,16 @@ public final class ClusterOuterClass {
         result = result && getLogRetentionMs()
             .equals(other.getLogRetentionMs());
       }
+      result = result && (hasLogSegmentBytes() == other.hasLogSegmentBytes());
+      if (hasLogSegmentBytes()) {
+        result = result && getLogSegmentBytes()
+            .equals(other.getLogSegmentBytes());
+      }
+      result = result && (hasLogPreallocate() == other.hasLogPreallocate());
+      if (hasLogPreallocate()) {
+        result = result && getLogPreallocate()
+            .equals(other.getLogPreallocate());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -12219,6 +12935,14 @@ public final class ClusterOuterClass {
       if (hasLogRetentionMs()) {
         hash = (37 * hash) + LOG_RETENTION_MS_FIELD_NUMBER;
         hash = (53 * hash) + getLogRetentionMs().hashCode();
+      }
+      if (hasLogSegmentBytes()) {
+        hash = (37 * hash) + LOG_SEGMENT_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getLogSegmentBytes().hashCode();
+      }
+      if (hasLogPreallocate()) {
+        hash = (37 * hash) + LOG_PREALLOCATE_FIELD_NUMBER;
+        hash = (53 * hash) + getLogPreallocate().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -12401,6 +13125,18 @@ public final class ClusterOuterClass {
           logRetentionMs_ = null;
           logRetentionMsBuilder_ = null;
         }
+        if (logSegmentBytesBuilder_ == null) {
+          logSegmentBytes_ = null;
+        } else {
+          logSegmentBytes_ = null;
+          logSegmentBytesBuilder_ = null;
+        }
+        if (logPreallocateBuilder_ == null) {
+          logPreallocate_ = null;
+        } else {
+          logPreallocate_ = null;
+          logPreallocateBuilder_ = null;
+        }
         return this;
       }
 
@@ -12462,6 +13198,16 @@ public final class ClusterOuterClass {
           result.logRetentionMs_ = logRetentionMs_;
         } else {
           result.logRetentionMs_ = logRetentionMsBuilder_.build();
+        }
+        if (logSegmentBytesBuilder_ == null) {
+          result.logSegmentBytes_ = logSegmentBytes_;
+        } else {
+          result.logSegmentBytes_ = logSegmentBytesBuilder_.build();
+        }
+        if (logPreallocateBuilder_ == null) {
+          result.logPreallocate_ = logPreallocate_;
+        } else {
+          result.logPreallocate_ = logPreallocateBuilder_.build();
         }
         onBuilt();
         return result;
@@ -12534,6 +13280,12 @@ public final class ClusterOuterClass {
         }
         if (other.hasLogRetentionMs()) {
           mergeLogRetentionMs(other.getLogRetentionMs());
+        }
+        if (other.hasLogSegmentBytes()) {
+          mergeLogSegmentBytes(other.getLogSegmentBytes());
+        }
+        if (other.hasLogPreallocate()) {
+          mergeLogPreallocate(other.getLogPreallocate());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12635,7 +13387,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -12646,7 +13398,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -12661,7 +13413,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -12682,7 +13434,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -12701,7 +13453,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -12724,7 +13476,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -12743,7 +13495,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -12756,7 +13508,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -12772,7 +13524,7 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * The number of messages accumulated on a log partition before messages are flushed to disk.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_messages] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_messages] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_messages = 2;</code>
@@ -12798,7 +13550,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
        * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -12810,7 +13562,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
        * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -12826,7 +13578,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
        * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -12848,7 +13600,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
        * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -12868,7 +13620,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
        * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -12892,7 +13644,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
        * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -12912,7 +13664,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
        * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -12926,7 +13678,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
        * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -12943,7 +13695,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The maximum time (in milliseconds) that a message in any topic is kept in memory before flushed to disk.
        * If not set, the value of [log_flush_scheduler_interval_ms] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.flush_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.flush_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_flush_interval_ms = 3;</code>
@@ -13129,9 +13881,9 @@ public final class ClusterOuterClass {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logRetentionBytesBuilder_;
       /**
        * <pre>
-       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
        * This setting is helpful if you need to control the size of a log due to limited disk space.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -13141,9 +13893,9 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
        * This setting is helpful if you need to control the size of a log due to limited disk space.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -13157,9 +13909,9 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
        * This setting is helpful if you need to control the size of a log due to limited disk space.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -13179,9 +13931,9 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
        * This setting is helpful if you need to control the size of a log due to limited disk space.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -13199,9 +13951,9 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
        * This setting is helpful if you need to control the size of a log due to limited disk space.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -13223,9 +13975,9 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
        * This setting is helpful if you need to control the size of a log due to limited disk space.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -13243,9 +13995,9 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
        * This setting is helpful if you need to control the size of a log due to limited disk space.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -13257,9 +14009,9 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
        * This setting is helpful if you need to control the size of a log due to limited disk space.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -13274,9 +14026,9 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_1.cleanup_policy] is in effect.
+       * Partition size limit; Kafka will discard old log segments to free up space if `delete` [TopicConfig2_6.cleanup_policy] is in effect.
        * This setting is helpful if you need to control the size of a log due to limited disk space.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_bytes] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_bytes] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_bytes = 5;</code>
@@ -13617,7 +14369,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The number of milliseconds to keep a log segment file before deleting it.
        * If not set, the value of [log_retention_minutes] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
@@ -13629,7 +14381,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The number of milliseconds to keep a log segment file before deleting it.
        * If not set, the value of [log_retention_minutes] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
@@ -13645,7 +14397,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The number of milliseconds to keep a log segment file before deleting it.
        * If not set, the value of [log_retention_minutes] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
@@ -13667,7 +14419,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The number of milliseconds to keep a log segment file before deleting it.
        * If not set, the value of [log_retention_minutes] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
@@ -13687,7 +14439,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The number of milliseconds to keep a log segment file before deleting it.
        * If not set, the value of [log_retention_minutes] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
@@ -13711,7 +14463,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The number of milliseconds to keep a log segment file before deleting it.
        * If not set, the value of [log_retention_minutes] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
@@ -13731,7 +14483,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The number of milliseconds to keep a log segment file before deleting it.
        * If not set, the value of [log_retention_minutes] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
@@ -13745,7 +14497,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The number of milliseconds to keep a log segment file before deleting it.
        * If not set, the value of [log_retention_minutes] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
@@ -13762,7 +14514,7 @@ public final class ClusterOuterClass {
        * <pre>
        * The number of milliseconds to keep a log segment file before deleting it.
        * If not set, the value of [log_retention_minutes] is used.
-       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_1.retention_ms] setting.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.retention_ms] setting.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value log_retention_ms = 8;</code>
@@ -13779,6 +14531,330 @@ public final class ClusterOuterClass {
           logRetentionMs_ = null;
         }
         return logRetentionMsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value logSegmentBytes_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> logSegmentBytesBuilder_;
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public boolean hasLogSegmentBytes() {
+        return logSegmentBytesBuilder_ != null || logSegmentBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public com.google.protobuf.Int64Value getLogSegmentBytes() {
+        if (logSegmentBytesBuilder_ == null) {
+          return logSegmentBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : logSegmentBytes_;
+        } else {
+          return logSegmentBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public Builder setLogSegmentBytes(com.google.protobuf.Int64Value value) {
+        if (logSegmentBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logSegmentBytes_ = value;
+          onChanged();
+        } else {
+          logSegmentBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public Builder setLogSegmentBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (logSegmentBytesBuilder_ == null) {
+          logSegmentBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          logSegmentBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public Builder mergeLogSegmentBytes(com.google.protobuf.Int64Value value) {
+        if (logSegmentBytesBuilder_ == null) {
+          if (logSegmentBytes_ != null) {
+            logSegmentBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(logSegmentBytes_).mergeFrom(value).buildPartial();
+          } else {
+            logSegmentBytes_ = value;
+          }
+          onChanged();
+        } else {
+          logSegmentBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public Builder clearLogSegmentBytes() {
+        if (logSegmentBytesBuilder_ == null) {
+          logSegmentBytes_ = null;
+          onChanged();
+        } else {
+          logSegmentBytes_ = null;
+          logSegmentBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getLogSegmentBytesBuilder() {
+        
+        onChanged();
+        return getLogSegmentBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getLogSegmentBytesOrBuilder() {
+        if (logSegmentBytesBuilder_ != null) {
+          return logSegmentBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return logSegmentBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : logSegmentBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size of a single log file.
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.segment_bytes] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value log_segment_bytes = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getLogSegmentBytesFieldBuilder() {
+        if (logSegmentBytesBuilder_ == null) {
+          logSegmentBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getLogSegmentBytes(),
+                  getParentForChildren(),
+                  isClean());
+          logSegmentBytes_ = null;
+        }
+        return logSegmentBytesBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue logPreallocate_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> logPreallocateBuilder_;
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public boolean hasLogPreallocate() {
+        return logPreallocateBuilder_ != null || logPreallocate_ != null;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public com.google.protobuf.BoolValue getLogPreallocate() {
+        if (logPreallocateBuilder_ == null) {
+          return logPreallocate_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : logPreallocate_;
+        } else {
+          return logPreallocateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public Builder setLogPreallocate(com.google.protobuf.BoolValue value) {
+        if (logPreallocateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logPreallocate_ = value;
+          onChanged();
+        } else {
+          logPreallocateBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public Builder setLogPreallocate(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (logPreallocateBuilder_ == null) {
+          logPreallocate_ = builderForValue.build();
+          onChanged();
+        } else {
+          logPreallocateBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public Builder mergeLogPreallocate(com.google.protobuf.BoolValue value) {
+        if (logPreallocateBuilder_ == null) {
+          if (logPreallocate_ != null) {
+            logPreallocate_ =
+              com.google.protobuf.BoolValue.newBuilder(logPreallocate_).mergeFrom(value).buildPartial();
+          } else {
+            logPreallocate_ = value;
+          }
+          onChanged();
+        } else {
+          logPreallocateBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public Builder clearLogPreallocate() {
+        if (logPreallocateBuilder_ == null) {
+          logPreallocate_ = null;
+          onChanged();
+        } else {
+          logPreallocate_ = null;
+          logPreallocateBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getLogPreallocateBuilder() {
+        
+        onChanged();
+        return getLogPreallocateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder() {
+        if (logPreallocateBuilder_ != null) {
+          return logPreallocateBuilder_.getMessageOrBuilder();
+        } else {
+          return logPreallocate_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : logPreallocate_;
+        }
+      }
+      /**
+       * <pre>
+       * Should pre allocate file when create new segment?
+       * This is the global cluster-level setting that can be overridden on a topic level by using the [TopicConfig2_6.preallocate] setting.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getLogPreallocateFieldBuilder() {
+        if (logPreallocateBuilder_ == null) {
+          logPreallocateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getLogPreallocate(),
+                  getParentForChildren(),
+                  isClean());
+          logPreallocate_ = null;
+        }
+        return logPreallocateBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -15922,7 +16998,7 @@ public final class ClusterOuterClass {
       "\001(\0132$.yandex.cloud.mdb.kafka.v1.Resource" +
       "s\"P\n\tResources\022\032\n\022resource_preset_id\030\001 \001" +
       "(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 " +
-      "\001(\t\"\201\004\n\016KafkaConfig2_1\022D\n\020compression_ty" +
+      "\001(\t\"\356\004\n\016KafkaConfig2_1\022D\n\020compression_ty" +
       "pe\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1.Com" +
       "pressionType\022@\n\033log_flush_interval_messa" +
       "ges\030\002 \001(\0132\033.google.protobuf.Int64Value\022:" +
@@ -15934,33 +17010,38 @@ public final class ClusterOuterClass {
       "ion_hours\030\006 \001(\0132\033.google.protobuf.Int64V" +
       "alue\022:\n\025log_retention_minutes\030\007 \001(\0132\033.go" +
       "ogle.protobuf.Int64Value\0225\n\020log_retentio" +
-      "n_ms\030\010 \001(\0132\033.google.protobuf.Int64Value\"" +
-      "\201\004\n\016KafkaConfig2_6\022D\n\020compression_type\030\001" +
-      " \001(\0162*.yandex.cloud.mdb.kafka.v1.Compres" +
-      "sionType\022@\n\033log_flush_interval_messages\030" +
-      "\002 \001(\0132\033.google.protobuf.Int64Value\022:\n\025lo" +
-      "g_flush_interval_ms\030\003 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022D\n\037log_flush_scheduler_in" +
-      "terval_ms\030\004 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\0228\n\023log_retention_bytes\030\005 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\0228\n\023log_retention_" +
-      "hours\030\006 \001(\0132\033.google.protobuf.Int64Value" +
-      "\022:\n\025log_retention_minutes\030\007 \001(\0132\033.google" +
-      ".protobuf.Int64Value\0225\n\020log_retention_ms" +
-      "\030\010 \001(\0132\033.google.protobuf.Int64Value\"\375\002\n\004" +
-      "Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017" +
-      "\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.yandex.c" +
-      "loud.mdb.kafka.v1.Host.Role\0227\n\tresources" +
-      "\030\005 \001(\0132$.yandex.cloud.mdb.kafka.v1.Resou" +
-      "rces\0226\n\006health\030\006 \001(\0162&.yandex.cloud.mdb." +
-      "kafka.v1.Host.Health\022\021\n\tsubnet_id\030\010 \001(\t\022" +
-      "\030\n\020assign_public_ip\030\t \001(\010\"6\n\004Role\022\024\n\020ROL" +
-      "E_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPER\020" +
-      "\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004D" +
-      "EAD\020\002\022\014\n\010DEGRADED\020\003Bd\n\035yandex.cloud.api." +
-      "mdb.kafka.v1ZCgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/mdb/kafka/v1;kafk" +
-      "ab\006proto3"
+      "n_ms\030\010 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "6\n\021log_segment_bytes\030\t \001(\0132\033.google.prot" +
+      "obuf.Int64Value\0223\n\017log_preallocate\030\n \001(\013" +
+      "2\032.google.protobuf.BoolValue\"\356\004\n\016KafkaCo" +
+      "nfig2_6\022D\n\020compression_type\030\001 \001(\0162*.yand" +
+      "ex.cloud.mdb.kafka.v1.CompressionType\022@\n" +
+      "\033log_flush_interval_messages\030\002 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022:\n\025log_flush_int" +
+      "erval_ms\030\003 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022D\n\037log_flush_scheduler_interval_ms\030\004" +
+      " \001(\0132\033.google.protobuf.Int64Value\0228\n\023log" +
+      "_retention_bytes\030\005 \001(\0132\033.google.protobuf" +
+      ".Int64Value\0228\n\023log_retention_hours\030\006 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022:\n\025log_ret" +
+      "ention_minutes\030\007 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\0226\n\021log_segment_" +
+      "bytes\030\t \001(\0132\033.google.protobuf.Int64Value" +
+      "\0223\n\017log_preallocate\030\n \001(\0132\032.google.proto" +
+      "buf.BoolValue\"\375\002\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\n" +
+      "cluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004rol" +
+      "e\030\004 \001(\0162$.yandex.cloud.mdb.kafka.v1.Host" +
+      ".Role\0227\n\tresources\030\005 \001(\0132$.yandex.cloud." +
+      "mdb.kafka.v1.Resources\0226\n\006health\030\006 \001(\0162&" +
+      ".yandex.cloud.mdb.kafka.v1.Host.Health\022\021" +
+      "\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t " +
+      "\001(\010\"6\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAF" +
+      "KA\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN" +
+      "\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003Bd\n" +
+      "\035yandex.cloud.api.mdb.kafka.v1ZCgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/mdb/kafka/v1;kafkab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16024,13 +17105,13 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_1_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_1_descriptor,
-        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", });
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", });
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_descriptor,
-        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", });
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", });
     internal_static_yandex_cloud_mdb_kafka_v1_Host_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_kafka_v1_Host_fieldAccessorTable = new
