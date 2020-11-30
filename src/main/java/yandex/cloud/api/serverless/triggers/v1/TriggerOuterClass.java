@@ -373,7 +373,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Trigger status
+     * Trigger status.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
@@ -381,7 +381,7 @@ public final class TriggerOuterClass {
     int getStatusValue();
     /**
      * <pre>
-     * Trigger status
+     * Trigger status.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
@@ -6984,10 +6984,18 @@ public final class TriggerOuterClass {
       int getEventTypeValue(int index);
 
       /**
+       * <pre>
+       * ID of the bucket.
+       * </pre>
+       *
        * <code>string bucket_id = 4;</code>
        */
       java.lang.String getBucketId();
       /**
+       * <pre>
+       * ID of the bucket.
+       * </pre>
+       *
        * <code>string bucket_id = 4;</code>
        */
       com.google.protobuf.ByteString
@@ -6995,7 +7003,7 @@ public final class TriggerOuterClass {
 
       /**
        * <pre>
-       * Filter, optional.
+       * Prefix of the object key. Filter, optional.
        * </pre>
        *
        * <code>string prefix = 6;</code>
@@ -7003,7 +7011,7 @@ public final class TriggerOuterClass {
       java.lang.String getPrefix();
       /**
        * <pre>
-       * Filter, optional.
+       * Prefix of the object key. Filter, optional.
        * </pre>
        *
        * <code>string prefix = 6;</code>
@@ -7012,10 +7020,18 @@ public final class TriggerOuterClass {
           getPrefixBytes();
 
       /**
+       * <pre>
+       * Suffix of the object key. Filter, optional.
+       * </pre>
+       *
        * <code>string suffix = 7;</code>
        */
       java.lang.String getSuffix();
       /**
+       * <pre>
+       * Suffix of the object key. Filter, optional.
+       * </pre>
+       *
        * <code>string suffix = 7;</code>
        */
       com.google.protobuf.ByteString
@@ -7275,6 +7291,10 @@ public final class TriggerOuterClass {
       public static final int BUCKET_ID_FIELD_NUMBER = 4;
       private volatile java.lang.Object bucketId_;
       /**
+       * <pre>
+       * ID of the bucket.
+       * </pre>
+       *
        * <code>string bucket_id = 4;</code>
        */
       public java.lang.String getBucketId() {
@@ -7290,6 +7310,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the bucket.
+       * </pre>
+       *
        * <code>string bucket_id = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -7310,7 +7334,7 @@ public final class TriggerOuterClass {
       private volatile java.lang.Object prefix_;
       /**
        * <pre>
-       * Filter, optional.
+       * Prefix of the object key. Filter, optional.
        * </pre>
        *
        * <code>string prefix = 6;</code>
@@ -7329,7 +7353,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Filter, optional.
+       * Prefix of the object key. Filter, optional.
        * </pre>
        *
        * <code>string prefix = 6;</code>
@@ -7351,6 +7375,10 @@ public final class TriggerOuterClass {
       public static final int SUFFIX_FIELD_NUMBER = 7;
       private volatile java.lang.Object suffix_;
       /**
+       * <pre>
+       * Suffix of the object key. Filter, optional.
+       * </pre>
+       *
        * <code>string suffix = 7;</code>
        */
       public java.lang.String getSuffix() {
@@ -7366,6 +7394,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Suffix of the object key. Filter, optional.
+       * </pre>
+       *
        * <code>string suffix = 7;</code>
        */
       public com.google.protobuf.ByteString
@@ -8019,6 +8051,10 @@ public final class TriggerOuterClass {
 
         private java.lang.Object bucketId_ = "";
         /**
+         * <pre>
+         * ID of the bucket.
+         * </pre>
+         *
          * <code>string bucket_id = 4;</code>
          */
         public java.lang.String getBucketId() {
@@ -8034,6 +8070,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the bucket.
+         * </pre>
+         *
          * <code>string bucket_id = 4;</code>
          */
         public com.google.protobuf.ByteString
@@ -8050,6 +8090,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the bucket.
+         * </pre>
+         *
          * <code>string bucket_id = 4;</code>
          */
         public Builder setBucketId(
@@ -8063,6 +8107,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the bucket.
+         * </pre>
+         *
          * <code>string bucket_id = 4;</code>
          */
         public Builder clearBucketId() {
@@ -8072,6 +8120,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the bucket.
+         * </pre>
+         *
          * <code>string bucket_id = 4;</code>
          */
         public Builder setBucketIdBytes(
@@ -8089,7 +8141,7 @@ public final class TriggerOuterClass {
         private java.lang.Object prefix_ = "";
         /**
          * <pre>
-         * Filter, optional.
+         * Prefix of the object key. Filter, optional.
          * </pre>
          *
          * <code>string prefix = 6;</code>
@@ -8108,7 +8160,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Filter, optional.
+         * Prefix of the object key. Filter, optional.
          * </pre>
          *
          * <code>string prefix = 6;</code>
@@ -8128,7 +8180,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Filter, optional.
+         * Prefix of the object key. Filter, optional.
          * </pre>
          *
          * <code>string prefix = 6;</code>
@@ -8145,7 +8197,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Filter, optional.
+         * Prefix of the object key. Filter, optional.
          * </pre>
          *
          * <code>string prefix = 6;</code>
@@ -8158,7 +8210,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Filter, optional.
+         * Prefix of the object key. Filter, optional.
          * </pre>
          *
          * <code>string prefix = 6;</code>
@@ -8177,6 +8229,10 @@ public final class TriggerOuterClass {
 
         private java.lang.Object suffix_ = "";
         /**
+         * <pre>
+         * Suffix of the object key. Filter, optional.
+         * </pre>
+         *
          * <code>string suffix = 7;</code>
          */
         public java.lang.String getSuffix() {
@@ -8192,6 +8248,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Suffix of the object key. Filter, optional.
+         * </pre>
+         *
          * <code>string suffix = 7;</code>
          */
         public com.google.protobuf.ByteString
@@ -8208,6 +8268,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Suffix of the object key. Filter, optional.
+         * </pre>
+         *
          * <code>string suffix = 7;</code>
          */
         public Builder setSuffix(
@@ -8221,6 +8285,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Suffix of the object key. Filter, optional.
+         * </pre>
+         *
          * <code>string suffix = 7;</code>
          */
         public Builder clearSuffix() {
@@ -8230,6 +8298,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Suffix of the object key. Filter, optional.
+         * </pre>
+         *
          * <code>string suffix = 7;</code>
          */
         public Builder setSuffixBytes(
@@ -8479,10 +8551,18 @@ public final class TriggerOuterClass {
       int getEventTypeValue(int index);
 
       /**
+       * <pre>
+       * ID of the registry.
+       * </pre>
+       *
        * <code>string registry_id = 4;</code>
        */
       java.lang.String getRegistryId();
       /**
+       * <pre>
+       * ID of the registry.
+       * </pre>
+       *
        * <code>string registry_id = 4;</code>
        */
       com.google.protobuf.ByteString
@@ -8490,7 +8570,7 @@ public final class TriggerOuterClass {
 
       /**
        * <pre>
-       * Filter, optional.
+       * Docker-image name. Filter, optional.
        * </pre>
        *
        * <code>string image_name = 5;</code>
@@ -8498,7 +8578,7 @@ public final class TriggerOuterClass {
       java.lang.String getImageName();
       /**
        * <pre>
-       * Filter, optional.
+       * Docker-image name. Filter, optional.
        * </pre>
        *
        * <code>string image_name = 5;</code>
@@ -8507,10 +8587,18 @@ public final class TriggerOuterClass {
           getImageNameBytes();
 
       /**
+       * <pre>
+       * Docker-image tag. Filter, optional.
+       * </pre>
+       *
        * <code>string tag = 6;</code>
        */
       java.lang.String getTag();
       /**
+       * <pre>
+       * Docker-image tag. Filter, optional.
+       * </pre>
+       *
        * <code>string tag = 6;</code>
        */
       com.google.protobuf.ByteString
@@ -8770,6 +8858,10 @@ public final class TriggerOuterClass {
       public static final int REGISTRY_ID_FIELD_NUMBER = 4;
       private volatile java.lang.Object registryId_;
       /**
+       * <pre>
+       * ID of the registry.
+       * </pre>
+       *
        * <code>string registry_id = 4;</code>
        */
       public java.lang.String getRegistryId() {
@@ -8785,6 +8877,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the registry.
+       * </pre>
+       *
        * <code>string registry_id = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -8805,7 +8901,7 @@ public final class TriggerOuterClass {
       private volatile java.lang.Object imageName_;
       /**
        * <pre>
-       * Filter, optional.
+       * Docker-image name. Filter, optional.
        * </pre>
        *
        * <code>string image_name = 5;</code>
@@ -8824,7 +8920,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Filter, optional.
+       * Docker-image name. Filter, optional.
        * </pre>
        *
        * <code>string image_name = 5;</code>
@@ -8846,6 +8942,10 @@ public final class TriggerOuterClass {
       public static final int TAG_FIELD_NUMBER = 6;
       private volatile java.lang.Object tag_;
       /**
+       * <pre>
+       * Docker-image tag. Filter, optional.
+       * </pre>
+       *
        * <code>string tag = 6;</code>
        */
       public java.lang.String getTag() {
@@ -8861,6 +8961,10 @@ public final class TriggerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Docker-image tag. Filter, optional.
+       * </pre>
+       *
        * <code>string tag = 6;</code>
        */
       public com.google.protobuf.ByteString
@@ -9514,6 +9618,10 @@ public final class TriggerOuterClass {
 
         private java.lang.Object registryId_ = "";
         /**
+         * <pre>
+         * ID of the registry.
+         * </pre>
+         *
          * <code>string registry_id = 4;</code>
          */
         public java.lang.String getRegistryId() {
@@ -9529,6 +9637,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the registry.
+         * </pre>
+         *
          * <code>string registry_id = 4;</code>
          */
         public com.google.protobuf.ByteString
@@ -9545,6 +9657,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the registry.
+         * </pre>
+         *
          * <code>string registry_id = 4;</code>
          */
         public Builder setRegistryId(
@@ -9558,6 +9674,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the registry.
+         * </pre>
+         *
          * <code>string registry_id = 4;</code>
          */
         public Builder clearRegistryId() {
@@ -9567,6 +9687,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the registry.
+         * </pre>
+         *
          * <code>string registry_id = 4;</code>
          */
         public Builder setRegistryIdBytes(
@@ -9584,7 +9708,7 @@ public final class TriggerOuterClass {
         private java.lang.Object imageName_ = "";
         /**
          * <pre>
-         * Filter, optional.
+         * Docker-image name. Filter, optional.
          * </pre>
          *
          * <code>string image_name = 5;</code>
@@ -9603,7 +9727,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Filter, optional.
+         * Docker-image name. Filter, optional.
          * </pre>
          *
          * <code>string image_name = 5;</code>
@@ -9623,7 +9747,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Filter, optional.
+         * Docker-image name. Filter, optional.
          * </pre>
          *
          * <code>string image_name = 5;</code>
@@ -9640,7 +9764,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Filter, optional.
+         * Docker-image name. Filter, optional.
          * </pre>
          *
          * <code>string image_name = 5;</code>
@@ -9653,7 +9777,7 @@ public final class TriggerOuterClass {
         }
         /**
          * <pre>
-         * Filter, optional.
+         * Docker-image name. Filter, optional.
          * </pre>
          *
          * <code>string image_name = 5;</code>
@@ -9672,6 +9796,10 @@ public final class TriggerOuterClass {
 
         private java.lang.Object tag_ = "";
         /**
+         * <pre>
+         * Docker-image tag. Filter, optional.
+         * </pre>
+         *
          * <code>string tag = 6;</code>
          */
         public java.lang.String getTag() {
@@ -9687,6 +9815,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Docker-image tag. Filter, optional.
+         * </pre>
+         *
          * <code>string tag = 6;</code>
          */
         public com.google.protobuf.ByteString
@@ -9703,6 +9835,10 @@ public final class TriggerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Docker-image tag. Filter, optional.
+         * </pre>
+         *
          * <code>string tag = 6;</code>
          */
         public Builder setTag(
@@ -9716,6 +9852,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Docker-image tag. Filter, optional.
+         * </pre>
+         *
          * <code>string tag = 6;</code>
          */
         public Builder clearTag() {
@@ -9725,6 +9865,10 @@ public final class TriggerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Docker-image tag. Filter, optional.
+         * </pre>
+         *
          * <code>string tag = 6;</code>
          */
         public Builder setTagBytes(
@@ -11474,7 +11618,7 @@ public final class TriggerOuterClass {
     private int status_;
     /**
      * <pre>
-     * Trigger status
+     * Trigger status.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
@@ -11484,7 +11628,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Trigger status
+     * Trigger status.
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
@@ -12798,7 +12942,7 @@ public final class TriggerOuterClass {
       private int status_ = 0;
       /**
        * <pre>
-       * Trigger status
+       * Trigger status.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
@@ -12808,7 +12952,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Trigger status
+       * Trigger status.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
@@ -12820,7 +12964,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Trigger status
+       * Trigger status.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
@@ -12832,7 +12976,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Trigger status
+       * Trigger status.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
@@ -12848,7 +12992,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Trigger status
+       * Trigger status.
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Status status = 9;</code>
@@ -12936,7 +13080,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Tag of the function version to execute.
+     * Version tag of the function to execute.
      * </pre>
      *
      * <code>string function_tag = 2;</code>
@@ -12944,7 +13088,7 @@ public final class TriggerOuterClass {
     java.lang.String getFunctionTag();
     /**
      * <pre>
-     * Tag of the function version to execute.
+     * Version tag of the function to execute.
      * </pre>
      *
      * <code>string function_tag = 2;</code>
@@ -13112,7 +13256,7 @@ public final class TriggerOuterClass {
     private volatile java.lang.Object functionTag_;
     /**
      * <pre>
-     * Tag of the function version to execute.
+     * Version tag of the function to execute.
      * </pre>
      *
      * <code>string function_tag = 2;</code>
@@ -13131,7 +13275,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Tag of the function version to execute.
+     * Version tag of the function to execute.
      * </pre>
      *
      * <code>string function_tag = 2;</code>
@@ -13625,7 +13769,7 @@ public final class TriggerOuterClass {
       private java.lang.Object functionTag_ = "";
       /**
        * <pre>
-       * Tag of the function version to execute.
+       * Version tag of the function to execute.
        * </pre>
        *
        * <code>string function_tag = 2;</code>
@@ -13644,7 +13788,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Tag of the function version to execute.
+       * Version tag of the function to execute.
        * </pre>
        *
        * <code>string function_tag = 2;</code>
@@ -13664,7 +13808,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Tag of the function version to execute.
+       * Version tag of the function to execute.
        * </pre>
        *
        * <code>string function_tag = 2;</code>
@@ -13681,7 +13825,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Tag of the function version to execute.
+       * Version tag of the function to execute.
        * </pre>
        *
        * <code>string function_tag = 2;</code>
@@ -13694,7 +13838,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Tag of the function version to execute.
+       * Version tag of the function to execute.
        * </pre>
        *
        * <code>string function_tag = 2;</code>
@@ -13876,7 +14020,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Tag of the function version to execute.
+     * Version tag of the function to execute.
      * </pre>
      *
      * <code>string function_tag = 2;</code>
@@ -13884,7 +14028,7 @@ public final class TriggerOuterClass {
     java.lang.String getFunctionTag();
     /**
      * <pre>
-     * Tag of the function version to execute.
+     * Version tag of the function to execute.
      * </pre>
      *
      * <code>string function_tag = 2;</code>
@@ -13937,7 +14081,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * DLQ policy (no value means discarding a message)
+     * DLQ policy (no value means discarding a message).
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -13945,7 +14089,7 @@ public final class TriggerOuterClass {
     boolean hasDeadLetterQueue();
     /**
      * <pre>
-     * DLQ policy (no value means discarding a message)
+     * DLQ policy (no value means discarding a message).
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -13953,7 +14097,7 @@ public final class TriggerOuterClass {
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage getDeadLetterQueue();
     /**
      * <pre>
-     * DLQ policy (no value means discarding a message)
+     * DLQ policy (no value means discarding a message).
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -14128,7 +14272,7 @@ public final class TriggerOuterClass {
     private volatile java.lang.Object functionTag_;
     /**
      * <pre>
-     * Tag of the function version to execute.
+     * Version tag of the function to execute.
      * </pre>
      *
      * <code>string function_tag = 2;</code>
@@ -14147,7 +14291,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Tag of the function version to execute.
+     * Version tag of the function to execute.
      * </pre>
      *
      * <code>string function_tag = 2;</code>
@@ -14245,7 +14389,7 @@ public final class TriggerOuterClass {
     private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage deadLetterQueue_;
     /**
      * <pre>
-     * DLQ policy (no value means discarding a message)
+     * DLQ policy (no value means discarding a message).
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -14255,7 +14399,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * DLQ policy (no value means discarding a message)
+     * DLQ policy (no value means discarding a message).
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -14265,7 +14409,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * DLQ policy (no value means discarding a message)
+     * DLQ policy (no value means discarding a message).
      * </pre>
      *
      * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -14767,7 +14911,7 @@ public final class TriggerOuterClass {
       private java.lang.Object functionTag_ = "";
       /**
        * <pre>
-       * Tag of the function version to execute.
+       * Version tag of the function to execute.
        * </pre>
        *
        * <code>string function_tag = 2;</code>
@@ -14786,7 +14930,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Tag of the function version to execute.
+       * Version tag of the function to execute.
        * </pre>
        *
        * <code>string function_tag = 2;</code>
@@ -14806,7 +14950,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Tag of the function version to execute.
+       * Version tag of the function to execute.
        * </pre>
        *
        * <code>string function_tag = 2;</code>
@@ -14823,7 +14967,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Tag of the function version to execute.
+       * Version tag of the function to execute.
        * </pre>
        *
        * <code>string function_tag = 2;</code>
@@ -14836,7 +14980,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Tag of the function version to execute.
+       * Version tag of the function to execute.
        * </pre>
        *
        * <code>string function_tag = 2;</code>
@@ -15100,7 +15244,7 @@ public final class TriggerOuterClass {
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessage.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.PutQueueMessageOrBuilder> deadLetterQueueBuilder_;
       /**
        * <pre>
-       * DLQ policy (no value means discarding a message)
+       * DLQ policy (no value means discarding a message).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -15110,7 +15254,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * DLQ policy (no value means discarding a message)
+       * DLQ policy (no value means discarding a message).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -15124,7 +15268,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * DLQ policy (no value means discarding a message)
+       * DLQ policy (no value means discarding a message).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -15144,7 +15288,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * DLQ policy (no value means discarding a message)
+       * DLQ policy (no value means discarding a message).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -15162,7 +15306,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * DLQ policy (no value means discarding a message)
+       * DLQ policy (no value means discarding a message).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -15184,7 +15328,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * DLQ policy (no value means discarding a message)
+       * DLQ policy (no value means discarding a message).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -15202,7 +15346,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * DLQ policy (no value means discarding a message)
+       * DLQ policy (no value means discarding a message).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -15214,7 +15358,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * DLQ policy (no value means discarding a message)
+       * DLQ policy (no value means discarding a message).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -15229,7 +15373,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * DLQ policy (no value means discarding a message)
+       * DLQ policy (no value means discarding a message).
        * </pre>
        *
        * <code>.yandex.cloud.serverless.triggers.v1.PutQueueMessage dead_letter_queue = 5;</code>
@@ -15324,7 +15468,7 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * SA which has write permission on the queue.
+     * Service account which has write permission on the queue.
      * </pre>
      *
      * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15332,7 +15476,7 @@ public final class TriggerOuterClass {
     java.lang.String getServiceAccountId();
     /**
      * <pre>
-     * SA which has write permission on the queue.
+     * Service account which has write permission on the queue.
      * </pre>
      *
      * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15471,7 +15615,7 @@ public final class TriggerOuterClass {
     private volatile java.lang.Object serviceAccountId_;
     /**
      * <pre>
-     * SA which has write permission on the queue.
+     * Service account which has write permission on the queue.
      * </pre>
      *
      * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15490,7 +15634,7 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * SA which has write permission on the queue.
+     * Service account which has write permission on the queue.
      * </pre>
      *
      * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15921,7 +16065,7 @@ public final class TriggerOuterClass {
       private java.lang.Object serviceAccountId_ = "";
       /**
        * <pre>
-       * SA which has write permission on the queue.
+       * Service account which has write permission on the queue.
        * </pre>
        *
        * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15940,7 +16084,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * SA which has write permission on the queue.
+       * Service account which has write permission on the queue.
        * </pre>
        *
        * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15960,7 +16104,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * SA which has write permission on the queue.
+       * Service account which has write permission on the queue.
        * </pre>
        *
        * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15977,7 +16121,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * SA which has write permission on the queue.
+       * Service account which has write permission on the queue.
        * </pre>
        *
        * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -15990,7 +16134,7 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * SA which has write permission on the queue.
+       * Service account which has write permission on the queue.
        * </pre>
        *
        * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -16065,8 +16209,8 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Batch size. Trigger will send the batch of messages to the associated function
-     * when the number of messages in the queue reaches this value, or the [cutoff] time has passed.
+     * Batch size. Trigger will send the batch of messages to the function
+     * when the number of messages in the queue reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
@@ -16075,8 +16219,8 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-     * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+     * Maximum wait time. Trigger will send the batch of messages to the function when
+     * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16084,8 +16228,8 @@ public final class TriggerOuterClass {
     boolean hasCutoff();
     /**
      * <pre>
-     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-     * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+     * Maximum wait time. Trigger will send the batch of messages to the function when
+     * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16093,8 +16237,8 @@ public final class TriggerOuterClass {
     com.google.protobuf.Duration getCutoff();
     /**
      * <pre>
-     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-     * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+     * Maximum wait time. Trigger will send the batch of messages to the function when
+     * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16199,8 +16343,8 @@ public final class TriggerOuterClass {
     private long size_;
     /**
      * <pre>
-     * Batch size. Trigger will send the batch of messages to the associated function
-     * when the number of messages in the queue reaches this value, or the [cutoff] time has passed.
+     * Batch size. Trigger will send the batch of messages to the function
+     * when the number of messages in the queue reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
@@ -16213,8 +16357,8 @@ public final class TriggerOuterClass {
     private com.google.protobuf.Duration cutoff_;
     /**
      * <pre>
-     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-     * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+     * Maximum wait time. Trigger will send the batch of messages to the function when
+     * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16224,8 +16368,8 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-     * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+     * Maximum wait time. Trigger will send the batch of messages to the function when
+     * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16235,8 +16379,8 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-     * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+     * Maximum wait time. Trigger will send the batch of messages to the function when
+     * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16586,8 +16730,8 @@ public final class TriggerOuterClass {
       private long size_ ;
       /**
        * <pre>
-       * Batch size. Trigger will send the batch of messages to the associated function
-       * when the number of messages in the queue reaches this value, or the [cutoff] time has passed.
+       * Batch size. Trigger will send the batch of messages to the function
+       * when the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
@@ -16597,8 +16741,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Batch size. Trigger will send the batch of messages to the associated function
-       * when the number of messages in the queue reaches this value, or the [cutoff] time has passed.
+       * Batch size. Trigger will send the batch of messages to the function
+       * when the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
@@ -16611,8 +16755,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Batch size. Trigger will send the batch of messages to the associated function
-       * when the number of messages in the queue reaches this value, or the [cutoff] time has passed.
+       * Batch size. Trigger will send the batch of messages to the function
+       * when the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-10"];</code>
@@ -16629,8 +16773,8 @@ public final class TriggerOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> cutoffBuilder_;
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16640,8 +16784,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16655,8 +16799,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16676,8 +16820,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16695,8 +16839,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16718,8 +16862,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16737,8 +16881,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16750,8 +16894,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16766,8 +16910,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of messages in the queue.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the queue reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.required) = true];</code>
@@ -16844,8 +16988,8 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Batch size. Trigger will send the batch of messages to the associated function
-     * when the number of log events reaches this value, or the [cutoff] time has passed.
+     * Batch size. Trigger will send the batch of messages to the function
+     * when the number of messages in the log group reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "0-100"];</code>
@@ -16854,8 +16998,8 @@ public final class TriggerOuterClass {
 
     /**
      * <pre>
-     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-     * exceeds the `cutoff` value, regardless of the amount of log events.
+     * Maximum wait time. Trigger will send the batch of messages to the function when
+     * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -16863,8 +17007,8 @@ public final class TriggerOuterClass {
     boolean hasCutoff();
     /**
      * <pre>
-     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-     * exceeds the `cutoff` value, regardless of the amount of log events.
+     * Maximum wait time. Trigger will send the batch of messages to the function when
+     * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -16872,8 +17016,8 @@ public final class TriggerOuterClass {
     com.google.protobuf.Duration getCutoff();
     /**
      * <pre>
-     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-     * exceeds the `cutoff` value, regardless of the amount of log events.
+     * Maximum wait time. Trigger will send the batch of messages to the function when
+     * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -16974,8 +17118,8 @@ public final class TriggerOuterClass {
     private long size_;
     /**
      * <pre>
-     * Batch size. Trigger will send the batch of messages to the associated function
-     * when the number of log events reaches this value, or the [cutoff] time has passed.
+     * Batch size. Trigger will send the batch of messages to the function
+     * when the number of messages in the log group reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>int64 size = 1 [(.yandex.cloud.value) = "0-100"];</code>
@@ -16988,8 +17132,8 @@ public final class TriggerOuterClass {
     private com.google.protobuf.Duration cutoff_;
     /**
      * <pre>
-     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-     * exceeds the `cutoff` value, regardless of the amount of log events.
+     * Maximum wait time. Trigger will send the batch of messages to the function when
+     * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -16999,8 +17143,8 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-     * exceeds the `cutoff` value, regardless of the amount of log events.
+     * Maximum wait time. Trigger will send the batch of messages to the function when
+     * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -17010,8 +17154,8 @@ public final class TriggerOuterClass {
     }
     /**
      * <pre>
-     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-     * exceeds the `cutoff` value, regardless of the amount of log events.
+     * Maximum wait time. Trigger will send the batch of messages to the function when
+     * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
      * </pre>
      *
      * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -17357,8 +17501,8 @@ public final class TriggerOuterClass {
       private long size_ ;
       /**
        * <pre>
-       * Batch size. Trigger will send the batch of messages to the associated function
-       * when the number of log events reaches this value, or the [cutoff] time has passed.
+       * Batch size. Trigger will send the batch of messages to the function
+       * when the number of messages in the log group reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-100"];</code>
@@ -17368,8 +17512,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Batch size. Trigger will send the batch of messages to the associated function
-       * when the number of log events reaches this value, or the [cutoff] time has passed.
+       * Batch size. Trigger will send the batch of messages to the function
+       * when the number of messages in the log group reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-100"];</code>
@@ -17382,8 +17526,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Batch size. Trigger will send the batch of messages to the associated function
-       * when the number of log events reaches this value, or the [cutoff] time has passed.
+       * Batch size. Trigger will send the batch of messages to the function
+       * when the number of messages in the log group reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>int64 size = 1 [(.yandex.cloud.value) = "0-100"];</code>
@@ -17400,8 +17544,8 @@ public final class TriggerOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> cutoffBuilder_;
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -17411,8 +17555,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -17426,8 +17570,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -17447,8 +17591,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -17466,8 +17610,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -17489,8 +17633,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -17508,8 +17652,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -17521,8 +17665,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
@@ -17537,8 +17681,8 @@ public final class TriggerOuterClass {
       }
       /**
        * <pre>
-       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
-       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * Maximum wait time. Trigger will send the batch of messages to the function when
+       * the number of messages in the log group reaches [size], or the [cutoff] time has passed.
        * </pre>
        *
        * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
