@@ -19,63 +19,117 @@ public final class AddressOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the address. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the address. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the folder that the address belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder that the address belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Name of the address.
+     * The name is unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the address.
+     * The name is unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the address.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the address.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     boolean containsLabels(
@@ -87,11 +141,19 @@ public final class AddressOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -99,6 +161,10 @@ public final class AddressOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -119,11 +185,19 @@ public final class AddressOuterClass {
     yandex.cloud.api.vpc.v1.AddressOuterClass.ExternalIpv4AddressOrBuilder getExternalIpv4AddressOrBuilder();
 
     /**
+     * <pre>
+     * Specifies if address is reserved or not.
+     * </pre>
+     *
      * <code>bool reserved = 15;</code>
      */
     boolean getReserved();
 
     /**
+     * <pre>
+     * Specifies if address is used or not.
+     * </pre>
+     *
      * <code>bool used = 16;</code>
      */
     boolean getUsed();
@@ -131,6 +205,10 @@ public final class AddressOuterClass {
     public yandex.cloud.api.vpc.v1.AddressOuterClass.Address.AddressCase getAddressCase();
   }
   /**
+   * <pre>
+   * An Address resource. For more information, see [Address](/docs/vpc/concepts/address).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.vpc.v1.Address}
    */
   public  static final class Address extends
@@ -333,6 +411,10 @@ public final class AddressOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the address. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public java.lang.String getId() {
@@ -348,6 +430,10 @@ public final class AddressOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the address. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -367,6 +453,10 @@ public final class AddressOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder that the address belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     public java.lang.String getFolderId() {
@@ -382,6 +472,10 @@ public final class AddressOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder that the address belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -401,18 +495,30 @@ public final class AddressOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -422,6 +528,11 @@ public final class AddressOuterClass {
     public static final int NAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the address.
+     * The name is unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     public java.lang.String getName() {
@@ -437,6 +548,11 @@ public final class AddressOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the address.
+     * The name is unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -456,6 +572,10 @@ public final class AddressOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 5;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the address.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      */
     public java.lang.String getDescription() {
@@ -471,6 +591,10 @@ public final class AddressOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the address.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      */
     public com.google.protobuf.ByteString
@@ -514,6 +638,10 @@ public final class AddressOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -530,6 +658,10 @@ public final class AddressOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -537,6 +669,10 @@ public final class AddressOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -549,6 +685,10 @@ public final class AddressOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -592,6 +732,10 @@ public final class AddressOuterClass {
     public static final int RESERVED_FIELD_NUMBER = 15;
     private boolean reserved_;
     /**
+     * <pre>
+     * Specifies if address is reserved or not.
+     * </pre>
+     *
      * <code>bool reserved = 15;</code>
      */
     public boolean getReserved() {
@@ -601,6 +745,10 @@ public final class AddressOuterClass {
     public static final int USED_FIELD_NUMBER = 16;
     private boolean used_;
     /**
+     * <pre>
+     * Specifies if address is used or not.
+     * </pre>
+     *
      * <code>bool used = 16;</code>
      */
     public boolean getUsed() {
@@ -881,6 +1029,10 @@ public final class AddressOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An Address resource. For more information, see [Address](/docs/vpc/concepts/address).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.vpc.v1.Address}
      */
     public static final class Builder extends
@@ -1142,6 +1294,10 @@ public final class AddressOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the address. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public java.lang.String getId() {
@@ -1157,6 +1313,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the address. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -1173,6 +1333,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the address. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setId(
@@ -1186,6 +1350,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the address. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder clearId() {
@@ -1195,6 +1363,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the address. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setIdBytes(
@@ -1211,6 +1383,10 @@ public final class AddressOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder that the address belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public java.lang.String getFolderId() {
@@ -1226,6 +1402,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the address belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -1242,6 +1422,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the address belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public Builder setFolderId(
@@ -1255,6 +1439,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the address belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public Builder clearFolderId() {
@@ -1264,6 +1452,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the address belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public Builder setFolderIdBytes(
@@ -1282,12 +1474,20 @@ public final class AddressOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -1298,6 +1498,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1314,6 +1518,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(
@@ -1328,6 +1536,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1346,6 +1558,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder clearCreatedAt() {
@@ -1360,6 +1576,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1368,6 +1588,10 @@ public final class AddressOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1379,6 +1603,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1397,6 +1625,11 @@ public final class AddressOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the address.
+       * The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public java.lang.String getName() {
@@ -1412,6 +1645,11 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the address.
+       * The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -1428,6 +1666,11 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the address.
+       * The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public Builder setName(
@@ -1441,6 +1684,11 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the address.
+       * The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public Builder clearName() {
@@ -1450,6 +1698,11 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the address.
+       * The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public Builder setNameBytes(
@@ -1466,6 +1719,10 @@ public final class AddressOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the address.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public java.lang.String getDescription() {
@@ -1481,6 +1738,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the address.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public com.google.protobuf.ByteString
@@ -1497,6 +1758,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the address.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public Builder setDescription(
@@ -1510,6 +1775,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the address.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public Builder clearDescription() {
@@ -1519,6 +1788,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the address.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public Builder setDescriptionBytes(
@@ -1560,6 +1833,10 @@ public final class AddressOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1576,6 +1853,10 @@ public final class AddressOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1583,6 +1864,10 @@ public final class AddressOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1595,6 +1880,10 @@ public final class AddressOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1615,6 +1904,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1634,6 +1927,10 @@ public final class AddressOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       public Builder putLabels(
@@ -1646,6 +1943,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1794,12 +2095,20 @@ public final class AddressOuterClass {
 
       private boolean reserved_ ;
       /**
+       * <pre>
+       * Specifies if address is reserved or not.
+       * </pre>
+       *
        * <code>bool reserved = 15;</code>
        */
       public boolean getReserved() {
         return reserved_;
       }
       /**
+       * <pre>
+       * Specifies if address is reserved or not.
+       * </pre>
+       *
        * <code>bool reserved = 15;</code>
        */
       public Builder setReserved(boolean value) {
@@ -1809,6 +2118,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specifies if address is reserved or not.
+       * </pre>
+       *
        * <code>bool reserved = 15;</code>
        */
       public Builder clearReserved() {
@@ -1820,12 +2133,20 @@ public final class AddressOuterClass {
 
       private boolean used_ ;
       /**
+       * <pre>
+       * Specifies if address is used or not.
+       * </pre>
+       *
        * <code>bool used = 16;</code>
        */
       public boolean getUsed() {
         return used_;
       }
       /**
+       * <pre>
+       * Specifies if address is used or not.
+       * </pre>
+       *
        * <code>bool used = 16;</code>
        */
       public Builder setUsed(boolean value) {
@@ -1835,6 +2156,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specifies if address is used or not.
+       * </pre>
+       *
        * <code>bool used = 16;</code>
        */
       public Builder clearUsed() {
@@ -1901,34 +2226,62 @@ public final class AddressOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Value of address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     java.lang.String getAddress();
     /**
+     * <pre>
+     * Value of address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     com.google.protobuf.ByteString
         getAddressBytes();
 
     /**
+     * <pre>
+     * Availability zone from which the address will be allocated.
+     * </pre>
+     *
      * <code>string zone_id = 2;</code>
      */
     java.lang.String getZoneId();
     /**
+     * <pre>
+     * Availability zone from which the address will be allocated.
+     * </pre>
+     *
      * <code>string zone_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
 
     /**
+     * <pre>
+     * Parameters of the allocated address, for example DDoS Protection.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
      */
     boolean hasRequirements();
     /**
+     * <pre>
+     * Parameters of the allocated address, for example DDoS Protection.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
      */
     yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements getRequirements();
     /**
+     * <pre>
+     * Parameters of the allocated address, for example DDoS Protection.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
      */
     yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirementsOrBuilder getRequirementsOrBuilder();
@@ -2034,6 +2387,10 @@ public final class AddressOuterClass {
     public static final int ADDRESS_FIELD_NUMBER = 1;
     private volatile java.lang.Object address_;
     /**
+     * <pre>
+     * Value of address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     public java.lang.String getAddress() {
@@ -2049,6 +2406,10 @@ public final class AddressOuterClass {
       }
     }
     /**
+     * <pre>
+     * Value of address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -2068,6 +2429,10 @@ public final class AddressOuterClass {
     public static final int ZONE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object zoneId_;
     /**
+     * <pre>
+     * Availability zone from which the address will be allocated.
+     * </pre>
+     *
      * <code>string zone_id = 2;</code>
      */
     public java.lang.String getZoneId() {
@@ -2083,6 +2448,10 @@ public final class AddressOuterClass {
       }
     }
     /**
+     * <pre>
+     * Availability zone from which the address will be allocated.
+     * </pre>
+     *
      * <code>string zone_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -2102,18 +2471,30 @@ public final class AddressOuterClass {
     public static final int REQUIREMENTS_FIELD_NUMBER = 3;
     private yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements requirements_;
     /**
+     * <pre>
+     * Parameters of the allocated address, for example DDoS Protection.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
      */
     public boolean hasRequirements() {
       return requirements_ != null;
     }
     /**
+     * <pre>
+     * Parameters of the allocated address, for example DDoS Protection.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
      */
     public yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements getRequirements() {
       return requirements_ == null ? yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements.getDefaultInstance() : requirements_;
     }
     /**
+     * <pre>
+     * Parameters of the allocated address, for example DDoS Protection.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
      */
     public yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirementsOrBuilder getRequirementsOrBuilder() {
@@ -2472,6 +2853,10 @@ public final class AddressOuterClass {
 
       private java.lang.Object address_ = "";
       /**
+       * <pre>
+       * Value of address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public java.lang.String getAddress() {
@@ -2487,6 +2872,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Value of address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -2503,6 +2892,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Value of address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public Builder setAddress(
@@ -2516,6 +2909,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Value of address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public Builder clearAddress() {
@@ -2525,6 +2922,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Value of address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public Builder setAddressBytes(
@@ -2541,6 +2942,10 @@ public final class AddressOuterClass {
 
       private java.lang.Object zoneId_ = "";
       /**
+       * <pre>
+       * Availability zone from which the address will be allocated.
+       * </pre>
+       *
        * <code>string zone_id = 2;</code>
        */
       public java.lang.String getZoneId() {
@@ -2556,6 +2961,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Availability zone from which the address will be allocated.
+       * </pre>
+       *
        * <code>string zone_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2572,6 +2981,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Availability zone from which the address will be allocated.
+       * </pre>
+       *
        * <code>string zone_id = 2;</code>
        */
       public Builder setZoneId(
@@ -2585,6 +2998,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Availability zone from which the address will be allocated.
+       * </pre>
+       *
        * <code>string zone_id = 2;</code>
        */
       public Builder clearZoneId() {
@@ -2594,6 +3011,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Availability zone from which the address will be allocated.
+       * </pre>
+       *
        * <code>string zone_id = 2;</code>
        */
       public Builder setZoneIdBytes(
@@ -2612,12 +3033,20 @@ public final class AddressOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements, yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements.Builder, yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirementsOrBuilder> requirementsBuilder_;
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public boolean hasRequirements() {
         return requirementsBuilder_ != null || requirements_ != null;
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements getRequirements() {
@@ -2628,6 +3057,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public Builder setRequirements(yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements value) {
@@ -2644,6 +3077,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public Builder setRequirements(
@@ -2658,6 +3095,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public Builder mergeRequirements(yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements value) {
@@ -2676,6 +3117,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public Builder clearRequirements() {
@@ -2690,6 +3135,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements.Builder getRequirementsBuilder() {
@@ -2698,6 +3147,10 @@ public final class AddressOuterClass {
         return getRequirementsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirementsOrBuilder getRequirementsOrBuilder() {
@@ -2709,6 +3162,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2782,20 +3239,36 @@ public final class AddressOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * DDoS protection provider ID.
+     * </pre>
+     *
      * <code>string ddos_protection_provider = 1;</code>
      */
     java.lang.String getDdosProtectionProvider();
     /**
+     * <pre>
+     * DDoS protection provider ID.
+     * </pre>
+     *
      * <code>string ddos_protection_provider = 1;</code>
      */
     com.google.protobuf.ByteString
         getDdosProtectionProviderBytes();
 
     /**
+     * <pre>
+     * Capability to send SMTP traffic.
+     * </pre>
+     *
      * <code>string outgoing_smtp_capability = 2;</code>
      */
     java.lang.String getOutgoingSmtpCapability();
     /**
+     * <pre>
+     * Capability to send SMTP traffic.
+     * </pre>
+     *
      * <code>string outgoing_smtp_capability = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -2889,6 +3362,10 @@ public final class AddressOuterClass {
     public static final int DDOS_PROTECTION_PROVIDER_FIELD_NUMBER = 1;
     private volatile java.lang.Object ddosProtectionProvider_;
     /**
+     * <pre>
+     * DDoS protection provider ID.
+     * </pre>
+     *
      * <code>string ddos_protection_provider = 1;</code>
      */
     public java.lang.String getDdosProtectionProvider() {
@@ -2904,6 +3381,10 @@ public final class AddressOuterClass {
       }
     }
     /**
+     * <pre>
+     * DDoS protection provider ID.
+     * </pre>
+     *
      * <code>string ddos_protection_provider = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -2923,6 +3404,10 @@ public final class AddressOuterClass {
     public static final int OUTGOING_SMTP_CAPABILITY_FIELD_NUMBER = 2;
     private volatile java.lang.Object outgoingSmtpCapability_;
     /**
+     * <pre>
+     * Capability to send SMTP traffic.
+     * </pre>
+     *
      * <code>string outgoing_smtp_capability = 2;</code>
      */
     public java.lang.String getOutgoingSmtpCapability() {
@@ -2938,6 +3423,10 @@ public final class AddressOuterClass {
       }
     }
     /**
+     * <pre>
+     * Capability to send SMTP traffic.
+     * </pre>
+     *
      * <code>string outgoing_smtp_capability = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -3276,6 +3765,10 @@ public final class AddressOuterClass {
 
       private java.lang.Object ddosProtectionProvider_ = "";
       /**
+       * <pre>
+       * DDoS protection provider ID.
+       * </pre>
+       *
        * <code>string ddos_protection_provider = 1;</code>
        */
       public java.lang.String getDdosProtectionProvider() {
@@ -3291,6 +3784,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * DDoS protection provider ID.
+       * </pre>
+       *
        * <code>string ddos_protection_provider = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -3307,6 +3804,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * DDoS protection provider ID.
+       * </pre>
+       *
        * <code>string ddos_protection_provider = 1;</code>
        */
       public Builder setDdosProtectionProvider(
@@ -3320,6 +3821,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DDoS protection provider ID.
+       * </pre>
+       *
        * <code>string ddos_protection_provider = 1;</code>
        */
       public Builder clearDdosProtectionProvider() {
@@ -3329,6 +3834,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DDoS protection provider ID.
+       * </pre>
+       *
        * <code>string ddos_protection_provider = 1;</code>
        */
       public Builder setDdosProtectionProviderBytes(
@@ -3345,6 +3854,10 @@ public final class AddressOuterClass {
 
       private java.lang.Object outgoingSmtpCapability_ = "";
       /**
+       * <pre>
+       * Capability to send SMTP traffic.
+       * </pre>
+       *
        * <code>string outgoing_smtp_capability = 2;</code>
        */
       public java.lang.String getOutgoingSmtpCapability() {
@@ -3360,6 +3873,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Capability to send SMTP traffic.
+       * </pre>
+       *
        * <code>string outgoing_smtp_capability = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -3376,6 +3893,10 @@ public final class AddressOuterClass {
         }
       }
       /**
+       * <pre>
+       * Capability to send SMTP traffic.
+       * </pre>
+       *
        * <code>string outgoing_smtp_capability = 2;</code>
        */
       public Builder setOutgoingSmtpCapability(
@@ -3389,6 +3910,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Capability to send SMTP traffic.
+       * </pre>
+       *
        * <code>string outgoing_smtp_capability = 2;</code>
        */
       public Builder clearOutgoingSmtpCapability() {
@@ -3398,6 +3923,10 @@ public final class AddressOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Capability to send SMTP traffic.
+       * </pre>
+       *
        * <code>string outgoing_smtp_capability = 2;</code>
        */
       public Builder setOutgoingSmtpCapabilityBytes(

@@ -5484,6 +5484,31 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
+     * Configuration of a PostgreSQL 13 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+     */
+    boolean hasPostgresqlConfig13();
+    /**
+     * <pre>
+     * Configuration of a PostgreSQL 13 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13 getPostgresqlConfig13();
+    /**
+     * <pre>
+     * Configuration of a PostgreSQL 13 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13OrBuilder getPostgresqlConfig13OrBuilder();
+
+    /**
+     * <pre>
      * Configuration of the connection pooler.
      * </pre>
      *
@@ -5856,6 +5881,20 @@ public final class ClusterOuterClass {
               postgresqlConfigCase_ = 14;
               break;
             }
+            case 122: {
+              yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.Builder subBuilder = null;
+              if (postgresqlConfigCase_ == 15) {
+                subBuilder = ((yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13) postgresqlConfig_).toBuilder();
+              }
+              postgresqlConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13) postgresqlConfig_);
+                postgresqlConfig_ = subBuilder.buildPartial();
+              }
+              postgresqlConfigCase_ = 15;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5899,6 +5938,7 @@ public final class ClusterOuterClass {
       POSTGRESQL_CONFIG_11_1C(13),
       POSTGRESQL_CONFIG_12(11),
       POSTGRESQL_CONFIG_12_1C(14),
+      POSTGRESQL_CONFIG_13(15),
       POSTGRESQLCONFIG_NOT_SET(0);
       private final int value;
       private PostgresqlConfigCase(int value) {
@@ -5921,6 +5961,7 @@ public final class ClusterOuterClass {
           case 13: return POSTGRESQL_CONFIG_11_1C;
           case 11: return POSTGRESQL_CONFIG_12;
           case 14: return POSTGRESQL_CONFIG_12_1C;
+          case 15: return POSTGRESQL_CONFIG_13;
           case 0: return POSTGRESQLCONFIG_NOT_SET;
           default: return null;
         }
@@ -6244,6 +6285,44 @@ public final class ClusterOuterClass {
       return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql121C.PostgresqlConfigSet12_1C.getDefaultInstance();
     }
 
+    public static final int POSTGRESQL_CONFIG_13_FIELD_NUMBER = 15;
+    /**
+     * <pre>
+     * Configuration of a PostgreSQL 13 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+     */
+    public boolean hasPostgresqlConfig13() {
+      return postgresqlConfigCase_ == 15;
+    }
+    /**
+     * <pre>
+     * Configuration of a PostgreSQL 13 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13 getPostgresqlConfig13() {
+      if (postgresqlConfigCase_ == 15) {
+         return (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13) postgresqlConfig_;
+      }
+      return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration of a PostgreSQL 13 server.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13OrBuilder getPostgresqlConfig13OrBuilder() {
+      if (postgresqlConfigCase_ == 15) {
+         return (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13) postgresqlConfig_;
+      }
+      return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.getDefaultInstance();
+    }
+
     public static final int POOLER_CONFIG_FIELD_NUMBER = 4;
     private yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.ConnectionPoolerConfig poolerConfig_;
     /**
@@ -6498,6 +6577,9 @@ public final class ClusterOuterClass {
       if (postgresqlConfigCase_ == 14) {
         output.writeMessage(14, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql121C.PostgresqlConfigSet12_1C) postgresqlConfig_);
       }
+      if (postgresqlConfigCase_ == 15) {
+        output.writeMessage(15, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13) postgresqlConfig_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6561,6 +6643,10 @@ public final class ClusterOuterClass {
       if (postgresqlConfigCase_ == 14) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql121C.PostgresqlConfigSet12_1C) postgresqlConfig_);
+      }
+      if (postgresqlConfigCase_ == 15) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13) postgresqlConfig_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6642,6 +6728,10 @@ public final class ClusterOuterClass {
           result = result && getPostgresqlConfig121C()
               .equals(other.getPostgresqlConfig121C());
           break;
+        case 15:
+          result = result && getPostgresqlConfig13()
+              .equals(other.getPostgresqlConfig13());
+          break;
         case 0:
         default:
       }
@@ -6710,6 +6800,10 @@ public final class ClusterOuterClass {
         case 14:
           hash = (37 * hash) + POSTGRESQL_CONFIG_12_1C_FIELD_NUMBER;
           hash = (53 * hash) + getPostgresqlConfig121C().hashCode();
+          break;
+        case 15:
+          hash = (37 * hash) + POSTGRESQL_CONFIG_13_FIELD_NUMBER;
+          hash = (53 * hash) + getPostgresqlConfig13().hashCode();
           break;
         case 0:
         default:
@@ -6963,6 +7057,13 @@ public final class ClusterOuterClass {
             result.postgresqlConfig_ = postgresqlConfig121CBuilder_.build();
           }
         }
+        if (postgresqlConfigCase_ == 15) {
+          if (postgresqlConfig13Builder_ == null) {
+            result.postgresqlConfig_ = postgresqlConfig_;
+          } else {
+            result.postgresqlConfig_ = postgresqlConfig13Builder_.build();
+          }
+        }
         if (poolerConfigBuilder_ == null) {
           result.poolerConfig_ = poolerConfig_;
         } else {
@@ -7091,6 +7192,10 @@ public final class ClusterOuterClass {
           }
           case POSTGRESQL_CONFIG_12_1C: {
             mergePostgresqlConfig121C(other.getPostgresqlConfig121C());
+            break;
+          }
+          case POSTGRESQL_CONFIG_13: {
+            mergePostgresqlConfig13(other.getPostgresqlConfig13());
             break;
           }
           case POSTGRESQLCONFIG_NOT_SET: {
@@ -8432,6 +8537,178 @@ public final class ClusterOuterClass {
         postgresqlConfigCase_ = 14;
         onChanged();;
         return postgresqlConfig121CBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13, yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.Builder, yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13OrBuilder> postgresqlConfig13Builder_;
+      /**
+       * <pre>
+       * Configuration of a PostgreSQL 13 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+       */
+      public boolean hasPostgresqlConfig13() {
+        return postgresqlConfigCase_ == 15;
+      }
+      /**
+       * <pre>
+       * Configuration of a PostgreSQL 13 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13 getPostgresqlConfig13() {
+        if (postgresqlConfig13Builder_ == null) {
+          if (postgresqlConfigCase_ == 15) {
+            return (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13) postgresqlConfig_;
+          }
+          return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.getDefaultInstance();
+        } else {
+          if (postgresqlConfigCase_ == 15) {
+            return postgresqlConfig13Builder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of a PostgreSQL 13 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+       */
+      public Builder setPostgresqlConfig13(yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13 value) {
+        if (postgresqlConfig13Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          postgresqlConfig_ = value;
+          onChanged();
+        } else {
+          postgresqlConfig13Builder_.setMessage(value);
+        }
+        postgresqlConfigCase_ = 15;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of a PostgreSQL 13 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+       */
+      public Builder setPostgresqlConfig13(
+          yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.Builder builderForValue) {
+        if (postgresqlConfig13Builder_ == null) {
+          postgresqlConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          postgresqlConfig13Builder_.setMessage(builderForValue.build());
+        }
+        postgresqlConfigCase_ = 15;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of a PostgreSQL 13 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+       */
+      public Builder mergePostgresqlConfig13(yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13 value) {
+        if (postgresqlConfig13Builder_ == null) {
+          if (postgresqlConfigCase_ == 15 &&
+              postgresqlConfig_ != yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.getDefaultInstance()) {
+            postgresqlConfig_ = yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.newBuilder((yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13) postgresqlConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            postgresqlConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (postgresqlConfigCase_ == 15) {
+            postgresqlConfig13Builder_.mergeFrom(value);
+          }
+          postgresqlConfig13Builder_.setMessage(value);
+        }
+        postgresqlConfigCase_ = 15;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of a PostgreSQL 13 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+       */
+      public Builder clearPostgresqlConfig13() {
+        if (postgresqlConfig13Builder_ == null) {
+          if (postgresqlConfigCase_ == 15) {
+            postgresqlConfigCase_ = 0;
+            postgresqlConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (postgresqlConfigCase_ == 15) {
+            postgresqlConfigCase_ = 0;
+            postgresqlConfig_ = null;
+          }
+          postgresqlConfig13Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of a PostgreSQL 13 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.Builder getPostgresqlConfig13Builder() {
+        return getPostgresqlConfig13FieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of a PostgreSQL 13 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13OrBuilder getPostgresqlConfig13OrBuilder() {
+        if ((postgresqlConfigCase_ == 15) && (postgresqlConfig13Builder_ != null)) {
+          return postgresqlConfig13Builder_.getMessageOrBuilder();
+        } else {
+          if (postgresqlConfigCase_ == 15) {
+            return (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13) postgresqlConfig_;
+          }
+          return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of a PostgreSQL 13 server.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfigSet13 postgresql_config_13 = 15[json_name = "postgresqlConfig_13"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13, yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.Builder, yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13OrBuilder> 
+          getPostgresqlConfig13FieldBuilder() {
+        if (postgresqlConfig13Builder_ == null) {
+          if (!(postgresqlConfigCase_ == 15)) {
+            postgresqlConfig_ = yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.getDefaultInstance();
+          }
+          postgresqlConfig13Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13, yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13.Builder, yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13OrBuilder>(
+                  (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13) postgresqlConfig_,
+                  getParentForChildren(),
+                  isClean());
+          postgresqlConfig_ = null;
+        }
+        postgresqlConfigCase_ = 15;
+        onChanged();;
+        return postgresqlConfig13Builder_;
       }
 
       private yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.ConnectionPoolerConfig poolerConfig_ = null;
@@ -13957,6 +14234,31 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.mdb.postgresql.v1.config.Host121C.PostgresqlHostConfig12_1COrBuilder getPostgresqlConfig121COrBuilder();
 
+    /**
+     * <pre>
+     * Configuration for a host with PostgreSQL 13 server deployed.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+     */
+    boolean hasPostgresqlConfig13();
+    /**
+     * <pre>
+     * Configuration for a host with PostgreSQL 13 server deployed.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13 getPostgresqlConfig13();
+    /**
+     * <pre>
+     * Configuration for a host with PostgreSQL 13 server deployed.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13OrBuilder getPostgresqlConfig13OrBuilder();
+
     public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.HostConfig.PostgresqlConfigCase getPostgresqlConfigCase();
   }
   /**
@@ -14096,6 +14398,20 @@ public final class ClusterOuterClass {
               postgresqlConfigCase_ = 7;
               break;
             }
+            case 66: {
+              yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.Builder subBuilder = null;
+              if (postgresqlConfigCase_ == 8) {
+                subBuilder = ((yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13) postgresqlConfig_).toBuilder();
+              }
+              postgresqlConfig_ =
+                  input.readMessage(yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13) postgresqlConfig_);
+                postgresqlConfig_ = subBuilder.buildPartial();
+              }
+              postgresqlConfigCase_ = 8;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -14139,6 +14455,7 @@ public final class ClusterOuterClass {
       POSTGRESQL_CONFIG_11_1C(6),
       POSTGRESQL_CONFIG_12(5),
       POSTGRESQL_CONFIG_12_1C(7),
+      POSTGRESQL_CONFIG_13(8),
       POSTGRESQLCONFIG_NOT_SET(0);
       private final int value;
       private PostgresqlConfigCase(int value) {
@@ -14161,6 +14478,7 @@ public final class ClusterOuterClass {
           case 6: return POSTGRESQL_CONFIG_11_1C;
           case 5: return POSTGRESQL_CONFIG_12;
           case 7: return POSTGRESQL_CONFIG_12_1C;
+          case 8: return POSTGRESQL_CONFIG_13;
           case 0: return POSTGRESQLCONFIG_NOT_SET;
           default: return null;
         }
@@ -14442,6 +14760,44 @@ public final class ClusterOuterClass {
       return yandex.cloud.api.mdb.postgresql.v1.config.Host121C.PostgresqlHostConfig12_1C.getDefaultInstance();
     }
 
+    public static final int POSTGRESQL_CONFIG_13_FIELD_NUMBER = 8;
+    /**
+     * <pre>
+     * Configuration for a host with PostgreSQL 13 server deployed.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+     */
+    public boolean hasPostgresqlConfig13() {
+      return postgresqlConfigCase_ == 8;
+    }
+    /**
+     * <pre>
+     * Configuration for a host with PostgreSQL 13 server deployed.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13 getPostgresqlConfig13() {
+      if (postgresqlConfigCase_ == 8) {
+         return (yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13) postgresqlConfig_;
+      }
+      return yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Configuration for a host with PostgreSQL 13 server deployed.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13OrBuilder getPostgresqlConfig13OrBuilder() {
+      if (postgresqlConfigCase_ == 8) {
+         return (yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13) postgresqlConfig_;
+      }
+      return yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14476,6 +14832,9 @@ public final class ClusterOuterClass {
       }
       if (postgresqlConfigCase_ == 7) {
         output.writeMessage(7, (yandex.cloud.api.mdb.postgresql.v1.config.Host121C.PostgresqlHostConfig12_1C) postgresqlConfig_);
+      }
+      if (postgresqlConfigCase_ == 8) {
+        output.writeMessage(8, (yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13) postgresqlConfig_);
       }
       unknownFields.writeTo(output);
     }
@@ -14513,6 +14872,10 @@ public final class ClusterOuterClass {
       if (postgresqlConfigCase_ == 7) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, (yandex.cloud.api.mdb.postgresql.v1.config.Host121C.PostgresqlHostConfig12_1C) postgresqlConfig_);
+      }
+      if (postgresqlConfigCase_ == 8) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, (yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13) postgresqlConfig_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14562,6 +14925,10 @@ public final class ClusterOuterClass {
           result = result && getPostgresqlConfig121C()
               .equals(other.getPostgresqlConfig121C());
           break;
+        case 8:
+          result = result && getPostgresqlConfig13()
+              .equals(other.getPostgresqlConfig13());
+          break;
         case 0:
         default:
       }
@@ -14604,6 +14971,10 @@ public final class ClusterOuterClass {
         case 7:
           hash = (37 * hash) + POSTGRESQL_CONFIG_12_1C_FIELD_NUMBER;
           hash = (53 * hash) + getPostgresqlConfig121C().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + POSTGRESQL_CONFIG_13_FIELD_NUMBER;
+          hash = (53 * hash) + getPostgresqlConfig13().hashCode();
           break;
         case 0:
         default:
@@ -14818,6 +15189,13 @@ public final class ClusterOuterClass {
             result.postgresqlConfig_ = postgresqlConfig121CBuilder_.build();
           }
         }
+        if (postgresqlConfigCase_ == 8) {
+          if (postgresqlConfig13Builder_ == null) {
+            result.postgresqlConfig_ = postgresqlConfig_;
+          } else {
+            result.postgresqlConfig_ = postgresqlConfig13Builder_.build();
+          }
+        }
         result.postgresqlConfigCase_ = postgresqlConfigCase_;
         onBuilt();
         return result;
@@ -14894,6 +15272,10 @@ public final class ClusterOuterClass {
           }
           case POSTGRESQL_CONFIG_12_1C: {
             mergePostgresqlConfig121C(other.getPostgresqlConfig121C());
+            break;
+          }
+          case POSTGRESQL_CONFIG_13: {
+            mergePostgresqlConfig13(other.getPostgresqlConfig13());
             break;
           }
           case POSTGRESQLCONFIG_NOT_SET: {
@@ -16146,6 +16528,178 @@ public final class ClusterOuterClass {
         postgresqlConfigCase_ = 7;
         onChanged();;
         return postgresqlConfig121CBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13, yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.Builder, yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13OrBuilder> postgresqlConfig13Builder_;
+      /**
+       * <pre>
+       * Configuration for a host with PostgreSQL 13 server deployed.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+       */
+      public boolean hasPostgresqlConfig13() {
+        return postgresqlConfigCase_ == 8;
+      }
+      /**
+       * <pre>
+       * Configuration for a host with PostgreSQL 13 server deployed.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13 getPostgresqlConfig13() {
+        if (postgresqlConfig13Builder_ == null) {
+          if (postgresqlConfigCase_ == 8) {
+            return (yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13) postgresqlConfig_;
+          }
+          return yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.getDefaultInstance();
+        } else {
+          if (postgresqlConfigCase_ == 8) {
+            return postgresqlConfig13Builder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for a host with PostgreSQL 13 server deployed.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+       */
+      public Builder setPostgresqlConfig13(yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13 value) {
+        if (postgresqlConfig13Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          postgresqlConfig_ = value;
+          onChanged();
+        } else {
+          postgresqlConfig13Builder_.setMessage(value);
+        }
+        postgresqlConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a host with PostgreSQL 13 server deployed.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+       */
+      public Builder setPostgresqlConfig13(
+          yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.Builder builderForValue) {
+        if (postgresqlConfig13Builder_ == null) {
+          postgresqlConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          postgresqlConfig13Builder_.setMessage(builderForValue.build());
+        }
+        postgresqlConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a host with PostgreSQL 13 server deployed.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+       */
+      public Builder mergePostgresqlConfig13(yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13 value) {
+        if (postgresqlConfig13Builder_ == null) {
+          if (postgresqlConfigCase_ == 8 &&
+              postgresqlConfig_ != yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.getDefaultInstance()) {
+            postgresqlConfig_ = yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.newBuilder((yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13) postgresqlConfig_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            postgresqlConfig_ = value;
+          }
+          onChanged();
+        } else {
+          if (postgresqlConfigCase_ == 8) {
+            postgresqlConfig13Builder_.mergeFrom(value);
+          }
+          postgresqlConfig13Builder_.setMessage(value);
+        }
+        postgresqlConfigCase_ = 8;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a host with PostgreSQL 13 server deployed.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+       */
+      public Builder clearPostgresqlConfig13() {
+        if (postgresqlConfig13Builder_ == null) {
+          if (postgresqlConfigCase_ == 8) {
+            postgresqlConfigCase_ = 0;
+            postgresqlConfig_ = null;
+            onChanged();
+          }
+        } else {
+          if (postgresqlConfigCase_ == 8) {
+            postgresqlConfigCase_ = 0;
+            postgresqlConfig_ = null;
+          }
+          postgresqlConfig13Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for a host with PostgreSQL 13 server deployed.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.Builder getPostgresqlConfig13Builder() {
+        return getPostgresqlConfig13FieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for a host with PostgreSQL 13 server deployed.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13OrBuilder getPostgresqlConfig13OrBuilder() {
+        if ((postgresqlConfigCase_ == 8) && (postgresqlConfig13Builder_ != null)) {
+          return postgresqlConfig13Builder_.getMessageOrBuilder();
+        } else {
+          if (postgresqlConfigCase_ == 8) {
+            return (yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13) postgresqlConfig_;
+          }
+          return yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for a host with PostgreSQL 13 server deployed.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlHostConfig13 postgresql_config_13 = 8[json_name = "postgresqlHostConfig_13"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13, yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.Builder, yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13OrBuilder> 
+          getPostgresqlConfig13FieldBuilder() {
+        if (postgresqlConfig13Builder_ == null) {
+          if (!(postgresqlConfigCase_ == 8)) {
+            postgresqlConfig_ = yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.getDefaultInstance();
+          }
+          postgresqlConfig13Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13, yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13.Builder, yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13OrBuilder>(
+                  (yandex.cloud.api.mdb.postgresql.v1.config.Host13.PostgresqlHostConfig13) postgresqlConfig_,
+                  getParentForChildren(),
+                  isClean());
+          postgresqlConfig_ = null;
+        }
+        postgresqlConfigCase_ = 8;
+        onChanged();;
+        return postgresqlConfig13Builder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19343,143 +19897,151 @@ public final class ClusterOuterClass {
       "postgresql/v1/config/postgresql11.proto\032" +
       ";yandex/cloud/mdb/postgresql/v1/config/p" +
       "ostgresql11_1c.proto\0328yandex/cloud/mdb/p" +
-      "ostgresql/v1/config/postgresql12.proto\032;" +
+      "ostgresql/v1/config/postgresql12.proto\0328" +
       "yandex/cloud/mdb/postgresql/v1/config/po" +
-      "stgresql12_1c.proto\0323yandex/cloud/mdb/po" +
-      "stgresql/v1/config/host9_6.proto\0322yandex" +
-      "/cloud/mdb/postgresql/v1/config/host10.p" +
-      "roto\0325yandex/cloud/mdb/postgresql/v1/con" +
-      "fig/host10_1c.proto\0322yandex/cloud/mdb/po" +
-      "stgresql/v1/config/host11.proto\0325yandex/" +
-      "cloud/mdb/postgresql/v1/config/host11_1c" +
-      ".proto\0322yandex/cloud/mdb/postgresql/v1/c" +
-      "onfig/host12.proto\0325yandex/cloud/mdb/pos" +
-      "tgresql/v1/config/host12_1c.proto\0320yande" +
-      "x/cloud/mdb/postgresql/v1/maintenance.pr" +
-      "oto\"\217\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id" +
-      "\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descript" +
-      "ion\030\005 \001(\t\022C\n\006labels\030\006 \003(\01323.yandex.cloud" +
-      ".mdb.postgresql.v1.Cluster.LabelsEntry\022H" +
-      "\n\013environment\030\007 \001(\01623.yandex.cloud.mdb.p" +
-      "ostgresql.v1.Cluster.Environment\022>\n\nmoni" +
-      "toring\030\010 \003(\0132*.yandex.cloud.mdb.postgres" +
-      "ql.v1.Monitoring\022=\n\006config\030\t \001(\0132-.yande" +
-      "x.cloud.mdb.postgresql.v1.ClusterConfig\022" +
-      "\022\n\nnetwork_id\030\n \001(\t\022>\n\006health\030\013 \001(\0162..ya" +
-      "ndex.cloud.mdb.postgresql.v1.Cluster.Hea" +
-      "lth\022>\n\006status\030\014 \001(\0162..yandex.cloud.mdb.p" +
-      "ostgresql.v1.Cluster.Status\022M\n\022maintenan" +
-      "ce_window\030\r \001(\01321.yandex.cloud.mdb.postg" +
-      "resql.v1.MaintenanceWindow\022O\n\021planned_op" +
-      "eration\030\016 \001(\01324.yandex.cloud.mdb.postgre" +
-      "sql.v1.MaintenanceOperation\022\032\n\022security_" +
-      "group_ids\030\017 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n" +
-      "\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTION" +
-      "\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UN" +
-      "KNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED" +
-      "\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREA" +
-      "TING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATI" +
-      "NG\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010START" +
-      "ING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013des" +
-      "cription\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\375\t\n\rCluster" +
-      "Config\022\017\n\007version\030\001 \001(\t\022t\n\025postgresql_co" +
-      "nfig_9_6\030\002 \001(\0132=.yandex.cloud.mdb.postgr" +
-      "esql.v1.config.PostgresqlConfigSet9_6H\000R" +
-      "\024postgresqlConfig_9_6\022z\n\027postgresql_conf" +
-      "ig_10_1c\030\n \001(\0132?.yandex.cloud.mdb.postgr" +
-      "esql.v1.config.PostgresqlConfigSet10_1CH" +
-      "\000R\026postgresqlConfig_10_1c\022q\n\024postgresql_" +
-      "config_10\030\003 \001(\0132<.yandex.cloud.mdb.postg" +
-      "resql.v1.config.PostgresqlConfigSet10H\000R" +
-      "\023postgresqlConfig_10\022q\n\024postgresql_confi" +
-      "g_11\030\010 \001(\0132<.yandex.cloud.mdb.postgresql" +
-      ".v1.config.PostgresqlConfigSet11H\000R\023post" +
-      "gresqlConfig_11\022z\n\027postgresql_config_11_" +
-      "1c\030\r \001(\0132?.yandex.cloud.mdb.postgresql.v" +
-      "1.config.PostgresqlConfigSet11_1CH\000R\026pos" +
-      "tgresqlConfig_11_1c\022q\n\024postgresql_config" +
-      "_12\030\013 \001(\0132<.yandex.cloud.mdb.postgresql." +
-      "v1.config.PostgresqlConfigSet12H\000R\023postg" +
-      "resqlConfig_12\022z\n\027postgresql_config_12_1" +
-      "c\030\016 \001(\0132?.yandex.cloud.mdb.postgresql.v1" +
-      ".config.PostgresqlConfigSet12_1CH\000R\026post" +
-      "gresqlConfig_12_1c\022M\n\rpooler_config\030\004 \001(" +
-      "\01326.yandex.cloud.mdb.postgresql.v1.Conne" +
-      "ctionPoolerConfig\022<\n\tresources\030\005 \001(\0132).y" +
-      "andex.cloud.mdb.postgresql.v1.Resources\022" +
-      "0\n\014autofailover\030\006 \001(\0132\032.google.protobuf." +
-      "BoolValue\0223\n\023backup_window_start\030\007 \001(\0132\026" +
-      ".google.type.TimeOfDay\0226\n\006access\030\t \001(\0132&" +
-      ".yandex.cloud.mdb.postgresql.v1.Access\022W" +
-      "\n\027performance_diagnostics\030\014 \001(\01326.yandex" +
-      ".cloud.mdb.postgresql.v1.PerformanceDiag" +
-      "nosticsB\023\n\021postgresql_config\"\376\001\n\026Connect" +
-      "ionPoolerConfig\022X\n\014pooling_mode\030\001 \001(\0162B." +
-      "yandex.cloud.mdb.postgresql.v1.Connectio" +
-      "nPoolerConfig.PoolingMode\0220\n\014pool_discar" +
-      "d\030\002 \001(\0132\032.google.protobuf.BoolValue\"X\n\013P" +
-      "oolingMode\022\034\n\030POOLING_MODE_UNSPECIFIED\020\000" +
-      "\022\013\n\007SESSION\020\001\022\017\n\013TRANSACTION\020\002\022\r\n\tSTATEM" +
-      "ENT\020\003\"\342\005\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_" +
-      "id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022<\n\tresources\030\004" +
-      " \001(\0132).yandex.cloud.mdb.postgresql.v1.Re" +
-      "sources\0227\n\004role\030\005 \001(\0162).yandex.cloud.mdb" +
-      ".postgresql.v1.Host.Role\022;\n\006health\030\006 \001(\016" +
-      "2+.yandex.cloud.mdb.postgresql.v1.Host.H" +
-      "ealth\0229\n\010services\030\007 \003(\0132\'.yandex.cloud.m" +
-      "db.postgresql.v1.Service\022\021\n\tsubnet_id\030\010 " +
-      "\001(\t\022\032\n\022replication_source\030\t \001(\t\022-\n\010prior" +
-      "ity\030\n \001(\0132\033.google.protobuf.Int64Value\022:" +
-      "\n\006config\030\013 \001(\0132*.yandex.cloud.mdb.postgr" +
-      "esql.v1.HostConfig\022\030\n\020assign_public_ip\030\014" +
-      " \001(\010\022F\n\014replica_type\030\r \001(\01620.yandex.clou" +
-      "d.mdb.postgresql.v1.Host.ReplicaType\"1\n\004" +
-      "Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007RE" +
-      "PLICA\020\002\"H\n\013ReplicaType\022\030\n\024REPLICA_TYPE_U" +
-      "NKNOWN\020\000\022\t\n\005ASYNC\020\001\022\010\n\004SYNC\020\002\022\n\n\006QUORUM\020" +
-      "\003\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE" +
-      "\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\207\007\n\nHostConfi" +
-      "g\022y\n\025postgresql_config_9_6\030\001 \001(\0132>.yande" +
-      "x.cloud.mdb.postgresql.v1.config.Postgre" +
-      "sqlHostConfig9_6H\000R\030postgresqlHostConfig" +
-      "_9_6\022\177\n\027postgresql_config_10_1c\030\004 \001(\0132@." +
+      "stgresql13.proto\032;yandex/cloud/mdb/postg" +
+      "resql/v1/config/postgresql12_1c.proto\0323y" +
+      "andex/cloud/mdb/postgresql/v1/config/hos" +
+      "t9_6.proto\0322yandex/cloud/mdb/postgresql/" +
+      "v1/config/host10.proto\0325yandex/cloud/mdb" +
+      "/postgresql/v1/config/host10_1c.proto\0322y" +
+      "andex/cloud/mdb/postgresql/v1/config/hos" +
+      "t11.proto\0325yandex/cloud/mdb/postgresql/v" +
+      "1/config/host11_1c.proto\0322yandex/cloud/m" +
+      "db/postgresql/v1/config/host12.proto\0322ya" +
+      "ndex/cloud/mdb/postgresql/v1/config/host" +
+      "13.proto\0325yandex/cloud/mdb/postgresql/v1" +
+      "/config/host12_1c.proto\0320yandex/cloud/md" +
+      "b/postgresql/v1/maintenance.proto\"\217\010\n\007Cl" +
+      "uster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\n" +
+      "created_at\030\003 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022" +
+      "C\n\006labels\030\006 \003(\01323.yandex.cloud.mdb.postg" +
+      "resql.v1.Cluster.LabelsEntry\022H\n\013environm" +
+      "ent\030\007 \001(\01623.yandex.cloud.mdb.postgresql." +
+      "v1.Cluster.Environment\022>\n\nmonitoring\030\010 \003" +
+      "(\0132*.yandex.cloud.mdb.postgresql.v1.Moni" +
+      "toring\022=\n\006config\030\t \001(\0132-.yandex.cloud.md" +
+      "b.postgresql.v1.ClusterConfig\022\022\n\nnetwork" +
+      "_id\030\n \001(\t\022>\n\006health\030\013 \001(\0162..yandex.cloud" +
+      ".mdb.postgresql.v1.Cluster.Health\022>\n\006sta" +
+      "tus\030\014 \001(\0162..yandex.cloud.mdb.postgresql." +
+      "v1.Cluster.Status\022M\n\022maintenance_window\030" +
+      "\r \001(\01321.yandex.cloud.mdb.postgresql.v1.M" +
+      "aintenanceWindow\022O\n\021planned_operation\030\016 " +
+      "\001(\01324.yandex.cloud.mdb.postgresql.v1.Mai" +
+      "ntenanceOperation\022\032\n\022security_group_ids\030" +
+      "\017 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONME" +
+      "NT_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRES" +
+      "TABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n" +
+      "\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Stat" +
+      "us\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007" +
+      "RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010ST" +
+      "OPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nM" +
+      "onitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002" +
+      " \001(\t\022\014\n\004link\030\003 \001(\t\"\360\n\n\rClusterConfig\022\017\n\007" +
+      "version\030\001 \001(\t\022t\n\025postgresql_config_9_6\030\002" +
+      " \001(\0132=.yandex.cloud.mdb.postgresql.v1.co" +
+      "nfig.PostgresqlConfigSet9_6H\000R\024postgresq" +
+      "lConfig_9_6\022z\n\027postgresql_config_10_1c\030\n" +
+      " \001(\0132?.yandex.cloud.mdb.postgresql.v1.co" +
+      "nfig.PostgresqlConfigSet10_1CH\000R\026postgre" +
+      "sqlConfig_10_1c\022q\n\024postgresql_config_10\030" +
+      "\003 \001(\0132<.yandex.cloud.mdb.postgresql.v1.c" +
+      "onfig.PostgresqlConfigSet10H\000R\023postgresq" +
+      "lConfig_10\022q\n\024postgresql_config_11\030\010 \001(\013" +
+      "2<.yandex.cloud.mdb.postgresql.v1.config" +
+      ".PostgresqlConfigSet11H\000R\023postgresqlConf" +
+      "ig_11\022z\n\027postgresql_config_11_1c\030\r \001(\0132?" +
+      ".yandex.cloud.mdb.postgresql.v1.config.P" +
+      "ostgresqlConfigSet11_1CH\000R\026postgresqlCon" +
+      "fig_11_1c\022q\n\024postgresql_config_12\030\013 \001(\0132" +
+      "<.yandex.cloud.mdb.postgresql.v1.config." +
+      "PostgresqlConfigSet12H\000R\023postgresqlConfi" +
+      "g_12\022z\n\027postgresql_config_12_1c\030\016 \001(\0132?." +
       "yandex.cloud.mdb.postgresql.v1.config.Po" +
-      "stgresqlHostConfig10_1CH\000R\032postgresqlHos" +
-      "tConfig_10_1c\022v\n\024postgresql_config_10\030\002 " +
-      "\001(\0132=.yandex.cloud.mdb.postgresql.v1.con" +
-      "fig.PostgresqlHostConfig10H\000R\027postgresql" +
-      "HostConfig_10\022v\n\024postgresql_config_11\030\003 " +
-      "\001(\0132=.yandex.cloud.mdb.postgresql.v1.con" +
-      "fig.PostgresqlHostConfig11H\000R\027postgresql" +
-      "HostConfig_11\022\177\n\027postgresql_config_11_1c" +
-      "\030\006 \001(\0132@.yandex.cloud.mdb.postgresql.v1." +
-      "config.PostgresqlHostConfig11_1CH\000R\032post" +
-      "gresqlHostConfig_11_1c\022v\n\024postgresql_con" +
-      "fig_12\030\005 \001(\0132=.yandex.cloud.mdb.postgres" +
-      "ql.v1.config.PostgresqlHostConfig12H\000R\027p" +
-      "ostgresqlHostConfig_12\022\177\n\027postgresql_con" +
-      "fig_12_1c\030\007 \001(\0132@.yandex.cloud.mdb.postg" +
-      "resql.v1.config.PostgresqlHostConfig12_1" +
-      "CH\000R\032postgresqlHostConfig_12_1cB\023\n\021postg" +
-      "resql_config\"\362\001\n\007Service\022:\n\004type\030\001 \001(\0162," +
-      ".yandex.cloud.mdb.postgresql.v1.Service." +
-      "Type\022>\n\006health\030\002 \001(\0162..yandex.cloud.mdb." +
-      "postgresql.v1.Service.Health\"8\n\004Type\022\024\n\020" +
-      "TYPE_UNSPECIFIED\020\000\022\016\n\nPOSTGRESQL\020\001\022\n\n\006PO" +
-      "OLER\020\002\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005" +
-      "ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resour" +
-      "ce_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n" +
-      "\014disk_type_id\030\003 \001(\t\",\n\006Access\022\021\n\tdata_le" +
-      "ns\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\"\215\001\n\026Performanc" +
-      "eDiagnostics\022\017\n\007enabled\030\001 \001(\010\022/\n\032session" +
-      "s_sampling_interval\030\002 \001(\003B\013\372\3071\0071-86400\0221" +
-      "\n\034statements_sampling_interval\030\003 \001(\003B\013\372\307" +
-      "1\0071-86400Bs\n\"yandex.cloud.api.mdb.postgr" +
-      "esql.v1ZMgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/mdb/postgresql/v1;post" +
-      "gresqlb\006proto3"
+      "stgresqlConfigSet12_1CH\000R\026postgresqlConf" +
+      "ig_12_1c\022q\n\024postgresql_config_13\030\017 \001(\0132<" +
+      ".yandex.cloud.mdb.postgresql.v1.config.P" +
+      "ostgresqlConfigSet13H\000R\023postgresqlConfig" +
+      "_13\022M\n\rpooler_config\030\004 \001(\01326.yandex.clou" +
+      "d.mdb.postgresql.v1.ConnectionPoolerConf" +
+      "ig\022<\n\tresources\030\005 \001(\0132).yandex.cloud.mdb" +
+      ".postgresql.v1.Resources\0220\n\014autofailover" +
+      "\030\006 \001(\0132\032.google.protobuf.BoolValue\0223\n\023ba" +
+      "ckup_window_start\030\007 \001(\0132\026.google.type.Ti" +
+      "meOfDay\0226\n\006access\030\t \001(\0132&.yandex.cloud.m" +
+      "db.postgresql.v1.Access\022W\n\027performance_d" +
+      "iagnostics\030\014 \001(\01326.yandex.cloud.mdb.post" +
+      "gresql.v1.PerformanceDiagnosticsB\023\n\021post" +
+      "gresql_config\"\376\001\n\026ConnectionPoolerConfig" +
+      "\022X\n\014pooling_mode\030\001 \001(\0162B.yandex.cloud.md" +
+      "b.postgresql.v1.ConnectionPoolerConfig.P" +
+      "oolingMode\0220\n\014pool_discard\030\002 \001(\0132\032.googl" +
+      "e.protobuf.BoolValue\"X\n\013PoolingMode\022\034\n\030P" +
+      "OOLING_MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017" +
+      "\n\013TRANSACTION\020\002\022\r\n\tSTATEMENT\020\003\"\342\005\n\004Host\022" +
+      "\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zon" +
+      "e_id\030\003 \001(\t\022<\n\tresources\030\004 \001(\0132).yandex.c" +
+      "loud.mdb.postgresql.v1.Resources\0227\n\004role" +
+      "\030\005 \001(\0162).yandex.cloud.mdb.postgresql.v1." +
+      "Host.Role\022;\n\006health\030\006 \001(\0162+.yandex.cloud" +
+      ".mdb.postgresql.v1.Host.Health\0229\n\010servic" +
+      "es\030\007 \003(\0132\'.yandex.cloud.mdb.postgresql.v" +
+      "1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\032\n\022replicat" +
+      "ion_source\030\t \001(\t\022-\n\010priority\030\n \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022:\n\006config\030\013 \001(\0132" +
+      "*.yandex.cloud.mdb.postgresql.v1.HostCon" +
+      "fig\022\030\n\020assign_public_ip\030\014 \001(\010\022F\n\014replica" +
+      "_type\030\r \001(\01620.yandex.cloud.mdb.postgresq" +
+      "l.v1.Host.ReplicaType\"1\n\004Role\022\020\n\014ROLE_UN" +
+      "KNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"H\n\013Repl" +
+      "icaType\022\030\n\024REPLICA_TYPE_UNKNOWN\020\000\022\t\n\005ASY" +
+      "NC\020\001\022\010\n\004SYNC\020\002\022\n\n\006QUORUM\020\003\"?\n\006Health\022\022\n\016" +
+      "HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n" +
+      "\010DEGRADED\020\003\"\377\007\n\nHostConfig\022y\n\025postgresql" +
+      "_config_9_6\030\001 \001(\0132>.yandex.cloud.mdb.pos" +
+      "tgresql.v1.config.PostgresqlHostConfig9_" +
+      "6H\000R\030postgresqlHostConfig_9_6\022\177\n\027postgre" +
+      "sql_config_10_1c\030\004 \001(\0132@.yandex.cloud.md" +
+      "b.postgresql.v1.config.PostgresqlHostCon" +
+      "fig10_1CH\000R\032postgresqlHostConfig_10_1c\022v" +
+      "\n\024postgresql_config_10\030\002 \001(\0132=.yandex.cl" +
+      "oud.mdb.postgresql.v1.config.PostgresqlH" +
+      "ostConfig10H\000R\027postgresqlHostConfig_10\022v" +
+      "\n\024postgresql_config_11\030\003 \001(\0132=.yandex.cl" +
+      "oud.mdb.postgresql.v1.config.PostgresqlH" +
+      "ostConfig11H\000R\027postgresqlHostConfig_11\022\177" +
+      "\n\027postgresql_config_11_1c\030\006 \001(\0132@.yandex" +
+      ".cloud.mdb.postgresql.v1.config.Postgres" +
+      "qlHostConfig11_1CH\000R\032postgresqlHostConfi" +
+      "g_11_1c\022v\n\024postgresql_config_12\030\005 \001(\0132=." +
+      "yandex.cloud.mdb.postgresql.v1.config.Po" +
+      "stgresqlHostConfig12H\000R\027postgresqlHostCo" +
+      "nfig_12\022\177\n\027postgresql_config_12_1c\030\007 \001(\013" +
+      "2@.yandex.cloud.mdb.postgresql.v1.config" +
+      ".PostgresqlHostConfig12_1CH\000R\032postgresql" +
+      "HostConfig_12_1c\022v\n\024postgresql_config_13" +
+      "\030\010 \001(\0132=.yandex.cloud.mdb.postgresql.v1." +
+      "config.PostgresqlHostConfig13H\000R\027postgre" +
+      "sqlHostConfig_13B\023\n\021postgresql_config\"\362\001" +
+      "\n\007Service\022:\n\004type\030\001 \001(\0162,.yandex.cloud.m" +
+      "db.postgresql.v1.Service.Type\022>\n\006health\030" +
+      "\002 \001(\0162..yandex.cloud.mdb.postgresql.v1.S" +
+      "ervice.Health\"8\n\004Type\022\024\n\020TYPE_UNSPECIFIE" +
+      "D\020\000\022\016\n\nPOSTGRESQL\020\001\022\n\n\006POOLER\020\002\"1\n\006Healt" +
+      "h\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD" +
+      "\020\002\"P\n\tResources\022\032\n\022resource_preset_id\030\001 " +
+      "\001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003" +
+      " \001(\t\",\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web" +
+      "_sql\030\002 \001(\010\"\215\001\n\026PerformanceDiagnostics\022\017\n" +
+      "\007enabled\030\001 \001(\010\022/\n\032sessions_sampling_inte" +
+      "rval\030\002 \001(\003B\013\372\3071\0071-86400\0221\n\034statements_sa" +
+      "mpling_interval\030\003 \001(\003B\013\372\3071\0071-86400Bs\n\"ya" +
+      "ndex.cloud.api.mdb.postgresql.v1ZMgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/mdb/postgresql/v1;postgresqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19502,6 +20064,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.postgresql.v1.config.Postgresql11.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.config.Postgresql12.getDescriptor(),
+          yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.config.Postgresql121C.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.config.Host96.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.config.Host10.getDescriptor(),
@@ -19509,6 +20072,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.postgresql.v1.config.Host11.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.config.Host111C.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.config.Host12.getDescriptor(),
+          yandex.cloud.api.mdb.postgresql.v1.config.Host13.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.config.Host121C.getDescriptor(),
           yandex.cloud.api.mdb.postgresql.v1.Maintenance.getDescriptor(),
         }, assigner);
@@ -19535,7 +20099,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig111C", "PostgresqlConfig12", "PostgresqlConfig121C", "PoolerConfig", "Resources", "Autofailover", "BackupWindowStart", "Access", "PerformanceDiagnostics", "PostgresqlConfig", });
+        new java.lang.String[] { "Version", "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig111C", "PostgresqlConfig12", "PostgresqlConfig121C", "PostgresqlConfig13", "PoolerConfig", "Resources", "Autofailover", "BackupWindowStart", "Access", "PerformanceDiagnostics", "PostgresqlConfig", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ConnectionPoolerConfig_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_postgresql_v1_ConnectionPoolerConfig_fieldAccessorTable = new
@@ -19553,7 +20117,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_HostConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_HostConfig_descriptor,
-        new java.lang.String[] { "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig111C", "PostgresqlConfig12", "PostgresqlConfig121C", "PostgresqlConfig", });
+        new java.lang.String[] { "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig111C", "PostgresqlConfig12", "PostgresqlConfig121C", "PostgresqlConfig13", "PostgresqlConfig", });
     internal_static_yandex_cloud_mdb_postgresql_v1_Service_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_postgresql_v1_Service_fieldAccessorTable = new
@@ -19593,6 +20157,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.postgresql.v1.config.Postgresql11.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.config.Postgresql111C.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.config.Postgresql12.getDescriptor();
+    yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.config.Postgresql121C.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.config.Host96.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.config.Host10.getDescriptor();
@@ -19600,6 +20165,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.postgresql.v1.config.Host11.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.config.Host111C.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.config.Host12.getDescriptor();
+    yandex.cloud.api.mdb.postgresql.v1.config.Host13.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.config.Host121C.getDescriptor();
     yandex.cloud.api.mdb.postgresql.v1.Maintenance.getDescriptor();
   }

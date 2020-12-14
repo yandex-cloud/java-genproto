@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing Address resources.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -275,10 +278,17 @@ public final class AddressServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Address resources.
+   * </pre>
    */
   public static abstract class AddressServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified Address resource.
+     * To get the list of all available Address resources, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> responseObserver) {
@@ -286,6 +296,10 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified Address resource by a given value.
+     * To get the list of all available Address resources, make a [List] request.
+     * </pre>
      */
     public void getByValue(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressByValueRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> responseObserver) {
@@ -293,6 +307,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of Address resources in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse> responseObserver) {
@@ -300,6 +317,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an address in the specified folder and network.
+     * </pre>
      */
     public void create(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -307,6 +327,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified address.
+     * </pre>
      */
     public void update(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.UpdateAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -314,6 +337,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified address.
+     * </pre>
      */
     public void delete(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.DeleteAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -321,6 +347,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List operations for the specified address.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsResponse> responseObserver) {
@@ -383,6 +412,9 @@ public final class AddressServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Address resources.
+   * </pre>
    */
   public static final class AddressServiceStub extends io.grpc.stub.AbstractStub<AddressServiceStub> {
     private AddressServiceStub(io.grpc.Channel channel) {
@@ -401,6 +433,10 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified Address resource.
+     * To get the list of all available Address resources, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> responseObserver) {
@@ -409,6 +445,10 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified Address resource by a given value.
+     * To get the list of all available Address resources, make a [List] request.
+     * </pre>
      */
     public void getByValue(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressByValueRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> responseObserver) {
@@ -417,6 +457,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of Address resources in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse> responseObserver) {
@@ -425,6 +468,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an address in the specified folder and network.
+     * </pre>
      */
     public void create(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -433,6 +479,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified address.
+     * </pre>
      */
     public void update(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.UpdateAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -441,6 +490,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified address.
+     * </pre>
      */
     public void delete(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.DeleteAddressRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -449,6 +501,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List operations for the specified address.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsResponse> responseObserver) {
@@ -458,6 +513,9 @@ public final class AddressServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Address resources.
+   * </pre>
    */
   public static final class AddressServiceBlockingStub extends io.grpc.stub.AbstractStub<AddressServiceBlockingStub> {
     private AddressServiceBlockingStub(io.grpc.Channel channel) {
@@ -476,6 +534,10 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified Address resource.
+     * To get the list of all available Address resources, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.vpc.v1.AddressOuterClass.Address get(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressRequest request) {
       return blockingUnaryCall(
@@ -483,6 +545,10 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified Address resource by a given value.
+     * To get the list of all available Address resources, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.vpc.v1.AddressOuterClass.Address getByValue(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressByValueRequest request) {
       return blockingUnaryCall(
@@ -490,6 +556,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of Address resources in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse list(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest request) {
       return blockingUnaryCall(
@@ -497,6 +566,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an address in the specified folder and network.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest request) {
       return blockingUnaryCall(
@@ -504,6 +576,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified address.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.UpdateAddressRequest request) {
       return blockingUnaryCall(
@@ -511,6 +586,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified address.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.DeleteAddressRequest request) {
       return blockingUnaryCall(
@@ -518,6 +596,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List operations for the specified address.
+     * </pre>
      */
     public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsResponse listOperations(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsRequest request) {
       return blockingUnaryCall(
@@ -526,6 +607,9 @@ public final class AddressServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Address resources.
+   * </pre>
    */
   public static final class AddressServiceFutureStub extends io.grpc.stub.AbstractStub<AddressServiceFutureStub> {
     private AddressServiceFutureStub(io.grpc.Channel channel) {
@@ -544,6 +628,10 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified Address resource.
+     * To get the list of all available Address resources, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> get(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressRequest request) {
@@ -552,6 +640,10 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified Address resource by a given value.
+     * To get the list of all available Address resources, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> getByValue(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.GetAddressByValueRequest request) {
@@ -560,6 +652,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of Address resources in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesResponse> list(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressesRequest request) {
@@ -568,6 +663,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an address in the specified folder and network.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.CreateAddressRequest request) {
@@ -576,6 +674,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified address.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.UpdateAddressRequest request) {
@@ -584,6 +685,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified address.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.DeleteAddressRequest request) {
@@ -592,6 +696,9 @@ public final class AddressServiceGrpc {
     }
 
     /**
+     * <pre>
+     * List operations for the specified address.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsResponse> listOperations(
         yandex.cloud.api.vpc.v1.AddressServiceOuterClass.ListAddressOperationsRequest request) {

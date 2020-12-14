@@ -1877,28 +1877,28 @@ public final class TopicOuterClass {
     com.google.protobuf.Int64ValueOrBuilder getReplicationFactorOrBuilder();
 
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
      */
     boolean hasTopicConfig21();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 getTopicConfig21();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder getTopicConfig21OrBuilder();
 
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
      */
     boolean hasTopicConfig26();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 getTopicConfig26();
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
      */
     yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder getTopicConfig26OrBuilder();
 
@@ -2184,13 +2184,13 @@ public final class TopicOuterClass {
 
     public static final int TOPIC_CONFIG_2_1_FIELD_NUMBER = 4;
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
      */
     public boolean hasTopicConfig21() {
       return topicConfigCase_ == 4;
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
      */
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 getTopicConfig21() {
       if (topicConfigCase_ == 4) {
@@ -2199,7 +2199,7 @@ public final class TopicOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.getDefaultInstance();
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
      */
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder getTopicConfig21OrBuilder() {
       if (topicConfigCase_ == 4) {
@@ -2210,13 +2210,13 @@ public final class TopicOuterClass {
 
     public static final int TOPIC_CONFIG_2_6_FIELD_NUMBER = 5;
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
      */
     public boolean hasTopicConfig26() {
       return topicConfigCase_ == 5;
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
      */
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 getTopicConfig26() {
       if (topicConfigCase_ == 5) {
@@ -2225,7 +2225,7 @@ public final class TopicOuterClass {
       return yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.getDefaultInstance();
     }
     /**
-     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+     * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
      */
     public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder getTopicConfig26OrBuilder() {
       if (topicConfigCase_ == 5) {
@@ -3081,13 +3081,13 @@ public final class TopicOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder> topicConfig21Builder_;
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
        */
       public boolean hasTopicConfig21() {
         return topicConfigCase_ == 4;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 getTopicConfig21() {
         if (topicConfig21Builder_ == null) {
@@ -3103,7 +3103,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
        */
       public Builder setTopicConfig21(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 value) {
         if (topicConfig21Builder_ == null) {
@@ -3119,7 +3119,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
        */
       public Builder setTopicConfig21(
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.Builder builderForValue) {
@@ -3133,7 +3133,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
        */
       public Builder mergeTopicConfig21(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1 value) {
         if (topicConfig21Builder_ == null) {
@@ -3155,7 +3155,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
        */
       public Builder clearTopicConfig21() {
         if (topicConfig21Builder_ == null) {
@@ -3174,13 +3174,13 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.Builder getTopicConfig21Builder() {
         return getTopicConfig21FieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder getTopicConfig21OrBuilder() {
         if ((topicConfigCase_ == 4) && (topicConfig21Builder_ != null)) {
@@ -3193,7 +3193,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_1 topic_config_2_1 = 4[json_name = "topicConfig_2_1"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_1OrBuilder> 
@@ -3217,13 +3217,13 @@ public final class TopicOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder> topicConfig26Builder_;
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
        */
       public boolean hasTopicConfig26() {
         return topicConfigCase_ == 5;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 getTopicConfig26() {
         if (topicConfig26Builder_ == null) {
@@ -3239,7 +3239,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
        */
       public Builder setTopicConfig26(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 value) {
         if (topicConfig26Builder_ == null) {
@@ -3255,7 +3255,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
        */
       public Builder setTopicConfig26(
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.Builder builderForValue) {
@@ -3269,7 +3269,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
        */
       public Builder mergeTopicConfig26(yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6 value) {
         if (topicConfig26Builder_ == null) {
@@ -3291,7 +3291,7 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
        */
       public Builder clearTopicConfig26() {
         if (topicConfig26Builder_ == null) {
@@ -3310,13 +3310,13 @@ public final class TopicOuterClass {
         return this;
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.Builder getTopicConfig26Builder() {
         return getTopicConfig26FieldBuilder().getBuilder();
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
        */
       public yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder getTopicConfig26OrBuilder() {
         if ((topicConfigCase_ == 5) && (topicConfig26Builder_ != null)) {
@@ -3329,7 +3329,7 @@ public final class TopicOuterClass {
         }
       }
       /**
-       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5;</code>
+       * <code>.yandex.cloud.mdb.kafka.v1.TopicConfig2_6 topic_config_2_6 = 5[json_name = "topicConfig_2_6"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6.Builder, yandex.cloud.api.mdb.kafka.v1.TopicOuterClass.TopicConfig2_6OrBuilder> 
@@ -10943,63 +10943,64 @@ public final class TopicOuterClass {
       ".mdb.kafka.v1.TopicConfig2_1H\000R\017topicCon" +
       "fig_2_1\022V\n\020topic_config_2_6\030\006 \001(\0132).yand" +
       "ex.cloud.mdb.kafka.v1.TopicConfig2_6H\000R\017" +
-      "topicConfig_2_6B\016\n\014topic_config\"\241\002\n\tTopi" +
+      "topicConfig_2_6B\016\n\014topic_config\"\303\002\n\tTopi" +
       "cSpec\022\014\n\004name\030\001 \001(\t\022/\n\npartitions\030\002 \001(\0132" +
       "\033.google.protobuf.Int64Value\0227\n\022replicat" +
       "ion_factor\030\003 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022E\n\020topic_config_2_1\030\004 \001(\0132).yandex" +
-      ".cloud.mdb.kafka.v1.TopicConfig2_1H\000\022E\n\020" +
-      "topic_config_2_6\030\005 \001(\0132).yandex.cloud.md" +
-      "b.kafka.v1.TopicConfig2_6H\000B\016\n\014topic_con" +
-      "fig\"\214\007\n\016TopicConfig2_1\022O\n\016cleanup_policy" +
-      "\030\001 \001(\01627.yandex.cloud.mdb.kafka.v1.Topic" +
-      "Config2_1.CleanupPolicy\022D\n\020compression_t" +
-      "ype\030\002 \001(\0162*.yandex.cloud.mdb.kafka.v1.Co" +
-      "mpressionType\0228\n\023delete_retention_ms\030\003 \001" +
-      "(\0132\033.google.protobuf.Int64Value\0229\n\024file_" +
-      "delete_delay_ms\030\004 \001(\0132\033.google.protobuf." +
-      "Int64Value\0223\n\016flush_messages\030\005 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022-\n\010flush_ms\030\006 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022:\n\025min_co" +
-      "mpaction_lag_ms\030\007 \001(\0132\033.google.protobuf." +
-      "Int64Value\0224\n\017retention_bytes\030\010 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\0221\n\014retention_ms" +
-      "\030\t \001(\0132\033.google.protobuf.Int64Value\0226\n\021m" +
-      "ax_message_bytes\030\n \001(\0132\033.google.protobuf" +
-      ".Int64Value\0228\n\023min_insync_replicas\030\013 \001(\013" +
-      "2\033.google.protobuf.Int64Value\0222\n\rsegment" +
-      "_bytes\030\014 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022/\n\013preallocate\030\r \001(\0132\032.google.protobuf" +
-      ".BoolValue\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP_" +
-      "POLICY_UNSPECIFIED\020\000\022\031\n\025CLEANUP_POLICY_D" +
-      "ELETE\020\001\022\032\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n!C" +
-      "LEANUP_POLICY_COMPACT_AND_DELETE\020\003\"\214\007\n\016T" +
-      "opicConfig2_6\022O\n\016cleanup_policy\030\001 \001(\01627." +
-      "yandex.cloud.mdb.kafka.v1.TopicConfig2_6" +
-      ".CleanupPolicy\022D\n\020compression_type\030\002 \001(\016" +
-      "2*.yandex.cloud.mdb.kafka.v1.Compression" +
-      "Type\0228\n\023delete_retention_ms\030\003 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\0229\n\024file_delete_de" +
-      "lay_ms\030\004 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\0223\n\016flush_messages\030\005 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022-\n\010flush_ms\030\006 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022:\n\025min_compaction_" +
-      "lag_ms\030\007 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\0224\n\017retention_bytes\030\010 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\0221\n\014retention_ms\030\t \001(\0132\033." +
-      "google.protobuf.Int64Value\0226\n\021max_messag" +
-      "e_bytes\030\n \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\0228\n\023min_insync_replicas\030\013 \001(\0132\033.google" +
-      ".protobuf.Int64Value\0222\n\rsegment_bytes\030\014 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022/\n\013prea" +
-      "llocate\030\r \001(\0132\032.google.protobuf.BoolValu" +
-      "e\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP_POLICY_UN" +
-      "SPECIFIED\020\000\022\031\n\025CLEANUP_POLICY_DELETE\020\001\022\032" +
-      "\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n!CLEANUP_PO" +
-      "LICY_COMPACT_AND_DELETE\020\003Bd\n\035yandex.clou" +
-      "d.api.mdb.kafka.v1ZCgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/mdb/kafka/v" +
-      "1;kafkab\006proto3"
+      "Value\022V\n\020topic_config_2_1\030\004 \001(\0132).yandex" +
+      ".cloud.mdb.kafka.v1.TopicConfig2_1H\000R\017to" +
+      "picConfig_2_1\022V\n\020topic_config_2_6\030\005 \001(\0132" +
+      ").yandex.cloud.mdb.kafka.v1.TopicConfig2" +
+      "_6H\000R\017topicConfig_2_6B\016\n\014topic_config\"\214\007" +
+      "\n\016TopicConfig2_1\022O\n\016cleanup_policy\030\001 \001(\016" +
+      "27.yandex.cloud.mdb.kafka.v1.TopicConfig" +
+      "2_1.CleanupPolicy\022D\n\020compression_type\030\002 " +
+      "\001(\0162*.yandex.cloud.mdb.kafka.v1.Compress" +
+      "ionType\0228\n\023delete_retention_ms\030\003 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\0229\n\024file_delete" +
+      "_delay_ms\030\004 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\0223\n\016flush_messages\030\005 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022-\n\010flush_ms\030\006 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022:\n\025min_compacti" +
+      "on_lag_ms\030\007 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\0224\n\017retention_bytes\030\010 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\0221\n\014retention_ms\030\t \001(\013" +
+      "2\033.google.protobuf.Int64Value\0226\n\021max_mes" +
+      "sage_bytes\030\n \001(\0132\033.google.protobuf.Int64" +
+      "Value\0228\n\023min_insync_replicas\030\013 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\0222\n\rsegment_bytes" +
+      "\030\014 \001(\0132\033.google.protobuf.Int64Value\022/\n\013p" +
+      "reallocate\030\r \001(\0132\032.google.protobuf.BoolV" +
+      "alue\"\215\001\n\rCleanupPolicy\022\036\n\032CLEANUP_POLICY" +
+      "_UNSPECIFIED\020\000\022\031\n\025CLEANUP_POLICY_DELETE\020" +
+      "\001\022\032\n\026CLEANUP_POLICY_COMPACT\020\002\022%\n!CLEANUP" +
+      "_POLICY_COMPACT_AND_DELETE\020\003\"\214\007\n\016TopicCo" +
+      "nfig2_6\022O\n\016cleanup_policy\030\001 \001(\01627.yandex" +
+      ".cloud.mdb.kafka.v1.TopicConfig2_6.Clean" +
+      "upPolicy\022D\n\020compression_type\030\002 \001(\0162*.yan" +
+      "dex.cloud.mdb.kafka.v1.CompressionType\0228" +
+      "\n\023delete_retention_ms\030\003 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\0229\n\024file_delete_delay_ms" +
+      "\030\004 \001(\0132\033.google.protobuf.Int64Value\0223\n\016f" +
+      "lush_messages\030\005 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022-\n\010flush_ms\030\006 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022:\n\025min_compaction_lag_ms" +
+      "\030\007 \001(\0132\033.google.protobuf.Int64Value\0224\n\017r" +
+      "etention_bytes\030\010 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\0221\n\014retention_ms\030\t \001(\0132\033.google" +
+      ".protobuf.Int64Value\0226\n\021max_message_byte" +
+      "s\030\n \001(\0132\033.google.protobuf.Int64Value\0228\n\023" +
+      "min_insync_replicas\030\013 \001(\0132\033.google.proto" +
+      "buf.Int64Value\0222\n\rsegment_bytes\030\014 \001(\0132\033." +
+      "google.protobuf.Int64Value\022/\n\013preallocat" +
+      "e\030\r \001(\0132\032.google.protobuf.BoolValue\"\215\001\n\r" +
+      "CleanupPolicy\022\036\n\032CLEANUP_POLICY_UNSPECIF" +
+      "IED\020\000\022\031\n\025CLEANUP_POLICY_DELETE\020\001\022\032\n\026CLEA" +
+      "NUP_POLICY_COMPACT\020\002\022%\n!CLEANUP_POLICY_C" +
+      "OMPACT_AND_DELETE\020\003Bd\n\035yandex.cloud.api." +
+      "mdb.kafka.v1ZCgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/mdb/kafka/v1;kafk" +
+      "ab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

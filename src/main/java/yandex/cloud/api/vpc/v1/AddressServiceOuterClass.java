@@ -19,11 +19,21 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the Address resource to return.
+     * To get Address resource ID make a [AddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getAddressId();
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the Address resource to return.
+     * To get Address resource ID make a [AddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getAddressIdBytes();
@@ -109,7 +119,12 @@ public final class AddressServiceOuterClass {
     public static final int ADDRESS_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object addressId_;
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the Address resource to return.
+     * To get Address resource ID make a [AddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getAddressId() {
       java.lang.Object ref = addressId_;
@@ -124,7 +139,12 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the Address resource to return.
+     * To get Address resource ID make a [AddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getAddressIdBytes() {
@@ -445,7 +465,12 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object addressId_ = "";
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the Address resource to return.
+       * To get Address resource ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getAddressId() {
         java.lang.Object ref = addressId_;
@@ -460,7 +485,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the Address resource to return.
+       * To get Address resource ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getAddressIdBytes() {
@@ -476,7 +506,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the Address resource to return.
+       * To get Address resource ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setAddressId(
           java.lang.String value) {
@@ -489,7 +524,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the Address resource to return.
+       * To get Address resource ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearAddressId() {
         
@@ -498,7 +538,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the Address resource to return.
+       * To get Address resource ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setAddressIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1216,35 +1261,80 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string folder_id = 1;</code>
+     * <pre>
+     * ID of the folder to list addresses in.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getFolderId();
     /**
-     * <code>string folder_id = 1;</code>
+     * <pre>
+     * ID of the folder to list addresses in.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
-     * <code>int64 page_size = 2;</code>
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListAddressesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     long getPageSize();
 
     /**
-     * <code>string page_token = 3;</code>
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListAddressesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
-     * <code>string page_token = 3;</code>
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListAddressesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters Address listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-address`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters Address listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-address`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      */
     com.google.protobuf.ByteString
@@ -1351,7 +1441,12 @@ public final class AddressServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
-     * <code>string folder_id = 1;</code>
+     * <pre>
+     * ID of the folder to list addresses in.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
@@ -1366,7 +1461,12 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
-     * <code>string folder_id = 1;</code>
+     * <pre>
+     * ID of the folder to list addresses in.
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
@@ -1385,7 +1485,14 @@ public final class AddressServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
-     * <code>int64 page_size = 2;</code>
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListAddressesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     public long getPageSize() {
       return pageSize_;
@@ -1394,7 +1501,12 @@ public final class AddressServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
-     * <code>string page_token = 3;</code>
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListAddressesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
@@ -1409,7 +1521,12 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
-     * <code>string page_token = 3;</code>
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListAddressesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
@@ -1428,6 +1545,15 @@ public final class AddressServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters Address listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-address`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      */
     public java.lang.String getFilter() {
@@ -1443,6 +1569,15 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters Address listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-address`.
+     * </pre>
+     *
      * <code>string filter = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -1816,7 +1951,12 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
-       * <code>string folder_id = 1;</code>
+       * <pre>
+       * ID of the folder to list addresses in.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -1831,7 +1971,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string folder_id = 1;</code>
+       * <pre>
+       * ID of the folder to list addresses in.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -1847,7 +1992,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string folder_id = 1;</code>
+       * <pre>
+       * ID of the folder to list addresses in.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -1860,7 +2010,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string folder_id = 1;</code>
+       * <pre>
+       * ID of the folder to list addresses in.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearFolderId() {
         
@@ -1869,7 +2024,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string folder_id = 1;</code>
+       * <pre>
+       * ID of the folder to list addresses in.
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1885,13 +2045,27 @@ public final class AddressServiceOuterClass {
 
       private long pageSize_ ;
       /**
-       * <code>int64 page_size = 2;</code>
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListAddressesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
-       * <code>int64 page_size = 2;</code>
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListAddressesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder setPageSize(long value) {
         
@@ -1900,7 +2074,14 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>int64 page_size = 2;</code>
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListAddressesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder clearPageSize() {
         
@@ -1911,7 +2092,12 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
-       * <code>string page_token = 3;</code>
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListAddressesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -1926,7 +2112,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string page_token = 3;</code>
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListAddressesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -1942,7 +2133,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string page_token = 3;</code>
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListAddressesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -1955,7 +2151,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string page_token = 3;</code>
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListAddressesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
         
@@ -1964,7 +2165,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string page_token = 3;</code>
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListAddressesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -1980,6 +2186,15 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters Address listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-address`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public java.lang.String getFilter() {
@@ -1995,6 +2210,15 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters Address listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-address`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -2011,6 +2235,15 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters Address listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-address`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public Builder setFilter(
@@ -2024,6 +2257,15 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters Address listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-address`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public Builder clearFilter() {
@@ -2033,6 +2275,15 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters Address listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-address`.
+       * </pre>
+       *
        * <code>string filter = 4;</code>
        */
       public Builder setFilterBytes(
@@ -2104,34 +2355,68 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
      */
     java.util.List<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> 
         getAddressesList();
     /**
+     * <pre>
+     * List of addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
      */
     yandex.cloud.api.vpc.v1.AddressOuterClass.Address getAddresses(int index);
     /**
+     * <pre>
+     * List of addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
      */
     int getAddressesCount();
     /**
+     * <pre>
+     * List of addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.vpc.v1.AddressOuterClass.AddressOrBuilder> 
         getAddressesOrBuilderList();
     /**
+     * <pre>
+     * List of addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
      */
     yandex.cloud.api.vpc.v1.AddressOuterClass.AddressOrBuilder getAddressesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListAddressesRequest.page_size], use `next_page_token` as the value
+     * for the [ListAddressesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListAddressesRequest.page_size], use `next_page_token` as the value
+     * for the [ListAddressesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -2232,12 +2517,20 @@ public final class AddressServiceOuterClass {
     public static final int ADDRESSES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> addresses_;
     /**
+     * <pre>
+     * List of addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
      */
     public java.util.List<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> getAddressesList() {
       return addresses_;
     }
     /**
+     * <pre>
+     * List of addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.vpc.v1.AddressOuterClass.AddressOrBuilder> 
@@ -2245,18 +2538,30 @@ public final class AddressServiceOuterClass {
       return addresses_;
     }
     /**
+     * <pre>
+     * List of addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
      */
     public int getAddressesCount() {
       return addresses_.size();
     }
     /**
+     * <pre>
+     * List of addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
      */
     public yandex.cloud.api.vpc.v1.AddressOuterClass.Address getAddresses(int index) {
       return addresses_.get(index);
     }
     /**
+     * <pre>
+     * List of addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
      */
     public yandex.cloud.api.vpc.v1.AddressOuterClass.AddressOrBuilder getAddressesOrBuilder(
@@ -2267,6 +2572,13 @@ public final class AddressServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListAddressesRequest.page_size], use `next_page_token` as the value
+     * for the [ListAddressesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -2282,6 +2594,13 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListAddressesRequest.page_size], use `next_page_token` as the value
+     * for the [ListAddressesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -2673,6 +2992,10 @@ public final class AddressServiceOuterClass {
           yandex.cloud.api.vpc.v1.AddressOuterClass.Address, yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Builder, yandex.cloud.api.vpc.v1.AddressOuterClass.AddressOrBuilder> addressesBuilder_;
 
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public java.util.List<yandex.cloud.api.vpc.v1.AddressOuterClass.Address> getAddressesList() {
@@ -2683,6 +3006,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public int getAddressesCount() {
@@ -2693,6 +3020,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public yandex.cloud.api.vpc.v1.AddressOuterClass.Address getAddresses(int index) {
@@ -2703,6 +3034,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public Builder setAddresses(
@@ -2720,6 +3055,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public Builder setAddresses(
@@ -2734,6 +3073,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public Builder addAddresses(yandex.cloud.api.vpc.v1.AddressOuterClass.Address value) {
@@ -2750,6 +3093,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public Builder addAddresses(
@@ -2767,6 +3114,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public Builder addAddresses(
@@ -2781,6 +3132,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public Builder addAddresses(
@@ -2795,6 +3150,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public Builder addAllAddresses(
@@ -2810,6 +3169,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public Builder clearAddresses() {
@@ -2823,6 +3186,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public Builder removeAddresses(int index) {
@@ -2836,6 +3203,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Builder getAddressesBuilder(
@@ -2843,6 +3214,10 @@ public final class AddressServiceOuterClass {
         return getAddressesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public yandex.cloud.api.vpc.v1.AddressOuterClass.AddressOrBuilder getAddressesOrBuilder(
@@ -2853,6 +3228,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.vpc.v1.AddressOuterClass.AddressOrBuilder> 
@@ -2864,6 +3243,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Builder addAddressesBuilder() {
@@ -2871,6 +3254,10 @@ public final class AddressServiceOuterClass {
             yandex.cloud.api.vpc.v1.AddressOuterClass.Address.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Builder addAddressesBuilder(
@@ -2879,6 +3266,10 @@ public final class AddressServiceOuterClass {
             index, yandex.cloud.api.vpc.v1.AddressOuterClass.Address.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.vpc.v1.Address addresses = 1;</code>
        */
       public java.util.List<yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Builder> 
@@ -2902,6 +3293,13 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAddressesRequest.page_size], use `next_page_token` as the value
+       * for the [ListAddressesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -2917,6 +3315,13 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAddressesRequest.page_size], use `next_page_token` as the value
+       * for the [ListAddressesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2933,6 +3338,13 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAddressesRequest.page_size], use `next_page_token` as the value
+       * for the [ListAddressesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -2946,6 +3358,13 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAddressesRequest.page_size], use `next_page_token` as the value
+       * for the [ListAddressesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -2955,6 +3374,13 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAddressesRequest.page_size], use `next_page_token` as the value
+       * for the [ListAddressesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -3026,41 +3452,77 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string folder_id = 1;</code>
+     * <pre>
+     * ID of the folder to create a address in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getFolderId();
     /**
-     * <code>string folder_id = 1;</code>
+     * <pre>
+     * ID of the folder to create a address in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
-     * <code>string name = 2;</code>
+     * <pre>
+     * Name of the address. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 2;</code>
+     * <pre>
+     * Name of the address. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string description = 3;</code>
+     * <pre>
+     * Description of the address.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
-     * <code>string description = 3;</code>
+     * <pre>
+     * Description of the address.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -3071,19 +3533,31 @@ public final class AddressServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue);
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
@@ -3275,7 +3749,12 @@ public final class AddressServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
-     * <code>string folder_id = 1;</code>
+     * <pre>
+     * ID of the folder to create a address in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getFolderId() {
       java.lang.Object ref = folderId_;
@@ -3290,7 +3769,12 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
-     * <code>string folder_id = 1;</code>
+     * <pre>
+     * ID of the folder to create a address in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
@@ -3309,7 +3793,12 @@ public final class AddressServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 2;</code>
+     * <pre>
+     * Name of the address. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -3324,7 +3813,12 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 2;</code>
+     * <pre>
+     * Name of the address. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -3343,7 +3837,11 @@ public final class AddressServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
-     * <code>string description = 3;</code>
+     * <pre>
+     * Description of the address.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
@@ -3358,7 +3856,11 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
-     * <code>string description = 3;</code>
+     * <pre>
+     * Description of the address.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
@@ -3401,7 +3903,11 @@ public final class AddressServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public boolean containsLabels(
@@ -3417,14 +3923,22 @@ public final class AddressServiceOuterClass {
       return getLabelsMap();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -3436,7 +3950,11 @@ public final class AddressServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 4;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -3928,7 +4446,12 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
-       * <code>string folder_id = 1;</code>
+       * <pre>
+       * ID of the folder to create a address in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = folderId_;
@@ -3943,7 +4466,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string folder_id = 1;</code>
+       * <pre>
+       * ID of the folder to create a address in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -3959,7 +4487,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string folder_id = 1;</code>
+       * <pre>
+       * ID of the folder to create a address in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -3972,7 +4505,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string folder_id = 1;</code>
+       * <pre>
+       * ID of the folder to create a address in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearFolderId() {
         
@@ -3981,7 +4519,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string folder_id = 1;</code>
+       * <pre>
+       * ID of the folder to create a address in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3997,7 +4540,12 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 2;</code>
+       * <pre>
+       * Name of the address. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4012,7 +4560,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <pre>
+       * Name of the address. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4028,7 +4581,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 2;</code>
+       * <pre>
+       * Name of the address. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -4041,7 +4599,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <pre>
+       * Name of the address. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder clearName() {
         
@@ -4050,7 +4613,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 2;</code>
+       * <pre>
+       * Name of the address. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4066,7 +4634,11 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the address.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -4081,7 +4653,11 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the address.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -4097,7 +4673,11 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the address.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -4110,7 +4690,11 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the address.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
         
@@ -4119,7 +4703,11 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string description = 3;</code>
+       * <pre>
+       * Description of the address.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -4160,7 +4748,11 @@ public final class AddressServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public boolean containsLabels(
@@ -4176,14 +4768,22 @@ public final class AddressServiceOuterClass {
         return getLabelsMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -4195,7 +4795,11 @@ public final class AddressServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -4215,7 +4819,11 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -4234,7 +4842,11 @@ public final class AddressServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -4246,7 +4858,11 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 4;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -4450,7 +5066,7 @@ public final class AddressServiceOuterClass {
 
     /**
      * <pre>
-     * if unspecified, one will be automatically allocated from other params
+     * Value of address.
      * </pre>
      *
      * <code>string address = 1;</code>
@@ -4458,7 +5074,7 @@ public final class AddressServiceOuterClass {
     java.lang.String getAddress();
     /**
      * <pre>
-     * if unspecified, one will be automatically allocated from other params
+     * Value of address.
      * </pre>
      *
      * <code>string address = 1;</code>
@@ -4468,7 +5084,7 @@ public final class AddressServiceOuterClass {
 
     /**
      * <pre>
-     * only if address unspecified
+     * Availability zone from which the address will be allocated.
      * </pre>
      *
      * <code>string zone_id = 2;</code>
@@ -4476,7 +5092,7 @@ public final class AddressServiceOuterClass {
     java.lang.String getZoneId();
     /**
      * <pre>
-     * only if address unspecified
+     * Availability zone from which the address will be allocated.
      * </pre>
      *
      * <code>string zone_id = 2;</code>
@@ -4485,14 +5101,26 @@ public final class AddressServiceOuterClass {
         getZoneIdBytes();
 
     /**
+     * <pre>
+     * Parameters of the allocated address, for example DDoS Protection.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
      */
     boolean hasRequirements();
     /**
+     * <pre>
+     * Parameters of the allocated address, for example DDoS Protection.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
      */
     yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements getRequirements();
     /**
+     * <pre>
+     * Parameters of the allocated address, for example DDoS Protection.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
      */
     yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirementsOrBuilder getRequirementsOrBuilder();
@@ -4599,7 +5227,7 @@ public final class AddressServiceOuterClass {
     private volatile java.lang.Object address_;
     /**
      * <pre>
-     * if unspecified, one will be automatically allocated from other params
+     * Value of address.
      * </pre>
      *
      * <code>string address = 1;</code>
@@ -4618,7 +5246,7 @@ public final class AddressServiceOuterClass {
     }
     /**
      * <pre>
-     * if unspecified, one will be automatically allocated from other params
+     * Value of address.
      * </pre>
      *
      * <code>string address = 1;</code>
@@ -4641,7 +5269,7 @@ public final class AddressServiceOuterClass {
     private volatile java.lang.Object zoneId_;
     /**
      * <pre>
-     * only if address unspecified
+     * Availability zone from which the address will be allocated.
      * </pre>
      *
      * <code>string zone_id = 2;</code>
@@ -4660,7 +5288,7 @@ public final class AddressServiceOuterClass {
     }
     /**
      * <pre>
-     * only if address unspecified
+     * Availability zone from which the address will be allocated.
      * </pre>
      *
      * <code>string zone_id = 2;</code>
@@ -4682,18 +5310,30 @@ public final class AddressServiceOuterClass {
     public static final int REQUIREMENTS_FIELD_NUMBER = 3;
     private yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements requirements_;
     /**
+     * <pre>
+     * Parameters of the allocated address, for example DDoS Protection.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
      */
     public boolean hasRequirements() {
       return requirements_ != null;
     }
     /**
+     * <pre>
+     * Parameters of the allocated address, for example DDoS Protection.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
      */
     public yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements getRequirements() {
       return requirements_ == null ? yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements.getDefaultInstance() : requirements_;
     }
     /**
+     * <pre>
+     * Parameters of the allocated address, for example DDoS Protection.
+     * </pre>
+     *
      * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
      */
     public yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirementsOrBuilder getRequirementsOrBuilder() {
@@ -5053,7 +5693,7 @@ public final class AddressServiceOuterClass {
       private java.lang.Object address_ = "";
       /**
        * <pre>
-       * if unspecified, one will be automatically allocated from other params
+       * Value of address.
        * </pre>
        *
        * <code>string address = 1;</code>
@@ -5072,7 +5712,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * if unspecified, one will be automatically allocated from other params
+       * Value of address.
        * </pre>
        *
        * <code>string address = 1;</code>
@@ -5092,7 +5732,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * if unspecified, one will be automatically allocated from other params
+       * Value of address.
        * </pre>
        *
        * <code>string address = 1;</code>
@@ -5109,7 +5749,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * if unspecified, one will be automatically allocated from other params
+       * Value of address.
        * </pre>
        *
        * <code>string address = 1;</code>
@@ -5122,7 +5762,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * if unspecified, one will be automatically allocated from other params
+       * Value of address.
        * </pre>
        *
        * <code>string address = 1;</code>
@@ -5142,7 +5782,7 @@ public final class AddressServiceOuterClass {
       private java.lang.Object zoneId_ = "";
       /**
        * <pre>
-       * only if address unspecified
+       * Availability zone from which the address will be allocated.
        * </pre>
        *
        * <code>string zone_id = 2;</code>
@@ -5161,7 +5801,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * only if address unspecified
+       * Availability zone from which the address will be allocated.
        * </pre>
        *
        * <code>string zone_id = 2;</code>
@@ -5181,7 +5821,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * only if address unspecified
+       * Availability zone from which the address will be allocated.
        * </pre>
        *
        * <code>string zone_id = 2;</code>
@@ -5198,7 +5838,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * only if address unspecified
+       * Availability zone from which the address will be allocated.
        * </pre>
        *
        * <code>string zone_id = 2;</code>
@@ -5211,7 +5851,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * only if address unspecified
+       * Availability zone from which the address will be allocated.
        * </pre>
        *
        * <code>string zone_id = 2;</code>
@@ -5232,12 +5872,20 @@ public final class AddressServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements, yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements.Builder, yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirementsOrBuilder> requirementsBuilder_;
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public boolean hasRequirements() {
         return requirementsBuilder_ != null || requirements_ != null;
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements getRequirements() {
@@ -5248,6 +5896,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public Builder setRequirements(yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements value) {
@@ -5264,6 +5916,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public Builder setRequirements(
@@ -5278,6 +5934,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public Builder mergeRequirements(yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements value) {
@@ -5296,6 +5956,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public Builder clearRequirements() {
@@ -5310,6 +5974,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirements.Builder getRequirementsBuilder() {
@@ -5318,6 +5986,10 @@ public final class AddressServiceOuterClass {
         return getRequirementsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       public yandex.cloud.api.vpc.v1.AddressOuterClass.AddressRequirementsOrBuilder getRequirementsOrBuilder() {
@@ -5329,6 +6001,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Parameters of the allocated address, for example DDoS Protection.
+       * </pre>
+       *
        * <code>.yandex.cloud.vpc.v1.AddressRequirements requirements = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5402,10 +6078,18 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the address that is being created.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      */
     java.lang.String getAddressId();
     /**
+     * <pre>
+     * ID of the address that is being created.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -5492,6 +6176,10 @@ public final class AddressServiceOuterClass {
     public static final int ADDRESS_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object addressId_;
     /**
+     * <pre>
+     * ID of the address that is being created.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      */
     public java.lang.String getAddressId() {
@@ -5507,6 +6195,10 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the address that is being created.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -5828,6 +6520,10 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object addressId_ = "";
       /**
+       * <pre>
+       * ID of the address that is being created.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public java.lang.String getAddressId() {
@@ -5843,6 +6539,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the address that is being created.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -5859,6 +6559,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the address that is being created.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public Builder setAddressId(
@@ -5872,6 +6576,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the address that is being created.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public Builder clearAddressId() {
@@ -5881,6 +6589,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the address that is being created.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public Builder setAddressIdBytes(
@@ -5952,54 +6664,114 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the address to update.
+     *  
+     * To get the address ID make a [AddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getAddressId();
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the address to update.
+     *  
+     * To get the address ID make a [AddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getAddressIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
-     * <code>string name = 3;</code>
+     * <pre>
+     * New name for the address. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 3;</code>
+     * <pre>
+     * New name for the address. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string description = 4;</code>
+     * <pre>
+     * New description of the address.
+     * </pre>
+     *
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
-     * <code>string description = 4;</code>
+     * <pre>
+     * New description of the address.
+     * </pre>
+     *
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
         java.lang.String key);
@@ -6010,25 +6782,56 @@ public final class AddressServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue);
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
 
     /**
+     * <pre>
+     * Specifies if address is reserved or not.
+     * </pre>
+     *
      * <code>bool reserved = 6;</code>
      */
     boolean getReserved();
@@ -6173,7 +6976,13 @@ public final class AddressServiceOuterClass {
     public static final int ADDRESS_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object addressId_;
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the address to update.
+     *  
+     * To get the address ID make a [AddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getAddressId() {
       java.lang.Object ref = addressId_;
@@ -6188,7 +6997,13 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the address to update.
+     *  
+     * To get the address ID make a [AddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getAddressIdBytes() {
@@ -6207,18 +7022,30 @@ public final class AddressServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the Address should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -6228,7 +7055,12 @@ public final class AddressServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 3;</code>
+     * <pre>
+     * New name for the address. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -6243,7 +7075,12 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 3;</code>
+     * <pre>
+     * New name for the address. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -6262,7 +7099,11 @@ public final class AddressServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
-     * <code>string description = 4;</code>
+     * <pre>
+     * New description of the address.
+     * </pre>
+     *
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
       java.lang.Object ref = description_;
@@ -6277,7 +7118,11 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
-     * <code>string description = 4;</code>
+     * <pre>
+     * New description of the address.
+     * </pre>
+     *
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
@@ -6320,7 +7165,16 @@ public final class AddressServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public boolean containsLabels(
@@ -6336,14 +7190,32 @@ public final class AddressServiceOuterClass {
       return getLabelsMap();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
       return internalGetLabels().getMap();
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrDefault(
@@ -6355,7 +7227,16 @@ public final class AddressServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, string&gt; labels = 5;</code>
+     * <pre>
+     * Address labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [AddressService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
     public java.lang.String getLabelsOrThrow(
@@ -6372,6 +7253,10 @@ public final class AddressServiceOuterClass {
     public static final int RESERVED_FIELD_NUMBER = 6;
     private boolean reserved_;
     /**
+     * <pre>
+     * Specifies if address is reserved or not.
+     * </pre>
+     *
      * <code>bool reserved = 6;</code>
      */
     public boolean getReserved() {
@@ -6818,7 +7703,13 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object addressId_ = "";
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to update.
+       *  
+       * To get the address ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getAddressId() {
         java.lang.Object ref = addressId_;
@@ -6833,7 +7724,13 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to update.
+       *  
+       * To get the address ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getAddressIdBytes() {
@@ -6849,7 +7746,13 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to update.
+       *  
+       * To get the address ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setAddressId(
           java.lang.String value) {
@@ -6862,7 +7765,13 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to update.
+       *  
+       * To get the address ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearAddressId() {
         
@@ -6871,7 +7780,13 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to update.
+       *  
+       * To get the address ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setAddressIdBytes(
           com.google.protobuf.ByteString value) {
@@ -6889,12 +7804,20 @@ public final class AddressServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -6905,6 +7828,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -6921,6 +7848,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -6935,6 +7866,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -6953,6 +7888,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -6967,6 +7906,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -6975,6 +7918,10 @@ public final class AddressServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -6986,6 +7933,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the Address should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7004,7 +7955,12 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 3;</code>
+       * <pre>
+       * New name for the address. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7019,7 +7975,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 3;</code>
+       * <pre>
+       * New name for the address. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7035,7 +7996,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 3;</code>
+       * <pre>
+       * New name for the address. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -7048,7 +8014,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 3;</code>
+       * <pre>
+       * New name for the address. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder clearName() {
         
@@ -7057,7 +8028,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 3;</code>
+       * <pre>
+       * New name for the address. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7073,7 +8049,11 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
-       * <code>string description = 4;</code>
+       * <pre>
+       * New description of the address.
+       * </pre>
+       *
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
         java.lang.Object ref = description_;
@@ -7088,7 +8068,11 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string description = 4;</code>
+       * <pre>
+       * New description of the address.
+       * </pre>
+       *
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
@@ -7104,7 +8088,11 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string description = 4;</code>
+       * <pre>
+       * New description of the address.
+       * </pre>
+       *
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
           java.lang.String value) {
@@ -7117,7 +8105,11 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string description = 4;</code>
+       * <pre>
+       * New description of the address.
+       * </pre>
+       *
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
         
@@ -7126,7 +8118,11 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string description = 4;</code>
+       * <pre>
+       * New description of the address.
+       * </pre>
+       *
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -7167,7 +8163,16 @@ public final class AddressServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public boolean containsLabels(
@@ -7183,14 +8188,32 @@ public final class AddressServiceOuterClass {
         return getLabelsMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
         return internalGetLabels().getMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrDefault(
@@ -7202,7 +8225,16 @@ public final class AddressServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public java.lang.String getLabelsOrThrow(
@@ -7222,7 +8254,16 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder removeLabels(
@@ -7241,7 +8282,16 @@ public final class AddressServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
           java.lang.String key,
@@ -7253,7 +8303,16 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;string, string&gt; labels = 5;</code>
+       * <pre>
+       * Address labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [AddressService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
       public Builder putAllLabels(
@@ -7265,12 +8324,20 @@ public final class AddressServiceOuterClass {
 
       private boolean reserved_ ;
       /**
+       * <pre>
+       * Specifies if address is reserved or not.
+       * </pre>
+       *
        * <code>bool reserved = 6;</code>
        */
       public boolean getReserved() {
         return reserved_;
       }
       /**
+       * <pre>
+       * Specifies if address is reserved or not.
+       * </pre>
+       *
        * <code>bool reserved = 6;</code>
        */
       public Builder setReserved(boolean value) {
@@ -7280,6 +8347,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Specifies if address is reserved or not.
+       * </pre>
+       *
        * <code>bool reserved = 6;</code>
        */
       public Builder clearReserved() {
@@ -7346,10 +8417,18 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the Address that is being updated.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      */
     java.lang.String getAddressId();
     /**
+     * <pre>
+     * ID of the Address that is being updated.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -7436,6 +8515,10 @@ public final class AddressServiceOuterClass {
     public static final int ADDRESS_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object addressId_;
     /**
+     * <pre>
+     * ID of the Address that is being updated.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      */
     public java.lang.String getAddressId() {
@@ -7451,6 +8534,10 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the Address that is being updated.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -7772,6 +8859,10 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object addressId_ = "";
       /**
+       * <pre>
+       * ID of the Address that is being updated.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public java.lang.String getAddressId() {
@@ -7787,6 +8878,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Address that is being updated.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -7803,6 +8898,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the Address that is being updated.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public Builder setAddressId(
@@ -7816,6 +8915,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Address that is being updated.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public Builder clearAddressId() {
@@ -7825,6 +8928,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the Address that is being updated.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public Builder setAddressIdBytes(
@@ -7896,11 +9003,21 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the address to delete.
+     * To get a address ID make a [AddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getAddressId();
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the address to delete.
+     * To get a address ID make a [AddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getAddressIdBytes();
@@ -7986,7 +9103,12 @@ public final class AddressServiceOuterClass {
     public static final int ADDRESS_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object addressId_;
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the address to delete.
+     * To get a address ID make a [AddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getAddressId() {
       java.lang.Object ref = addressId_;
@@ -8001,7 +9123,12 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the address to delete.
+     * To get a address ID make a [AddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getAddressIdBytes() {
@@ -8322,7 +9449,12 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object addressId_ = "";
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to delete.
+       * To get a address ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getAddressId() {
         java.lang.Object ref = addressId_;
@@ -8337,7 +9469,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to delete.
+       * To get a address ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getAddressIdBytes() {
@@ -8353,7 +9490,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to delete.
+       * To get a address ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setAddressId(
           java.lang.String value) {
@@ -8366,7 +9508,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to delete.
+       * To get a address ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearAddressId() {
         
@@ -8375,7 +9522,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to delete.
+       * To get a address ID make a [AddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setAddressIdBytes(
           com.google.protobuf.ByteString value) {
@@ -8446,10 +9598,18 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the address that is being deleted.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      */
     java.lang.String getAddressId();
     /**
+     * <pre>
+     * ID of the address that is being deleted.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -8536,6 +9696,10 @@ public final class AddressServiceOuterClass {
     public static final int ADDRESS_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object addressId_;
     /**
+     * <pre>
+     * ID of the address that is being deleted.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      */
     public java.lang.String getAddressId() {
@@ -8551,6 +9715,10 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the address that is being deleted.
+     * </pre>
+     *
      * <code>string address_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -8872,6 +10040,10 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object addressId_ = "";
       /**
+       * <pre>
+       * ID of the address that is being deleted.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public java.lang.String getAddressId() {
@@ -8887,6 +10059,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the address that is being deleted.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -8903,6 +10079,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the address that is being deleted.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public Builder setAddressId(
@@ -8916,6 +10096,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the address that is being deleted.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public Builder clearAddressId() {
@@ -8925,6 +10109,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the address that is being deleted.
+       * </pre>
+       *
        * <code>string address_id = 1;</code>
        */
       public Builder setAddressIdBytes(
@@ -8996,26 +10184,53 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the address to list operations for.
+     * To get a address ID make a [tAddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getAddressId();
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the address to list operations for.
+     * To get a address ID make a [tAddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getAddressIdBytes();
 
     /**
-     * <code>int64 page_size = 2;</code>
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListAddressOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     long getPageSize();
 
     /**
-     * <code>string page_token = 3;</code>
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the 
+     * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
-     * <code>string page_token = 3;</code>
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the 
+     * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
@@ -9114,7 +10329,12 @@ public final class AddressServiceOuterClass {
     public static final int ADDRESS_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object addressId_;
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the address to list operations for.
+     * To get a address ID make a [tAddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getAddressId() {
       java.lang.Object ref = addressId_;
@@ -9129,7 +10349,12 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
-     * <code>string address_id = 1;</code>
+     * <pre>
+     * ID of the address to list operations for.
+     * To get a address ID make a [tAddressService.List] request.
+     * </pre>
+     *
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
         getAddressIdBytes() {
@@ -9148,7 +10373,14 @@ public final class AddressServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
-     * <code>int64 page_size = 2;</code>
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListAddressOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     public long getPageSize() {
       return pageSize_;
@@ -9157,7 +10389,12 @@ public final class AddressServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
-     * <code>string page_token = 3;</code>
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the 
+     * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
@@ -9172,7 +10409,12 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
-     * <code>string page_token = 3;</code>
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the 
+     * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
@@ -9528,7 +10770,12 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object addressId_ = "";
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to list operations for.
+       * To get a address ID make a [tAddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getAddressId() {
         java.lang.Object ref = addressId_;
@@ -9543,7 +10790,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to list operations for.
+       * To get a address ID make a [tAddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
           getAddressIdBytes() {
@@ -9559,7 +10811,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to list operations for.
+       * To get a address ID make a [tAddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setAddressId(
           java.lang.String value) {
@@ -9572,7 +10829,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to list operations for.
+       * To get a address ID make a [tAddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearAddressId() {
         
@@ -9581,7 +10843,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string address_id = 1;</code>
+       * <pre>
+       * ID of the address to list operations for.
+       * To get a address ID make a [tAddressService.List] request.
+       * </pre>
+       *
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setAddressIdBytes(
           com.google.protobuf.ByteString value) {
@@ -9597,13 +10864,27 @@ public final class AddressServiceOuterClass {
 
       private long pageSize_ ;
       /**
-       * <code>int64 page_size = 2;</code>
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListAddressOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
-       * <code>int64 page_size = 2;</code>
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListAddressOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder setPageSize(long value) {
         
@@ -9612,7 +10893,14 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>int64 page_size = 2;</code>
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListAddressOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder clearPageSize() {
         
@@ -9623,7 +10911,12 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
-       * <code>string page_token = 3;</code>
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the 
+       * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -9638,7 +10931,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string page_token = 3;</code>
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the 
+       * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -9654,7 +10952,12 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
-       * <code>string page_token = 3;</code>
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the 
+       * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -9667,7 +10970,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string page_token = 3;</code>
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the 
+       * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
         
@@ -9676,7 +10984,12 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
-       * <code>string page_token = 3;</code>
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the 
+       * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -9747,34 +11060,68 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of operations for the specified address.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
         getOperationsList();
     /**
+     * <pre>
+     * List of operations for the specified address.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
+     * <pre>
+     * List of operations for the specified address.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     int getOperationsCount();
     /**
+     * <pre>
+     * List of operations for the specified address.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList();
     /**
+     * <pre>
+     * List of operations for the specified address.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListAddressOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListAddressOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListAddressOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListAddressOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -9875,12 +11222,20 @@ public final class AddressServiceOuterClass {
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
+     * <pre>
+     * List of operations for the specified address.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified address.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -9888,18 +11243,30 @@ public final class AddressServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified address.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public int getOperationsCount() {
       return operations_.size();
     }
     /**
+     * <pre>
+     * List of operations for the specified address.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
     /**
+     * <pre>
+     * List of operations for the specified address.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -9910,6 +11277,13 @@ public final class AddressServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListAddressOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListAddressOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -9925,6 +11299,13 @@ public final class AddressServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListAddressOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListAddressOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -10316,6 +11697,10 @@ public final class AddressServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
 
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
@@ -10326,6 +11711,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public int getOperationsCount() {
@@ -10336,6 +11725,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
@@ -10346,6 +11739,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -10363,6 +11760,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -10377,6 +11778,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
@@ -10393,6 +11798,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -10410,6 +11819,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -10424,6 +11837,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -10438,6 +11855,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addAllOperations(
@@ -10453,6 +11874,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder clearOperations() {
@@ -10466,6 +11891,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder removeOperations(int index) {
@@ -10479,6 +11908,10 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
@@ -10486,6 +11919,10 @@ public final class AddressServiceOuterClass {
         return getOperationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -10496,6 +11933,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -10507,6 +11948,10 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
@@ -10514,6 +11959,10 @@ public final class AddressServiceOuterClass {
             yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
@@ -10522,6 +11971,10 @@ public final class AddressServiceOuterClass {
             index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified address.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
@@ -10545,6 +11998,13 @@ public final class AddressServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAddressOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListAddressOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -10560,6 +12020,13 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAddressOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListAddressOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -10576,6 +12043,13 @@ public final class AddressServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAddressOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListAddressOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -10589,6 +12063,13 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAddressOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListAddressOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -10598,6 +12079,13 @@ public final class AddressServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAddressOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListAddressOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -10753,71 +12241,80 @@ public final class AddressServiceOuterClass {
       "otations.proto\032 google/protobuf/field_ma" +
       "sk.proto\032 yandex/cloud/api/operation.pro" +
       "to\032&yandex/cloud/operation/operation.pro" +
-      "to\032!yandex/cloud/vpc/v1/address.proto\"\'\n" +
-      "\021GetAddressRequest\022\022\n\naddress_id\030\001 \001(\t\"F" +
-      "\n\030GetAddressByValueRequest\022\037\n\025external_i" +
-      "pv4_address\030\001 \001(\tH\000B\t\n\007address\"`\n\024ListAd" +
-      "dressesRequest\022\021\n\tfolder_id\030\001 \001(\t\022\021\n\tpag" +
-      "e_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\022\016\n\006filt" +
-      "er\030\004 \001(\t\"a\n\025ListAddressesResponse\022/\n\tadd" +
-      "resses\030\001 \003(\0132\034.yandex.cloud.vpc.v1.Addre" +
-      "ss\022\027\n\017next_page_token\030\002 \001(\t\"\246\002\n\024CreateAd" +
-      "dressRequest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004name\030" +
-      "\002 \001(\t\022\023\n\013description\030\003 \001(\t\022E\n\006labels\030\004 \003" +
-      "(\01325.yandex.cloud.vpc.v1.CreateAddressRe" +
-      "quest.LabelsEntry\022R\n\032external_ipv4_addre" +
-      "ss_spec\030\005 \001(\0132,.yandex.cloud.vpc.v1.Exte" +
-      "rnalIpv4AddressSpecH\000\032-\n\013LabelsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n\014address_" +
-      "spec\"{\n\027ExternalIpv4AddressSpec\022\017\n\007addre" +
-      "ss\030\001 \001(\t\022\017\n\007zone_id\030\002 \001(\t\022>\n\014requirement" +
-      "s\030\003 \001(\0132(.yandex.cloud.vpc.v1.AddressReq" +
-      "uirements\"+\n\025CreateAddressMetadata\022\022\n\nad" +
-      "dress_id\030\001 \001(\t\"\206\002\n\024UpdateAddressRequest\022" +
-      "\022\n\naddress_id\030\001 \001(\t\022/\n\013update_mask\030\002 \001(\013" +
-      "2\032.google.protobuf.FieldMask\022\014\n\004name\030\003 \001" +
-      "(\t\022\023\n\013description\030\004 \001(\t\022E\n\006labels\030\005 \003(\0132" +
-      "5.yandex.cloud.vpc.v1.UpdateAddressReque" +
-      "st.LabelsEntry\022\020\n\010reserved\030\006 \001(\010\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
-      "+\n\025UpdateAddressMetadata\022\022\n\naddress_id\030\001" +
-      " \001(\t\"*\n\024DeleteAddressRequest\022\022\n\naddress_" +
-      "id\030\001 \001(\t\"+\n\025DeleteAddressMetadata\022\022\n\nadd" +
-      "ress_id\030\001 \001(\t\"Y\n\034ListAddressOperationsRe" +
-      "quest\022\022\n\naddress_id\030\001 \001(\t\022\021\n\tpage_size\030\002" +
-      " \001(\003\022\022\n\npage_token\030\003 \001(\t\"o\n\035ListAddressO" +
-      "perationsResponse\0225\n\noperations\030\001 \003(\0132!." +
-      "yandex.cloud.operation.Operation\022\027\n\017next" +
-      "_page_token\030\002 \001(\t2\240\010\n\016AddressService\022s\n\003" +
-      "Get\022&.yandex.cloud.vpc.v1.GetAddressRequ" +
-      "est\032\034.yandex.cloud.vpc.v1.Address\"&\202\323\344\223\002" +
-      " \022\036/vpc/v1/addresses/{address_id}\022|\n\nGet" +
-      "ByValue\022-.yandex.cloud.vpc.v1.GetAddress" +
-      "ByValueRequest\032\034.yandex.cloud.vpc.v1.Add" +
-      "ress\"!\202\323\344\223\002\033\022\031/vpc/v1/addresses:byValue\022" +
-      "x\n\004List\022).yandex.cloud.vpc.v1.ListAddres" +
-      "sesRequest\032*.yandex.cloud.vpc.v1.ListAdd" +
-      "ressesResponse\"\031\202\323\344\223\002\023\022\021/vpc/v1/addresse" +
-      "s\022\230\001\n\006Create\022).yandex.cloud.vpc.v1.Creat" +
-      "eAddressRequest\032!.yandex.cloud.operation" +
-      ".Operation\"@\202\323\344\223\002\026\"\021/vpc/v1/addresses:\001*" +
-      "\262\322* \n\025CreateAddressMetadata\022\007Address\022\245\001\n" +
-      "\006Update\022).yandex.cloud.vpc.v1.UpdateAddr" +
-      "essRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"M\202\323\344\223\002#2\036/vpc/v1/addresses/{addres" +
-      "s_id}:\001*\262\322* \n\025UpdateAddressMetadata\022\007Add" +
-      "ress\022\260\001\n\006Delete\022).yandex.cloud.vpc.v1.De" +
-      "leteAddressRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"X\202\323\344\223\002 *\036/vpc/v1/addresses" +
-      "/{address_id}\262\322*.\n\025DeleteAddressMetadata" +
-      "\022\025google.protobuf.Empty\022\252\001\n\016ListOperatio" +
-      "ns\0221.yandex.cloud.vpc.v1.ListAddressOper" +
-      "ationsRequest\0322.yandex.cloud.vpc.v1.List" +
-      "AddressOperationsResponse\"1\202\323\344\223\002+\022)/vpc/" +
-      "v1/addresses/{address_id}/operationsBV\n\027" +
-      "yandex.cloud.api.vpc.v1Z;github.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/vpc/v1" +
-      ";vpcb\006proto3"
+      "to\032!yandex/cloud/vpc/v1/address.proto\032\035y" +
+      "andex/cloud/validation.proto\"5\n\021GetAddre" +
+      "ssRequest\022 \n\naddress_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\"F\n\030GetAddressByValueRequest\022\037\n\025exter" +
+      "nal_ipv4_address\030\001 \001(\tH\000B\t\n\007address\"\205\001\n\024" +
+      "ListAddressesRequest\022\037\n\tfolder_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=" +
+      "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\016\n\006f" +
+      "ilter\030\004 \001(\t\"a\n\025ListAddressesResponse\022/\n\t" +
+      "addresses\030\001 \003(\0132\034.yandex.cloud.vpc.v1.Ad" +
+      "dress\022\027\n\017next_page_token\030\002 \001(\t\"\244\003\n\024Creat" +
+      "eAddressRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0" +
+      "-9]{1,61}[a-z0-9]\022\036\n\013description\030\003 \001(\tB\t" +
+      "\212\3101\005<=256\022\206\001\n\006labels\030\004 \003(\01325.yandex.clou" +
+      "d.vpc.v1.CreateAddressRequest.LabelsEntr" +
+      "yB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004" +
+      "1-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022R\n\032external_i" +
+      "pv4_address_spec\030\005 \001(\0132,.yandex.cloud.vp" +
+      "c.v1.ExternalIpv4AddressSpecH\000\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\016\n" +
+      "\014address_spec\"{\n\027ExternalIpv4AddressSpec" +
+      "\022\017\n\007address\030\001 \001(\t\022\017\n\007zone_id\030\002 \001(\t\022>\n\014re" +
+      "quirements\030\003 \001(\0132(.yandex.cloud.vpc.v1.A" +
+      "ddressRequirements\"+\n\025CreateAddressMetad" +
+      "ata\022\022\n\naddress_id\030\001 \001(\t\"\204\003\n\024UpdateAddres" +
+      "sRequest\022 \n\naddress_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a" +
+      "-z0-9]{1,61}[a-z0-9]\022\036\n\013description\030\004 \001(" +
+      "\tB\t\212\3101\005<=256\022\206\001\n\006labels\030\005 \003(\01325.yandex.c" +
+      "loud.vpc.v1.UpdateAddressRequest.LabelsE" +
+      "ntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101" +
+      "\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\020\n\010reserve" +
+      "d\030\006 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"+\n\025UpdateAddressMetadata\022" +
+      "\022\n\naddress_id\030\001 \001(\t\"8\n\024DeleteAddressRequ" +
+      "est\022 \n\naddress_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n" +
+      "\025DeleteAddressMetadata\022\022\n\naddress_id\030\001 \001" +
+      "(\t\"~\n\034ListAddressOperationsRequest\022 \n\nad" +
+      "dress_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\"o\n\035ListAddressOperationsRespo" +
+      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
+      "peration.Operation\022\027\n\017next_page_token\030\002 " +
+      "\001(\t2\240\010\n\016AddressService\022s\n\003Get\022&.yandex.c" +
+      "loud.vpc.v1.GetAddressRequest\032\034.yandex.c" +
+      "loud.vpc.v1.Address\"&\202\323\344\223\002 \022\036/vpc/v1/add" +
+      "resses/{address_id}\022|\n\nGetByValue\022-.yand" +
+      "ex.cloud.vpc.v1.GetAddressByValueRequest" +
+      "\032\034.yandex.cloud.vpc.v1.Address\"!\202\323\344\223\002\033\022\031" +
+      "/vpc/v1/addresses:byValue\022x\n\004List\022).yand" +
+      "ex.cloud.vpc.v1.ListAddressesRequest\032*.y" +
+      "andex.cloud.vpc.v1.ListAddressesResponse" +
+      "\"\031\202\323\344\223\002\023\022\021/vpc/v1/addresses\022\230\001\n\006Create\022)" +
+      ".yandex.cloud.vpc.v1.CreateAddressReques" +
+      "t\032!.yandex.cloud.operation.Operation\"@\202\323" +
+      "\344\223\002\026\"\021/vpc/v1/addresses:\001*\262\322* \n\025CreateAd" +
+      "dressMetadata\022\007Address\022\245\001\n\006Update\022).yand" +
+      "ex.cloud.vpc.v1.UpdateAddressRequest\032!.y" +
+      "andex.cloud.operation.Operation\"M\202\323\344\223\002#2" +
+      "\036/vpc/v1/addresses/{address_id}:\001*\262\322* \n\025" +
+      "UpdateAddressMetadata\022\007Address\022\260\001\n\006Delet" +
+      "e\022).yandex.cloud.vpc.v1.DeleteAddressReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "X\202\323\344\223\002 *\036/vpc/v1/addresses/{address_id}\262" +
+      "\322*.\n\025DeleteAddressMetadata\022\025google.proto" +
+      "buf.Empty\022\252\001\n\016ListOperations\0221.yandex.cl" +
+      "oud.vpc.v1.ListAddressOperationsRequest\032" +
+      "2.yandex.cloud.vpc.v1.ListAddressOperati" +
+      "onsResponse\"1\202\323\344\223\002+\022)/vpc/v1/addresses/{" +
+      "address_id}/operationsBV\n\027yandex.cloud.a" +
+      "pi.vpc.v1Z;github.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/vpc/v1;vpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10835,6 +12332,7 @@ public final class AddressServiceOuterClass {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.vpc.v1.AddressOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_vpc_v1_GetAddressRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -10930,6 +12428,12 @@ public final class AddressServiceOuterClass {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.mapKey);
+    registry.add(yandex.cloud.api.Validation.pattern);
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
@@ -10937,6 +12441,7 @@ public final class AddressServiceOuterClass {
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.vpc.v1.AddressOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
