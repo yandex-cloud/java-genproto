@@ -211,7 +211,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
      */
     boolean hasMaxAllowedPacket();
     /**
@@ -220,7 +220,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
      */
     com.google.protobuf.Int64Value getMaxAllowedPacket();
     /**
@@ -229,7 +229,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxAllowedPacketOrBuilder();
 
@@ -3093,7 +3093,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
      */
     public boolean hasMaxAllowedPacket() {
       return maxAllowedPacket_ != null;
@@ -3104,7 +3104,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
      */
     public com.google.protobuf.Int64Value getMaxAllowedPacket() {
       return maxAllowedPacket_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxAllowedPacket_;
@@ -3115,7 +3115,7 @@ public final class Mysql80 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getMaxAllowedPacketOrBuilder() {
       return getMaxAllowedPacket();
@@ -7369,7 +7369,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
        */
       public boolean hasMaxAllowedPacket() {
         return maxAllowedPacketBuilder_ != null || maxAllowedPacket_ != null;
@@ -7380,7 +7380,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
        */
       public com.google.protobuf.Int64Value getMaxAllowedPacket() {
         if (maxAllowedPacketBuilder_ == null) {
@@ -7395,7 +7395,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
        */
       public Builder setMaxAllowedPacket(com.google.protobuf.Int64Value value) {
         if (maxAllowedPacketBuilder_ == null) {
@@ -7416,7 +7416,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
        */
       public Builder setMaxAllowedPacket(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -7435,7 +7435,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
        */
       public Builder mergeMaxAllowedPacket(com.google.protobuf.Int64Value value) {
         if (maxAllowedPacketBuilder_ == null) {
@@ -7458,7 +7458,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
        */
       public Builder clearMaxAllowedPacket() {
         if (maxAllowedPacketBuilder_ == null) {
@@ -7477,7 +7477,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxAllowedPacketBuilder() {
         
@@ -7490,7 +7490,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxAllowedPacketOrBuilder() {
         if (maxAllowedPacketBuilder_ != null) {
@@ -7506,7 +7506,7 @@ public final class Mysql80 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_allowed_packet).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_allowed_packet = 7 [(.yandex.cloud.value) = "1024-1073741824"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -15180,7 +15180,7 @@ public final class Mysql80 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "8_0.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\260#\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\261#\n\016MysqlConf" +
       "ig8_0\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -15190,120 +15190,120 @@ public final class Mysql80 {
       "obuf.BoolValue\022-\n\taudit_log\030\005 \001(\0132\032.goog" +
       "le.protobuf.BoolValue\022J\n\010sql_mode\030\006 \003(\0162" +
       "8.yandex.cloud.mdb.mysql.v1.config.Mysql" +
-      "Config8_0.SQLMode\022K\n\022max_allowed_packet\030" +
-      "\007 \001(\0132\033.google.protobuf.Int64ValueB\022\372\3071\016" +
-      "1024-134217728\022b\n\035default_authentication" +
-      "_plugin\030\010 \001(\0162;.yandex.cloud.mdb.mysql.v" +
-      "1.config.MysqlConfig8_0.AuthPlugin\022L\n\036in" +
-      "nodb_flush_log_at_trx_commit\030\t \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\007\372\3071\0031-2\022J\n\030inno" +
-      "db_lock_wait_timeout\030\n \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\013\372\3071\0071-28800\022d\n\025transact" +
-      "ion_isolation\030\013 \001(\0162E.yandex.cloud.mdb.m" +
-      "ysql.v1.config.MysqlConfig8_0.Transactio" +
-      "nIsolation\022>\n\032innodb_print_all_deadlocks" +
-      "\030\014 \001(\0132\032.google.protobuf.BoolValue\022A\n\020ne" +
-      "t_read_timeout\030\r \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\n\372\3071\0061-1200\022B\n\021net_write_timeo" +
-      "ut\030\016 \001(\0132\033.google.protobuf.Int64ValueB\n\372" +
-      "\3071\0061-1200\022I\n\024group_concat_max_len\030\017 \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\016\372\3071\n4-3355" +
-      "4432\022G\n\016tmp_table_size\030\020 \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueB\022\372\3071\0161024-134217728\022M\n" +
-      "\023max_heap_table_size\030\021 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\023\372\3071\01716384-134217728\022\031\n\021" +
-      "default_time_zone\030\022 \001(\t\022\034\n\024character_set" +
-      "_server\030\023 \001(\t\022\030\n\020collation_server\030\024 \001(\t\022" +
-      ">\n\032innodb_adaptive_hash_index\030\025 \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\022:\n\026innodb_numa_i" +
-      "nterleave\030\026 \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\022R\n\026innodb_log_buffer_size\030\027 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\025\372\3071\0211048576-26" +
-      "8435456\022S\n\024innodb_log_file_size\030\030 \001(\0132\033." +
-      "google.protobuf.Int64ValueB\030\372\3071\02426843545" +
-      "6-4294967296\022G\n\022innodb_io_capacity\030\031 \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\016\372\3071\n100-1" +
-      "00000\022K\n\026innodb_io_capacity_max\030\032 \001(\0132\033." +
-      "google.protobuf.Int64ValueB\016\372\3071\n100-1000" +
-      "00\022E\n\026innodb_read_io_threads\030\033 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\010\372\3071\0041-16\022F\n\027inn" +
-      "odb_write_io_threads\030\034 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\010\372\3071\0041-16\022C\n\024innodb_purg" +
-      "e_threads\030\035 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\010\372\3071\0041-16\022J\n\031innodb_thread_concurre" +
-      "ncy\030\036 \001(\0132\033.google.protobuf.Int64ValueB\n" +
-      "\372\3071\0060-1000\022W\n\036innodb_temp_data_file_max_" +
-      "size\030\037 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\022\372\3071\0160-107374182400\022D\n\021thread_cache_size" +
-      "\030  \001(\0132\033.google.protobuf.Int64ValueB\014\372\3071" +
-      "\01010-10000\022F\n\014thread_stack\030! \001(\0132\033.google" +
-      ".protobuf.Int64ValueB\023\372\3071\017131072-1677721" +
-      "6\022H\n\020join_buffer_size\030\" \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\021\372\3071\r1024-16777216\022H\n\020s" +
-      "ort_buffer_size\030# \001(\0132\033.google.protobuf." +
-      "Int64ValueB\021\372\3071\r1024-16777216\022K\n\026table_d" +
-      "efinition_cache\030$ \001(\0132\033.google.protobuf." +
-      "Int64ValueB\016\372\3071\n400-524288\022E\n\020table_open" +
-      "_cache\030% \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\016\372\3071\n400-524288\022I\n\032table_open_cache_in" +
-      "stances\030& \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\010\372\3071\0041-32\022C\n\037explicit_defaults_for_ti" +
-      "mestamp\030\' \001(\0132\032.google.protobuf.BoolValu" +
-      "e\022J\n\030auto_increment_increment\030( \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\013\372\3071\0071-65535\022G\n" +
-      "\025auto_increment_offset\030) \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueB\013\372\3071\0071-65535\022<\n\013sync_b" +
-      "inlog\030* \001(\0132\033.google.protobuf.Int64Value" +
-      "B\n\372\3071\0060-4096\022I\n\021binlog_cache_size\030+ \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\021\372\3071\r4096-6" +
-      "7108864\022R\n\036binlog_group_commit_sync_dela" +
-      "y\030, \001(\0132\033.google.protobuf.Int64ValueB\r\372\307" +
-      "1\t0-1000000\022Y\n\020binlog_row_image\030- \001(\0162?." +
+      "Config8_0.SQLMode\022L\n\022max_allowed_packet\030" +
+      "\007 \001(\0132\033.google.protobuf.Int64ValueB\023\372\3071\017" +
+      "1024-1073741824\022b\n\035default_authenticatio" +
+      "n_plugin\030\010 \001(\0162;.yandex.cloud.mdb.mysql." +
+      "v1.config.MysqlConfig8_0.AuthPlugin\022L\n\036i" +
+      "nnodb_flush_log_at_trx_commit\030\t \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\007\372\3071\0031-2\022J\n\030inn" +
+      "odb_lock_wait_timeout\030\n \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\013\372\3071\0071-28800\022d\n\025transac" +
+      "tion_isolation\030\013 \001(\0162E.yandex.cloud.mdb." +
+      "mysql.v1.config.MysqlConfig8_0.Transacti" +
+      "onIsolation\022>\n\032innodb_print_all_deadlock" +
+      "s\030\014 \001(\0132\032.google.protobuf.BoolValue\022A\n\020n" +
+      "et_read_timeout\030\r \001(\0132\033.google.protobuf." +
+      "Int64ValueB\n\372\3071\0061-1200\022B\n\021net_write_time" +
+      "out\030\016 \001(\0132\033.google.protobuf.Int64ValueB\n" +
+      "\372\3071\0061-1200\022I\n\024group_concat_max_len\030\017 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\016\372\3071\n4-335" +
+      "54432\022G\n\016tmp_table_size\030\020 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\022\372\3071\0161024-134217728\022M" +
+      "\n\023max_heap_table_size\030\021 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\023\372\3071\01716384-134217728\022\031\n" +
+      "\021default_time_zone\030\022 \001(\t\022\034\n\024character_se" +
+      "t_server\030\023 \001(\t\022\030\n\020collation_server\030\024 \001(\t" +
+      "\022>\n\032innodb_adaptive_hash_index\030\025 \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\022:\n\026innodb_numa_" +
+      "interleave\030\026 \001(\0132\032.google.protobuf.BoolV" +
+      "alue\022R\n\026innodb_log_buffer_size\030\027 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\025\372\3071\0211048576-2" +
+      "68435456\022S\n\024innodb_log_file_size\030\030 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\030\372\3071\0242684354" +
+      "56-4294967296\022G\n\022innodb_io_capacity\030\031 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\016\372\3071\n100-" +
+      "100000\022K\n\026innodb_io_capacity_max\030\032 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\016\372\3071\n100-100" +
+      "000\022E\n\026innodb_read_io_threads\030\033 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\010\372\3071\0041-16\022F\n\027in" +
+      "nodb_write_io_threads\030\034 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\010\372\3071\0041-16\022C\n\024innodb_pur" +
+      "ge_threads\030\035 \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\010\372\3071\0041-16\022J\n\031innodb_thread_concurr" +
+      "ency\030\036 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\n\372\3071\0060-1000\022W\n\036innodb_temp_data_file_max" +
+      "_size\030\037 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\022\372\3071\0160-107374182400\022D\n\021thread_cache_siz" +
+      "e\030  \001(\0132\033.google.protobuf.Int64ValueB\014\372\307" +
+      "1\01010-10000\022F\n\014thread_stack\030! \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\023\372\3071\017131072-167772" +
+      "16\022H\n\020join_buffer_size\030\" \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\021\372\3071\r1024-16777216\022H\n\020" +
+      "sort_buffer_size\030# \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\021\372\3071\r1024-16777216\022K\n\026table_" +
+      "definition_cache\030$ \001(\0132\033.google.protobuf" +
+      ".Int64ValueB\016\372\3071\n400-524288\022E\n\020table_ope" +
+      "n_cache\030% \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\016\372\3071\n400-524288\022I\n\032table_open_cache_i" +
+      "nstances\030& \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\010\372\3071\0041-32\022C\n\037explicit_defaults_for_t" +
+      "imestamp\030\' \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\022J\n\030auto_increment_increment\030( \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\013\372\3071\0071-65535\022G" +
+      "\n\025auto_increment_offset\030) \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\013\372\3071\0071-65535\022<\n\013sync_" +
+      "binlog\030* \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\n\372\3071\0060-4096\022I\n\021binlog_cache_size\030+ \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\021\372\3071\r4096-" +
+      "67108864\022R\n\036binlog_group_commit_sync_del" +
+      "ay\030, \001(\0132\033.google.protobuf.Int64ValueB\r\372" +
+      "\3071\t0-1000000\022Y\n\020binlog_row_image\030- \001(\0162?" +
+      ".yandex.cloud.mdb.mysql.v1.config.MysqlC" +
+      "onfig8_0.BinlogRowImage\022@\n\034binlog_rows_q" +
+      "uery_log_events\030. \001(\0132\032.google.protobuf." +
+      "BoolValue\022W\n)rpl_semi_sync_master_wait_f" +
+      "or_slave_count\030/ \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\007\372\3071\0031-2\022_\n\023slave_parallel_typ" +
+      "e\0300 \001(\0162B.yandex.cloud.mdb.mysql.v1.conf" +
+      "ig.MysqlConfig8_0.SlaveParallelType\022E\n\026s" +
+      "lave_parallel_workers\0301 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\010\372\3071\0040-64\022E\n\021regexp_tim" +
+      "e_limit\0302 \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\r\372\3071\t0-1048576\"\210\004\n\007SQLMode\022\027\n\023SQLMODE" +
+      "_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_DATES\020\001\022" +
+      "\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVISION_B" +
+      "Y_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020\n\014IGN" +
+      "ORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZERO\020\006\022\030" +
+      "\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGINE_SU" +
+      "BSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTRACTION\020" +
+      "\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_DATE\020\013" +
+      "\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_" +
+      "FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n\rRE" +
+      "AL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020\023\022\027\n\023" +
+      "STRICT_TRANS_TABLES\020\024\022\034\n\030TIME_TRUNCATE_F" +
+      "RACTIONAL\020\025\022\010\n\004ANSI\020\026\022\017\n\013TRADITIONAL\020\027\022\024" +
+      "\n\020NO_DIR_IN_CREATE\020\030\"t\n\nAuthPlugin\022\033\n\027AU" +
+      "TH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_" +
+      "PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020\002\022\023\n" +
+      "\017SHA256_PASSWORD\020\003\"x\n\024TransactionIsolati" +
+      "on\022%\n!TRANSACTION_ISOLATION_UNSPECIFIED\020" +
+      "\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE_READ" +
+      "\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowImage\022 " +
+      "\n\034BINLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004FULL" +
+      "\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlavePara" +
+      "llelType\022#\n\037SLAVE_PARALLEL_TYPE_UNSPECIF" +
+      "IED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"\360" +
+      "\001\n\021MysqlConfigSet8_0\022J\n\020effective_config" +
+      "\030\001 \001(\01320.yandex.cloud.mdb.mysql.v1.confi" +
+      "g.MysqlConfig8_0\022E\n\013user_config\030\002 \001(\01320." +
       "yandex.cloud.mdb.mysql.v1.config.MysqlCo" +
-      "nfig8_0.BinlogRowImage\022@\n\034binlog_rows_qu" +
-      "ery_log_events\030. \001(\0132\032.google.protobuf.B" +
-      "oolValue\022W\n)rpl_semi_sync_master_wait_fo" +
-      "r_slave_count\030/ \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\007\372\3071\0031-2\022_\n\023slave_parallel_type" +
-      "\0300 \001(\0162B.yandex.cloud.mdb.mysql.v1.confi" +
-      "g.MysqlConfig8_0.SlaveParallelType\022E\n\026sl" +
-      "ave_parallel_workers\0301 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\010\372\3071\0040-64\022E\n\021regexp_time" +
-      "_limit\0302 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\r\372\3071\t0-1048576\"\210\004\n\007SQLMode\022\027\n\023SQLMODE_" +
-      "UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_DATES\020\001\022\017" +
-      "\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVISION_BY" +
-      "_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020\n\014IGNO" +
-      "RE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZERO\020\006\022\030\n" +
-      "\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGINE_SUB" +
-      "STITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTRACTION\020\t" +
-      "\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_DATE\020\013\022" +
-      "\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_F" +
-      "ULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n\rREA" +
-      "L_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020\023\022\027\n\023S" +
-      "TRICT_TRANS_TABLES\020\024\022\034\n\030TIME_TRUNCATE_FR" +
-      "ACTIONAL\020\025\022\010\n\004ANSI\020\026\022\017\n\013TRADITIONAL\020\027\022\024\n" +
-      "\020NO_DIR_IN_CREATE\020\030\"t\n\nAuthPlugin\022\033\n\027AUT" +
-      "H_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_P" +
-      "ASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD\020\002\022\023\n\017" +
-      "SHA256_PASSWORD\020\003\"x\n\024TransactionIsolatio" +
-      "n\022%\n!TRANSACTION_ISOLATION_UNSPECIFIED\020\000" +
-      "\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE_READ\020" +
-      "\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowImage\022 \n" +
-      "\034BINLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020" +
-      "\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParal" +
-      "lelType\022#\n\037SLAVE_PARALLEL_TYPE_UNSPECIFI" +
-      "ED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"\360\001" +
-      "\n\021MysqlConfigSet8_0\022J\n\020effective_config\030" +
-      "\001 \001(\01320.yandex.cloud.mdb.mysql.v1.config" +
-      ".MysqlConfig8_0\022E\n\013user_config\030\002 \001(\01320.y" +
-      "andex.cloud.mdb.mysql.v1.config.MysqlCon" +
-      "fig8_0\022H\n\016default_config\030\003 \001(\01320.yandex." +
-      "cloud.mdb.mysql.v1.config.MysqlConfig8_0" +
-      "Br\n$yandex.cloud.api.mdb.mysql.v1.config" +
-      "ZJgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/mdb/mysql/v1/config;mysqlb\006pr" +
-      "oto3"
+      "nfig8_0\022H\n\016default_config\030\003 \001(\01320.yandex" +
+      ".cloud.mdb.mysql.v1.config.MysqlConfig8_" +
+      "0Br\n$yandex.cloud.api.mdb.mysql.v1.confi" +
+      "gZJgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/mdb/mysql/v1/config;mysqlb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
