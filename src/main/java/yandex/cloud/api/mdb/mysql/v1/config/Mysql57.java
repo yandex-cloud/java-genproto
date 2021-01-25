@@ -1348,6 +1348,31 @@ public final class Mysql57 {
      * <code>.google.protobuf.Int64Value slave_parallel_workers = 49 [(.yandex.cloud.value) = "0-64"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getSlaveParallelWorkersOrBuilder();
+
+    /**
+     * <pre>
+     * The size of the binary log to hold.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+     */
+    boolean hasMdbPreserveBinlogBytes();
+    /**
+     * <pre>
+     * The size of the binary log to hold.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+     */
+    com.google.protobuf.Int64Value getMdbPreserveBinlogBytes();
+    /**
+     * <pre>
+     * The size of the binary log to hold.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMdbPreserveBinlogBytesOrBuilder();
   }
   /**
    * <pre>
@@ -1995,6 +2020,19 @@ public final class Mysql57 {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(slaveParallelWorkers_);
                 slaveParallelWorkers_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 402: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (mdbPreserveBinlogBytes_ != null) {
+                subBuilder = mdbPreserveBinlogBytes_.toBuilder();
+              }
+              mdbPreserveBinlogBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mdbPreserveBinlogBytes_);
+                mdbPreserveBinlogBytes_ = subBuilder.buildPartial();
               }
 
               break;
@@ -4663,6 +4701,39 @@ public final class Mysql57 {
       return getSlaveParallelWorkers();
     }
 
+    public static final int MDB_PRESERVE_BINLOG_BYTES_FIELD_NUMBER = 50;
+    private com.google.protobuf.Int64Value mdbPreserveBinlogBytes_;
+    /**
+     * <pre>
+     * The size of the binary log to hold.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+     */
+    public boolean hasMdbPreserveBinlogBytes() {
+      return mdbPreserveBinlogBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The size of the binary log to hold.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+     */
+    public com.google.protobuf.Int64Value getMdbPreserveBinlogBytes() {
+      return mdbPreserveBinlogBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mdbPreserveBinlogBytes_;
+    }
+    /**
+     * <pre>
+     * The size of the binary log to hold.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMdbPreserveBinlogBytesOrBuilder() {
+      return getMdbPreserveBinlogBytes();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4828,6 +4899,9 @@ public final class Mysql57 {
       }
       if (slaveParallelWorkers_ != null) {
         output.writeMessage(49, getSlaveParallelWorkers());
+      }
+      if (mdbPreserveBinlogBytes_ != null) {
+        output.writeMessage(50, getMdbPreserveBinlogBytes());
       }
       unknownFields.writeTo(output);
     }
@@ -5038,6 +5112,10 @@ public final class Mysql57 {
       if (slaveParallelWorkers_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(49, getSlaveParallelWorkers());
+      }
+      if (mdbPreserveBinlogBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(50, getMdbPreserveBinlogBytes());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5271,6 +5349,11 @@ public final class Mysql57 {
         result = result && getSlaveParallelWorkers()
             .equals(other.getSlaveParallelWorkers());
       }
+      result = result && (hasMdbPreserveBinlogBytes() == other.hasMdbPreserveBinlogBytes());
+      if (hasMdbPreserveBinlogBytes()) {
+        result = result && getMdbPreserveBinlogBytes()
+            .equals(other.getMdbPreserveBinlogBytes());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5463,6 +5546,10 @@ public final class Mysql57 {
       if (hasSlaveParallelWorkers()) {
         hash = (37 * hash) + SLAVE_PARALLEL_WORKERS_FIELD_NUMBER;
         hash = (53 * hash) + getSlaveParallelWorkers().hashCode();
+      }
+      if (hasMdbPreserveBinlogBytes()) {
+        hash = (37 * hash) + MDB_PRESERVE_BINLOG_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getMdbPreserveBinlogBytes().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5863,6 +5950,12 @@ public final class Mysql57 {
           slaveParallelWorkers_ = null;
           slaveParallelWorkersBuilder_ = null;
         }
+        if (mdbPreserveBinlogBytesBuilder_ == null) {
+          mdbPreserveBinlogBytes_ = null;
+        } else {
+          mdbPreserveBinlogBytes_ = null;
+          mdbPreserveBinlogBytesBuilder_ = null;
+        }
         return this;
       }
 
@@ -6110,6 +6203,11 @@ public final class Mysql57 {
         } else {
           result.slaveParallelWorkers_ = slaveParallelWorkersBuilder_.build();
         }
+        if (mdbPreserveBinlogBytesBuilder_ == null) {
+          result.mdbPreserveBinlogBytes_ = mdbPreserveBinlogBytes_;
+        } else {
+          result.mdbPreserveBinlogBytes_ = mdbPreserveBinlogBytesBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -6316,6 +6414,9 @@ public final class Mysql57 {
         }
         if (other.hasSlaveParallelWorkers()) {
           mergeSlaveParallelWorkers(other.getSlaveParallelWorkers());
+        }
+        if (other.hasMdbPreserveBinlogBytes()) {
+          mergeMdbPreserveBinlogBytes(other.getMdbPreserveBinlogBytes());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13729,6 +13830,159 @@ public final class Mysql57 {
         }
         return slaveParallelWorkersBuilder_;
       }
+
+      private com.google.protobuf.Int64Value mdbPreserveBinlogBytes_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mdbPreserveBinlogBytesBuilder_;
+      /**
+       * <pre>
+       * The size of the binary log to hold.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       */
+      public boolean hasMdbPreserveBinlogBytes() {
+        return mdbPreserveBinlogBytesBuilder_ != null || mdbPreserveBinlogBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The size of the binary log to hold.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       */
+      public com.google.protobuf.Int64Value getMdbPreserveBinlogBytes() {
+        if (mdbPreserveBinlogBytesBuilder_ == null) {
+          return mdbPreserveBinlogBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mdbPreserveBinlogBytes_;
+        } else {
+          return mdbPreserveBinlogBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The size of the binary log to hold.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       */
+      public Builder setMdbPreserveBinlogBytes(com.google.protobuf.Int64Value value) {
+        if (mdbPreserveBinlogBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mdbPreserveBinlogBytes_ = value;
+          onChanged();
+        } else {
+          mdbPreserveBinlogBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size of the binary log to hold.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       */
+      public Builder setMdbPreserveBinlogBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (mdbPreserveBinlogBytesBuilder_ == null) {
+          mdbPreserveBinlogBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          mdbPreserveBinlogBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size of the binary log to hold.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       */
+      public Builder mergeMdbPreserveBinlogBytes(com.google.protobuf.Int64Value value) {
+        if (mdbPreserveBinlogBytesBuilder_ == null) {
+          if (mdbPreserveBinlogBytes_ != null) {
+            mdbPreserveBinlogBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(mdbPreserveBinlogBytes_).mergeFrom(value).buildPartial();
+          } else {
+            mdbPreserveBinlogBytes_ = value;
+          }
+          onChanged();
+        } else {
+          mdbPreserveBinlogBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size of the binary log to hold.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       */
+      public Builder clearMdbPreserveBinlogBytes() {
+        if (mdbPreserveBinlogBytesBuilder_ == null) {
+          mdbPreserveBinlogBytes_ = null;
+          onChanged();
+        } else {
+          mdbPreserveBinlogBytes_ = null;
+          mdbPreserveBinlogBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The size of the binary log to hold.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMdbPreserveBinlogBytesBuilder() {
+        
+        onChanged();
+        return getMdbPreserveBinlogBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The size of the binary log to hold.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMdbPreserveBinlogBytesOrBuilder() {
+        if (mdbPreserveBinlogBytesBuilder_ != null) {
+          return mdbPreserveBinlogBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return mdbPreserveBinlogBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : mdbPreserveBinlogBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The size of the binary log to hold.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 50 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMdbPreserveBinlogBytesFieldBuilder() {
+        if (mdbPreserveBinlogBytesBuilder_ == null) {
+          mdbPreserveBinlogBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMdbPreserveBinlogBytes(),
+                  getParentForChildren(),
+                  isClean());
+          mdbPreserveBinlogBytes_ = null;
+        }
+        return mdbPreserveBinlogBytesBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14994,7 +15248,7 @@ public final class Mysql57 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "5_7.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\377#\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\334$\n\016MysqlConf" +
       "ig5_7\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -15082,44 +15336,46 @@ public final class Mysql57 {
       "e\0300 \001(\0162B.yandex.cloud.mdb.mysql.v1.conf" +
       "ig.MysqlConfig5_7.SlaveParallelType\022E\n\026s" +
       "lave_parallel_workers\0301 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\010\372\3071\0040-64\"\231\005\n\007SQLMode\022\027" +
-      "\n\023SQLMODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID" +
-      "_DATES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_D" +
-      "IVISION_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE" +
-      "\020\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON" +
-      "_ZERO\020\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_" +
-      "ENGINE_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUB" +
-      "TRACTION\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_" +
-      "IN_DATE\020\013\022\024\n\020NO_FIELD_OPTIONS\020\014\022\022\n\016NO_KE" +
-      "Y_OPTIONS\020\r\022\024\n\020NO_TABLE_OPTIONS\020\016\022\026\n\022ONL" +
-      "Y_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHAR_TO_FULL_LE" +
-      "NGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022\021\n\rREAL_AS_F" +
-      "LOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020\023\022\027\n\023STRICT_" +
-      "TRANS_TABLES\020\024\022\010\n\004ANSI\020\025\022\017\n\013TRADITIONAL\020" +
-      "\026\022\007\n\003DB2\020\027\022\t\n\005MAXDB\020\030\022\t\n\005MSSQL\020\031\022\014\n\010MYSQ" +
-      "L323\020\032\022\013\n\007MYSQL40\020\033\022\n\n\006ORACLE\020\034\022\016\n\nPOSTG" +
-      "RESQL\020\035\022\027\n\023NO_AUTO_CREATE_USER\020\036\022\024\n\020NO_D" +
-      "IR_IN_CREATE\020\037\"x\n\nAuthPlugin\022\033\n\027AUTH_PLU" +
-      "GIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NATIVE_PASSWO" +
-      "RD\020\001\022\035\n\025CACHING_SHA2_PASSWORD\020\002\032\002\010\001\022\023\n\017S" +
-      "HA256_PASSWORD\020\003\"x\n\024TransactionIsolation" +
-      "\022%\n!TRANSACTION_ISOLATION_UNSPECIFIED\020\000\022" +
-      "\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE_READ\020\002" +
-      "\022\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowImage\022 \n\034" +
-      "BINLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n\004FULL\020\001" +
-      "\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021SlaveParall" +
-      "elType\022#\n\037SLAVE_PARALLEL_TYPE_UNSPECIFIE" +
-      "D\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOCK\020\002\"\360\001\n" +
-      "\021MysqlConfigSet5_7\022J\n\020effective_config\030\001" +
-      " \001(\01320.yandex.cloud.mdb.mysql.v1.config." +
-      "MysqlConfig5_7\022E\n\013user_config\030\002 \001(\01320.ya" +
-      "ndex.cloud.mdb.mysql.v1.config.MysqlConf" +
-      "ig5_7\022H\n\016default_config\030\003 \001(\01320.yandex.c" +
-      "loud.mdb.mysql.v1.config.MysqlConfig5_7B" +
-      "r\n$yandex.cloud.api.mdb.mysql.v1.configZ" +
-      "Jgithub.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/mdb/mysql/v1/config;mysqlb\006pro" +
-      "to3"
+      "tobuf.Int64ValueB\010\372\3071\0040-64\022[\n\031mdb_preser" +
+      "ve_binlog_bytes\0302 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\033\372\3071\0271073741824-107374182400\"" +
+      "\231\005\n\007SQLMode\022\027\n\023SQLMODE_UNSPECIFIED\020\000\022\027\n\023" +
+      "ALLOW_INVALID_DATES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036" +
+      "\n\032ERROR_FOR_DIVISION_BY_ZERO\020\003\022\027\n\023HIGH_N" +
+      "OT_PRECEDENCE\020\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025NO_" +
+      "AUTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_BACKSLASH_ESC" +
+      "APES\020\007\022\032\n\026NO_ENGINE_SUBSTITUTION\020\010\022\033\n\027NO" +
+      "_UNSIGNED_SUBTRACTION\020\t\022\020\n\014NO_ZERO_DATE\020" +
+      "\n\022\023\n\017NO_ZERO_IN_DATE\020\013\022\024\n\020NO_FIELD_OPTIO" +
+      "NS\020\014\022\022\n\016NO_KEY_OPTIONS\020\r\022\024\n\020NO_TABLE_OPT" +
+      "IONS\020\016\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CH" +
+      "AR_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021" +
+      "\022\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES" +
+      "\020\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\010\n\004ANSI\020\025\022\017\n" +
+      "\013TRADITIONAL\020\026\022\007\n\003DB2\020\027\022\t\n\005MAXDB\020\030\022\t\n\005MS" +
+      "SQL\020\031\022\014\n\010MYSQL323\020\032\022\013\n\007MYSQL40\020\033\022\n\n\006ORAC" +
+      "LE\020\034\022\016\n\nPOSTGRESQL\020\035\022\027\n\023NO_AUTO_CREATE_U" +
+      "SER\020\036\022\024\n\020NO_DIR_IN_CREATE\020\037\"x\n\nAuthPlugi" +
+      "n\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_" +
+      "NATIVE_PASSWORD\020\001\022\035\n\025CACHING_SHA2_PASSWO" +
+      "RD\020\002\032\002\010\001\022\023\n\017SHA256_PASSWORD\020\003\"x\n\024Transac" +
+      "tionIsolation\022%\n!TRANSACTION_ISOLATION_U" +
+      "NSPECIFIED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPE" +
+      "ATABLE_READ\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016Binlo" +
+      "gRowImage\022 \n\034BINLOG_ROW_IMAGE_UNSPECIFIE" +
+      "D\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y" +
+      "\n\021SlaveParallelType\022#\n\037SLAVE_PARALLEL_TY" +
+      "PE_UNSPECIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICA" +
+      "L_CLOCK\020\002\"\360\001\n\021MysqlConfigSet5_7\022J\n\020effec" +
+      "tive_config\030\001 \001(\01320.yandex.cloud.mdb.mys" +
+      "ql.v1.config.MysqlConfig5_7\022E\n\013user_conf" +
+      "ig\030\002 \001(\01320.yandex.cloud.mdb.mysql.v1.con" +
+      "fig.MysqlConfig5_7\022H\n\016default_config\030\003 \001" +
+      "(\01320.yandex.cloud.mdb.mysql.v1.config.My" +
+      "sqlConfig5_7Br\n$yandex.cloud.api.mdb.mys" +
+      "ql.v1.configZJgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/mdb/mysql/v1/conf" +
+      "ig;mysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15140,7 +15396,7 @@ public final class Mysql57 {
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_descriptor,
-        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", });
+        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "MdbPreserveBinlogBytes", });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_fieldAccessorTable = new

@@ -9070,6 +9070,19 @@ public final class NodeOuterClass {
      */
     yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpecOrBuilder getNetworkInterfaceSpecsOrBuilder(
         int index);
+
+    /**
+     * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+     */
+    boolean hasPlacementPolicy();
+    /**
+     * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy getPlacementPolicy();
+    /**
+     * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+     */
+    yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicyOrBuilder getPlacementPolicyOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.NodeTemplate}
@@ -9190,6 +9203,19 @@ public final class NodeOuterClass {
               }
               networkInterfaceSpecs_.add(
                   input.readMessage(yandex.cloud.api.k8s.v1.NodeOuterClass.NetworkInterfaceSpec.parser(), extensionRegistry));
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.Builder subBuilder = null;
+              if (placementPolicy_ != null) {
+                subBuilder = placementPolicy_.toBuilder();
+              }
+              placementPolicy_ = input.readMessage(yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(placementPolicy_);
+                placementPolicy_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -9577,6 +9603,27 @@ public final class NodeOuterClass {
       return networkInterfaceSpecs_.get(index);
     }
 
+    public static final int PLACEMENT_POLICY_FIELD_NUMBER = 10;
+    private yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy placementPolicy_;
+    /**
+     * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+     */
+    public boolean hasPlacementPolicy() {
+      return placementPolicy_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy getPlacementPolicy() {
+      return placementPolicy_ == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.getDefaultInstance() : placementPolicy_;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+     */
+    public yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicyOrBuilder getPlacementPolicyOrBuilder() {
+      return getPlacementPolicy();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9614,6 +9661,9 @@ public final class NodeOuterClass {
       }
       for (int i = 0; i < networkInterfaceSpecs_.size(); i++) {
         output.writeMessage(7, networkInterfaceSpecs_.get(i));
+      }
+      if (placementPolicy_ != null) {
+        output.writeMessage(10, getPlacementPolicy());
       }
       unknownFields.writeTo(output);
     }
@@ -9657,6 +9707,10 @@ public final class NodeOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, networkInterfaceSpecs_.get(i));
       }
+      if (placementPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getPlacementPolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9699,6 +9753,11 @@ public final class NodeOuterClass {
       }
       result = result && getNetworkInterfaceSpecsList()
           .equals(other.getNetworkInterfaceSpecsList());
+      result = result && (hasPlacementPolicy() == other.hasPlacementPolicy());
+      if (hasPlacementPolicy()) {
+        result = result && getPlacementPolicy()
+            .equals(other.getPlacementPolicy());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -9735,6 +9794,10 @@ public final class NodeOuterClass {
       if (getNetworkInterfaceSpecsCount() > 0) {
         hash = (37 * hash) + NETWORK_INTERFACE_SPECS_FIELD_NUMBER;
         hash = (53 * hash) + getNetworkInterfaceSpecsList().hashCode();
+      }
+      if (hasPlacementPolicy()) {
+        hash = (37 * hash) + PLACEMENT_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getPlacementPolicy().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9925,6 +9988,12 @@ public final class NodeOuterClass {
         } else {
           networkInterfaceSpecsBuilder_.clear();
         }
+        if (placementPolicyBuilder_ == null) {
+          placementPolicy_ = null;
+        } else {
+          placementPolicy_ = null;
+          placementPolicyBuilder_ = null;
+        }
         return this;
       }
 
@@ -9984,6 +10053,11 @@ public final class NodeOuterClass {
           result.networkInterfaceSpecs_ = networkInterfaceSpecs_;
         } else {
           result.networkInterfaceSpecs_ = networkInterfaceSpecsBuilder_.build();
+        }
+        if (placementPolicyBuilder_ == null) {
+          result.placementPolicy_ = placementPolicy_;
+        } else {
+          result.placementPolicy_ = placementPolicyBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -10077,6 +10151,9 @@ public final class NodeOuterClass {
               networkInterfaceSpecsBuilder_.addAllMessages(other.networkInterfaceSpecs_);
             }
           }
+        }
+        if (other.hasPlacementPolicy()) {
+          mergePlacementPolicy(other.getPlacementPolicy());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11311,6 +11388,123 @@ public final class NodeOuterClass {
           networkInterfaceSpecs_ = null;
         }
         return networkInterfaceSpecsBuilder_;
+      }
+
+      private yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy placementPolicy_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy, yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicyOrBuilder> placementPolicyBuilder_;
+      /**
+       * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+       */
+      public boolean hasPlacementPolicy() {
+        return placementPolicyBuilder_ != null || placementPolicy_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy getPlacementPolicy() {
+        if (placementPolicyBuilder_ == null) {
+          return placementPolicy_ == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.getDefaultInstance() : placementPolicy_;
+        } else {
+          return placementPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+       */
+      public Builder setPlacementPolicy(yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy value) {
+        if (placementPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          placementPolicy_ = value;
+          onChanged();
+        } else {
+          placementPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+       */
+      public Builder setPlacementPolicy(
+          yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.Builder builderForValue) {
+        if (placementPolicyBuilder_ == null) {
+          placementPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          placementPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+       */
+      public Builder mergePlacementPolicy(yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy value) {
+        if (placementPolicyBuilder_ == null) {
+          if (placementPolicy_ != null) {
+            placementPolicy_ =
+              yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.newBuilder(placementPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            placementPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          placementPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+       */
+      public Builder clearPlacementPolicy() {
+        if (placementPolicyBuilder_ == null) {
+          placementPolicy_ = null;
+          onChanged();
+        } else {
+          placementPolicy_ = null;
+          placementPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.Builder getPlacementPolicyBuilder() {
+        
+        onChanged();
+        return getPlacementPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+       */
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicyOrBuilder getPlacementPolicyOrBuilder() {
+        if (placementPolicyBuilder_ != null) {
+          return placementPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return placementPolicy_ == null ?
+              yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.getDefaultInstance() : placementPolicy_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.PlacementPolicy placement_policy = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy, yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicyOrBuilder> 
+          getPlacementPolicyFieldBuilder() {
+        if (placementPolicyBuilder_ == null) {
+          placementPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy, yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.Builder, yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicyOrBuilder>(
+                  getPlacementPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          placementPolicy_ = null;
+        }
+        return placementPolicyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -15946,6 +16140,592 @@ public final class NodeOuterClass {
 
   }
 
+  public interface PlacementPolicyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.PlacementPolicy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Identifier of placement group
+     * </pre>
+     *
+     * <code>string placement_group_id = 1;</code>
+     */
+    java.lang.String getPlacementGroupId();
+    /**
+     * <pre>
+     * Identifier of placement group
+     * </pre>
+     *
+     * <code>string placement_group_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getPlacementGroupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.PlacementPolicy}
+   */
+  public  static final class PlacementPolicy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.PlacementPolicy)
+      PlacementPolicyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PlacementPolicy.newBuilder() to construct.
+    private PlacementPolicy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PlacementPolicy() {
+      placementGroupId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PlacementPolicy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              placementGroupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_PlacementPolicy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_PlacementPolicy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.class, yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.Builder.class);
+    }
+
+    public static final int PLACEMENT_GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object placementGroupId_;
+    /**
+     * <pre>
+     * Identifier of placement group
+     * </pre>
+     *
+     * <code>string placement_group_id = 1;</code>
+     */
+    public java.lang.String getPlacementGroupId() {
+      java.lang.Object ref = placementGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        placementGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Identifier of placement group
+     * </pre>
+     *
+     * <code>string placement_group_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPlacementGroupIdBytes() {
+      java.lang.Object ref = placementGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        placementGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getPlacementGroupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, placementGroupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getPlacementGroupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, placementGroupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy other = (yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy) obj;
+
+      boolean result = true;
+      result = result && getPlacementGroupId()
+          .equals(other.getPlacementGroupId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PLACEMENT_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPlacementGroupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.PlacementPolicy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.PlacementPolicy)
+        yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_PlacementPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_PlacementPolicy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.class, yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        placementGroupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_PlacementPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy build() {
+        yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy buildPartial() {
+        yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy result = new yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy(this);
+        result.placementGroupId_ = placementGroupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy other) {
+        if (other == yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy.getDefaultInstance()) return this;
+        if (!other.getPlacementGroupId().isEmpty()) {
+          placementGroupId_ = other.placementGroupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object placementGroupId_ = "";
+      /**
+       * <pre>
+       * Identifier of placement group
+       * </pre>
+       *
+       * <code>string placement_group_id = 1;</code>
+       */
+      public java.lang.String getPlacementGroupId() {
+        java.lang.Object ref = placementGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          placementGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of placement group
+       * </pre>
+       *
+       * <code>string placement_group_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPlacementGroupIdBytes() {
+        java.lang.Object ref = placementGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          placementGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Identifier of placement group
+       * </pre>
+       *
+       * <code>string placement_group_id = 1;</code>
+       */
+      public Builder setPlacementGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        placementGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of placement group
+       * </pre>
+       *
+       * <code>string placement_group_id = 1;</code>
+       */
+      public Builder clearPlacementGroupId() {
+        
+        placementGroupId_ = getDefaultInstance().getPlacementGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Identifier of placement group
+       * </pre>
+       *
+       * <code>string placement_group_id = 1;</code>
+       */
+      public Builder setPlacementGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        placementGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.PlacementPolicy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.PlacementPolicy)
+    private static final yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy();
+    }
+
+    public static yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PlacementPolicy>
+        PARSER = new com.google.protobuf.AbstractParser<PlacementPolicy>() {
+      @java.lang.Override
+      public PlacementPolicy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PlacementPolicy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PlacementPolicy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PlacementPolicy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.NodeOuterClass.PlacementPolicy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_Node_descriptor;
   private static final 
@@ -16021,6 +16801,11 @@ public final class NodeOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_SchedulingPolicy_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_PlacementPolicy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_PlacementPolicy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -16061,7 +16846,7 @@ public final class NodeOuterClass {
       "PECIFIED\020\000\022\017\n\013NO_SCHEDULE\020\001\022\026\n\022PREFER_NO" +
       "_SCHEDULE\020\002\022\016\n\nNO_EXECUTE\020\003\"<\n\016AttachedV" +
       "olume\022\023\n\013driver_name\030\001 \001(\t\022\025\n\rvolume_han" +
-      "dle\030\002 \001(\t\"\221\004\n\014NodeTemplate\022\023\n\013platform_i" +
+      "dle\030\002 \001(\t\"\321\004\n\014NodeTemplate\022\023\n\013platform_i" +
       "d\030\001 \001(\t\022:\n\016resources_spec\030\002 \001(\0132\".yandex" +
       ".cloud.k8s.v1.ResourcesSpec\0225\n\016boot_disk" +
       "_spec\030\003 \001(\0132\035.yandex.cloud.k8s.v1.DiskSp" +
@@ -16073,28 +16858,31 @@ public final class NodeOuterClass {
       "ling_policy\030\006 \001(\0132%.yandex.cloud.k8s.v1." +
       "SchedulingPolicy\022J\n\027network_interface_sp" +
       "ecs\030\007 \003(\0132).yandex.cloud.k8s.v1.NetworkI" +
-      "nterfaceSpec\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\324\001\n\024NetworkInterfa" +
-      "ceSpec\022\022\n\nsubnet_ids\030\002 \003(\t\022E\n\027primary_v4" +
-      "_address_spec\030\003 \001(\0132$.yandex.cloud.k8s.v" +
-      "1.NodeAddressSpec\022E\n\027primary_v6_address_" +
-      "spec\030\004 \001(\0132$.yandex.cloud.k8s.v1.NodeAdd" +
-      "ressSpec\022\032\n\022security_group_ids\030\005 \003(\t\"T\n\017" +
-      "NodeAddressSpec\022A\n\023one_to_one_nat_spec\030\001" +
-      " \001(\0132$.yandex.cloud.k8s.v1.OneToOneNatSp" +
-      "ec\"E\n\017OneToOneNatSpec\0222\n\nip_version\030\001 \001(" +
-      "\0162\036.yandex.cloud.k8s.v1.IpVersion\"y\n\rRes" +
-      "ourcesSpec\022\027\n\006memory\030\001 \001(\003B\007\372\3071\003>=0\022\026\n\005c" +
-      "ores\030\002 \001(\003B\007\372\3071\003>=0\022 \n\rcore_fraction\030\003 \001" +
-      "(\003B\t\372\3071\0050-100\022\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"f\n\010" +
-      "DiskSpec\0222\n\014disk_type_id\030\001 \001(\tB\034\362\3071\030|net" +
-      "work-ssd|network-hdd\022&\n\tdisk_size\030\002 \001(\003B" +
-      "\023\372\3071\0170-4398046511104\"\'\n\020SchedulingPolicy" +
-      "\022\023\n\013preemptible\030\001 \001(\010*;\n\tIpVersion\022\032\n\026IP" +
-      "_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6" +
-      "\020\002BV\n\027yandex.cloud.api.k8s.v1Z;github.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "k8s/v1;k8sb\006proto3"
+      "nterfaceSpec\022>\n\020placement_policy\030\n \001(\0132$" +
+      ".yandex.cloud.k8s.v1.PlacementPolicy\032/\n\r" +
+      "MetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\"\324\001\n\024NetworkInterfaceSpec\022\022\n\nsubnet" +
+      "_ids\030\002 \003(\t\022E\n\027primary_v4_address_spec\030\003 " +
+      "\001(\0132$.yandex.cloud.k8s.v1.NodeAddressSpe" +
+      "c\022E\n\027primary_v6_address_spec\030\004 \001(\0132$.yan" +
+      "dex.cloud.k8s.v1.NodeAddressSpec\022\032\n\022secu" +
+      "rity_group_ids\030\005 \003(\t\"T\n\017NodeAddressSpec\022" +
+      "A\n\023one_to_one_nat_spec\030\001 \001(\0132$.yandex.cl" +
+      "oud.k8s.v1.OneToOneNatSpec\"E\n\017OneToOneNa" +
+      "tSpec\0222\n\nip_version\030\001 \001(\0162\036.yandex.cloud" +
+      ".k8s.v1.IpVersion\"y\n\rResourcesSpec\022\027\n\006me" +
+      "mory\030\001 \001(\003B\007\372\3071\003>=0\022\026\n\005cores\030\002 \001(\003B\007\372\3071\003" +
+      ">=0\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\0050-100\022\025\n" +
+      "\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"f\n\010DiskSpec\0222\n\014disk" +
+      "_type_id\030\001 \001(\tB\034\362\3071\030|network-ssd|network" +
+      "-hdd\022&\n\tdisk_size\030\002 \001(\003B\023\372\3071\0170-439804651" +
+      "1104\"\'\n\020SchedulingPolicy\022\023\n\013preemptible\030" +
+      "\001 \001(\010\"-\n\017PlacementPolicy\022\032\n\022placement_gr" +
+      "oup_id\030\001 \001(\t*;\n\tIpVersion\022\032\n\026IP_VERSION_" +
+      "UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027yan" +
+      "dex.cloud.api.k8s.v1Z;github.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/k8s/v1;k8" +
+      "sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16157,7 +16945,7 @@ public final class NodeOuterClass {
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor,
-        new java.lang.String[] { "PlatformId", "ResourcesSpec", "BootDiskSpec", "Metadata", "V4AddressSpec", "SchedulingPolicy", "NetworkInterfaceSpecs", });
+        new java.lang.String[] { "PlatformId", "ResourcesSpec", "BootDiskSpec", "Metadata", "V4AddressSpec", "SchedulingPolicy", "NetworkInterfaceSpecs", "PlacementPolicy", });
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_MetadataEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_NodeTemplate_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_NodeTemplate_MetadataEntry_fieldAccessorTable = new
@@ -16200,6 +16988,12 @@ public final class NodeOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_SchedulingPolicy_descriptor,
         new java.lang.String[] { "Preemptible", });
+    internal_static_yandex_cloud_k8s_v1_PlacementPolicy_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_k8s_v1_PlacementPolicy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_PlacementPolicy_descriptor,
+        new java.lang.String[] { "PlacementGroupId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
