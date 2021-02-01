@@ -3737,6 +3737,2359 @@ public final class RepositoryServiceOuterClass {
 
   }
 
+  public interface CreateRepositoryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.CreateRepositoryRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the repository.
+     * The name of the repository should match the name of the images that will be pushed in the repository.
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the repository.
+     * The name of the repository should match the name of the images that will be pushed in the repository.
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.CreateRepositoryRequest}
+   */
+  public  static final class CreateRepositoryRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.CreateRepositoryRequest)
+      CreateRepositoryRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateRepositoryRequest.newBuilder() to construct.
+    private CreateRepositoryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateRepositoryRequest() {
+      name_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateRepositoryRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the repository.
+     * The name of the repository should match the name of the images that will be pushed in the repository.
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the repository.
+     * The name of the repository should match the name of the images that will be pushed in the repository.
+     * </pre>
+     *
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest) obj;
+
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.CreateRepositoryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.CreateRepositoryRequest)
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest build() {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest buildPartial() {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest result = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest(this);
+        result.name_ = name_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest other) {
+        if (other == yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the repository.
+       * The name of the repository should match the name of the images that will be pushed in the repository.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the repository.
+       * The name of the repository should match the name of the images that will be pushed in the repository.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the repository.
+       * The name of the repository should match the name of the images that will be pushed in the repository.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the repository.
+       * The name of the repository should match the name of the images that will be pushed in the repository.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the repository.
+       * The name of the repository should match the name of the images that will be pushed in the repository.
+       * </pre>
+       *
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0-9]+(?:[._-][a-z0-9]+)*))*"];</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.CreateRepositoryRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.CreateRepositoryRequest)
+    private static final yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest();
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateRepositoryRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateRepositoryRequest>() {
+      @java.lang.Override
+      public CreateRepositoryRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateRepositoryRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateRepositoryRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateRepositoryRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateRepositoryMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.CreateRepositoryMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the repository that is being created.
+     * </pre>
+     *
+     * <code>string repository_id = 1;</code>
+     */
+    java.lang.String getRepositoryId();
+    /**
+     * <pre>
+     * ID of the repository that is being created.
+     * </pre>
+     *
+     * <code>string repository_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getRepositoryIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.CreateRepositoryMetadata}
+   */
+  public  static final class CreateRepositoryMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.CreateRepositoryMetadata)
+      CreateRepositoryMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateRepositoryMetadata.newBuilder() to construct.
+    private CreateRepositoryMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateRepositoryMetadata() {
+      repositoryId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateRepositoryMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              repositoryId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.Builder.class);
+    }
+
+    public static final int REPOSITORY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object repositoryId_;
+    /**
+     * <pre>
+     * ID of the repository that is being created.
+     * </pre>
+     *
+     * <code>string repository_id = 1;</code>
+     */
+    public java.lang.String getRepositoryId() {
+      java.lang.Object ref = repositoryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        repositoryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the repository that is being created.
+     * </pre>
+     *
+     * <code>string repository_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRepositoryIdBytes() {
+      java.lang.Object ref = repositoryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        repositoryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getRepositoryIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, repositoryId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getRepositoryIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, repositoryId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata) obj;
+
+      boolean result = true;
+      result = result && getRepositoryId()
+          .equals(other.getRepositoryId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REPOSITORY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRepositoryId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.CreateRepositoryMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.CreateRepositoryMetadata)
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        repositoryId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata build() {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata buildPartial() {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata result = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata(this);
+        result.repositoryId_ = repositoryId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata other) {
+        if (other == yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.getDefaultInstance()) return this;
+        if (!other.getRepositoryId().isEmpty()) {
+          repositoryId_ = other.repositoryId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object repositoryId_ = "";
+      /**
+       * <pre>
+       * ID of the repository that is being created.
+       * </pre>
+       *
+       * <code>string repository_id = 1;</code>
+       */
+      public java.lang.String getRepositoryId() {
+        java.lang.Object ref = repositoryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          repositoryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the repository that is being created.
+       * </pre>
+       *
+       * <code>string repository_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRepositoryIdBytes() {
+        java.lang.Object ref = repositoryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          repositoryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the repository that is being created.
+       * </pre>
+       *
+       * <code>string repository_id = 1;</code>
+       */
+      public Builder setRepositoryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        repositoryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the repository that is being created.
+       * </pre>
+       *
+       * <code>string repository_id = 1;</code>
+       */
+      public Builder clearRepositoryId() {
+        
+        repositoryId_ = getDefaultInstance().getRepositoryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the repository that is being created.
+       * </pre>
+       *
+       * <code>string repository_id = 1;</code>
+       */
+      public Builder setRepositoryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        repositoryId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.CreateRepositoryMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.CreateRepositoryMetadata)
+    private static final yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata();
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateRepositoryMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<CreateRepositoryMetadata>() {
+      @java.lang.Override
+      public CreateRepositoryMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateRepositoryMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateRepositoryMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateRepositoryMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteRepositoryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.DeleteRepositoryRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the repository to delete.
+     * </pre>
+     *
+     * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getRepositoryId();
+    /**
+     * <pre>
+     * ID of the repository to delete.
+     * </pre>
+     *
+     * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getRepositoryIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.DeleteRepositoryRequest}
+   */
+  public  static final class DeleteRepositoryRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.DeleteRepositoryRequest)
+      DeleteRepositoryRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteRepositoryRequest.newBuilder() to construct.
+    private DeleteRepositoryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteRepositoryRequest() {
+      repositoryId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteRepositoryRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              repositoryId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest.Builder.class);
+    }
+
+    public static final int REPOSITORY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object repositoryId_;
+    /**
+     * <pre>
+     * ID of the repository to delete.
+     * </pre>
+     *
+     * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getRepositoryId() {
+      java.lang.Object ref = repositoryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        repositoryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the repository to delete.
+     * </pre>
+     *
+     * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getRepositoryIdBytes() {
+      java.lang.Object ref = repositoryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        repositoryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getRepositoryIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, repositoryId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getRepositoryIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, repositoryId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest) obj;
+
+      boolean result = true;
+      result = result && getRepositoryId()
+          .equals(other.getRepositoryId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REPOSITORY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRepositoryId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.DeleteRepositoryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.DeleteRepositoryRequest)
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        repositoryId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest build() {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest buildPartial() {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest result = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest(this);
+        result.repositoryId_ = repositoryId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest other) {
+        if (other == yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest.getDefaultInstance()) return this;
+        if (!other.getRepositoryId().isEmpty()) {
+          repositoryId_ = other.repositoryId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object repositoryId_ = "";
+      /**
+       * <pre>
+       * ID of the repository to delete.
+       * </pre>
+       *
+       * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getRepositoryId() {
+        java.lang.Object ref = repositoryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          repositoryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the repository to delete.
+       * </pre>
+       *
+       * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getRepositoryIdBytes() {
+        java.lang.Object ref = repositoryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          repositoryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the repository to delete.
+       * </pre>
+       *
+       * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setRepositoryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        repositoryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the repository to delete.
+       * </pre>
+       *
+       * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearRepositoryId() {
+        
+        repositoryId_ = getDefaultInstance().getRepositoryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the repository to delete.
+       * </pre>
+       *
+       * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setRepositoryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        repositoryId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.DeleteRepositoryRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.DeleteRepositoryRequest)
+    private static final yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest();
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteRepositoryRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteRepositoryRequest>() {
+      @java.lang.Override
+      public DeleteRepositoryRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteRepositoryRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteRepositoryRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteRepositoryRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteRepositoryMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.DeleteRepositoryMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the repository that is being deleted.
+     * </pre>
+     *
+     * <code>string repository_id = 1;</code>
+     */
+    java.lang.String getRepositoryId();
+    /**
+     * <pre>
+     * ID of the repository that is being deleted.
+     * </pre>
+     *
+     * <code>string repository_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getRepositoryIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.DeleteRepositoryMetadata}
+   */
+  public  static final class DeleteRepositoryMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.DeleteRepositoryMetadata)
+      DeleteRepositoryMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteRepositoryMetadata.newBuilder() to construct.
+    private DeleteRepositoryMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteRepositoryMetadata() {
+      repositoryId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteRepositoryMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              repositoryId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata.Builder.class);
+    }
+
+    public static final int REPOSITORY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object repositoryId_;
+    /**
+     * <pre>
+     * ID of the repository that is being deleted.
+     * </pre>
+     *
+     * <code>string repository_id = 1;</code>
+     */
+    public java.lang.String getRepositoryId() {
+      java.lang.Object ref = repositoryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        repositoryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the repository that is being deleted.
+     * </pre>
+     *
+     * <code>string repository_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRepositoryIdBytes() {
+      java.lang.Object ref = repositoryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        repositoryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getRepositoryIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, repositoryId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getRepositoryIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, repositoryId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata) obj;
+
+      boolean result = true;
+      result = result && getRepositoryId()
+          .equals(other.getRepositoryId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REPOSITORY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRepositoryId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.DeleteRepositoryMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.DeleteRepositoryMetadata)
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        repositoryId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata build() {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata buildPartial() {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata result = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata(this);
+        result.repositoryId_ = repositoryId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata other) {
+        if (other == yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata.getDefaultInstance()) return this;
+        if (!other.getRepositoryId().isEmpty()) {
+          repositoryId_ = other.repositoryId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object repositoryId_ = "";
+      /**
+       * <pre>
+       * ID of the repository that is being deleted.
+       * </pre>
+       *
+       * <code>string repository_id = 1;</code>
+       */
+      public java.lang.String getRepositoryId() {
+        java.lang.Object ref = repositoryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          repositoryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the repository that is being deleted.
+       * </pre>
+       *
+       * <code>string repository_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRepositoryIdBytes() {
+        java.lang.Object ref = repositoryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          repositoryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the repository that is being deleted.
+       * </pre>
+       *
+       * <code>string repository_id = 1;</code>
+       */
+      public Builder setRepositoryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        repositoryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the repository that is being deleted.
+       * </pre>
+       *
+       * <code>string repository_id = 1;</code>
+       */
+      public Builder clearRepositoryId() {
+        
+        repositoryId_ = getDefaultInstance().getRepositoryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the repository that is being deleted.
+       * </pre>
+       *
+       * <code>string repository_id = 1;</code>
+       */
+      public Builder setRepositoryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        repositoryId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.DeleteRepositoryMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.DeleteRepositoryMetadata)
+    private static final yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata();
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteRepositoryMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteRepositoryMetadata>() {
+      @java.lang.Override
+      public DeleteRepositoryMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteRepositoryMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteRepositoryMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteRepositoryMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_containerregistry_v1_GetRepositoryRequest_descriptor;
   private static final 
@@ -3757,6 +6110,26 @@ public final class RepositoryServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_containerregistry_v1_ListRepositoriesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3786,41 +6159,58 @@ public final class RepositoryServiceOuterClass {
       "00\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"x\n\030ListR" +
       "epositoriesResponse\022C\n\014repositories\030\001 \003(" +
       "\0132-.yandex.cloud.containerregistry.v1.Re" +
-      "pository\022\027\n\017next_page_token\030\002 \001(\t2\250\t\n\021Re" +
-      "positoryService\022\252\001\n\003Get\0227.yandex.cloud.c" +
-      "ontainerregistry.v1.GetRepositoryRequest" +
-      "\032-.yandex.cloud.containerregistry.v1.Rep" +
-      "ository\";\202\323\344\223\0025\0223/container-registry/v1/" +
-      "repositories/{repository_id}\022y\n\tGetByNam" +
-      "e\022=.yandex.cloud.containerregistry.v1.Ge" +
-      "tRepositoryByNameRequest\032-.yandex.cloud." +
-      "containerregistry.v1.Repository\022\254\001\n\004List" +
-      "\022:.yandex.cloud.containerregistry.v1.Lis" +
-      "tRepositoriesRequest\032;.yandex.cloud.cont" +
-      "ainerregistry.v1.ListRepositoriesRespons" +
-      "e\"+\202\323\344\223\002%\022#/container-registry/v1/reposi" +
-      "tories\022\303\001\n\022ListAccessBindings\022..yandex.c" +
-      "loud.access.ListAccessBindingsRequest\032/." +
-      "yandex.cloud.access.ListAccessBindingsRe" +
-      "sponse\"L\202\323\344\223\002F\022D/container-registry/v1/r" +
-      "epositories/{resource_id}:listAccessBind" +
-      "ings\022\363\001\n\021SetAccessBindings\022-.yandex.clou" +
-      "d.access.SetAccessBindingsRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"\213\001\202\323\344\223\002H\"C/" +
-      "container-registry/v1/repositories/{reso" +
-      "urce_id}:setAccessBindings:\001*\262\322*9\n acces" +
-      "s.SetAccessBindingsMetadata\022\025google.prot" +
-      "obuf.Empty\022\377\001\n\024UpdateAccessBindings\0220.ya" +
-      "ndex.cloud.access.UpdateAccessBindingsRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\221\001\202\323\344\223\002K\"F/container-registry/v1/reposi" +
-      "tories/{resource_id}:updateAccessBinding" +
-      "s:\001*\262\322*<\n#access.UpdateAccessBindingsMet" +
-      "adata\022\025google.protobuf.EmptyB\200\001\n%yandex." +
-      "cloud.api.containerregistry.v1ZWgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/containerregistry/v1;containerregistryb" +
-      "\006proto3"
+      "pository\022\027\n\017next_page_token\030\002 \001(\t\"o\n\027Cre" +
+      "ateRepositoryRequest\022T\n\004name\030\001 \001(\tBF\350\3071\001" +
+      "\362\3071>[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0" +
+      "-9]+(?:[._-][a-z0-9]+)*))*\"1\n\030CreateRepo" +
+      "sitoryMetadata\022\025\n\rrepository_id\030\001 \001(\t\">\n" +
+      "\027DeleteRepositoryRequest\022#\n\rrepository_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"1\n\030DeleteRepositor" +
+      "yMetadata\022\025\n\rrepository_id\030\001 \001(\t2\310\014\n\021Rep" +
+      "ositoryService\022\252\001\n\003Get\0227.yandex.cloud.co" +
+      "ntainerregistry.v1.GetRepositoryRequest\032" +
+      "-.yandex.cloud.containerregistry.v1.Repo" +
+      "sitory\";\202\323\344\223\0025\0223/container-registry/v1/r" +
+      "epositories/{repository_id}\022y\n\tGetByName" +
+      "\022=.yandex.cloud.containerregistry.v1.Get" +
+      "RepositoryByNameRequest\032-.yandex.cloud.c" +
+      "ontainerregistry.v1.Repository\022\254\001\n\004List\022" +
+      ":.yandex.cloud.containerregistry.v1.List" +
+      "RepositoriesRequest\032;.yandex.cloud.conta" +
+      "inerregistry.v1.ListRepositoriesResponse" +
+      "\"+\202\323\344\223\002%\022#/container-registry/v1/reposit" +
+      "ories\022\303\001\n\022ListAccessBindings\022..yandex.cl" +
+      "oud.access.ListAccessBindingsRequest\032/.y" +
+      "andex.cloud.access.ListAccessBindingsRes" +
+      "ponse\"L\202\323\344\223\002F\022D/container-registry/v1/re" +
+      "positories/{resource_id}:listAccessBindi" +
+      "ngs\022\301\001\n\006Create\022:.yandex.cloud.containerr" +
+      "egistry.v1.CreateRepositoryRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"X\202\323\344\223\002(\"#/" +
+      "container-registry/v1/repositories:\001*\262\322*" +
+      "&\n\030CreateRepositoryMetadata\022\nRepository\022" +
+      "\331\001\n\006Delete\022:.yandex.cloud.containerregis" +
+      "try.v1.DeleteRepositoryRequest\032!.yandex." +
+      "cloud.operation.Operation\"p\202\323\344\223\0025*3/cont" +
+      "ainer-registry/v1/repositories/{reposito" +
+      "ry_id}\262\322*1\n\030DeleteRepositoryMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\363\001\n\021SetAccessBinding" +
+      "s\022-.yandex.cloud.access.SetAccessBinding" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\213\001\202\323\344\223\002H\"C/container-registry/v1/rep" +
+      "ositories/{resource_id}:setAccessBinding" +
+      "s:\001*\262\322*9\n access.SetAccessBindingsMetada" +
+      "ta\022\025google.protobuf.Empty\022\377\001\n\024UpdateAcce" +
+      "ssBindings\0220.yandex.cloud.access.UpdateA" +
+      "ccessBindingsRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"\221\001\202\323\344\223\002K\"F/container-reg" +
+      "istry/v1/repositories/{resource_id}:upda" +
+      "teAccessBindings:\001*\262\322*<\n#access.UpdateAc" +
+      "cessBindingsMetadata\022\025google.protobuf.Em" +
+      "ptyB\200\001\n%yandex.cloud.api.containerregist" +
+      "ry.v1ZWgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/containerregistry/v1;con" +
+      "tainerregistryb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3864,6 +6254,30 @@ public final class RepositoryServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_containerregistry_v1_ListRepositoriesResponse_descriptor,
         new java.lang.String[] { "Repositories", "NextPageToken", });
+    internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_descriptor,
+        new java.lang.String[] { "RepositoryId", });
+    internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryRequest_descriptor,
+        new java.lang.String[] { "RepositoryId", });
+    internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryMetadata_descriptor,
+        new java.lang.String[] { "RepositoryId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

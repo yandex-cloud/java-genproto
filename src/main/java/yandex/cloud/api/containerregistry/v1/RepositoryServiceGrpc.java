@@ -158,6 +158,70 @@ public final class RepositoryServiceGrpc {
      return getListAccessBindingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Create",
+      requestType = yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
+    if ((getCreateMethod = RepositoryServiceGrpc.getCreateMethod) == null) {
+      synchronized (RepositoryServiceGrpc.class) {
+        if ((getCreateMethod = RepositoryServiceGrpc.getCreateMethod) == null) {
+          RepositoryServiceGrpc.getCreateMethod = getCreateMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.containerregistry.v1.RepositoryService", "Create"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("Create"))
+                  .build();
+          }
+        }
+     }
+     return getCreateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Delete",
+      requestType = yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+    if ((getDeleteMethod = RepositoryServiceGrpc.getDeleteMethod) == null) {
+      synchronized (RepositoryServiceGrpc.class) {
+        if ((getDeleteMethod = RepositoryServiceGrpc.getDeleteMethod) == null) {
+          RepositoryServiceGrpc.getDeleteMethod = getDeleteMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.containerregistry.v1.RepositoryService", "Delete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("Delete"))
+                  .build();
+          }
+        }
+     }
+     return getDeleteMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod;
 
@@ -296,6 +360,26 @@ public final class RepositoryServiceGrpc {
 
     /**
      * <pre>
+     * Creates a repository in the specified registry.
+     * </pre>
+     */
+    public void create(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified repository.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Sets access bindings for the specified repository.
      * </pre>
      */
@@ -344,6 +428,20 @@ public final class RepositoryServiceGrpc {
                 yandex.cloud.api.access.Access.ListAccessBindingsRequest,
                 yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
                   this, METHODID_LIST_ACCESS_BINDINGS)))
+          .addMethod(
+            getCreateMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_CREATE)))
+          .addMethod(
+            getDeleteMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE)))
           .addMethod(
             getSetAccessBindingsMethod(),
             asyncUnaryCall(
@@ -431,6 +529,28 @@ public final class RepositoryServiceGrpc {
 
     /**
      * <pre>
+     * Creates a repository in the specified registry.
+     * </pre>
+     */
+    public void create(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified repository.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Sets access bindings for the specified repository.
      * </pre>
      */
@@ -513,6 +633,26 @@ public final class RepositoryServiceGrpc {
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a repository in the specified registry.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified repository.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
 
     /**
@@ -605,6 +745,28 @@ public final class RepositoryServiceGrpc {
 
     /**
      * <pre>
+     * Creates a repository in the specified registry.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified repository.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Sets access bindings for the specified repository.
      * </pre>
      */
@@ -630,8 +792,10 @@ public final class RepositoryServiceGrpc {
   private static final int METHODID_GET_BY_NAME = 1;
   private static final int METHODID_LIST = 2;
   private static final int METHODID_LIST_ACCESS_BINDINGS = 3;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 4;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 5;
+  private static final int METHODID_CREATE = 4;
+  private static final int METHODID_DELETE = 5;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 6;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -665,6 +829,14 @@ public final class RepositoryServiceGrpc {
         case METHODID_LIST_ACCESS_BINDINGS:
           serviceImpl.listAccessBindings((yandex.cloud.api.access.Access.ListAccessBindingsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse>) responseObserver);
+          break;
+        case METHODID_CREATE:
+          serviceImpl.create((yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_DELETE:
+          serviceImpl.delete((yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_SET_ACCESS_BINDINGS:
           serviceImpl.setAccessBindings((yandex.cloud.api.access.Access.SetAccessBindingsRequest) request,
@@ -739,6 +911,8 @@ public final class RepositoryServiceGrpc {
               .addMethod(getGetByNameMethod())
               .addMethod(getListMethod())
               .addMethod(getListAccessBindingsMethod())
+              .addMethod(getCreateMethod())
+              .addMethod(getDeleteMethod())
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())
               .build();

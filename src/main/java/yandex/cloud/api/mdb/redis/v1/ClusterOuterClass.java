@@ -401,6 +401,15 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * TLS port and functionality on&#92;off
+     * </pre>
+     *
+     * <code>bool tls_enabled = 17;</code>
+     */
+    boolean getTlsEnabled();
   }
   /**
    * <pre>
@@ -431,6 +440,7 @@ public final class ClusterOuterClass {
       status_ = 0;
       sharded_ = false;
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      tlsEnabled_ = false;
     }
 
     @java.lang.Override
@@ -591,6 +601,11 @@ public final class ClusterOuterClass {
                 mutable_bitField0_ |= 0x00008000;
               }
               securityGroupIds_.add(s);
+              break;
+            }
+            case 136: {
+
+              tlsEnabled_ = input.readBool();
               break;
             }
             default: {
@@ -1757,6 +1772,19 @@ public final class ClusterOuterClass {
       return securityGroupIds_.getByteString(index);
     }
 
+    public static final int TLS_ENABLED_FIELD_NUMBER = 17;
+    private boolean tlsEnabled_;
+    /**
+     * <pre>
+     * TLS port and functionality on&#92;off
+     * </pre>
+     *
+     * <code>bool tls_enabled = 17;</code>
+     */
+    public boolean getTlsEnabled() {
+      return tlsEnabled_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1821,6 +1849,9 @@ public final class ClusterOuterClass {
       }
       for (int i = 0; i < securityGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16, securityGroupIds_.getRaw(i));
+      }
+      if (tlsEnabled_ != false) {
+        output.writeBool(17, tlsEnabled_);
       }
       unknownFields.writeTo(output);
     }
@@ -1900,6 +1931,10 @@ public final class ClusterOuterClass {
         size += dataSize;
         size += 2 * getSecurityGroupIdsList().size();
       }
+      if (tlsEnabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(17, tlsEnabled_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1957,6 +1992,8 @@ public final class ClusterOuterClass {
       }
       result = result && getSecurityGroupIdsList()
           .equals(other.getSecurityGroupIdsList());
+      result = result && (getTlsEnabled()
+          == other.getTlsEnabled());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2015,6 +2052,9 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
       }
+      hash = (37 * hash) + TLS_ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTlsEnabled());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2227,6 +2267,8 @@ public final class ClusterOuterClass {
         }
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00008000);
+        tlsEnabled_ = false;
+
         return this;
       }
 
@@ -2300,6 +2342,7 @@ public final class ClusterOuterClass {
           bitField0_ = (bitField0_ & ~0x00008000);
         }
         result.securityGroupIds_ = securityGroupIds_;
+        result.tlsEnabled_ = tlsEnabled_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2430,6 +2473,9 @@ public final class ClusterOuterClass {
             securityGroupIds_.addAll(other.securityGroupIds_);
           }
           onChanged();
+        }
+        if (other.getTlsEnabled() != false) {
+          setTlsEnabled(other.getTlsEnabled());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4337,6 +4383,44 @@ public final class ClusterOuterClass {
   checkByteStringIsUtf8(value);
         ensureSecurityGroupIdsIsMutable();
         securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean tlsEnabled_ ;
+      /**
+       * <pre>
+       * TLS port and functionality on&#92;off
+       * </pre>
+       *
+       * <code>bool tls_enabled = 17;</code>
+       */
+      public boolean getTlsEnabled() {
+        return tlsEnabled_;
+      }
+      /**
+       * <pre>
+       * TLS port and functionality on&#92;off
+       * </pre>
+       *
+       * <code>bool tls_enabled = 17;</code>
+       */
+      public Builder setTlsEnabled(boolean value) {
+        
+        tlsEnabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * TLS port and functionality on&#92;off
+       * </pre>
+       *
+       * <code>bool tls_enabled = 17;</code>
+       */
+      public Builder clearTlsEnabled() {
+        
+        tlsEnabled_ = false;
         onChanged();
         return this;
       }
@@ -11578,6 +11662,30 @@ public final class ClusterOuterClass {
      * <code>int64 disk_size = 2;</code>
      */
     long getDiskSize();
+
+    /**
+     * <pre>
+     * Type of the storage environment for the host.
+     * Possible values:
+     * * network-ssd — network SSD drive,
+     * * local-ssd — local SSD storage.
+     * </pre>
+     *
+     * <code>string disk_type_id = 3;</code>
+     */
+    java.lang.String getDiskTypeId();
+    /**
+     * <pre>
+     * Type of the storage environment for the host.
+     * Possible values:
+     * * network-ssd — network SSD drive,
+     * * local-ssd — local SSD storage.
+     * </pre>
+     *
+     * <code>string disk_type_id = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getDiskTypeIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.redis.v1.Resources}
@@ -11594,6 +11702,7 @@ public final class ClusterOuterClass {
     private Resources() {
       resourcePresetId_ = "";
       diskSize_ = 0L;
+      diskTypeId_ = "";
     }
 
     @java.lang.Override
@@ -11629,6 +11738,12 @@ public final class ClusterOuterClass {
             case 16: {
 
               diskSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              diskTypeId_ = s;
               break;
             }
             default: {
@@ -11720,6 +11835,54 @@ public final class ClusterOuterClass {
       return diskSize_;
     }
 
+    public static final int DISK_TYPE_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object diskTypeId_;
+    /**
+     * <pre>
+     * Type of the storage environment for the host.
+     * Possible values:
+     * * network-ssd — network SSD drive,
+     * * local-ssd — local SSD storage.
+     * </pre>
+     *
+     * <code>string disk_type_id = 3;</code>
+     */
+    public java.lang.String getDiskTypeId() {
+      java.lang.Object ref = diskTypeId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        diskTypeId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Type of the storage environment for the host.
+     * Possible values:
+     * * network-ssd — network SSD drive,
+     * * local-ssd — local SSD storage.
+     * </pre>
+     *
+     * <code>string disk_type_id = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDiskTypeIdBytes() {
+      java.lang.Object ref = diskTypeId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        diskTypeId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11740,6 +11903,9 @@ public final class ClusterOuterClass {
       if (diskSize_ != 0L) {
         output.writeInt64(2, diskSize_);
       }
+      if (!getDiskTypeIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, diskTypeId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11755,6 +11921,9 @@ public final class ClusterOuterClass {
       if (diskSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, diskSize_);
+      }
+      if (!getDiskTypeIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, diskTypeId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11776,6 +11945,8 @@ public final class ClusterOuterClass {
           .equals(other.getResourcePresetId());
       result = result && (getDiskSize()
           == other.getDiskSize());
+      result = result && getDiskTypeId()
+          .equals(other.getDiskTypeId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -11792,6 +11963,8 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + DISK_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getDiskSize());
+      hash = (37 * hash) + DISK_TYPE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDiskTypeId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11929,6 +12102,8 @@ public final class ClusterOuterClass {
 
         diskSize_ = 0L;
 
+        diskTypeId_ = "";
+
         return this;
       }
 
@@ -11957,6 +12132,7 @@ public final class ClusterOuterClass {
         yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Resources result = new yandex.cloud.api.mdb.redis.v1.ClusterOuterClass.Resources(this);
         result.resourcePresetId_ = resourcePresetId_;
         result.diskSize_ = diskSize_;
+        result.diskTypeId_ = diskTypeId_;
         onBuilt();
         return result;
       }
@@ -12011,6 +12187,10 @@ public final class ClusterOuterClass {
         }
         if (other.getDiskSize() != 0L) {
           setDiskSize(other.getDiskSize());
+        }
+        if (!other.getDiskTypeId().isEmpty()) {
+          diskTypeId_ = other.diskTypeId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12169,6 +12349,110 @@ public final class ClusterOuterClass {
       public Builder clearDiskSize() {
         
         diskSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object diskTypeId_ = "";
+      /**
+       * <pre>
+       * Type of the storage environment for the host.
+       * Possible values:
+       * * network-ssd — network SSD drive,
+       * * local-ssd — local SSD storage.
+       * </pre>
+       *
+       * <code>string disk_type_id = 3;</code>
+       */
+      public java.lang.String getDiskTypeId() {
+        java.lang.Object ref = diskTypeId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          diskTypeId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Type of the storage environment for the host.
+       * Possible values:
+       * * network-ssd — network SSD drive,
+       * * local-ssd — local SSD storage.
+       * </pre>
+       *
+       * <code>string disk_type_id = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDiskTypeIdBytes() {
+        java.lang.Object ref = diskTypeId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          diskTypeId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Type of the storage environment for the host.
+       * Possible values:
+       * * network-ssd — network SSD drive,
+       * * local-ssd — local SSD storage.
+       * </pre>
+       *
+       * <code>string disk_type_id = 3;</code>
+       */
+      public Builder setDiskTypeId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        diskTypeId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of the storage environment for the host.
+       * Possible values:
+       * * network-ssd — network SSD drive,
+       * * local-ssd — local SSD storage.
+       * </pre>
+       *
+       * <code>string disk_type_id = 3;</code>
+       */
+      public Builder clearDiskTypeId() {
+        
+        diskTypeId_ = getDefaultInstance().getDiskTypeId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of the storage environment for the host.
+       * Possible values:
+       * * network-ssd — network SSD drive,
+       * * local-ssd — local SSD storage.
+       * </pre>
+       *
+       * <code>string disk_type_id = 3;</code>
+       */
+      public Builder setDiskTypeIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        diskTypeId_ = value;
         onChanged();
         return this;
       }
@@ -12782,7 +13066,7 @@ public final class ClusterOuterClass {
       "fday.proto\032/yandex/cloud/mdb/redis/v1/co" +
       "nfig/redis5_0.proto\032/yandex/cloud/mdb/re" +
       "dis/v1/config/redis6_0.proto\032+yandex/clo" +
-      "ud/mdb/redis/v1/maintenance.proto\"\370\007\n\007Cl" +
+      "ud/mdb/redis/v1/maintenance.proto\"\215\010\n\007Cl" +
       "uster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\n" +
       "created_at\030\003 \001(\0132\032.google.protobuf.Times" +
       "tamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022" +
@@ -12800,50 +13084,51 @@ public final class ClusterOuterClass {
       "x.cloud.mdb.redis.v1.MaintenanceWindow\022J" +
       "\n\021planned_operation\030\017 \001(\0132/.yandex.cloud" +
       ".mdb.redis.v1.MaintenanceOperation\022\032\n\022se" +
-      "curity_group_ids\030\020 \003(\t\032-\n\013LabelsEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Environ" +
-      "ment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\nPRO" +
-      "DUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n\016HE" +
-      "ALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010D" +
-      "EGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022" +
-      "\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n" +
-      "\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014" +
-      "\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t" +
-      "\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\225\003\n\r" +
-      "ClusterConfig\022\017\n\007version\030\001 \001(\t\022`\n\020redis_" +
-      "config_5_0\030\002 \001(\01323.yandex.cloud.mdb.redi" +
-      "s.v1.config.RedisConfigSet5_0H\000R\017redisCo" +
-      "nfig_5_0\022`\n\020redis_config_6_0\030\006 \001(\01323.yan" +
-      "dex.cloud.mdb.redis.v1.config.RedisConfi" +
-      "gSet6_0H\000R\017redisConfig_6_0\0227\n\tresources\030" +
-      "\003 \001(\0132$.yandex.cloud.mdb.redis.v1.Resour" +
-      "ces\0223\n\023backup_window_start\030\004 \001(\0132\026.googl" +
-      "e.type.TimeOfDay\0221\n\006access\030\005 \001(\0132!.yande" +
-      "x.cloud.mdb.redis.v1.AccessB\016\n\014redis_con" +
-      "fig\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id" +
-      "\030\002 \001(\t\"\257\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster" +
-      "_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022\021\n\tsubnet_id\030" +
-      "\004 \001(\t\0227\n\tresources\030\005 \001(\0132$.yandex.cloud." +
-      "mdb.redis.v1.Resources\0222\n\004role\030\006 \001(\0162$.y" +
-      "andex.cloud.mdb.redis.v1.Host.Role\0226\n\006he" +
-      "alth\030\007 \001(\0162&.yandex.cloud.mdb.redis.v1.H" +
-      "ost.Health\0224\n\010services\030\010 \003(\0132\".yandex.cl" +
-      "oud.mdb.redis.v1.Service\022\022\n\nshard_name\030\t" +
-      " \001(\t\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER" +
-      "\020\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKN" +
-      "OWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003" +
-      "\"\367\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.yandex.clou" +
-      "d.mdb.redis.v1.Service.Type\0229\n\006health\030\002 " +
-      "\001(\0162).yandex.cloud.mdb.redis.v1.Service." +
-      "Health\"G\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005" +
-      "REDIS\020\001\022\013\n\007ARBITER\020\002\022\021\n\rREDIS_CLUSTER\020\003\"" +
-      "1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001" +
-      "\022\010\n\004DEAD\020\002\":\n\tResources\022\032\n\022resource_pres" +
-      "et_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\"\033\n\006Access" +
-      "\022\021\n\tdata_lens\030\001 \001(\010Bd\n\035yandex.cloud.api." +
-      "mdb.redis.v1ZCgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/mdb/redis/v1;redi" +
-      "sb\006proto3"
+      "curity_group_ids\030\020 \003(\t\022\023\n\013tls_enabled\030\021 " +
+      "\001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT" +
+      "_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTA" +
+      "BLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005A" +
+      "LIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status" +
+      "\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RU" +
+      "NNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOP" +
+      "PING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMon" +
+      "itoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001" +
+      "(\t\022\014\n\004link\030\003 \001(\t\"\225\003\n\rClusterConfig\022\017\n\007ve" +
+      "rsion\030\001 \001(\t\022`\n\020redis_config_5_0\030\002 \001(\01323." +
+      "yandex.cloud.mdb.redis.v1.config.RedisCo" +
+      "nfigSet5_0H\000R\017redisConfig_5_0\022`\n\020redis_c" +
+      "onfig_6_0\030\006 \001(\01323.yandex.cloud.mdb.redis" +
+      ".v1.config.RedisConfigSet6_0H\000R\017redisCon" +
+      "fig_6_0\0227\n\tresources\030\003 \001(\0132$.yandex.clou" +
+      "d.mdb.redis.v1.Resources\0223\n\023backup_windo" +
+      "w_start\030\004 \001(\0132\026.google.type.TimeOfDay\0221\n" +
+      "\006access\030\005 \001(\0132!.yandex.cloud.mdb.redis.v" +
+      "1.AccessB\016\n\014redis_config\")\n\005Shard\022\014\n\004nam" +
+      "e\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\"\257\003\n\004Host\022\014\n\004" +
+      "name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_i" +
+      "d\030\003 \001(\t\022\021\n\tsubnet_id\030\004 \001(\t\0227\n\tresources\030" +
+      "\005 \001(\0132$.yandex.cloud.mdb.redis.v1.Resour" +
+      "ces\0222\n\004role\030\006 \001(\0162$.yandex.cloud.mdb.red" +
+      "is.v1.Host.Role\0226\n\006health\030\007 \001(\0162&.yandex" +
+      ".cloud.mdb.redis.v1.Host.Health\0224\n\010servi" +
+      "ces\030\010 \003(\0132\".yandex.cloud.mdb.redis.v1.Se" +
+      "rvice\022\022\n\nshard_name\030\t \001(\t\"1\n\004Role\022\020\n\014ROL" +
+      "E_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006" +
+      "Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
+      "\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\367\001\n\007Service\0225\n\004typ" +
+      "e\030\001 \001(\0162\'.yandex.cloud.mdb.redis.v1.Serv" +
+      "ice.Type\0229\n\006health\030\002 \001(\0162).yandex.cloud." +
+      "mdb.redis.v1.Service.Health\"G\n\004Type\022\024\n\020T" +
+      "YPE_UNSPECIFIED\020\000\022\t\n\005REDIS\020\001\022\013\n\007ARBITER\020" +
+      "\002\022\021\n\rREDIS_CLUSTER\020\003\"1\n\006Health\022\022\n\016HEALTH" +
+      "_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResou" +
+      "rces\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk" +
+      "_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n\006Acc" +
+      "ess\022\021\n\tdata_lens\030\001 \001(\010Bd\n\035yandex.cloud.a" +
+      "pi.mdb.redis.v1ZCgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/mdb/redis/v1;r" +
+      "edisb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12867,7 +13152,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "TlsEnabled", });
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_LabelsEntry_fieldAccessorTable = new
@@ -12909,7 +13194,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_Resources_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_Resources_descriptor,
-        new java.lang.String[] { "ResourcePresetId", "DiskSize", });
+        new java.lang.String[] { "ResourcePresetId", "DiskSize", "DiskTypeId", });
     internal_static_yandex_cloud_mdb_redis_v1_Access_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_redis_v1_Access_fieldAccessorTable = new
