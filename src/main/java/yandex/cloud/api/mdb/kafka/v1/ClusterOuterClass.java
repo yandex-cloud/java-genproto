@@ -9440,6 +9440,56 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder();
+
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    boolean hasSocketSendBufferBytes();
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    com.google.protobuf.Int64Value getSocketSendBufferBytes();
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSocketSendBufferBytesOrBuilder();
+
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    boolean hasSocketReceiveBufferBytes();
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    com.google.protobuf.Int64Value getSocketReceiveBufferBytes();
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSocketReceiveBufferBytesOrBuilder();
   }
   /**
    * <pre>
@@ -9604,6 +9654,32 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(logPreallocate_);
                 logPreallocate_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (socketSendBufferBytes_ != null) {
+                subBuilder = socketSendBufferBytes_.toBuilder();
+              }
+              socketSendBufferBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(socketSendBufferBytes_);
+                socketSendBufferBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (socketReceiveBufferBytes_ != null) {
+                subBuilder = socketReceiveBufferBytes_.toBuilder();
+              }
+              socketReceiveBufferBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(socketReceiveBufferBytes_);
+                socketReceiveBufferBytes_ = subBuilder.buildPartial();
               }
 
               break;
@@ -9995,6 +10071,72 @@ public final class ClusterOuterClass {
       return getLogPreallocate();
     }
 
+    public static final int SOCKET_SEND_BUFFER_BYTES_FIELD_NUMBER = 11;
+    private com.google.protobuf.Int64Value socketSendBufferBytes_;
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    public boolean hasSocketSendBufferBytes() {
+      return socketSendBufferBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    public com.google.protobuf.Int64Value getSocketSendBufferBytes() {
+      return socketSendBufferBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : socketSendBufferBytes_;
+    }
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getSocketSendBufferBytesOrBuilder() {
+      return getSocketSendBufferBytes();
+    }
+
+    public static final int SOCKET_RECEIVE_BUFFER_BYTES_FIELD_NUMBER = 12;
+    private com.google.protobuf.Int64Value socketReceiveBufferBytes_;
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    public boolean hasSocketReceiveBufferBytes() {
+      return socketReceiveBufferBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    public com.google.protobuf.Int64Value getSocketReceiveBufferBytes() {
+      return socketReceiveBufferBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : socketReceiveBufferBytes_;
+    }
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getSocketReceiveBufferBytesOrBuilder() {
+      return getSocketReceiveBufferBytes();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10038,6 +10180,12 @@ public final class ClusterOuterClass {
       }
       if (logPreallocate_ != null) {
         output.writeMessage(10, getLogPreallocate());
+      }
+      if (socketSendBufferBytes_ != null) {
+        output.writeMessage(11, getSocketSendBufferBytes());
+      }
+      if (socketReceiveBufferBytes_ != null) {
+        output.writeMessage(12, getSocketReceiveBufferBytes());
       }
       unknownFields.writeTo(output);
     }
@@ -10087,6 +10235,14 @@ public final class ClusterOuterClass {
       if (logPreallocate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getLogPreallocate());
+      }
+      if (socketSendBufferBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getSocketSendBufferBytes());
+      }
+      if (socketReceiveBufferBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getSocketReceiveBufferBytes());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10150,6 +10306,16 @@ public final class ClusterOuterClass {
         result = result && getLogPreallocate()
             .equals(other.getLogPreallocate());
       }
+      result = result && (hasSocketSendBufferBytes() == other.hasSocketSendBufferBytes());
+      if (hasSocketSendBufferBytes()) {
+        result = result && getSocketSendBufferBytes()
+            .equals(other.getSocketSendBufferBytes());
+      }
+      result = result && (hasSocketReceiveBufferBytes() == other.hasSocketReceiveBufferBytes());
+      if (hasSocketReceiveBufferBytes()) {
+        result = result && getSocketReceiveBufferBytes()
+            .equals(other.getSocketReceiveBufferBytes());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -10198,6 +10364,14 @@ public final class ClusterOuterClass {
       if (hasLogPreallocate()) {
         hash = (37 * hash) + LOG_PREALLOCATE_FIELD_NUMBER;
         hash = (53 * hash) + getLogPreallocate().hashCode();
+      }
+      if (hasSocketSendBufferBytes()) {
+        hash = (37 * hash) + SOCKET_SEND_BUFFER_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getSocketSendBufferBytes().hashCode();
+      }
+      if (hasSocketReceiveBufferBytes()) {
+        hash = (37 * hash) + SOCKET_RECEIVE_BUFFER_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getSocketReceiveBufferBytes().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10392,6 +10566,18 @@ public final class ClusterOuterClass {
           logPreallocate_ = null;
           logPreallocateBuilder_ = null;
         }
+        if (socketSendBufferBytesBuilder_ == null) {
+          socketSendBufferBytes_ = null;
+        } else {
+          socketSendBufferBytes_ = null;
+          socketSendBufferBytesBuilder_ = null;
+        }
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          socketReceiveBufferBytes_ = null;
+        } else {
+          socketReceiveBufferBytes_ = null;
+          socketReceiveBufferBytesBuilder_ = null;
+        }
         return this;
       }
 
@@ -10463,6 +10649,16 @@ public final class ClusterOuterClass {
           result.logPreallocate_ = logPreallocate_;
         } else {
           result.logPreallocate_ = logPreallocateBuilder_.build();
+        }
+        if (socketSendBufferBytesBuilder_ == null) {
+          result.socketSendBufferBytes_ = socketSendBufferBytes_;
+        } else {
+          result.socketSendBufferBytes_ = socketSendBufferBytesBuilder_.build();
+        }
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          result.socketReceiveBufferBytes_ = socketReceiveBufferBytes_;
+        } else {
+          result.socketReceiveBufferBytes_ = socketReceiveBufferBytesBuilder_.build();
         }
         onBuilt();
         return result;
@@ -10541,6 +10737,12 @@ public final class ClusterOuterClass {
         }
         if (other.hasLogPreallocate()) {
           mergeLogPreallocate(other.getLogPreallocate());
+        }
+        if (other.hasSocketSendBufferBytes()) {
+          mergeSocketSendBufferBytes(other.getSocketSendBufferBytes());
+        }
+        if (other.hasSocketReceiveBufferBytes()) {
+          mergeSocketReceiveBufferBytes(other.getSocketReceiveBufferBytes());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12111,6 +12313,312 @@ public final class ClusterOuterClass {
         }
         return logPreallocateBuilder_;
       }
+
+      private com.google.protobuf.Int64Value socketSendBufferBytes_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> socketSendBufferBytesBuilder_;
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public boolean hasSocketSendBufferBytes() {
+        return socketSendBufferBytesBuilder_ != null || socketSendBufferBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public com.google.protobuf.Int64Value getSocketSendBufferBytes() {
+        if (socketSendBufferBytesBuilder_ == null) {
+          return socketSendBufferBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : socketSendBufferBytes_;
+        } else {
+          return socketSendBufferBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public Builder setSocketSendBufferBytes(com.google.protobuf.Int64Value value) {
+        if (socketSendBufferBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          socketSendBufferBytes_ = value;
+          onChanged();
+        } else {
+          socketSendBufferBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public Builder setSocketSendBufferBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (socketSendBufferBytesBuilder_ == null) {
+          socketSendBufferBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          socketSendBufferBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public Builder mergeSocketSendBufferBytes(com.google.protobuf.Int64Value value) {
+        if (socketSendBufferBytesBuilder_ == null) {
+          if (socketSendBufferBytes_ != null) {
+            socketSendBufferBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(socketSendBufferBytes_).mergeFrom(value).buildPartial();
+          } else {
+            socketSendBufferBytes_ = value;
+          }
+          onChanged();
+        } else {
+          socketSendBufferBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public Builder clearSocketSendBufferBytes() {
+        if (socketSendBufferBytesBuilder_ == null) {
+          socketSendBufferBytes_ = null;
+          onChanged();
+        } else {
+          socketSendBufferBytes_ = null;
+          socketSendBufferBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSocketSendBufferBytesBuilder() {
+        
+        onChanged();
+        return getSocketSendBufferBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSocketSendBufferBytesOrBuilder() {
+        if (socketSendBufferBytesBuilder_ != null) {
+          return socketSendBufferBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return socketSendBufferBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : socketSendBufferBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSocketSendBufferBytesFieldBuilder() {
+        if (socketSendBufferBytesBuilder_ == null) {
+          socketSendBufferBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSocketSendBufferBytes(),
+                  getParentForChildren(),
+                  isClean());
+          socketSendBufferBytes_ = null;
+        }
+        return socketSendBufferBytesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value socketReceiveBufferBytes_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> socketReceiveBufferBytesBuilder_;
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public boolean hasSocketReceiveBufferBytes() {
+        return socketReceiveBufferBytesBuilder_ != null || socketReceiveBufferBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64Value getSocketReceiveBufferBytes() {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          return socketReceiveBufferBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : socketReceiveBufferBytes_;
+        } else {
+          return socketReceiveBufferBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public Builder setSocketReceiveBufferBytes(com.google.protobuf.Int64Value value) {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          socketReceiveBufferBytes_ = value;
+          onChanged();
+        } else {
+          socketReceiveBufferBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public Builder setSocketReceiveBufferBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          socketReceiveBufferBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          socketReceiveBufferBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public Builder mergeSocketReceiveBufferBytes(com.google.protobuf.Int64Value value) {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          if (socketReceiveBufferBytes_ != null) {
+            socketReceiveBufferBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(socketReceiveBufferBytes_).mergeFrom(value).buildPartial();
+          } else {
+            socketReceiveBufferBytes_ = value;
+          }
+          onChanged();
+        } else {
+          socketReceiveBufferBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public Builder clearSocketReceiveBufferBytes() {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          socketReceiveBufferBytes_ = null;
+          onChanged();
+        } else {
+          socketReceiveBufferBytes_ = null;
+          socketReceiveBufferBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSocketReceiveBufferBytesBuilder() {
+        
+        onChanged();
+        return getSocketReceiveBufferBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSocketReceiveBufferBytesOrBuilder() {
+        if (socketReceiveBufferBytesBuilder_ != null) {
+          return socketReceiveBufferBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return socketReceiveBufferBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : socketReceiveBufferBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSocketReceiveBufferBytesFieldBuilder() {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          socketReceiveBufferBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSocketReceiveBufferBytes(),
+                  getParentForChildren(),
+                  isClean());
+          socketReceiveBufferBytes_ = null;
+        }
+        return socketReceiveBufferBytesBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -12442,6 +12950,56 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.BoolValue log_preallocate = 10;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getLogPreallocateOrBuilder();
+
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    boolean hasSocketSendBufferBytes();
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    com.google.protobuf.Int64Value getSocketSendBufferBytes();
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSocketSendBufferBytesOrBuilder();
+
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    boolean hasSocketReceiveBufferBytes();
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    com.google.protobuf.Int64Value getSocketReceiveBufferBytes();
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSocketReceiveBufferBytesOrBuilder();
   }
   /**
    * <pre>
@@ -12606,6 +13164,32 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(logPreallocate_);
                 logPreallocate_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (socketSendBufferBytes_ != null) {
+                subBuilder = socketSendBufferBytes_.toBuilder();
+              }
+              socketSendBufferBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(socketSendBufferBytes_);
+                socketSendBufferBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (socketReceiveBufferBytes_ != null) {
+                subBuilder = socketReceiveBufferBytes_.toBuilder();
+              }
+              socketReceiveBufferBytes_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(socketReceiveBufferBytes_);
+                socketReceiveBufferBytes_ = subBuilder.buildPartial();
               }
 
               break;
@@ -12997,6 +13581,72 @@ public final class ClusterOuterClass {
       return getLogPreallocate();
     }
 
+    public static final int SOCKET_SEND_BUFFER_BYTES_FIELD_NUMBER = 11;
+    private com.google.protobuf.Int64Value socketSendBufferBytes_;
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    public boolean hasSocketSendBufferBytes() {
+      return socketSendBufferBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    public com.google.protobuf.Int64Value getSocketSendBufferBytes() {
+      return socketSendBufferBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : socketSendBufferBytes_;
+    }
+    /**
+     * <pre>
+     * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getSocketSendBufferBytesOrBuilder() {
+      return getSocketSendBufferBytes();
+    }
+
+    public static final int SOCKET_RECEIVE_BUFFER_BYTES_FIELD_NUMBER = 12;
+    private com.google.protobuf.Int64Value socketReceiveBufferBytes_;
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    public boolean hasSocketReceiveBufferBytes() {
+      return socketReceiveBufferBytes_ != null;
+    }
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    public com.google.protobuf.Int64Value getSocketReceiveBufferBytes() {
+      return socketReceiveBufferBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : socketReceiveBufferBytes_;
+    }
+    /**
+     * <pre>
+     * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getSocketReceiveBufferBytesOrBuilder() {
+      return getSocketReceiveBufferBytes();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13040,6 +13690,12 @@ public final class ClusterOuterClass {
       }
       if (logPreallocate_ != null) {
         output.writeMessage(10, getLogPreallocate());
+      }
+      if (socketSendBufferBytes_ != null) {
+        output.writeMessage(11, getSocketSendBufferBytes());
+      }
+      if (socketReceiveBufferBytes_ != null) {
+        output.writeMessage(12, getSocketReceiveBufferBytes());
       }
       unknownFields.writeTo(output);
     }
@@ -13089,6 +13745,14 @@ public final class ClusterOuterClass {
       if (logPreallocate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getLogPreallocate());
+      }
+      if (socketSendBufferBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getSocketSendBufferBytes());
+      }
+      if (socketReceiveBufferBytes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getSocketReceiveBufferBytes());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13152,6 +13816,16 @@ public final class ClusterOuterClass {
         result = result && getLogPreallocate()
             .equals(other.getLogPreallocate());
       }
+      result = result && (hasSocketSendBufferBytes() == other.hasSocketSendBufferBytes());
+      if (hasSocketSendBufferBytes()) {
+        result = result && getSocketSendBufferBytes()
+            .equals(other.getSocketSendBufferBytes());
+      }
+      result = result && (hasSocketReceiveBufferBytes() == other.hasSocketReceiveBufferBytes());
+      if (hasSocketReceiveBufferBytes()) {
+        result = result && getSocketReceiveBufferBytes()
+            .equals(other.getSocketReceiveBufferBytes());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -13200,6 +13874,14 @@ public final class ClusterOuterClass {
       if (hasLogPreallocate()) {
         hash = (37 * hash) + LOG_PREALLOCATE_FIELD_NUMBER;
         hash = (53 * hash) + getLogPreallocate().hashCode();
+      }
+      if (hasSocketSendBufferBytes()) {
+        hash = (37 * hash) + SOCKET_SEND_BUFFER_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getSocketSendBufferBytes().hashCode();
+      }
+      if (hasSocketReceiveBufferBytes()) {
+        hash = (37 * hash) + SOCKET_RECEIVE_BUFFER_BYTES_FIELD_NUMBER;
+        hash = (53 * hash) + getSocketReceiveBufferBytes().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -13394,6 +14076,18 @@ public final class ClusterOuterClass {
           logPreallocate_ = null;
           logPreallocateBuilder_ = null;
         }
+        if (socketSendBufferBytesBuilder_ == null) {
+          socketSendBufferBytes_ = null;
+        } else {
+          socketSendBufferBytes_ = null;
+          socketSendBufferBytesBuilder_ = null;
+        }
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          socketReceiveBufferBytes_ = null;
+        } else {
+          socketReceiveBufferBytes_ = null;
+          socketReceiveBufferBytesBuilder_ = null;
+        }
         return this;
       }
 
@@ -13465,6 +14159,16 @@ public final class ClusterOuterClass {
           result.logPreallocate_ = logPreallocate_;
         } else {
           result.logPreallocate_ = logPreallocateBuilder_.build();
+        }
+        if (socketSendBufferBytesBuilder_ == null) {
+          result.socketSendBufferBytes_ = socketSendBufferBytes_;
+        } else {
+          result.socketSendBufferBytes_ = socketSendBufferBytesBuilder_.build();
+        }
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          result.socketReceiveBufferBytes_ = socketReceiveBufferBytes_;
+        } else {
+          result.socketReceiveBufferBytes_ = socketReceiveBufferBytesBuilder_.build();
         }
         onBuilt();
         return result;
@@ -13543,6 +14247,12 @@ public final class ClusterOuterClass {
         }
         if (other.hasLogPreallocate()) {
           mergeLogPreallocate(other.getLogPreallocate());
+        }
+        if (other.hasSocketSendBufferBytes()) {
+          mergeSocketSendBufferBytes(other.getSocketSendBufferBytes());
+        }
+        if (other.hasSocketReceiveBufferBytes()) {
+          mergeSocketReceiveBufferBytes(other.getSocketReceiveBufferBytes());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15112,6 +15822,312 @@ public final class ClusterOuterClass {
           logPreallocate_ = null;
         }
         return logPreallocateBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value socketSendBufferBytes_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> socketSendBufferBytesBuilder_;
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public boolean hasSocketSendBufferBytes() {
+        return socketSendBufferBytesBuilder_ != null || socketSendBufferBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public com.google.protobuf.Int64Value getSocketSendBufferBytes() {
+        if (socketSendBufferBytesBuilder_ == null) {
+          return socketSendBufferBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : socketSendBufferBytes_;
+        } else {
+          return socketSendBufferBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public Builder setSocketSendBufferBytes(com.google.protobuf.Int64Value value) {
+        if (socketSendBufferBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          socketSendBufferBytes_ = value;
+          onChanged();
+        } else {
+          socketSendBufferBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public Builder setSocketSendBufferBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (socketSendBufferBytesBuilder_ == null) {
+          socketSendBufferBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          socketSendBufferBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public Builder mergeSocketSendBufferBytes(com.google.protobuf.Int64Value value) {
+        if (socketSendBufferBytesBuilder_ == null) {
+          if (socketSendBufferBytes_ != null) {
+            socketSendBufferBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(socketSendBufferBytes_).mergeFrom(value).buildPartial();
+          } else {
+            socketSendBufferBytes_ = value;
+          }
+          onChanged();
+        } else {
+          socketSendBufferBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public Builder clearSocketSendBufferBytes() {
+        if (socketSendBufferBytesBuilder_ == null) {
+          socketSendBufferBytes_ = null;
+          onChanged();
+        } else {
+          socketSendBufferBytes_ = null;
+          socketSendBufferBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSocketSendBufferBytesBuilder() {
+        
+        onChanged();
+        return getSocketSendBufferBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSocketSendBufferBytesOrBuilder() {
+        if (socketSendBufferBytesBuilder_ != null) {
+          return socketSendBufferBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return socketSendBufferBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : socketSendBufferBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The SO_SNDBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_send_buffer_bytes = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSocketSendBufferBytesFieldBuilder() {
+        if (socketSendBufferBytesBuilder_ == null) {
+          socketSendBufferBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSocketSendBufferBytes(),
+                  getParentForChildren(),
+                  isClean());
+          socketSendBufferBytes_ = null;
+        }
+        return socketSendBufferBytesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value socketReceiveBufferBytes_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> socketReceiveBufferBytesBuilder_;
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public boolean hasSocketReceiveBufferBytes() {
+        return socketReceiveBufferBytesBuilder_ != null || socketReceiveBufferBytes_ != null;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64Value getSocketReceiveBufferBytes() {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          return socketReceiveBufferBytes_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : socketReceiveBufferBytes_;
+        } else {
+          return socketReceiveBufferBytesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public Builder setSocketReceiveBufferBytes(com.google.protobuf.Int64Value value) {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          socketReceiveBufferBytes_ = value;
+          onChanged();
+        } else {
+          socketReceiveBufferBytesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public Builder setSocketReceiveBufferBytes(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          socketReceiveBufferBytes_ = builderForValue.build();
+          onChanged();
+        } else {
+          socketReceiveBufferBytesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public Builder mergeSocketReceiveBufferBytes(com.google.protobuf.Int64Value value) {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          if (socketReceiveBufferBytes_ != null) {
+            socketReceiveBufferBytes_ =
+              com.google.protobuf.Int64Value.newBuilder(socketReceiveBufferBytes_).mergeFrom(value).buildPartial();
+          } else {
+            socketReceiveBufferBytes_ = value;
+          }
+          onChanged();
+        } else {
+          socketReceiveBufferBytesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public Builder clearSocketReceiveBufferBytes() {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          socketReceiveBufferBytes_ = null;
+          onChanged();
+        } else {
+          socketReceiveBufferBytes_ = null;
+          socketReceiveBufferBytesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSocketReceiveBufferBytesBuilder() {
+        
+        onChanged();
+        return getSocketReceiveBufferBytesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSocketReceiveBufferBytesOrBuilder() {
+        if (socketReceiveBufferBytesBuilder_ != null) {
+          return socketReceiveBufferBytesBuilder_.getMessageOrBuilder();
+        } else {
+          return socketReceiveBufferBytes_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : socketReceiveBufferBytes_;
+        }
+      }
+      /**
+       * <pre>
+       * The SO_RCVBUF buffer of the socket server sockets. If the value is -1, the OS default will be used.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSocketReceiveBufferBytesFieldBuilder() {
+        if (socketReceiveBufferBytesBuilder_ == null) {
+          socketReceiveBufferBytesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSocketReceiveBufferBytes(),
+                  getParentForChildren(),
+                  isClean());
+          socketReceiveBufferBytes_ = null;
+        }
+        return socketReceiveBufferBytesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17255,7 +18271,7 @@ public final class ClusterOuterClass {
       "D\n\tZookeeper\0227\n\tresources\030\001 \001(\0132$.yandex" +
       ".cloud.mdb.kafka.v1.Resources\"P\n\tResourc" +
       "es\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_s" +
-      "ize\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\356\004\n\016Kafk" +
+      "ize\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\357\005\n\016Kafk" +
       "aConfig2_1\022D\n\020compression_type\030\001 \001(\0162*.y" +
       "andex.cloud.mdb.kafka.v1.CompressionType" +
       "\022@\n\033log_flush_interval_messages\030\002 \001(\0132\033." +
@@ -17271,35 +18287,41 @@ public final class ClusterOuterClass {
       ".google.protobuf.Int64Value\0226\n\021log_segme" +
       "nt_bytes\030\t \001(\0132\033.google.protobuf.Int64Va" +
       "lue\0223\n\017log_preallocate\030\n \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\"\356\004\n\016KafkaConfig2_6\022D\n\020c" +
-      "ompression_type\030\001 \001(\0162*.yandex.cloud.mdb" +
-      ".kafka.v1.CompressionType\022@\n\033log_flush_i" +
-      "nterval_messages\030\002 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022:\n\025log_flush_interval_ms\030\003 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022D\n\037log_f" +
-      "lush_scheduler_interval_ms\030\004 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\0228\n\023log_retention_b" +
-      "ytes\030\005 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "8\n\023log_retention_hours\030\006 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022:\n\025log_retention_minut" +
-      "es\030\007 \001(\0132\033.google.protobuf.Int64Value\0225\n" +
-      "\020log_retention_ms\030\010 \001(\0132\033.google.protobu" +
-      "f.Int64Value\0226\n\021log_segment_bytes\030\t \001(\0132" +
-      "\033.google.protobuf.Int64Value\0223\n\017log_prea" +
-      "llocate\030\n \001(\0132\032.google.protobuf.BoolValu" +
-      "e\"\375\002\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002" +
-      " \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.ya" +
-      "ndex.cloud.mdb.kafka.v1.Host.Role\0227\n\tres" +
-      "ources\030\005 \001(\0132$.yandex.cloud.mdb.kafka.v1" +
-      ".Resources\0226\n\006health\030\006 \001(\0162&.yandex.clou" +
-      "d.mdb.kafka.v1.Host.Health\022\021\n\tsubnet_id\030" +
-      "\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"6\n\004Role\022" +
-      "\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOK" +
-      "EEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020" +
-      "\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003Bd\n\035yandex.clou" +
-      "d.api.mdb.kafka.v1ZCgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/mdb/kafka/v" +
-      "1;kafkab\006proto3"
+      "otobuf.BoolValue\022=\n\030socket_send_buffer_b" +
+      "ytes\030\013 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "@\n\033socket_receive_buffer_bytes\030\014 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\"\357\005\n\016KafkaConfi" +
+      "g2_6\022D\n\020compression_type\030\001 \001(\0162*.yandex." +
+      "cloud.mdb.kafka.v1.CompressionType\022@\n\033lo" +
+      "g_flush_interval_messages\030\002 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022:\n\025log_flush_interv" +
+      "al_ms\030\003 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022D\n\037log_flush_scheduler_interval_ms\030\004 \001(" +
+      "\0132\033.google.protobuf.Int64Value\0228\n\023log_re" +
+      "tention_bytes\030\005 \001(\0132\033.google.protobuf.In" +
+      "t64Value\0228\n\023log_retention_hours\030\006 \001(\0132\033." +
+      "google.protobuf.Int64Value\022:\n\025log_retent" +
+      "ion_minutes\030\007 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\0226\n\021log_segment_byt" +
+      "es\030\t \001(\0132\033.google.protobuf.Int64Value\0223\n" +
+      "\017log_preallocate\030\n \001(\0132\032.google.protobuf" +
+      ".BoolValue\022=\n\030socket_send_buffer_bytes\030\013" +
+      " \001(\0132\033.google.protobuf.Int64Value\022@\n\033soc" +
+      "ket_receive_buffer_bytes\030\014 \001(\0132\033.google." +
+      "protobuf.Int64Value\"\375\002\n\004Host\022\014\n\004name\030\001 \001" +
+      "(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022" +
+      "2\n\004role\030\004 \001(\0162$.yandex.cloud.mdb.kafka.v" +
+      "1.Host.Role\0227\n\tresources\030\005 \001(\0132$.yandex." +
+      "cloud.mdb.kafka.v1.Resources\0226\n\006health\030\006" +
+      " \001(\0162&.yandex.cloud.mdb.kafka.v1.Host.He" +
+      "alth\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public" +
+      "_ip\030\t \001(\010\"6\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022" +
+      "\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n\007U" +
+      "NKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADE" +
+      "D\020\003Bd\n\035yandex.cloud.api.mdb.kafka.v1ZCgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/mdb/kafka/v1;kafkab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17363,13 +18385,13 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_1_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_1_descriptor,
-        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", });
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", });
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_descriptor,
-        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", });
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", });
     internal_static_yandex_cloud_mdb_kafka_v1_Host_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_kafka_v1_Host_fieldAccessorTable = new

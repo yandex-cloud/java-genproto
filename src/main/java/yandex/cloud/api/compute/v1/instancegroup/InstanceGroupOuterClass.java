@@ -27926,6 +27926,50 @@ public final class InstanceGroupOuterClass {
      * <code>.yandex.cloud.compute.v1.instancegroup.OneToOneNatSpec one_to_one_nat_spec = 1;</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.OneToOneNatSpecOrBuilder getOneToOneNatSpecOrBuilder();
+
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec> 
+        getDnsRecordSpecsList();
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec getDnsRecordSpecs(int index);
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+     */
+    int getDnsRecordSpecsCount();
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder> 
+        getDnsRecordSpecsOrBuilderList();
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder getDnsRecordSpecsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.PrimaryAddressSpec}
@@ -27940,6 +27984,7 @@ public final class InstanceGroupOuterClass {
       super(builder);
     }
     private PrimaryAddressSpec() {
+      dnsRecordSpecs_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -27979,6 +28024,15 @@ public final class InstanceGroupOuterClass {
 
               break;
             }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                dnsRecordSpecs_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              dnsRecordSpecs_.add(
+                  input.readMessage(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -27994,6 +28048,9 @@ public final class InstanceGroupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          dnsRecordSpecs_ = java.util.Collections.unmodifiableList(dnsRecordSpecs_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -28011,6 +28068,7 @@ public final class InstanceGroupOuterClass {
               yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.PrimaryAddressSpec.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.PrimaryAddressSpec.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ONE_TO_ONE_NAT_SPEC_FIELD_NUMBER = 1;
     private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.OneToOneNatSpec oneToOneNatSpec_;
     /**
@@ -28047,6 +28105,61 @@ public final class InstanceGroupOuterClass {
       return getOneToOneNatSpec();
     }
 
+    public static final int DNS_RECORD_SPECS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec> dnsRecordSpecs_;
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+     */
+    public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec> getDnsRecordSpecsList() {
+      return dnsRecordSpecs_;
+    }
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder> 
+        getDnsRecordSpecsOrBuilderList() {
+      return dnsRecordSpecs_;
+    }
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+     */
+    public int getDnsRecordSpecsCount() {
+      return dnsRecordSpecs_.size();
+    }
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+     */
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec getDnsRecordSpecs(int index) {
+      return dnsRecordSpecs_.get(index);
+    }
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+     */
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder getDnsRecordSpecsOrBuilder(
+        int index) {
+      return dnsRecordSpecs_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -28064,6 +28177,9 @@ public final class InstanceGroupOuterClass {
       if (oneToOneNatSpec_ != null) {
         output.writeMessage(1, getOneToOneNatSpec());
       }
+      for (int i = 0; i < dnsRecordSpecs_.size(); i++) {
+        output.writeMessage(2, dnsRecordSpecs_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -28076,6 +28192,10 @@ public final class InstanceGroupOuterClass {
       if (oneToOneNatSpec_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getOneToOneNatSpec());
+      }
+      for (int i = 0; i < dnsRecordSpecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, dnsRecordSpecs_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -28098,6 +28218,8 @@ public final class InstanceGroupOuterClass {
         result = result && getOneToOneNatSpec()
             .equals(other.getOneToOneNatSpec());
       }
+      result = result && getDnsRecordSpecsList()
+          .equals(other.getDnsRecordSpecsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -28112,6 +28234,10 @@ public final class InstanceGroupOuterClass {
       if (hasOneToOneNatSpec()) {
         hash = (37 * hash) + ONE_TO_ONE_NAT_SPEC_FIELD_NUMBER;
         hash = (53 * hash) + getOneToOneNatSpec().hashCode();
+      }
+      if (getDnsRecordSpecsCount() > 0) {
+        hash = (37 * hash) + DNS_RECORD_SPECS_FIELD_NUMBER;
+        hash = (53 * hash) + getDnsRecordSpecsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -28241,6 +28367,7 @@ public final class InstanceGroupOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getDnsRecordSpecsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -28251,6 +28378,12 @@ public final class InstanceGroupOuterClass {
         } else {
           oneToOneNatSpec_ = null;
           oneToOneNatSpecBuilder_ = null;
+        }
+        if (dnsRecordSpecsBuilder_ == null) {
+          dnsRecordSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          dnsRecordSpecsBuilder_.clear();
         }
         return this;
       }
@@ -28278,11 +28411,23 @@ public final class InstanceGroupOuterClass {
       @java.lang.Override
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.PrimaryAddressSpec buildPartial() {
         yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.PrimaryAddressSpec result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.PrimaryAddressSpec(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (oneToOneNatSpecBuilder_ == null) {
           result.oneToOneNatSpec_ = oneToOneNatSpec_;
         } else {
           result.oneToOneNatSpec_ = oneToOneNatSpecBuilder_.build();
         }
+        if (dnsRecordSpecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            dnsRecordSpecs_ = java.util.Collections.unmodifiableList(dnsRecordSpecs_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.dnsRecordSpecs_ = dnsRecordSpecs_;
+        } else {
+          result.dnsRecordSpecs_ = dnsRecordSpecsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -28334,6 +28479,32 @@ public final class InstanceGroupOuterClass {
         if (other.hasOneToOneNatSpec()) {
           mergeOneToOneNatSpec(other.getOneToOneNatSpec());
         }
+        if (dnsRecordSpecsBuilder_ == null) {
+          if (!other.dnsRecordSpecs_.isEmpty()) {
+            if (dnsRecordSpecs_.isEmpty()) {
+              dnsRecordSpecs_ = other.dnsRecordSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureDnsRecordSpecsIsMutable();
+              dnsRecordSpecs_.addAll(other.dnsRecordSpecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dnsRecordSpecs_.isEmpty()) {
+            if (dnsRecordSpecsBuilder_.isEmpty()) {
+              dnsRecordSpecsBuilder_.dispose();
+              dnsRecordSpecsBuilder_ = null;
+              dnsRecordSpecs_ = other.dnsRecordSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              dnsRecordSpecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDnsRecordSpecsFieldBuilder() : null;
+            } else {
+              dnsRecordSpecsBuilder_.addAllMessages(other.dnsRecordSpecs_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -28362,6 +28533,7 @@ public final class InstanceGroupOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.OneToOneNatSpec oneToOneNatSpec_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -28524,6 +28696,318 @@ public final class InstanceGroupOuterClass {
         }
         return oneToOneNatSpecBuilder_;
       }
+
+      private java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec> dnsRecordSpecs_ =
+        java.util.Collections.emptyList();
+      private void ensureDnsRecordSpecsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          dnsRecordSpecs_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec>(dnsRecordSpecs_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder> dnsRecordSpecsBuilder_;
+
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec> getDnsRecordSpecsList() {
+        if (dnsRecordSpecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dnsRecordSpecs_);
+        } else {
+          return dnsRecordSpecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public int getDnsRecordSpecsCount() {
+        if (dnsRecordSpecsBuilder_ == null) {
+          return dnsRecordSpecs_.size();
+        } else {
+          return dnsRecordSpecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec getDnsRecordSpecs(int index) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          return dnsRecordSpecs_.get(index);
+        } else {
+          return dnsRecordSpecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public Builder setDnsRecordSpecs(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec value) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.set(index, value);
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public Builder setDnsRecordSpecs(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder builderForValue) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public Builder addDnsRecordSpecs(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec value) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.add(value);
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public Builder addDnsRecordSpecs(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec value) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.add(index, value);
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public Builder addDnsRecordSpecs(
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder builderForValue) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public Builder addDnsRecordSpecs(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder builderForValue) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public Builder addAllDnsRecordSpecs(
+          java.lang.Iterable<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec> values) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          ensureDnsRecordSpecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dnsRecordSpecs_);
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public Builder clearDnsRecordSpecs() {
+        if (dnsRecordSpecsBuilder_ == null) {
+          dnsRecordSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public Builder removeDnsRecordSpecs(int index) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.remove(index);
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder getDnsRecordSpecsBuilder(
+          int index) {
+        return getDnsRecordSpecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder getDnsRecordSpecsOrBuilder(
+          int index) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          return dnsRecordSpecs_.get(index);  } else {
+          return dnsRecordSpecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder> 
+           getDnsRecordSpecsOrBuilderList() {
+        if (dnsRecordSpecsBuilder_ != null) {
+          return dnsRecordSpecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dnsRecordSpecs_);
+        }
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder addDnsRecordSpecsBuilder() {
+        return getDnsRecordSpecsFieldBuilder().addBuilder(
+            yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder addDnsRecordSpecsBuilder(
+          int index) {
+        return getDnsRecordSpecsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder> 
+           getDnsRecordSpecsBuilderList() {
+        return getDnsRecordSpecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder> 
+          getDnsRecordSpecsFieldBuilder() {
+        if (dnsRecordSpecsBuilder_ == null) {
+          dnsRecordSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder>(
+                  dnsRecordSpecs_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          dnsRecordSpecs_ = null;
+        }
+        return dnsRecordSpecsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -28615,6 +29099,50 @@ public final class InstanceGroupOuterClass {
      */
     com.google.protobuf.ByteString
         getAddressBytes();
+
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+     */
+    java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec> 
+        getDnsRecordSpecsList();
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec getDnsRecordSpecs(int index);
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+     */
+    int getDnsRecordSpecsCount();
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder> 
+        getDnsRecordSpecsOrBuilderList();
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder getDnsRecordSpecsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.OneToOneNatSpec}
@@ -28631,6 +29159,7 @@ public final class InstanceGroupOuterClass {
     private OneToOneNatSpec() {
       ipVersion_ = 0;
       address_ = "";
+      dnsRecordSpecs_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -28669,6 +29198,15 @@ public final class InstanceGroupOuterClass {
               address_ = s;
               break;
             }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                dnsRecordSpecs_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              dnsRecordSpecs_.add(
+                  input.readMessage(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -28684,6 +29222,9 @@ public final class InstanceGroupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          dnsRecordSpecs_ = java.util.Collections.unmodifiableList(dnsRecordSpecs_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -28701,6 +29242,7 @@ public final class InstanceGroupOuterClass {
               yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.OneToOneNatSpec.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.OneToOneNatSpec.Builder.class);
     }
 
+    private int bitField0_;
     public static final int IP_VERSION_FIELD_NUMBER = 1;
     private int ipVersion_;
     /**
@@ -28768,6 +29310,61 @@ public final class InstanceGroupOuterClass {
       }
     }
 
+    public static final int DNS_RECORD_SPECS_FIELD_NUMBER = 3;
+    private java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec> dnsRecordSpecs_;
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+     */
+    public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec> getDnsRecordSpecsList() {
+      return dnsRecordSpecs_;
+    }
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder> 
+        getDnsRecordSpecsOrBuilderList() {
+      return dnsRecordSpecs_;
+    }
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+     */
+    public int getDnsRecordSpecsCount() {
+      return dnsRecordSpecs_.size();
+    }
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+     */
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec getDnsRecordSpecs(int index) {
+      return dnsRecordSpecs_.get(index);
+    }
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+     */
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder getDnsRecordSpecsOrBuilder(
+        int index) {
+      return dnsRecordSpecs_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -28788,6 +29385,9 @@ public final class InstanceGroupOuterClass {
       if (!getAddressBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address_);
       }
+      for (int i = 0; i < dnsRecordSpecs_.size(); i++) {
+        output.writeMessage(3, dnsRecordSpecs_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -28803,6 +29403,10 @@ public final class InstanceGroupOuterClass {
       }
       if (!getAddressBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address_);
+      }
+      for (int i = 0; i < dnsRecordSpecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, dnsRecordSpecs_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -28823,6 +29427,8 @@ public final class InstanceGroupOuterClass {
       result = result && ipVersion_ == other.ipVersion_;
       result = result && getAddress()
           .equals(other.getAddress());
+      result = result && getDnsRecordSpecsList()
+          .equals(other.getDnsRecordSpecsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -28838,6 +29444,10 @@ public final class InstanceGroupOuterClass {
       hash = (53 * hash) + ipVersion_;
       hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getAddress().hashCode();
+      if (getDnsRecordSpecsCount() > 0) {
+        hash = (37 * hash) + DNS_RECORD_SPECS_FIELD_NUMBER;
+        hash = (53 * hash) + getDnsRecordSpecsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -28966,6 +29576,7 @@ public final class InstanceGroupOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getDnsRecordSpecsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -28975,6 +29586,12 @@ public final class InstanceGroupOuterClass {
 
         address_ = "";
 
+        if (dnsRecordSpecsBuilder_ == null) {
+          dnsRecordSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          dnsRecordSpecsBuilder_.clear();
+        }
         return this;
       }
 
@@ -29001,8 +29618,20 @@ public final class InstanceGroupOuterClass {
       @java.lang.Override
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.OneToOneNatSpec buildPartial() {
         yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.OneToOneNatSpec result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.OneToOneNatSpec(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.ipVersion_ = ipVersion_;
         result.address_ = address_;
+        if (dnsRecordSpecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            dnsRecordSpecs_ = java.util.Collections.unmodifiableList(dnsRecordSpecs_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.dnsRecordSpecs_ = dnsRecordSpecs_;
+        } else {
+          result.dnsRecordSpecs_ = dnsRecordSpecsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -29058,6 +29687,32 @@ public final class InstanceGroupOuterClass {
           address_ = other.address_;
           onChanged();
         }
+        if (dnsRecordSpecsBuilder_ == null) {
+          if (!other.dnsRecordSpecs_.isEmpty()) {
+            if (dnsRecordSpecs_.isEmpty()) {
+              dnsRecordSpecs_ = other.dnsRecordSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureDnsRecordSpecsIsMutable();
+              dnsRecordSpecs_.addAll(other.dnsRecordSpecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dnsRecordSpecs_.isEmpty()) {
+            if (dnsRecordSpecsBuilder_.isEmpty()) {
+              dnsRecordSpecsBuilder_.dispose();
+              dnsRecordSpecsBuilder_ = null;
+              dnsRecordSpecs_ = other.dnsRecordSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              dnsRecordSpecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDnsRecordSpecsFieldBuilder() : null;
+            } else {
+              dnsRecordSpecsBuilder_.addAllMessages(other.dnsRecordSpecs_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -29086,6 +29741,7 @@ public final class InstanceGroupOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private int ipVersion_ = 0;
       /**
@@ -29240,6 +29896,318 @@ public final class InstanceGroupOuterClass {
         onChanged();
         return this;
       }
+
+      private java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec> dnsRecordSpecs_ =
+        java.util.Collections.emptyList();
+      private void ensureDnsRecordSpecsIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          dnsRecordSpecs_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec>(dnsRecordSpecs_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder> dnsRecordSpecsBuilder_;
+
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec> getDnsRecordSpecsList() {
+        if (dnsRecordSpecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dnsRecordSpecs_);
+        } else {
+          return dnsRecordSpecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public int getDnsRecordSpecsCount() {
+        if (dnsRecordSpecsBuilder_ == null) {
+          return dnsRecordSpecs_.size();
+        } else {
+          return dnsRecordSpecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec getDnsRecordSpecs(int index) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          return dnsRecordSpecs_.get(index);
+        } else {
+          return dnsRecordSpecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public Builder setDnsRecordSpecs(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec value) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.set(index, value);
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public Builder setDnsRecordSpecs(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder builderForValue) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public Builder addDnsRecordSpecs(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec value) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.add(value);
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public Builder addDnsRecordSpecs(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec value) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.add(index, value);
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public Builder addDnsRecordSpecs(
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder builderForValue) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public Builder addDnsRecordSpecs(
+          int index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder builderForValue) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public Builder addAllDnsRecordSpecs(
+          java.lang.Iterable<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec> values) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          ensureDnsRecordSpecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dnsRecordSpecs_);
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public Builder clearDnsRecordSpecs() {
+        if (dnsRecordSpecsBuilder_ == null) {
+          dnsRecordSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public Builder removeDnsRecordSpecs(int index) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          ensureDnsRecordSpecsIsMutable();
+          dnsRecordSpecs_.remove(index);
+          onChanged();
+        } else {
+          dnsRecordSpecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder getDnsRecordSpecsBuilder(
+          int index) {
+        return getDnsRecordSpecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder getDnsRecordSpecsOrBuilder(
+          int index) {
+        if (dnsRecordSpecsBuilder_ == null) {
+          return dnsRecordSpecs_.get(index);  } else {
+          return dnsRecordSpecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder> 
+           getDnsRecordSpecsOrBuilderList() {
+        if (dnsRecordSpecsBuilder_ != null) {
+          return dnsRecordSpecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dnsRecordSpecs_);
+        }
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder addDnsRecordSpecsBuilder() {
+        return getDnsRecordSpecsFieldBuilder().addBuilder(
+            yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder addDnsRecordSpecsBuilder(
+          int index) {
+        return getDnsRecordSpecsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.instancegroup.DnsRecordSpec dns_record_specs = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder> 
+           getDnsRecordSpecsBuilderList() {
+        return getDnsRecordSpecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder> 
+          getDnsRecordSpecsFieldBuilder() {
+        if (dnsRecordSpecsBuilder_ == null) {
+          dnsRecordSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder>(
+                  dnsRecordSpecs_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          dnsRecordSpecs_ = null;
+        }
+        return dnsRecordSpecsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -29288,6 +30256,933 @@ public final class InstanceGroupOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.OneToOneNatSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DnsRecordSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.DnsRecordSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * FQDN (required)
+     * </pre>
+     *
+     * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getFqdn();
+    /**
+     * <pre>
+     * FQDN (required)
+     * </pre>
+     *
+     * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getFqdnBytes();
+
+    /**
+     * <pre>
+     * DNS zone id (optional, if not set, private zone used)
+     * </pre>
+     *
+     * <code>string dns_zone_id = 2;</code>
+     */
+    java.lang.String getDnsZoneId();
+    /**
+     * <pre>
+     * DNS zone id (optional, if not set, private zone used)
+     * </pre>
+     *
+     * <code>string dns_zone_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getDnsZoneIdBytes();
+
+    /**
+     * <pre>
+     * DNS record ttl, values in 0-86400 (optional)
+     * </pre>
+     *
+     * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    long getTtl();
+
+    /**
+     * <pre>
+     * When set to true, also create PTR DNS record (optional)
+     * </pre>
+     *
+     * <code>bool ptr = 4;</code>
+     */
+    boolean getPtr();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.DnsRecordSpec}
+   */
+  public  static final class DnsRecordSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.instancegroup.DnsRecordSpec)
+      DnsRecordSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DnsRecordSpec.newBuilder() to construct.
+    private DnsRecordSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DnsRecordSpec() {
+      fqdn_ = "";
+      dnsZoneId_ = "";
+      ttl_ = 0L;
+      ptr_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DnsRecordSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fqdn_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dnsZoneId_ = s;
+              break;
+            }
+            case 24: {
+
+              ttl_ = input.readInt64();
+              break;
+            }
+            case 32: {
+
+              ptr_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DnsRecordSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DnsRecordSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder.class);
+    }
+
+    public static final int FQDN_FIELD_NUMBER = 1;
+    private volatile java.lang.Object fqdn_;
+    /**
+     * <pre>
+     * FQDN (required)
+     * </pre>
+     *
+     * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getFqdn() {
+      java.lang.Object ref = fqdn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fqdn_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * FQDN (required)
+     * </pre>
+     *
+     * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getFqdnBytes() {
+      java.lang.Object ref = fqdn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fqdn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DNS_ZONE_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object dnsZoneId_;
+    /**
+     * <pre>
+     * DNS zone id (optional, if not set, private zone used)
+     * </pre>
+     *
+     * <code>string dns_zone_id = 2;</code>
+     */
+    public java.lang.String getDnsZoneId() {
+      java.lang.Object ref = dnsZoneId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dnsZoneId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * DNS zone id (optional, if not set, private zone used)
+     * </pre>
+     *
+     * <code>string dns_zone_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDnsZoneIdBytes() {
+      java.lang.Object ref = dnsZoneId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dnsZoneId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TTL_FIELD_NUMBER = 3;
+    private long ttl_;
+    /**
+     * <pre>
+     * DNS record ttl, values in 0-86400 (optional)
+     * </pre>
+     *
+     * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-86400"];</code>
+     */
+    public long getTtl() {
+      return ttl_;
+    }
+
+    public static final int PTR_FIELD_NUMBER = 4;
+    private boolean ptr_;
+    /**
+     * <pre>
+     * When set to true, also create PTR DNS record (optional)
+     * </pre>
+     *
+     * <code>bool ptr = 4;</code>
+     */
+    public boolean getPtr() {
+      return ptr_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getFqdnBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fqdn_);
+      }
+      if (!getDnsZoneIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dnsZoneId_);
+      }
+      if (ttl_ != 0L) {
+        output.writeInt64(3, ttl_);
+      }
+      if (ptr_ != false) {
+        output.writeBool(4, ptr_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getFqdnBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fqdn_);
+      }
+      if (!getDnsZoneIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dnsZoneId_);
+      }
+      if (ttl_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, ttl_);
+      }
+      if (ptr_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, ptr_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec other = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec) obj;
+
+      boolean result = true;
+      result = result && getFqdn()
+          .equals(other.getFqdn());
+      result = result && getDnsZoneId()
+          .equals(other.getDnsZoneId());
+      result = result && (getTtl()
+          == other.getTtl());
+      result = result && (getPtr()
+          == other.getPtr());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FQDN_FIELD_NUMBER;
+      hash = (53 * hash) + getFqdn().hashCode();
+      hash = (37 * hash) + DNS_ZONE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDnsZoneId().hashCode();
+      hash = (37 * hash) + TTL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTtl());
+      hash = (37 * hash) + PTR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPtr());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.DnsRecordSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.instancegroup.DnsRecordSpec)
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DnsRecordSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DnsRecordSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        fqdn_ = "";
+
+        dnsZoneId_ = "";
+
+        ttl_ = 0L;
+
+        ptr_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_DnsRecordSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec build() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec buildPartial() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec(this);
+        result.fqdn_ = fqdn_;
+        result.dnsZoneId_ = dnsZoneId_;
+        result.ttl_ = ttl_;
+        result.ptr_ = ptr_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec) {
+          return mergeFrom((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec other) {
+        if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.getDefaultInstance()) return this;
+        if (!other.getFqdn().isEmpty()) {
+          fqdn_ = other.fqdn_;
+          onChanged();
+        }
+        if (!other.getDnsZoneId().isEmpty()) {
+          dnsZoneId_ = other.dnsZoneId_;
+          onChanged();
+        }
+        if (other.getTtl() != 0L) {
+          setTtl(other.getTtl());
+        }
+        if (other.getPtr() != false) {
+          setPtr(other.getPtr());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object fqdn_ = "";
+      /**
+       * <pre>
+       * FQDN (required)
+       * </pre>
+       *
+       * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getFqdn() {
+        java.lang.Object ref = fqdn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fqdn_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FQDN (required)
+       * </pre>
+       *
+       * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getFqdnBytes() {
+        java.lang.Object ref = fqdn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fqdn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * FQDN (required)
+       * </pre>
+       *
+       * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setFqdn(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fqdn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FQDN (required)
+       * </pre>
+       *
+       * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearFqdn() {
+        
+        fqdn_ = getDefaultInstance().getFqdn();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * FQDN (required)
+       * </pre>
+       *
+       * <code>string fqdn = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setFqdnBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fqdn_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object dnsZoneId_ = "";
+      /**
+       * <pre>
+       * DNS zone id (optional, if not set, private zone used)
+       * </pre>
+       *
+       * <code>string dns_zone_id = 2;</code>
+       */
+      public java.lang.String getDnsZoneId() {
+        java.lang.Object ref = dnsZoneId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dnsZoneId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DNS zone id (optional, if not set, private zone used)
+       * </pre>
+       *
+       * <code>string dns_zone_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDnsZoneIdBytes() {
+        java.lang.Object ref = dnsZoneId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dnsZoneId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DNS zone id (optional, if not set, private zone used)
+       * </pre>
+       *
+       * <code>string dns_zone_id = 2;</code>
+       */
+      public Builder setDnsZoneId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dnsZoneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DNS zone id (optional, if not set, private zone used)
+       * </pre>
+       *
+       * <code>string dns_zone_id = 2;</code>
+       */
+      public Builder clearDnsZoneId() {
+        
+        dnsZoneId_ = getDefaultInstance().getDnsZoneId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DNS zone id (optional, if not set, private zone used)
+       * </pre>
+       *
+       * <code>string dns_zone_id = 2;</code>
+       */
+      public Builder setDnsZoneIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dnsZoneId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long ttl_ ;
+      /**
+       * <pre>
+       * DNS record ttl, values in 0-86400 (optional)
+       * </pre>
+       *
+       * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public long getTtl() {
+        return ttl_;
+      }
+      /**
+       * <pre>
+       * DNS record ttl, values in 0-86400 (optional)
+       * </pre>
+       *
+       * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder setTtl(long value) {
+        
+        ttl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DNS record ttl, values in 0-86400 (optional)
+       * </pre>
+       *
+       * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-86400"];</code>
+       */
+      public Builder clearTtl() {
+        
+        ttl_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean ptr_ ;
+      /**
+       * <pre>
+       * When set to true, also create PTR DNS record (optional)
+       * </pre>
+       *
+       * <code>bool ptr = 4;</code>
+       */
+      public boolean getPtr() {
+        return ptr_;
+      }
+      /**
+       * <pre>
+       * When set to true, also create PTR DNS record (optional)
+       * </pre>
+       *
+       * <code>bool ptr = 4;</code>
+       */
+      public Builder setPtr(boolean value) {
+        
+        ptr_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * When set to true, also create PTR DNS record (optional)
+       * </pre>
+       *
+       * <code>bool ptr = 4;</code>
+       */
+      public Builder clearPtr() {
+        
+        ptr_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.instancegroup.DnsRecordSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.instancegroup.DnsRecordSpec)
+    private static final yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec();
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DnsRecordSpec>
+        PARSER = new com.google.protobuf.AbstractParser<DnsRecordSpec>() {
+      @java.lang.Override
+      public DnsRecordSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DnsRecordSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DnsRecordSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DnsRecordSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -32256,6 +34151,1808 @@ public final class InstanceGroupOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.TargetGroupSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ApplicationLoadBalancerSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Specification of the alb's target group that the instance group will be added to.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    boolean hasTargetGroupSpec();
+    /**
+     * <pre>
+     * Specification of the alb's target group that the instance group will be added to.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec getTargetGroupSpec();
+    /**
+     * <pre>
+     * Specification of the alb's target group that the instance group will be added to.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpecOrBuilder getTargetGroupSpecOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec}
+   */
+  public  static final class ApplicationLoadBalancerSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec)
+      ApplicationLoadBalancerSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ApplicationLoadBalancerSpec.newBuilder() to construct.
+    private ApplicationLoadBalancerSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ApplicationLoadBalancerSpec() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ApplicationLoadBalancerSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.Builder subBuilder = null;
+              if (targetGroupSpec_ != null) {
+                subBuilder = targetGroupSpec_.toBuilder();
+              }
+              targetGroupSpec_ = input.readMessage(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(targetGroupSpec_);
+                targetGroupSpec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationLoadBalancerSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationLoadBalancerSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec.Builder.class);
+    }
+
+    public static final int TARGET_GROUP_SPEC_FIELD_NUMBER = 1;
+    private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec targetGroupSpec_;
+    /**
+     * <pre>
+     * Specification of the alb's target group that the instance group will be added to.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public boolean hasTargetGroupSpec() {
+      return targetGroupSpec_ != null;
+    }
+    /**
+     * <pre>
+     * Specification of the alb's target group that the instance group will be added to.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec getTargetGroupSpec() {
+      return targetGroupSpec_ == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.getDefaultInstance() : targetGroupSpec_;
+    }
+    /**
+     * <pre>
+     * Specification of the alb's target group that the instance group will be added to.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpecOrBuilder getTargetGroupSpecOrBuilder() {
+      return getTargetGroupSpec();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (targetGroupSpec_ != null) {
+        output.writeMessage(1, getTargetGroupSpec());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (targetGroupSpec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTargetGroupSpec());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec other = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec) obj;
+
+      boolean result = true;
+      result = result && (hasTargetGroupSpec() == other.hasTargetGroupSpec());
+      if (hasTargetGroupSpec()) {
+        result = result && getTargetGroupSpec()
+            .equals(other.getTargetGroupSpec());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTargetGroupSpec()) {
+        hash = (37 * hash) + TARGET_GROUP_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetGroupSpec().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec)
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationLoadBalancerSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationLoadBalancerSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (targetGroupSpecBuilder_ == null) {
+          targetGroupSpec_ = null;
+        } else {
+          targetGroupSpec_ = null;
+          targetGroupSpecBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationLoadBalancerSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec build() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec buildPartial() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec(this);
+        if (targetGroupSpecBuilder_ == null) {
+          result.targetGroupSpec_ = targetGroupSpec_;
+        } else {
+          result.targetGroupSpec_ = targetGroupSpecBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec) {
+          return mergeFrom((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec other) {
+        if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec.getDefaultInstance()) return this;
+        if (other.hasTargetGroupSpec()) {
+          mergeTargetGroupSpec(other.getTargetGroupSpec());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec targetGroupSpec_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpecOrBuilder> targetGroupSpecBuilder_;
+      /**
+       * <pre>
+       * Specification of the alb's target group that the instance group will be added to.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public boolean hasTargetGroupSpec() {
+        return targetGroupSpecBuilder_ != null || targetGroupSpec_ != null;
+      }
+      /**
+       * <pre>
+       * Specification of the alb's target group that the instance group will be added to.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec getTargetGroupSpec() {
+        if (targetGroupSpecBuilder_ == null) {
+          return targetGroupSpec_ == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.getDefaultInstance() : targetGroupSpec_;
+        } else {
+          return targetGroupSpecBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specification of the alb's target group that the instance group will be added to.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTargetGroupSpec(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec value) {
+        if (targetGroupSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          targetGroupSpec_ = value;
+          onChanged();
+        } else {
+          targetGroupSpecBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of the alb's target group that the instance group will be added to.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTargetGroupSpec(
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.Builder builderForValue) {
+        if (targetGroupSpecBuilder_ == null) {
+          targetGroupSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          targetGroupSpecBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of the alb's target group that the instance group will be added to.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeTargetGroupSpec(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec value) {
+        if (targetGroupSpecBuilder_ == null) {
+          if (targetGroupSpec_ != null) {
+            targetGroupSpec_ =
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.newBuilder(targetGroupSpec_).mergeFrom(value).buildPartial();
+          } else {
+            targetGroupSpec_ = value;
+          }
+          onChanged();
+        } else {
+          targetGroupSpecBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of the alb's target group that the instance group will be added to.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearTargetGroupSpec() {
+        if (targetGroupSpecBuilder_ == null) {
+          targetGroupSpec_ = null;
+          onChanged();
+        } else {
+          targetGroupSpec_ = null;
+          targetGroupSpecBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specification of the alb's target group that the instance group will be added to.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.Builder getTargetGroupSpecBuilder() {
+        
+        onChanged();
+        return getTargetGroupSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specification of the alb's target group that the instance group will be added to.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpecOrBuilder getTargetGroupSpecOrBuilder() {
+        if (targetGroupSpecBuilder_ != null) {
+          return targetGroupSpecBuilder_.getMessageOrBuilder();
+        } else {
+          return targetGroupSpec_ == null ?
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.getDefaultInstance() : targetGroupSpec_;
+        }
+      }
+      /**
+       * <pre>
+       * Specification of the alb's target group that the instance group will be added to.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpecOrBuilder> 
+          getTargetGroupSpecFieldBuilder() {
+        if (targetGroupSpecBuilder_ == null) {
+          targetGroupSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpecOrBuilder>(
+                  getTargetGroupSpec(),
+                  getParentForChildren(),
+                  isClean());
+          targetGroupSpec_ = null;
+        }
+        return targetGroupSpecBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec)
+    private static final yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec();
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ApplicationLoadBalancerSpec>
+        PARSER = new com.google.protobuf.AbstractParser<ApplicationLoadBalancerSpec>() {
+      @java.lang.Override
+      public ApplicationLoadBalancerSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ApplicationLoadBalancerSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ApplicationLoadBalancerSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ApplicationLoadBalancerSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ApplicationTargetGroupSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the target group.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the target group.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description of the target group.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the target group.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec}
+   */
+  public  static final class ApplicationTargetGroupSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec)
+      ApplicationTargetGroupSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ApplicationTargetGroupSpec.newBuilder() to construct.
+    private ApplicationTargetGroupSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ApplicationTargetGroupSpec() {
+      name_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ApplicationTargetGroupSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 3:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the target group.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the target group.
+     * </pre>
+     *
+     * <code>string name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the target group.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the target group.
+     * </pre>
+     *
+     * <code>string description = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 3;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Resource labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 3;</code>
+     */
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          3);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, labels__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec other = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec) obj;
+
+      boolean result = true;
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getDescription()
+          .equals(other.getDescription());
+      result = result && internalGetLabels().equals(
+          other.internalGetLabels());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec)
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        description_ = "";
+
+        internalGetMutableLabels().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec build() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec buildPartial() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.name_ = name_;
+        result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec) {
+          return mergeFrom((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec other) {
+        if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the target group.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the target group.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the target group.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the target group.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the target group.
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the target group.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the target group.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the target group.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the target group.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the target group.
+       * </pre>
+       *
+       * <code>string description = 2;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Resource labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 3;</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec)
+    private static final yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec();
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ApplicationTargetGroupSpec>
+        PARSER = new com.google.protobuf.AbstractParser<ApplicationTargetGroupSpec>() {
+      @java.lang.Override
+      public ApplicationTargetGroupSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ApplicationTargetGroupSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ApplicationTargetGroupSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ApplicationTargetGroupSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -42671,6 +46368,11 @@ public final class InstanceGroupOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNatSpec_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_DnsRecordSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_DnsRecordSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_instancegroup_SchedulingPolicy_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -42695,6 +46397,21 @@ public final class InstanceGroupOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_instancegroup_TargetGroupSpec_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationLoadBalancerSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationLoadBalancerSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_instancegroup_HealthChecksSpec_descriptor;
   private static final 
@@ -42907,81 +46624,96 @@ public final class InstanceGroupOuterClass {
       "egroup.PrimaryAddressSpec\022Z\n\027primary_v6_" +
       "address_spec\030\004 \001(\01329.yandex.cloud.comput" +
       "e.v1.instancegroup.PrimaryAddressSpec\022\032\n" +
-      "\022security_group_ids\030\005 \003(\t\"i\n\022PrimaryAddr" +
-      "essSpec\022S\n\023one_to_one_nat_spec\030\001 \001(\01326.y" +
-      "andex.cloud.compute.v1.instancegroup.One" +
-      "ToOneNatSpec\"h\n\017OneToOneNatSpec\022D\n\nip_ve" +
-      "rsion\030\001 \001(\01620.yandex.cloud.compute.v1.in" +
-      "stancegroup.IpVersion\022\017\n\007address\030\002 \001(\t\"\'" +
-      "\n\020SchedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"" +
-      "\274\001\n\017NetworkSettings\022I\n\004type\030\001 \001(\0162;.yand" +
-      "ex.cloud.compute.v1.instancegroup.Networ" +
-      "kSettings.Type\"^\n\004Type\022\024\n\020TYPE_UNSPECIFI" +
-      "ED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACCELERAT" +
-      "ED\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"e\n\020LoadBa" +
-      "lancerSpec\022Q\n\021target_group_spec\030\001 \001(\01326." +
-      "yandex.cloud.compute.v1.instancegroup.Ta" +
-      "rgetGroupSpec\"\262\002\n\017TargetGroupSpec\0222\n\004nam" +
-      "e\030\001 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0" +
-      "-9])?\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022\233\001" +
-      "\n\006labels\030\003 \003(\0132B.yandex.cloud.compute.v1" +
-      ".instancegroup.TargetGroupSpec.LabelsEnt" +
-      "ryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262" +
-      "\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013L" +
-      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001\"o\n\020HealthChecksSpec\022[\n\022health_check_s" +
-      "pecs\030\001 \003(\01326.yandex.cloud.compute.v1.ins" +
-      "tancegroup.HealthCheckSpecB\007\202\3101\003>=1\"\244\004\n\017" +
-      "HealthCheckSpec\0228\n\010interval\030\001 \001(\0132\031.goog" +
-      "le.protobuf.DurationB\013\372\3071\0071s-300s\0226\n\007tim" +
-      "eout\030\002 \001(\0132\031.google.protobuf.DurationB\n\372" +
-      "\3071\0061s-60s\0225\n\023unhealthy_threshold\030\003 \001(\003B\030" +
-      "\372\3071\0240,2,3,4,5,6,7,8,9,10\0223\n\021healthy_thre" +
-      "shold\030\004 \001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022X\n" +
-      "\013tcp_options\030\005 \001(\0132A.yandex.cloud.comput" +
-      "e.v1.instancegroup.HealthCheckSpec.TcpOp" +
-      "tionsH\000\022Z\n\014http_options\030\006 \001(\0132B.yandex.c" +
-      "loud.compute.v1.instancegroup.HealthChec" +
-      "kSpec.HttpOptionsH\000\032\'\n\nTcpOptions\022\031\n\004por" +
-      "t\030\001 \001(\003B\013\372\3071\0071-65535\0326\n\013HttpOptions\022\031\n\004p" +
-      "ort\030\001 \001(\003B\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024" +
-      "health_check_options\022\004\300\3011\001\"\250\005\n\017ManagedIn" +
-      "stance\022\n\n\002id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yan" +
-      "dex.cloud.compute.v1.instancegroup.Manag" +
-      "edInstance.Status\022\023\n\013instance_id\030\003 \001(\t\022\014" +
-      "\n\004fqdn\030\004 \001(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_mes" +
-      "sage\030\006 \001(\t\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network_i" +
-      "nterfaces\030\010 \003(\01327.yandex.cloud.compute.v" +
-      "1.instancegroup.NetworkInterface\0225\n\021stat" +
-      "us_changed_at\030\t \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\"\323\002\n\006Status\022\026\n\022STATUS_UNSPECIFIED" +
-      "\020\000\022\025\n\021CREATING_INSTANCE\020\013\022\025\n\021UPDATING_IN" +
-      "STANCE\020\014\022\025\n\021DELETING_INSTANCE\020\r\022\025\n\021START" +
-      "ING_INSTANCE\020\016\022\025\n\021STOPPING_INSTANCE\020\017\022\035\n" +
-      "\031AWAITING_STARTUP_DURATION\020\020\022\023\n\017CHECKING" +
-      "_HEALTH\020\021\022\023\n\017OPENING_TRAFFIC\020\022\022\034\n\030AWAITI" +
-      "NG_WARMUP_DURATION\020\023\022\023\n\017CLOSING_TRAFFIC\020" +
-      "\024\022\022\n\016RUNNING_ACTUAL\020\025\022\024\n\020RUNNING_OUTDATE" +
-      "D\020\026\022\013\n\007STOPPED\020\027\022\013\n\007DELETED\020\030\"\357\001\n\020Networ" +
-      "kInterface\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address" +
-      "\030\002 \001(\t\022\021\n\tsubnet_id\030\003 \001(\t\022Q\n\022primary_v4_" +
-      "address\030\004 \001(\01325.yandex.cloud.compute.v1." +
-      "instancegroup.PrimaryAddress\022Q\n\022primary_" +
-      "v6_address\030\005 \001(\01325.yandex.cloud.compute." +
-      "v1.instancegroup.PrimaryAddress\"m\n\016Prima" +
-      "ryAddress\022\017\n\007address\030\001 \001(\t\022J\n\016one_to_one" +
-      "_nat\030\002 \001(\01322.yandex.cloud.compute.v1.ins" +
-      "tancegroup.OneToOneNat\"d\n\013OneToOneNat\022\017\n" +
-      "\007address\030\001 \001(\t\022D\n\nip_version\030\002 \001(\01620.yan" +
-      "dex.cloud.compute.v1.instancegroup.IpVer" +
-      "sion\"K\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022\017\n\007message\030\002 \001(" +
-      "\t*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIED" +
-      "\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002B\204\001\n)yandex.cloud." +
-      "api.compute.v1.instancegroupZWgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/c" +
-      "ompute/v1/instancegroup;instancegroupb\006p" +
-      "roto3"
+      "\022security_group_ids\030\005 \003(\t\"\271\001\n\022PrimaryAdd" +
+      "ressSpec\022S\n\023one_to_one_nat_spec\030\001 \001(\01326." +
+      "yandex.cloud.compute.v1.instancegroup.On" +
+      "eToOneNatSpec\022N\n\020dns_record_specs\030\002 \003(\0132" +
+      "4.yandex.cloud.compute.v1.instancegroup." +
+      "DnsRecordSpec\"\270\001\n\017OneToOneNatSpec\022D\n\nip_" +
+      "version\030\001 \001(\01620.yandex.cloud.compute.v1." +
+      "instancegroup.IpVersion\022\017\n\007address\030\002 \001(\t" +
+      "\022N\n\020dns_record_specs\030\003 \003(\01324.yandex.clou" +
+      "d.compute.v1.instancegroup.DnsRecordSpec" +
+      "\"_\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n" +
+      "\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-8" +
+      "6400\022\013\n\003ptr\030\004 \001(\010\"\'\n\020SchedulingPolicy\022\023\n" +
+      "\013preemptible\030\001 \001(\010\"\274\001\n\017NetworkSettings\022I" +
+      "\n\004type\030\001 \001(\0162;.yandex.cloud.compute.v1.i" +
+      "nstancegroup.NetworkSettings.Type\"^\n\004Typ" +
+      "e\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n" +
+      "\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HARDWARE_ACCE" +
+      "LERATED\020\003\"e\n\020LoadBalancerSpec\022Q\n\021target_" +
+      "group_spec\030\001 \001(\01326.yandex.cloud.compute." +
+      "v1.instancegroup.TargetGroupSpec\"\262\002\n\017Tar" +
+      "getGroupSpec\0222\n\004name\030\001 \001(\tB$\362\3071 |[a-z]([" +
+      "-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030" +
+      "\002 \001(\tB\t\212\3101\005<=256\022\233\001\n\006labels\030\003 \003(\0132B.yand" +
+      "ex.cloud.compute.v1.instancegroup.Target" +
+      "GroupSpec.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362" +
+      "\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][" +
+      "-_./\\@0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\201\001\n\033ApplicationLoa" +
+      "dBalancerSpec\022b\n\021target_group_spec\030\001 \001(\013" +
+      "2A.yandex.cloud.compute.v1.instancegroup" +
+      ".ApplicationTargetGroupSpecB\004\350\3071\001\"\315\001\n\032Ap" +
+      "plicationTargetGroupSpec\022\014\n\004name\030\001 \001(\t\022\023" +
+      "\n\013description\030\002 \001(\t\022]\n\006labels\030\003 \003(\0132M.ya" +
+      "ndex.cloud.compute.v1.instancegroup.Appl" +
+      "icationTargetGroupSpec.LabelsEntry\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"o\n\020HealthChecksSpec\022[\n\022health_check_sp" +
+      "ecs\030\001 \003(\01326.yandex.cloud.compute.v1.inst" +
+      "ancegroup.HealthCheckSpecB\007\202\3101\003>=1\"\244\004\n\017H" +
+      "ealthCheckSpec\0228\n\010interval\030\001 \001(\0132\031.googl" +
+      "e.protobuf.DurationB\013\372\3071\0071s-300s\0226\n\007time" +
+      "out\030\002 \001(\0132\031.google.protobuf.DurationB\n\372\307" +
+      "1\0061s-60s\0225\n\023unhealthy_threshold\030\003 \001(\003B\030\372" +
+      "\3071\0240,2,3,4,5,6,7,8,9,10\0223\n\021healthy_thres" +
+      "hold\030\004 \001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013" +
+      "tcp_options\030\005 \001(\0132A.yandex.cloud.compute" +
+      ".v1.instancegroup.HealthCheckSpec.TcpOpt" +
+      "ionsH\000\022Z\n\014http_options\030\006 \001(\0132B.yandex.cl" +
+      "oud.compute.v1.instancegroup.HealthCheck" +
+      "Spec.HttpOptionsH\000\032\'\n\nTcpOptions\022\031\n\004port" +
+      "\030\001 \001(\003B\013\372\3071\0071-65535\0326\n\013HttpOptions\022\031\n\004po" +
+      "rt\030\001 \001(\003B\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024h" +
+      "ealth_check_options\022\004\300\3011\001\"\250\005\n\017ManagedIns" +
+      "tance\022\n\n\002id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yand" +
+      "ex.cloud.compute.v1.instancegroup.Manage" +
+      "dInstance.Status\022\023\n\013instance_id\030\003 \001(\t\022\014\n" +
+      "\004fqdn\030\004 \001(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_mess" +
+      "age\030\006 \001(\t\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network_in" +
+      "terfaces\030\010 \003(\01327.yandex.cloud.compute.v1" +
+      ".instancegroup.NetworkInterface\0225\n\021statu" +
+      "s_changed_at\030\t \001(\0132\032.google.protobuf.Tim" +
+      "estamp\"\323\002\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
+      "\000\022\025\n\021CREATING_INSTANCE\020\013\022\025\n\021UPDATING_INS" +
+      "TANCE\020\014\022\025\n\021DELETING_INSTANCE\020\r\022\025\n\021STARTI" +
+      "NG_INSTANCE\020\016\022\025\n\021STOPPING_INSTANCE\020\017\022\035\n\031" +
+      "AWAITING_STARTUP_DURATION\020\020\022\023\n\017CHECKING_" +
+      "HEALTH\020\021\022\023\n\017OPENING_TRAFFIC\020\022\022\034\n\030AWAITIN" +
+      "G_WARMUP_DURATION\020\023\022\023\n\017CLOSING_TRAFFIC\020\024" +
+      "\022\022\n\016RUNNING_ACTUAL\020\025\022\024\n\020RUNNING_OUTDATED" +
+      "\020\026\022\013\n\007STOPPED\020\027\022\013\n\007DELETED\020\030\"\357\001\n\020Network" +
+      "Interface\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030" +
+      "\002 \001(\t\022\021\n\tsubnet_id\030\003 \001(\t\022Q\n\022primary_v4_a" +
+      "ddress\030\004 \001(\01325.yandex.cloud.compute.v1.i" +
+      "nstancegroup.PrimaryAddress\022Q\n\022primary_v" +
+      "6_address\030\005 \001(\01325.yandex.cloud.compute.v" +
+      "1.instancegroup.PrimaryAddress\"m\n\016Primar" +
+      "yAddress\022\017\n\007address\030\001 \001(\t\022J\n\016one_to_one_" +
+      "nat\030\002 \001(\01322.yandex.cloud.compute.v1.inst" +
+      "ancegroup.OneToOneNat\"d\n\013OneToOneNat\022\017\n\007" +
+      "address\030\001 \001(\t\022D\n\nip_version\030\002 \001(\01620.yand" +
+      "ex.cloud.compute.v1.instancegroup.IpVers" +
+      "ion\"K\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022\017\n\007message\030\002 \001(\t" +
+      "*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIED\020" +
+      "\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002B\204\001\n)yandex.cloud.a" +
+      "pi.compute.v1.instancegroupZWgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/co" +
+      "mpute/v1/instancegroup;instancegroupb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -43141,33 +46873,39 @@ public final class InstanceGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddressSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddressSpec_descriptor,
-        new java.lang.String[] { "OneToOneNatSpec", });
+        new java.lang.String[] { "OneToOneNatSpec", "DnsRecordSpecs", });
     internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNatSpec_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNatSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNatSpec_descriptor,
-        new java.lang.String[] { "IpVersion", "Address", });
-    internal_static_yandex_cloud_compute_v1_instancegroup_SchedulingPolicy_descriptor =
+        new java.lang.String[] { "IpVersion", "Address", "DnsRecordSpecs", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_DnsRecordSpec_descriptor =
       getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_compute_v1_instancegroup_DnsRecordSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_DnsRecordSpec_descriptor,
+        new java.lang.String[] { "Fqdn", "DnsZoneId", "Ttl", "Ptr", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_SchedulingPolicy_descriptor =
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_compute_v1_instancegroup_SchedulingPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_SchedulingPolicy_descriptor,
         new java.lang.String[] { "Preemptible", });
     internal_static_yandex_cloud_compute_v1_instancegroup_NetworkSettings_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_compute_v1_instancegroup_NetworkSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_NetworkSettings_descriptor,
         new java.lang.String[] { "Type", });
     internal_static_yandex_cloud_compute_v1_instancegroup_LoadBalancerSpec_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_compute_v1_instancegroup_LoadBalancerSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_LoadBalancerSpec_descriptor,
         new java.lang.String[] { "TargetGroupSpec", });
     internal_static_yandex_cloud_compute_v1_instancegroup_TargetGroupSpec_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_compute_v1_instancegroup_TargetGroupSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_TargetGroupSpec_descriptor,
@@ -43178,14 +46916,32 @@ public final class InstanceGroupOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_TargetGroupSpec_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationLoadBalancerSpec_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationLoadBalancerSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationLoadBalancerSpec_descriptor,
+        new java.lang.String[] { "TargetGroupSpec", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_descriptor,
+        new java.lang.String[] { "Name", "Description", "Labels", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_compute_v1_instancegroup_HealthChecksSpec_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_compute_v1_instancegroup_HealthChecksSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_HealthChecksSpec_descriptor,
         new java.lang.String[] { "HealthCheckSpecs", });
     internal_static_yandex_cloud_compute_v1_instancegroup_HealthCheckSpec_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_compute_v1_instancegroup_HealthCheckSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_HealthCheckSpec_descriptor,
@@ -43203,31 +46959,31 @@ public final class InstanceGroupOuterClass {
         internal_static_yandex_cloud_compute_v1_instancegroup_HealthCheckSpec_HttpOptions_descriptor,
         new java.lang.String[] { "Port", "Path", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ManagedInstance_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_compute_v1_instancegroup_ManagedInstance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ManagedInstance_descriptor,
         new java.lang.String[] { "Id", "Status", "InstanceId", "Fqdn", "Name", "StatusMessage", "ZoneId", "NetworkInterfaces", "StatusChangedAt", });
     internal_static_yandex_cloud_compute_v1_instancegroup_NetworkInterface_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_compute_v1_instancegroup_NetworkInterface_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_NetworkInterface_descriptor,
         new java.lang.String[] { "Index", "MacAddress", "SubnetId", "PrimaryV4Address", "PrimaryV6Address", });
     internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddress_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddress_descriptor,
         new java.lang.String[] { "Address", "OneToOneNat", });
     internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNat_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNat_descriptor,
         new java.lang.String[] { "Address", "IpVersion", });
     internal_static_yandex_cloud_compute_v1_instancegroup_LogRecord_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_compute_v1_instancegroup_LogRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_LogRecord_descriptor,

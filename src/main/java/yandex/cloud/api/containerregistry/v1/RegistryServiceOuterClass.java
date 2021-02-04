@@ -14,6 +14,129 @@ public final class RegistryServiceOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.containerregistry.v1.IpPermissionAction}
+   */
+  public enum IpPermissionAction
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>IP_PERMISSION_ACTION_UNSPECIFIED = 0;</code>
+     */
+    IP_PERMISSION_ACTION_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * Addition of an ip permission.
+     * </pre>
+     *
+     * <code>ADD = 1;</code>
+     */
+    ADD(1),
+    /**
+     * <pre>
+     * Removal of an ip permission.
+     * </pre>
+     *
+     * <code>REMOVE = 2;</code>
+     */
+    REMOVE(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>IP_PERMISSION_ACTION_UNSPECIFIED = 0;</code>
+     */
+    public static final int IP_PERMISSION_ACTION_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * Addition of an ip permission.
+     * </pre>
+     *
+     * <code>ADD = 1;</code>
+     */
+    public static final int ADD_VALUE = 1;
+    /**
+     * <pre>
+     * Removal of an ip permission.
+     * </pre>
+     *
+     * <code>REMOVE = 2;</code>
+     */
+    public static final int REMOVE_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static IpPermissionAction valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static IpPermissionAction forNumber(int value) {
+      switch (value) {
+        case 0: return IP_PERMISSION_ACTION_UNSPECIFIED;
+        case 1: return ADD;
+        case 2: return REMOVE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<IpPermissionAction>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        IpPermissionAction> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<IpPermissionAction>() {
+            public IpPermissionAction findValueByNumber(int number) {
+              return IpPermissionAction.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final IpPermissionAction[] VALUES = values();
+
+    public static IpPermissionAction valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private IpPermissionAction(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.containerregistry.v1.IpPermissionAction)
+  }
+
   public interface GetRegistryRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.GetRegistryRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -7734,6 +7857,5595 @@ public final class RegistryServiceOuterClass {
 
   }
 
+  public interface IpPermissionDeltaOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.IpPermissionDelta)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The action that is being performed on an ip permission.
+     * </pre>
+     *
+     * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    int getActionValue();
+    /**
+     * <pre>
+     * The action that is being performed on an ip permission.
+     * </pre>
+     *
+     * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionAction getAction();
+
+    /**
+     * <pre>
+     * Ip permission.
+     * </pre>
+     *
+     * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    boolean hasIpPermission();
+    /**
+     * <pre>
+     * Ip permission.
+     * </pre>
+     *
+     * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission getIpPermission();
+    /**
+     * <pre>
+     * Ip permission.
+     * </pre>
+     *
+     * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getIpPermissionOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.IpPermissionDelta}
+   */
+  public  static final class IpPermissionDelta extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.IpPermissionDelta)
+      IpPermissionDeltaOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use IpPermissionDelta.newBuilder() to construct.
+    private IpPermissionDelta(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private IpPermissionDelta() {
+      action_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private IpPermissionDelta(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              action_ = rawValue;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder subBuilder = null;
+              if (ipPermission_ != null) {
+                subBuilder = ipPermission_.toBuilder();
+              }
+              ipPermission_ = input.readMessage(yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ipPermission_);
+                ipPermission_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_IpPermissionDelta_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_IpPermissionDelta_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.Builder.class);
+    }
+
+    public static final int ACTION_FIELD_NUMBER = 1;
+    private int action_;
+    /**
+     * <pre>
+     * The action that is being performed on an ip permission.
+     * </pre>
+     *
+     * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public int getActionValue() {
+      return action_;
+    }
+    /**
+     * <pre>
+     * The action that is being performed on an ip permission.
+     * </pre>
+     *
+     * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionAction getAction() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionAction result = yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionAction.valueOf(action_);
+      return result == null ? yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionAction.UNRECOGNIZED : result;
+    }
+
+    public static final int IP_PERMISSION_FIELD_NUMBER = 2;
+    private yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission ipPermission_;
+    /**
+     * <pre>
+     * Ip permission.
+     * </pre>
+     *
+     * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public boolean hasIpPermission() {
+      return ipPermission_ != null;
+    }
+    /**
+     * <pre>
+     * Ip permission.
+     * </pre>
+     *
+     * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission getIpPermission() {
+      return ipPermission_ == null ? yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance() : ipPermission_;
+    }
+    /**
+     * <pre>
+     * Ip permission.
+     * </pre>
+     *
+     * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getIpPermissionOrBuilder() {
+      return getIpPermission();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (action_ != yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionAction.IP_PERMISSION_ACTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, action_);
+      }
+      if (ipPermission_ != null) {
+        output.writeMessage(2, getIpPermission());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (action_ != yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionAction.IP_PERMISSION_ACTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, action_);
+      }
+      if (ipPermission_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getIpPermission());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta other = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta) obj;
+
+      boolean result = true;
+      result = result && action_ == other.action_;
+      result = result && (hasIpPermission() == other.hasIpPermission());
+      if (hasIpPermission()) {
+        result = result && getIpPermission()
+            .equals(other.getIpPermission());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + action_;
+      if (hasIpPermission()) {
+        hash = (37 * hash) + IP_PERMISSION_FIELD_NUMBER;
+        hash = (53 * hash) + getIpPermission().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.IpPermissionDelta}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.IpPermissionDelta)
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDeltaOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_IpPermissionDelta_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_IpPermissionDelta_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        action_ = 0;
+
+        if (ipPermissionBuilder_ == null) {
+          ipPermission_ = null;
+        } else {
+          ipPermission_ = null;
+          ipPermissionBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_IpPermissionDelta_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta build() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta buildPartial() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta result = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta(this);
+        result.action_ = action_;
+        if (ipPermissionBuilder_ == null) {
+          result.ipPermission_ = ipPermission_;
+        } else {
+          result.ipPermission_ = ipPermissionBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta other) {
+        if (other == yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.getDefaultInstance()) return this;
+        if (other.action_ != 0) {
+          setActionValue(other.getActionValue());
+        }
+        if (other.hasIpPermission()) {
+          mergeIpPermission(other.getIpPermission());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int action_ = 0;
+      /**
+       * <pre>
+       * The action that is being performed on an ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public int getActionValue() {
+        return action_;
+      }
+      /**
+       * <pre>
+       * The action that is being performed on an ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setActionValue(int value) {
+        action_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The action that is being performed on an ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionAction getAction() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionAction result = yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionAction.valueOf(action_);
+        return result == null ? yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionAction.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The action that is being performed on an ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setAction(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionAction value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        action_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The action that is being performed on an ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermissionAction action = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearAction() {
+        
+        action_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission ipPermission_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> ipPermissionBuilder_;
+      /**
+       * <pre>
+       * Ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public boolean hasIpPermission() {
+        return ipPermissionBuilder_ != null || ipPermission_ != null;
+      }
+      /**
+       * <pre>
+       * Ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission getIpPermission() {
+        if (ipPermissionBuilder_ == null) {
+          return ipPermission_ == null ? yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance() : ipPermission_;
+        } else {
+          return ipPermissionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setIpPermission(yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission value) {
+        if (ipPermissionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ipPermission_ = value;
+          onChanged();
+        } else {
+          ipPermissionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setIpPermission(
+          yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+        if (ipPermissionBuilder_ == null) {
+          ipPermission_ = builderForValue.build();
+          onChanged();
+        } else {
+          ipPermissionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeIpPermission(yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission value) {
+        if (ipPermissionBuilder_ == null) {
+          if (ipPermission_ != null) {
+            ipPermission_ =
+              yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.newBuilder(ipPermission_).mergeFrom(value).buildPartial();
+          } else {
+            ipPermission_ = value;
+          }
+          onChanged();
+        } else {
+          ipPermissionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearIpPermission() {
+        if (ipPermissionBuilder_ == null) {
+          ipPermission_ = null;
+          onChanged();
+        } else {
+          ipPermission_ = null;
+          ipPermissionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder getIpPermissionBuilder() {
+        
+        onChanged();
+        return getIpPermissionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getIpPermissionOrBuilder() {
+        if (ipPermissionBuilder_ != null) {
+          return ipPermissionBuilder_.getMessageOrBuilder();
+        } else {
+          return ipPermission_ == null ?
+              yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance() : ipPermission_;
+        }
+      }
+      /**
+       * <pre>
+       * Ip permission.
+       * </pre>
+       *
+       * <code>.yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+          getIpPermissionFieldBuilder() {
+        if (ipPermissionBuilder_ == null) {
+          ipPermissionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder>(
+                  getIpPermission(),
+                  getParentForChildren(),
+                  isClean());
+          ipPermission_ = null;
+        }
+        return ipPermissionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.IpPermissionDelta)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.IpPermissionDelta)
+    private static final yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta();
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IpPermissionDelta>
+        PARSER = new com.google.protobuf.AbstractParser<IpPermissionDelta>() {
+      @java.lang.Override
+      public IpPermissionDelta parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new IpPermissionDelta(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<IpPermissionDelta> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IpPermissionDelta> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SetIpPermissionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.SetIpPermissionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the registry for which ip permissions are being set.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of the registry for which ip permissions are being set.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+
+    /**
+     * <pre>
+     * IP permission to be set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission> 
+        getIpPermissionList();
+    /**
+     * <pre>
+     * IP permission to be set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+     */
+    yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission getIpPermission(int index);
+    /**
+     * <pre>
+     * IP permission to be set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+     */
+    int getIpPermissionCount();
+    /**
+     * <pre>
+     * IP permission to be set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+        getIpPermissionOrBuilderList();
+    /**
+     * <pre>
+     * IP permission to be set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+     */
+    yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getIpPermissionOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.SetIpPermissionRequest}
+   */
+  public  static final class SetIpPermissionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.SetIpPermissionRequest)
+      SetIpPermissionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetIpPermissionRequest.newBuilder() to construct.
+    private SetIpPermissionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetIpPermissionRequest() {
+      registryId_ = "";
+      ipPermission_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SetIpPermissionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                ipPermission_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              ipPermission_.add(
+                  input.readMessage(yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          ipPermission_ = java.util.Collections.unmodifiableList(ipPermission_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of the registry for which ip permissions are being set.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the registry for which ip permissions are being set.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IP_PERMISSION_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission> ipPermission_;
+    /**
+     * <pre>
+     * IP permission to be set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+     */
+    public java.util.List<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission> getIpPermissionList() {
+      return ipPermission_;
+    }
+    /**
+     * <pre>
+     * IP permission to be set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+        getIpPermissionOrBuilderList() {
+      return ipPermission_;
+    }
+    /**
+     * <pre>
+     * IP permission to be set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+     */
+    public int getIpPermissionCount() {
+      return ipPermission_.size();
+    }
+    /**
+     * <pre>
+     * IP permission to be set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+     */
+    public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission getIpPermission(int index) {
+      return ipPermission_.get(index);
+    }
+    /**
+     * <pre>
+     * IP permission to be set.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+     */
+    public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getIpPermissionOrBuilder(
+        int index) {
+      return ipPermission_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getRegistryIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      for (int i = 0; i < ipPermission_.size(); i++) {
+        output.writeMessage(2, ipPermission_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getRegistryIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      for (int i = 0; i < ipPermission_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, ipPermission_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest other = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest) obj;
+
+      boolean result = true;
+      result = result && getRegistryId()
+          .equals(other.getRegistryId());
+      result = result && getIpPermissionList()
+          .equals(other.getIpPermissionList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      if (getIpPermissionCount() > 0) {
+        hash = (37 * hash) + IP_PERMISSION_FIELD_NUMBER;
+        hash = (53 * hash) + getIpPermissionList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.SetIpPermissionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.SetIpPermissionRequest)
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIpPermissionFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        if (ipPermissionBuilder_ == null) {
+          ipPermission_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          ipPermissionBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest build() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest buildPartial() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest result = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.registryId_ = registryId_;
+        if (ipPermissionBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            ipPermission_ = java.util.Collections.unmodifiableList(ipPermission_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.ipPermission_ = ipPermission_;
+        } else {
+          result.ipPermission_ = ipPermissionBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest other) {
+        if (other == yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        if (ipPermissionBuilder_ == null) {
+          if (!other.ipPermission_.isEmpty()) {
+            if (ipPermission_.isEmpty()) {
+              ipPermission_ = other.ipPermission_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureIpPermissionIsMutable();
+              ipPermission_.addAll(other.ipPermission_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ipPermission_.isEmpty()) {
+            if (ipPermissionBuilder_.isEmpty()) {
+              ipPermissionBuilder_.dispose();
+              ipPermissionBuilder_ = null;
+              ipPermission_ = other.ipPermission_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              ipPermissionBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIpPermissionFieldBuilder() : null;
+            } else {
+              ipPermissionBuilder_.addAllMessages(other.ipPermission_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of the registry for which ip permissions are being set.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry for which ip permissions are being set.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry for which ip permissions are being set.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry for which ip permissions are being set.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry for which ip permissions are being set.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission> ipPermission_ =
+        java.util.Collections.emptyList();
+      private void ensureIpPermissionIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          ipPermission_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission>(ipPermission_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> ipPermissionBuilder_;
+
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission> getIpPermissionList() {
+        if (ipPermissionBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ipPermission_);
+        } else {
+          return ipPermissionBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public int getIpPermissionCount() {
+        if (ipPermissionBuilder_ == null) {
+          return ipPermission_.size();
+        } else {
+          return ipPermissionBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission getIpPermission(int index) {
+        if (ipPermissionBuilder_ == null) {
+          return ipPermission_.get(index);
+        } else {
+          return ipPermissionBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public Builder setIpPermission(
+          int index, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission value) {
+        if (ipPermissionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpPermissionIsMutable();
+          ipPermission_.set(index, value);
+          onChanged();
+        } else {
+          ipPermissionBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public Builder setIpPermission(
+          int index, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+        if (ipPermissionBuilder_ == null) {
+          ensureIpPermissionIsMutable();
+          ipPermission_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ipPermissionBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public Builder addIpPermission(yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission value) {
+        if (ipPermissionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpPermissionIsMutable();
+          ipPermission_.add(value);
+          onChanged();
+        } else {
+          ipPermissionBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public Builder addIpPermission(
+          int index, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission value) {
+        if (ipPermissionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpPermissionIsMutable();
+          ipPermission_.add(index, value);
+          onChanged();
+        } else {
+          ipPermissionBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public Builder addIpPermission(
+          yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+        if (ipPermissionBuilder_ == null) {
+          ensureIpPermissionIsMutable();
+          ipPermission_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ipPermissionBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public Builder addIpPermission(
+          int index, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+        if (ipPermissionBuilder_ == null) {
+          ensureIpPermissionIsMutable();
+          ipPermission_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ipPermissionBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public Builder addAllIpPermission(
+          java.lang.Iterable<? extends yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission> values) {
+        if (ipPermissionBuilder_ == null) {
+          ensureIpPermissionIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ipPermission_);
+          onChanged();
+        } else {
+          ipPermissionBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public Builder clearIpPermission() {
+        if (ipPermissionBuilder_ == null) {
+          ipPermission_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          ipPermissionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public Builder removeIpPermission(int index) {
+        if (ipPermissionBuilder_ == null) {
+          ensureIpPermissionIsMutable();
+          ipPermission_.remove(index);
+          onChanged();
+        } else {
+          ipPermissionBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder getIpPermissionBuilder(
+          int index) {
+        return getIpPermissionFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getIpPermissionOrBuilder(
+          int index) {
+        if (ipPermissionBuilder_ == null) {
+          return ipPermission_.get(index);  } else {
+          return ipPermissionBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+           getIpPermissionOrBuilderList() {
+        if (ipPermissionBuilder_ != null) {
+          return ipPermissionBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ipPermission_);
+        }
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder addIpPermissionBuilder() {
+        return getIpPermissionFieldBuilder().addBuilder(
+            yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder addIpPermissionBuilder(
+          int index) {
+        return getIpPermissionFieldBuilder().addBuilder(
+            index, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * IP permission to be set.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission ip_permission = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder> 
+           getIpPermissionBuilderList() {
+        return getIpPermissionFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+          getIpPermissionFieldBuilder() {
+        if (ipPermissionBuilder_ == null) {
+          ipPermissionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder>(
+                  ipPermission_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          ipPermission_ = null;
+        }
+        return ipPermissionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.SetIpPermissionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.SetIpPermissionRequest)
+    private static final yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest();
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetIpPermissionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SetIpPermissionRequest>() {
+      @java.lang.Override
+      public SetIpPermissionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SetIpPermissionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetIpPermissionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetIpPermissionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateIpPermissionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.UpdateIpPermissionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the registry for which ip permissions are being updated.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of the registry for which ip permissions are being updated.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+
+    /**
+     * <pre>
+     * Updates to IP permissions.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta> 
+        getIpPermissionDeltasList();
+    /**
+     * <pre>
+     * Updates to IP permissions.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     */
+    yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta getIpPermissionDeltas(int index);
+    /**
+     * <pre>
+     * Updates to IP permissions.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     */
+    int getIpPermissionDeltasCount();
+    /**
+     * <pre>
+     * Updates to IP permissions.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDeltaOrBuilder> 
+        getIpPermissionDeltasOrBuilderList();
+    /**
+     * <pre>
+     * Updates to IP permissions.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     */
+    yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDeltaOrBuilder getIpPermissionDeltasOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.UpdateIpPermissionRequest}
+   */
+  public  static final class UpdateIpPermissionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.UpdateIpPermissionRequest)
+      UpdateIpPermissionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateIpPermissionRequest.newBuilder() to construct.
+    private UpdateIpPermissionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateIpPermissionRequest() {
+      registryId_ = "";
+      ipPermissionDeltas_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateIpPermissionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                ipPermissionDeltas_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              ipPermissionDeltas_.add(
+                  input.readMessage(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          ipPermissionDeltas_ = java.util.Collections.unmodifiableList(ipPermissionDeltas_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of the registry for which ip permissions are being updated.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the registry for which ip permissions are being updated.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IP_PERMISSION_DELTAS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta> ipPermissionDeltas_;
+    /**
+     * <pre>
+     * Updates to IP permissions.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     */
+    public java.util.List<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta> getIpPermissionDeltasList() {
+      return ipPermissionDeltas_;
+    }
+    /**
+     * <pre>
+     * Updates to IP permissions.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDeltaOrBuilder> 
+        getIpPermissionDeltasOrBuilderList() {
+      return ipPermissionDeltas_;
+    }
+    /**
+     * <pre>
+     * Updates to IP permissions.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     */
+    public int getIpPermissionDeltasCount() {
+      return ipPermissionDeltas_.size();
+    }
+    /**
+     * <pre>
+     * Updates to IP permissions.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     */
+    public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta getIpPermissionDeltas(int index) {
+      return ipPermissionDeltas_.get(index);
+    }
+    /**
+     * <pre>
+     * Updates to IP permissions.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+     */
+    public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDeltaOrBuilder getIpPermissionDeltasOrBuilder(
+        int index) {
+      return ipPermissionDeltas_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getRegistryIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      for (int i = 0; i < ipPermissionDeltas_.size(); i++) {
+        output.writeMessage(2, ipPermissionDeltas_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getRegistryIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      for (int i = 0; i < ipPermissionDeltas_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, ipPermissionDeltas_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest other = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest) obj;
+
+      boolean result = true;
+      result = result && getRegistryId()
+          .equals(other.getRegistryId());
+      result = result && getIpPermissionDeltasList()
+          .equals(other.getIpPermissionDeltasList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      if (getIpPermissionDeltasCount() > 0) {
+        hash = (37 * hash) + IP_PERMISSION_DELTAS_FIELD_NUMBER;
+        hash = (53 * hash) + getIpPermissionDeltasList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.UpdateIpPermissionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.UpdateIpPermissionRequest)
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getIpPermissionDeltasFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        if (ipPermissionDeltasBuilder_ == null) {
+          ipPermissionDeltas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          ipPermissionDeltasBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest build() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest buildPartial() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest result = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.registryId_ = registryId_;
+        if (ipPermissionDeltasBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            ipPermissionDeltas_ = java.util.Collections.unmodifiableList(ipPermissionDeltas_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.ipPermissionDeltas_ = ipPermissionDeltas_;
+        } else {
+          result.ipPermissionDeltas_ = ipPermissionDeltasBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest other) {
+        if (other == yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        if (ipPermissionDeltasBuilder_ == null) {
+          if (!other.ipPermissionDeltas_.isEmpty()) {
+            if (ipPermissionDeltas_.isEmpty()) {
+              ipPermissionDeltas_ = other.ipPermissionDeltas_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureIpPermissionDeltasIsMutable();
+              ipPermissionDeltas_.addAll(other.ipPermissionDeltas_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ipPermissionDeltas_.isEmpty()) {
+            if (ipPermissionDeltasBuilder_.isEmpty()) {
+              ipPermissionDeltasBuilder_.dispose();
+              ipPermissionDeltasBuilder_ = null;
+              ipPermissionDeltas_ = other.ipPermissionDeltas_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              ipPermissionDeltasBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIpPermissionDeltasFieldBuilder() : null;
+            } else {
+              ipPermissionDeltasBuilder_.addAllMessages(other.ipPermissionDeltas_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of the registry for which ip permissions are being updated.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry for which ip permissions are being updated.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry for which ip permissions are being updated.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry for which ip permissions are being updated.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry for which ip permissions are being updated.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta> ipPermissionDeltas_ =
+        java.util.Collections.emptyList();
+      private void ensureIpPermissionDeltasIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          ipPermissionDeltas_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta>(ipPermissionDeltas_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.Builder, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDeltaOrBuilder> ipPermissionDeltasBuilder_;
+
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta> getIpPermissionDeltasList() {
+        if (ipPermissionDeltasBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ipPermissionDeltas_);
+        } else {
+          return ipPermissionDeltasBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public int getIpPermissionDeltasCount() {
+        if (ipPermissionDeltasBuilder_ == null) {
+          return ipPermissionDeltas_.size();
+        } else {
+          return ipPermissionDeltasBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta getIpPermissionDeltas(int index) {
+        if (ipPermissionDeltasBuilder_ == null) {
+          return ipPermissionDeltas_.get(index);
+        } else {
+          return ipPermissionDeltasBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public Builder setIpPermissionDeltas(
+          int index, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta value) {
+        if (ipPermissionDeltasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpPermissionDeltasIsMutable();
+          ipPermissionDeltas_.set(index, value);
+          onChanged();
+        } else {
+          ipPermissionDeltasBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public Builder setIpPermissionDeltas(
+          int index, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.Builder builderForValue) {
+        if (ipPermissionDeltasBuilder_ == null) {
+          ensureIpPermissionDeltasIsMutable();
+          ipPermissionDeltas_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ipPermissionDeltasBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public Builder addIpPermissionDeltas(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta value) {
+        if (ipPermissionDeltasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpPermissionDeltasIsMutable();
+          ipPermissionDeltas_.add(value);
+          onChanged();
+        } else {
+          ipPermissionDeltasBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public Builder addIpPermissionDeltas(
+          int index, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta value) {
+        if (ipPermissionDeltasBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIpPermissionDeltasIsMutable();
+          ipPermissionDeltas_.add(index, value);
+          onChanged();
+        } else {
+          ipPermissionDeltasBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public Builder addIpPermissionDeltas(
+          yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.Builder builderForValue) {
+        if (ipPermissionDeltasBuilder_ == null) {
+          ensureIpPermissionDeltasIsMutable();
+          ipPermissionDeltas_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ipPermissionDeltasBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public Builder addIpPermissionDeltas(
+          int index, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.Builder builderForValue) {
+        if (ipPermissionDeltasBuilder_ == null) {
+          ensureIpPermissionDeltasIsMutable();
+          ipPermissionDeltas_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ipPermissionDeltasBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public Builder addAllIpPermissionDeltas(
+          java.lang.Iterable<? extends yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta> values) {
+        if (ipPermissionDeltasBuilder_ == null) {
+          ensureIpPermissionDeltasIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ipPermissionDeltas_);
+          onChanged();
+        } else {
+          ipPermissionDeltasBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public Builder clearIpPermissionDeltas() {
+        if (ipPermissionDeltasBuilder_ == null) {
+          ipPermissionDeltas_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          ipPermissionDeltasBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public Builder removeIpPermissionDeltas(int index) {
+        if (ipPermissionDeltasBuilder_ == null) {
+          ensureIpPermissionDeltasIsMutable();
+          ipPermissionDeltas_.remove(index);
+          onChanged();
+        } else {
+          ipPermissionDeltasBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.Builder getIpPermissionDeltasBuilder(
+          int index) {
+        return getIpPermissionDeltasFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDeltaOrBuilder getIpPermissionDeltasOrBuilder(
+          int index) {
+        if (ipPermissionDeltasBuilder_ == null) {
+          return ipPermissionDeltas_.get(index);  } else {
+          return ipPermissionDeltasBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDeltaOrBuilder> 
+           getIpPermissionDeltasOrBuilderList() {
+        if (ipPermissionDeltasBuilder_ != null) {
+          return ipPermissionDeltasBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ipPermissionDeltas_);
+        }
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.Builder addIpPermissionDeltasBuilder() {
+        return getIpPermissionDeltasFieldBuilder().addBuilder(
+            yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.Builder addIpPermissionDeltasBuilder(
+          int index) {
+        return getIpPermissionDeltasFieldBuilder().addBuilder(
+            index, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Updates to IP permissions.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermissionDelta ip_permission_deltas = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.Builder> 
+           getIpPermissionDeltasBuilderList() {
+        return getIpPermissionDeltasFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.Builder, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDeltaOrBuilder> 
+          getIpPermissionDeltasFieldBuilder() {
+        if (ipPermissionDeltasBuilder_ == null) {
+          ipPermissionDeltasBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDelta.Builder, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.IpPermissionDeltaOrBuilder>(
+                  ipPermissionDeltas_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          ipPermissionDeltas_ = null;
+        }
+        return ipPermissionDeltasBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.UpdateIpPermissionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.UpdateIpPermissionRequest)
+    private static final yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest();
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateIpPermissionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateIpPermissionRequest>() {
+      @java.lang.Override
+      public UpdateIpPermissionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateIpPermissionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateIpPermissionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateIpPermissionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListIpPermissionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.ListIpPermissionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Registry to return ip permission list.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of the Registry to return ip permission list.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.ListIpPermissionRequest}
+   */
+  public  static final class ListIpPermissionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListIpPermissionRequest)
+      ListIpPermissionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListIpPermissionRequest.newBuilder() to construct.
+    private ListIpPermissionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListIpPermissionRequest() {
+      registryId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListIpPermissionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest.Builder.class);
+    }
+
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of the Registry to return ip permission list.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Registry to return ip permission list.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getRegistryIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getRegistryIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest other = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest) obj;
+
+      boolean result = true;
+      result = result && getRegistryId()
+          .equals(other.getRegistryId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.ListIpPermissionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.ListIpPermissionRequest)
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest build() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest buildPartial() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest result = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest(this);
+        result.registryId_ = registryId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest other) {
+        if (other == yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of the Registry to return ip permission list.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Registry to return ip permission list.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Registry to return ip permission list.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Registry to return ip permission list.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Registry to return ip permission list.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.ListIpPermissionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.ListIpPermissionRequest)
+    private static final yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest();
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListIpPermissionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListIpPermissionRequest>() {
+      @java.lang.Override
+      public ListIpPermissionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListIpPermissionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListIpPermissionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListIpPermissionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListIpPermissionsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.ListIpPermissionsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of ip permissions for registry
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission> 
+        getPermissionsList();
+    /**
+     * <pre>
+     * List of ip permissions for registry
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+     */
+    yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission getPermissions(int index);
+    /**
+     * <pre>
+     * List of ip permissions for registry
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+     */
+    int getPermissionsCount();
+    /**
+     * <pre>
+     * List of ip permissions for registry
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+        getPermissionsOrBuilderList();
+    /**
+     * <pre>
+     * List of ip permissions for registry
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+     */
+    yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getPermissionsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.ListIpPermissionsResponse}
+   */
+  public  static final class ListIpPermissionsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.ListIpPermissionsResponse)
+      ListIpPermissionsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListIpPermissionsResponse.newBuilder() to construct.
+    private ListIpPermissionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListIpPermissionsResponse() {
+      permissions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListIpPermissionsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                permissions_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              permissions_.add(
+                  input.readMessage(yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          permissions_ = java.util.Collections.unmodifiableList(permissions_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse.Builder.class);
+    }
+
+    public static final int PERMISSIONS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission> permissions_;
+    /**
+     * <pre>
+     * List of ip permissions for registry
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission> getPermissionsList() {
+      return permissions_;
+    }
+    /**
+     * <pre>
+     * List of ip permissions for registry
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+        getPermissionsOrBuilderList() {
+      return permissions_;
+    }
+    /**
+     * <pre>
+     * List of ip permissions for registry
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+     */
+    public int getPermissionsCount() {
+      return permissions_.size();
+    }
+    /**
+     * <pre>
+     * List of ip permissions for registry
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+     */
+    public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission getPermissions(int index) {
+      return permissions_.get(index);
+    }
+    /**
+     * <pre>
+     * List of ip permissions for registry
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+     */
+    public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getPermissionsOrBuilder(
+        int index) {
+      return permissions_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < permissions_.size(); i++) {
+        output.writeMessage(1, permissions_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < permissions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, permissions_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse other = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse) obj;
+
+      boolean result = true;
+      result = result && getPermissionsList()
+          .equals(other.getPermissionsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPermissionsCount() > 0) {
+        hash = (37 * hash) + PERMISSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPermissionsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.ListIpPermissionsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.ListIpPermissionsResponse)
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPermissionsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (permissionsBuilder_ == null) {
+          permissions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          permissionsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse build() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse buildPartial() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse result = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (permissionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            permissions_ = java.util.Collections.unmodifiableList(permissions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.permissions_ = permissions_;
+        } else {
+          result.permissions_ = permissionsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse other) {
+        if (other == yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse.getDefaultInstance()) return this;
+        if (permissionsBuilder_ == null) {
+          if (!other.permissions_.isEmpty()) {
+            if (permissions_.isEmpty()) {
+              permissions_ = other.permissions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePermissionsIsMutable();
+              permissions_.addAll(other.permissions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.permissions_.isEmpty()) {
+            if (permissionsBuilder_.isEmpty()) {
+              permissionsBuilder_.dispose();
+              permissionsBuilder_ = null;
+              permissions_ = other.permissions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              permissionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPermissionsFieldBuilder() : null;
+            } else {
+              permissionsBuilder_.addAllMessages(other.permissions_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission> permissions_ =
+        java.util.Collections.emptyList();
+      private void ensurePermissionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          permissions_ = new java.util.ArrayList<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission>(permissions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> permissionsBuilder_;
+
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission> getPermissionsList() {
+        if (permissionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(permissions_);
+        } else {
+          return permissionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public int getPermissionsCount() {
+        if (permissionsBuilder_ == null) {
+          return permissions_.size();
+        } else {
+          return permissionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission getPermissions(int index) {
+        if (permissionsBuilder_ == null) {
+          return permissions_.get(index);
+        } else {
+          return permissionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public Builder setPermissions(
+          int index, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission value) {
+        if (permissionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePermissionsIsMutable();
+          permissions_.set(index, value);
+          onChanged();
+        } else {
+          permissionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public Builder setPermissions(
+          int index, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+        if (permissionsBuilder_ == null) {
+          ensurePermissionsIsMutable();
+          permissions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          permissionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public Builder addPermissions(yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission value) {
+        if (permissionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePermissionsIsMutable();
+          permissions_.add(value);
+          onChanged();
+        } else {
+          permissionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public Builder addPermissions(
+          int index, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission value) {
+        if (permissionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePermissionsIsMutable();
+          permissions_.add(index, value);
+          onChanged();
+        } else {
+          permissionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public Builder addPermissions(
+          yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+        if (permissionsBuilder_ == null) {
+          ensurePermissionsIsMutable();
+          permissions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          permissionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public Builder addPermissions(
+          int index, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder builderForValue) {
+        if (permissionsBuilder_ == null) {
+          ensurePermissionsIsMutable();
+          permissions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          permissionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public Builder addAllPermissions(
+          java.lang.Iterable<? extends yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission> values) {
+        if (permissionsBuilder_ == null) {
+          ensurePermissionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, permissions_);
+          onChanged();
+        } else {
+          permissionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public Builder clearPermissions() {
+        if (permissionsBuilder_ == null) {
+          permissions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          permissionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public Builder removePermissions(int index) {
+        if (permissionsBuilder_ == null) {
+          ensurePermissionsIsMutable();
+          permissions_.remove(index);
+          onChanged();
+        } else {
+          permissionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder getPermissionsBuilder(
+          int index) {
+        return getPermissionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder getPermissionsOrBuilder(
+          int index) {
+        if (permissionsBuilder_ == null) {
+          return permissions_.get(index);  } else {
+          return permissionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+           getPermissionsOrBuilderList() {
+        if (permissionsBuilder_ != null) {
+          return permissionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(permissions_);
+        }
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder addPermissionsBuilder() {
+        return getPermissionsFieldBuilder().addBuilder(
+            yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder addPermissionsBuilder(
+          int index) {
+        return getPermissionsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of ip permissions for registry
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.containerregistry.v1.IpPermission permissions = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder> 
+           getPermissionsBuilderList() {
+        return getPermissionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder> 
+          getPermissionsFieldBuilder() {
+        if (permissionsBuilder_ == null) {
+          permissionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermission.Builder, yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.IpPermissionOrBuilder>(
+                  permissions_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          permissions_ = null;
+        }
+        return permissionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.ListIpPermissionsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.ListIpPermissionsResponse)
+    private static final yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse();
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListIpPermissionsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListIpPermissionsResponse>() {
+      @java.lang.Override
+      public ListIpPermissionsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListIpPermissionsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListIpPermissionsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListIpPermissionsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SetIpPermissionMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.SetIpPermissionMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the registry that ip permission is being set.
+     * </pre>
+     *
+     * <code>string registry_id = 1;</code>
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of the registry that ip permission is being set.
+     * </pre>
+     *
+     * <code>string registry_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.SetIpPermissionMetadata}
+   */
+  public  static final class SetIpPermissionMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.SetIpPermissionMetadata)
+      SetIpPermissionMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetIpPermissionMetadata.newBuilder() to construct.
+    private SetIpPermissionMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetIpPermissionMetadata() {
+      registryId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SetIpPermissionMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata.Builder.class);
+    }
+
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of the registry that ip permission is being set.
+     * </pre>
+     *
+     * <code>string registry_id = 1;</code>
+     */
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the registry that ip permission is being set.
+     * </pre>
+     *
+     * <code>string registry_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getRegistryIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getRegistryIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata other = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata) obj;
+
+      boolean result = true;
+      result = result && getRegistryId()
+          .equals(other.getRegistryId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.SetIpPermissionMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.SetIpPermissionMetadata)
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata build() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata buildPartial() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata result = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata(this);
+        result.registryId_ = registryId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata other) {
+        if (other == yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of the registry that ip permission is being set.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry that ip permission is being set.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry that ip permission is being set.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry that ip permission is being set.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry that ip permission is being set.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.SetIpPermissionMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.SetIpPermissionMetadata)
+    private static final yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata();
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetIpPermissionMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<SetIpPermissionMetadata>() {
+      @java.lang.Override
+      public SetIpPermissionMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SetIpPermissionMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetIpPermissionMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetIpPermissionMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateIpPermissionMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.UpdateIpPermissionMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the registry that ip permission is being updated.
+     * </pre>
+     *
+     * <code>string registry_id = 1;</code>
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of the registry that ip permission is being updated.
+     * </pre>
+     *
+     * <code>string registry_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.UpdateIpPermissionMetadata}
+   */
+  public  static final class UpdateIpPermissionMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.UpdateIpPermissionMetadata)
+      UpdateIpPermissionMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateIpPermissionMetadata.newBuilder() to construct.
+    private UpdateIpPermissionMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateIpPermissionMetadata() {
+      registryId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateIpPermissionMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata.Builder.class);
+    }
+
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of the registry that ip permission is being updated.
+     * </pre>
+     *
+     * <code>string registry_id = 1;</code>
+     */
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the registry that ip permission is being updated.
+     * </pre>
+     *
+     * <code>string registry_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getRegistryIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getRegistryIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata other = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata) obj;
+
+      boolean result = true;
+      result = result && getRegistryId()
+          .equals(other.getRegistryId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.UpdateIpPermissionMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.UpdateIpPermissionMetadata)
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata.class, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata build() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata buildPartial() {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata result = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata(this);
+        result.registryId_ = registryId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata other) {
+        if (other == yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of the registry that ip permission is being updated.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry that ip permission is being updated.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry that ip permission is being updated.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry that ip permission is being updated.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry that ip permission is being updated.
+       * </pre>
+       *
+       * <code>string registry_id = 1;</code>
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.UpdateIpPermissionMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.UpdateIpPermissionMetadata)
+    private static final yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata();
+    }
+
+    public static yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateIpPermissionMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateIpPermissionMetadata>() {
+      @java.lang.Override
+      public UpdateIpPermissionMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateIpPermissionMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateIpPermissionMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateIpPermissionMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_containerregistry_v1_GetRegistryRequest_descriptor;
   private static final 
@@ -7789,6 +13501,41 @@ public final class RegistryServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_containerregistry_v1_DeleteRegistryMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_containerregistry_v1_IpPermissionDelta_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_containerregistry_v1_IpPermissionDelta_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7803,85 +13550,124 @@ public final class RegistryServiceOuterClass {
       "erregistry.v1\032 yandex/cloud/api/operatio" +
       "n.proto\032 yandex/cloud/access/access.prot" +
       "o\0320yandex/cloud/containerregistry/v1/reg" +
-      "istry.proto\032&yandex/cloud/operation/oper" +
-      "ation.proto\032\035yandex/cloud/validation.pro" +
-      "to\032 google/protobuf/field_mask.proto\032\034go" +
-      "ogle/api/annotations.proto\"7\n\022GetRegistr" +
-      "yRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"\222\001\n\025ListRegistriesRequest\022\037\n\tfolder_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
-      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
-      "=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"r\n\026List" +
-      "RegistriesResponse\022?\n\nregistries\030\001 \003(\0132+" +
-      ".yandex.cloud.containerregistry.v1.Regis" +
-      "try\022\027\n\017next_page_token\030\002 \001(\t\"\260\002\n\025CreateR" +
-      "egistryRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-" +
-      "9]{1,61}[a-z0-9]\022\225\001\n\006labels\030\003 \003(\0132D.yand" +
-      "ex.cloud.containerregistry.v1.CreateRegi" +
-      "stryRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
-      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
-      "0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"-\n\026CreateRegistryMetadat" +
-      "a\022\023\n\013registry_id\030\001 \001(\t\"\343\002\n\025UpdateRegistr" +
-      "yRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022/\n\013update_mask\030\002 \001(\0132\032.google.protob" +
-      "uf.FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-" +
-      "a-z0-9]{1,61}[a-z0-9]\022\225\001\n\006labels\030\004 \003(\0132D" +
-      ".yandex.cloud.containerregistry.v1.Updat" +
-      "eRegistryRequest.LabelsEntryB?\202\3101\004<=64\212\310" +
-      "1\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-" +
-      "z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026UpdateRegistryMe" +
-      "tadata\022\023\n\013registry_id\030\001 \001(\t\":\n\025DeleteReg" +
-      "istryRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\"-\n\026DeleteRegistryMetadata\022\023\n\013reg" +
-      "istry_id\030\001 \001(\t2\361\014\n\017RegistryService\022\242\001\n\003G" +
-      "et\0225.yandex.cloud.containerregistry.v1.G" +
-      "etRegistryRequest\032+.yandex.cloud.contain" +
-      "erregistry.v1.Registry\"7\202\323\344\223\0021\022//contain" +
-      "er-registry/v1/registries/{registry_id}\022" +
-      "\246\001\n\004List\0228.yandex.cloud.containerregistr" +
-      "y.v1.ListRegistriesRequest\0329.yandex.clou" +
-      "d.containerregistry.v1.ListRegistriesRes" +
-      "ponse\")\202\323\344\223\002#\022!/container-registry/v1/re" +
-      "gistries\022\271\001\n\006Create\0228.yandex.cloud.conta" +
-      "inerregistry.v1.CreateRegistryRequest\032!." +
-      "yandex.cloud.operation.Operation\"R\202\323\344\223\002&" +
-      "\"!/container-registry/v1/registries:\001*\262\322" +
-      "*\"\n\026CreateRegistryMetadata\022\010Registry\022\307\001\n" +
-      "\006Update\0228.yandex.cloud.containerregistry" +
-      ".v1.UpdateRegistryRequest\032!.yandex.cloud" +
-      ".operation.Operation\"`\202\323\344\223\00242//container" +
-      "-registry/v1/registries/{registry_id}:\001*" +
-      "\262\322*\"\n\026UpdateRegistryMetadata\022\010Registry\022\321" +
-      "\001\n\006Delete\0228.yandex.cloud.containerregist" +
-      "ry.v1.DeleteRegistryRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"j\202\323\344\223\0021*//contain" +
-      "er-registry/v1/registries/{registry_id}\262" +
-      "\322*/\n\026DeleteRegistryMetadata\022\025google.prot" +
-      "obuf.Empty\022\301\001\n\022ListAccessBindings\022..yand" +
-      "ex.cloud.access.ListAccessBindingsReques" +
-      "t\032/.yandex.cloud.access.ListAccessBindin" +
-      "gsResponse\"J\202\323\344\223\002D\022B/container-registry/" +
-      "v1/registries/{resource_id}:listAccessBi" +
-      "ndings\022\361\001\n\021SetAccessBindings\022-.yandex.cl" +
-      "oud.access.SetAccessBindingsRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\211\001\202\323\344\223\002F\"" +
-      "A/container-registry/v1/registries/{reso" +
-      "urce_id}:setAccessBindings:\001*\262\322*9\n acces" +
-      "s.SetAccessBindingsMetadata\022\025google.prot" +
-      "obuf.Empty\022\375\001\n\024UpdateAccessBindings\0220.ya" +
-      "ndex.cloud.access.UpdateAccessBindingsRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\217\001\202\323\344\223\002I\"D/container-registry/v1/regist" +
-      "ries/{resource_id}:updateAccessBindings:" +
-      "\001*\262\322*<\n#access.UpdateAccessBindingsMetad" +
-      "ata\022\025google.protobuf.EmptyB\200\001\n%yandex.cl" +
-      "oud.api.containerregistry.v1ZWgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/c" +
-      "ontainerregistry/v1;containerregistryb\006p" +
-      "roto3"
+      "istry.proto\0325yandex/cloud/containerregis" +
+      "try/v1/ip_permission.proto\032&yandex/cloud" +
+      "/operation/operation.proto\032\035yandex/cloud" +
+      "/validation.proto\032 google/protobuf/field" +
+      "_mask.proto\032\034google/api/annotations.prot" +
+      "o\"7\n\022GetRegistryRequest\022!\n\013registry_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\222\001\n\025ListRegistriesReq" +
+      "uest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
+      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
+      "en\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101" +
+      "\006<=1000\"r\n\026ListRegistriesResponse\022?\n\nreg" +
+      "istries\030\001 \003(\0132+.yandex.cloud.containerre" +
+      "gistry.v1.Registry\022\027\n\017next_page_token\030\002 " +
+      "\001(\t\"\260\002\n\025CreateRegistryRequest\022\037\n\tfolder_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\307" +
+      "1\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\225\001\n\006labe" +
+      "ls\030\003 \003(\0132D.yandex.cloud.containerregistr" +
+      "y.v1.CreateRegistryRequest.LabelsEntryB?" +
+      "\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-6" +
+      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026Create" +
+      "RegistryMetadata\022\023\n\013registry_id\030\001 \001(\t\"\343\002" +
+      "\n\025UpdateRegistryRequest\022!\n\013registry_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132" +
+      "\032.google.protobuf.FieldMask\022/\n\004name\030\003 \001(" +
+      "\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\225\001\n" +
+      "\006labels\030\004 \003(\0132D.yandex.cloud.containerre" +
+      "gistry.v1.UpdateRegistryRequest.LabelsEn" +
+      "tryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006" +
+      "\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026U" +
+      "pdateRegistryMetadata\022\023\n\013registry_id\030\001 \001" +
+      "(\t\":\n\025DeleteRegistryRequest\022!\n\013registry_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteRegistry" +
+      "Metadata\022\023\n\013registry_id\030\001 \001(\t\"\256\001\n\021IpPerm" +
+      "issionDelta\022K\n\006action\030\001 \001(\01625.yandex.clo" +
+      "ud.containerregistry.v1.IpPermissionActi" +
+      "onB\004\350\3071\001\022L\n\rip_permission\030\002 \001(\0132/.yandex" +
+      ".cloud.containerregistry.v1.IpPermission" +
+      "B\004\350\3071\001\"\203\001\n\026SetIpPermissionRequest\022!\n\013reg" +
+      "istry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022F\n\rip_permi" +
+      "ssion\030\002 \003(\0132/.yandex.cloud.containerregi" +
+      "stry.v1.IpPermission\"\222\001\n\031UpdateIpPermiss" +
+      "ionRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022R\n\024ip_permission_deltas\030\002 \003(\01324.ya" +
+      "ndex.cloud.containerregistry.v1.IpPermis" +
+      "sionDelta\"<\n\027ListIpPermissionRequest\022!\n\013" +
+      "registry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"a\n\031ListI" +
+      "pPermissionsResponse\022D\n\013permissions\030\001 \003(" +
+      "\0132/.yandex.cloud.containerregistry.v1.Ip" +
+      "Permission\".\n\027SetIpPermissionMetadata\022\023\n" +
+      "\013registry_id\030\001 \001(\t\"1\n\032UpdateIpPermission" +
+      "Metadata\022\023\n\013registry_id\030\001 \001(\t*O\n\022IpPermi" +
+      "ssionAction\022$\n IP_PERMISSION_ACTION_UNSP" +
+      "ECIFIED\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE\020\0022\273\022\n\017Regis" +
+      "tryService\022\242\001\n\003Get\0225.yandex.cloud.contai" +
+      "nerregistry.v1.GetRegistryRequest\032+.yand" +
+      "ex.cloud.containerregistry.v1.Registry\"7" +
+      "\202\323\344\223\0021\022//container-registry/v1/registrie" +
+      "s/{registry_id}\022\246\001\n\004List\0228.yandex.cloud." +
+      "containerregistry.v1.ListRegistriesReque" +
+      "st\0329.yandex.cloud.containerregistry.v1.L" +
+      "istRegistriesResponse\")\202\323\344\223\002#\022!/containe" +
+      "r-registry/v1/registries\022\271\001\n\006Create\0228.ya" +
+      "ndex.cloud.containerregistry.v1.CreateRe" +
+      "gistryRequest\032!.yandex.cloud.operation.O" +
+      "peration\"R\202\323\344\223\002&\"!/container-registry/v1" +
+      "/registries:\001*\262\322*\"\n\026CreateRegistryMetada" +
+      "ta\022\010Registry\022\307\001\n\006Update\0228.yandex.cloud.c" +
+      "ontainerregistry.v1.UpdateRegistryReques" +
+      "t\032!.yandex.cloud.operation.Operation\"`\202\323" +
+      "\344\223\00242//container-registry/v1/registries/" +
+      "{registry_id}:\001*\262\322*\"\n\026UpdateRegistryMeta" +
+      "data\022\010Registry\022\321\001\n\006Delete\0228.yandex.cloud" +
+      ".containerregistry.v1.DeleteRegistryRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"j" +
+      "\202\323\344\223\0021*//container-registry/v1/registrie" +
+      "s/{registry_id}\262\322*/\n\026DeleteRegistryMetad" +
+      "ata\022\025google.protobuf.Empty\022\301\001\n\022ListAcces" +
+      "sBindings\022..yandex.cloud.access.ListAcce" +
+      "ssBindingsRequest\032/.yandex.cloud.access." +
+      "ListAccessBindingsResponse\"J\202\323\344\223\002D\022B/con" +
+      "tainer-registry/v1/registries/{resource_" +
+      "id}:listAccessBindings\022\361\001\n\021SetAccessBind" +
+      "ings\022-.yandex.cloud.access.SetAccessBind" +
+      "ingsRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"\211\001\202\323\344\223\002F\"A/container-registry/v1/" +
+      "registries/{resource_id}:setAccessBindin" +
+      "gs:\001*\262\322*9\n access.SetAccessBindingsMetad" +
+      "ata\022\025google.protobuf.Empty\022\375\001\n\024UpdateAcc" +
+      "essBindings\0220.yandex.cloud.access.Update" +
+      "AccessBindingsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\217\001\202\323\344\223\002I\"D/container-re" +
+      "gistry/v1/registries/{resource_id}:updat" +
+      "eAccessBindings:\001*\262\322*<\n#access.UpdateAcc" +
+      "essBindingsMetadata\022\025google.protobuf.Emp" +
+      "ty\022\326\001\n\020ListIpPermission\022:.yandex.cloud.c" +
+      "ontainerregistry.v1.ListIpPermissionRequ" +
+      "est\032<.yandex.cloud.containerregistry.v1." +
+      "ListIpPermissionsResponse\"H\202\323\344\223\002B\022@/cont" +
+      "ainer-registry/v1/registries/{registry_i" +
+      "d}:listIpPermission\022\357\001\n\017SetIpPermission\022" +
+      "9.yandex.cloud.containerregistry.v1.SetI" +
+      "pPermissionRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"~\202\323\344\223\002D\"?/container-regist" +
+      "ry/v1/registries/{registry_id}:setIpPerm" +
+      "ission:\001*\262\322*0\n\027SetIpPermissionMetadata\022\025" +
+      "google.protobuf.Empty\022\374\001\n\022UpdateIpPermis" +
+      "sion\022<.yandex.cloud.containerregistry.v1" +
+      ".UpdateIpPermissionRequest\032!.yandex.clou" +
+      "d.operation.Operation\"\204\001\202\323\344\223\002G\"B/contain" +
+      "er-registry/v1/registries/{registry_id}:" +
+      "updateIpPermission:\001*\262\322*3\n\032UpdateIpPermi" +
+      "ssionMetadata\022\025google.protobuf.EmptyB\200\001\n" +
+      "%yandex.cloud.api.containerregistry.v1ZW" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/containerregistry/v1;containerr" +
+      "egistryb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7897,6 +13683,7 @@ public final class RegistryServiceOuterClass {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.containerregistry.v1.RegistryOuterClass.getDescriptor(),
+          yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
@@ -7968,6 +13755,48 @@ public final class RegistryServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_containerregistry_v1_DeleteRegistryMetadata_descriptor,
         new java.lang.String[] { "RegistryId", });
+    internal_static_yandex_cloud_containerregistry_v1_IpPermissionDelta_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_containerregistry_v1_IpPermissionDelta_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_containerregistry_v1_IpPermissionDelta_descriptor,
+        new java.lang.String[] { "Action", "IpPermission", });
+    internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionRequest_descriptor,
+        new java.lang.String[] { "RegistryId", "IpPermission", });
+    internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionRequest_descriptor,
+        new java.lang.String[] { "RegistryId", "IpPermissionDeltas", });
+    internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionRequest_descriptor,
+        new java.lang.String[] { "RegistryId", });
+    internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_containerregistry_v1_ListIpPermissionsResponse_descriptor,
+        new java.lang.String[] { "Permissions", });
+    internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_containerregistry_v1_SetIpPermissionMetadata_descriptor,
+        new java.lang.String[] { "RegistryId", });
+    internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_containerregistry_v1_UpdateIpPermissionMetadata_descriptor,
+        new java.lang.String[] { "RegistryId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -7983,6 +13812,7 @@ public final class RegistryServiceOuterClass {
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.containerregistry.v1.RegistryOuterClass.getDescriptor();
+    yandex.cloud.api.containerregistry.v1.IpPermissionOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();

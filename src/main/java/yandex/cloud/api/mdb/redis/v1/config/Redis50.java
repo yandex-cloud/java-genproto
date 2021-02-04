@@ -86,6 +86,99 @@ public final class Redis50 {
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
+
+    /**
+     * <pre>
+     * Number of database buckets on a single redis-server process.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    boolean hasDatabases();
+    /**
+     * <pre>
+     * Number of database buckets on a single redis-server process.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64Value getDatabases();
+    /**
+     * <pre>
+     * Number of database buckets on a single redis-server process.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getDatabasesOrBuilder();
+
+    /**
+     * <pre>
+     * Threshold for logging slow requests to server in microseconds (log only slower than it).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasSlowlogLogSlowerThan();
+    /**
+     * <pre>
+     * Threshold for logging slow requests to server in microseconds (log only slower than it).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getSlowlogLogSlowerThan();
+    /**
+     * <pre>
+     * Threshold for logging slow requests to server in microseconds (log only slower than it).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSlowlogLogSlowerThanOrBuilder();
+
+    /**
+     * <pre>
+     * Max slow requests number to log.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    boolean hasSlowlogMaxLen();
+    /**
+     * <pre>
+     * Max slow requests number to log.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64Value getSlowlogMaxLen();
+    /**
+     * <pre>
+     * Max slow requests number to log.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSlowlogMaxLenOrBuilder();
+
+    /**
+     * <pre>
+     * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAt.
+     * </pre>
+     *
+     * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAt]{0,12}"];</code>
+     */
+    java.lang.String getNotifyKeyspaceEvents();
+    /**
+     * <pre>
+     * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAt.
+     * </pre>
+     *
+     * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAt]{0,12}"];</code>
+     */
+    com.google.protobuf.ByteString
+        getNotifyKeyspaceEventsBytes();
   }
   /**
    * <pre>
@@ -107,6 +200,7 @@ public final class Redis50 {
     private RedisConfig5_0() {
       maxmemoryPolicy_ = 0;
       password_ = "";
+      notifyKeyspaceEvents_ = "";
     }
 
     @java.lang.Override
@@ -156,6 +250,51 @@ public final class Redis50 {
               java.lang.String s = input.readStringRequireUtf8();
 
               password_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (databases_ != null) {
+                subBuilder = databases_.toBuilder();
+              }
+              databases_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(databases_);
+                databases_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (slowlogLogSlowerThan_ != null) {
+                subBuilder = slowlogLogSlowerThan_.toBuilder();
+              }
+              slowlogLogSlowerThan_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(slowlogLogSlowerThan_);
+                slowlogLogSlowerThan_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (slowlogMaxLen_ != null) {
+                subBuilder = slowlogMaxLen_.toBuilder();
+              }
+              slowlogMaxLen_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(slowlogMaxLen_);
+                slowlogMaxLen_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              notifyKeyspaceEvents_ = s;
               break;
             }
             default: {
@@ -528,6 +667,147 @@ public final class Redis50 {
       }
     }
 
+    public static final int DATABASES_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value databases_;
+    /**
+     * <pre>
+     * Number of database buckets on a single redis-server process.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    public boolean hasDatabases() {
+      return databases_ != null;
+    }
+    /**
+     * <pre>
+     * Number of database buckets on a single redis-server process.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    public com.google.protobuf.Int64Value getDatabases() {
+      return databases_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : databases_;
+    }
+    /**
+     * <pre>
+     * Number of database buckets on a single redis-server process.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getDatabasesOrBuilder() {
+      return getDatabases();
+    }
+
+    public static final int SLOWLOG_LOG_SLOWER_THAN_FIELD_NUMBER = 5;
+    private com.google.protobuf.Int64Value slowlogLogSlowerThan_;
+    /**
+     * <pre>
+     * Threshold for logging slow requests to server in microseconds (log only slower than it).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasSlowlogLogSlowerThan() {
+      return slowlogLogSlowerThan_ != null;
+    }
+    /**
+     * <pre>
+     * Threshold for logging slow requests to server in microseconds (log only slower than it).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getSlowlogLogSlowerThan() {
+      return slowlogLogSlowerThan_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : slowlogLogSlowerThan_;
+    }
+    /**
+     * <pre>
+     * Threshold for logging slow requests to server in microseconds (log only slower than it).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getSlowlogLogSlowerThanOrBuilder() {
+      return getSlowlogLogSlowerThan();
+    }
+
+    public static final int SLOWLOG_MAX_LEN_FIELD_NUMBER = 6;
+    private com.google.protobuf.Int64Value slowlogMaxLen_;
+    /**
+     * <pre>
+     * Max slow requests number to log.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public boolean hasSlowlogMaxLen() {
+      return slowlogMaxLen_ != null;
+    }
+    /**
+     * <pre>
+     * Max slow requests number to log.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64Value getSlowlogMaxLen() {
+      return slowlogMaxLen_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : slowlogMaxLen_;
+    }
+    /**
+     * <pre>
+     * Max slow requests number to log.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getSlowlogMaxLenOrBuilder() {
+      return getSlowlogMaxLen();
+    }
+
+    public static final int NOTIFY_KEYSPACE_EVENTS_FIELD_NUMBER = 7;
+    private volatile java.lang.Object notifyKeyspaceEvents_;
+    /**
+     * <pre>
+     * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAt.
+     * </pre>
+     *
+     * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAt]{0,12}"];</code>
+     */
+    public java.lang.String getNotifyKeyspaceEvents() {
+      java.lang.Object ref = notifyKeyspaceEvents_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        notifyKeyspaceEvents_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAt.
+     * </pre>
+     *
+     * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAt]{0,12}"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNotifyKeyspaceEventsBytes() {
+      java.lang.Object ref = notifyKeyspaceEvents_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        notifyKeyspaceEvents_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -551,6 +831,18 @@ public final class Redis50 {
       if (!getPasswordBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, password_);
       }
+      if (databases_ != null) {
+        output.writeMessage(4, getDatabases());
+      }
+      if (slowlogLogSlowerThan_ != null) {
+        output.writeMessage(5, getSlowlogLogSlowerThan());
+      }
+      if (slowlogMaxLen_ != null) {
+        output.writeMessage(6, getSlowlogMaxLen());
+      }
+      if (!getNotifyKeyspaceEventsBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, notifyKeyspaceEvents_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -570,6 +862,21 @@ public final class Redis50 {
       }
       if (!getPasswordBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, password_);
+      }
+      if (databases_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDatabases());
+      }
+      if (slowlogLogSlowerThan_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSlowlogLogSlowerThan());
+      }
+      if (slowlogMaxLen_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getSlowlogMaxLen());
+      }
+      if (!getNotifyKeyspaceEventsBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, notifyKeyspaceEvents_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -595,6 +902,23 @@ public final class Redis50 {
       }
       result = result && getPassword()
           .equals(other.getPassword());
+      result = result && (hasDatabases() == other.hasDatabases());
+      if (hasDatabases()) {
+        result = result && getDatabases()
+            .equals(other.getDatabases());
+      }
+      result = result && (hasSlowlogLogSlowerThan() == other.hasSlowlogLogSlowerThan());
+      if (hasSlowlogLogSlowerThan()) {
+        result = result && getSlowlogLogSlowerThan()
+            .equals(other.getSlowlogLogSlowerThan());
+      }
+      result = result && (hasSlowlogMaxLen() == other.hasSlowlogMaxLen());
+      if (hasSlowlogMaxLen()) {
+        result = result && getSlowlogMaxLen()
+            .equals(other.getSlowlogMaxLen());
+      }
+      result = result && getNotifyKeyspaceEvents()
+          .equals(other.getNotifyKeyspaceEvents());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -614,6 +938,20 @@ public final class Redis50 {
       }
       hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
       hash = (53 * hash) + getPassword().hashCode();
+      if (hasDatabases()) {
+        hash = (37 * hash) + DATABASES_FIELD_NUMBER;
+        hash = (53 * hash) + getDatabases().hashCode();
+      }
+      if (hasSlowlogLogSlowerThan()) {
+        hash = (37 * hash) + SLOWLOG_LOG_SLOWER_THAN_FIELD_NUMBER;
+        hash = (53 * hash) + getSlowlogLogSlowerThan().hashCode();
+      }
+      if (hasSlowlogMaxLen()) {
+        hash = (37 * hash) + SLOWLOG_MAX_LEN_FIELD_NUMBER;
+        hash = (53 * hash) + getSlowlogMaxLen().hashCode();
+      }
+      hash = (37 * hash) + NOTIFY_KEYSPACE_EVENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getNotifyKeyspaceEvents().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -762,6 +1100,26 @@ public final class Redis50 {
         }
         password_ = "";
 
+        if (databasesBuilder_ == null) {
+          databases_ = null;
+        } else {
+          databases_ = null;
+          databasesBuilder_ = null;
+        }
+        if (slowlogLogSlowerThanBuilder_ == null) {
+          slowlogLogSlowerThan_ = null;
+        } else {
+          slowlogLogSlowerThan_ = null;
+          slowlogLogSlowerThanBuilder_ = null;
+        }
+        if (slowlogMaxLenBuilder_ == null) {
+          slowlogMaxLen_ = null;
+        } else {
+          slowlogMaxLen_ = null;
+          slowlogMaxLenBuilder_ = null;
+        }
+        notifyKeyspaceEvents_ = "";
+
         return this;
       }
 
@@ -795,6 +1153,22 @@ public final class Redis50 {
           result.timeout_ = timeoutBuilder_.build();
         }
         result.password_ = password_;
+        if (databasesBuilder_ == null) {
+          result.databases_ = databases_;
+        } else {
+          result.databases_ = databasesBuilder_.build();
+        }
+        if (slowlogLogSlowerThanBuilder_ == null) {
+          result.slowlogLogSlowerThan_ = slowlogLogSlowerThan_;
+        } else {
+          result.slowlogLogSlowerThan_ = slowlogLogSlowerThanBuilder_.build();
+        }
+        if (slowlogMaxLenBuilder_ == null) {
+          result.slowlogMaxLen_ = slowlogMaxLen_;
+        } else {
+          result.slowlogMaxLen_ = slowlogMaxLenBuilder_.build();
+        }
+        result.notifyKeyspaceEvents_ = notifyKeyspaceEvents_;
         onBuilt();
         return result;
       }
@@ -851,6 +1225,19 @@ public final class Redis50 {
         }
         if (!other.getPassword().isEmpty()) {
           password_ = other.password_;
+          onChanged();
+        }
+        if (other.hasDatabases()) {
+          mergeDatabases(other.getDatabases());
+        }
+        if (other.hasSlowlogLogSlowerThan()) {
+          mergeSlowlogLogSlowerThan(other.getSlowlogLogSlowerThan());
+        }
+        if (other.hasSlowlogMaxLen()) {
+          mergeSlowlogMaxLen(other.getSlowlogMaxLen());
+        }
+        if (!other.getNotifyKeyspaceEvents().isEmpty()) {
+          notifyKeyspaceEvents_ = other.notifyKeyspaceEvents_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1209,6 +1596,554 @@ public final class Redis50 {
   checkByteStringIsUtf8(value);
         
         password_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value databases_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> databasesBuilder_;
+      /**
+       * <pre>
+       * Number of database buckets on a single redis-server process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public boolean hasDatabases() {
+        return databasesBuilder_ != null || databases_ != null;
+      }
+      /**
+       * <pre>
+       * Number of database buckets on a single redis-server process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value getDatabases() {
+        if (databasesBuilder_ == null) {
+          return databases_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : databases_;
+        } else {
+          return databasesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Number of database buckets on a single redis-server process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setDatabases(com.google.protobuf.Int64Value value) {
+        if (databasesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          databases_ = value;
+          onChanged();
+        } else {
+          databasesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of database buckets on a single redis-server process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setDatabases(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (databasesBuilder_ == null) {
+          databases_ = builderForValue.build();
+          onChanged();
+        } else {
+          databasesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of database buckets on a single redis-server process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder mergeDatabases(com.google.protobuf.Int64Value value) {
+        if (databasesBuilder_ == null) {
+          if (databases_ != null) {
+            databases_ =
+              com.google.protobuf.Int64Value.newBuilder(databases_).mergeFrom(value).buildPartial();
+          } else {
+            databases_ = value;
+          }
+          onChanged();
+        } else {
+          databasesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of database buckets on a single redis-server process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder clearDatabases() {
+        if (databasesBuilder_ == null) {
+          databases_ = null;
+          onChanged();
+        } else {
+          databases_ = null;
+          databasesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of database buckets on a single redis-server process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getDatabasesBuilder() {
+        
+        onChanged();
+        return getDatabasesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Number of database buckets on a single redis-server process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getDatabasesOrBuilder() {
+        if (databasesBuilder_ != null) {
+          return databasesBuilder_.getMessageOrBuilder();
+        } else {
+          return databases_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : databases_;
+        }
+      }
+      /**
+       * <pre>
+       * Number of database buckets on a single redis-server process.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value databases = 4 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getDatabasesFieldBuilder() {
+        if (databasesBuilder_ == null) {
+          databasesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getDatabases(),
+                  getParentForChildren(),
+                  isClean());
+          databases_ = null;
+        }
+        return databasesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value slowlogLogSlowerThan_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> slowlogLogSlowerThanBuilder_;
+      /**
+       * <pre>
+       * Threshold for logging slow requests to server in microseconds (log only slower than it).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasSlowlogLogSlowerThan() {
+        return slowlogLogSlowerThanBuilder_ != null || slowlogLogSlowerThan_ != null;
+      }
+      /**
+       * <pre>
+       * Threshold for logging slow requests to server in microseconds (log only slower than it).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getSlowlogLogSlowerThan() {
+        if (slowlogLogSlowerThanBuilder_ == null) {
+          return slowlogLogSlowerThan_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : slowlogLogSlowerThan_;
+        } else {
+          return slowlogLogSlowerThanBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Threshold for logging slow requests to server in microseconds (log only slower than it).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setSlowlogLogSlowerThan(com.google.protobuf.Int64Value value) {
+        if (slowlogLogSlowerThanBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          slowlogLogSlowerThan_ = value;
+          onChanged();
+        } else {
+          slowlogLogSlowerThanBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Threshold for logging slow requests to server in microseconds (log only slower than it).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setSlowlogLogSlowerThan(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (slowlogLogSlowerThanBuilder_ == null) {
+          slowlogLogSlowerThan_ = builderForValue.build();
+          onChanged();
+        } else {
+          slowlogLogSlowerThanBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Threshold for logging slow requests to server in microseconds (log only slower than it).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeSlowlogLogSlowerThan(com.google.protobuf.Int64Value value) {
+        if (slowlogLogSlowerThanBuilder_ == null) {
+          if (slowlogLogSlowerThan_ != null) {
+            slowlogLogSlowerThan_ =
+              com.google.protobuf.Int64Value.newBuilder(slowlogLogSlowerThan_).mergeFrom(value).buildPartial();
+          } else {
+            slowlogLogSlowerThan_ = value;
+          }
+          onChanged();
+        } else {
+          slowlogLogSlowerThanBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Threshold for logging slow requests to server in microseconds (log only slower than it).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearSlowlogLogSlowerThan() {
+        if (slowlogLogSlowerThanBuilder_ == null) {
+          slowlogLogSlowerThan_ = null;
+          onChanged();
+        } else {
+          slowlogLogSlowerThan_ = null;
+          slowlogLogSlowerThanBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Threshold for logging slow requests to server in microseconds (log only slower than it).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSlowlogLogSlowerThanBuilder() {
+        
+        onChanged();
+        return getSlowlogLogSlowerThanFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Threshold for logging slow requests to server in microseconds (log only slower than it).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSlowlogLogSlowerThanOrBuilder() {
+        if (slowlogLogSlowerThanBuilder_ != null) {
+          return slowlogLogSlowerThanBuilder_.getMessageOrBuilder();
+        } else {
+          return slowlogLogSlowerThan_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : slowlogLogSlowerThan_;
+        }
+      }
+      /**
+       * <pre>
+       * Threshold for logging slow requests to server in microseconds (log only slower than it).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_log_slower_than = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSlowlogLogSlowerThanFieldBuilder() {
+        if (slowlogLogSlowerThanBuilder_ == null) {
+          slowlogLogSlowerThanBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSlowlogLogSlowerThan(),
+                  getParentForChildren(),
+                  isClean());
+          slowlogLogSlowerThan_ = null;
+        }
+        return slowlogLogSlowerThanBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value slowlogMaxLen_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> slowlogMaxLenBuilder_;
+      /**
+       * <pre>
+       * Max slow requests number to log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public boolean hasSlowlogMaxLen() {
+        return slowlogMaxLenBuilder_ != null || slowlogMaxLen_ != null;
+      }
+      /**
+       * <pre>
+       * Max slow requests number to log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value getSlowlogMaxLen() {
+        if (slowlogMaxLenBuilder_ == null) {
+          return slowlogMaxLen_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : slowlogMaxLen_;
+        } else {
+          return slowlogMaxLenBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Max slow requests number to log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setSlowlogMaxLen(com.google.protobuf.Int64Value value) {
+        if (slowlogMaxLenBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          slowlogMaxLen_ = value;
+          onChanged();
+        } else {
+          slowlogMaxLenBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Max slow requests number to log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setSlowlogMaxLen(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (slowlogMaxLenBuilder_ == null) {
+          slowlogMaxLen_ = builderForValue.build();
+          onChanged();
+        } else {
+          slowlogMaxLenBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Max slow requests number to log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeSlowlogMaxLen(com.google.protobuf.Int64Value value) {
+        if (slowlogMaxLenBuilder_ == null) {
+          if (slowlogMaxLen_ != null) {
+            slowlogMaxLen_ =
+              com.google.protobuf.Int64Value.newBuilder(slowlogMaxLen_).mergeFrom(value).buildPartial();
+          } else {
+            slowlogMaxLen_ = value;
+          }
+          onChanged();
+        } else {
+          slowlogMaxLenBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Max slow requests number to log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearSlowlogMaxLen() {
+        if (slowlogMaxLenBuilder_ == null) {
+          slowlogMaxLen_ = null;
+          onChanged();
+        } else {
+          slowlogMaxLen_ = null;
+          slowlogMaxLenBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Max slow requests number to log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSlowlogMaxLenBuilder() {
+        
+        onChanged();
+        return getSlowlogMaxLenFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Max slow requests number to log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSlowlogMaxLenOrBuilder() {
+        if (slowlogMaxLenBuilder_ != null) {
+          return slowlogMaxLenBuilder_.getMessageOrBuilder();
+        } else {
+          return slowlogMaxLen_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : slowlogMaxLen_;
+        }
+      }
+      /**
+       * <pre>
+       * Max slow requests number to log.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value slowlog_max_len = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSlowlogMaxLenFieldBuilder() {
+        if (slowlogMaxLenBuilder_ == null) {
+          slowlogMaxLenBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSlowlogMaxLen(),
+                  getParentForChildren(),
+                  isClean());
+          slowlogMaxLen_ = null;
+        }
+        return slowlogMaxLenBuilder_;
+      }
+
+      private java.lang.Object notifyKeyspaceEvents_ = "";
+      /**
+       * <pre>
+       * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAt.
+       * </pre>
+       *
+       * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAt]{0,12}"];</code>
+       */
+      public java.lang.String getNotifyKeyspaceEvents() {
+        java.lang.Object ref = notifyKeyspaceEvents_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          notifyKeyspaceEvents_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAt.
+       * </pre>
+       *
+       * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAt]{0,12}"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNotifyKeyspaceEventsBytes() {
+        java.lang.Object ref = notifyKeyspaceEvents_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          notifyKeyspaceEvents_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAt.
+       * </pre>
+       *
+       * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAt]{0,12}"];</code>
+       */
+      public Builder setNotifyKeyspaceEvents(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        notifyKeyspaceEvents_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAt.
+       * </pre>
+       *
+       * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAt]{0,12}"];</code>
+       */
+      public Builder clearNotifyKeyspaceEvents() {
+        
+        notifyKeyspaceEvents_ = getDefaultInstance().getNotifyKeyspaceEvents();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * String setting for pub&#92;sub functionality; subset of KEg$lshzxeAt.
+       * </pre>
+       *
+       * <code>string notify_keyspace_events = 7 [(.yandex.cloud.pattern) = "[KEg$lshzxeAt]{0,12}"];</code>
+       */
+      public Builder setNotifyKeyspaceEventsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        notifyKeyspaceEvents_ = value;
         onChanged();
         return this;
       }
@@ -2477,27 +3412,33 @@ public final class Redis50 {
       "\n/yandex/cloud/mdb/redis/v1/config/redis" +
       "5_0.proto\022 yandex.cloud.mdb.redis.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\233\003\n\016RedisConf" +
+      "dex/cloud/validation.proto\"\223\005\n\016RedisConf" +
       "ig5_0\022Z\n\020maxmemory_policy\030\001 \001(\0162@.yandex" +
       ".cloud.mdb.redis.v1.config.RedisConfig5_" +
       "0.MaxmemoryPolicy\022,\n\007timeout\030\002 \001(\0132\033.goo" +
       "gle.protobuf.Int64Value\0228\n\010password\030\003 \001(" +
       "\tB&\362\3071\"[a-zA-Z0-9@=+?*.,!&#$^<>_-]{8,128" +
-      "}\"\304\001\n\017MaxmemoryPolicy\022 \n\034MAXMEMORY_POLIC" +
-      "Y_UNSPECIFIED\020\000\022\020\n\014VOLATILE_LRU\020\001\022\017\n\013ALL" +
-      "KEYS_LRU\020\002\022\020\n\014VOLATILE_LFU\020\003\022\017\n\013ALLKEYS_" +
-      "LFU\020\004\022\023\n\017VOLATILE_RANDOM\020\005\022\022\n\016ALLKEYS_RA" +
-      "NDOM\020\006\022\020\n\014VOLATILE_TTL\020\007\022\016\n\nNOEVICTION\020\010" +
-      "\"\360\001\n\021RedisConfigSet5_0\022J\n\020effective_conf" +
-      "ig\030\001 \001(\01320.yandex.cloud.mdb.redis.v1.con" +
-      "fig.RedisConfig5_0\022E\n\013user_config\030\002 \001(\0132" +
-      "0.yandex.cloud.mdb.redis.v1.config.Redis" +
-      "Config5_0\022H\n\016default_config\030\003 \001(\01320.yand" +
-      "ex.cloud.mdb.redis.v1.config.RedisConfig" +
-      "5_0Br\n$yandex.cloud.api.mdb.redis.v1.con" +
-      "figZJgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/mdb/redis/v1/config;redisb" +
-      "\006proto3"
+      "}\0226\n\tdatabases\030\004 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\006\372\3071\002>0\022E\n\027slowlog_log_slower_" +
+      "than\030\005 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\007\372\3071\003>=0\022=\n\017slowlog_max_len\030\006 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\007\372\3071\003>=0\0228\n\026notif" +
+      "y_keyspace_events\030\007 \001(\tB\030\362\3071\024[KEg$lshzxe" +
+      "At]{0,12}\"\304\001\n\017MaxmemoryPolicy\022 \n\034MAXMEMO" +
+      "RY_POLICY_UNSPECIFIED\020\000\022\020\n\014VOLATILE_LRU\020" +
+      "\001\022\017\n\013ALLKEYS_LRU\020\002\022\020\n\014VOLATILE_LFU\020\003\022\017\n\013" +
+      "ALLKEYS_LFU\020\004\022\023\n\017VOLATILE_RANDOM\020\005\022\022\n\016AL" +
+      "LKEYS_RANDOM\020\006\022\020\n\014VOLATILE_TTL\020\007\022\016\n\nNOEV" +
+      "ICTION\020\010\"\360\001\n\021RedisConfigSet5_0\022J\n\020effect" +
+      "ive_config\030\001 \001(\01320.yandex.cloud.mdb.redi" +
+      "s.v1.config.RedisConfig5_0\022E\n\013user_confi" +
+      "g\030\002 \001(\01320.yandex.cloud.mdb.redis.v1.conf" +
+      "ig.RedisConfig5_0\022H\n\016default_config\030\003 \001(" +
+      "\01320.yandex.cloud.mdb.redis.v1.config.Red" +
+      "isConfig5_0Br\n$yandex.cloud.api.mdb.redi" +
+      "s.v1.configZJgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/mdb/redis/v1/confi" +
+      "g;redisb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2518,7 +3459,7 @@ public final class Redis50 {
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfig5_0_descriptor,
-        new java.lang.String[] { "MaxmemoryPolicy", "Timeout", "Password", });
+        new java.lang.String[] { "MaxmemoryPolicy", "Timeout", "Password", "Databases", "SlowlogLogSlowerThan", "SlowlogMaxLen", "NotifyKeyspaceEvents", });
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfigSet5_0_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_redis_v1_config_RedisConfigSet5_0_fieldAccessorTable = new
@@ -2528,6 +3469,7 @@ public final class Redis50 {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.pattern);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.WrappersProto.getDescriptor();

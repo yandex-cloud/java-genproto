@@ -286,6 +286,102 @@ public final class RegistryServiceGrpc {
      return getUpdateAccessBindingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest,
+      yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse> getListIpPermissionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListIpPermission",
+      requestType = yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest.class,
+      responseType = yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest,
+      yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse> getListIpPermissionMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse> getListIpPermissionMethod;
+    if ((getListIpPermissionMethod = RegistryServiceGrpc.getListIpPermissionMethod) == null) {
+      synchronized (RegistryServiceGrpc.class) {
+        if ((getListIpPermissionMethod = RegistryServiceGrpc.getListIpPermissionMethod) == null) {
+          RegistryServiceGrpc.getListIpPermissionMethod = getListIpPermissionMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest, yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.containerregistry.v1.RegistryService", "ListIpPermission"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("ListIpPermission"))
+                  .build();
+          }
+        }
+     }
+     return getListIpPermissionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetIpPermissionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetIpPermission",
+      requestType = yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetIpPermissionMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getSetIpPermissionMethod;
+    if ((getSetIpPermissionMethod = RegistryServiceGrpc.getSetIpPermissionMethod) == null) {
+      synchronized (RegistryServiceGrpc.class) {
+        if ((getSetIpPermissionMethod = RegistryServiceGrpc.getSetIpPermissionMethod) == null) {
+          RegistryServiceGrpc.getSetIpPermissionMethod = getSetIpPermissionMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.containerregistry.v1.RegistryService", "SetIpPermission"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("SetIpPermission"))
+                  .build();
+          }
+        }
+     }
+     return getSetIpPermissionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateIpPermissionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateIpPermission",
+      requestType = yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateIpPermissionMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateIpPermissionMethod;
+    if ((getUpdateIpPermissionMethod = RegistryServiceGrpc.getUpdateIpPermissionMethod) == null) {
+      synchronized (RegistryServiceGrpc.class) {
+        if ((getUpdateIpPermissionMethod = RegistryServiceGrpc.getUpdateIpPermissionMethod) == null) {
+          RegistryServiceGrpc.getUpdateIpPermissionMethod = getUpdateIpPermissionMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.containerregistry.v1.RegistryService", "UpdateIpPermission"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("UpdateIpPermission"))
+                  .build();
+          }
+        }
+     }
+     return getUpdateIpPermissionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -397,6 +493,36 @@ public final class RegistryServiceGrpc {
       asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * List ip permissions for the specified registry.
+     * </pre>
+     */
+    public void listIpPermission(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListIpPermissionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Set ip permissions for the specified registry.
+     * </pre>
+     */
+    public void setIpPermission(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getSetIpPermissionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update ip permissions for the specified registry.
+     * </pre>
+     */
+    public void updateIpPermission(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateIpPermissionMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -455,6 +581,27 @@ public final class RegistryServiceGrpc {
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_ACCESS_BINDINGS)))
+          .addMethod(
+            getListIpPermissionMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest,
+                yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse>(
+                  this, METHODID_LIST_IP_PERMISSION)))
+          .addMethod(
+            getSetIpPermissionMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_SET_IP_PERMISSION)))
+          .addMethod(
+            getUpdateIpPermissionMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_IP_PERMISSION)))
           .build();
     }
   }
@@ -568,6 +715,39 @@ public final class RegistryServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * List ip permissions for the specified registry.
+     * </pre>
+     */
+    public void listIpPermission(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListIpPermissionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Set ip permissions for the specified registry.
+     * </pre>
+     */
+    public void setIpPermission(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getSetIpPermissionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update ip permissions for the specified registry.
+     * </pre>
+     */
+    public void updateIpPermission(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateIpPermissionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -670,6 +850,36 @@ public final class RegistryServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List ip permissions for the specified registry.
+     * </pre>
+     */
+    public yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse listIpPermission(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListIpPermissionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Set ip permissions for the specified registry.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation setIpPermission(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getSetIpPermissionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Update ip permissions for the specified registry.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateIpPermission(yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateIpPermissionMethod(), getCallOptions(), request);
     }
   }
 
@@ -782,6 +992,39 @@ public final class RegistryServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * List ip permissions for the specified registry.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse> listIpPermission(
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListIpPermissionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Set ip permissions for the specified registry.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setIpPermission(
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getSetIpPermissionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Update ip permissions for the specified registry.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateIpPermission(
+        yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateIpPermissionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -792,6 +1035,9 @@ public final class RegistryServiceGrpc {
   private static final int METHODID_LIST_ACCESS_BINDINGS = 5;
   private static final int METHODID_SET_ACCESS_BINDINGS = 6;
   private static final int METHODID_UPDATE_ACCESS_BINDINGS = 7;
+  private static final int METHODID_LIST_IP_PERMISSION = 8;
+  private static final int METHODID_SET_IP_PERMISSION = 9;
+  private static final int METHODID_UPDATE_IP_PERMISSION = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -840,6 +1086,18 @@ public final class RegistryServiceGrpc {
           break;
         case METHODID_UPDATE_ACCESS_BINDINGS:
           serviceImpl.updateAccessBindings((yandex.cloud.api.access.Access.UpdateAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_IP_PERMISSION:
+          serviceImpl.listIpPermission((yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.ListIpPermissionsResponse>) responseObserver);
+          break;
+        case METHODID_SET_IP_PERMISSION:
+          serviceImpl.setIpPermission((yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.SetIpPermissionRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE_IP_PERMISSION:
+          serviceImpl.updateIpPermission((yandex.cloud.api.containerregistry.v1.RegistryServiceOuterClass.UpdateIpPermissionRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
@@ -911,6 +1169,9 @@ public final class RegistryServiceGrpc {
               .addMethod(getListAccessBindingsMethod())
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())
+              .addMethod(getListIpPermissionMethod())
+              .addMethod(getSetIpPermissionMethod())
+              .addMethod(getUpdateIpPermissionMethod())
               .build();
         }
       }

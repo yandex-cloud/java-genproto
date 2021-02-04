@@ -9156,6 +9156,50 @@ public final class InstanceOuterClass {
      * <code>.yandex.cloud.compute.v1.OneToOneNat one_to_one_nat = 2;</code>
      */
     yandex.cloud.api.compute.v1.InstanceOuterClass.OneToOneNatOrBuilder getOneToOneNatOrBuilder();
+
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord> 
+        getDnsRecordsList();
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord getDnsRecords(int index);
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    int getDnsRecordsCount();
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder> 
+        getDnsRecordsOrBuilderList();
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder getDnsRecordsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.PrimaryAddress}
@@ -9171,6 +9215,7 @@ public final class InstanceOuterClass {
     }
     private PrimaryAddress() {
       address_ = "";
+      dnsRecords_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -9216,6 +9261,15 @@ public final class InstanceOuterClass {
 
               break;
             }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                dnsRecords_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              dnsRecords_.add(
+                  input.readMessage(yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9231,6 +9285,9 @@ public final class InstanceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          dnsRecords_ = java.util.Collections.unmodifiableList(dnsRecords_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -9248,6 +9305,7 @@ public final class InstanceOuterClass {
               yandex.cloud.api.compute.v1.InstanceOuterClass.PrimaryAddress.class, yandex.cloud.api.compute.v1.InstanceOuterClass.PrimaryAddress.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     private volatile java.lang.Object address_;
     /**
@@ -9323,6 +9381,61 @@ public final class InstanceOuterClass {
       return getOneToOneNat();
     }
 
+    public static final int DNS_RECORDS_FIELD_NUMBER = 3;
+    private java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord> dnsRecords_;
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    public java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord> getDnsRecordsList() {
+      return dnsRecords_;
+    }
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder> 
+        getDnsRecordsOrBuilderList() {
+      return dnsRecords_;
+    }
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    public int getDnsRecordsCount() {
+      return dnsRecords_.size();
+    }
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord getDnsRecords(int index) {
+      return dnsRecords_.get(index);
+    }
+    /**
+     * <pre>
+     * Internal DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder getDnsRecordsOrBuilder(
+        int index) {
+      return dnsRecords_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9343,6 +9456,9 @@ public final class InstanceOuterClass {
       if (oneToOneNat_ != null) {
         output.writeMessage(2, getOneToOneNat());
       }
+      for (int i = 0; i < dnsRecords_.size(); i++) {
+        output.writeMessage(3, dnsRecords_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9358,6 +9474,10 @@ public final class InstanceOuterClass {
       if (oneToOneNat_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOneToOneNat());
+      }
+      for (int i = 0; i < dnsRecords_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, dnsRecords_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9382,6 +9502,8 @@ public final class InstanceOuterClass {
         result = result && getOneToOneNat()
             .equals(other.getOneToOneNat());
       }
+      result = result && getDnsRecordsList()
+          .equals(other.getDnsRecordsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -9398,6 +9520,10 @@ public final class InstanceOuterClass {
       if (hasOneToOneNat()) {
         hash = (37 * hash) + ONE_TO_ONE_NAT_FIELD_NUMBER;
         hash = (53 * hash) + getOneToOneNat().hashCode();
+      }
+      if (getDnsRecordsCount() > 0) {
+        hash = (37 * hash) + DNS_RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getDnsRecordsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9527,6 +9653,7 @@ public final class InstanceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getDnsRecordsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -9539,6 +9666,12 @@ public final class InstanceOuterClass {
         } else {
           oneToOneNat_ = null;
           oneToOneNatBuilder_ = null;
+        }
+        if (dnsRecordsBuilder_ == null) {
+          dnsRecords_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          dnsRecordsBuilder_.clear();
         }
         return this;
       }
@@ -9566,12 +9699,24 @@ public final class InstanceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.compute.v1.InstanceOuterClass.PrimaryAddress buildPartial() {
         yandex.cloud.api.compute.v1.InstanceOuterClass.PrimaryAddress result = new yandex.cloud.api.compute.v1.InstanceOuterClass.PrimaryAddress(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.address_ = address_;
         if (oneToOneNatBuilder_ == null) {
           result.oneToOneNat_ = oneToOneNat_;
         } else {
           result.oneToOneNat_ = oneToOneNatBuilder_.build();
         }
+        if (dnsRecordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            dnsRecords_ = java.util.Collections.unmodifiableList(dnsRecords_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.dnsRecords_ = dnsRecords_;
+        } else {
+          result.dnsRecords_ = dnsRecordsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -9627,6 +9772,32 @@ public final class InstanceOuterClass {
         if (other.hasOneToOneNat()) {
           mergeOneToOneNat(other.getOneToOneNat());
         }
+        if (dnsRecordsBuilder_ == null) {
+          if (!other.dnsRecords_.isEmpty()) {
+            if (dnsRecords_.isEmpty()) {
+              dnsRecords_ = other.dnsRecords_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureDnsRecordsIsMutable();
+              dnsRecords_.addAll(other.dnsRecords_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dnsRecords_.isEmpty()) {
+            if (dnsRecordsBuilder_.isEmpty()) {
+              dnsRecordsBuilder_.dispose();
+              dnsRecordsBuilder_ = null;
+              dnsRecords_ = other.dnsRecords_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              dnsRecordsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDnsRecordsFieldBuilder() : null;
+            } else {
+              dnsRecordsBuilder_.addAllMessages(other.dnsRecords_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9655,6 +9826,7 @@ public final class InstanceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object address_ = "";
       /**
@@ -9897,6 +10069,318 @@ public final class InstanceOuterClass {
         }
         return oneToOneNatBuilder_;
       }
+
+      private java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord> dnsRecords_ =
+        java.util.Collections.emptyList();
+      private void ensureDnsRecordsIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          dnsRecords_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord>(dnsRecords_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder> dnsRecordsBuilder_;
+
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord> getDnsRecordsList() {
+        if (dnsRecordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dnsRecords_);
+        } else {
+          return dnsRecordsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public int getDnsRecordsCount() {
+        if (dnsRecordsBuilder_ == null) {
+          return dnsRecords_.size();
+        } else {
+          return dnsRecordsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord getDnsRecords(int index) {
+        if (dnsRecordsBuilder_ == null) {
+          return dnsRecords_.get(index);
+        } else {
+          return dnsRecordsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder setDnsRecords(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord value) {
+        if (dnsRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.set(index, value);
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder setDnsRecords(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder builderForValue) {
+        if (dnsRecordsBuilder_ == null) {
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder addDnsRecords(yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord value) {
+        if (dnsRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.add(value);
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder addDnsRecords(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord value) {
+        if (dnsRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.add(index, value);
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder addDnsRecords(
+          yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder builderForValue) {
+        if (dnsRecordsBuilder_ == null) {
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder addDnsRecords(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder builderForValue) {
+        if (dnsRecordsBuilder_ == null) {
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder addAllDnsRecords(
+          java.lang.Iterable<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord> values) {
+        if (dnsRecordsBuilder_ == null) {
+          ensureDnsRecordsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dnsRecords_);
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder clearDnsRecords() {
+        if (dnsRecordsBuilder_ == null) {
+          dnsRecords_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder removeDnsRecords(int index) {
+        if (dnsRecordsBuilder_ == null) {
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.remove(index);
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder getDnsRecordsBuilder(
+          int index) {
+        return getDnsRecordsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder getDnsRecordsOrBuilder(
+          int index) {
+        if (dnsRecordsBuilder_ == null) {
+          return dnsRecords_.get(index);  } else {
+          return dnsRecordsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder> 
+           getDnsRecordsOrBuilderList() {
+        if (dnsRecordsBuilder_ != null) {
+          return dnsRecordsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dnsRecords_);
+        }
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder addDnsRecordsBuilder() {
+        return getDnsRecordsFieldBuilder().addBuilder(
+            yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder addDnsRecordsBuilder(
+          int index) {
+        return getDnsRecordsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Internal DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder> 
+           getDnsRecordsBuilderList() {
+        return getDnsRecordsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder> 
+          getDnsRecordsFieldBuilder() {
+        if (dnsRecordsBuilder_ == null) {
+          dnsRecordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder>(
+                  dnsRecords_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          dnsRecords_ = null;
+        }
+        return dnsRecordsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9988,6 +10472,50 @@ public final class InstanceOuterClass {
      * <code>.yandex.cloud.compute.v1.IpVersion ip_version = 2;</code>
      */
     yandex.cloud.api.compute.v1.InstanceOuterClass.IpVersion getIpVersion();
+
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord> 
+        getDnsRecordsList();
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord getDnsRecords(int index);
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    int getDnsRecordsCount();
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder> 
+        getDnsRecordsOrBuilderList();
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder getDnsRecordsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.OneToOneNat}
@@ -10004,6 +10532,7 @@ public final class InstanceOuterClass {
     private OneToOneNat() {
       address_ = "";
       ipVersion_ = 0;
+      dnsRecords_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -10042,6 +10571,15 @@ public final class InstanceOuterClass {
               ipVersion_ = rawValue;
               break;
             }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                dnsRecords_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              dnsRecords_.add(
+                  input.readMessage(yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10057,6 +10595,9 @@ public final class InstanceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          dnsRecords_ = java.util.Collections.unmodifiableList(dnsRecords_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -10074,6 +10615,7 @@ public final class InstanceOuterClass {
               yandex.cloud.api.compute.v1.InstanceOuterClass.OneToOneNat.class, yandex.cloud.api.compute.v1.InstanceOuterClass.OneToOneNat.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ADDRESS_FIELD_NUMBER = 1;
     private volatile java.lang.Object address_;
     /**
@@ -10141,6 +10683,61 @@ public final class InstanceOuterClass {
       return result == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.IpVersion.UNRECOGNIZED : result;
     }
 
+    public static final int DNS_RECORDS_FIELD_NUMBER = 3;
+    private java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord> dnsRecords_;
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    public java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord> getDnsRecordsList() {
+      return dnsRecords_;
+    }
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder> 
+        getDnsRecordsOrBuilderList() {
+      return dnsRecords_;
+    }
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    public int getDnsRecordsCount() {
+      return dnsRecords_.size();
+    }
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord getDnsRecords(int index) {
+      return dnsRecords_.get(index);
+    }
+    /**
+     * <pre>
+     * External DNS configuration
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+     */
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder getDnsRecordsOrBuilder(
+        int index) {
+      return dnsRecords_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10161,6 +10758,9 @@ public final class InstanceOuterClass {
       if (ipVersion_ != yandex.cloud.api.compute.v1.InstanceOuterClass.IpVersion.IP_VERSION_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, ipVersion_);
       }
+      for (int i = 0; i < dnsRecords_.size(); i++) {
+        output.writeMessage(3, dnsRecords_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10176,6 +10776,10 @@ public final class InstanceOuterClass {
       if (ipVersion_ != yandex.cloud.api.compute.v1.InstanceOuterClass.IpVersion.IP_VERSION_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, ipVersion_);
+      }
+      for (int i = 0; i < dnsRecords_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, dnsRecords_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10196,6 +10800,8 @@ public final class InstanceOuterClass {
       result = result && getAddress()
           .equals(other.getAddress());
       result = result && ipVersion_ == other.ipVersion_;
+      result = result && getDnsRecordsList()
+          .equals(other.getDnsRecordsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -10211,6 +10817,10 @@ public final class InstanceOuterClass {
       hash = (53 * hash) + getAddress().hashCode();
       hash = (37 * hash) + IP_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + ipVersion_;
+      if (getDnsRecordsCount() > 0) {
+        hash = (37 * hash) + DNS_RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getDnsRecordsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10339,6 +10949,7 @@ public final class InstanceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getDnsRecordsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -10348,6 +10959,12 @@ public final class InstanceOuterClass {
 
         ipVersion_ = 0;
 
+        if (dnsRecordsBuilder_ == null) {
+          dnsRecords_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          dnsRecordsBuilder_.clear();
+        }
         return this;
       }
 
@@ -10374,8 +10991,20 @@ public final class InstanceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.compute.v1.InstanceOuterClass.OneToOneNat buildPartial() {
         yandex.cloud.api.compute.v1.InstanceOuterClass.OneToOneNat result = new yandex.cloud.api.compute.v1.InstanceOuterClass.OneToOneNat(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.address_ = address_;
         result.ipVersion_ = ipVersion_;
+        if (dnsRecordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            dnsRecords_ = java.util.Collections.unmodifiableList(dnsRecords_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.dnsRecords_ = dnsRecords_;
+        } else {
+          result.dnsRecords_ = dnsRecordsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -10431,6 +11060,32 @@ public final class InstanceOuterClass {
         if (other.ipVersion_ != 0) {
           setIpVersionValue(other.getIpVersionValue());
         }
+        if (dnsRecordsBuilder_ == null) {
+          if (!other.dnsRecords_.isEmpty()) {
+            if (dnsRecords_.isEmpty()) {
+              dnsRecords_ = other.dnsRecords_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureDnsRecordsIsMutable();
+              dnsRecords_.addAll(other.dnsRecords_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dnsRecords_.isEmpty()) {
+            if (dnsRecordsBuilder_.isEmpty()) {
+              dnsRecordsBuilder_.dispose();
+              dnsRecordsBuilder_ = null;
+              dnsRecords_ = other.dnsRecords_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              dnsRecordsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDnsRecordsFieldBuilder() : null;
+            } else {
+              dnsRecordsBuilder_.addAllMessages(other.dnsRecords_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -10459,6 +11114,7 @@ public final class InstanceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object address_ = "";
       /**
@@ -10613,6 +11269,318 @@ public final class InstanceOuterClass {
         onChanged();
         return this;
       }
+
+      private java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord> dnsRecords_ =
+        java.util.Collections.emptyList();
+      private void ensureDnsRecordsIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          dnsRecords_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord>(dnsRecords_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder> dnsRecordsBuilder_;
+
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord> getDnsRecordsList() {
+        if (dnsRecordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dnsRecords_);
+        } else {
+          return dnsRecordsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public int getDnsRecordsCount() {
+        if (dnsRecordsBuilder_ == null) {
+          return dnsRecords_.size();
+        } else {
+          return dnsRecordsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord getDnsRecords(int index) {
+        if (dnsRecordsBuilder_ == null) {
+          return dnsRecords_.get(index);
+        } else {
+          return dnsRecordsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder setDnsRecords(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord value) {
+        if (dnsRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.set(index, value);
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder setDnsRecords(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder builderForValue) {
+        if (dnsRecordsBuilder_ == null) {
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder addDnsRecords(yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord value) {
+        if (dnsRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.add(value);
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder addDnsRecords(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord value) {
+        if (dnsRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.add(index, value);
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder addDnsRecords(
+          yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder builderForValue) {
+        if (dnsRecordsBuilder_ == null) {
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder addDnsRecords(
+          int index, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder builderForValue) {
+        if (dnsRecordsBuilder_ == null) {
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder addAllDnsRecords(
+          java.lang.Iterable<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord> values) {
+        if (dnsRecordsBuilder_ == null) {
+          ensureDnsRecordsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dnsRecords_);
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder clearDnsRecords() {
+        if (dnsRecordsBuilder_ == null) {
+          dnsRecords_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public Builder removeDnsRecords(int index) {
+        if (dnsRecordsBuilder_ == null) {
+          ensureDnsRecordsIsMutable();
+          dnsRecords_.remove(index);
+          onChanged();
+        } else {
+          dnsRecordsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder getDnsRecordsBuilder(
+          int index) {
+        return getDnsRecordsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder getDnsRecordsOrBuilder(
+          int index) {
+        if (dnsRecordsBuilder_ == null) {
+          return dnsRecords_.get(index);  } else {
+          return dnsRecordsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder> 
+           getDnsRecordsOrBuilderList() {
+        if (dnsRecordsBuilder_ != null) {
+          return dnsRecordsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dnsRecords_);
+        }
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder addDnsRecordsBuilder() {
+        return getDnsRecordsFieldBuilder().addBuilder(
+            yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder addDnsRecordsBuilder(
+          int index) {
+        return getDnsRecordsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * External DNS configuration
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DnsRecord dns_records = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder> 
+           getDnsRecordsBuilderList() {
+        return getDnsRecordsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder> 
+          getDnsRecordsFieldBuilder() {
+        if (dnsRecordsBuilder_ == null) {
+          dnsRecordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder>(
+                  dnsRecords_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          dnsRecords_ = null;
+        }
+        return dnsRecordsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10661,6 +11629,556 @@ public final class InstanceOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.compute.v1.InstanceOuterClass.OneToOneNat getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DnsRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.DnsRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string fqdn = 1;</code>
+     */
+    java.lang.String getFqdn();
+    /**
+     * <code>string fqdn = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getFqdnBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.DnsRecord}
+   */
+  public  static final class DnsRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DnsRecord)
+      DnsRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DnsRecord.newBuilder() to construct.
+    private DnsRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DnsRecord() {
+      fqdn_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DnsRecord(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fqdn_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_DnsRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_DnsRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.class, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder.class);
+    }
+
+    public static final int FQDN_FIELD_NUMBER = 1;
+    private volatile java.lang.Object fqdn_;
+    /**
+     * <code>string fqdn = 1;</code>
+     */
+    public java.lang.String getFqdn() {
+      java.lang.Object ref = fqdn_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fqdn_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string fqdn = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFqdnBytes() {
+      java.lang.Object ref = fqdn_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fqdn_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getFqdnBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fqdn_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getFqdnBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fqdn_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord other = (yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord) obj;
+
+      boolean result = true;
+      result = result && getFqdn()
+          .equals(other.getFqdn());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FQDN_FIELD_NUMBER;
+      hash = (53 * hash) + getFqdn().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.DnsRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.DnsRecord)
+        yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_DnsRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_DnsRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.class, yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        fqdn_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.internal_static_yandex_cloud_compute_v1_DnsRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord build() {
+        yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord result = new yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord(this);
+        result.fqdn_ = fqdn_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord.getDefaultInstance()) return this;
+        if (!other.getFqdn().isEmpty()) {
+          fqdn_ = other.fqdn_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object fqdn_ = "";
+      /**
+       * <code>string fqdn = 1;</code>
+       */
+      public java.lang.String getFqdn() {
+        java.lang.Object ref = fqdn_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fqdn_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string fqdn = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFqdnBytes() {
+        java.lang.Object ref = fqdn_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fqdn_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string fqdn = 1;</code>
+       */
+      public Builder setFqdn(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fqdn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fqdn = 1;</code>
+       */
+      public Builder clearFqdn() {
+        
+        fqdn_ = getDefaultInstance().getFqdn();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fqdn = 1;</code>
+       */
+      public Builder setFqdnBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fqdn_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.DnsRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.DnsRecord)
+    private static final yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DnsRecord>
+        PARSER = new com.google.protobuf.AbstractParser<DnsRecord>() {
+      @java.lang.Override
+      public DnsRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DnsRecord(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DnsRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DnsRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14050,6 +15568,11 @@ public final class InstanceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_OneToOneNat_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_DnsRecord_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_DnsRecord_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_SchedulingPolicy_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14121,29 +15644,33 @@ public final class InstanceOuterClass {
       ".yandex.cloud.compute.v1.PrimaryAddress\022" +
       "C\n\022primary_v6_address\030\005 \001(\0132\'.yandex.clo" +
       "ud.compute.v1.PrimaryAddress\022\032\n\022security" +
-      "_group_ids\030\006 \003(\t\"_\n\016PrimaryAddress\022\017\n\007ad" +
-      "dress\030\001 \001(\t\022<\n\016one_to_one_nat\030\002 \001(\0132$.ya" +
-      "ndex.cloud.compute.v1.OneToOneNat\"V\n\013One" +
-      "ToOneNat\022\017\n\007address\030\001 \001(\t\0226\n\nip_version\030" +
-      "\002 \001(\0162\".yandex.cloud.compute.v1.IpVersio" +
-      "n\"\'\n\020SchedulingPolicy\022\023\n\013preemptible\030\001 \001" +
-      "(\010\"\256\001\n\017NetworkSettings\022;\n\004type\030\001 \001(\0162-.y" +
-      "andex.cloud.compute.v1.NetworkSettings.T" +
-      "ype\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STA" +
-      "NDARD\020\001\022\030\n\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HAR" +
-      "DWARE_ACCELERATED\020\003\"\301\002\n\017PlacementPolicy\022" +
-      "\032\n\022placement_group_id\030\001 \001(\t\022V\n\023host_affi" +
-      "nity_rules\030\002 \003(\01329.yandex.cloud.compute." +
-      "v1.PlacementPolicy.HostAffinityRule\032\271\001\n\020" +
-      "HostAffinityRule\022\013\n\003key\030\001 \001(\t\022N\n\002op\030\002 \001(" +
-      "\0162B.yandex.cloud.compute.v1.PlacementPol" +
-      "icy.HostAffinityRule.Operator\022\016\n\006values\030" +
-      "\003 \003(\t\"8\n\010Operator\022\030\n\024OPERATOR_UNSPECIFIE" +
-      "D\020\000\022\006\n\002IN\020\001\022\n\n\006NOT_IN\020\002*;\n\tIpVersion\022\032\n\026" +
-      "IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IP" +
-      "V6\020\002Bb\n\033yandex.cloud.api.compute.v1ZCgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/compute/v1;computeb\006proto3"
+      "_group_ids\030\006 \003(\t\"\230\001\n\016PrimaryAddress\022\017\n\007a" +
+      "ddress\030\001 \001(\t\022<\n\016one_to_one_nat\030\002 \001(\0132$.y" +
+      "andex.cloud.compute.v1.OneToOneNat\0227\n\013dn" +
+      "s_records\030\003 \003(\0132\".yandex.cloud.compute.v" +
+      "1.DnsRecord\"\217\001\n\013OneToOneNat\022\017\n\007address\030\001" +
+      " \001(\t\0226\n\nip_version\030\002 \001(\0162\".yandex.cloud." +
+      "compute.v1.IpVersion\0227\n\013dns_records\030\003 \003(" +
+      "\0132\".yandex.cloud.compute.v1.DnsRecord\"\031\n" +
+      "\tDnsRecord\022\014\n\004fqdn\030\001 \001(\t\"\'\n\020SchedulingPo" +
+      "licy\022\023\n\013preemptible\030\001 \001(\010\"\256\001\n\017NetworkSet" +
+      "tings\022;\n\004type\030\001 \001(\0162-.yandex.cloud.compu" +
+      "te.v1.NetworkSettings.Type\"^\n\004Type\022\024\n\020TY" +
+      "PE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWA" +
+      "RE_ACCELERATED\020\002\022\030\n\024HARDWARE_ACCELERATED" +
+      "\020\003\"\301\002\n\017PlacementPolicy\022\032\n\022placement_grou" +
+      "p_id\030\001 \001(\t\022V\n\023host_affinity_rules\030\002 \003(\0132" +
+      "9.yandex.cloud.compute.v1.PlacementPolic" +
+      "y.HostAffinityRule\032\271\001\n\020HostAffinityRule\022" +
+      "\013\n\003key\030\001 \001(\t\022N\n\002op\030\002 \001(\0162B.yandex.cloud." +
+      "compute.v1.PlacementPolicy.HostAffinityR" +
+      "ule.Operator\022\016\n\006values\030\003 \003(\t\"8\n\010Operator" +
+      "\022\030\n\024OPERATOR_UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n\006NO" +
+      "T_IN\020\002*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPEC" +
+      "IFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002Bb\n\033yandex.cl" +
+      "oud.api.compute.v1ZCgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/compute/v1;" +
+      "computeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14199,27 +15726,33 @@ public final class InstanceOuterClass {
     internal_static_yandex_cloud_compute_v1_PrimaryAddress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_PrimaryAddress_descriptor,
-        new java.lang.String[] { "Address", "OneToOneNat", });
+        new java.lang.String[] { "Address", "OneToOneNat", "DnsRecords", });
     internal_static_yandex_cloud_compute_v1_OneToOneNat_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_compute_v1_OneToOneNat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_OneToOneNat_descriptor,
-        new java.lang.String[] { "Address", "IpVersion", });
-    internal_static_yandex_cloud_compute_v1_SchedulingPolicy_descriptor =
+        new java.lang.String[] { "Address", "IpVersion", "DnsRecords", });
+    internal_static_yandex_cloud_compute_v1_DnsRecord_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_compute_v1_DnsRecord_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_DnsRecord_descriptor,
+        new java.lang.String[] { "Fqdn", });
+    internal_static_yandex_cloud_compute_v1_SchedulingPolicy_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_compute_v1_SchedulingPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_SchedulingPolicy_descriptor,
         new java.lang.String[] { "Preemptible", });
     internal_static_yandex_cloud_compute_v1_NetworkSettings_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_compute_v1_NetworkSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_NetworkSettings_descriptor,
         new java.lang.String[] { "Type", });
     internal_static_yandex_cloud_compute_v1_PlacementPolicy_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_compute_v1_PlacementPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_PlacementPolicy_descriptor,
