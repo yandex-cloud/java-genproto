@@ -2056,7 +2056,7 @@ public final class DnsZoneOuterClass {
   }
   /**
    * <pre>
-   * name + type являются уникальным идентификатором рекордсета
+   * name + type is a unique record set identifier
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dns.v1.RecordSet}
@@ -2465,7 +2465,7 @@ public final class DnsZoneOuterClass {
     }
     /**
      * <pre>
-     * name + type являются уникальным идентификатором рекордсета
+     * name + type is a unique record set identifier
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dns.v1.RecordSet}

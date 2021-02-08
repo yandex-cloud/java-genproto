@@ -521,9 +521,10 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Метод для строго консистентного изменения состояния зоны. Возвращает ошибку если удаляемая запись не найдена, если
-     * у записи с таким ключом не совпадают остальные поля, или добавляемая запись с заданным ключом уже существует. Если
-     * запись по одному и тому же ключу находится в обоих списках, то она заменяется на запись в списке добавленных.
+     * Method with strict control for changing zone state. Returns error when deleted record is not found, found record
+     * with matched type and name but different ttl or value, or on attempt to add record with existing name and type.
+     * Deletions come first so if record with same name and type is present in both lists then existing record will be
+     * deleted and new one added.
      * </pre>
      */
     public void updateRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest request,
@@ -533,9 +534,8 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Метод без строго контроля для изменения состояния зоны. При удалении не проверяет наличие удаляемой записи.
-     * Удаляет рекорды не по совпадению ключа, а по полному совпадению всех полей, что позволяет удалить часть рекордов из
-     * рекордсета.
+     * Method without strict control for changing zone state. Do not returns error when deleted record is not found.
+     * Delete records that match all specified fields which allows to delete only specified records from record set.
      * </pre>
      */
     public void upsertRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest request,
@@ -744,9 +744,10 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Метод для строго консистентного изменения состояния зоны. Возвращает ошибку если удаляемая запись не найдена, если
-     * у записи с таким ключом не совпадают остальные поля, или добавляемая запись с заданным ключом уже существует. Если
-     * запись по одному и тому же ключу находится в обоих списках, то она заменяется на запись в списке добавленных.
+     * Method with strict control for changing zone state. Returns error when deleted record is not found, found record
+     * with matched type and name but different ttl or value, or on attempt to add record with existing name and type.
+     * Deletions come first so if record with same name and type is present in both lists then existing record will be
+     * deleted and new one added.
      * </pre>
      */
     public void updateRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest request,
@@ -757,9 +758,8 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Метод без строго контроля для изменения состояния зоны. При удалении не проверяет наличие удаляемой записи.
-     * Удаляет рекорды не по совпадению ключа, а по полному совпадению всех полей, что позволяет удалить часть рекордов из
-     * рекордсета.
+     * Method without strict control for changing zone state. Do not returns error when deleted record is not found.
+     * Delete records that match all specified fields which allows to delete only specified records from record set.
      * </pre>
      */
     public void upsertRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest request,
@@ -870,9 +870,10 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Метод для строго консистентного изменения состояния зоны. Возвращает ошибку если удаляемая запись не найдена, если
-     * у записи с таким ключом не совпадают остальные поля, или добавляемая запись с заданным ключом уже существует. Если
-     * запись по одному и тому же ключу находится в обоих списках, то она заменяется на запись в списке добавленных.
+     * Method with strict control for changing zone state. Returns error when deleted record is not found, found record
+     * with matched type and name but different ttl or value, or on attempt to add record with existing name and type.
+     * Deletions come first so if record with same name and type is present in both lists then existing record will be
+     * deleted and new one added.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest request) {
@@ -882,9 +883,8 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Метод без строго контроля для изменения состояния зоны. При удалении не проверяет наличие удаляемой записи.
-     * Удаляет рекорды не по совпадению ключа, а по полному совпадению всех полей, что позволяет удалить часть рекордов из
-     * рекордсета.
+     * Method without strict control for changing zone state. Do not returns error when deleted record is not found.
+     * Delete records that match all specified fields which allows to delete only specified records from record set.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation upsertRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest request) {
@@ -997,9 +997,10 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Метод для строго консистентного изменения состояния зоны. Возвращает ошибку если удаляемая запись не найдена, если
-     * у записи с таким ключом не совпадают остальные поля, или добавляемая запись с заданным ключом уже существует. Если
-     * запись по одному и тому же ключу находится в обоих списках, то она заменяется на запись в списке добавленных.
+     * Method with strict control for changing zone state. Returns error when deleted record is not found, found record
+     * with matched type and name but different ttl or value, or on attempt to add record with existing name and type.
+     * Deletions come first so if record with same name and type is present in both lists then existing record will be
+     * deleted and new one added.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateRecordSets(
@@ -1010,9 +1011,8 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Метод без строго контроля для изменения состояния зоны. При удалении не проверяет наличие удаляемой записи.
-     * Удаляет рекорды не по совпадению ключа, а по полному совпадению всех полей, что позволяет удалить часть рекордов из
-     * рекордсета.
+     * Method without strict control for changing zone state. Do not returns error when deleted record is not found.
+     * Delete records that match all specified fields which allows to delete only specified records from record set.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> upsertRecordSets(

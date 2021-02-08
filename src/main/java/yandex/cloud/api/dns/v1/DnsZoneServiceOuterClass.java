@@ -2454,7 +2454,7 @@ public final class DnsZoneServiceOuterClass {
 
     /**
      * <pre>
-     * должно быть проставлено ровно одно поле из следующих двух
+     * at least one of two visibility fields must be set
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -2462,7 +2462,7 @@ public final class DnsZoneServiceOuterClass {
     boolean hasPrivateVisibility();
     /**
      * <pre>
-     * должно быть проставлено ровно одно поле из следующих двух
+     * at least one of two visibility fields must be set
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -2470,7 +2470,7 @@ public final class DnsZoneServiceOuterClass {
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility getPrivateVisibility();
     /**
      * <pre>
-     * должно быть проставлено ровно одно поле из следующих двух
+     * at least one of two visibility fields must be set
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -2857,7 +2857,7 @@ public final class DnsZoneServiceOuterClass {
     private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility privateVisibility_;
     /**
      * <pre>
-     * должно быть проставлено ровно одно поле из следующих двух
+     * at least one of two visibility fields must be set
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -2867,7 +2867,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * должно быть проставлено ровно одно поле из следующих двух
+     * at least one of two visibility fields must be set
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -2877,7 +2877,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * должно быть проставлено ровно одно поле из следующих двух
+     * at least one of two visibility fields must be set
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3778,7 +3778,7 @@ public final class DnsZoneServiceOuterClass {
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder> privateVisibilityBuilder_;
       /**
        * <pre>
-       * должно быть проставлено ровно одно поле из следующих двух
+       * at least one of two visibility fields must be set
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3788,7 +3788,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * должно быть проставлено ровно одно поле из следующих двух
+       * at least one of two visibility fields must be set
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3802,7 +3802,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * должно быть проставлено ровно одно поле из следующих двух
+       * at least one of two visibility fields must be set
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3822,7 +3822,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * должно быть проставлено ровно одно поле из следующих двух
+       * at least one of two visibility fields must be set
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3840,7 +3840,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * должно быть проставлено ровно одно поле из следующих двух
+       * at least one of two visibility fields must be set
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3862,7 +3862,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * должно быть проставлено ровно одно поле из следующих двух
+       * at least one of two visibility fields must be set
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3880,7 +3880,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * должно быть проставлено ровно одно поле из следующих двух
+       * at least one of two visibility fields must be set
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3892,7 +3892,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * должно быть проставлено ровно одно поле из следующих двух
+       * at least one of two visibility fields must be set
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3907,7 +3907,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * должно быть проставлено ровно одно поле из следующих двух
+       * at least one of two visibility fields must be set
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -4728,7 +4728,7 @@ public final class DnsZoneServiceOuterClass {
 
     /**
      * <pre>
-     * разрешается менять только список идентификаторов сетей внутри private_visibility
+     * only network_ids change inside private_visibility is allowed
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -4736,7 +4736,7 @@ public final class DnsZoneServiceOuterClass {
     boolean hasPrivateVisibility();
     /**
      * <pre>
-     * разрешается менять только список идентификаторов сетей внутри private_visibility
+     * only network_ids change inside private_visibility is allowed
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -4744,7 +4744,7 @@ public final class DnsZoneServiceOuterClass {
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility getPrivateVisibility();
     /**
      * <pre>
-     * разрешается менять только список идентификаторов сетей внутри private_visibility
+     * only network_ids change inside private_visibility is allowed
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -5124,7 +5124,7 @@ public final class DnsZoneServiceOuterClass {
     private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility privateVisibility_;
     /**
      * <pre>
-     * разрешается менять только список идентификаторов сетей внутри private_visibility
+     * only network_ids change inside private_visibility is allowed
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -5134,7 +5134,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * разрешается менять только список идентификаторов сетей внутри private_visibility
+     * only network_ids change inside private_visibility is allowed
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -5144,7 +5144,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * разрешается менять только список идентификаторов сетей внутри private_visibility
+     * only network_ids change inside private_visibility is allowed
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6106,7 +6106,7 @@ public final class DnsZoneServiceOuterClass {
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder> privateVisibilityBuilder_;
       /**
        * <pre>
-       * разрешается менять только список идентификаторов сетей внутри private_visibility
+       * only network_ids change inside private_visibility is allowed
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6116,7 +6116,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * разрешается менять только список идентификаторов сетей внутри private_visibility
+       * only network_ids change inside private_visibility is allowed
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6130,7 +6130,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * разрешается менять только список идентификаторов сетей внутри private_visibility
+       * only network_ids change inside private_visibility is allowed
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6150,7 +6150,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * разрешается менять только список идентификаторов сетей внутри private_visibility
+       * only network_ids change inside private_visibility is allowed
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6168,7 +6168,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * разрешается менять только список идентификаторов сетей внутри private_visibility
+       * only network_ids change inside private_visibility is allowed
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6190,7 +6190,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * разрешается менять только список идентификаторов сетей внутри private_visibility
+       * only network_ids change inside private_visibility is allowed
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6208,7 +6208,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * разрешается менять только список идентификаторов сетей внутри private_visibility
+       * only network_ids change inside private_visibility is allowed
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6220,7 +6220,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * разрешается менять только список идентификаторов сетей внутри private_visibility
+       * only network_ids change inside private_visibility is allowed
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6235,7 +6235,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * разрешается менять только список идентификаторов сетей внутри private_visibility
+       * only network_ids change inside private_visibility is allowed
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -12561,7 +12561,7 @@ public final class DnsZoneServiceOuterClass {
 
     /**
      * <pre>
-     * удаляет только конкретные рекорды внутри рекордсета
+     * delete only specified records from record set
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12570,7 +12570,7 @@ public final class DnsZoneServiceOuterClass {
         getDeletionsList();
     /**
      * <pre>
-     * удаляет только конкретные рекорды внутри рекордсета
+     * delete only specified records from record set
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12578,7 +12578,7 @@ public final class DnsZoneServiceOuterClass {
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getDeletions(int index);
     /**
      * <pre>
-     * удаляет только конкретные рекорды внутри рекордсета
+     * delete only specified records from record set
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12586,7 +12586,7 @@ public final class DnsZoneServiceOuterClass {
     int getDeletionsCount();
     /**
      * <pre>
-     * удаляет только конкретные рекорды внутри рекордсета
+     * delete only specified records from record set
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12595,7 +12595,7 @@ public final class DnsZoneServiceOuterClass {
         getDeletionsOrBuilderList();
     /**
      * <pre>
-     * удаляет только конкретные рекорды внутри рекордсета
+     * delete only specified records from record set
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12605,7 +12605,7 @@ public final class DnsZoneServiceOuterClass {
 
     /**
      * <pre>
-     * заменяет указанные рекордсеты целиком
+     * replace specified record sets entirely
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12614,7 +12614,7 @@ public final class DnsZoneServiceOuterClass {
         getReplacementsList();
     /**
      * <pre>
-     * заменяет указанные рекордсеты целиком
+     * replace specified record sets entirely
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12622,7 +12622,7 @@ public final class DnsZoneServiceOuterClass {
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getReplacements(int index);
     /**
      * <pre>
-     * заменяет указанные рекордсеты целиком
+     * replace specified record sets entirely
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12630,7 +12630,7 @@ public final class DnsZoneServiceOuterClass {
     int getReplacementsCount();
     /**
      * <pre>
-     * заменяет указанные рекордсеты целиком
+     * replace specified record sets entirely
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12639,7 +12639,7 @@ public final class DnsZoneServiceOuterClass {
         getReplacementsOrBuilderList();
     /**
      * <pre>
-     * заменяет указанные рекордсеты целиком
+     * replace specified record sets entirely
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12649,7 +12649,7 @@ public final class DnsZoneServiceOuterClass {
 
     /**
      * <pre>
-     * для каждого рекордсета заменяет рекорды или добавляет новые
+     * for each record set replace records or add new ones
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12658,7 +12658,7 @@ public final class DnsZoneServiceOuterClass {
         getMergesList();
     /**
      * <pre>
-     * для каждого рекордсета заменяет рекорды или добавляет новые
+     * for each record set replace records or add new ones
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12666,7 +12666,7 @@ public final class DnsZoneServiceOuterClass {
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getMerges(int index);
     /**
      * <pre>
-     * для каждого рекордсета заменяет рекорды или добавляет новые
+     * for each record set replace records or add new ones
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12674,7 +12674,7 @@ public final class DnsZoneServiceOuterClass {
     int getMergesCount();
     /**
      * <pre>
-     * для каждого рекордсета заменяет рекорды или добавляет новые
+     * for each record set replace records or add new ones
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12683,7 +12683,7 @@ public final class DnsZoneServiceOuterClass {
         getMergesOrBuilderList();
     /**
      * <pre>
-     * для каждого рекордсета заменяет рекорды или добавляет новые
+     * for each record set replace records or add new ones
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12847,7 +12847,7 @@ public final class DnsZoneServiceOuterClass {
     private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> deletions_;
     /**
      * <pre>
-     * удаляет только конкретные рекорды внутри рекордсета
+     * delete only specified records from record set
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12857,7 +12857,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * удаляет только конкретные рекорды внутри рекордсета
+     * delete only specified records from record set
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12868,7 +12868,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * удаляет только конкретные рекорды внутри рекордсета
+     * delete only specified records from record set
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12878,7 +12878,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * удаляет только конкретные рекорды внутри рекордсета
+     * delete only specified records from record set
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12888,7 +12888,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * удаляет только конкретные рекорды внутри рекордсета
+     * delete only specified records from record set
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12902,7 +12902,7 @@ public final class DnsZoneServiceOuterClass {
     private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> replacements_;
     /**
      * <pre>
-     * заменяет указанные рекордсеты целиком
+     * replace specified record sets entirely
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12912,7 +12912,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * заменяет указанные рекордсеты целиком
+     * replace specified record sets entirely
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12923,7 +12923,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * заменяет указанные рекордсеты целиком
+     * replace specified record sets entirely
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12933,7 +12933,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * заменяет указанные рекордсеты целиком
+     * replace specified record sets entirely
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12943,7 +12943,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * заменяет указанные рекордсеты целиком
+     * replace specified record sets entirely
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12957,7 +12957,7 @@ public final class DnsZoneServiceOuterClass {
     private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> merges_;
     /**
      * <pre>
-     * для каждого рекордсета заменяет рекорды или добавляет новые
+     * for each record set replace records or add new ones
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12967,7 +12967,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * для каждого рекордсета заменяет рекорды или добавляет новые
+     * for each record set replace records or add new ones
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12978,7 +12978,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * для каждого рекордсета заменяет рекорды или добавляет новые
+     * for each record set replace records or add new ones
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12988,7 +12988,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * для каждого рекордсета заменяет рекорды или добавляет новые
+     * for each record set replace records or add new ones
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12998,7 +12998,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * для каждого рекордсета заменяет рекорды или добавляет новые
+     * for each record set replace records or add new ones
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13563,7 +13563,7 @@ public final class DnsZoneServiceOuterClass {
 
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13577,7 +13577,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13591,7 +13591,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13605,7 +13605,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13626,7 +13626,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13644,7 +13644,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13664,7 +13664,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13685,7 +13685,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13703,7 +13703,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13721,7 +13721,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13740,7 +13740,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13757,7 +13757,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13774,7 +13774,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13785,7 +13785,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13799,7 +13799,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13814,7 +13814,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13825,7 +13825,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13837,7 +13837,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * удаляет только конкретные рекорды внутри рекордсета
+       * delete only specified records from record set
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13875,7 +13875,7 @@ public final class DnsZoneServiceOuterClass {
 
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13889,7 +13889,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13903,7 +13903,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13917,7 +13917,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13938,7 +13938,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13956,7 +13956,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13976,7 +13976,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13997,7 +13997,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14015,7 +14015,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14033,7 +14033,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14052,7 +14052,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14069,7 +14069,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14086,7 +14086,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14097,7 +14097,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14111,7 +14111,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14126,7 +14126,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14137,7 +14137,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14149,7 +14149,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * заменяет указанные рекордсеты целиком
+       * replace specified record sets entirely
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14187,7 +14187,7 @@ public final class DnsZoneServiceOuterClass {
 
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14201,7 +14201,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14215,7 +14215,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14229,7 +14229,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14250,7 +14250,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14268,7 +14268,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14288,7 +14288,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14309,7 +14309,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14327,7 +14327,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14345,7 +14345,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14364,7 +14364,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14381,7 +14381,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14398,7 +14398,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14409,7 +14409,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14423,7 +14423,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14438,7 +14438,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14449,7 +14449,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14461,7 +14461,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * для каждого рекордсета заменяет рекорды или добавляет новые
+       * for each record set replace records or add new ones
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
