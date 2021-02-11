@@ -117,7 +117,7 @@ public final class RegistryOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -125,7 +125,7 @@ public final class RegistryOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -140,7 +140,7 @@ public final class RegistryOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -149,7 +149,7 @@ public final class RegistryOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -160,7 +160,7 @@ public final class RegistryOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -729,7 +729,7 @@ public final class RegistryOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -749,7 +749,7 @@ public final class RegistryOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -760,7 +760,7 @@ public final class RegistryOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -776,7 +776,7 @@ public final class RegistryOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1871,7 +1871,7 @@ public final class RegistryOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1891,7 +1891,7 @@ public final class RegistryOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1902,7 +1902,7 @@ public final class RegistryOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1918,7 +1918,7 @@ public final class RegistryOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1942,7 +1942,7 @@ public final class RegistryOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1965,7 +1965,7 @@ public final class RegistryOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1981,7 +1981,7 @@ public final class RegistryOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Мaximum of 64 per resource.
+       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>

@@ -2646,8 +2646,8 @@ public final class Mongodb36 {
          * <pre>
          * Whether the journal is enabled or disabled.
          * Possible values:
-         * * true (default) — the journal is enabled.
-         * * false — the journal is disabled.
+         * * true (default) - the journal is enabled.
+         * * false - the journal is disabled.
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -2657,8 +2657,8 @@ public final class Mongodb36 {
          * <pre>
          * Whether the journal is enabled or disabled.
          * Possible values:
-         * * true (default) — the journal is enabled.
-         * * false — the journal is disabled.
+         * * true (default) - the journal is enabled.
+         * * false - the journal is disabled.
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -2668,8 +2668,8 @@ public final class Mongodb36 {
          * <pre>
          * Whether the journal is enabled or disabled.
          * Possible values:
-         * * true (default) — the journal is enabled.
-         * * false — the journal is disabled.
+         * * true (default) - the journal is enabled.
+         * * false - the journal is disabled.
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -2807,8 +2807,8 @@ public final class Mongodb36 {
          * <pre>
          * Whether the journal is enabled or disabled.
          * Possible values:
-         * * true (default) — the journal is enabled.
-         * * false — the journal is disabled.
+         * * true (default) - the journal is enabled.
+         * * false - the journal is disabled.
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -2820,8 +2820,8 @@ public final class Mongodb36 {
          * <pre>
          * Whether the journal is enabled or disabled.
          * Possible values:
-         * * true (default) — the journal is enabled.
-         * * false — the journal is disabled.
+         * * true (default) - the journal is enabled.
+         * * false - the journal is disabled.
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -2833,8 +2833,8 @@ public final class Mongodb36 {
          * <pre>
          * Whether the journal is enabled or disabled.
          * Possible values:
-         * * true (default) — the journal is enabled.
-         * * false — the journal is disabled.
+         * * true (default) - the journal is enabled.
+         * * false - the journal is disabled.
          * </pre>
          *
          * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -3232,8 +3232,8 @@ public final class Mongodb36 {
            * <pre>
            * Whether the journal is enabled or disabled.
            * Possible values:
-           * * true (default) — the journal is enabled.
-           * * false — the journal is disabled.
+           * * true (default) - the journal is enabled.
+           * * false - the journal is disabled.
            * </pre>
            *
            * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -3245,8 +3245,8 @@ public final class Mongodb36 {
            * <pre>
            * Whether the journal is enabled or disabled.
            * Possible values:
-           * * true (default) — the journal is enabled.
-           * * false — the journal is disabled.
+           * * true (default) - the journal is enabled.
+           * * false - the journal is disabled.
            * </pre>
            *
            * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -3262,8 +3262,8 @@ public final class Mongodb36 {
            * <pre>
            * Whether the journal is enabled or disabled.
            * Possible values:
-           * * true (default) — the journal is enabled.
-           * * false — the journal is disabled.
+           * * true (default) - the journal is enabled.
+           * * false - the journal is disabled.
            * </pre>
            *
            * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -3285,8 +3285,8 @@ public final class Mongodb36 {
            * <pre>
            * Whether the journal is enabled or disabled.
            * Possible values:
-           * * true (default) — the journal is enabled.
-           * * false — the journal is disabled.
+           * * true (default) - the journal is enabled.
+           * * false - the journal is disabled.
            * </pre>
            *
            * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -3306,8 +3306,8 @@ public final class Mongodb36 {
            * <pre>
            * Whether the journal is enabled or disabled.
            * Possible values:
-           * * true (default) — the journal is enabled.
-           * * false — the journal is disabled.
+           * * true (default) - the journal is enabled.
+           * * false - the journal is disabled.
            * </pre>
            *
            * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -3331,8 +3331,8 @@ public final class Mongodb36 {
            * <pre>
            * Whether the journal is enabled or disabled.
            * Possible values:
-           * * true (default) — the journal is enabled.
-           * * false — the journal is disabled.
+           * * true (default) - the journal is enabled.
+           * * false - the journal is disabled.
            * </pre>
            *
            * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -3352,8 +3352,8 @@ public final class Mongodb36 {
            * <pre>
            * Whether the journal is enabled or disabled.
            * Possible values:
-           * * true (default) — the journal is enabled.
-           * * false — the journal is disabled.
+           * * true (default) - the journal is enabled.
+           * * false - the journal is disabled.
            * </pre>
            *
            * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -3367,8 +3367,8 @@ public final class Mongodb36 {
            * <pre>
            * Whether the journal is enabled or disabled.
            * Possible values:
-           * * true (default) — the journal is enabled.
-           * * false — the journal is disabled.
+           * * true (default) - the journal is enabled.
+           * * false - the journal is disabled.
            * </pre>
            *
            * <code>.google.protobuf.BoolValue enabled = 1;</code>
@@ -3385,8 +3385,8 @@ public final class Mongodb36 {
            * <pre>
            * Whether the journal is enabled or disabled.
            * Possible values:
-           * * true (default) — the journal is enabled.
-           * * false — the journal is disabled.
+           * * true (default) - the journal is enabled.
+           * * false - the journal is disabled.
            * </pre>
            *
            * <code>.google.protobuf.BoolValue enabled = 1;</code>

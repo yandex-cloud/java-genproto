@@ -137,7 +137,7 @@ public final class TopicOuterClass {
   /**
    * <pre>
    * An Kafka topic.
-   * For more information, see the [Concepts → Topics and partitions](/docs/managed-kafka/concepts/topics) section of the documentation.
+   * For more information, see the [Concepts -&gt; Topics and partitions](/docs/managed-kafka/concepts/topics) section of the documentation.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.Topic}
@@ -761,7 +761,7 @@ public final class TopicOuterClass {
     /**
      * <pre>
      * An Kafka topic.
-     * For more information, see the [Concepts → Topics and partitions](/docs/managed-kafka/concepts/topics) section of the documentation.
+     * For more information, see the [Concepts -&gt; Topics and partitions](/docs/managed-kafka/concepts/topics) section of the documentation.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.Topic}

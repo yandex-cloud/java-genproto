@@ -3737,8 +3737,8 @@ public final class RepositoryServiceOuterClass {
 
   }
 
-  public interface CreateRepositoryRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.CreateRepositoryRequest)
+  public interface UpsertRepositoryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.UpsertRepositoryRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3762,18 +3762,18 @@ public final class RepositoryServiceOuterClass {
         getNameBytes();
   }
   /**
-   * Protobuf type {@code yandex.cloud.containerregistry.v1.CreateRepositoryRequest}
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.UpsertRepositoryRequest}
    */
-  public  static final class CreateRepositoryRequest extends
+  public  static final class UpsertRepositoryRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.CreateRepositoryRequest)
-      CreateRepositoryRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.UpsertRepositoryRequest)
+      UpsertRepositoryRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CreateRepositoryRequest.newBuilder() to construct.
-    private CreateRepositoryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use UpsertRepositoryRequest.newBuilder() to construct.
+    private UpsertRepositoryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CreateRepositoryRequest() {
+    private UpsertRepositoryRequest() {
       name_ = "";
     }
 
@@ -3782,7 +3782,7 @@ public final class RepositoryServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CreateRepositoryRequest(
+    private UpsertRepositoryRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3828,15 +3828,15 @@ public final class RepositoryServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_descriptor;
+      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_fieldAccessorTable
+      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.Builder.class);
+              yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest.Builder.class);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
@@ -3922,10 +3922,10 @@ public final class RepositoryServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest)) {
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest) obj;
+      yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest) obj;
 
       boolean result = true;
       result = result && getName()
@@ -3948,69 +3948,69 @@ public final class RepositoryServiceOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(byte[] data)
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseDelimitedFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4023,7 +4023,7 @@ public final class RepositoryServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest prototype) {
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -4039,26 +4039,26 @@ public final class RepositoryServiceOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code yandex.cloud.containerregistry.v1.CreateRepositoryRequest}
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.UpsertRepositoryRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.CreateRepositoryRequest)
-        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.UpsertRepositoryRequest)
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_descriptor;
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_fieldAccessorTable
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.Builder.class);
+                yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.newBuilder()
+      // Construct using yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4084,17 +4084,17 @@ public final class RepositoryServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_descriptor;
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryRequest_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest getDefaultInstanceForType() {
-        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.getDefaultInstance();
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest build() {
-        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest result = buildPartial();
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest build() {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4102,8 +4102,8 @@ public final class RepositoryServiceOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest buildPartial() {
-        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest result = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest(this);
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest buildPartial() {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest result = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest(this);
         result.name_ = name_;
         onBuilt();
         return result;
@@ -4143,16 +4143,16 @@ public final class RepositoryServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest) {
-          return mergeFrom((yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest)other);
+        if (other instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest other) {
-        if (other == yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest other) {
+        if (other == yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -4172,11 +4172,11 @@ public final class RepositoryServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest parsedMessage = null;
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4292,53 +4292,53 @@ public final class RepositoryServiceOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.CreateRepositoryRequest)
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.UpsertRepositoryRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.CreateRepositoryRequest)
-    private static final yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.UpsertRepositoryRequest)
+    private static final yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest();
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest();
     }
 
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest getDefaultInstance() {
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CreateRepositoryRequest>
-        PARSER = new com.google.protobuf.AbstractParser<CreateRepositoryRequest>() {
+    private static final com.google.protobuf.Parser<UpsertRepositoryRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpsertRepositoryRequest>() {
       @java.lang.Override
-      public CreateRepositoryRequest parsePartialFrom(
+      public UpsertRepositoryRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CreateRepositoryRequest(input, extensionRegistry);
+        return new UpsertRepositoryRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CreateRepositoryRequest> parser() {
+    public static com.google.protobuf.Parser<UpsertRepositoryRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CreateRepositoryRequest> getParserForType() {
+    public com.google.protobuf.Parser<UpsertRepositoryRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest getDefaultInstanceForType() {
+    public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface CreateRepositoryMetadataOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.CreateRepositoryMetadata)
+  public interface UpsertRepositoryMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.containerregistry.v1.UpsertRepositoryMetadata)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * ID of the repository that is being created.
+     * ID of the repository that is being upserted.
      * </pre>
      *
      * <code>string repository_id = 1;</code>
@@ -4346,7 +4346,7 @@ public final class RepositoryServiceOuterClass {
     java.lang.String getRepositoryId();
     /**
      * <pre>
-     * ID of the repository that is being created.
+     * ID of the repository that is being upserted.
      * </pre>
      *
      * <code>string repository_id = 1;</code>
@@ -4355,18 +4355,18 @@ public final class RepositoryServiceOuterClass {
         getRepositoryIdBytes();
   }
   /**
-   * Protobuf type {@code yandex.cloud.containerregistry.v1.CreateRepositoryMetadata}
+   * Protobuf type {@code yandex.cloud.containerregistry.v1.UpsertRepositoryMetadata}
    */
-  public  static final class CreateRepositoryMetadata extends
+  public  static final class UpsertRepositoryMetadata extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.CreateRepositoryMetadata)
-      CreateRepositoryMetadataOrBuilder {
+      // @@protoc_insertion_point(message_implements:yandex.cloud.containerregistry.v1.UpsertRepositoryMetadata)
+      UpsertRepositoryMetadataOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use CreateRepositoryMetadata.newBuilder() to construct.
-    private CreateRepositoryMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use UpsertRepositoryMetadata.newBuilder() to construct.
+    private UpsertRepositoryMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private CreateRepositoryMetadata() {
+    private UpsertRepositoryMetadata() {
       repositoryId_ = "";
     }
 
@@ -4375,7 +4375,7 @@ public final class RepositoryServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CreateRepositoryMetadata(
+    private UpsertRepositoryMetadata(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4421,22 +4421,22 @@ public final class RepositoryServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_descriptor;
+      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryMetadata_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_fieldAccessorTable
+      return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryMetadata_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.Builder.class);
+              yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata.Builder.class);
     }
 
     public static final int REPOSITORY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object repositoryId_;
     /**
      * <pre>
-     * ID of the repository that is being created.
+     * ID of the repository that is being upserted.
      * </pre>
      *
      * <code>string repository_id = 1;</code>
@@ -4455,7 +4455,7 @@ public final class RepositoryServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the repository that is being created.
+     * ID of the repository that is being upserted.
      * </pre>
      *
      * <code>string repository_id = 1;</code>
@@ -4513,10 +4513,10 @@ public final class RepositoryServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata)) {
+      if (!(obj instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata)) {
         return super.equals(obj);
       }
-      yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata) obj;
+      yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata other = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata) obj;
 
       boolean result = true;
       result = result && getRepositoryId()
@@ -4539,69 +4539,69 @@ public final class RepositoryServiceOuterClass {
       return hash;
     }
 
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(byte[] data)
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(java.io.InputStream input)
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseDelimitedFrom(java.io.InputStream input)
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseDelimitedFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parseFrom(
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4614,7 +4614,7 @@ public final class RepositoryServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata prototype) {
+    public static Builder newBuilder(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -4630,26 +4630,26 @@ public final class RepositoryServiceOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code yandex.cloud.containerregistry.v1.CreateRepositoryMetadata}
+     * Protobuf type {@code yandex.cloud.containerregistry.v1.UpsertRepositoryMetadata}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.CreateRepositoryMetadata)
-        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadataOrBuilder {
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.containerregistry.v1.UpsertRepositoryMetadata)
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_descriptor;
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryMetadata_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_fieldAccessorTable
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryMetadata_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.Builder.class);
+                yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata.class, yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata.Builder.class);
       }
 
-      // Construct using yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.newBuilder()
+      // Construct using yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4675,17 +4675,17 @@ public final class RepositoryServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_descriptor;
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryMetadata_descriptor;
       }
 
       @java.lang.Override
-      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata getDefaultInstanceForType() {
-        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.getDefaultInstance();
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata.getDefaultInstance();
       }
 
       @java.lang.Override
-      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata build() {
-        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata result = buildPartial();
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata build() {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4693,8 +4693,8 @@ public final class RepositoryServiceOuterClass {
       }
 
       @java.lang.Override
-      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata buildPartial() {
-        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata result = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata(this);
+      public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata buildPartial() {
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata result = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata(this);
         result.repositoryId_ = repositoryId_;
         onBuilt();
         return result;
@@ -4734,16 +4734,16 @@ public final class RepositoryServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata) {
-          return mergeFrom((yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata)other);
+        if (other instanceof yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata) {
+          return mergeFrom((yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata other) {
-        if (other == yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata.getDefaultInstance()) return this;
+      public Builder mergeFrom(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata other) {
+        if (other == yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata.getDefaultInstance()) return this;
         if (!other.getRepositoryId().isEmpty()) {
           repositoryId_ = other.repositoryId_;
           onChanged();
@@ -4763,11 +4763,11 @@ public final class RepositoryServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata parsedMessage = null;
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata) e.getUnfinishedMessage();
+          parsedMessage = (yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4780,7 +4780,7 @@ public final class RepositoryServiceOuterClass {
       private java.lang.Object repositoryId_ = "";
       /**
        * <pre>
-       * ID of the repository that is being created.
+       * ID of the repository that is being upserted.
        * </pre>
        *
        * <code>string repository_id = 1;</code>
@@ -4799,7 +4799,7 @@ public final class RepositoryServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the repository that is being created.
+       * ID of the repository that is being upserted.
        * </pre>
        *
        * <code>string repository_id = 1;</code>
@@ -4819,7 +4819,7 @@ public final class RepositoryServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the repository that is being created.
+       * ID of the repository that is being upserted.
        * </pre>
        *
        * <code>string repository_id = 1;</code>
@@ -4836,7 +4836,7 @@ public final class RepositoryServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the repository that is being created.
+       * ID of the repository that is being upserted.
        * </pre>
        *
        * <code>string repository_id = 1;</code>
@@ -4849,7 +4849,7 @@ public final class RepositoryServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the repository that is being created.
+       * ID of the repository that is being upserted.
        * </pre>
        *
        * <code>string repository_id = 1;</code>
@@ -4878,41 +4878,41 @@ public final class RepositoryServiceOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.CreateRepositoryMetadata)
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.containerregistry.v1.UpsertRepositoryMetadata)
     }
 
-    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.CreateRepositoryMetadata)
-    private static final yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:yandex.cloud.containerregistry.v1.UpsertRepositoryMetadata)
+    private static final yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata();
+      DEFAULT_INSTANCE = new yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata();
     }
 
-    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata getDefaultInstance() {
+    public static yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CreateRepositoryMetadata>
-        PARSER = new com.google.protobuf.AbstractParser<CreateRepositoryMetadata>() {
+    private static final com.google.protobuf.Parser<UpsertRepositoryMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpsertRepositoryMetadata>() {
       @java.lang.Override
-      public CreateRepositoryMetadata parsePartialFrom(
+      public UpsertRepositoryMetadata parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CreateRepositoryMetadata(input, extensionRegistry);
+        return new UpsertRepositoryMetadata(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<CreateRepositoryMetadata> parser() {
+    public static com.google.protobuf.Parser<UpsertRepositoryMetadata> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CreateRepositoryMetadata> getParserForType() {
+    public com.google.protobuf.Parser<UpsertRepositoryMetadata> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryMetadata getDefaultInstanceForType() {
+    public yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6111,15 +6111,15 @@ public final class RepositoryServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_containerregistry_v1_ListRepositoriesResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_descriptor;
+    internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_fieldAccessorTable;
+      internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_descriptor;
+    internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_fieldAccessorTable;
+      internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryRequest_descriptor;
   private static final 
@@ -6159,10 +6159,10 @@ public final class RepositoryServiceOuterClass {
       "00\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"x\n\030ListR" +
       "epositoriesResponse\022C\n\014repositories\030\001 \003(" +
       "\0132-.yandex.cloud.containerregistry.v1.Re" +
-      "pository\022\027\n\017next_page_token\030\002 \001(\t\"o\n\027Cre" +
-      "ateRepositoryRequest\022T\n\004name\030\001 \001(\tBF\350\3071\001" +
+      "pository\022\027\n\017next_page_token\030\002 \001(\t\"o\n\027Ups" +
+      "ertRepositoryRequest\022T\n\004name\030\001 \001(\tBF\350\3071\001" +
       "\362\3071>[a-z0-9]+(?:[._-][a-z0-9]+)*(/([a-z0" +
-      "-9]+(?:[._-][a-z0-9]+)*))*\"1\n\030CreateRepo" +
+      "-9]+(?:[._-][a-z0-9]+)*))*\"1\n\030UpsertRepo" +
       "sitoryMetadata\022\025\n\rrepository_id\030\001 \001(\t\">\n" +
       "\027DeleteRepositoryRequest\022#\n\rrepository_i" +
       "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"1\n\030DeleteRepositor" +
@@ -6184,11 +6184,11 @@ public final class RepositoryServiceOuterClass {
       "andex.cloud.access.ListAccessBindingsRes" +
       "ponse\"L\202\323\344\223\002F\022D/container-registry/v1/re" +
       "positories/{resource_id}:listAccessBindi" +
-      "ngs\022\301\001\n\006Create\022:.yandex.cloud.containerr" +
-      "egistry.v1.CreateRepositoryRequest\032!.yan" +
+      "ngs\022\301\001\n\006Upsert\022:.yandex.cloud.containerr" +
+      "egistry.v1.UpsertRepositoryRequest\032!.yan" +
       "dex.cloud.operation.Operation\"X\202\323\344\223\002(\"#/" +
       "container-registry/v1/repositories:\001*\262\322*" +
-      "&\n\030CreateRepositoryMetadata\022\nRepository\022" +
+      "&\n\030UpsertRepositoryMetadata\022\nRepository\022" +
       "\331\001\n\006Delete\022:.yandex.cloud.containerregis" +
       "try.v1.DeleteRepositoryRequest\032!.yandex." +
       "cloud.operation.Operation\"p\202\323\344\223\0025*3/cont" +
@@ -6254,17 +6254,17 @@ public final class RepositoryServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_containerregistry_v1_ListRepositoriesResponse_descriptor,
         new java.lang.String[] { "Repositories", "NextPageToken", });
-    internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_descriptor =
+    internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_fieldAccessorTable = new
+    internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryRequest_descriptor,
+        internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryRequest_descriptor,
         new java.lang.String[] { "Name", });
-    internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_descriptor =
+    internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryMetadata_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_fieldAccessorTable = new
+    internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_containerregistry_v1_CreateRepositoryMetadata_descriptor,
+        internal_static_yandex_cloud_containerregistry_v1_UpsertRepositoryMetadata_descriptor,
         new java.lang.String[] { "RepositoryId", });
     internal_static_yandex_cloud_containerregistry_v1_DeleteRepositoryRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);

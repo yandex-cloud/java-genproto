@@ -4449,9 +4449,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-     * * **0** (default)—no restrictions.
-     * * **1**—only read data queries are allowed.
-     * * **2**—read data and change settings queries are allowed.
+     * * **0** (default)-no restrictions.
+     * * **1**-only read data queries are allowed.
+     * * **2**-read data and change settings queries are allowed.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
@@ -4461,9 +4461,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-     * * **0** (default)—no restrictions.
-     * * **1**—only read data queries are allowed.
-     * * **2**—read data and change settings queries are allowed.
+     * * **0** (default)-no restrictions.
+     * * **1**-only read data queries are allowed.
+     * * **2**-read data and change settings queries are allowed.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
@@ -4473,9 +4473,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-     * * **0** (default)—no restrictions.
-     * * **1**—only read data queries are allowed.
-     * * **2**—read data and change settings queries are allowed.
+     * * **0** (default)-no restrictions.
+     * * **1**-only read data queries are allowed.
+     * * **2**-read data and change settings queries are allowed.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
@@ -4774,9 +4774,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-     * * **0**—do not wait for replicas.
-     * * **1**—only wait for own execution (default).
-     * * **2**—wait for all replicas.
+     * * **0**-do not wait for replicas.
+     * * **1**-only wait for own execution (default).
+     * * **2**-wait for all replicas.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
@@ -4786,9 +4786,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-     * * **0**—do not wait for replicas.
-     * * **1**—only wait for own execution (default).
-     * * **2**—wait for all replicas.
+     * * **0**-do not wait for replicas.
+     * * **1**-only wait for own execution (default).
+     * * **2**-wait for all replicas.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
@@ -4798,9 +4798,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-     * * **0**—do not wait for replicas.
-     * * **1**—only wait for own execution (default).
-     * * **2**—wait for all replicas.
+     * * **0**-do not wait for replicas.
+     * * **1**-only wait for own execution (default).
+     * * **2**-wait for all replicas.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
@@ -5158,7 +5158,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
      * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-     * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+     * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5168,7 +5168,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
      * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-     * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+     * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5178,7 +5178,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
      * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-     * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+     * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -5509,7 +5509,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-     * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+     * Minimal value: **0**, threshold is not set (default: **10000**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -5518,7 +5518,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-     * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+     * Minimal value: **0**, threshold is not set (default: **10000**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -5527,7 +5527,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-     * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+     * Minimal value: **0**, threshold is not set (default: **10000**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -5537,7 +5537,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-     * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+     * Minimal value: **0**, threshold is not set (default: **100000000**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -5546,7 +5546,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-     * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+     * Minimal value: **0**, threshold is not set (default: **100000000**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -5555,7 +5555,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-     * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+     * Minimal value: **0**, threshold is not set (default: **100000000**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -5565,8 +5565,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the priority of a query.
-     * * **0**—priority is not used.
-     * * **1**—the highest priority.
+     * * **0**-priority is not used.
+     * * **1**-the highest priority.
      * * and so on. The higher the number, the lower a query's priority.
      * This setting should be set up for each query individually.
      * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -5579,8 +5579,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the priority of a query.
-     * * **0**—priority is not used.
-     * * **1**—the highest priority.
+     * * **0**-priority is not used.
+     * * **1**-the highest priority.
      * * and so on. The higher the number, the lower a query's priority.
      * This setting should be set up for each query individually.
      * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -5593,8 +5593,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the priority of a query.
-     * * **0**—priority is not used.
-     * * **1**—the highest priority.
+     * * **0**-priority is not used.
+     * * **1**-the highest priority.
      * * and so on. The higher the number, the lower a query's priority.
      * This setting should be set up for each query individually.
      * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -5774,7 +5774,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * If enabled, query is not executed if the ClickHouse can’t use index by date.
+     * If enabled, query is not executed if the ClickHouse can't use index by date.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -5785,7 +5785,7 @@ public final class UserOuterClass {
     boolean hasForceIndexByDate();
     /**
      * <pre>
-     * If enabled, query is not executed if the ClickHouse can’t use index by date.
+     * If enabled, query is not executed if the ClickHouse can't use index by date.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -5796,7 +5796,7 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getForceIndexByDate();
     /**
      * <pre>
-     * If enabled, query is not executed if the ClickHouse can’t use index by date.
+     * If enabled, query is not executed if the ClickHouse can't use index by date.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -5808,7 +5808,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+     * If enabled, query is not executed if the ClickHouse can't use index by primary key.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -5819,7 +5819,7 @@ public final class UserOuterClass {
     boolean hasForcePrimaryKey();
     /**
      * <pre>
-     * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+     * If enabled, query is not executed if the ClickHouse can't use index by primary key.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -5830,7 +5830,7 @@ public final class UserOuterClass {
     com.google.protobuf.BoolValue getForcePrimaryKey();
     /**
      * <pre>
-     * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+     * If enabled, query is not executed if the ClickHouse can't use index by primary key.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -5902,8 +5902,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -5912,8 +5912,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -5954,9 +5954,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
-     * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
+     * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -5965,9 +5965,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
-     * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
+     * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -6039,8 +6039,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -6049,8 +6049,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -6122,8 +6122,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -6132,8 +6132,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -6196,8 +6196,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -6206,8 +6206,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -6276,8 +6276,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -6286,8 +6286,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -6328,8 +6328,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -6338,8 +6338,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -6928,8 +6928,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines whether to use LowCardinality type in Native format.
-     * * **true** (default)—yes, use.
-     * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+     * * **true** (default)-yes, use.
+     * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
      * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
      * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
      * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -6944,8 +6944,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines whether to use LowCardinality type in Native format.
-     * * **true** (default)—yes, use.
-     * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+     * * **true** (default)-yes, use.
+     * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
      * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
      * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
      * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -6960,8 +6960,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines whether to use LowCardinality type in Native format.
-     * * **true** (default)—yes, use.
-     * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+     * * **true** (default)-yes, use.
+     * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
      * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
      * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
      * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -6977,8 +6977,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-     * * **true**—ClickHouse will return an empty result for such queries.
-     * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+     * * **true**-ClickHouse will return an empty result for such queries.
+     * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -6987,8 +6987,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-     * * **true**—ClickHouse will return an empty result for such queries.
-     * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+     * * **true**-ClickHouse will return an empty result for such queries.
+     * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -6997,8 +6997,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-     * * **true**—ClickHouse will return an empty result for such queries.
-     * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+     * * **true**-ClickHouse will return an empty result for such queries.
+     * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -9122,9 +9122,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-     * * **0** (default)—no restrictions.
-     * * **1**—only read data queries are allowed.
-     * * **2**—read data and change settings queries are allowed.
+     * * **0** (default)-no restrictions.
+     * * **1**-only read data queries are allowed.
+     * * **2**-read data and change settings queries are allowed.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
@@ -9136,9 +9136,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-     * * **0** (default)—no restrictions.
-     * * **1**—only read data queries are allowed.
-     * * **2**—read data and change settings queries are allowed.
+     * * **0** (default)-no restrictions.
+     * * **1**-only read data queries are allowed.
+     * * **2**-read data and change settings queries are allowed.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
@@ -9150,9 +9150,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-     * * **0** (default)—no restrictions.
-     * * **1**—only read data queries are allowed.
-     * * **2**—read data and change settings queries are allowed.
+     * * **0** (default)-no restrictions.
+     * * **1**-only read data queries are allowed.
+     * * **2**-read data and change settings queries are allowed.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
      * </pre>
      *
@@ -9527,9 +9527,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-     * * **0**—do not wait for replicas.
-     * * **1**—only wait for own execution (default).
-     * * **2**—wait for all replicas.
+     * * **0**-do not wait for replicas.
+     * * **1**-only wait for own execution (default).
+     * * **2**-wait for all replicas.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
@@ -9541,9 +9541,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-     * * **0**—do not wait for replicas.
-     * * **1**—only wait for own execution (default).
-     * * **2**—wait for all replicas.
+     * * **0**-do not wait for replicas.
+     * * **1**-only wait for own execution (default).
+     * * **2**-wait for all replicas.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
@@ -9555,9 +9555,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-     * * **0**—do not wait for replicas.
-     * * **1**—only wait for own execution (default).
-     * * **2**—wait for all replicas.
+     * * **0**-do not wait for replicas.
+     * * **1**-only wait for own execution (default).
+     * * **2**-wait for all replicas.
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
      * </pre>
      *
@@ -9999,7 +9999,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
      * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-     * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+     * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -10011,7 +10011,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
      * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-     * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+     * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -10023,7 +10023,7 @@ public final class UserOuterClass {
      * <pre>
      * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
      * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-     * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+     * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -10430,7 +10430,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-     * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+     * Minimal value: **0**, threshold is not set (default: **10000**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -10441,7 +10441,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-     * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+     * Minimal value: **0**, threshold is not set (default: **10000**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -10452,7 +10452,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-     * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+     * Minimal value: **0**, threshold is not set (default: **10000**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -10466,7 +10466,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-     * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+     * Minimal value: **0**, threshold is not set (default: **100000000**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -10477,7 +10477,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-     * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+     * Minimal value: **0**, threshold is not set (default: **100000000**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -10488,7 +10488,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-     * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+     * Minimal value: **0**, threshold is not set (default: **100000000**).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -10502,8 +10502,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the priority of a query.
-     * * **0**—priority is not used.
-     * * **1**—the highest priority.
+     * * **0**-priority is not used.
+     * * **1**-the highest priority.
      * * and so on. The higher the number, the lower a query's priority.
      * This setting should be set up for each query individually.
      * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -10518,8 +10518,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the priority of a query.
-     * * **0**—priority is not used.
-     * * **1**—the highest priority.
+     * * **0**-priority is not used.
+     * * **1**-the highest priority.
      * * and so on. The higher the number, the lower a query's priority.
      * This setting should be set up for each query individually.
      * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -10534,8 +10534,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Sets the priority of a query.
-     * * **0**—priority is not used.
-     * * **1**—the highest priority.
+     * * **0**-priority is not used.
+     * * **1**-the highest priority.
      * * and so on. The higher the number, the lower a query's priority.
      * This setting should be set up for each query individually.
      * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -10759,7 +10759,7 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue forceIndexByDate_;
     /**
      * <pre>
-     * If enabled, query is not executed if the ClickHouse can’t use index by date.
+     * If enabled, query is not executed if the ClickHouse can't use index by date.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -10772,7 +10772,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * If enabled, query is not executed if the ClickHouse can’t use index by date.
+     * If enabled, query is not executed if the ClickHouse can't use index by date.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -10785,7 +10785,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * If enabled, query is not executed if the ClickHouse can’t use index by date.
+     * If enabled, query is not executed if the ClickHouse can't use index by date.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -10801,7 +10801,7 @@ public final class UserOuterClass {
     private com.google.protobuf.BoolValue forcePrimaryKey_;
     /**
      * <pre>
-     * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+     * If enabled, query is not executed if the ClickHouse can't use index by primary key.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -10814,7 +10814,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+     * If enabled, query is not executed if the ClickHouse can't use index by primary key.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -10827,7 +10827,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+     * If enabled, query is not executed if the ClickHouse can't use index by primary key.
      * This setting has effect only for tables of the MergeTree family.
      * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
      * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -10919,8 +10919,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -10931,8 +10931,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -10987,9 +10987,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
-     * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
+     * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -11000,9 +11000,9 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
-     * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
+     * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -11096,8 +11096,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -11108,8 +11108,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -11203,8 +11203,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -11215,8 +11215,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -11301,8 +11301,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -11313,8 +11313,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -11405,8 +11405,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -11417,8 +11417,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -11473,8 +11473,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -11485,8 +11485,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
-     * * **throw**—abort query execution, return an error.
-     * * **break**—stop query execution, return partial result.
+     * * **throw**-abort query execution, return an error.
+     * * **break**-stop query execution, return partial result.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -12241,8 +12241,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines whether to use LowCardinality type in Native format.
-     * * **true** (default)—yes, use.
-     * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+     * * **true** (default)-yes, use.
+     * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
      * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
      * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
      * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -12259,8 +12259,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines whether to use LowCardinality type in Native format.
-     * * **true** (default)—yes, use.
-     * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+     * * **true** (default)-yes, use.
+     * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
      * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
      * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
      * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -12277,8 +12277,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Determines whether to use LowCardinality type in Native format.
-     * * **true** (default)—yes, use.
-     * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+     * * **true** (default)-yes, use.
+     * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
      * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
      * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
      * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -12298,8 +12298,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-     * * **true**—ClickHouse will return an empty result for such queries.
-     * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+     * * **true**-ClickHouse will return an empty result for such queries.
+     * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -12310,8 +12310,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-     * * **true**—ClickHouse will return an empty result for such queries.
-     * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+     * * **true**-ClickHouse will return an empty result for such queries.
+     * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -12322,8 +12322,8 @@ public final class UserOuterClass {
     /**
      * <pre>
      * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-     * * **true**—ClickHouse will return an empty result for such queries.
-     * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+     * * **true**-ClickHouse will return an empty result for such queries.
+     * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -15606,9 +15606,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-       * * **0** (default)—no restrictions.
-       * * **1**—only read data queries are allowed.
-       * * **2**—read data and change settings queries are allowed.
+       * * **0** (default)-no restrictions.
+       * * **1**-only read data queries are allowed.
+       * * **2**-read data and change settings queries are allowed.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
@@ -15620,9 +15620,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-       * * **0** (default)—no restrictions.
-       * * **1**—only read data queries are allowed.
-       * * **2**—read data and change settings queries are allowed.
+       * * **0** (default)-no restrictions.
+       * * **1**-only read data queries are allowed.
+       * * **2**-read data and change settings queries are allowed.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
@@ -15638,9 +15638,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-       * * **0** (default)—no restrictions.
-       * * **1**—only read data queries are allowed.
-       * * **2**—read data and change settings queries are allowed.
+       * * **0** (default)-no restrictions.
+       * * **1**-only read data queries are allowed.
+       * * **2**-read data and change settings queries are allowed.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
@@ -15662,9 +15662,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-       * * **0** (default)—no restrictions.
-       * * **1**—only read data queries are allowed.
-       * * **2**—read data and change settings queries are allowed.
+       * * **0** (default)-no restrictions.
+       * * **1**-only read data queries are allowed.
+       * * **2**-read data and change settings queries are allowed.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
@@ -15684,9 +15684,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-       * * **0** (default)—no restrictions.
-       * * **1**—only read data queries are allowed.
-       * * **2**—read data and change settings queries are allowed.
+       * * **0** (default)-no restrictions.
+       * * **1**-only read data queries are allowed.
+       * * **2**-read data and change settings queries are allowed.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
@@ -15710,9 +15710,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-       * * **0** (default)—no restrictions.
-       * * **1**—only read data queries are allowed.
-       * * **2**—read data and change settings queries are allowed.
+       * * **0** (default)-no restrictions.
+       * * **1**-only read data queries are allowed.
+       * * **2**-read data and change settings queries are allowed.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
@@ -15732,9 +15732,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-       * * **0** (default)—no restrictions.
-       * * **1**—only read data queries are allowed.
-       * * **2**—read data and change settings queries are allowed.
+       * * **0** (default)-no restrictions.
+       * * **1**-only read data queries are allowed.
+       * * **2**-read data and change settings queries are allowed.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
@@ -15748,9 +15748,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-       * * **0** (default)—no restrictions.
-       * * **1**—only read data queries are allowed.
-       * * **2**—read data and change settings queries are allowed.
+       * * **0** (default)-no restrictions.
+       * * **1**-only read data queries are allowed.
+       * * **2**-read data and change settings queries are allowed.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
@@ -15767,9 +15767,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Restricts permissions for non-DDL queries. To restrict permissions for DDL queries, use [allow_ddl] instead.
-       * * **0** (default)—no restrictions.
-       * * **1**—only read data queries are allowed.
-       * * **2**—read data and change settings queries are allowed.
+       * * **0** (default)-no restrictions.
+       * * **1**-only read data queries are allowed.
+       * * **2**-read data and change settings queries are allowed.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/permissions-for-queries/#settings_readonly).
        * </pre>
        *
@@ -17361,9 +17361,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**—do not wait for replicas.
-       * * **1**—only wait for own execution (default).
-       * * **2**—wait for all replicas.
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
@@ -17375,9 +17375,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**—do not wait for replicas.
-       * * **1**—only wait for own execution (default).
-       * * **2**—wait for all replicas.
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
@@ -17393,9 +17393,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**—do not wait for replicas.
-       * * **1**—only wait for own execution (default).
-       * * **2**—wait for all replicas.
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
@@ -17417,9 +17417,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**—do not wait for replicas.
-       * * **1**—only wait for own execution (default).
-       * * **2**—wait for all replicas.
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
@@ -17439,9 +17439,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**—do not wait for replicas.
-       * * **1**—only wait for own execution (default).
-       * * **2**—wait for all replicas.
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
@@ -17465,9 +17465,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**—do not wait for replicas.
-       * * **1**—only wait for own execution (default).
-       * * **2**—wait for all replicas.
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
@@ -17487,9 +17487,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**—do not wait for replicas.
-       * * **1**—only wait for own execution (default).
-       * * **2**—wait for all replicas.
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
@@ -17503,9 +17503,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**—do not wait for replicas.
-       * * **1**—only wait for own execution (default).
-       * * **2**—wait for all replicas.
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
@@ -17522,9 +17522,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Wait mode for asynchronous actions in **ALTER** queries on replicated tables:
-       * * **0**—do not wait for replicas.
-       * * **1**—only wait for own execution (default).
-       * * **2**—wait for all replicas.
+       * * **0**-do not wait for replicas.
+       * * **1**-only wait for own execution (default).
+       * * **2**-wait for all replicas.
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/sql-reference/statements/alter/#synchronicity-of-alter-queries).
        * </pre>
        *
@@ -19304,7 +19304,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
        * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+       * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19316,7 +19316,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
        * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+       * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19332,7 +19332,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
        * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+       * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19354,7 +19354,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
        * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+       * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19374,7 +19374,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
        * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+       * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19398,7 +19398,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
        * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+       * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19418,7 +19418,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
        * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+       * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19432,7 +19432,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
        * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+       * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -19449,7 +19449,7 @@ public final class UserOuterClass {
        * <pre>
        * Limits the minimum number of bytes in a block to be inserted in a table by **INSERT** query.
        * Blocks that are smaller than the specified value, will be squashed together into the bigger blocks.
-       * Minimal value: **0**, block squashing is disabled (default: **‭268435456‬‬**, 256 MB).
+       * Minimal value: **0**, block squashing is disabled (default: **268435456**, 256 MB).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value min_insert_block_size_bytes = 49 [(.yandex.cloud.value) = "&gt;=0"];</code>
@@ -21139,7 +21139,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **10000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -21150,7 +21150,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **10000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -21165,7 +21165,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **10000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -21186,7 +21186,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **10000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -21205,7 +21205,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **10000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -21228,7 +21228,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **10000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -21247,7 +21247,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **10000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -21260,7 +21260,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **10000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -21276,7 +21276,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of keys, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **10000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **10000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold = 76;</code>
@@ -21301,7 +21301,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **100000000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -21312,7 +21312,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **100000000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -21327,7 +21327,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **100000000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -21348,7 +21348,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **100000000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -21367,7 +21367,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **100000000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -21390,7 +21390,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **100000000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -21409,7 +21409,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **100000000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -21422,7 +21422,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **100000000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -21438,7 +21438,7 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the threshold of the number of bytes, after that the two-level aggregation should be used.
-       * Minimal value: **0**, threshold is not set (default: **100000000‬‬**).
+       * Minimal value: **0**, threshold is not set (default: **100000000**).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_by_two_level_threshold_bytes = 77;</code>
@@ -21463,8 +21463,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the priority of a query.
-       * * **0**—priority is not used.
-       * * **1**—the highest priority.
+       * * **0**-priority is not used.
+       * * **1**-the highest priority.
        * * and so on. The higher the number, the lower a query's priority.
        * This setting should be set up for each query individually.
        * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -21479,8 +21479,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the priority of a query.
-       * * **0**—priority is not used.
-       * * **1**—the highest priority.
+       * * **0**-priority is not used.
+       * * **1**-the highest priority.
        * * and so on. The higher the number, the lower a query's priority.
        * This setting should be set up for each query individually.
        * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -21499,8 +21499,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the priority of a query.
-       * * **0**—priority is not used.
-       * * **1**—the highest priority.
+       * * **0**-priority is not used.
+       * * **1**-the highest priority.
        * * and so on. The higher the number, the lower a query's priority.
        * This setting should be set up for each query individually.
        * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -21525,8 +21525,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the priority of a query.
-       * * **0**—priority is not used.
-       * * **1**—the highest priority.
+       * * **0**-priority is not used.
+       * * **1**-the highest priority.
        * * and so on. The higher the number, the lower a query's priority.
        * This setting should be set up for each query individually.
        * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -21549,8 +21549,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the priority of a query.
-       * * **0**—priority is not used.
-       * * **1**—the highest priority.
+       * * **0**-priority is not used.
+       * * **1**-the highest priority.
        * * and so on. The higher the number, the lower a query's priority.
        * This setting should be set up for each query individually.
        * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -21577,8 +21577,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the priority of a query.
-       * * **0**—priority is not used.
-       * * **1**—the highest priority.
+       * * **0**-priority is not used.
+       * * **1**-the highest priority.
        * * and so on. The higher the number, the lower a query's priority.
        * This setting should be set up for each query individually.
        * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -21601,8 +21601,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the priority of a query.
-       * * **0**—priority is not used.
-       * * **1**—the highest priority.
+       * * **0**-priority is not used.
+       * * **1**-the highest priority.
        * * and so on. The higher the number, the lower a query's priority.
        * This setting should be set up for each query individually.
        * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -21619,8 +21619,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the priority of a query.
-       * * **0**—priority is not used.
-       * * **1**—the highest priority.
+       * * **0**-priority is not used.
+       * * **1**-the highest priority.
        * * and so on. The higher the number, the lower a query's priority.
        * This setting should be set up for each query individually.
        * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -21640,8 +21640,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Sets the priority of a query.
-       * * **0**—priority is not used.
-       * * **1**—the highest priority.
+       * * **0**-priority is not used.
+       * * **1**-the highest priority.
        * * and so on. The higher the number, the lower a query's priority.
        * This setting should be set up for each query individually.
        * If ClickHouse is working with the high-priority queries, and a low-priority query enters, then the low-priority query is paused until higher-priority queries are completed.
@@ -22560,7 +22560,7 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> forceIndexByDateBuilder_;
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -22573,7 +22573,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -22590,7 +22590,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -22613,7 +22613,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -22634,7 +22634,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -22659,7 +22659,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -22680,7 +22680,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -22695,7 +22695,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -22713,7 +22713,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by date.
+       * If enabled, query is not executed if the ClickHouse can't use index by date.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by date).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#settings-force_index_by_date).
@@ -22740,7 +22740,7 @@ public final class UserOuterClass {
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> forcePrimaryKeyBuilder_;
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -22753,7 +22753,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -22770,7 +22770,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -22793,7 +22793,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -22814,7 +22814,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -22839,7 +22839,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -22860,7 +22860,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -22875,7 +22875,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -22893,7 +22893,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * If enabled, query is not executed if the ClickHouse can’t use index by primary key.
+       * If enabled, query is not executed if the ClickHouse can't use index by primary key.
        * This setting has effect only for tables of the MergeTree family.
        * Default value: **false** (setting is disabled, query executes even if ClickHouse can't use index by primary key).
        * See in-depth description in [ClickHouse documentation](https://clickhouse.tech/docs/en/operations/settings/settings/#force-primary-key).
@@ -23252,8 +23252,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -23264,8 +23264,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -23278,8 +23278,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -23292,8 +23292,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -23310,8 +23310,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while reading the data.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode read_overflow_mode = 15;</code>
@@ -23498,9 +23498,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
-       * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
+       * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -23511,9 +23511,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
-       * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
+       * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -23526,9 +23526,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
-       * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
+       * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -23541,9 +23541,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
-       * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
+       * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -23560,9 +23560,9 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing aggregation.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
-       * * **any**—perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don’t add new keys to the set.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
+       * * **any**-perform approximate **GROUP BY** operation by continuing aggregation for the keys that got into the set, but don't add new keys to the set.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.GroupByOverflowMode group_by_overflow_mode = 17;</code>
@@ -23920,8 +23920,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -23932,8 +23932,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -23946,8 +23946,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -23960,8 +23960,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -23978,8 +23978,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while sorting.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode sort_overflow_mode = 20;</code>
@@ -24337,8 +24337,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -24349,8 +24349,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -24363,8 +24363,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -24377,8 +24377,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -24395,8 +24395,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while forming result.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode result_overflow_mode = 23;</code>
@@ -24727,8 +24727,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -24739,8 +24739,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -24753,8 +24753,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -24767,8 +24767,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -24785,8 +24785,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing **DISCTINCT**.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode distinct_overflow_mode = 26;</code>
@@ -25135,8 +25135,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -25147,8 +25147,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -25161,8 +25161,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -25175,8 +25175,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -25193,8 +25193,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) while doing transfers.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode transfer_overflow_mode = 29;</code>
@@ -25381,8 +25381,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -25393,8 +25393,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -25407,8 +25407,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -25421,8 +25421,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -25439,8 +25439,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines the behavior on exceeding [limits](https://clickhouse.tech/docs/en/operations/settings/query-complexity/#restrictions-on-query-complexity) of execution time.
-       * * **throw**—abort query execution, return an error.
-       * * **break**—stop query execution, return partial result.
+       * * **throw**-abort query execution, return an error.
+       * * **break**-stop query execution, return partial result.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.OverflowMode timeout_overflow_mode = 31;</code>
@@ -28561,8 +28561,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines whether to use LowCardinality type in Native format.
-       * * **true** (default)—yes, use.
-       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * * **true** (default)-yes, use.
+       * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
        * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
        * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
        * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -28579,8 +28579,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines whether to use LowCardinality type in Native format.
-       * * **true** (default)—yes, use.
-       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * * **true** (default)-yes, use.
+       * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
        * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
        * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
        * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -28601,8 +28601,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines whether to use LowCardinality type in Native format.
-       * * **true** (default)—yes, use.
-       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * * **true** (default)-yes, use.
+       * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
        * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
        * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
        * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -28629,8 +28629,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines whether to use LowCardinality type in Native format.
-       * * **true** (default)—yes, use.
-       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * * **true** (default)-yes, use.
+       * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
        * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
        * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
        * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -28655,8 +28655,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines whether to use LowCardinality type in Native format.
-       * * **true** (default)—yes, use.
-       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * * **true** (default)-yes, use.
+       * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
        * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
        * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
        * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -28685,8 +28685,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines whether to use LowCardinality type in Native format.
-       * * **true** (default)—yes, use.
-       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * * **true** (default)-yes, use.
+       * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
        * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
        * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
        * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -28711,8 +28711,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines whether to use LowCardinality type in Native format.
-       * * **true** (default)—yes, use.
-       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * * **true** (default)-yes, use.
+       * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
        * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
        * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
        * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -28731,8 +28731,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines whether to use LowCardinality type in Native format.
-       * * **true** (default)—yes, use.
-       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * * **true** (default)-yes, use.
+       * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
        * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
        * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
        * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -28754,8 +28754,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Determines whether to use LowCardinality type in Native format.
-       * * **true** (default)—yes, use.
-       * * **false**—convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
+       * * **true** (default)-yes, use.
+       * * **false**-convert LowCardinality columns to regular columns when doing **SELECT**, and convert regular columns to LowCardinality when doing **INSERT**.
        * LowCardinality columns (aka sparse columns) store data in more effective way, compared to regular columns, by using hash tables.
        * If data to insert suits this storage format, ClickHouse will place them into LowCardinality column.
        * If you use a third-party ClickHouse client that can't work with LowCardinality columns, then this client will not be able to correctly interpret the result of the query that asks for data stored in LowCardinality column.
@@ -28786,8 +28786,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-       * * **true**—ClickHouse will return an empty result for such queries.
-       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+       * * **true**-ClickHouse will return an empty result for such queries.
+       * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -28798,8 +28798,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-       * * **true**—ClickHouse will return an empty result for such queries.
-       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+       * * **true**-ClickHouse will return an empty result for such queries.
+       * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -28814,8 +28814,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-       * * **true**—ClickHouse will return an empty result for such queries.
-       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+       * * **true**-ClickHouse will return an empty result for such queries.
+       * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -28836,8 +28836,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-       * * **true**—ClickHouse will return an empty result for such queries.
-       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+       * * **true**-ClickHouse will return an empty result for such queries.
+       * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -28856,8 +28856,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-       * * **true**—ClickHouse will return an empty result for such queries.
-       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+       * * **true**-ClickHouse will return an empty result for such queries.
+       * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -28880,8 +28880,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-       * * **true**—ClickHouse will return an empty result for such queries.
-       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+       * * **true**-ClickHouse will return an empty result for such queries.
+       * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -28900,8 +28900,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-       * * **true**—ClickHouse will return an empty result for such queries.
-       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+       * * **true**-ClickHouse will return an empty result for such queries.
+       * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -28914,8 +28914,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-       * * **true**—ClickHouse will return an empty result for such queries.
-       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+       * * **true**-ClickHouse will return an empty result for such queries.
+       * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>
@@ -28931,8 +28931,8 @@ public final class UserOuterClass {
       /**
        * <pre>
        * Enables returning of empty result when aggregating without keys (with **GROUP BY** operation absent) on empty set (e.g., **SELECT count(*) FROM table WHERE 0**).
-       * * **true**—ClickHouse will return an empty result for such queries.
-       * * **false** (default)—ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
+       * * **true**-ClickHouse will return an empty result for such queries.
+       * * **false** (default)-ClickHouse will return a single-line result consisting of **NULL** values for aggregation functions, in accordance with SQL standard.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue empty_result_for_aggregation_by_empty_set = 79;</code>

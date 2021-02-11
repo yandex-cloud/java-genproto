@@ -245,7 +245,7 @@ public final class NetworkLoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -253,7 +253,7 @@ public final class NetworkLoadBalancerOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -268,7 +268,7 @@ public final class NetworkLoadBalancerOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -277,7 +277,7 @@ public final class NetworkLoadBalancerOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -288,7 +288,7 @@ public final class NetworkLoadBalancerOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1329,7 +1329,7 @@ public final class NetworkLoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1349,7 +1349,7 @@ public final class NetworkLoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1360,7 +1360,7 @@ public final class NetworkLoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1376,7 +1376,7 @@ public final class NetworkLoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2773,7 +2773,7 @@ public final class NetworkLoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2793,7 +2793,7 @@ public final class NetworkLoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2804,7 +2804,7 @@ public final class NetworkLoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2820,7 +2820,7 @@ public final class NetworkLoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2844,7 +2844,7 @@ public final class NetworkLoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2867,7 +2867,7 @@ public final class NetworkLoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2883,7 +2883,7 @@ public final class NetworkLoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>

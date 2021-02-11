@@ -31092,8 +31092,8 @@ public final class PSCS {
      * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
      * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
      * Possible values:
-     * * false — don't assign a public IP to the host.
-     * * true — the host should have a public IP address.
+     * * false - don't assign a public IP to the host.
+     * * true - the host should have a public IP address.
      * </pre>
      *
      * <code>bool assign_public_ip = 3;</code>
@@ -31289,8 +31289,8 @@ public final class PSCS {
      * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
      * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
      * Possible values:
-     * * false — don't assign a public IP to the host.
-     * * true — the host should have a public IP address.
+     * * false - don't assign a public IP to the host.
+     * * true - the host should have a public IP address.
      * </pre>
      *
      * <code>bool assign_public_ip = 3;</code>
@@ -31837,8 +31837,8 @@ public final class PSCS {
        * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
        * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
        * Possible values:
-       * * false — don't assign a public IP to the host.
-       * * true — the host should have a public IP address.
+       * * false - don't assign a public IP to the host.
+       * * true - the host should have a public IP address.
        * </pre>
        *
        * <code>bool assign_public_ip = 3;</code>
@@ -31852,8 +31852,8 @@ public final class PSCS {
        * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
        * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
        * Possible values:
-       * * false — don't assign a public IP to the host.
-       * * true — the host should have a public IP address.
+       * * false - don't assign a public IP to the host.
+       * * true - the host should have a public IP address.
        * </pre>
        *
        * <code>bool assign_public_ip = 3;</code>
@@ -31870,8 +31870,8 @@ public final class PSCS {
        * After a host has been created, this setting cannot be changed. To remove an assigned public IP, or to assign
        * a public IP to a host without one, recreate the host with [assign_public_ip] set as needed.
        * Possible values:
-       * * false — don't assign a public IP to the host.
-       * * true — the host should have a public IP address.
+       * * false - don't assign a public IP to the host.
+       * * true - the host should have a public IP address.
        * </pre>
        *
        * <code>bool assign_public_ip = 3;</code>

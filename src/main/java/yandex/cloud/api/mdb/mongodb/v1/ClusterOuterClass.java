@@ -5381,10 +5381,10 @@ public final class ClusterOuterClass {
      * <pre>
      * MongoDB feature compatibility version. See usage details in [MongoDB documentation](https://docs.mongodb.com/manual/reference/command/setFeatureCompatibilityVersion/).
      * Possible values:
-     * * `3.6` — persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
-     * * `4.0` — persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
-     * * `4.2` — persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
-     * * `4.4` — persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
+     * * `3.6` - persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
+     * * `4.0` - persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
+     * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
+     * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
      * </pre>
      *
      * <code>string feature_compatibility_version = 5;</code>
@@ -5394,10 +5394,10 @@ public final class ClusterOuterClass {
      * <pre>
      * MongoDB feature compatibility version. See usage details in [MongoDB documentation](https://docs.mongodb.com/manual/reference/command/setFeatureCompatibilityVersion/).
      * Possible values:
-     * * `3.6` — persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
-     * * `4.0` — persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
-     * * `4.2` — persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
-     * * `4.4` — persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
+     * * `3.6` - persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
+     * * `4.0` - persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
+     * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
+     * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
      * </pre>
      *
      * <code>string feature_compatibility_version = 5;</code>
@@ -5852,10 +5852,10 @@ public final class ClusterOuterClass {
      * <pre>
      * MongoDB feature compatibility version. See usage details in [MongoDB documentation](https://docs.mongodb.com/manual/reference/command/setFeatureCompatibilityVersion/).
      * Possible values:
-     * * `3.6` — persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
-     * * `4.0` — persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
-     * * `4.2` — persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
-     * * `4.4` — persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
+     * * `3.6` - persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
+     * * `4.0` - persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
+     * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
+     * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
      * </pre>
      *
      * <code>string feature_compatibility_version = 5;</code>
@@ -5876,10 +5876,10 @@ public final class ClusterOuterClass {
      * <pre>
      * MongoDB feature compatibility version. See usage details in [MongoDB documentation](https://docs.mongodb.com/manual/reference/command/setFeatureCompatibilityVersion/).
      * Possible values:
-     * * `3.6` — persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
-     * * `4.0` — persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
-     * * `4.2` — persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
-     * * `4.4` — persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
+     * * `3.6` - persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
+     * * `4.0` - persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
+     * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
+     * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
      * </pre>
      *
      * <code>string feature_compatibility_version = 5;</code>
@@ -6791,10 +6791,10 @@ public final class ClusterOuterClass {
        * <pre>
        * MongoDB feature compatibility version. See usage details in [MongoDB documentation](https://docs.mongodb.com/manual/reference/command/setFeatureCompatibilityVersion/).
        * Possible values:
-       * * `3.6` — persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
-       * * `4.0` — persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
-       * * `4.2` — persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
-       * * `4.4` — persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
+       * * `3.6` - persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
+       * * `4.0` - persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
+       * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
+       * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
@@ -6815,10 +6815,10 @@ public final class ClusterOuterClass {
        * <pre>
        * MongoDB feature compatibility version. See usage details in [MongoDB documentation](https://docs.mongodb.com/manual/reference/command/setFeatureCompatibilityVersion/).
        * Possible values:
-       * * `3.6` — persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
-       * * `4.0` — persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
-       * * `4.2` — persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
-       * * `4.4` — persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
+       * * `3.6` - persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
+       * * `4.0` - persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
+       * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
+       * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
@@ -6840,10 +6840,10 @@ public final class ClusterOuterClass {
        * <pre>
        * MongoDB feature compatibility version. See usage details in [MongoDB documentation](https://docs.mongodb.com/manual/reference/command/setFeatureCompatibilityVersion/).
        * Possible values:
-       * * `3.6` — persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
-       * * `4.0` — persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
-       * * `4.2` — persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
-       * * `4.4` — persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
+       * * `3.6` - persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
+       * * `4.0` - persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
+       * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
+       * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
@@ -6862,10 +6862,10 @@ public final class ClusterOuterClass {
        * <pre>
        * MongoDB feature compatibility version. See usage details in [MongoDB documentation](https://docs.mongodb.com/manual/reference/command/setFeatureCompatibilityVersion/).
        * Possible values:
-       * * `3.6` — persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
-       * * `4.0` — persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
-       * * `4.2` — persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
-       * * `4.4` — persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
+       * * `3.6` - persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
+       * * `4.0` - persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
+       * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
+       * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
@@ -6880,10 +6880,10 @@ public final class ClusterOuterClass {
        * <pre>
        * MongoDB feature compatibility version. See usage details in [MongoDB documentation](https://docs.mongodb.com/manual/reference/command/setFeatureCompatibilityVersion/).
        * Possible values:
-       * * `3.6` — persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
-       * * `4.0` — persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
-       * * `4.2` — persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
-       * * `4.4` — persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
+       * * `3.6` - persist data compatibility for version 3.6. After setting this option the data will not be compatible with 3.4 or lower.
+       * * `4.0` - persist data compatibility for version 4.0. After setting this option the data will not be compatible with 3.6 or lower.
+       * * `4.2` - persist data compatibility for version 4.2. After setting this option the data will not be compatible with 4.0 or lower.
+       * * `4.4` - persist data compatibility for version 4.4. After setting this option the data will not be compatible with 4.2 or lower.
        * </pre>
        *
        * <code>string feature_compatibility_version = 5;</code>
@@ -33651,9 +33651,9 @@ public final class ClusterOuterClass {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd — network HDD drive,
-     * * network-ssd — network SSD drive,
-     * * local-ssd — local SSD storage.
+     * * network-hdd - network HDD drive,
+     * * network-ssd - network SSD drive,
+     * * local-ssd - local SSD storage.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -33663,9 +33663,9 @@ public final class ClusterOuterClass {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd — network HDD drive,
-     * * network-ssd — network SSD drive,
-     * * local-ssd — local SSD storage.
+     * * network-hdd - network HDD drive,
+     * * network-ssd - network SSD drive,
+     * * local-ssd - local SSD storage.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -33827,9 +33827,9 @@ public final class ClusterOuterClass {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd — network HDD drive,
-     * * network-ssd — network SSD drive,
-     * * local-ssd — local SSD storage.
+     * * network-hdd - network HDD drive,
+     * * network-ssd - network SSD drive,
+     * * local-ssd - local SSD storage.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -33850,9 +33850,9 @@ public final class ClusterOuterClass {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd — network HDD drive,
-     * * network-ssd — network SSD drive,
-     * * local-ssd — local SSD storage.
+     * * network-hdd - network HDD drive,
+     * * network-ssd - network SSD drive,
+     * * local-ssd - local SSD storage.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -34346,9 +34346,9 @@ public final class ClusterOuterClass {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive,
-       * * local-ssd — local SSD storage.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive,
+       * * local-ssd - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -34369,9 +34369,9 @@ public final class ClusterOuterClass {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive,
-       * * local-ssd — local SSD storage.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive,
+       * * local-ssd - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -34393,9 +34393,9 @@ public final class ClusterOuterClass {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive,
-       * * local-ssd — local SSD storage.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive,
+       * * local-ssd - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -34414,9 +34414,9 @@ public final class ClusterOuterClass {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive,
-       * * local-ssd — local SSD storage.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive,
+       * * local-ssd - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -34431,9 +34431,9 @@ public final class ClusterOuterClass {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive,
-       * * local-ssd — local SSD storage.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive,
+       * * local-ssd - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>

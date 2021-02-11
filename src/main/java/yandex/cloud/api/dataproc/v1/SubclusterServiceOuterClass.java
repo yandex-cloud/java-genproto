@@ -2990,7 +2990,7 @@ public final class SubclusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+     * Name of the subcluster. The name must be unique within the cluster. The name can't be
      * changed when the subcluster is created.
      * </pre>
      *
@@ -2999,7 +2999,7 @@ public final class SubclusterServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+     * Name of the subcluster. The name must be unique within the cluster. The name can't be
      * changed when the subcluster is created.
      * </pre>
      *
@@ -3281,7 +3281,7 @@ public final class SubclusterServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+     * Name of the subcluster. The name must be unique within the cluster. The name can't be
      * changed when the subcluster is created.
      * </pre>
      *
@@ -3301,7 +3301,7 @@ public final class SubclusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+     * Name of the subcluster. The name must be unique within the cluster. The name can't be
      * changed when the subcluster is created.
      * </pre>
      *
@@ -3995,7 +3995,7 @@ public final class SubclusterServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+       * Name of the subcluster. The name must be unique within the cluster. The name can't be
        * changed when the subcluster is created.
        * </pre>
        *
@@ -4015,7 +4015,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+       * Name of the subcluster. The name must be unique within the cluster. The name can't be
        * changed when the subcluster is created.
        * </pre>
        *
@@ -4036,7 +4036,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+       * Name of the subcluster. The name must be unique within the cluster. The name can't be
        * changed when the subcluster is created.
        * </pre>
        *
@@ -4054,7 +4054,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+       * Name of the subcluster. The name must be unique within the cluster. The name can't be
        * changed when the subcluster is created.
        * </pre>
        *
@@ -4068,7 +4068,7 @@ public final class SubclusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the subcluster. The name must be unique within the cluster. The name can’t be
+       * Name of the subcluster. The name must be unique within the cluster. The name can't be
        * changed when the subcluster is created.
        * </pre>
        *

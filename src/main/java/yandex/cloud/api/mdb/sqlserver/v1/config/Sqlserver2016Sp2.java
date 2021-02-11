@@ -81,10 +81,10 @@ public final class Sqlserver2016Sp2 {
      * <pre>
      * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
      * Possible values:
-     * * 0 — do not log login attempts,
-     * * 1 — log only failed login attempts,
-     * * 2 — log only successful login attempts (not recommended),
-     * * 3 — log all login attempts (not recommended).
+     * * 0 - do not log login attempts,
+     * * 1 - log only failed login attempts,
+     * * 2 - log only successful login attempts (not recommended),
+     * * 3 - log all login attempts (not recommended).
      * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
      * </pre>
      *
@@ -95,10 +95,10 @@ public final class Sqlserver2016Sp2 {
      * <pre>
      * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
      * Possible values:
-     * * 0 — do not log login attempts,
-     * * 1 — log only failed login attempts,
-     * * 2 — log only successful login attempts (not recommended),
-     * * 3 — log all login attempts (not recommended).
+     * * 0 - do not log login attempts,
+     * * 1 - log only failed login attempts,
+     * * 2 - log only successful login attempts (not recommended),
+     * * 3 - log all login attempts (not recommended).
      * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
      * </pre>
      *
@@ -109,10 +109,10 @@ public final class Sqlserver2016Sp2 {
      * <pre>
      * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
      * Possible values:
-     * * 0 — do not log login attempts,
-     * * 1 — log only failed login attempts,
-     * * 2 — log only successful login attempts (not recommended),
-     * * 3 — log all login attempts (not recommended).
+     * * 0 - do not log login attempts,
+     * * 1 - log only failed login attempts,
+     * * 2 - log only successful login attempts (not recommended),
+     * * 3 - log all login attempts (not recommended).
      * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
      * </pre>
      *
@@ -408,10 +408,10 @@ public final class Sqlserver2016Sp2 {
      * <pre>
      * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
      * Possible values:
-     * * 0 — do not log login attempts,
-     * * 1 — log only failed login attempts,
-     * * 2 — log only successful login attempts (not recommended),
-     * * 3 — log all login attempts (not recommended).
+     * * 0 - do not log login attempts,
+     * * 1 - log only failed login attempts,
+     * * 2 - log only successful login attempts (not recommended),
+     * * 3 - log all login attempts (not recommended).
      * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
      * </pre>
      *
@@ -424,10 +424,10 @@ public final class Sqlserver2016Sp2 {
      * <pre>
      * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
      * Possible values:
-     * * 0 — do not log login attempts,
-     * * 1 — log only failed login attempts,
-     * * 2 — log only successful login attempts (not recommended),
-     * * 3 — log all login attempts (not recommended).
+     * * 0 - do not log login attempts,
+     * * 1 - log only failed login attempts,
+     * * 2 - log only successful login attempts (not recommended),
+     * * 3 - log all login attempts (not recommended).
      * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
      * </pre>
      *
@@ -440,10 +440,10 @@ public final class Sqlserver2016Sp2 {
      * <pre>
      * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
      * Possible values:
-     * * 0 — do not log login attempts,
-     * * 1 — log only failed login attempts,
-     * * 2 — log only successful login attempts (not recommended),
-     * * 3 — log all login attempts (not recommended).
+     * * 0 - do not log login attempts,
+     * * 1 - log only failed login attempts,
+     * * 2 - log only successful login attempts (not recommended),
+     * * 3 - log all login attempts (not recommended).
      * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
      * </pre>
      *
@@ -1316,10 +1316,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -1332,10 +1332,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -1352,10 +1352,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -1378,10 +1378,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -1402,10 +1402,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -1430,10 +1430,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -1454,10 +1454,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -1472,10 +1472,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -1493,10 +1493,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -3161,10 +3161,10 @@ public final class Sqlserver2016Sp2 {
      * <pre>
      * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
      * Possible values:
-     * * 0 — do not log login attempts,
-     * * 1 — log only failed login attempts,
-     * * 2 — log only successful login attempts (not recommended),
-     * * 3 — log all login attempts (not recommended).
+     * * 0 - do not log login attempts,
+     * * 1 - log only failed login attempts,
+     * * 2 - log only successful login attempts (not recommended),
+     * * 3 - log all login attempts (not recommended).
      * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
      * </pre>
      *
@@ -3175,10 +3175,10 @@ public final class Sqlserver2016Sp2 {
      * <pre>
      * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
      * Possible values:
-     * * 0 — do not log login attempts,
-     * * 1 — log only failed login attempts,
-     * * 2 — log only successful login attempts (not recommended),
-     * * 3 — log all login attempts (not recommended).
+     * * 0 - do not log login attempts,
+     * * 1 - log only failed login attempts,
+     * * 2 - log only successful login attempts (not recommended),
+     * * 3 - log all login attempts (not recommended).
      * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
      * </pre>
      *
@@ -3189,10 +3189,10 @@ public final class Sqlserver2016Sp2 {
      * <pre>
      * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
      * Possible values:
-     * * 0 — do not log login attempts,
-     * * 1 — log only failed login attempts,
-     * * 2 — log only successful login attempts (not recommended),
-     * * 3 — log all login attempts (not recommended).
+     * * 0 - do not log login attempts,
+     * * 1 - log only failed login attempts,
+     * * 2 - log only successful login attempts (not recommended),
+     * * 3 - log all login attempts (not recommended).
      * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
      * </pre>
      *
@@ -3488,10 +3488,10 @@ public final class Sqlserver2016Sp2 {
      * <pre>
      * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
      * Possible values:
-     * * 0 — do not log login attempts,
-     * * 1 — log only failed login attempts,
-     * * 2 — log only successful login attempts (not recommended),
-     * * 3 — log all login attempts (not recommended).
+     * * 0 - do not log login attempts,
+     * * 1 - log only failed login attempts,
+     * * 2 - log only successful login attempts (not recommended),
+     * * 3 - log all login attempts (not recommended).
      * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
      * </pre>
      *
@@ -3504,10 +3504,10 @@ public final class Sqlserver2016Sp2 {
      * <pre>
      * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
      * Possible values:
-     * * 0 — do not log login attempts,
-     * * 1 — log only failed login attempts,
-     * * 2 — log only successful login attempts (not recommended),
-     * * 3 — log all login attempts (not recommended).
+     * * 0 - do not log login attempts,
+     * * 1 - log only failed login attempts,
+     * * 2 - log only successful login attempts (not recommended),
+     * * 3 - log all login attempts (not recommended).
      * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
      * </pre>
      *
@@ -3520,10 +3520,10 @@ public final class Sqlserver2016Sp2 {
      * <pre>
      * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
      * Possible values:
-     * * 0 — do not log login attempts,
-     * * 1 — log only failed login attempts,
-     * * 2 — log only successful login attempts (not recommended),
-     * * 3 — log all login attempts (not recommended).
+     * * 0 - do not log login attempts,
+     * * 1 - log only failed login attempts,
+     * * 2 - log only successful login attempts (not recommended),
+     * * 3 - log all login attempts (not recommended).
      * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
      * </pre>
      *
@@ -4396,10 +4396,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -4412,10 +4412,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -4432,10 +4432,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -4458,10 +4458,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -4482,10 +4482,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -4510,10 +4510,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -4534,10 +4534,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -4552,10 +4552,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *
@@ -4573,10 +4573,10 @@ public final class Sqlserver2016Sp2 {
        * <pre>
        * Describes how to configure login auditing to monitor SQL Server Database Engine login activity.
        * Possible values:
-       * * 0 — do not log login attempts,
-       * * 1 — log only failed login attempts,
-       * * 2 — log only successful login attempts (not recommended),
-       * * 3 — log all login attempts (not recommended).
+       * * 0 - do not log login attempts,
+       * * 1 - log only failed login attempts,
+       * * 2 - log only successful login attempts (not recommended),
+       * * 3 - log all login attempts (not recommended).
        * See in-depth description in [SQL Server documentation](https://docs.microsoft.com/en-us/sql/ssms/configure-login-auditing-sql-server-management-studio?view=sql-server-2016).
        * </pre>
        *

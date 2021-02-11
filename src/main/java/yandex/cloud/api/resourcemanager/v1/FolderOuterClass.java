@@ -119,7 +119,7 @@ public final class FolderOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -127,7 +127,7 @@ public final class FolderOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -142,7 +142,7 @@ public final class FolderOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -151,7 +151,7 @@ public final class FolderOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -162,7 +162,7 @@ public final class FolderOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -691,7 +691,7 @@ public final class FolderOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -711,7 +711,7 @@ public final class FolderOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -722,7 +722,7 @@ public final class FolderOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -738,7 +738,7 @@ public final class FolderOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+     * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1779,7 +1779,7 @@ public final class FolderOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1799,7 +1799,7 @@ public final class FolderOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1810,7 +1810,7 @@ public final class FolderOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1826,7 +1826,7 @@ public final class FolderOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1850,7 +1850,7 @@ public final class FolderOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1873,7 +1873,7 @@ public final class FolderOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -1889,7 +1889,7 @@ public final class FolderOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `` key:value `` pairs. Мaximum of 64 per resource.
+       * Resource labels as `` key:value `` pairs. Maximum of 64 per resource.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>

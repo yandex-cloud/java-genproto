@@ -4608,8 +4608,8 @@ public final class VisionServiceOuterClass {
      * <pre>
      * Model to use for text detection.
      * Possible values:
-     * * page (default) — this model is suitable for detecting multiple text entries in an image.
-     * * line — this model is suitable for cropped images with one line of text.
+     * * page (default) - this model is suitable for detecting multiple text entries in an image.
+     * * line - this model is suitable for cropped images with one line of text.
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4619,8 +4619,8 @@ public final class VisionServiceOuterClass {
      * <pre>
      * Model to use for text detection.
      * Possible values:
-     * * page (default) — this model is suitable for detecting multiple text entries in an image.
-     * * line — this model is suitable for cropped images with one line of text.
+     * * page (default) - this model is suitable for detecting multiple text entries in an image.
+     * * line - this model is suitable for cropped images with one line of text.
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4775,8 +4775,8 @@ public final class VisionServiceOuterClass {
      * <pre>
      * Model to use for text detection.
      * Possible values:
-     * * page (default) — this model is suitable for detecting multiple text entries in an image.
-     * * line — this model is suitable for cropped images with one line of text.
+     * * page (default) - this model is suitable for detecting multiple text entries in an image.
+     * * line - this model is suitable for cropped images with one line of text.
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4797,8 +4797,8 @@ public final class VisionServiceOuterClass {
      * <pre>
      * Model to use for text detection.
      * Possible values:
-     * * page (default) — this model is suitable for detecting multiple text entries in an image.
-     * * line — this model is suitable for cropped images with one line of text.
+     * * page (default) - this model is suitable for detecting multiple text entries in an image.
+     * * line - this model is suitable for cropped images with one line of text.
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5302,8 +5302,8 @@ public final class VisionServiceOuterClass {
        * <pre>
        * Model to use for text detection.
        * Possible values:
-       * * page (default) — this model is suitable for detecting multiple text entries in an image.
-       * * line — this model is suitable for cropped images with one line of text.
+       * * page (default) - this model is suitable for detecting multiple text entries in an image.
+       * * line - this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5324,8 +5324,8 @@ public final class VisionServiceOuterClass {
        * <pre>
        * Model to use for text detection.
        * Possible values:
-       * * page (default) — this model is suitable for detecting multiple text entries in an image.
-       * * line — this model is suitable for cropped images with one line of text.
+       * * page (default) - this model is suitable for detecting multiple text entries in an image.
+       * * line - this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5347,8 +5347,8 @@ public final class VisionServiceOuterClass {
        * <pre>
        * Model to use for text detection.
        * Possible values:
-       * * page (default) — this model is suitable for detecting multiple text entries in an image.
-       * * line — this model is suitable for cropped images with one line of text.
+       * * page (default) - this model is suitable for detecting multiple text entries in an image.
+       * * line - this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5367,8 +5367,8 @@ public final class VisionServiceOuterClass {
        * <pre>
        * Model to use for text detection.
        * Possible values:
-       * * page (default) — this model is suitable for detecting multiple text entries in an image.
-       * * line — this model is suitable for cropped images with one line of text.
+       * * page (default) - this model is suitable for detecting multiple text entries in an image.
+       * * line - this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5383,8 +5383,8 @@ public final class VisionServiceOuterClass {
        * <pre>
        * Model to use for text detection.
        * Possible values:
-       * * page (default) — this model is suitable for detecting multiple text entries in an image.
-       * * line — this model is suitable for cropped images with one line of text.
+       * * page (default) - this model is suitable for detecting multiple text entries in an image.
+       * * line - this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>

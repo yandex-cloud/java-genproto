@@ -9876,9 +9876,9 @@ public final class PSC {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd — network HDD drive,
-     * * network-ssd — network SSD drive,
-     * * local-ssd — local SSD storage.
+     * * network-hdd - network HDD drive,
+     * * network-ssd - network SSD drive,
+     * * local-ssd - local SSD storage.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -9888,9 +9888,9 @@ public final class PSC {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd — network HDD drive,
-     * * network-ssd — network SSD drive,
-     * * local-ssd — local SSD storage.
+     * * network-hdd - network HDD drive,
+     * * network-ssd - network SSD drive,
+     * * local-ssd - local SSD storage.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -10052,9 +10052,9 @@ public final class PSC {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd — network HDD drive,
-     * * network-ssd — network SSD drive,
-     * * local-ssd — local SSD storage.
+     * * network-hdd - network HDD drive,
+     * * network-ssd - network SSD drive,
+     * * local-ssd - local SSD storage.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -10075,9 +10075,9 @@ public final class PSC {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd — network HDD drive,
-     * * network-ssd — network SSD drive,
-     * * local-ssd — local SSD storage.
+     * * network-hdd - network HDD drive,
+     * * network-ssd - network SSD drive,
+     * * local-ssd - local SSD storage.
      * </pre>
      *
      * <code>string disk_type_id = 3;</code>
@@ -10571,9 +10571,9 @@ public final class PSC {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive,
-       * * local-ssd — local SSD storage.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive,
+       * * local-ssd - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -10594,9 +10594,9 @@ public final class PSC {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive,
-       * * local-ssd — local SSD storage.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive,
+       * * local-ssd - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -10618,9 +10618,9 @@ public final class PSC {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive,
-       * * local-ssd — local SSD storage.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive,
+       * * local-ssd - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -10639,9 +10639,9 @@ public final class PSC {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive,
-       * * local-ssd — local SSD storage.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive,
+       * * local-ssd - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>
@@ -10656,9 +10656,9 @@ public final class PSC {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive,
-       * * local-ssd — local SSD storage.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive,
+       * * local-ssd - local SSD storage.
        * </pre>
        *
        * <code>string disk_type_id = 3;</code>

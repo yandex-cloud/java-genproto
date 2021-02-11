@@ -9168,7 +9168,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Сluster topics compression type.
+     * Cluster topics compression type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -9176,7 +9176,7 @@ public final class ClusterOuterClass {
     int getCompressionTypeValue();
     /**
      * <pre>
-     * Сluster topics compression type.
+     * Cluster topics compression type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -9720,7 +9720,7 @@ public final class ClusterOuterClass {
     private int compressionType_;
     /**
      * <pre>
-     * Сluster topics compression type.
+     * Cluster topics compression type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -9730,7 +9730,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Сluster topics compression type.
+     * Cluster topics compression type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -10776,7 +10776,7 @@ public final class ClusterOuterClass {
       private int compressionType_ = 0;
       /**
        * <pre>
-       * Сluster topics compression type.
+       * Cluster topics compression type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -10786,7 +10786,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Сluster topics compression type.
+       * Cluster topics compression type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -10798,7 +10798,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Сluster topics compression type.
+       * Cluster topics compression type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -10810,7 +10810,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Сluster topics compression type.
+       * Cluster topics compression type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -10826,7 +10826,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Сluster topics compression type.
+       * Cluster topics compression type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -12678,7 +12678,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Сluster topics compression type.
+     * Cluster topics compression type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -12686,7 +12686,7 @@ public final class ClusterOuterClass {
     int getCompressionTypeValue();
     /**
      * <pre>
-     * Сluster topics compression type.
+     * Cluster topics compression type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -13230,7 +13230,7 @@ public final class ClusterOuterClass {
     private int compressionType_;
     /**
      * <pre>
-     * Сluster topics compression type.
+     * Cluster topics compression type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -13240,7 +13240,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Сluster topics compression type.
+     * Cluster topics compression type.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -14286,7 +14286,7 @@ public final class ClusterOuterClass {
       private int compressionType_ = 0;
       /**
        * <pre>
-       * Сluster topics compression type.
+       * Cluster topics compression type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -14296,7 +14296,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Сluster topics compression type.
+       * Cluster topics compression type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -14308,7 +14308,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Сluster topics compression type.
+       * Cluster topics compression type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -14320,7 +14320,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Сluster topics compression type.
+       * Cluster topics compression type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>
@@ -14336,7 +14336,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Сluster topics compression type.
+       * Cluster topics compression type.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.kafka.v1.CompressionType compression_type = 1;</code>

@@ -190,8 +190,8 @@ public final class Common {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd — network HDD drive,
-     * * network-ssd — network SSD drive.
+     * * network-hdd - network HDD drive,
+     * * network-ssd - network SSD drive.
      * </pre>
      *
      * <code>string disk_type_id = 2;</code>
@@ -201,8 +201,8 @@ public final class Common {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd — network HDD drive,
-     * * network-ssd — network SSD drive.
+     * * network-hdd - network HDD drive,
+     * * network-ssd - network SSD drive.
      * </pre>
      *
      * <code>string disk_type_id = 2;</code>
@@ -360,8 +360,8 @@ public final class Common {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd — network HDD drive,
-     * * network-ssd — network SSD drive.
+     * * network-hdd - network HDD drive,
+     * * network-ssd - network SSD drive.
      * </pre>
      *
      * <code>string disk_type_id = 2;</code>
@@ -382,8 +382,8 @@ public final class Common {
      * <pre>
      * Type of the storage environment for the host.
      * Possible values:
-     * * network-hdd — network HDD drive,
-     * * network-ssd — network SSD drive.
+     * * network-hdd - network HDD drive,
+     * * network-ssd - network SSD drive.
      * </pre>
      *
      * <code>string disk_type_id = 2;</code>
@@ -852,8 +852,8 @@ public final class Common {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive.
        * </pre>
        *
        * <code>string disk_type_id = 2;</code>
@@ -874,8 +874,8 @@ public final class Common {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive.
        * </pre>
        *
        * <code>string disk_type_id = 2;</code>
@@ -897,8 +897,8 @@ public final class Common {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive.
        * </pre>
        *
        * <code>string disk_type_id = 2;</code>
@@ -917,8 +917,8 @@ public final class Common {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive.
        * </pre>
        *
        * <code>string disk_type_id = 2;</code>
@@ -933,8 +933,8 @@ public final class Common {
        * <pre>
        * Type of the storage environment for the host.
        * Possible values:
-       * * network-hdd — network HDD drive,
-       * * network-ssd — network SSD drive.
+       * * network-hdd - network HDD drive,
+       * * network-ssd - network SSD drive.
        * </pre>
        *
        * <code>string disk_type_id = 2;</code>

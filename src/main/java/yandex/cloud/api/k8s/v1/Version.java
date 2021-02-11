@@ -39,7 +39,7 @@ public final class Version {
     /**
      * <pre>
      * Newer revisions may include Kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
-     * as some internal component updates — new features or bug fixes in Yandex specific
+     * as some internal component updates - new features or bug fixes in Yandex specific
      * components either on the master or nodes.
      * </pre>
      *
@@ -221,7 +221,7 @@ public final class Version {
     /**
      * <pre>
      * Newer revisions may include Kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
-     * as some internal component updates — new features or bug fixes in Yandex specific
+     * as some internal component updates - new features or bug fixes in Yandex specific
      * components either on the master or nodes.
      * </pre>
      *
@@ -738,7 +738,7 @@ public final class Version {
       /**
        * <pre>
        * Newer revisions may include Kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
-       * as some internal component updates — new features or bug fixes in Yandex specific
+       * as some internal component updates - new features or bug fixes in Yandex specific
        * components either on the master or nodes.
        * </pre>
        *
@@ -750,7 +750,7 @@ public final class Version {
       /**
        * <pre>
        * Newer revisions may include Kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
-       * as some internal component updates — new features or bug fixes in Yandex specific
+       * as some internal component updates - new features or bug fixes in Yandex specific
        * components either on the master or nodes.
        * </pre>
        *
@@ -765,7 +765,7 @@ public final class Version {
       /**
        * <pre>
        * Newer revisions may include Kubernetes patches (e.g 1.15.1 -&gt; 1.15.2) as well
-       * as some internal component updates — new features or bug fixes in Yandex specific
+       * as some internal component updates - new features or bug fixes in Yandex specific
        * components either on the master or nodes.
        * </pre>
        *

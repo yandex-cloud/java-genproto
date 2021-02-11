@@ -158,36 +158,36 @@ public final class RepositoryServiceGrpc {
      return getListAccessBindingsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest,
-      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpsertMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "Create",
-      requestType = yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.class,
+      fullMethodName = SERVICE_NAME + '/' + "Upsert",
+      requestType = yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest.class,
       responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest,
-      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
-    if ((getCreateMethod = RepositoryServiceGrpc.getCreateMethod) == null) {
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpsertMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpsertMethod;
+    if ((getUpsertMethod = RepositoryServiceGrpc.getUpsertMethod) == null) {
       synchronized (RepositoryServiceGrpc.class) {
-        if ((getCreateMethod = RepositoryServiceGrpc.getCreateMethod) == null) {
-          RepositoryServiceGrpc.getCreateMethod = getCreateMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+        if ((getUpsertMethod = RepositoryServiceGrpc.getUpsertMethod) == null) {
+          RepositoryServiceGrpc.getUpsertMethod = getUpsertMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.containerregistry.v1.RepositoryService", "Create"))
+                  "yandex.cloud.containerregistry.v1.RepositoryService", "Upsert"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest.getDefaultInstance()))
+                  yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-                  .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("Create"))
+                  .setSchemaDescriptor(new RepositoryServiceMethodDescriptorSupplier("Upsert"))
                   .build();
           }
         }
      }
-     return getCreateMethod;
+     return getUpsertMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.DeleteRepositoryRequest,
@@ -360,12 +360,12 @@ public final class RepositoryServiceGrpc {
 
     /**
      * <pre>
-     * Creates a repository in the specified registry.
+     * Upserts a repository in the specified registry.
      * </pre>
      */
-    public void create(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest request,
+    public void upsert(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpsertMethod(), responseObserver);
     }
 
     /**
@@ -429,12 +429,12 @@ public final class RepositoryServiceGrpc {
                 yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
                   this, METHODID_LIST_ACCESS_BINDINGS)))
           .addMethod(
-            getCreateMethod(),
+            getUpsertMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest,
+                yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
-                  this, METHODID_CREATE)))
+                  this, METHODID_UPSERT)))
           .addMethod(
             getDeleteMethod(),
             asyncUnaryCall(
@@ -529,13 +529,13 @@ public final class RepositoryServiceGrpc {
 
     /**
      * <pre>
-     * Creates a repository in the specified registry.
+     * Upserts a repository in the specified registry.
      * </pre>
      */
-    public void create(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest request,
+    public void upsert(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUpsertMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -637,12 +637,12 @@ public final class RepositoryServiceGrpc {
 
     /**
      * <pre>
-     * Creates a repository in the specified registry.
+     * Upserts a repository in the specified registry.
      * </pre>
      */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest request) {
+    public yandex.cloud.api.operation.OperationOuterClass.Operation upsert(yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest request) {
       return blockingUnaryCall(
-          getChannel(), getCreateMethod(), getCallOptions(), request);
+          getChannel(), getUpsertMethod(), getCallOptions(), request);
     }
 
     /**
@@ -745,13 +745,13 @@ public final class RepositoryServiceGrpc {
 
     /**
      * <pre>
-     * Creates a repository in the specified registry.
+     * Upserts a repository in the specified registry.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
-        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> upsert(
+        yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getCreateMethod(), getCallOptions()), request);
+          getChannel().newCall(getUpsertMethod(), getCallOptions()), request);
     }
 
     /**
@@ -792,7 +792,7 @@ public final class RepositoryServiceGrpc {
   private static final int METHODID_GET_BY_NAME = 1;
   private static final int METHODID_LIST = 2;
   private static final int METHODID_LIST_ACCESS_BINDINGS = 3;
-  private static final int METHODID_CREATE = 4;
+  private static final int METHODID_UPSERT = 4;
   private static final int METHODID_DELETE = 5;
   private static final int METHODID_SET_ACCESS_BINDINGS = 6;
   private static final int METHODID_UPDATE_ACCESS_BINDINGS = 7;
@@ -830,8 +830,8 @@ public final class RepositoryServiceGrpc {
           serviceImpl.listAccessBindings((yandex.cloud.api.access.Access.ListAccessBindingsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse>) responseObserver);
           break;
-        case METHODID_CREATE:
-          serviceImpl.create((yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.CreateRepositoryRequest) request,
+        case METHODID_UPSERT:
+          serviceImpl.upsert((yandex.cloud.api.containerregistry.v1.RepositoryServiceOuterClass.UpsertRepositoryRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE:
@@ -911,7 +911,7 @@ public final class RepositoryServiceGrpc {
               .addMethod(getGetByNameMethod())
               .addMethod(getListMethod())
               .addMethod(getListAccessBindingsMethod())
-              .addMethod(getCreateMethod())
+              .addMethod(getUpsertMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())

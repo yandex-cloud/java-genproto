@@ -7895,7 +7895,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the cluster. The name must be unique within the folder.
-     * The name can’t be changed after the Data Proc cluster is created.
+     * The name can't be changed after the Data Proc cluster is created.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -7904,7 +7904,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the cluster. The name must be unique within the folder.
-     * The name can’t be changed after the Data Proc cluster is created.
+     * The name can't be changed after the Data Proc cluster is created.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -8329,7 +8329,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the cluster. The name must be unique within the folder.
-     * The name can’t be changed after the Data Proc cluster is created.
+     * The name can't be changed after the Data Proc cluster is created.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -8349,7 +8349,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the cluster. The name must be unique within the folder.
-     * The name can’t be changed after the Data Proc cluster is created.
+     * The name can't be changed after the Data Proc cluster is created.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -9342,7 +9342,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the cluster. The name must be unique within the folder.
-       * The name can’t be changed after the Data Proc cluster is created.
+       * The name can't be changed after the Data Proc cluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -9362,7 +9362,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the cluster. The name must be unique within the folder.
-       * The name can’t be changed after the Data Proc cluster is created.
+       * The name can't be changed after the Data Proc cluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -9383,7 +9383,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the cluster. The name must be unique within the folder.
-       * The name can’t be changed after the Data Proc cluster is created.
+       * The name can't be changed after the Data Proc cluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -9401,7 +9401,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the cluster. The name must be unique within the folder.
-       * The name can’t be changed after the Data Proc cluster is created.
+       * The name can't be changed after the Data Proc cluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
@@ -9415,7 +9415,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the cluster. The name must be unique within the folder.
-       * The name can’t be changed after the Data Proc cluster is created.
+       * The name can't be changed after the Data Proc cluster is created.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>

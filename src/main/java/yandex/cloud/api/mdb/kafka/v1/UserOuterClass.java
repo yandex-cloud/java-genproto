@@ -103,7 +103,7 @@ public final class UserOuterClass {
   /**
    * <pre>
    * A Kafka user.
-   * For more information, see the [Operations → Accounts](/docs/managed-kafka/operations/cluster-accounts) section of the documentation.
+   * For more information, see the [Operations -&gt; Accounts](/docs/managed-kafka/operations/cluster-accounts) section of the documentation.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.User}
@@ -526,7 +526,7 @@ public final class UserOuterClass {
     /**
      * <pre>
      * A Kafka user.
-     * For more information, see the [Operations → Accounts](/docs/managed-kafka/operations/cluster-accounts) section of the documentation.
+     * For more information, see the [Operations -&gt; Accounts](/docs/managed-kafka/operations/cluster-accounts) section of the documentation.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.mdb.kafka.v1.User}
