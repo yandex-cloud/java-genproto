@@ -8912,39 +8912,29 @@ public final class DnsZoneServiceOuterClass {
         getDnsZoneIdBytes();
 
     /**
-     * <code>string sub_domain = 2 [(.yandex.cloud.length) = "&lt;=255"];</code>
-     */
-    java.lang.String getSubDomain();
-    /**
-     * <code>string sub_domain = 2 [(.yandex.cloud.length) = "&lt;=255"];</code>
-     */
-    com.google.protobuf.ByteString
-        getSubDomainBytes();
-
-    /**
-     * <code>string type = 3 [(.yandex.cloud.length) = "&lt;=10"];</code>
-     */
-    java.lang.String getType();
-    /**
-     * <code>string type = 3 [(.yandex.cloud.length) = "&lt;=10"];</code>
-     */
-    com.google.protobuf.ByteString
-        getTypeBytes();
-
-    /**
-     * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     long getPageSize();
 
     /**
-     * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getPageToken();
     /**
-     * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
+
+    /**
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    java.lang.String getFilter();
+    /**
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.dns.v1.ListDnsZoneRecordSetsRequest}
@@ -8960,10 +8950,9 @@ public final class DnsZoneServiceOuterClass {
     }
     private ListDnsZoneRecordSetsRequest() {
       dnsZoneId_ = "";
-      subDomain_ = "";
-      type_ = "";
       pageSize_ = 0L;
       pageToken_ = "";
+      filter_ = "";
     }
 
     @java.lang.Override
@@ -8996,27 +8985,21 @@ public final class DnsZoneServiceOuterClass {
               dnsZoneId_ = s;
               break;
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 16: {
 
-              subDomain_ = s;
+              pageSize_ = input.readInt64();
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              type_ = s;
+              pageToken_ = s;
               break;
             }
-            case 32: {
-
-              pageSize_ = input.readInt64();
-              break;
-            }
-            case 42: {
+            case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              pageToken_ = s;
+              filter_ = s;
               break;
             }
             default: {
@@ -9085,87 +9068,19 @@ public final class DnsZoneServiceOuterClass {
       }
     }
 
-    public static final int SUB_DOMAIN_FIELD_NUMBER = 2;
-    private volatile java.lang.Object subDomain_;
-    /**
-     * <code>string sub_domain = 2 [(.yandex.cloud.length) = "&lt;=255"];</code>
-     */
-    public java.lang.String getSubDomain() {
-      java.lang.Object ref = subDomain_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        subDomain_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string sub_domain = 2 [(.yandex.cloud.length) = "&lt;=255"];</code>
-     */
-    public com.google.protobuf.ByteString
-        getSubDomainBytes() {
-      java.lang.Object ref = subDomain_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        subDomain_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TYPE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object type_;
-    /**
-     * <code>string type = 3 [(.yandex.cloud.length) = "&lt;=10"];</code>
-     */
-    public java.lang.String getType() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        type_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string type = 3 [(.yandex.cloud.length) = "&lt;=10"];</code>
-     */
-    public com.google.protobuf.ByteString
-        getTypeBytes() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        type_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PAGE_SIZE_FIELD_NUMBER = 4;
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
-     * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     public long getPageSize() {
       return pageSize_;
     }
 
-    public static final int PAGE_TOKEN_FIELD_NUMBER = 5;
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
-     * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getPageToken() {
       java.lang.Object ref = pageToken_;
@@ -9180,7 +9095,7 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
-     * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
         getPageTokenBytes() {
@@ -9190,6 +9105,40 @@ public final class DnsZoneServiceOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object filter_;
+    /**
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -9213,17 +9162,14 @@ public final class DnsZoneServiceOuterClass {
       if (!getDnsZoneIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dnsZoneId_);
       }
-      if (!getSubDomainBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subDomain_);
-      }
-      if (!getTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
-      }
       if (pageSize_ != 0L) {
-        output.writeInt64(4, pageSize_);
+        output.writeInt64(2, pageSize_);
       }
       if (!getPageTokenBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, pageToken_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      if (!getFilterBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
       unknownFields.writeTo(output);
     }
@@ -9237,18 +9183,15 @@ public final class DnsZoneServiceOuterClass {
       if (!getDnsZoneIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dnsZoneId_);
       }
-      if (!getSubDomainBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subDomain_);
-      }
-      if (!getTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
-      }
       if (pageSize_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, pageSize_);
+          .computeInt64Size(2, pageSize_);
       }
       if (!getPageTokenBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, pageToken_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (!getFilterBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9268,14 +9211,12 @@ public final class DnsZoneServiceOuterClass {
       boolean result = true;
       result = result && getDnsZoneId()
           .equals(other.getDnsZoneId());
-      result = result && getSubDomain()
-          .equals(other.getSubDomain());
-      result = result && getType()
-          .equals(other.getType());
       result = result && (getPageSize()
           == other.getPageSize());
       result = result && getPageToken()
           .equals(other.getPageToken());
+      result = result && getFilter()
+          .equals(other.getFilter());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -9289,15 +9230,13 @@ public final class DnsZoneServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DNS_ZONE_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDnsZoneId().hashCode();
-      hash = (37 * hash) + SUB_DOMAIN_FIELD_NUMBER;
-      hash = (53 * hash) + getSubDomain().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getType().hashCode();
       hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getPageSize());
       hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
       hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9433,13 +9372,11 @@ public final class DnsZoneServiceOuterClass {
         super.clear();
         dnsZoneId_ = "";
 
-        subDomain_ = "";
-
-        type_ = "";
-
         pageSize_ = 0L;
 
         pageToken_ = "";
+
+        filter_ = "";
 
         return this;
       }
@@ -9468,10 +9405,9 @@ public final class DnsZoneServiceOuterClass {
       public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest buildPartial() {
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest result = new yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest(this);
         result.dnsZoneId_ = dnsZoneId_;
-        result.subDomain_ = subDomain_;
-        result.type_ = type_;
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
+        result.filter_ = filter_;
         onBuilt();
         return result;
       }
@@ -9524,19 +9460,15 @@ public final class DnsZoneServiceOuterClass {
           dnsZoneId_ = other.dnsZoneId_;
           onChanged();
         }
-        if (!other.getSubDomain().isEmpty()) {
-          subDomain_ = other.subDomain_;
-          onChanged();
-        }
-        if (!other.getType().isEmpty()) {
-          type_ = other.type_;
-          onChanged();
-        }
         if (other.getPageSize() != 0L) {
           setPageSize(other.getPageSize());
         }
         if (!other.getPageToken().isEmpty()) {
           pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -9637,153 +9569,15 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
 
-      private java.lang.Object subDomain_ = "";
-      /**
-       * <code>string sub_domain = 2 [(.yandex.cloud.length) = "&lt;=255"];</code>
-       */
-      public java.lang.String getSubDomain() {
-        java.lang.Object ref = subDomain_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          subDomain_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string sub_domain = 2 [(.yandex.cloud.length) = "&lt;=255"];</code>
-       */
-      public com.google.protobuf.ByteString
-          getSubDomainBytes() {
-        java.lang.Object ref = subDomain_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          subDomain_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string sub_domain = 2 [(.yandex.cloud.length) = "&lt;=255"];</code>
-       */
-      public Builder setSubDomain(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        subDomain_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string sub_domain = 2 [(.yandex.cloud.length) = "&lt;=255"];</code>
-       */
-      public Builder clearSubDomain() {
-        
-        subDomain_ = getDefaultInstance().getSubDomain();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string sub_domain = 2 [(.yandex.cloud.length) = "&lt;=255"];</code>
-       */
-      public Builder setSubDomainBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        subDomain_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object type_ = "";
-      /**
-       * <code>string type = 3 [(.yandex.cloud.length) = "&lt;=10"];</code>
-       */
-      public java.lang.String getType() {
-        java.lang.Object ref = type_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          type_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string type = 3 [(.yandex.cloud.length) = "&lt;=10"];</code>
-       */
-      public com.google.protobuf.ByteString
-          getTypeBytes() {
-        java.lang.Object ref = type_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          type_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string type = 3 [(.yandex.cloud.length) = "&lt;=10"];</code>
-       */
-      public Builder setType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string type = 3 [(.yandex.cloud.length) = "&lt;=10"];</code>
-       */
-      public Builder clearType() {
-        
-        type_ = getDefaultInstance().getType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string type = 3 [(.yandex.cloud.length) = "&lt;=10"];</code>
-       */
-      public Builder setTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        type_ = value;
-        onChanged();
-        return this;
-      }
-
       private long pageSize_ ;
       /**
-       * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
-       * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder setPageSize(long value) {
         
@@ -9792,7 +9586,7 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
-       * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder clearPageSize() {
         
@@ -9803,7 +9597,7 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
-       * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getPageToken() {
         java.lang.Object ref = pageToken_;
@@ -9818,7 +9612,7 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
-       * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
           getPageTokenBytes() {
@@ -9834,7 +9628,7 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
-       * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setPageToken(
           java.lang.String value) {
@@ -9847,7 +9641,7 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
-       * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearPageToken() {
         
@@ -9856,7 +9650,7 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
-       * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setPageTokenBytes(
           com.google.protobuf.ByteString value) {
@@ -9866,6 +9660,75 @@ public final class DnsZoneServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
         onChanged();
         return this;
       }
@@ -16916,93 +16779,92 @@ public final class DnsZoneServiceOuterClass {
       "\023\n\013dns_zone_id\030\001 \001(\t\"r\n\032GetDnsZoneRecord" +
       "SetRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022" +
       "\033\n\004name\030\002 \001(\tB\r\350\3071\001\212\3101\005<=255\022\032\n\004type\030\003 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=10\"\261\001\n\034ListDnsZoneRecordSe" +
+      "(\tB\014\350\3071\001\212\3101\004<=10\"\226\001\n\034ListDnsZoneRecordSe" +
       "tsRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\035" +
-      "\n\nsub_domain\030\002 \001(\tB\t\212\3101\005<=255\022\026\n\004type\030\003 " +
-      "\001(\tB\010\212\3101\004<=10\022\035\n\tpage_size\030\004 \001(\003B\n\372\3071\006<=" +
-      "1000\022\036\n\npage_token\030\005 \001(\tB\n\212\3101\006<=1000\"m\n\035" +
-      "ListDnsZoneRecordSetsResponse\0223\n\013record_" +
-      "sets\030\001 \003(\0132\036.yandex.cloud.dns.v1.RecordS" +
-      "et\022\027\n\017next_page_token\030\002 \001(\t\"\264\001\n\027UpdateRe" +
-      "cordSetsRequest\022\033\n\013dns_zone_id\030\001 \001(\tB\006\212\310" +
-      "1\00220\022=\n\tdeletions\030\002 \003(\0132\036.yandex.cloud.d" +
-      "ns.v1.RecordSetB\n\202\3101\006<=1000\022=\n\tadditions" +
-      "\030\003 \003(\0132\036.yandex.cloud.dns.v1.RecordSetB\n" +
-      "\202\3101\006<=1000\"\032\n\030UpdateRecordSetsMetadata\"\363" +
-      "\001\n\027UpsertRecordSetsRequest\022\033\n\013dns_zone_i" +
-      "d\030\001 \001(\tB\006\212\3101\00220\022=\n\tdeletions\030\002 \003(\0132\036.yan" +
-      "dex.cloud.dns.v1.RecordSetB\n\202\3101\006<=1000\022@" +
-      "\n\014replacements\030\003 \003(\0132\036.yandex.cloud.dns." +
-      "v1.RecordSetB\n\202\3101\006<=1000\022:\n\006merges\030\004 \003(\013" +
-      "2\036.yandex.cloud.dns.v1.RecordSetB\n\202\3101\006<=" +
-      "1000\"\032\n\030UpsertRecordSetsMetadata\"\226\001\n\034Lis" +
-      "tDnsZoneOperationsRequest\022\033\n\013dns_zone_id" +
-      "\030\001 \001(\tB\006\212\3101\00220\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060" +
-      "-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n" +
-      "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListDnsZone" +
-      "OperationsResponse\0225\n\noperations\030\001 \003(\0132!" +
-      ".yandex.cloud.operation.Operation\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t2\360\021\n\016DnsZoneService\022p\n" +
-      "\003Get\022&.yandex.cloud.dns.v1.GetDnsZoneReq" +
-      "uest\032\034.yandex.cloud.dns.v1.DnsZone\"#\202\323\344\223" +
-      "\002\035\022\033/dns/v1/zones/{dns_zone_id}\022r\n\004List\022" +
-      "(.yandex.cloud.dns.v1.ListDnsZonesReques" +
-      "t\032).yandex.cloud.dns.v1.ListDnsZonesResp" +
-      "onse\"\025\202\323\344\223\002\017\022\r/dns/v1/zones\022\224\001\n\006Create\022)" +
-      ".yandex.cloud.dns.v1.CreateDnsZoneReques" +
-      "t\032!.yandex.cloud.operation.Operation\"<\202\323" +
-      "\344\223\002\022\"\r/dns/v1/zones:\001*\262\322* \n\025CreateDnsZon" +
-      "eMetadata\022\007DnsZone\022\242\001\n\006Update\022).yandex.c" +
-      "loud.dns.v1.UpdateDnsZoneRequest\032!.yande" +
-      "x.cloud.operation.Operation\"J\202\323\344\223\002 2\033/dn" +
-      "s/v1/zones/{dns_zone_id}:\001*\262\322* \n\025UpdateD" +
-      "nsZoneMetadata\022\007DnsZone\022\255\001\n\006Delete\022).yan" +
-      "dex.cloud.dns.v1.DeleteDnsZoneRequest\032!." +
-      "yandex.cloud.operation.Operation\"U\202\323\344\223\002\035" +
-      "*\033/dns/v1/zones/{dns_zone_id}\262\322*.\n\025Delet" +
-      "eDnsZoneMetadata\022\025google.protobuf.Empty\022" +
-      "\221\001\n\014GetRecordSet\022/.yandex.cloud.dns.v1.G" +
-      "etDnsZoneRecordSetRequest\032\036.yandex.cloud" +
-      ".dns.v1.RecordSet\"0\202\323\344\223\002*\022(/dns/v1/zones" +
-      "/{dns_zone_id}:getRecordSet\022\253\001\n\016ListReco" +
-      "rdSets\0221.yandex.cloud.dns.v1.ListDnsZone" +
-      "RecordSetsRequest\0322.yandex.cloud.dns.v1." +
-      "ListDnsZoneRecordSetsResponse\"2\202\323\344\223\002,\022*/" +
-      "dns/v1/zones/{dns_zone_id}:listRecordSet" +
-      "s\022\321\001\n\020UpdateRecordSets\022,.yandex.cloud.dn" +
-      "s.v1.UpdateRecordSetsRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"l\202\323\344\223\0021\",/dns/v1" +
-      "/zones/{dns_zone_id}:updateRecordSets:\001*" +
-      "\262\322*1\n\030UpdateRecordSetsMetadata\022\025google.p" +
-      "rotobuf.Empty\022\321\001\n\020UpsertRecordSets\022,.yan" +
-      "dex.cloud.dns.v1.UpsertRecordSetsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"l\202\323\344" +
-      "\223\0021\",/dns/v1/zones/{dns_zone_id}:upsertR" +
-      "ecordSets:\001*\262\322*1\n\030UpsertRecordSetsMetada" +
-      "ta\022\025google.protobuf.Empty\022\247\001\n\016ListOperat" +
-      "ions\0221.yandex.cloud.dns.v1.ListDnsZoneOp" +
-      "erationsRequest\0322.yandex.cloud.dns.v1.Li" +
-      "stDnsZoneOperationsResponse\".\202\323\344\223\002(\022&/dn" +
-      "s/v1/zones/{dns_zone_id}/operations\022\255\001\n\022" +
-      "ListAccessBindings\022..yandex.cloud.access" +
-      ".ListAccessBindingsRequest\032/.yandex.clou" +
-      "d.access.ListAccessBindingsResponse\"6\202\323\344" +
-      "\223\0020\022./dns/v1/zones/{resource_id}:listAcc" +
-      "essBindings\022\334\001\n\021SetAccessBindings\022-.yand" +
-      "ex.cloud.access.SetAccessBindingsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"u\202\323\344" +
-      "\223\0022\"-/dns/v1/zones/{resource_id}:setAcce" +
-      "ssBindings:\001*\262\322*9\n access.SetAccessBindi" +
-      "ngsMetadata\022\025google.protobuf.Empty\022\350\001\n\024U" +
-      "pdateAccessBindings\0220.yandex.cloud.acces" +
-      "s.UpdateAccessBindingsRequest\032!.yandex.c" +
-      "loud.operation.Operation\"{\202\323\344\223\0025\"0/dns/v" +
-      "1/zones/{resource_id}:updateAccessBindin" +
-      "gs:\001*\262\322*<\n#access.UpdateAccessBindingsMe" +
-      "tadata\022\025google.protobuf.EmptyBV\n\027yandex." +
-      "cloud.api.dns.v1Z;github.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/dns/v1;dnsb\006p" +
-      "roto3"
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\036\n\npage_to" +
+      "ken\030\003 \001(\tB\n\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212" +
+      "\3101\006<=1000\"m\n\035ListDnsZoneRecordSetsRespon" +
+      "se\0223\n\013record_sets\030\001 \003(\0132\036.yandex.cloud.d" +
+      "ns.v1.RecordSet\022\027\n\017next_page_token\030\002 \001(\t" +
+      "\"\264\001\n\027UpdateRecordSetsRequest\022\033\n\013dns_zone" +
+      "_id\030\001 \001(\tB\006\212\3101\00220\022=\n\tdeletions\030\002 \003(\0132\036.y" +
+      "andex.cloud.dns.v1.RecordSetB\n\202\3101\006<=1000" +
+      "\022=\n\tadditions\030\003 \003(\0132\036.yandex.cloud.dns.v" +
+      "1.RecordSetB\n\202\3101\006<=1000\"\032\n\030UpdateRecordS" +
+      "etsMetadata\"\363\001\n\027UpsertRecordSetsRequest\022" +
+      "\033\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022=\n\tdeletion" +
+      "s\030\002 \003(\0132\036.yandex.cloud.dns.v1.RecordSetB" +
+      "\n\202\3101\006<=1000\022@\n\014replacements\030\003 \003(\0132\036.yand" +
+      "ex.cloud.dns.v1.RecordSetB\n\202\3101\006<=1000\022:\n" +
+      "\006merges\030\004 \003(\0132\036.yandex.cloud.dns.v1.Reco" +
+      "rdSetB\n\202\3101\006<=1000\"\032\n\030UpsertRecordSetsMet" +
+      "adata\"\226\001\n\034ListDnsZoneOperationsRequest\022\033" +
+      "\n\013dns_zone_id\030\001 \001(\tB\006\212\3101\00220\022\035\n\tpage_size" +
+      "\030\002 \001(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n" +
+      "\212\3101\006<=1000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o" +
+      "\n\035ListDnsZoneOperationsResponse\0225\n\nopera" +
+      "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
+      "ration\022\027\n\017next_page_token\030\002 \001(\t2\360\021\n\016DnsZ" +
+      "oneService\022p\n\003Get\022&.yandex.cloud.dns.v1." +
+      "GetDnsZoneRequest\032\034.yandex.cloud.dns.v1." +
+      "DnsZone\"#\202\323\344\223\002\035\022\033/dns/v1/zones/{dns_zone" +
+      "_id}\022r\n\004List\022(.yandex.cloud.dns.v1.ListD" +
+      "nsZonesRequest\032).yandex.cloud.dns.v1.Lis" +
+      "tDnsZonesResponse\"\025\202\323\344\223\002\017\022\r/dns/v1/zones" +
+      "\022\224\001\n\006Create\022).yandex.cloud.dns.v1.Create" +
+      "DnsZoneRequest\032!.yandex.cloud.operation." +
+      "Operation\"<\202\323\344\223\002\022\"\r/dns/v1/zones:\001*\262\322* \n" +
+      "\025CreateDnsZoneMetadata\022\007DnsZone\022\242\001\n\006Upda" +
+      "te\022).yandex.cloud.dns.v1.UpdateDnsZoneRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"J\202\323\344\223\002 2\033/dns/v1/zones/{dns_zone_id}:\001*" +
+      "\262\322* \n\025UpdateDnsZoneMetadata\022\007DnsZone\022\255\001\n" +
+      "\006Delete\022).yandex.cloud.dns.v1.DeleteDnsZ" +
+      "oneRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"U\202\323\344\223\002\035*\033/dns/v1/zones/{dns_zone_i" +
+      "d}\262\322*.\n\025DeleteDnsZoneMetadata\022\025google.pr" +
+      "otobuf.Empty\022\221\001\n\014GetRecordSet\022/.yandex.c" +
+      "loud.dns.v1.GetDnsZoneRecordSetRequest\032\036" +
+      ".yandex.cloud.dns.v1.RecordSet\"0\202\323\344\223\002*\022(" +
+      "/dns/v1/zones/{dns_zone_id}:getRecordSet" +
+      "\022\253\001\n\016ListRecordSets\0221.yandex.cloud.dns.v" +
+      "1.ListDnsZoneRecordSetsRequest\0322.yandex." +
+      "cloud.dns.v1.ListDnsZoneRecordSetsRespon" +
+      "se\"2\202\323\344\223\002,\022*/dns/v1/zones/{dns_zone_id}:" +
+      "listRecordSets\022\321\001\n\020UpdateRecordSets\022,.ya" +
+      "ndex.cloud.dns.v1.UpdateRecordSetsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"l\202\323" +
+      "\344\223\0021\",/dns/v1/zones/{dns_zone_id}:update" +
+      "RecordSets:\001*\262\322*1\n\030UpdateRecordSetsMetad" +
+      "ata\022\025google.protobuf.Empty\022\321\001\n\020UpsertRec" +
+      "ordSets\022,.yandex.cloud.dns.v1.UpsertReco" +
+      "rdSetsRequest\032!.yandex.cloud.operation.O" +
+      "peration\"l\202\323\344\223\0021\",/dns/v1/zones/{dns_zon" +
+      "e_id}:upsertRecordSets:\001*\262\322*1\n\030UpsertRec" +
+      "ordSetsMetadata\022\025google.protobuf.Empty\022\247" +
+      "\001\n\016ListOperations\0221.yandex.cloud.dns.v1." +
+      "ListDnsZoneOperationsRequest\0322.yandex.cl" +
+      "oud.dns.v1.ListDnsZoneOperationsResponse" +
+      "\".\202\323\344\223\002(\022&/dns/v1/zones/{dns_zone_id}/op" +
+      "erations\022\255\001\n\022ListAccessBindings\022..yandex" +
+      ".cloud.access.ListAccessBindingsRequest\032" +
+      "/.yandex.cloud.access.ListAccessBindings" +
+      "Response\"6\202\323\344\223\0020\022./dns/v1/zones/{resourc" +
+      "e_id}:listAccessBindings\022\334\001\n\021SetAccessBi" +
+      "ndings\022-.yandex.cloud.access.SetAccessBi" +
+      "ndingsRequest\032!.yandex.cloud.operation.O" +
+      "peration\"u\202\323\344\223\0022\"-/dns/v1/zones/{resourc" +
+      "e_id}:setAccessBindings:\001*\262\322*9\n access.S" +
+      "etAccessBindingsMetadata\022\025google.protobu" +
+      "f.Empty\022\350\001\n\024UpdateAccessBindings\0220.yande" +
+      "x.cloud.access.UpdateAccessBindingsReque" +
+      "st\032!.yandex.cloud.operation.Operation\"{\202" +
+      "\323\344\223\0025\"0/dns/v1/zones/{resource_id}:updat" +
+      "eAccessBindings:\001*\262\322*<\n#access.UpdateAcc" +
+      "essBindingsMetadata\022\025google.protobuf.Emp" +
+      "tyBV\n\027yandex.cloud.api.dns.v1Z;github.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "dns/v1;dnsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17100,7 +16962,7 @@ public final class DnsZoneServiceOuterClass {
     internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsRequest_descriptor,
-        new java.lang.String[] { "DnsZoneId", "SubDomain", "Type", "PageSize", "PageToken", });
+        new java.lang.String[] { "DnsZoneId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsResponse_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_dns_v1_ListDnsZoneRecordSetsResponse_fieldAccessorTable = new

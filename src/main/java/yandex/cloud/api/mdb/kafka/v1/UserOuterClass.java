@@ -2525,7 +2525,7 @@ public final class UserOuterClass {
 
     /**
      * <pre>
-     * Name of the topic that the permission grants access to.
+     * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
      * To get the topic name, make a [TopicService.List] request.
      * </pre>
      *
@@ -2534,7 +2534,7 @@ public final class UserOuterClass {
     java.lang.String getTopicName();
     /**
      * <pre>
-     * Name of the topic that the permission grants access to.
+     * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
      * To get the topic name, make a [TopicService.List] request.
      * </pre>
      *
@@ -2772,7 +2772,7 @@ public final class UserOuterClass {
     private volatile java.lang.Object topicName_;
     /**
      * <pre>
-     * Name of the topic that the permission grants access to.
+     * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
      * To get the topic name, make a [TopicService.List] request.
      * </pre>
      *
@@ -2792,7 +2792,7 @@ public final class UserOuterClass {
     }
     /**
      * <pre>
-     * Name of the topic that the permission grants access to.
+     * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
      * To get the topic name, make a [TopicService.List] request.
      * </pre>
      *
@@ -3159,7 +3159,7 @@ public final class UserOuterClass {
       private java.lang.Object topicName_ = "";
       /**
        * <pre>
-       * Name of the topic that the permission grants access to.
+       * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
        * To get the topic name, make a [TopicService.List] request.
        * </pre>
        *
@@ -3179,7 +3179,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Name of the topic that the permission grants access to.
+       * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
        * To get the topic name, make a [TopicService.List] request.
        * </pre>
        *
@@ -3200,7 +3200,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Name of the topic that the permission grants access to.
+       * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
        * To get the topic name, make a [TopicService.List] request.
        * </pre>
        *
@@ -3218,7 +3218,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Name of the topic that the permission grants access to.
+       * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
        * To get the topic name, make a [TopicService.List] request.
        * </pre>
        *
@@ -3232,7 +3232,7 @@ public final class UserOuterClass {
       }
       /**
        * <pre>
-       * Name of the topic that the permission grants access to.
+       * Name or prefix-pattern with wildcard for the topic that the permission grants access to.
        * To get the topic name, make a [TopicService.List] request.
        * </pre>
        *
