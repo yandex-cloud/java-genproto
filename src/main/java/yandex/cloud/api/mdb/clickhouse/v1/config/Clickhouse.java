@@ -1828,6 +1828,19 @@ public final class Clickhouse {
        * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_min_space_in_pool = 7;</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getMaxBytesToMergeAtMinSpaceInPoolOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+       */
+      boolean hasMaxBytesToMergeAtMaxSpaceInPool();
+      /**
+       * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+       */
+      com.google.protobuf.Int64Value getMaxBytesToMergeAtMaxSpaceInPool();
+      /**
+       * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMaxBytesToMergeAtMaxSpaceInPoolOrBuilder();
     }
     /**
      * <pre>
@@ -1959,6 +1972,19 @@ public final class Clickhouse {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(maxBytesToMergeAtMinSpaceInPool_);
                   maxBytesToMergeAtMinSpaceInPool_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 66: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (maxBytesToMergeAtMaxSpaceInPool_ != null) {
+                  subBuilder = maxBytesToMergeAtMaxSpaceInPool_.toBuilder();
+                }
+                maxBytesToMergeAtMaxSpaceInPool_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(maxBytesToMergeAtMaxSpaceInPool_);
+                  maxBytesToMergeAtMaxSpaceInPool_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -2232,6 +2258,27 @@ public final class Clickhouse {
         return getMaxBytesToMergeAtMinSpaceInPool();
       }
 
+      public static final int MAX_BYTES_TO_MERGE_AT_MAX_SPACE_IN_POOL_FIELD_NUMBER = 8;
+      private com.google.protobuf.Int64Value maxBytesToMergeAtMaxSpaceInPool_;
+      /**
+       * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+       */
+      public boolean hasMaxBytesToMergeAtMaxSpaceInPool() {
+        return maxBytesToMergeAtMaxSpaceInPool_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+       */
+      public com.google.protobuf.Int64Value getMaxBytesToMergeAtMaxSpaceInPool() {
+        return maxBytesToMergeAtMaxSpaceInPool_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesToMergeAtMaxSpaceInPool_;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxBytesToMergeAtMaxSpaceInPoolOrBuilder() {
+        return getMaxBytesToMergeAtMaxSpaceInPool();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -2266,6 +2313,9 @@ public final class Clickhouse {
         }
         if (maxBytesToMergeAtMinSpaceInPool_ != null) {
           output.writeMessage(7, getMaxBytesToMergeAtMinSpaceInPool());
+        }
+        if (maxBytesToMergeAtMaxSpaceInPool_ != null) {
+          output.writeMessage(8, getMaxBytesToMergeAtMaxSpaceInPool());
         }
         unknownFields.writeTo(output);
       }
@@ -2303,6 +2353,10 @@ public final class Clickhouse {
         if (maxBytesToMergeAtMinSpaceInPool_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(7, getMaxBytesToMergeAtMinSpaceInPool());
+        }
+        if (maxBytesToMergeAtMaxSpaceInPool_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(8, getMaxBytesToMergeAtMaxSpaceInPool());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -2355,6 +2409,11 @@ public final class Clickhouse {
           result = result && getMaxBytesToMergeAtMinSpaceInPool()
               .equals(other.getMaxBytesToMergeAtMinSpaceInPool());
         }
+        result = result && (hasMaxBytesToMergeAtMaxSpaceInPool() == other.hasMaxBytesToMergeAtMaxSpaceInPool());
+        if (hasMaxBytesToMergeAtMaxSpaceInPool()) {
+          result = result && getMaxBytesToMergeAtMaxSpaceInPool()
+              .equals(other.getMaxBytesToMergeAtMaxSpaceInPool());
+        }
         result = result && unknownFields.equals(other.unknownFields);
         return result;
       }
@@ -2393,6 +2452,10 @@ public final class Clickhouse {
         if (hasMaxBytesToMergeAtMinSpaceInPool()) {
           hash = (37 * hash) + MAX_BYTES_TO_MERGE_AT_MIN_SPACE_IN_POOL_FIELD_NUMBER;
           hash = (53 * hash) + getMaxBytesToMergeAtMinSpaceInPool().hashCode();
+        }
+        if (hasMaxBytesToMergeAtMaxSpaceInPool()) {
+          hash = (37 * hash) + MAX_BYTES_TO_MERGE_AT_MAX_SPACE_IN_POOL_FIELD_NUMBER;
+          hash = (53 * hash) + getMaxBytesToMergeAtMaxSpaceInPool().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -2573,6 +2636,12 @@ public final class Clickhouse {
             maxBytesToMergeAtMinSpaceInPool_ = null;
             maxBytesToMergeAtMinSpaceInPoolBuilder_ = null;
           }
+          if (maxBytesToMergeAtMaxSpaceInPoolBuilder_ == null) {
+            maxBytesToMergeAtMaxSpaceInPool_ = null;
+          } else {
+            maxBytesToMergeAtMaxSpaceInPool_ = null;
+            maxBytesToMergeAtMaxSpaceInPoolBuilder_ = null;
+          }
           return this;
         }
 
@@ -2633,6 +2702,11 @@ public final class Clickhouse {
             result.maxBytesToMergeAtMinSpaceInPool_ = maxBytesToMergeAtMinSpaceInPool_;
           } else {
             result.maxBytesToMergeAtMinSpaceInPool_ = maxBytesToMergeAtMinSpaceInPoolBuilder_.build();
+          }
+          if (maxBytesToMergeAtMaxSpaceInPoolBuilder_ == null) {
+            result.maxBytesToMergeAtMaxSpaceInPool_ = maxBytesToMergeAtMaxSpaceInPool_;
+          } else {
+            result.maxBytesToMergeAtMaxSpaceInPool_ = maxBytesToMergeAtMaxSpaceInPoolBuilder_.build();
           }
           onBuilt();
           return result;
@@ -2702,6 +2776,9 @@ public final class Clickhouse {
           }
           if (other.hasMaxBytesToMergeAtMinSpaceInPool()) {
             mergeMaxBytesToMergeAtMinSpaceInPool(other.getMaxBytesToMergeAtMinSpaceInPool());
+          }
+          if (other.hasMaxBytesToMergeAtMaxSpaceInPool()) {
+            mergeMaxBytesToMergeAtMaxSpaceInPool(other.getMaxBytesToMergeAtMaxSpaceInPool());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -3819,6 +3896,123 @@ public final class Clickhouse {
             maxBytesToMergeAtMinSpaceInPool_ = null;
           }
           return maxBytesToMergeAtMinSpaceInPoolBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value maxBytesToMergeAtMaxSpaceInPool_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxBytesToMergeAtMaxSpaceInPoolBuilder_;
+        /**
+         * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+         */
+        public boolean hasMaxBytesToMergeAtMaxSpaceInPool() {
+          return maxBytesToMergeAtMaxSpaceInPoolBuilder_ != null || maxBytesToMergeAtMaxSpaceInPool_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+         */
+        public com.google.protobuf.Int64Value getMaxBytesToMergeAtMaxSpaceInPool() {
+          if (maxBytesToMergeAtMaxSpaceInPoolBuilder_ == null) {
+            return maxBytesToMergeAtMaxSpaceInPool_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesToMergeAtMaxSpaceInPool_;
+          } else {
+            return maxBytesToMergeAtMaxSpaceInPoolBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+         */
+        public Builder setMaxBytesToMergeAtMaxSpaceInPool(com.google.protobuf.Int64Value value) {
+          if (maxBytesToMergeAtMaxSpaceInPoolBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            maxBytesToMergeAtMaxSpaceInPool_ = value;
+            onChanged();
+          } else {
+            maxBytesToMergeAtMaxSpaceInPoolBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+         */
+        public Builder setMaxBytesToMergeAtMaxSpaceInPool(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (maxBytesToMergeAtMaxSpaceInPoolBuilder_ == null) {
+            maxBytesToMergeAtMaxSpaceInPool_ = builderForValue.build();
+            onChanged();
+          } else {
+            maxBytesToMergeAtMaxSpaceInPoolBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+         */
+        public Builder mergeMaxBytesToMergeAtMaxSpaceInPool(com.google.protobuf.Int64Value value) {
+          if (maxBytesToMergeAtMaxSpaceInPoolBuilder_ == null) {
+            if (maxBytesToMergeAtMaxSpaceInPool_ != null) {
+              maxBytesToMergeAtMaxSpaceInPool_ =
+                com.google.protobuf.Int64Value.newBuilder(maxBytesToMergeAtMaxSpaceInPool_).mergeFrom(value).buildPartial();
+            } else {
+              maxBytesToMergeAtMaxSpaceInPool_ = value;
+            }
+            onChanged();
+          } else {
+            maxBytesToMergeAtMaxSpaceInPoolBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+         */
+        public Builder clearMaxBytesToMergeAtMaxSpaceInPool() {
+          if (maxBytesToMergeAtMaxSpaceInPoolBuilder_ == null) {
+            maxBytesToMergeAtMaxSpaceInPool_ = null;
+            onChanged();
+          } else {
+            maxBytesToMergeAtMaxSpaceInPool_ = null;
+            maxBytesToMergeAtMaxSpaceInPoolBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMaxBytesToMergeAtMaxSpaceInPoolBuilder() {
+          
+          onChanged();
+          return getMaxBytesToMergeAtMaxSpaceInPoolFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMaxBytesToMergeAtMaxSpaceInPoolOrBuilder() {
+          if (maxBytesToMergeAtMaxSpaceInPoolBuilder_ != null) {
+            return maxBytesToMergeAtMaxSpaceInPoolBuilder_.getMessageOrBuilder();
+          } else {
+            return maxBytesToMergeAtMaxSpaceInPool_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : maxBytesToMergeAtMaxSpaceInPool_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_bytes_to_merge_at_max_space_in_pool = 8;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMaxBytesToMergeAtMaxSpaceInPoolFieldBuilder() {
+          if (maxBytesToMergeAtMaxSpaceInPoolBuilder_ == null) {
+            maxBytesToMergeAtMaxSpaceInPoolBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMaxBytesToMergeAtMaxSpaceInPool(),
+                    getParentForChildren(),
+                    isClean());
+            maxBytesToMergeAtMaxSpaceInPool_ = null;
+          }
+          return maxBytesToMergeAtMaxSpaceInPoolBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -38194,8 +38388,8 @@ public final class Clickhouse {
       "\n6yandex/cloud/mdb/clickhouse/v1/config/" +
       "clickhouse.proto\022%yandex.cloud.mdb.click" +
       "house.v1.config\032\036google/protobuf/wrapper" +
-      "s.proto\032\035yandex/cloud/validation.proto\"\324" +
-      "=\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
+      "s.proto\032\035yandex/cloud/validation.proto\"\242" +
+      ">\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
       ".yandex.cloud.mdb.clickhouse.v1.config.C" +
       "lickhouseConfig.LogLevel\022U\n\nmerge_tree\030\002" +
       " \001(\0132A.yandex.cloud.mdb.clickhouse.v1.co" +
@@ -38257,7 +38451,7 @@ public final class Clickhouse {
       "nfig.LogLevel\022A\n\024background_pool_size\030! " +
       "\001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0" +
       "\022J\n\035background_schedule_pool_size\030\" \001(\0132" +
-      "\033.google.protobuf.Int64ValueB\006\372\3071\002>0\032\212\004\n" +
+      "\033.google.protobuf.Int64ValueB\006\372\3071\002>0\032\330\004\n" +
       "\tMergeTree\022D\n\037replicated_deduplication_w" +
       "indow\030\001 \001(\0132\033.google.protobuf.Int64Value" +
       "\022L\n\'replicated_deduplication_window_seco" +
@@ -38271,138 +38465,140 @@ public final class Clickhouse {
       "of_merge\030\006 \001(\0132\033.google.protobuf.Int64Va" +
       "lue\022L\n\'max_bytes_to_merge_at_min_space_i" +
       "n_pool\030\007 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\032\352\004\n\005Kafka\022i\n\021security_protocol\030\001 \001(\0162N" +
-      ".yandex.cloud.mdb.clickhouse.v1.config.C" +
-      "lickhouseConfig.Kafka.SecurityProtocol\022c" +
-      "\n\016sasl_mechanism\030\002 \001(\0162K.yandex.cloud.md" +
-      "b.clickhouse.v1.config.ClickhouseConfig." +
-      "Kafka.SaslMechanism\022\025\n\rsasl_username\030\003 \001" +
-      "(\t\022\025\n\rsasl_password\030\004 \001(\t\"\267\001\n\020SecurityPr" +
-      "otocol\022!\n\035SECURITY_PROTOCOL_UNSPECIFIED\020" +
-      "\000\022\037\n\033SECURITY_PROTOCOL_PLAINTEXT\020\001\022\031\n\025SE" +
-      "CURITY_PROTOCOL_SSL\020\002\022$\n SECURITY_PROTOC" +
-      "OL_SASL_PLAINTEXT\020\003\022\036\n\032SECURITY_PROTOCOL" +
-      "_SASL_SSL\020\004\"\250\001\n\rSaslMechanism\022\036\n\032SASL_ME" +
-      "CHANISM_UNSPECIFIED\020\000\022\031\n\025SASL_MECHANISM_" +
-      "GSSAPI\020\001\022\030\n\024SASL_MECHANISM_PLAIN\020\002\022 \n\034SA" +
-      "SL_MECHANISM_SCRAM_SHA_256\020\003\022 \n\034SASL_MEC" +
-      "HANISM_SCRAM_SHA_512\020\004\032w\n\nKafkaTopic\022\022\n\004" +
-      "name\030\001 \001(\tB\004\350\3071\001\022U\n\010settings\030\002 \001(\0132=.yan" +
-      "dex.cloud.mdb.clickhouse.v1.config.Click" +
-      "houseConfig.KafkaB\004\350\3071\001\032.\n\010Rabbitmq\022\020\n\010u" +
-      "sername\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\032\333\001\n\013Comp" +
-      "ression\022Z\n\006method\030\001 \001(\0162J.yandex.cloud.m" +
-      "db.clickhouse.v1.config.ClickhouseConfig" +
-      ".Compression.Method\022\036\n\rmin_part_size\030\002 \001" +
-      "(\003B\007\372\3071\003>=1\022\033\n\023min_part_size_ratio\030\003 \001(\001" +
-      "\"3\n\006Method\022\026\n\022METHOD_UNSPECIFIED\020\000\022\007\n\003LZ" +
-      "4\020\001\022\010\n\004ZSTD\020\002\032\240\032\n\022ExternalDictionary\022\022\n\004" +
-      "name\030\001 \001(\tB\004\350\3071\001\022m\n\tstructure\030\002 \001(\0132T.ya" +
-      "ndex.cloud.mdb.clickhouse.v1.config.Clic" +
-      "khouseConfig.ExternalDictionary.Structur" +
-      "eB\004\350\3071\001\022g\n\006layout\030\003 \001(\0132Q.yandex.cloud.m" +
-      "db.clickhouse.v1.config.ClickhouseConfig" +
-      ".ExternalDictionary.LayoutB\004\350\3071\001\022\030\n\016fixe" +
-      "d_lifetime\030\004 \001(\003H\000\022j\n\016lifetime_range\030\005 \001" +
-      "(\0132P.yandex.cloud.mdb.clickhouse.v1.conf" +
-      "ig.ClickhouseConfig.ExternalDictionary.R" +
-      "angeH\000\022l\n\013http_source\030\006 \001(\0132U.yandex.clo" +
-      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
-      "nfig.ExternalDictionary.HttpSourceH\001\022n\n\014" +
-      "mysql_source\030\007 \001(\0132V.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.config.ClickhouseConfig.Exte" +
-      "rnalDictionary.MysqlSourceH\001\022x\n\021clickhou" +
-      "se_source\030\010 \001(\0132[.yandex.cloud.mdb.click" +
-      "house.v1.config.ClickhouseConfig.Externa" +
-      "lDictionary.ClickhouseSourceH\001\022r\n\016mongod" +
-      "b_source\030\t \001(\0132X.yandex.cloud.mdb.clickh" +
-      "ouse.v1.config.ClickhouseConfig.External" +
-      "Dictionary.MongodbSourceH\001\022x\n\021postgresql" +
-      "_source\030\n \001(\0132[.yandex.cloud.mdb.clickho" +
+      "e\022L\n\'max_bytes_to_merge_at_max_space_in_" +
+      "pool\030\010 \001(\0132\033.google.protobuf.Int64Value\032" +
+      "\352\004\n\005Kafka\022i\n\021security_protocol\030\001 \001(\0162N.y" +
+      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
+      "ckhouseConfig.Kafka.SecurityProtocol\022c\n\016" +
+      "sasl_mechanism\030\002 \001(\0162K.yandex.cloud.mdb." +
+      "clickhouse.v1.config.ClickhouseConfig.Ka" +
+      "fka.SaslMechanism\022\025\n\rsasl_username\030\003 \001(\t" +
+      "\022\025\n\rsasl_password\030\004 \001(\t\"\267\001\n\020SecurityProt" +
+      "ocol\022!\n\035SECURITY_PROTOCOL_UNSPECIFIED\020\000\022" +
+      "\037\n\033SECURITY_PROTOCOL_PLAINTEXT\020\001\022\031\n\025SECU" +
+      "RITY_PROTOCOL_SSL\020\002\022$\n SECURITY_PROTOCOL" +
+      "_SASL_PLAINTEXT\020\003\022\036\n\032SECURITY_PROTOCOL_S" +
+      "ASL_SSL\020\004\"\250\001\n\rSaslMechanism\022\036\n\032SASL_MECH" +
+      "ANISM_UNSPECIFIED\020\000\022\031\n\025SASL_MECHANISM_GS" +
+      "SAPI\020\001\022\030\n\024SASL_MECHANISM_PLAIN\020\002\022 \n\034SASL" +
+      "_MECHANISM_SCRAM_SHA_256\020\003\022 \n\034SASL_MECHA" +
+      "NISM_SCRAM_SHA_512\020\004\032w\n\nKafkaTopic\022\022\n\004na" +
+      "me\030\001 \001(\tB\004\350\3071\001\022U\n\010settings\030\002 \001(\0132=.yande" +
+      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
+      "useConfig.KafkaB\004\350\3071\001\032.\n\010Rabbitmq\022\020\n\010use" +
+      "rname\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\032\333\001\n\013Compre" +
+      "ssion\022Z\n\006method\030\001 \001(\0162J.yandex.cloud.mdb" +
+      ".clickhouse.v1.config.ClickhouseConfig.C" +
+      "ompression.Method\022\036\n\rmin_part_size\030\002 \001(\003" +
+      "B\007\372\3071\003>=1\022\033\n\023min_part_size_ratio\030\003 \001(\001\"3" +
+      "\n\006Method\022\026\n\022METHOD_UNSPECIFIED\020\000\022\007\n\003LZ4\020" +
+      "\001\022\010\n\004ZSTD\020\002\032\240\032\n\022ExternalDictionary\022\022\n\004na" +
+      "me\030\001 \001(\tB\004\350\3071\001\022m\n\tstructure\030\002 \001(\0132T.yand" +
+      "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
+      "ouseConfig.ExternalDictionary.StructureB" +
+      "\004\350\3071\001\022g\n\006layout\030\003 \001(\0132Q.yandex.cloud.mdb" +
+      ".clickhouse.v1.config.ClickhouseConfig.E" +
+      "xternalDictionary.LayoutB\004\350\3071\001\022\030\n\016fixed_" +
+      "lifetime\030\004 \001(\003H\000\022j\n\016lifetime_range\030\005 \001(\013" +
+      "2P.yandex.cloud.mdb.clickhouse.v1.config" +
+      ".ClickhouseConfig.ExternalDictionary.Ran" +
+      "geH\000\022l\n\013http_source\030\006 \001(\0132U.yandex.cloud" +
+      ".mdb.clickhouse.v1.config.ClickhouseConf" +
+      "ig.ExternalDictionary.HttpSourceH\001\022n\n\014my" +
+      "sql_source\030\007 \001(\0132V.yandex.cloud.mdb.clic" +
+      "khouse.v1.config.ClickhouseConfig.Extern" +
+      "alDictionary.MysqlSourceH\001\022x\n\021clickhouse" +
+      "_source\030\010 \001(\0132[.yandex.cloud.mdb.clickho" +
       "use.v1.config.ClickhouseConfig.ExternalD" +
-      "ictionary.PostgresqlSourceH\001\0325\n\nHttpSour" +
-      "ce\022\021\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006format\030\002 \001(\tB\004\350" +
-      "\3071\001\032\223\003\n\013MysqlSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n" +
-      "\005table\030\002 \001(\tB\004\350\3071\001\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-" +
-      "65535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\022x\n" +
-      "\010replicas\030\006 \003(\0132^.yandex.cloud.mdb.click" +
-      "house.v1.config.ClickhouseConfig.Externa" +
-      "lDictionary.MysqlSource.ReplicaB\006\202\3101\002>0\022" +
-      "\r\n\005where\030\007 \001(\t\022\030\n\020invalidate_query\030\010 \001(\t" +
-      "\032\177\n\007Replica\022\033\n\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253" +
-      "\022\034\n\010priority\030\002 \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003" +
-      " \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010passw" +
-      "ord\030\005 \001(\t\032\246\001\n\020ClickhouseSource\022\020\n\002db\030\001 \001" +
-      "(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 " +
-      "\001(\tB\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-" +
-      "65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 " +
-      "\001(\t\022\r\n\005where\030\007 \001(\t\032\231\001\n\rMongodbSource\022\020\n\002" +
-      "db\030\001 \001(\tB\004\350\3071\001\022\030\n\ncollection\030\002 \001(\tB\004\350\3071\001" +
-      "\022\033\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 " +
-      "\001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010" +
-      "password\030\006 \001(\t\032\213\003\n\020PostgresqlSource\022\020\n\002d" +
-      "b\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\025\n\005ho" +
-      "sts\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-6" +
-      "5535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001" +
-      "(\t\022\030\n\020invalidate_query\030\007 \001(\t\022u\n\010ssl_mode" +
-      "\030\010 \001(\0162c.yandex.cloud.mdb.clickhouse.v1." +
-      "config.ClickhouseConfig.ExternalDictiona" +
-      "ry.PostgresqlSource.SslMode\"g\n\007SslMode\022\030" +
-      "\n\024SSL_MODE_UNSPECIFIED\020\000\022\013\n\007DISABLE\020\001\022\t\n" +
-      "\005ALLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVERIFY_CA\020\004\022\017\n\013V" +
-      "ERIFY_FULL\020\005\032\336\006\n\tStructure\022c\n\002id\030\001 \001(\0132W" +
+      "ictionary.ClickhouseSourceH\001\022r\n\016mongodb_" +
+      "source\030\t \001(\0132X.yandex.cloud.mdb.clickhou" +
+      "se.v1.config.ClickhouseConfig.ExternalDi" +
+      "ctionary.MongodbSourceH\001\022x\n\021postgresql_s" +
+      "ource\030\n \001(\0132[.yandex.cloud.mdb.clickhous" +
+      "e.v1.config.ClickhouseConfig.ExternalDic" +
+      "tionary.PostgresqlSourceH\001\0325\n\nHttpSource" +
+      "\022\021\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006format\030\002 \001(\tB\004\350\3071" +
+      "\001\032\223\003\n\013MysqlSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005t" +
+      "able\030\002 \001(\tB\004\350\3071\001\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65" +
+      "535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\022x\n\010r" +
+      "eplicas\030\006 \003(\0132^.yandex.cloud.mdb.clickho" +
+      "use.v1.config.ClickhouseConfig.ExternalD" +
+      "ictionary.MysqlSource.ReplicaB\006\202\3101\002>0\022\r\n" +
+      "\005where\030\007 \001(\t\022\030\n\020invalidate_query\030\010 \001(\t\032\177" +
+      "\n\007Replica\022\033\n\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253\022\034" +
+      "\n\010priority\030\002 \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003 \001" +
+      "(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010passwor" +
+      "d\030\005 \001(\t\032\246\001\n\020ClickhouseSource\022\020\n\002db\030\001 \001(\t" +
+      "B\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(" +
+      "\tB\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65" +
+      "535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(" +
+      "\t\022\r\n\005where\030\007 \001(\t\032\231\001\n\rMongodbSource\022\020\n\002db" +
+      "\030\001 \001(\tB\004\350\3071\001\022\030\n\ncollection\030\002 \001(\tB\004\350\3071\001\022\033" +
+      "\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(" +
+      "\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010pa" +
+      "ssword\030\006 \001(\t\032\213\003\n\020PostgresqlSource\022\020\n\002db\030" +
+      "\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\025\n\005host" +
+      "s\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-655" +
+      "35\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t" +
+      "\022\030\n\020invalidate_query\030\007 \001(\t\022u\n\010ssl_mode\030\010" +
+      " \001(\0162c.yandex.cloud.mdb.clickhouse.v1.co" +
+      "nfig.ClickhouseConfig.ExternalDictionary" +
+      ".PostgresqlSource.SslMode\"g\n\007SslMode\022\030\n\024" +
+      "SSL_MODE_UNSPECIFIED\020\000\022\013\n\007DISABLE\020\001\022\t\n\005A" +
+      "LLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVERIFY_CA\020\004\022\017\n\013VER" +
+      "IFY_FULL\020\005\032\336\006\n\tStructure\022c\n\002id\030\001 \001(\0132W.y" +
+      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
+      "ckhouseConfig.ExternalDictionary.Structu" +
+      "re.Id\022e\n\003key\030\003 \001(\0132X.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.config.ClickhouseConfig.Exte" +
+      "rnalDictionary.Structure.Key\022q\n\trange_mi" +
+      "n\030\004 \001(\0132^.yandex.cloud.mdb.clickhouse.v1" +
+      ".config.ClickhouseConfig.ExternalDiction" +
+      "ary.Structure.Attribute\022q\n\trange_max\030\005 \001" +
+      "(\0132^.yandex.cloud.mdb.clickhouse.v1.conf" +
+      "ig.ClickhouseConfig.ExternalDictionary.S" +
+      "tructure.Attribute\022z\n\nattributes\030\002 \003(\0132^" +
       ".yandex.cloud.mdb.clickhouse.v1.config.C" +
       "lickhouseConfig.ExternalDictionary.Struc" +
-      "ture.Id\022e\n\003key\030\003 \001(\0132X.yandex.cloud.mdb." +
+      "ture.AttributeB\006\202\3101\002>0\032\204\001\n\tAttribute\022\022\n\004" +
+      "name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030\002 \001(\tB\004\350\3071\001\022\022\n\n" +
+      "null_value\030\003 \001(\t\022\022\n\nexpression\030\004 \001(\t\022\024\n\014" +
+      "hierarchical\030\005 \001(\010\022\021\n\tinjective\030\006 \001(\010\032\030\n" +
+      "\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201\001\n\003Key\022z\n\nattri" +
+      "butes\030\001 \003(\0132^.yandex.cloud.mdb.clickhous" +
+      "e.v1.config.ClickhouseConfig.ExternalDic" +
+      "tionary.Structure.AttributeB\006\202\3101\002>0\032\213\002\n\006" +
+      "Layout\022j\n\004type\030\001 \001(\0162V.yandex.cloud.mdb." +
       "clickhouse.v1.config.ClickhouseConfig.Ex" +
-      "ternalDictionary.Structure.Key\022q\n\trange_" +
-      "min\030\004 \001(\0132^.yandex.cloud.mdb.clickhouse." +
-      "v1.config.ClickhouseConfig.ExternalDicti" +
-      "onary.Structure.Attribute\022q\n\trange_max\030\005" +
-      " \001(\0132^.yandex.cloud.mdb.clickhouse.v1.co" +
-      "nfig.ClickhouseConfig.ExternalDictionary" +
-      ".Structure.Attribute\022z\n\nattributes\030\002 \003(\013" +
-      "2^.yandex.cloud.mdb.clickhouse.v1.config" +
-      ".ClickhouseConfig.ExternalDictionary.Str" +
-      "ucture.AttributeB\006\202\3101\002>0\032\204\001\n\tAttribute\022\022" +
-      "\n\004name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030\002 \001(\tB\004\350\3071\001\022\022" +
-      "\n\nnull_value\030\003 \001(\t\022\022\n\nexpression\030\004 \001(\t\022\024" +
-      "\n\014hierarchical\030\005 \001(\010\022\021\n\tinjective\030\006 \001(\010\032" +
-      "\030\n\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201\001\n\003Key\022z\n\natt" +
-      "ributes\030\001 \003(\0132^.yandex.cloud.mdb.clickho" +
-      "use.v1.config.ClickhouseConfig.ExternalD" +
-      "ictionary.Structure.AttributeB\006\202\3101\002>0\032\213\002" +
-      "\n\006Layout\022j\n\004type\030\001 \001(\0162V.yandex.cloud.md" +
-      "b.clickhouse.v1.config.ClickhouseConfig." +
-      "ExternalDictionary.Layout.TypeB\004\350\3071\001\022\025\n\r" +
-      "size_in_cells\030\002 \001(\003\"~\n\004Type\022\024\n\020TYPE_UNSP" +
-      "ECIFIED\020\000\022\010\n\004FLAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPL" +
-      "EX_KEY_HASHED\020\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CAC" +
-      "HE\020\005\022\025\n\021COMPLEX_KEY_CACHE\020\006\032!\n\005Range\022\013\n\003" +
-      "min\030\001 \001(\003\022\013\n\003max\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001" +
-      "B\016\n\006source\022\004\300\3011\001\032\364\002\n\016GraphiteRollup\022\022\n\004n" +
-      "ame\030\001 \001(\tB\004\350\3071\001\022h\n\010patterns\030\002 \003(\0132N.yand" +
-      "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
-      "ouseConfig.GraphiteRollup.PatternB\006\202\3101\002>" +
-      "0\032\343\001\n\007Pattern\022\016\n\006regexp\030\001 \001(\t\022\026\n\010functio" +
-      "n\030\002 \001(\tB\004\350\3071\001\022s\n\tretention\030\003 \003(\0132X.yande" +
-      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
-      "useConfig.GraphiteRollup.Pattern.Retenti" +
-      "onB\006\202\3101\002>0\032;\n\tRetention\022\023\n\003age\030\001 \001(\003B\006\372\307" +
-      "1\002>0\022\031\n\tprecision\030\002 \001(\003B\006\372\3071\002>0\"d\n\010LogLe" +
-      "vel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020" +
-      "\001\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003\022\013\n\007WARNING" +
-      "\020\004\022\t\n\005ERROR\020\005\"\215\002\n\023ClickhouseConfigSet\022W\n" +
-      "\020effective_config\030\001 \001(\01327.yandex.cloud.m" +
-      "db.clickhouse.v1.config.ClickhouseConfig" +
-      "B\004\350\3071\001\022L\n\013user_config\030\002 \001(\01327.yandex.clo" +
-      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
-      "nfig\022O\n\016default_config\030\003 \001(\01327.yandex.cl" +
-      "oud.mdb.clickhouse.v1.config.ClickhouseC" +
-      "onfigB\201\001\n)yandex.cloud.api.mdb.clickhous" +
-      "e.v1.configZTgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/mdb/clickhouse/v1/" +
-      "config;clickhouseb\006proto3"
+      "ternalDictionary.Layout.TypeB\004\350\3071\001\022\025\n\rsi" +
+      "ze_in_cells\030\002 \001(\003\"~\n\004Type\022\024\n\020TYPE_UNSPEC" +
+      "IFIED\020\000\022\010\n\004FLAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX" +
+      "_KEY_HASHED\020\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CACHE" +
+      "\020\005\022\025\n\021COMPLEX_KEY_CACHE\020\006\032!\n\005Range\022\013\n\003mi" +
+      "n\030\001 \001(\003\022\013\n\003max\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001B\016" +
+      "\n\006source\022\004\300\3011\001\032\364\002\n\016GraphiteRollup\022\022\n\004nam" +
+      "e\030\001 \001(\tB\004\350\3071\001\022h\n\010patterns\030\002 \003(\0132N.yandex" +
+      ".cloud.mdb.clickhouse.v1.config.Clickhou" +
+      "seConfig.GraphiteRollup.PatternB\006\202\3101\002>0\032" +
+      "\343\001\n\007Pattern\022\016\n\006regexp\030\001 \001(\t\022\026\n\010function\030" +
+      "\002 \001(\tB\004\350\3071\001\022s\n\tretention\030\003 \003(\0132X.yandex." +
+      "cloud.mdb.clickhouse.v1.config.Clickhous" +
+      "eConfig.GraphiteRollup.Pattern.Retention" +
+      "B\006\202\3101\002>0\032;\n\tRetention\022\023\n\003age\030\001 \001(\003B\006\372\3071\002" +
+      ">0\022\031\n\tprecision\030\002 \001(\003B\006\372\3071\002>0\"d\n\010LogLeve" +
+      "l\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022" +
+      "\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003\022\013\n\007WARNING\020\004" +
+      "\022\t\n\005ERROR\020\005\"\215\002\n\023ClickhouseConfigSet\022W\n\020e" +
+      "ffective_config\030\001 \001(\01327.yandex.cloud.mdb" +
+      ".clickhouse.v1.config.ClickhouseConfigB\004" +
+      "\350\3071\001\022L\n\013user_config\030\002 \001(\01327.yandex.cloud" +
+      ".mdb.clickhouse.v1.config.ClickhouseConf" +
+      "ig\022O\n\016default_config\030\003 \001(\01327.yandex.clou" +
+      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
+      "figB\201\001\n)yandex.cloud.api.mdb.clickhouse." +
+      "v1.configZTgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/mdb/clickhouse/v1/co" +
+      "nfig;clickhouseb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -38429,7 +38625,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_descriptor,
-        new java.lang.String[] { "ReplicatedDeduplicationWindow", "ReplicatedDeduplicationWindowSeconds", "PartsToDelayInsert", "PartsToThrowInsert", "MaxReplicatedMergesInQueue", "NumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge", "MaxBytesToMergeAtMinSpaceInPool", });
+        new java.lang.String[] { "ReplicatedDeduplicationWindow", "ReplicatedDeduplicationWindowSeconds", "PartsToDelayInsert", "PartsToThrowInsert", "MaxReplicatedMergesInQueue", "NumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge", "MaxBytesToMergeAtMinSpaceInPool", "MaxBytesToMergeAtMaxSpaceInPool", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_fieldAccessorTable = new

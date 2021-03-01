@@ -62,6 +62,38 @@ public final class IamTokenServiceGrpc {
      return getCreateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest,
+      yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse> getCreateForServiceAccountMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateForServiceAccount",
+      requestType = yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest.class,
+      responseType = yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest,
+      yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse> getCreateForServiceAccountMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest, yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse> getCreateForServiceAccountMethod;
+    if ((getCreateForServiceAccountMethod = IamTokenServiceGrpc.getCreateForServiceAccountMethod) == null) {
+      synchronized (IamTokenServiceGrpc.class) {
+        if ((getCreateForServiceAccountMethod = IamTokenServiceGrpc.getCreateForServiceAccountMethod) == null) {
+          IamTokenServiceGrpc.getCreateForServiceAccountMethod = getCreateForServiceAccountMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest, yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.iam.v1.IamTokenService", "CreateForServiceAccount"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new IamTokenServiceMethodDescriptorSupplier("CreateForServiceAccount"))
+                  .build();
+          }
+        }
+     }
+     return getCreateForServiceAccountMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -102,6 +134,16 @@ public final class IamTokenServiceGrpc {
       asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Create iam token for service account.
+     * </pre>
+     */
+    public void createForServiceAccount(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreateForServiceAccountMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -111,6 +153,13 @@ public final class IamTokenServiceGrpc {
                 yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenRequest,
                 yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse>(
                   this, METHODID_CREATE)))
+          .addMethod(
+            getCreateForServiceAccountMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest,
+                yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse>(
+                  this, METHODID_CREATE_FOR_SERVICE_ACCOUNT)))
           .build();
     }
   }
@@ -146,6 +195,17 @@ public final class IamTokenServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Create iam token for service account.
+     * </pre>
+     */
+    public void createForServiceAccount(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreateForServiceAccountMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -177,6 +237,16 @@ public final class IamTokenServiceGrpc {
     public yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse create(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Create iam token for service account.
+     * </pre>
+     */
+    public yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse createForServiceAccount(yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCreateForServiceAccountMethod(), getCallOptions(), request);
     }
   }
 
@@ -211,9 +281,21 @@ public final class IamTokenServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Create iam token for service account.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse> createForServiceAccount(
+        yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreateForServiceAccountMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE = 0;
+  private static final int METHODID_CREATE_FOR_SERVICE_ACCOUNT = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -234,6 +316,10 @@ public final class IamTokenServiceGrpc {
       switch (methodId) {
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_FOR_SERVICE_ACCOUNT:
+          serviceImpl.createForServiceAccount((yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenForServiceAccountRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.iam.v1.IamTokenServiceOuterClass.CreateIamTokenResponse>) responseObserver);
           break;
         default:
@@ -298,6 +384,7 @@ public final class IamTokenServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new IamTokenServiceFileDescriptorSupplier())
               .addMethod(getCreateMethod())
+              .addMethod(getCreateForServiceAccountMethod())
               .build();
         }
       }

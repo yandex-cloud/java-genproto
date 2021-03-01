@@ -4819,6 +4819,24 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.mdb.elasticsearch.v1.Elasticsearch elasticsearch = 2;</code>
      */
     yandex.cloud.api.mdb.elasticsearch.v1.ClusterOuterClass.ElasticsearchOrBuilder getElasticsearchOrBuilder();
+
+    /**
+     * <pre>
+     * ElasticSearch edition.
+     * </pre>
+     *
+     * <code>string edition = 3;</code>
+     */
+    java.lang.String getEdition();
+    /**
+     * <pre>
+     * ElasticSearch edition.
+     * </pre>
+     *
+     * <code>string edition = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getEditionBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.ClusterConfig}
@@ -4834,6 +4852,7 @@ public final class ClusterOuterClass {
     }
     private ClusterConfig() {
       version_ = "";
+      edition_ = "";
     }
 
     @java.lang.Override
@@ -4877,6 +4896,12 @@ public final class ClusterOuterClass {
                 elasticsearch_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              edition_ = s;
               break;
             }
             default: {
@@ -4986,6 +5011,48 @@ public final class ClusterOuterClass {
       return getElasticsearch();
     }
 
+    public static final int EDITION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object edition_;
+    /**
+     * <pre>
+     * ElasticSearch edition.
+     * </pre>
+     *
+     * <code>string edition = 3;</code>
+     */
+    public java.lang.String getEdition() {
+      java.lang.Object ref = edition_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        edition_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ElasticSearch edition.
+     * </pre>
+     *
+     * <code>string edition = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEditionBytes() {
+      java.lang.Object ref = edition_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        edition_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5006,6 +5073,9 @@ public final class ClusterOuterClass {
       if (elasticsearch_ != null) {
         output.writeMessage(2, getElasticsearch());
       }
+      if (!getEditionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, edition_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5021,6 +5091,9 @@ public final class ClusterOuterClass {
       if (elasticsearch_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getElasticsearch());
+      }
+      if (!getEditionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, edition_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5045,6 +5118,8 @@ public final class ClusterOuterClass {
         result = result && getElasticsearch()
             .equals(other.getElasticsearch());
       }
+      result = result && getEdition()
+          .equals(other.getEdition());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5062,6 +5137,8 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + ELASTICSEARCH_FIELD_NUMBER;
         hash = (53 * hash) + getElasticsearch().hashCode();
       }
+      hash = (37 * hash) + EDITION_FIELD_NUMBER;
+      hash = (53 * hash) + getEdition().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5203,6 +5280,8 @@ public final class ClusterOuterClass {
           elasticsearch_ = null;
           elasticsearchBuilder_ = null;
         }
+        edition_ = "";
+
         return this;
       }
 
@@ -5235,6 +5314,7 @@ public final class ClusterOuterClass {
         } else {
           result.elasticsearch_ = elasticsearchBuilder_.build();
         }
+        result.edition_ = edition_;
         onBuilt();
         return result;
       }
@@ -5289,6 +5369,10 @@ public final class ClusterOuterClass {
         }
         if (other.hasElasticsearch()) {
           mergeElasticsearch(other.getElasticsearch());
+        }
+        if (!other.getEdition().isEmpty()) {
+          edition_ = other.edition_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5559,6 +5643,95 @@ public final class ClusterOuterClass {
           elasticsearch_ = null;
         }
         return elasticsearchBuilder_;
+      }
+
+      private java.lang.Object edition_ = "";
+      /**
+       * <pre>
+       * ElasticSearch edition.
+       * </pre>
+       *
+       * <code>string edition = 3;</code>
+       */
+      public java.lang.String getEdition() {
+        java.lang.Object ref = edition_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          edition_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ElasticSearch edition.
+       * </pre>
+       *
+       * <code>string edition = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEditionBytes() {
+        java.lang.Object ref = edition_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          edition_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ElasticSearch edition.
+       * </pre>
+       *
+       * <code>string edition = 3;</code>
+       */
+      public Builder setEdition(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        edition_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ElasticSearch edition.
+       * </pre>
+       *
+       * <code>string edition = 3;</code>
+       */
+      public Builder clearEdition() {
+        
+        edition_ = getDefaultInstance().getEdition();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ElasticSearch edition.
+       * </pre>
+       *
+       * <code>string edition = 3;</code>
+       */
+      public Builder setEditionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        edition_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12762,45 +12935,46 @@ public final class ClusterOuterClass {
       "\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014" +
       "\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"" +
       "=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descripti" +
-      "on\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"i\n\rClusterConfig\022" +
+      "on\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"z\n\rClusterConfig\022" +
       "\017\n\007version\030\001 \001(\t\022G\n\relasticsearch\030\002 \001(\0132" +
       "0.yandex.cloud.mdb.elasticsearch.v1.Elas" +
-      "ticsearch\"\353\003\n\rElasticsearch\022L\n\tdata_node" +
-      "\030\001 \001(\01329.yandex.cloud.mdb.elasticsearch." +
-      "v1.Elasticsearch.DataNode\022P\n\013master_node" +
-      "\030\002 \001(\0132;.yandex.cloud.mdb.elasticsearch." +
-      "v1.Elasticsearch.MasterNode\022\017\n\007plugins\030\003" +
-      " \003(\t\032\331\001\n\010DataNode\022\201\001\n\032elasticsearch_conf" +
-      "ig_set_7\030\001 \001(\0132A.yandex.cloud.mdb.elasti" +
-      "csearch.v1.config.ElasticsearchConfigSet" +
-      "7H\000R\030elasticsearchConfigSet_7\022?\n\tresourc" +
-      "es\030\002 \001(\0132,.yandex.cloud.mdb.elasticsearc" +
-      "h.v1.ResourcesB\010\n\006config\032M\n\nMasterNode\022?" +
-      "\n\tresources\030\001 \001(\0132,.yandex.cloud.mdb.ela" +
-      "sticsearch.v1.Resources\"P\n\tResources\022\032\n\022" +
-      "resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 " +
-      "\001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\331\003\n\004Host\022\014\n\004na" +
-      "me\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030" +
-      "\003 \001(\t\022:\n\004type\030\004 \001(\0162,.yandex.cloud.mdb.e" +
-      "lasticsearch.v1.Host.Type\022?\n\tresources\030\005" +
-      " \001(\0132,.yandex.cloud.mdb.elasticsearch.v1" +
-      ".Resources\022>\n\006health\030\006 \001(\0162..yandex.clou" +
-      "d.mdb.elasticsearch.v1.Host.Health\022<\n\010se" +
-      "rvices\030\007 \003(\0132*.yandex.cloud.mdb.elastics" +
-      "earch.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020a" +
-      "ssign_public_ip\030\t \001(\010\"<\n\004Type\022\024\n\020TYPE_UN" +
-      "SPECIFIED\020\000\022\r\n\tDATA_NODE\020\001\022\017\n\013MASTER_NOD" +
-      "E\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
-      "\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\350\001\n\007Service\022=\n\004typ" +
-      "e\030\001 \001(\0162/.yandex.cloud.mdb.elasticsearch" +
-      ".v1.Service.Type\022A\n\006health\030\002 \001(\01621.yande" +
-      "x.cloud.mdb.elasticsearch.v1.Service.Hea" +
-      "lth\"/\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\021\n\rELA" +
-      "STICSEARCH\020\001\"*\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005A" +
-      "LIVE\020\001\022\010\n\004DEAD\020\002B|\n%yandex.cloud.api.mdb" +
-      ".elasticsearch.v1ZSgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/mdb/elastics" +
-      "earch/v1;elasticsearchb\006proto3"
+      "ticsearch\022\017\n\007edition\030\003 \001(\t\"\353\003\n\rElasticse" +
+      "arch\022L\n\tdata_node\030\001 \001(\01329.yandex.cloud.m" +
+      "db.elasticsearch.v1.Elasticsearch.DataNo" +
+      "de\022P\n\013master_node\030\002 \001(\0132;.yandex.cloud.m" +
+      "db.elasticsearch.v1.Elasticsearch.Master" +
+      "Node\022\017\n\007plugins\030\003 \003(\t\032\331\001\n\010DataNode\022\201\001\n\032e" +
+      "lasticsearch_config_set_7\030\001 \001(\0132A.yandex" +
+      ".cloud.mdb.elasticsearch.v1.config.Elast" +
+      "icsearchConfigSet7H\000R\030elasticsearchConfi" +
+      "gSet_7\022?\n\tresources\030\002 \001(\0132,.yandex.cloud" +
+      ".mdb.elasticsearch.v1.ResourcesB\010\n\006confi" +
+      "g\032M\n\nMasterNode\022?\n\tresources\030\001 \001(\0132,.yan" +
+      "dex.cloud.mdb.elasticsearch.v1.Resources" +
+      "\"P\n\tResources\022\032\n\022resource_preset_id\030\001 \001(" +
+      "\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001" +
+      "(\t\"\331\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030" +
+      "\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022:\n\004type\030\004 \001(\0162,.y" +
+      "andex.cloud.mdb.elasticsearch.v1.Host.Ty" +
+      "pe\022?\n\tresources\030\005 \001(\0132,.yandex.cloud.mdb" +
+      ".elasticsearch.v1.Resources\022>\n\006health\030\006 " +
+      "\001(\0162..yandex.cloud.mdb.elasticsearch.v1." +
+      "Host.Health\022<\n\010services\030\007 \003(\0132*.yandex.c" +
+      "loud.mdb.elasticsearch.v1.Service\022\021\n\tsub" +
+      "net_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"<" +
+      "\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n\tDATA_NOD" +
+      "E\020\001\022\017\n\013MASTER_NODE\020\002\"8\n\006Health\022\013\n\007UNKNOW" +
+      "N\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\350" +
+      "\001\n\007Service\022=\n\004type\030\001 \001(\0162/.yandex.cloud." +
+      "mdb.elasticsearch.v1.Service.Type\022A\n\006hea" +
+      "lth\030\002 \001(\01621.yandex.cloud.mdb.elasticsear" +
+      "ch.v1.Service.Health\"/\n\004Type\022\024\n\020TYPE_UNS" +
+      "PECIFIED\020\000\022\021\n\rELASTICSEARCH\020\001\"*\n\006Health\022" +
+      "\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002B|\n%yan" +
+      "dex.cloud.api.mdb.elasticsearch.v1ZSgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/mdb/elasticsearch/v1;elasticsearchb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12839,7 +13013,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_elasticsearch_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_elasticsearch_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "Elasticsearch", });
+        new java.lang.String[] { "Version", "Elasticsearch", "Edition", });
     internal_static_yandex_cloud_mdb_elasticsearch_v1_Elasticsearch_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_Elasticsearch_fieldAccessorTable = new
