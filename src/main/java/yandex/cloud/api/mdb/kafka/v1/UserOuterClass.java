@@ -2670,6 +2670,14 @@ public final class UserOuterClass {
        * <code>ACCESS_ROLE_CONSUMER = 2;</code>
        */
       ACCESS_ROLE_CONSUMER(2),
+      /**
+       * <pre>
+       * admin role for the user.
+       * </pre>
+       *
+       * <code>ACCESS_ROLE_ADMIN = 3;</code>
+       */
+      ACCESS_ROLE_ADMIN(3),
       UNRECOGNIZED(-1),
       ;
 
@@ -2693,6 +2701,14 @@ public final class UserOuterClass {
        * <code>ACCESS_ROLE_CONSUMER = 2;</code>
        */
       public static final int ACCESS_ROLE_CONSUMER_VALUE = 2;
+      /**
+       * <pre>
+       * admin role for the user.
+       * </pre>
+       *
+       * <code>ACCESS_ROLE_ADMIN = 3;</code>
+       */
+      public static final int ACCESS_ROLE_ADMIN_VALUE = 3;
 
 
       public final int getNumber() {
@@ -2716,6 +2732,7 @@ public final class UserOuterClass {
           case 0: return ACCESS_ROLE_UNSPECIFIED;
           case 1: return ACCESS_ROLE_PRODUCER;
           case 2: return ACCESS_ROLE_CONSUMER;
+          case 3: return ACCESS_ROLE_ADMIN;
           default: return null;
         }
       }
@@ -3400,15 +3417,15 @@ public final class UserOuterClass {
       "pec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\0041-63\362\3071\r[a-zA" +
       "-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-12" +
       "8\022:\n\013permissions\030\003 \003(\0132%.yandex.cloud.md" +
-      "b.kafka.v1.Permission\"\277\001\n\nPermission\022\022\n\n" +
+      "b.kafka.v1.Permission\"\326\001\n\nPermission\022\022\n\n" +
       "topic_name\030\001 \001(\t\022>\n\004role\030\002 \001(\01620.yandex." +
       "cloud.mdb.kafka.v1.Permission.AccessRole" +
-      "\"]\n\nAccessRole\022\033\n\027ACCESS_ROLE_UNSPECIFIE" +
+      "\"t\n\nAccessRole\022\033\n\027ACCESS_ROLE_UNSPECIFIE" +
       "D\020\000\022\030\n\024ACCESS_ROLE_PRODUCER\020\001\022\030\n\024ACCESS_" +
-      "ROLE_CONSUMER\020\002Bd\n\035yandex.cloud.api.mdb." +
-      "kafka.v1ZCgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/mdb/kafka/v1;kafkab\006p" +
-      "roto3"
+      "ROLE_CONSUMER\020\002\022\025\n\021ACCESS_ROLE_ADMIN\020\003Bd" +
+      "\n\035yandex.cloud.api.mdb.kafka.v1ZCgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/mdb/kafka/v1;kafkab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

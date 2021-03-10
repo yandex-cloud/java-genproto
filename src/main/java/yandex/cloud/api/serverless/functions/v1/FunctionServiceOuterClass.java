@@ -15570,6 +15570,60 @@ public final class FunctionServiceOuterClass {
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ConnectivityOrBuilder getConnectivityOrBuilder();
 
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+     */
+    int getNamedServiceAccountsCount();
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+     */
+    boolean containsNamedServiceAccounts(
+        java.lang.String key);
+    /**
+     * Use {@link #getNamedServiceAccountsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getNamedServiceAccounts();
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getNamedServiceAccountsMap();
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+     */
+
+    java.lang.String getNamedServiceAccountsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+     */
+
+    java.lang.String getNamedServiceAccountsOrThrow(
+        java.lang.String key);
+
     public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.CreateFunctionVersionRequest.PackageSourceCase getPackageSourceCase();
   }
   /**
@@ -15720,6 +15774,19 @@ public final class FunctionServiceOuterClass {
               tag_.add(s);
               break;
             }
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+                namedServiceAccounts_ = com.google.protobuf.MapField.newMapField(
+                    NamedServiceAccountsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00002000;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              namedServiceAccounts__ = input.readMessage(
+                  NamedServiceAccountsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              namedServiceAccounts_.getMutableMap().put(
+                  namedServiceAccounts__.getKey(), namedServiceAccounts__.getValue());
+              break;
+            }
             case 138: {
               yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.Connectivity.Builder subBuilder = null;
               if (connectivity_ != null) {
@@ -15767,6 +15834,8 @@ public final class FunctionServiceOuterClass {
       switch (number) {
         case 12:
           return internalGetEnvironment();
+        case 15:
+          return internalGetNamedServiceAccounts();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -16378,6 +16447,98 @@ public final class FunctionServiceOuterClass {
       return getConnectivity();
     }
 
+    public static final int NAMED_SERVICE_ACCOUNTS_FIELD_NUMBER = 15;
+    private static final class NamedServiceAccountsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_NamedServiceAccountsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> namedServiceAccounts_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetNamedServiceAccounts() {
+      if (namedServiceAccounts_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            NamedServiceAccountsDefaultEntryHolder.defaultEntry);
+      }
+      return namedServiceAccounts_;
+    }
+
+    public int getNamedServiceAccountsCount() {
+      return internalGetNamedServiceAccounts().getMap().size();
+    }
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+     */
+
+    public boolean containsNamedServiceAccounts(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetNamedServiceAccounts().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getNamedServiceAccountsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getNamedServiceAccounts() {
+      return getNamedServiceAccountsMap();
+    }
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getNamedServiceAccountsMap() {
+      return internalGetNamedServiceAccounts().getMap();
+    }
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+     */
+
+    public java.lang.String getNamedServiceAccountsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetNamedServiceAccounts().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+     */
+
+    public java.lang.String getNamedServiceAccountsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetNamedServiceAccounts().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16432,6 +16593,12 @@ public final class FunctionServiceOuterClass {
       for (int i = 0; i < tag_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, tag_.getRaw(i));
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetNamedServiceAccounts(),
+          NamedServiceAccountsDefaultEntryHolder.defaultEntry,
+          15);
       if (connectivity_ != null) {
         output.writeMessage(17, getConnectivity());
       }
@@ -16497,6 +16664,16 @@ public final class FunctionServiceOuterClass {
         size += dataSize;
         size += 1 * getTagList().size();
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetNamedServiceAccounts().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        namedServiceAccounts__ = NamedServiceAccountsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(15, namedServiceAccounts__);
+      }
       if (connectivity_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getConnectivity());
@@ -16546,6 +16723,8 @@ public final class FunctionServiceOuterClass {
         result = result && getConnectivity()
             .equals(other.getConnectivity());
       }
+      result = result && internalGetNamedServiceAccounts().equals(
+          other.internalGetNamedServiceAccounts());
       result = result && getPackageSourceCase().equals(
           other.getPackageSourceCase());
       if (!result) return false;
@@ -16605,6 +16784,10 @@ public final class FunctionServiceOuterClass {
       if (hasConnectivity()) {
         hash = (37 * hash) + CONNECTIVITY_FIELD_NUMBER;
         hash = (53 * hash) + getConnectivity().hashCode();
+      }
+      if (!internalGetNamedServiceAccounts().getMap().isEmpty()) {
+        hash = (37 * hash) + NAMED_SERVICE_ACCOUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetNamedServiceAccounts().hashCode();
       }
       switch (packageSourceCase_) {
         case 9:
@@ -16735,6 +16918,8 @@ public final class FunctionServiceOuterClass {
         switch (number) {
           case 12:
             return internalGetEnvironment();
+          case 15:
+            return internalGetNamedServiceAccounts();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -16746,6 +16931,8 @@ public final class FunctionServiceOuterClass {
         switch (number) {
           case 12:
             return internalGetMutableEnvironment();
+          case 15:
+            return internalGetMutableNamedServiceAccounts();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -16808,6 +16995,7 @@ public final class FunctionServiceOuterClass {
           connectivity_ = null;
           connectivityBuilder_ = null;
         }
+        internalGetMutableNamedServiceAccounts().clear();
         packageSourceCase_ = 0;
         packageSource_ = null;
         return this;
@@ -16878,6 +17066,8 @@ public final class FunctionServiceOuterClass {
         } else {
           result.connectivity_ = connectivityBuilder_.build();
         }
+        result.namedServiceAccounts_ = internalGetNamedServiceAccounts();
+        result.namedServiceAccounts_.makeImmutable();
         result.bitField0_ = to_bitField0_;
         result.packageSourceCase_ = packageSourceCase_;
         onBuilt();
@@ -16969,6 +17159,8 @@ public final class FunctionServiceOuterClass {
         if (other.hasConnectivity()) {
           mergeConnectivity(other.getConnectivity());
         }
+        internalGetMutableNamedServiceAccounts().mergeFrom(
+            other.internalGetNamedServiceAccounts());
         switch (other.getPackageSourceCase()) {
           case PACKAGE: {
             mergePackage(other.getPackage());
@@ -18552,6 +18744,157 @@ public final class FunctionServiceOuterClass {
           connectivity_ = null;
         }
         return connectivityBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> namedServiceAccounts_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetNamedServiceAccounts() {
+        if (namedServiceAccounts_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              NamedServiceAccountsDefaultEntryHolder.defaultEntry);
+        }
+        return namedServiceAccounts_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableNamedServiceAccounts() {
+        onChanged();;
+        if (namedServiceAccounts_ == null) {
+          namedServiceAccounts_ = com.google.protobuf.MapField.newMapField(
+              NamedServiceAccountsDefaultEntryHolder.defaultEntry);
+        }
+        if (!namedServiceAccounts_.isMutable()) {
+          namedServiceAccounts_ = namedServiceAccounts_.copy();
+        }
+        return namedServiceAccounts_;
+      }
+
+      public int getNamedServiceAccountsCount() {
+        return internalGetNamedServiceAccounts().getMap().size();
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+       */
+
+      public boolean containsNamedServiceAccounts(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetNamedServiceAccounts().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getNamedServiceAccountsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getNamedServiceAccounts() {
+        return getNamedServiceAccountsMap();
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getNamedServiceAccountsMap() {
+        return internalGetNamedServiceAccounts().getMap();
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+       */
+
+      public java.lang.String getNamedServiceAccountsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetNamedServiceAccounts().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+       */
+
+      public java.lang.String getNamedServiceAccountsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetNamedServiceAccounts().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearNamedServiceAccounts() {
+        internalGetMutableNamedServiceAccounts().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+       */
+
+      public Builder removeNamedServiceAccounts(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableNamedServiceAccounts().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableNamedServiceAccounts() {
+        return internalGetMutableNamedServiceAccounts().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+       */
+      public Builder putNamedServiceAccounts(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableNamedServiceAccounts().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 15;</code>
+       */
+
+      public Builder putAllNamedServiceAccounts(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableNamedServiceAccounts().getMutableMap()
+            .putAll(values);
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -25827,6 +26170,11 @@ public final class FunctionServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_EnvironmentEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_NamedServiceAccountsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_NamedServiceAccountsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -25935,7 +26283,7 @@ public final class FunctionServiceOuterClass {
       "\212\3101\006<=1000\"p\n\036ListFunctionOperationsResp" +
       "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
       "operation.Operation\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"\362\005\n\034CreateFunctionVersionRequest\022\031\n" +
+      " \001(\t\"\255\007\n\034CreateFunctionVersionRequest\022\031\n" +
       "\013function_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007runtime\030\002 \001(" +
       "\tB\004\350\3071\001\022\036\n\013description\030\003 \001(\tB\t\212\3101\0050-256\022" +
       "\030\n\nentrypoint\030\004 \001(\tB\004\350\3071\001\022H\n\tresources\030\005" +
@@ -25952,120 +26300,124 @@ public final class FunctionServiceOuterClass {
       "-Z][a-zA-Z0-9_]*\022!\n\003tag\030\r \003(\tB\024\362\3071\020[a-z]" +
       "[-_0-9a-z]*\022H\n\014connectivity\030\021 \001(\01322.yand" +
       "ex.cloud.serverless.functions.v1.Connect" +
-      "ivity\0322\n\020EnvironmentEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001B\026\n\016package_source\022\004\300\3011" +
-      "\001\"<\n\035CreateFunctionVersionMetadata\022\033\n\023fu" +
-      "nction_version_id\030\001 \001(\t\"]\n\025SetFunctionTa" +
-      "gRequest\022!\n\023function_version_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-z]*\"`" +
-      "\n\030RemoveFunctionTagRequest\022!\n\023function_v" +
-      "ersion_id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020" +
-      "[a-z][-_0-9a-z]*\"5\n\026SetFunctionTagMetada" +
-      "ta\022\033\n\023function_version_id\030\001 \001(\t\"8\n\031Remov" +
-      "eFunctionTagMetadata\022\033\n\023function_version" +
-      "_id\030\001 \001(\t\"\301\001\n\035ListFunctionTagHistoryRequ" +
-      "est\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022+\n\003tag\030\002 " +
-      "\001(\tB\036\362\3071\032[a-z][-_0-9a-z]*|[$]latest\022\035\n\tp" +
-      "age_size\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token" +
-      "\030\004 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<" +
-      "=1000\"\200\003\n\036ListFunctionTagHistoryResponse" +
-      "\022\202\001\n\033function_tag_history_record\030\001 \003(\0132]" +
-      ".yandex.cloud.serverless.functions.v1.Li" +
-      "stFunctionTagHistoryResponse.FunctionTag" +
-      "HistoryRecord\022\027\n\017next_page_token\030\002 \001(\t\032\277" +
-      "\001\n\030FunctionTagHistoryRecord\022\023\n\013function_" +
-      "id\030\001 \001(\t\022\033\n\023function_version_id\030\003 \001(\t\022\013\n" +
-      "\003tag\030\002 \001(\t\0222\n\016effective_from\030\004 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\0220\n\014effective_to\030\005" +
-      " \001(\0132\032.google.protobuf.Timestamp2\235\032\n\017Fun" +
-      "ctionService\022\236\001\n\003Get\0228.yandex.cloud.serv" +
-      "erless.functions.v1.GetFunctionRequest\032." +
-      ".yandex.cloud.serverless.functions.v1.Fu" +
-      "nction\"-\202\323\344\223\002\'\022%/functions/v1/functions/" +
-      "{function_id}\022\240\001\n\004List\022:.yandex.cloud.se" +
-      "rverless.functions.v1.ListFunctionsReque" +
-      "st\032;.yandex.cloud.serverless.functions.v" +
-      "1.ListFunctionsResponse\"\037\202\323\344\223\002\031\022\027/functi" +
-      "ons/v1/functions\022\262\001\n\006Create\022;.yandex.clo" +
-      "ud.serverless.functions.v1.CreateFunctio" +
-      "nRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"H\202\323\344\223\002\034\"\027/functions/v1/functions:\001*\262" +
-      "\322*\"\n\026CreateFunctionMetadata\022\010Function\022\300\001" +
-      "\n\006Update\022;.yandex.cloud.serverless.funct" +
-      "ions.v1.UpdateFunctionRequest\032!.yandex.c" +
-      "loud.operation.Operation\"V\202\323\344\223\002*2%/funct" +
-      "ions/v1/functions/{function_id}:\001*\262\322*\"\n\026" +
-      "UpdateFunctionMetadata\022\010Function\022\312\001\n\006Del" +
-      "ete\022;.yandex.cloud.serverless.functions." +
-      "v1.DeleteFunctionRequest\032!.yandex.cloud." +
-      "operation.Operation\"`\202\323\344\223\002\'*%/functions/" +
-      "v1/functions/{function_id}\262\322*/\n\026DeleteFu" +
-      "nctionMetadata\022\025google.protobuf.Empty\022\262\001" +
-      "\n\nGetVersion\022?.yandex.cloud.serverless.f" +
-      "unctions.v1.GetFunctionVersionRequest\032-." +
-      "yandex.cloud.serverless.functions.v1.Ver" +
-      "sion\"4\202\323\344\223\002.\022,/functions/v1/versions/{fu" +
-      "nction_version_id}\022\254\001\n\017GetVersionByTag\022D" +
-      ".yandex.cloud.serverless.functions.v1.Ge" +
-      "tFunctionVersionByTagRequest\032-.yandex.cl" +
-      "oud.serverless.functions.v1.Version\"$\202\323\344" +
-      "\223\002\036\022\034/functions/v1/versions:byTag\022\267\001\n\014Li" +
-      "stVersions\022B.yandex.cloud.serverless.fun" +
-      "ctions.v1.ListFunctionsVersionsRequest\032C" +
-      ".yandex.cloud.serverless.functions.v1.Li" +
-      "stFunctionsVersionsResponse\"\036\202\323\344\223\002\030\022\026/fu" +
-      "nctions/v1/versions\022\315\001\n\006SetTag\022;.yandex." +
-      "cloud.serverless.functions.v1.SetFunctio" +
-      "nTagRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"c\202\323\344\223\0028\"3/functions/v1/versions/{" +
-      "function_version_id}:setTag:\001*\262\322*!\n\026SetF" +
-      "unctionTagMetadata\022\007Version\022\331\001\n\tRemoveTa" +
-      "g\022>.yandex.cloud.serverless.functions.v1" +
-      ".RemoveFunctionTagRequest\032!.yandex.cloud" +
-      ".operation.Operation\"i\202\323\344\223\002;\"6/functions" +
-      "/v1/versions/{function_version_id}:remov" +
-      "eTag:\001*\262\322*$\n\031RemoveFunctionTagMetadata\022\007" +
-      "Version\022\325\001\n\016ListTagHistory\022C.yandex.clou" +
-      "d.serverless.functions.v1.ListFunctionTa" +
-      "gHistoryRequest\032D.yandex.cloud.serverles" +
-      "s.functions.v1.ListFunctionTagHistoryRes" +
-      "ponse\"8\202\323\344\223\0022\0220/functions/v1/functions/{" +
-      "function_id}:tagHistory\022\305\001\n\rCreateVersio" +
-      "n\022B.yandex.cloud.serverless.functions.v1" +
-      ".CreateFunctionVersionRequest\032!.yandex.c" +
-      "loud.operation.Operation\"M\202\323\344\223\002\033\"\026/funct" +
-      "ions/v1/versions:\001*\262\322*(\n\035CreateFunctionV" +
-      "ersionMetadata\022\007Version\022\245\001\n\014ListRuntimes" +
-      "\0229.yandex.cloud.serverless.functions.v1." +
-      "ListRuntimesRequest\032:.yandex.cloud.serve" +
-      "rless.functions.v1.ListRuntimesResponse\"" +
-      "\036\202\323\344\223\002\030\022\026/functions/v1/runtimes\022\325\001\n\016List" +
-      "Operations\022C.yandex.cloud.serverless.fun" +
-      "ctions.v1.ListFunctionOperationsRequest\032" +
-      "D.yandex.cloud.serverless.functions.v1.L" +
-      "istFunctionOperationsResponse\"8\202\323\344\223\0022\0220/" +
-      "functions/v1/functions/{function_id}/ope" +
-      "rations\022\267\001\n\022ListAccessBindings\022..yandex." +
-      "cloud.access.ListAccessBindingsRequest\032/" +
-      ".yandex.cloud.access.ListAccessBindingsR" +
-      "esponse\"@\202\323\344\223\002:\0228/functions/v1/functions" +
-      "/{resource_id}:listAccessBindings\022\346\001\n\021Se" +
-      "tAccessBindings\022-.yandex.cloud.access.Se" +
-      "tAccessBindingsRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"\177\202\323\344\223\002<\"7/functions/v1" +
-      "/functions/{resource_id}:setAccessBindin" +
-      "gs:\001*\262\322*9\n access.SetAccessBindingsMetad" +
-      "ata\022\025google.protobuf.Empty\022\363\001\n\024UpdateAcc" +
-      "essBindings\0220.yandex.cloud.access.Update" +
-      "AccessBindingsRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\205\001\202\323\344\223\002?\":/functions/v1" +
-      "/functions/{resource_id}:updateAccessBin" +
-      "dings:\001*\262\322*<\n#access.UpdateAccessBinding" +
-      "sMetadata\022\025google.protobuf.EmptyB~\n(yand" +
-      "ex.cloud.api.serverless.functions.v1ZRgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/serverless/functions/v1;functions" +
-      "b\006proto3"
+      "ivity\022|\n\026named_service_accounts\030\017 \003(\0132\\." +
+      "yandex.cloud.serverless.functions.v1.Cre" +
+      "ateFunctionVersionRequest.NamedServiceAc" +
+      "countsEntry\0322\n\020EnvironmentEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\031NamedServiceA" +
+      "ccountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001B\026\n\016package_source\022\004\300\3011\001\"<\n\035CreateFu" +
+      "nctionVersionMetadata\022\033\n\023function_versio" +
+      "n_id\030\001 \001(\t\"]\n\025SetFunctionTagRequest\022!\n\023f" +
+      "unction_version_id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag\030\002 " +
+      "\001(\tB\024\362\3071\020[a-z][-_0-9a-z]*\"`\n\030RemoveFunct" +
+      "ionTagRequest\022!\n\023function_version_id\030\001 \001" +
+      "(\tB\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-" +
+      "z]*\"5\n\026SetFunctionTagMetadata\022\033\n\023functio" +
+      "n_version_id\030\001 \001(\t\"8\n\031RemoveFunctionTagM" +
+      "etadata\022\033\n\023function_version_id\030\001 \001(\t\"\301\001\n" +
+      "\035ListFunctionTagHistoryRequest\022\031\n\013functi" +
+      "on_id\030\001 \001(\tB\004\350\3071\001\022+\n\003tag\030\002 \001(\tB\036\362\3071\032[a-z" +
+      "][-_0-9a-z]*|[$]latest\022\035\n\tpage_size\030\003 \001(" +
+      "\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\tB\t\212\3101\005<" +
+      "=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000\"\200\003\n\036Lis" +
+      "tFunctionTagHistoryResponse\022\202\001\n\033function" +
+      "_tag_history_record\030\001 \003(\0132].yandex.cloud" +
+      ".serverless.functions.v1.ListFunctionTag" +
+      "HistoryResponse.FunctionTagHistoryRecord" +
+      "\022\027\n\017next_page_token\030\002 \001(\t\032\277\001\n\030FunctionTa" +
+      "gHistoryRecord\022\023\n\013function_id\030\001 \001(\t\022\033\n\023f" +
+      "unction_version_id\030\003 \001(\t\022\013\n\003tag\030\002 \001(\t\0222\n" +
+      "\016effective_from\030\004 \001(\0132\032.google.protobuf." +
+      "Timestamp\0220\n\014effective_to\030\005 \001(\0132\032.google" +
+      ".protobuf.Timestamp2\235\032\n\017FunctionService\022" +
+      "\236\001\n\003Get\0228.yandex.cloud.serverless.functi" +
+      "ons.v1.GetFunctionRequest\032..yandex.cloud" +
+      ".serverless.functions.v1.Function\"-\202\323\344\223\002" +
+      "\'\022%/functions/v1/functions/{function_id}" +
+      "\022\240\001\n\004List\022:.yandex.cloud.serverless.func" +
+      "tions.v1.ListFunctionsRequest\032;.yandex.c" +
+      "loud.serverless.functions.v1.ListFunctio" +
+      "nsResponse\"\037\202\323\344\223\002\031\022\027/functions/v1/functi" +
+      "ons\022\262\001\n\006Create\022;.yandex.cloud.serverless" +
+      ".functions.v1.CreateFunctionRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"H\202\323\344\223\002\034\"\027" +
+      "/functions/v1/functions:\001*\262\322*\"\n\026CreateFu" +
+      "nctionMetadata\022\010Function\022\300\001\n\006Update\022;.ya" +
+      "ndex.cloud.serverless.functions.v1.Updat" +
+      "eFunctionRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"V\202\323\344\223\002*2%/functions/v1/funct" +
+      "ions/{function_id}:\001*\262\322*\"\n\026UpdateFunctio" +
+      "nMetadata\022\010Function\022\312\001\n\006Delete\022;.yandex." +
+      "cloud.serverless.functions.v1.DeleteFunc" +
+      "tionRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"`\202\323\344\223\002\'*%/functions/v1/functions/" +
+      "{function_id}\262\322*/\n\026DeleteFunctionMetadat" +
+      "a\022\025google.protobuf.Empty\022\262\001\n\nGetVersion\022" +
+      "?.yandex.cloud.serverless.functions.v1.G" +
+      "etFunctionVersionRequest\032-.yandex.cloud." +
+      "serverless.functions.v1.Version\"4\202\323\344\223\002.\022" +
+      ",/functions/v1/versions/{function_versio" +
+      "n_id}\022\254\001\n\017GetVersionByTag\022D.yandex.cloud" +
+      ".serverless.functions.v1.GetFunctionVers" +
+      "ionByTagRequest\032-.yandex.cloud.serverles" +
+      "s.functions.v1.Version\"$\202\323\344\223\002\036\022\034/functio" +
+      "ns/v1/versions:byTag\022\267\001\n\014ListVersions\022B." +
+      "yandex.cloud.serverless.functions.v1.Lis" +
+      "tFunctionsVersionsRequest\032C.yandex.cloud" +
+      ".serverless.functions.v1.ListFunctionsVe" +
+      "rsionsResponse\"\036\202\323\344\223\002\030\022\026/functions/v1/ve" +
+      "rsions\022\315\001\n\006SetTag\022;.yandex.cloud.serverl" +
+      "ess.functions.v1.SetFunctionTagRequest\032!" +
+      ".yandex.cloud.operation.Operation\"c\202\323\344\223\002" +
+      "8\"3/functions/v1/versions/{function_vers" +
+      "ion_id}:setTag:\001*\262\322*!\n\026SetFunctionTagMet" +
+      "adata\022\007Version\022\331\001\n\tRemoveTag\022>.yandex.cl" +
+      "oud.serverless.functions.v1.RemoveFuncti" +
+      "onTagRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"i\202\323\344\223\002;\"6/functions/v1/versions/" +
+      "{function_version_id}:removeTag:\001*\262\322*$\n\031" +
+      "RemoveFunctionTagMetadata\022\007Version\022\325\001\n\016L" +
+      "istTagHistory\022C.yandex.cloud.serverless." +
+      "functions.v1.ListFunctionTagHistoryReque" +
+      "st\032D.yandex.cloud.serverless.functions.v" +
+      "1.ListFunctionTagHistoryResponse\"8\202\323\344\223\0022" +
+      "\0220/functions/v1/functions/{function_id}:" +
+      "tagHistory\022\305\001\n\rCreateVersion\022B.yandex.cl" +
+      "oud.serverless.functions.v1.CreateFuncti" +
+      "onVersionRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"M\202\323\344\223\002\033\"\026/functions/v1/versi" +
+      "ons:\001*\262\322*(\n\035CreateFunctionVersionMetadat" +
+      "a\022\007Version\022\245\001\n\014ListRuntimes\0229.yandex.clo" +
+      "ud.serverless.functions.v1.ListRuntimesR" +
+      "equest\032:.yandex.cloud.serverless.functio" +
+      "ns.v1.ListRuntimesResponse\"\036\202\323\344\223\002\030\022\026/fun" +
+      "ctions/v1/runtimes\022\325\001\n\016ListOperations\022C." +
+      "yandex.cloud.serverless.functions.v1.Lis" +
+      "tFunctionOperationsRequest\032D.yandex.clou" +
+      "d.serverless.functions.v1.ListFunctionOp" +
+      "erationsResponse\"8\202\323\344\223\0022\0220/functions/v1/" +
+      "functions/{function_id}/operations\022\267\001\n\022L" +
+      "istAccessBindings\022..yandex.cloud.access." +
+      "ListAccessBindingsRequest\032/.yandex.cloud" +
+      ".access.ListAccessBindingsResponse\"@\202\323\344\223" +
+      "\002:\0228/functions/v1/functions/{resource_id" +
+      "}:listAccessBindings\022\346\001\n\021SetAccessBindin" +
+      "gs\022-.yandex.cloud.access.SetAccessBindin" +
+      "gsRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"\177\202\323\344\223\002<\"7/functions/v1/functions/{r" +
+      "esource_id}:setAccessBindings:\001*\262\322*9\n ac" +
+      "cess.SetAccessBindingsMetadata\022\025google.p" +
+      "rotobuf.Empty\022\363\001\n\024UpdateAccessBindings\0220" +
+      ".yandex.cloud.access.UpdateAccessBinding" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\205\001\202\323\344\223\002?\":/functions/v1/functions/{r" +
+      "esource_id}:updateAccessBindings:\001*\262\322*<\n" +
+      "#access.UpdateAccessBindingsMetadata\022\025go" +
+      "ogle.protobuf.EmptyB~\n(yandex.cloud.api." +
+      "serverless.functions.v1ZRgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/server" +
+      "less/functions/v1;functionsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -26207,12 +26559,18 @@ public final class FunctionServiceOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_descriptor,
-        new java.lang.String[] { "FunctionId", "Runtime", "Description", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "Package", "Content", "VersionId", "Environment", "Tag", "Connectivity", "PackageSource", });
+        new java.lang.String[] { "FunctionId", "Runtime", "Description", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "Package", "Content", "VersionId", "Environment", "Tag", "Connectivity", "NamedServiceAccounts", "PackageSource", });
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_EnvironmentEntry_descriptor =
       internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_EnvironmentEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_EnvironmentEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_NamedServiceAccountsEntry_descriptor =
+      internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_NamedServiceAccountsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_NamedServiceAccountsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionMetadata_descriptor =
       getDescriptor().getMessageTypes().get(18);

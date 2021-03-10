@@ -4914,6 +4914,15 @@ public final class ClusterOuterClass {
      * <code>bool assign_public_ip = 6;</code>
      */
     boolean getAssignPublicIp();
+
+    /**
+     * <pre>
+     * Allows to manage topics via AdminAPI
+     * </pre>
+     *
+     * <code>bool unmanaged_topics = 7;</code>
+     */
+    boolean getUnmanagedTopics();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConfigSpec}
@@ -4931,6 +4940,7 @@ public final class ClusterOuterClass {
       version_ = "";
       zoneId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       assignPublicIp_ = false;
+      unmanagedTopics_ = false;
     }
 
     @java.lang.Override
@@ -5014,6 +5024,11 @@ public final class ClusterOuterClass {
             case 48: {
 
               assignPublicIp_ = input.readBool();
+              break;
+            }
+            case 56: {
+
+              unmanagedTopics_ = input.readBool();
               break;
             }
             default: {
@@ -7090,6 +7105,19 @@ public final class ClusterOuterClass {
       return assignPublicIp_;
     }
 
+    public static final int UNMANAGED_TOPICS_FIELD_NUMBER = 7;
+    private boolean unmanagedTopics_;
+    /**
+     * <pre>
+     * Allows to manage topics via AdminAPI
+     * </pre>
+     *
+     * <code>bool unmanaged_topics = 7;</code>
+     */
+    public boolean getUnmanagedTopics() {
+      return unmanagedTopics_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7121,6 +7149,9 @@ public final class ClusterOuterClass {
       }
       if (assignPublicIp_ != false) {
         output.writeBool(6, assignPublicIp_);
+      }
+      if (unmanagedTopics_ != false) {
+        output.writeBool(7, unmanagedTopics_);
       }
       unknownFields.writeTo(output);
     }
@@ -7157,6 +7188,10 @@ public final class ClusterOuterClass {
       if (assignPublicIp_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, assignPublicIp_);
+      }
+      if (unmanagedTopics_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, unmanagedTopics_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7195,6 +7230,8 @@ public final class ClusterOuterClass {
       }
       result = result && (getAssignPublicIp()
           == other.getAssignPublicIp());
+      result = result && (getUnmanagedTopics()
+          == other.getUnmanagedTopics());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7227,6 +7264,9 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + ASSIGN_PUBLIC_IP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAssignPublicIp());
+      hash = (37 * hash) + UNMANAGED_TOPICS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUnmanagedTopics());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7384,6 +7424,8 @@ public final class ClusterOuterClass {
         }
         assignPublicIp_ = false;
 
+        unmanagedTopics_ = false;
+
         return this;
       }
 
@@ -7434,6 +7476,7 @@ public final class ClusterOuterClass {
           result.brokersCount_ = brokersCountBuilder_.build();
         }
         result.assignPublicIp_ = assignPublicIp_;
+        result.unmanagedTopics_ = unmanagedTopics_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7508,6 +7551,9 @@ public final class ClusterOuterClass {
         }
         if (other.getAssignPublicIp() != false) {
           setAssignPublicIp(other.getAssignPublicIp());
+        }
+        if (other.getUnmanagedTopics() != false) {
+          setUnmanagedTopics(other.getUnmanagedTopics());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8254,6 +8300,44 @@ public final class ClusterOuterClass {
       public Builder clearAssignPublicIp() {
         
         assignPublicIp_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean unmanagedTopics_ ;
+      /**
+       * <pre>
+       * Allows to manage topics via AdminAPI
+       * </pre>
+       *
+       * <code>bool unmanaged_topics = 7;</code>
+       */
+      public boolean getUnmanagedTopics() {
+        return unmanagedTopics_;
+      }
+      /**
+       * <pre>
+       * Allows to manage topics via AdminAPI
+       * </pre>
+       *
+       * <code>bool unmanaged_topics = 7;</code>
+       */
+      public Builder setUnmanagedTopics(boolean value) {
+        
+        unmanagedTopics_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allows to manage topics via AdminAPI
+       * </pre>
+       *
+       * <code>bool unmanaged_topics = 7;</code>
+       */
+      public Builder clearUnmanagedTopics() {
+        
+        unmanagedTopics_ = false;
         onChanged();
         return this;
       }
@@ -9490,6 +9574,31 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getSocketReceiveBufferBytesOrBuilder();
+
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    boolean hasAutoCreateTopicsEnable();
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    com.google.protobuf.BoolValue getAutoCreateTopicsEnable();
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAutoCreateTopicsEnableOrBuilder();
   }
   /**
    * <pre>
@@ -9680,6 +9789,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(socketReceiveBufferBytes_);
                 socketReceiveBufferBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (autoCreateTopicsEnable_ != null) {
+                subBuilder = autoCreateTopicsEnable_.toBuilder();
+              }
+              autoCreateTopicsEnable_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoCreateTopicsEnable_);
+                autoCreateTopicsEnable_ = subBuilder.buildPartial();
               }
 
               break;
@@ -10137,6 +10259,39 @@ public final class ClusterOuterClass {
       return getSocketReceiveBufferBytes();
     }
 
+    public static final int AUTO_CREATE_TOPICS_ENABLE_FIELD_NUMBER = 13;
+    private com.google.protobuf.BoolValue autoCreateTopicsEnable_;
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    public boolean hasAutoCreateTopicsEnable() {
+      return autoCreateTopicsEnable_ != null;
+    }
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    public com.google.protobuf.BoolValue getAutoCreateTopicsEnable() {
+      return autoCreateTopicsEnable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : autoCreateTopicsEnable_;
+    }
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getAutoCreateTopicsEnableOrBuilder() {
+      return getAutoCreateTopicsEnable();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10186,6 +10341,9 @@ public final class ClusterOuterClass {
       }
       if (socketReceiveBufferBytes_ != null) {
         output.writeMessage(12, getSocketReceiveBufferBytes());
+      }
+      if (autoCreateTopicsEnable_ != null) {
+        output.writeMessage(13, getAutoCreateTopicsEnable());
       }
       unknownFields.writeTo(output);
     }
@@ -10243,6 +10401,10 @@ public final class ClusterOuterClass {
       if (socketReceiveBufferBytes_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getSocketReceiveBufferBytes());
+      }
+      if (autoCreateTopicsEnable_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getAutoCreateTopicsEnable());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10316,6 +10478,11 @@ public final class ClusterOuterClass {
         result = result && getSocketReceiveBufferBytes()
             .equals(other.getSocketReceiveBufferBytes());
       }
+      result = result && (hasAutoCreateTopicsEnable() == other.hasAutoCreateTopicsEnable());
+      if (hasAutoCreateTopicsEnable()) {
+        result = result && getAutoCreateTopicsEnable()
+            .equals(other.getAutoCreateTopicsEnable());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -10372,6 +10539,10 @@ public final class ClusterOuterClass {
       if (hasSocketReceiveBufferBytes()) {
         hash = (37 * hash) + SOCKET_RECEIVE_BUFFER_BYTES_FIELD_NUMBER;
         hash = (53 * hash) + getSocketReceiveBufferBytes().hashCode();
+      }
+      if (hasAutoCreateTopicsEnable()) {
+        hash = (37 * hash) + AUTO_CREATE_TOPICS_ENABLE_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoCreateTopicsEnable().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10578,6 +10749,12 @@ public final class ClusterOuterClass {
           socketReceiveBufferBytes_ = null;
           socketReceiveBufferBytesBuilder_ = null;
         }
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          autoCreateTopicsEnable_ = null;
+        } else {
+          autoCreateTopicsEnable_ = null;
+          autoCreateTopicsEnableBuilder_ = null;
+        }
         return this;
       }
 
@@ -10659,6 +10836,11 @@ public final class ClusterOuterClass {
           result.socketReceiveBufferBytes_ = socketReceiveBufferBytes_;
         } else {
           result.socketReceiveBufferBytes_ = socketReceiveBufferBytesBuilder_.build();
+        }
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          result.autoCreateTopicsEnable_ = autoCreateTopicsEnable_;
+        } else {
+          result.autoCreateTopicsEnable_ = autoCreateTopicsEnableBuilder_.build();
         }
         onBuilt();
         return result;
@@ -10743,6 +10925,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasSocketReceiveBufferBytes()) {
           mergeSocketReceiveBufferBytes(other.getSocketReceiveBufferBytes());
+        }
+        if (other.hasAutoCreateTopicsEnable()) {
+          mergeAutoCreateTopicsEnable(other.getAutoCreateTopicsEnable());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12619,6 +12804,159 @@ public final class ClusterOuterClass {
         }
         return socketReceiveBufferBytesBuilder_;
       }
+
+      private com.google.protobuf.BoolValue autoCreateTopicsEnable_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> autoCreateTopicsEnableBuilder_;
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public boolean hasAutoCreateTopicsEnable() {
+        return autoCreateTopicsEnableBuilder_ != null || autoCreateTopicsEnable_ != null;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public com.google.protobuf.BoolValue getAutoCreateTopicsEnable() {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          return autoCreateTopicsEnable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : autoCreateTopicsEnable_;
+        } else {
+          return autoCreateTopicsEnableBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public Builder setAutoCreateTopicsEnable(com.google.protobuf.BoolValue value) {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoCreateTopicsEnable_ = value;
+          onChanged();
+        } else {
+          autoCreateTopicsEnableBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public Builder setAutoCreateTopicsEnable(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          autoCreateTopicsEnable_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoCreateTopicsEnableBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public Builder mergeAutoCreateTopicsEnable(com.google.protobuf.BoolValue value) {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          if (autoCreateTopicsEnable_ != null) {
+            autoCreateTopicsEnable_ =
+              com.google.protobuf.BoolValue.newBuilder(autoCreateTopicsEnable_).mergeFrom(value).buildPartial();
+          } else {
+            autoCreateTopicsEnable_ = value;
+          }
+          onChanged();
+        } else {
+          autoCreateTopicsEnableBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public Builder clearAutoCreateTopicsEnable() {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          autoCreateTopicsEnable_ = null;
+          onChanged();
+        } else {
+          autoCreateTopicsEnable_ = null;
+          autoCreateTopicsEnableBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAutoCreateTopicsEnableBuilder() {
+        
+        onChanged();
+        return getAutoCreateTopicsEnableFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAutoCreateTopicsEnableOrBuilder() {
+        if (autoCreateTopicsEnableBuilder_ != null) {
+          return autoCreateTopicsEnableBuilder_.getMessageOrBuilder();
+        } else {
+          return autoCreateTopicsEnable_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : autoCreateTopicsEnable_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAutoCreateTopicsEnableFieldBuilder() {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          autoCreateTopicsEnableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAutoCreateTopicsEnable(),
+                  getParentForChildren(),
+                  isClean());
+          autoCreateTopicsEnable_ = null;
+        }
+        return autoCreateTopicsEnableBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13000,6 +13338,31 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.Int64Value socket_receive_buffer_bytes = 12;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getSocketReceiveBufferBytesOrBuilder();
+
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    boolean hasAutoCreateTopicsEnable();
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    com.google.protobuf.BoolValue getAutoCreateTopicsEnable();
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAutoCreateTopicsEnableOrBuilder();
   }
   /**
    * <pre>
@@ -13190,6 +13553,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(socketReceiveBufferBytes_);
                 socketReceiveBufferBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (autoCreateTopicsEnable_ != null) {
+                subBuilder = autoCreateTopicsEnable_.toBuilder();
+              }
+              autoCreateTopicsEnable_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoCreateTopicsEnable_);
+                autoCreateTopicsEnable_ = subBuilder.buildPartial();
               }
 
               break;
@@ -13647,6 +14023,39 @@ public final class ClusterOuterClass {
       return getSocketReceiveBufferBytes();
     }
 
+    public static final int AUTO_CREATE_TOPICS_ENABLE_FIELD_NUMBER = 13;
+    private com.google.protobuf.BoolValue autoCreateTopicsEnable_;
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    public boolean hasAutoCreateTopicsEnable() {
+      return autoCreateTopicsEnable_ != null;
+    }
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    public com.google.protobuf.BoolValue getAutoCreateTopicsEnable() {
+      return autoCreateTopicsEnable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : autoCreateTopicsEnable_;
+    }
+    /**
+     * <pre>
+     * Enable auto creation of topic on the server
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+     */
+    public com.google.protobuf.BoolValueOrBuilder getAutoCreateTopicsEnableOrBuilder() {
+      return getAutoCreateTopicsEnable();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -13696,6 +14105,9 @@ public final class ClusterOuterClass {
       }
       if (socketReceiveBufferBytes_ != null) {
         output.writeMessage(12, getSocketReceiveBufferBytes());
+      }
+      if (autoCreateTopicsEnable_ != null) {
+        output.writeMessage(13, getAutoCreateTopicsEnable());
       }
       unknownFields.writeTo(output);
     }
@@ -13753,6 +14165,10 @@ public final class ClusterOuterClass {
       if (socketReceiveBufferBytes_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getSocketReceiveBufferBytes());
+      }
+      if (autoCreateTopicsEnable_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getAutoCreateTopicsEnable());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13826,6 +14242,11 @@ public final class ClusterOuterClass {
         result = result && getSocketReceiveBufferBytes()
             .equals(other.getSocketReceiveBufferBytes());
       }
+      result = result && (hasAutoCreateTopicsEnable() == other.hasAutoCreateTopicsEnable());
+      if (hasAutoCreateTopicsEnable()) {
+        result = result && getAutoCreateTopicsEnable()
+            .equals(other.getAutoCreateTopicsEnable());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -13882,6 +14303,10 @@ public final class ClusterOuterClass {
       if (hasSocketReceiveBufferBytes()) {
         hash = (37 * hash) + SOCKET_RECEIVE_BUFFER_BYTES_FIELD_NUMBER;
         hash = (53 * hash) + getSocketReceiveBufferBytes().hashCode();
+      }
+      if (hasAutoCreateTopicsEnable()) {
+        hash = (37 * hash) + AUTO_CREATE_TOPICS_ENABLE_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoCreateTopicsEnable().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -14088,6 +14513,12 @@ public final class ClusterOuterClass {
           socketReceiveBufferBytes_ = null;
           socketReceiveBufferBytesBuilder_ = null;
         }
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          autoCreateTopicsEnable_ = null;
+        } else {
+          autoCreateTopicsEnable_ = null;
+          autoCreateTopicsEnableBuilder_ = null;
+        }
         return this;
       }
 
@@ -14169,6 +14600,11 @@ public final class ClusterOuterClass {
           result.socketReceiveBufferBytes_ = socketReceiveBufferBytes_;
         } else {
           result.socketReceiveBufferBytes_ = socketReceiveBufferBytesBuilder_.build();
+        }
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          result.autoCreateTopicsEnable_ = autoCreateTopicsEnable_;
+        } else {
+          result.autoCreateTopicsEnable_ = autoCreateTopicsEnableBuilder_.build();
         }
         onBuilt();
         return result;
@@ -14253,6 +14689,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasSocketReceiveBufferBytes()) {
           mergeSocketReceiveBufferBytes(other.getSocketReceiveBufferBytes());
+        }
+        if (other.hasAutoCreateTopicsEnable()) {
+          mergeAutoCreateTopicsEnable(other.getAutoCreateTopicsEnable());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -16128,6 +16567,159 @@ public final class ClusterOuterClass {
           socketReceiveBufferBytes_ = null;
         }
         return socketReceiveBufferBytesBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue autoCreateTopicsEnable_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> autoCreateTopicsEnableBuilder_;
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public boolean hasAutoCreateTopicsEnable() {
+        return autoCreateTopicsEnableBuilder_ != null || autoCreateTopicsEnable_ != null;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public com.google.protobuf.BoolValue getAutoCreateTopicsEnable() {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          return autoCreateTopicsEnable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : autoCreateTopicsEnable_;
+        } else {
+          return autoCreateTopicsEnableBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public Builder setAutoCreateTopicsEnable(com.google.protobuf.BoolValue value) {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoCreateTopicsEnable_ = value;
+          onChanged();
+        } else {
+          autoCreateTopicsEnableBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public Builder setAutoCreateTopicsEnable(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          autoCreateTopicsEnable_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoCreateTopicsEnableBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public Builder mergeAutoCreateTopicsEnable(com.google.protobuf.BoolValue value) {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          if (autoCreateTopicsEnable_ != null) {
+            autoCreateTopicsEnable_ =
+              com.google.protobuf.BoolValue.newBuilder(autoCreateTopicsEnable_).mergeFrom(value).buildPartial();
+          } else {
+            autoCreateTopicsEnable_ = value;
+          }
+          onChanged();
+        } else {
+          autoCreateTopicsEnableBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public Builder clearAutoCreateTopicsEnable() {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          autoCreateTopicsEnable_ = null;
+          onChanged();
+        } else {
+          autoCreateTopicsEnable_ = null;
+          autoCreateTopicsEnableBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAutoCreateTopicsEnableBuilder() {
+        
+        onChanged();
+        return getAutoCreateTopicsEnableFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAutoCreateTopicsEnableOrBuilder() {
+        if (autoCreateTopicsEnableBuilder_ != null) {
+          return autoCreateTopicsEnableBuilder_.getMessageOrBuilder();
+        } else {
+          return autoCreateTopicsEnable_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : autoCreateTopicsEnable_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable auto creation of topic on the server
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAutoCreateTopicsEnableFieldBuilder() {
+        if (autoCreateTopicsEnableBuilder_ == null) {
+          autoCreateTopicsEnableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAutoCreateTopicsEnable(),
+                  getParentForChildren(),
+                  isClean());
+          autoCreateTopicsEnable_ = null;
+        }
+        return autoCreateTopicsEnableBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -18255,73 +18847,77 @@ public final class ClusterOuterClass {
       "ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007S" +
       "TOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004" +
       "name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030" +
-      "\003 \001(\t\"\305\004\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022:\n" +
+      "\003 \001(\t\"\337\004\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022:\n" +
       "\005kafka\030\002 \001(\0132+.yandex.cloud.mdb.kafka.v1" +
       ".ConfigSpec.Kafka\022B\n\tzookeeper\030\003 \001(\0132/.y" +
       "andex.cloud.mdb.kafka.v1.ConfigSpec.Zook" +
       "eeper\022\017\n\007zone_id\030\004 \003(\t\0222\n\rbrokers_count\030" +
       "\005 \001(\0132\033.google.protobuf.Int64Value\022\030\n\020as" +
-      "sign_public_ip\030\006 \001(\010\032\200\002\n\005Kafka\0227\n\tresour" +
-      "ces\030\001 \001(\0132$.yandex.cloud.mdb.kafka.v1.Re" +
-      "sources\022V\n\020kafka_config_2_1\030\002 \001(\0132).yand" +
-      "ex.cloud.mdb.kafka.v1.KafkaConfig2_1H\000R\017" +
-      "kafkaConfig_2_1\022V\n\020kafka_config_2_6\030\003 \001(" +
-      "\0132).yandex.cloud.mdb.kafka.v1.KafkaConfi" +
-      "g2_6H\000R\017kafkaConfig_2_6B\016\n\014kafka_config\032" +
-      "D\n\tZookeeper\0227\n\tresources\030\001 \001(\0132$.yandex" +
-      ".cloud.mdb.kafka.v1.Resources\"P\n\tResourc" +
-      "es\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_s" +
-      "ize\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\357\005\n\016Kafk" +
-      "aConfig2_1\022D\n\020compression_type\030\001 \001(\0162*.y" +
-      "andex.cloud.mdb.kafka.v1.CompressionType" +
-      "\022@\n\033log_flush_interval_messages\030\002 \001(\0132\033." +
-      "google.protobuf.Int64Value\022:\n\025log_flush_" +
-      "interval_ms\030\003 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\022D\n\037log_flush_scheduler_interval_m" +
-      "s\030\004 \001(\0132\033.google.protobuf.Int64Value\0228\n\023" +
-      "log_retention_bytes\030\005 \001(\0132\033.google.proto" +
-      "buf.Int64Value\0228\n\023log_retention_hours\030\006 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022:\n\025log_" +
-      "retention_minutes\030\007 \001(\0132\033.google.protobu" +
-      "f.Int64Value\0225\n\020log_retention_ms\030\010 \001(\0132\033" +
-      ".google.protobuf.Int64Value\0226\n\021log_segme" +
-      "nt_bytes\030\t \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\0223\n\017log_preallocate\030\n \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\022=\n\030socket_send_buffer_b" +
-      "ytes\030\013 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "@\n\033socket_receive_buffer_bytes\030\014 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\"\357\005\n\016KafkaConfi" +
-      "g2_6\022D\n\020compression_type\030\001 \001(\0162*.yandex." +
-      "cloud.mdb.kafka.v1.CompressionType\022@\n\033lo" +
-      "g_flush_interval_messages\030\002 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022:\n\025log_flush_interv" +
-      "al_ms\030\003 \001(\0132\033.google.protobuf.Int64Value" +
-      "\022D\n\037log_flush_scheduler_interval_ms\030\004 \001(" +
-      "\0132\033.google.protobuf.Int64Value\0228\n\023log_re" +
-      "tention_bytes\030\005 \001(\0132\033.google.protobuf.In" +
-      "t64Value\0228\n\023log_retention_hours\030\006 \001(\0132\033." +
-      "google.protobuf.Int64Value\022:\n\025log_retent" +
-      "ion_minutes\030\007 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\0226\n\021log_segment_byt" +
-      "es\030\t \001(\0132\033.google.protobuf.Int64Value\0223\n" +
-      "\017log_preallocate\030\n \001(\0132\032.google.protobuf" +
-      ".BoolValue\022=\n\030socket_send_buffer_bytes\030\013" +
-      " \001(\0132\033.google.protobuf.Int64Value\022@\n\033soc" +
-      "ket_receive_buffer_bytes\030\014 \001(\0132\033.google." +
-      "protobuf.Int64Value\"\375\002\n\004Host\022\014\n\004name\030\001 \001" +
-      "(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022" +
-      "2\n\004role\030\004 \001(\0162$.yandex.cloud.mdb.kafka.v" +
-      "1.Host.Role\0227\n\tresources\030\005 \001(\0132$.yandex." +
-      "cloud.mdb.kafka.v1.Resources\0226\n\006health\030\006" +
-      " \001(\0162&.yandex.cloud.mdb.kafka.v1.Host.He" +
-      "alth\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public" +
-      "_ip\030\t \001(\010\"6\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022" +
-      "\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n\007U" +
-      "NKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADE" +
-      "D\020\003Bd\n\035yandex.cloud.api.mdb.kafka.v1ZCgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/mdb/kafka/v1;kafkab\006proto3"
+      "sign_public_ip\030\006 \001(\010\022\030\n\020unmanaged_topics" +
+      "\030\007 \001(\010\032\200\002\n\005Kafka\0227\n\tresources\030\001 \001(\0132$.ya" +
+      "ndex.cloud.mdb.kafka.v1.Resources\022V\n\020kaf" +
+      "ka_config_2_1\030\002 \001(\0132).yandex.cloud.mdb.k" +
+      "afka.v1.KafkaConfig2_1H\000R\017kafkaConfig_2_" +
+      "1\022V\n\020kafka_config_2_6\030\003 \001(\0132).yandex.clo" +
+      "ud.mdb.kafka.v1.KafkaConfig2_6H\000R\017kafkaC" +
+      "onfig_2_6B\016\n\014kafka_config\032D\n\tZookeeper\0227" +
+      "\n\tresources\030\001 \001(\0132$.yandex.cloud.mdb.kaf" +
+      "ka.v1.Resources\"P\n\tResources\022\032\n\022resource" +
+      "_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014d" +
+      "isk_type_id\030\003 \001(\t\"\256\006\n\016KafkaConfig2_1\022D\n\020" +
+      "compression_type\030\001 \001(\0162*.yandex.cloud.md" +
+      "b.kafka.v1.CompressionType\022@\n\033log_flush_" +
+      "interval_messages\030\002 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022:\n\025log_flush_interval_ms\030\003 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022D\n\037log_" +
+      "flush_scheduler_interval_ms\030\004 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\0228\n\023log_retention_" +
+      "bytes\030\005 \001(\0132\033.google.protobuf.Int64Value" +
+      "\0228\n\023log_retention_hours\030\006 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022:\n\025log_retention_minu" +
+      "tes\030\007 \001(\0132\033.google.protobuf.Int64Value\0225" +
+      "\n\020log_retention_ms\030\010 \001(\0132\033.google.protob" +
+      "uf.Int64Value\0226\n\021log_segment_bytes\030\t \001(\013" +
+      "2\033.google.protobuf.Int64Value\0223\n\017log_pre" +
+      "allocate\030\n \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022@\n\033socket_rece" +
+      "ive_buffer_bytes\030\014 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022=\n\031auto_create_topics_enable" +
+      "\030\r \001(\0132\032.google.protobuf.BoolValue\"\256\006\n\016K" +
+      "afkaConfig2_6\022D\n\020compression_type\030\001 \001(\0162" +
+      "*.yandex.cloud.mdb.kafka.v1.CompressionT" +
+      "ype\022@\n\033log_flush_interval_messages\030\002 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022:\n\025log_flu" +
+      "sh_interval_ms\030\003 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022D\n\037log_flush_scheduler_interva" +
+      "l_ms\030\004 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "8\n\023log_retention_bytes\030\005 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\0228\n\023log_retention_hours" +
+      "\030\006 \001(\0132\033.google.protobuf.Int64Value\022:\n\025l" +
+      "og_retention_minutes\030\007 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\0225\n\020log_retention_ms\030\010 \001(" +
+      "\0132\033.google.protobuf.Int64Value\0226\n\021log_se" +
+      "gment_bytes\030\t \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0223\n\017log_preallocate\030\n \001(\0132\032.google" +
+      ".protobuf.BoolValue\022=\n\030socket_send_buffe" +
+      "r_bytes\030\013 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022@\n\033socket_receive_buffer_bytes\030\014 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022=\n\031auto_cre" +
+      "ate_topics_enable\030\r \001(\0132\032.google.protobu" +
+      "f.BoolValue\"\375\002\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncl" +
+      "uster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030" +
+      "\004 \001(\0162$.yandex.cloud.mdb.kafka.v1.Host.R" +
+      "ole\0227\n\tresources\030\005 \001(\0132$.yandex.cloud.md" +
+      "b.kafka.v1.Resources\0226\n\006health\030\006 \001(\0162&.y" +
+      "andex.cloud.mdb.kafka.v1.Host.Health\022\021\n\t" +
+      "subnet_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(" +
+      "\010\"6\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA" +
+      "\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000" +
+      "\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003Bd\n\035y" +
+      "andex.cloud.api.mdb.kafka.v1ZCgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/m" +
+      "db/kafka/v1;kafkab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -18361,7 +18957,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", });
+        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", "UnmanagedTopics", });
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_fieldAccessorTable = new
@@ -18385,13 +18981,13 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_1_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_1_descriptor,
-        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", });
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", });
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_descriptor,
-        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", });
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", });
     internal_static_yandex_cloud_mdb_kafka_v1_Host_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_kafka_v1_Host_fieldAccessorTable = new

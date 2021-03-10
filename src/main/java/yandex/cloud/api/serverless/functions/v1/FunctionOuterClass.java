@@ -2741,6 +2741,60 @@ public final class FunctionOuterClass {
      * <code>.yandex.cloud.serverless.functions.v1.Connectivity connectivity = 17;</code>
      */
     yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ConnectivityOrBuilder getConnectivityOrBuilder();
+
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+     */
+    int getNamedServiceAccountsCount();
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+     */
+    boolean containsNamedServiceAccounts(
+        java.lang.String key);
+    /**
+     * Use {@link #getNamedServiceAccountsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getNamedServiceAccounts();
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getNamedServiceAccountsMap();
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+     */
+
+    java.lang.String getNamedServiceAccountsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+     */
+
+    java.lang.String getNamedServiceAccountsOrThrow(
+        java.lang.String key);
   }
   /**
    * <pre>
@@ -2922,6 +2976,19 @@ public final class FunctionOuterClass {
 
               break;
             }
+            case 146: {
+              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+                namedServiceAccounts_ = com.google.protobuf.MapField.newMapField(
+                    NamedServiceAccountsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00008000;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              namedServiceAccounts__ = input.readMessage(
+                  NamedServiceAccountsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              namedServiceAccounts_.getMutableMap().put(
+                  namedServiceAccounts__.getKey(), namedServiceAccounts__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2956,6 +3023,8 @@ public final class FunctionOuterClass {
       switch (number) {
         case 16:
           return internalGetEnvironment();
+        case 18:
+          return internalGetNamedServiceAccounts();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -3701,6 +3770,98 @@ public final class FunctionOuterClass {
       return getConnectivity();
     }
 
+    public static final int NAMED_SERVICE_ACCOUNTS_FIELD_NUMBER = 18;
+    private static final class NamedServiceAccountsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_Version_NamedServiceAccountsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> namedServiceAccounts_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetNamedServiceAccounts() {
+      if (namedServiceAccounts_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            NamedServiceAccountsDefaultEntryHolder.defaultEntry);
+      }
+      return namedServiceAccounts_;
+    }
+
+    public int getNamedServiceAccountsCount() {
+      return internalGetNamedServiceAccounts().getMap().size();
+    }
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+     */
+
+    public boolean containsNamedServiceAccounts(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetNamedServiceAccounts().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getNamedServiceAccountsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getNamedServiceAccounts() {
+      return getNamedServiceAccountsMap();
+    }
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getNamedServiceAccountsMap() {
+      return internalGetNamedServiceAccounts().getMap();
+    }
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+     */
+
+    public java.lang.String getNamedServiceAccountsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetNamedServiceAccounts().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Additional service accounts to be used by the version.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+     */
+
+    public java.lang.String getNamedServiceAccountsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetNamedServiceAccounts().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3763,6 +3924,12 @@ public final class FunctionOuterClass {
       if (connectivity_ != null) {
         output.writeMessage(17, getConnectivity());
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetNamedServiceAccounts(),
+          NamedServiceAccountsDefaultEntryHolder.defaultEntry,
+          18);
       unknownFields.writeTo(output);
     }
 
@@ -3835,6 +4002,16 @@ public final class FunctionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getConnectivity());
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetNamedServiceAccounts().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        namedServiceAccounts__ = NamedServiceAccountsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(18, namedServiceAccounts__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3892,6 +4069,8 @@ public final class FunctionOuterClass {
         result = result && getConnectivity()
             .equals(other.getConnectivity());
       }
+      result = result && internalGetNamedServiceAccounts().equals(
+          other.internalGetNamedServiceAccounts());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3945,6 +4124,10 @@ public final class FunctionOuterClass {
       if (hasConnectivity()) {
         hash = (37 * hash) + CONNECTIVITY_FIELD_NUMBER;
         hash = (53 * hash) + getConnectivity().hashCode();
+      }
+      if (!internalGetNamedServiceAccounts().getMap().isEmpty()) {
+        hash = (37 * hash) + NAMED_SERVICE_ACCOUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetNamedServiceAccounts().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -4063,6 +4246,8 @@ public final class FunctionOuterClass {
         switch (number) {
           case 16:
             return internalGetEnvironment();
+          case 18:
+            return internalGetNamedServiceAccounts();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -4074,6 +4259,8 @@ public final class FunctionOuterClass {
         switch (number) {
           case 16:
             return internalGetMutableEnvironment();
+          case 18:
+            return internalGetMutableNamedServiceAccounts();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -4150,6 +4337,7 @@ public final class FunctionOuterClass {
           connectivity_ = null;
           connectivityBuilder_ = null;
         }
+        internalGetMutableNamedServiceAccounts().clear();
         return this;
       }
 
@@ -4214,6 +4402,8 @@ public final class FunctionOuterClass {
         } else {
           result.connectivity_ = connectivityBuilder_.build();
         }
+        result.namedServiceAccounts_ = internalGetNamedServiceAccounts();
+        result.namedServiceAccounts_.makeImmutable();
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4321,6 +4511,8 @@ public final class FunctionOuterClass {
         if (other.hasConnectivity()) {
           mergeConnectivity(other.getConnectivity());
         }
+        internalGetMutableNamedServiceAccounts().mergeFrom(
+            other.internalGetNamedServiceAccounts());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -5987,6 +6179,157 @@ public final class FunctionOuterClass {
           connectivity_ = null;
         }
         return connectivityBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> namedServiceAccounts_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetNamedServiceAccounts() {
+        if (namedServiceAccounts_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              NamedServiceAccountsDefaultEntryHolder.defaultEntry);
+        }
+        return namedServiceAccounts_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableNamedServiceAccounts() {
+        onChanged();;
+        if (namedServiceAccounts_ == null) {
+          namedServiceAccounts_ = com.google.protobuf.MapField.newMapField(
+              NamedServiceAccountsDefaultEntryHolder.defaultEntry);
+        }
+        if (!namedServiceAccounts_.isMutable()) {
+          namedServiceAccounts_ = namedServiceAccounts_.copy();
+        }
+        return namedServiceAccounts_;
+      }
+
+      public int getNamedServiceAccountsCount() {
+        return internalGetNamedServiceAccounts().getMap().size();
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+       */
+
+      public boolean containsNamedServiceAccounts(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetNamedServiceAccounts().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getNamedServiceAccountsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getNamedServiceAccounts() {
+        return getNamedServiceAccountsMap();
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getNamedServiceAccountsMap() {
+        return internalGetNamedServiceAccounts().getMap();
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+       */
+
+      public java.lang.String getNamedServiceAccountsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetNamedServiceAccounts().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+       */
+
+      public java.lang.String getNamedServiceAccountsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetNamedServiceAccounts().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearNamedServiceAccounts() {
+        internalGetMutableNamedServiceAccounts().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+       */
+
+      public Builder removeNamedServiceAccounts(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableNamedServiceAccounts().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableNamedServiceAccounts() {
+        return internalGetMutableNamedServiceAccounts().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+       */
+      public Builder putNamedServiceAccounts(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableNamedServiceAccounts().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional service accounts to be used by the version.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; named_service_accounts = 18;</code>
+       */
+
+      public Builder putAllNamedServiceAccounts(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableNamedServiceAccounts().getMutableMap()
+            .putAll(values);
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8389,6 +8732,11 @@ public final class FunctionOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_functions_v1_Version_NamedServiceAccountsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_functions_v1_Version_NamedServiceAccountsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_functions_v1_Resources_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8428,7 +8776,7 @@ public final class FunctionOuterClass {
       ".v1.Function.Status\032-\n\013LabelsEntry\022\013\n\003ke" +
       "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"S\n\006Status\022\026\n\022" +
       "STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006AC" +
-      "TIVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERROR\020\004\"\302\005\n\007Vers" +
+      "TIVE\020\002\022\014\n\010DELETING\020\003\022\t\n\005ERROR\020\004\"\350\006\n\007Vers" +
       "ion\022\n\n\002id\030\001 \001(\t\022\023\n\013function_id\030\002 \001(\t\022\036\n\013" +
       "description\030\003 \001(\tB\t\212\3101\0050-256\022.\n\ncreated_" +
       "at\030\005 \001(\0132\032.google.protobuf.Timestamp\022\017\n\007" +
@@ -8443,18 +8791,22 @@ public final class FunctionOuterClass {
       "ment\030\020 \003(\0132>.yandex.cloud.serverless.fun" +
       "ctions.v1.Version.EnvironmentEntry\022H\n\014co" +
       "nnectivity\030\021 \001(\01322.yandex.cloud.serverle" +
-      "ss.functions.v1.Connectivity\0322\n\020Environm" +
-      "entEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\":\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CR" +
-      "EATING\020\001\022\n\n\006ACTIVE\020\002\"5\n\tResources\022(\n\006mem" +
-      "ory\030\001 \001(\003B\030\372\3071\024134217728-2147483648\"O\n\007P" +
-      "ackage\022\031\n\013bucket_name\030\001 \001(\tB\004\350\3071\001\022\031\n\013obj" +
-      "ect_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001(\t\"5\n\014" +
-      "Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\021\n\tsubn" +
-      "et_id\030\002 \003(\tB~\n(yandex.cloud.api.serverle" +
-      "ss.functions.v1ZRgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/serverless/fun" +
-      "ctions/v1;functionsb\006proto3"
+      "ss.functions.v1.Connectivity\022g\n\026named_se" +
+      "rvice_accounts\030\022 \003(\0132G.yandex.cloud.serv" +
+      "erless.functions.v1.Version.NamedService" +
+      "AccountsEntry\0322\n\020EnvironmentEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\031NamedServic" +
+      "eAccountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\":\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000" +
+      "\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\"5\n\tResources\022" +
+      "(\n\006memory\030\001 \001(\003B\030\372\3071\024134217728-214748364" +
+      "8\"O\n\007Package\022\031\n\013bucket_name\030\001 \001(\tB\004\350\3071\001\022" +
+      "\031\n\013object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001" +
+      "(\t\"5\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\021" +
+      "\n\tsubnet_id\030\002 \003(\tB~\n(yandex.cloud.api.se" +
+      "rverless.functions.v1ZRgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/serverle" +
+      "ss/functions/v1;functionsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8488,12 +8840,18 @@ public final class FunctionOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_Version_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor,
-        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "LogGroupId", "Environment", "Connectivity", });
+        new java.lang.String[] { "Id", "FunctionId", "Description", "CreatedAt", "Runtime", "Entrypoint", "Resources", "ExecutionTimeout", "ServiceAccountId", "ImageSize", "Status", "Tags", "LogGroupId", "Environment", "Connectivity", "NamedServiceAccounts", });
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_descriptor =
       internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_Version_EnvironmentEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_serverless_functions_v1_Version_NamedServiceAccountsEntry_descriptor =
+      internal_static_yandex_cloud_serverless_functions_v1_Version_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_serverless_functions_v1_Version_NamedServiceAccountsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_functions_v1_Version_NamedServiceAccountsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_serverless_functions_v1_Resources_descriptor =
       getDescriptor().getMessageTypes().get(2);
