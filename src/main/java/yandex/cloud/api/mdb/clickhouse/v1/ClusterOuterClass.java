@@ -331,7 +331,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -339,7 +339,7 @@ public final class ClusterOuterClass {
     boolean hasMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -347,7 +347,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -356,7 +356,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -364,7 +364,7 @@ public final class ClusterOuterClass {
     boolean hasPlannedOperation();
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -372,7 +372,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation getPlannedOperation();
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -1700,7 +1700,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -1710,7 +1710,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -1720,7 +1720,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -1733,7 +1733,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation plannedOperation_;
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -1743,7 +1743,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -1753,7 +1753,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -4023,7 +4023,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -4033,7 +4033,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -4047,7 +4047,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -4067,7 +4067,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -4085,7 +4085,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -4107,7 +4107,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -4125,7 +4125,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -4137,7 +4137,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -4152,7 +4152,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 14;</code>
@@ -4176,7 +4176,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceOperationOrBuilder> plannedOperationBuilder_;
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -4186,7 +4186,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -4200,7 +4200,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -4220,7 +4220,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -4238,7 +4238,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -4260,7 +4260,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -4278,7 +4278,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -4290,7 +4290,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -4305,7 +4305,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation planned_operation = 15;</code>
@@ -10357,7 +10357,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Name of the shard group
+     * Name of the shard group.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -10365,7 +10365,7 @@ public final class ClusterOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the shard group
+     * Name of the shard group.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -10375,7 +10375,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * ID of the cluster that the shard belongs to.
+     * ID of the ClickHouse cluster that the shard group belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -10383,7 +10383,7 @@ public final class ClusterOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the cluster that the shard belongs to.
+     * ID of the ClickHouse cluster that the shard group belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -10393,7 +10393,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * Description of the shard group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -10401,7 +10401,7 @@ public final class ClusterOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * Description of the shard group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -10411,7 +10411,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * List of shard names contained in shard group
+     * List of shard names contained in the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -10420,7 +10420,7 @@ public final class ClusterOuterClass {
         getShardNamesList();
     /**
      * <pre>
-     * List of shard names contained in shard group
+     * List of shard names contained in the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -10428,7 +10428,7 @@ public final class ClusterOuterClass {
     int getShardNamesCount();
     /**
      * <pre>
-     * List of shard names contained in shard group
+     * List of shard names contained in the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -10436,7 +10436,7 @@ public final class ClusterOuterClass {
     java.lang.String getShardNames(int index);
     /**
      * <pre>
-     * List of shard names contained in shard group
+     * List of shard names contained in the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -10554,7 +10554,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the shard group
+     * Name of the shard group.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -10573,7 +10573,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Name of the shard group
+     * Name of the shard group.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -10596,7 +10596,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the cluster that the shard belongs to.
+     * ID of the ClickHouse cluster that the shard group belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -10615,7 +10615,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * ID of the cluster that the shard belongs to.
+     * ID of the ClickHouse cluster that the shard group belongs to.
      * </pre>
      *
      * <code>string cluster_id = 2;</code>
@@ -10638,7 +10638,7 @@ public final class ClusterOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * Description of the shard group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -10657,7 +10657,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * Description of the shard group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -10680,7 +10680,7 @@ public final class ClusterOuterClass {
     private com.google.protobuf.LazyStringList shardNames_;
     /**
      * <pre>
-     * List of shard names contained in shard group
+     * List of shard names contained in the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -10691,7 +10691,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * List of shard names contained in shard group
+     * List of shard names contained in the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -10701,7 +10701,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * List of shard names contained in shard group
+     * List of shard names contained in the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -10711,7 +10711,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * List of shard names contained in shard group
+     * List of shard names contained in the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -11099,7 +11099,7 @@ public final class ClusterOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the shard group
+       * Name of the shard group.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -11118,7 +11118,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the shard group
+       * Name of the shard group.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -11138,7 +11138,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the shard group
+       * Name of the shard group.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -11155,7 +11155,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the shard group
+       * Name of the shard group.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -11168,7 +11168,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Name of the shard group
+       * Name of the shard group.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -11188,7 +11188,7 @@ public final class ClusterOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the cluster that the shard belongs to.
+       * ID of the ClickHouse cluster that the shard group belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -11207,7 +11207,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster that the shard belongs to.
+       * ID of the ClickHouse cluster that the shard group belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -11227,7 +11227,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster that the shard belongs to.
+       * ID of the ClickHouse cluster that the shard group belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -11244,7 +11244,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster that the shard belongs to.
+       * ID of the ClickHouse cluster that the shard group belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -11257,7 +11257,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster that the shard belongs to.
+       * ID of the ClickHouse cluster that the shard group belongs to.
        * </pre>
        *
        * <code>string cluster_id = 2;</code>
@@ -11277,7 +11277,7 @@ public final class ClusterOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Description of the shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -11296,7 +11296,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Description of the shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -11316,7 +11316,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Description of the shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -11333,7 +11333,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Description of the shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -11346,7 +11346,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Description of the shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -11372,7 +11372,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of shard names contained in shard group
+       * List of shard names contained in the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -11383,7 +11383,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of shard names contained in shard group
+       * List of shard names contained in the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -11393,7 +11393,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of shard names contained in shard group
+       * List of shard names contained in the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -11403,7 +11403,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of shard names contained in shard group
+       * List of shard names contained in the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -11414,7 +11414,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of shard names contained in shard group
+       * List of shard names contained in the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -11431,7 +11431,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of shard names contained in shard group
+       * List of shard names contained in the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -11448,7 +11448,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of shard names contained in shard group
+       * List of shard names contained in the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -11463,7 +11463,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of shard names contained in shard group
+       * List of shard names contained in the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -11476,7 +11476,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * List of shard names contained in shard group
+       * List of shard names contained in the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>

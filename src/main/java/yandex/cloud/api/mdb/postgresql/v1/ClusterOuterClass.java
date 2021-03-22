@@ -318,7 +318,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -326,7 +326,7 @@ public final class ClusterOuterClass {
     boolean hasMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -334,7 +334,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -343,7 +343,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -351,7 +351,7 @@ public final class ClusterOuterClass {
     boolean hasPlannedOperation();
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -359,7 +359,7 @@ public final class ClusterOuterClass {
     yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation getPlannedOperation();
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -1638,7 +1638,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -1648,7 +1648,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -1658,7 +1658,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * Maintenance window for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -1671,7 +1671,7 @@ public final class ClusterOuterClass {
     private yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation plannedOperation_;
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -1681,7 +1681,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -1691,7 +1691,7 @@ public final class ClusterOuterClass {
     }
     /**
      * <pre>
-     * Maintenance operation planned at nearest maintenance_window.
+     * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
      * </pre>
      *
      * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -3862,7 +3862,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3872,7 +3872,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3886,7 +3886,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3906,7 +3906,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3924,7 +3924,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3946,7 +3946,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3964,7 +3964,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3976,7 +3976,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -3991,7 +3991,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * Maintenance window for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceWindow maintenance_window = 13;</code>
@@ -4015,7 +4015,7 @@ public final class ClusterOuterClass {
           yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperation.Builder, yandex.cloud.api.mdb.postgresql.v1.Maintenance.MaintenanceOperationOrBuilder> plannedOperationBuilder_;
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -4025,7 +4025,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -4039,7 +4039,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -4059,7 +4059,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -4077,7 +4077,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -4099,7 +4099,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -4117,7 +4117,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -4129,7 +4129,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>
@@ -4144,7 +4144,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Maintenance operation planned at nearest maintenance_window.
+       * Planned maintenance operation to be started for the cluster within the nearest [maintenance_window].
        * </pre>
        *
        * <code>.yandex.cloud.mdb.postgresql.v1.MaintenanceOperation planned_operation = 14;</code>

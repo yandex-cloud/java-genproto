@@ -932,7 +932,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Reschedule planned maintenance operation.
+     * Reschedules planned maintenance operation.
      * </pre>
      */
     public void rescheduleMaintenance(yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
@@ -1379,7 +1379,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Reschedule planned maintenance operation.
+     * Reschedules planned maintenance operation.
      * </pre>
      */
     public void rescheduleMaintenance(yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
@@ -1657,7 +1657,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Reschedule planned maintenance operation.
+     * Reschedules planned maintenance operation.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation rescheduleMaintenance(yandex.cloud.api.mdb.redis.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request) {
@@ -1932,7 +1932,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Reschedule planned maintenance operation.
+     * Reschedules planned maintenance operation.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> rescheduleMaintenance(

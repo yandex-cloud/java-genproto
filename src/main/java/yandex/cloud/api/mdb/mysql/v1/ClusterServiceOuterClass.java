@@ -7128,7 +7128,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Window of maintenance operations.
+     * New maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -7136,7 +7136,7 @@ public final class ClusterServiceOuterClass {
     boolean hasMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * New maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -7144,7 +7144,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * New maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -7658,7 +7658,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
     /**
      * <pre>
-     * Window of maintenance operations.
+     * New maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -7668,7 +7668,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * New maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -7678,7 +7678,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * New maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9001,7 +9001,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.mysql.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9011,7 +9011,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9025,7 +9025,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9045,7 +9045,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9063,7 +9063,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9085,7 +9085,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9103,7 +9103,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9115,7 +9115,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -9130,7 +9130,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.MaintenanceWindow maintenance_window = 7;</code>
@@ -17470,7 +17470,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the MySQL cluster to maintenance reschedule.
+     * ID of the MySQL cluster to reschedule the maintenance operation for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17478,7 +17478,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the MySQL cluster to maintenance reschedule.
+     * ID of the MySQL cluster to reschedule the maintenance operation for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17488,7 +17488,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Required. The type of reschedule request.
+     * The type of reschedule request.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -17496,7 +17496,7 @@ public final class ClusterServiceOuterClass {
     int getRescheduleTypeValue();
     /**
      * <pre>
-     * Required. The type of reschedule request.
+     * The type of reschedule request.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -17505,7 +17505,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -17513,7 +17513,7 @@ public final class ClusterServiceOuterClass {
     boolean hasDelayedUntil();
     /**
      * <pre>
-     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -17521,7 +17521,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.Timestamp getDelayedUntil();
     /**
      * <pre>
-     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -17636,14 +17636,26 @@ public final class ClusterServiceOuterClass {
        */
       RESCHEDULE_TYPE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Start the maintenance operation immediately.
+       * </pre>
+       *
        * <code>IMMEDIATE = 1;</code>
        */
       IMMEDIATE(1),
       /**
+       * <pre>
+       * Start the maintenance operation within the next available maintenance window.
+       * </pre>
+       *
        * <code>NEXT_AVAILABLE_WINDOW = 2;</code>
        */
       NEXT_AVAILABLE_WINDOW(2),
       /**
+       * <pre>
+       * Start the maintenance operation at the specific time.
+       * </pre>
+       *
        * <code>SPECIFIC_TIME = 3;</code>
        */
       SPECIFIC_TIME(3),
@@ -17655,14 +17667,26 @@ public final class ClusterServiceOuterClass {
        */
       public static final int RESCHEDULE_TYPE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Start the maintenance operation immediately.
+       * </pre>
+       *
        * <code>IMMEDIATE = 1;</code>
        */
       public static final int IMMEDIATE_VALUE = 1;
       /**
+       * <pre>
+       * Start the maintenance operation within the next available maintenance window.
+       * </pre>
+       *
        * <code>NEXT_AVAILABLE_WINDOW = 2;</code>
        */
       public static final int NEXT_AVAILABLE_WINDOW_VALUE = 2;
       /**
+       * <pre>
+       * Start the maintenance operation at the specific time.
+       * </pre>
+       *
        * <code>SPECIFIC_TIME = 3;</code>
        */
       public static final int SPECIFIC_TIME_VALUE = 3;
@@ -17746,7 +17770,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the MySQL cluster to maintenance reschedule.
+     * ID of the MySQL cluster to reschedule the maintenance operation for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17765,7 +17789,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the MySQL cluster to maintenance reschedule.
+     * ID of the MySQL cluster to reschedule the maintenance operation for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -17788,7 +17812,7 @@ public final class ClusterServiceOuterClass {
     private int rescheduleType_;
     /**
      * <pre>
-     * Required. The type of reschedule request.
+     * The type of reschedule request.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -17798,7 +17822,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. The type of reschedule request.
+     * The type of reschedule request.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -17813,7 +17837,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.Timestamp delayedUntil_;
     /**
      * <pre>
-     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -17823,7 +17847,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -17833,7 +17857,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18194,7 +18218,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the MySQL cluster to maintenance reschedule.
+       * ID of the MySQL cluster to reschedule the maintenance operation for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18213,7 +18237,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the MySQL cluster to maintenance reschedule.
+       * ID of the MySQL cluster to reschedule the maintenance operation for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18233,7 +18257,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the MySQL cluster to maintenance reschedule.
+       * ID of the MySQL cluster to reschedule the maintenance operation for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18250,7 +18274,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the MySQL cluster to maintenance reschedule.
+       * ID of the MySQL cluster to reschedule the maintenance operation for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18263,7 +18287,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the MySQL cluster to maintenance reschedule.
+       * ID of the MySQL cluster to reschedule the maintenance operation for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -18283,7 +18307,7 @@ public final class ClusterServiceOuterClass {
       private int rescheduleType_ = 0;
       /**
        * <pre>
-       * Required. The type of reschedule request.
+       * The type of reschedule request.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -18293,7 +18317,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The type of reschedule request.
+       * The type of reschedule request.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -18305,7 +18329,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The type of reschedule request.
+       * The type of reschedule request.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -18317,7 +18341,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The type of reschedule request.
+       * The type of reschedule request.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -18333,7 +18357,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The type of reschedule request.
+       * The type of reschedule request.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -18350,7 +18374,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18360,7 +18384,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18374,7 +18398,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18394,7 +18418,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18412,7 +18436,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18434,7 +18458,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18452,7 +18476,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18464,7 +18488,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18479,7 +18503,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -18574,7 +18598,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * Required. The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -18582,7 +18606,7 @@ public final class ClusterServiceOuterClass {
     boolean hasDelayedUntil();
     /**
      * <pre>
-     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * Required. The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -18590,7 +18614,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.Timestamp getDelayedUntil();
     /**
      * <pre>
-     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * Required. The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -18598,6 +18622,10 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
   }
   /**
+   * <pre>
+   * Rescheduled maintenance operation metadata.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceMetadata}
    */
   public  static final class RescheduleMaintenanceMetadata extends
@@ -18734,7 +18762,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.Timestamp delayedUntil_;
     /**
      * <pre>
-     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * Required. The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -18744,7 +18772,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * Required. The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -18754,7 +18782,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * Required. The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -18935,6 +18963,10 @@ public final class ClusterServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Rescheduled maintenance operation metadata.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.mysql.v1.RescheduleMaintenanceMetadata}
      */
     public static final class Builder extends
@@ -19190,7 +19222,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19200,7 +19232,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19214,7 +19246,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19234,7 +19266,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19252,7 +19284,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19274,7 +19306,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19292,7 +19324,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19304,7 +19336,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -19319,7 +19351,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>

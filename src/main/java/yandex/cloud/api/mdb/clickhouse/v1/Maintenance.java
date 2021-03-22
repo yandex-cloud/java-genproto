@@ -19,27 +19,51 @@ public final class Maintenance {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Maintenance operation can be scheduled anytime.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     boolean hasAnytime();
     /**
+     * <pre>
+     * Maintenance operation can be scheduled anytime.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.Maintenance.AnytimeMaintenanceWindow getAnytime();
     /**
+     * <pre>
+     * Maintenance operation can be scheduled anytime.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder();
 
     /**
+     * <pre>
+     * Maintenance operation can be scheduled on a weekly basis.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
     boolean hasWeeklyMaintenanceWindow();
     /**
+     * <pre>
+     * Maintenance operation can be scheduled on a weekly basis.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow();
     /**
+     * <pre>
+     * Maintenance operation can be scheduled on a weekly basis.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder();
@@ -47,6 +71,10 @@ public final class Maintenance {
     public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.PolicyCase getPolicyCase();
   }
   /**
+   * <pre>
+   * A maintenance window settings.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow}
    */
   public  static final class MaintenanceWindow extends
@@ -185,12 +213,20 @@ public final class Maintenance {
 
     public static final int ANYTIME_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Maintenance operation can be scheduled anytime.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     public boolean hasAnytime() {
       return policyCase_ == 1;
     }
     /**
+     * <pre>
+     * Maintenance operation can be scheduled anytime.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.AnytimeMaintenanceWindow getAnytime() {
@@ -200,6 +236,10 @@ public final class Maintenance {
       return yandex.cloud.api.mdb.clickhouse.v1.Maintenance.AnytimeMaintenanceWindow.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Maintenance operation can be scheduled anytime.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder() {
@@ -211,12 +251,20 @@ public final class Maintenance {
 
     public static final int WEEKLY_MAINTENANCE_WINDOW_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Maintenance operation can be scheduled on a weekly basis.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
     public boolean hasWeeklyMaintenanceWindow() {
       return policyCase_ == 2;
     }
     /**
+     * <pre>
+     * Maintenance operation can be scheduled on a weekly basis.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow() {
@@ -226,6 +274,10 @@ public final class Maintenance {
       return yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Maintenance operation can be scheduled on a weekly basis.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder() {
@@ -422,6 +474,10 @@ public final class Maintenance {
       return builder;
     }
     /**
+     * <pre>
+     * A maintenance window settings.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow}
      */
     public static final class Builder extends
@@ -610,12 +666,20 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.clickhouse.v1.Maintenance.AnytimeMaintenanceWindow, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.AnytimeMaintenanceWindow.Builder, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder> anytimeBuilder_;
       /**
+       * <pre>
+       * Maintenance operation can be scheduled anytime.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public boolean hasAnytime() {
         return policyCase_ == 1;
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled anytime.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.AnytimeMaintenanceWindow getAnytime() {
@@ -632,6 +696,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled anytime.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder setAnytime(yandex.cloud.api.mdb.clickhouse.v1.Maintenance.AnytimeMaintenanceWindow value) {
@@ -648,6 +716,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled anytime.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder setAnytime(
@@ -662,6 +734,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled anytime.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder mergeAnytime(yandex.cloud.api.mdb.clickhouse.v1.Maintenance.AnytimeMaintenanceWindow value) {
@@ -684,6 +760,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled anytime.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public Builder clearAnytime() {
@@ -703,12 +783,20 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled anytime.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.AnytimeMaintenanceWindow.Builder getAnytimeBuilder() {
         return getAnytimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled anytime.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.AnytimeMaintenanceWindowOrBuilder getAnytimeOrBuilder() {
@@ -722,6 +810,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled anytime.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.AnytimeMaintenanceWindow anytime = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -746,12 +838,20 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow.Builder, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder> weeklyMaintenanceWindowBuilder_;
       /**
+       * <pre>
+       * Maintenance operation can be scheduled on a weekly basis.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public boolean hasWeeklyMaintenanceWindow() {
         return policyCase_ == 2;
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled on a weekly basis.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow getWeeklyMaintenanceWindow() {
@@ -768,6 +868,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled on a weekly basis.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public Builder setWeeklyMaintenanceWindow(yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow value) {
@@ -784,6 +888,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled on a weekly basis.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public Builder setWeeklyMaintenanceWindow(
@@ -798,6 +906,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled on a weekly basis.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public Builder mergeWeeklyMaintenanceWindow(yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow value) {
@@ -820,6 +932,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled on a weekly basis.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public Builder clearWeeklyMaintenanceWindow() {
@@ -839,12 +955,20 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled on a weekly basis.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow.Builder getWeeklyMaintenanceWindowBuilder() {
         return getWeeklyMaintenanceWindowFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled on a weekly basis.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindowOrBuilder getWeeklyMaintenanceWindowOrBuilder() {
@@ -858,6 +982,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Maintenance operation can be scheduled on a weekly basis.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow weekly_maintenance_window = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1348,17 +1476,25 @@ public final class Maintenance {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Day of the week (in `DDD` format).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
      */
     int getDayValue();
     /**
+     * <pre>
+     * Day of the week (in `DDD` format).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay getDay();
 
     /**
      * <pre>
-     * Hour of the day in UTC.
+     * Hour of the day in UTC (in `HH` format).
      * </pre>
      *
      * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -1366,6 +1502,10 @@ public final class Maintenance {
     long getHour();
   }
   /**
+   * <pre>
+   * Weelky maintenance window settings.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow}
    */
   public  static final class WeeklyMaintenanceWindow extends
@@ -1604,12 +1744,20 @@ public final class Maintenance {
     public static final int DAY_FIELD_NUMBER = 1;
     private int day_;
     /**
+     * <pre>
+     * Day of the week (in `DDD` format).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
      */
     public int getDayValue() {
       return day_;
     }
     /**
+     * <pre>
+     * Day of the week (in `DDD` format).
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay getDay() {
@@ -1622,7 +1770,7 @@ public final class Maintenance {
     private long hour_;
     /**
      * <pre>
-     * Hour of the day in UTC.
+     * Hour of the day in UTC (in `HH` format).
      * </pre>
      *
      * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -1799,6 +1947,10 @@ public final class Maintenance {
       return builder;
     }
     /**
+     * <pre>
+     * Weelky maintenance window settings.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow}
      */
     public static final class Builder extends
@@ -1953,12 +2105,20 @@ public final class Maintenance {
 
       private int day_ = 0;
       /**
+       * <pre>
+       * Day of the week (in `DDD` format).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        */
       public int getDayValue() {
         return day_;
       }
       /**
+       * <pre>
+       * Day of the week (in `DDD` format).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        */
       public Builder setDayValue(int value) {
@@ -1967,6 +2127,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Day of the week (in `DDD` format).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay getDay() {
@@ -1975,6 +2139,10 @@ public final class Maintenance {
         return result == null ? yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Day of the week (in `DDD` format).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        */
       public Builder setDay(yandex.cloud.api.mdb.clickhouse.v1.Maintenance.WeeklyMaintenanceWindow.WeekDay value) {
@@ -1987,6 +2155,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Day of the week (in `DDD` format).
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.WeeklyMaintenanceWindow.WeekDay day = 1;</code>
        */
       public Builder clearDay() {
@@ -1999,7 +2171,7 @@ public final class Maintenance {
       private long hour_ ;
       /**
        * <pre>
-       * Hour of the day in UTC.
+       * Hour of the day in UTC (in `HH` format).
        * </pre>
        *
        * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -2009,7 +2181,7 @@ public final class Maintenance {
       }
       /**
        * <pre>
-       * Hour of the day in UTC.
+       * Hour of the day in UTC (in `HH` format).
        * </pre>
        *
        * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -2022,7 +2194,7 @@ public final class Maintenance {
       }
       /**
        * <pre>
-       * Hour of the day in UTC.
+       * Hour of the day in UTC (in `HH` format).
        * </pre>
        *
        * <code>int64 hour = 2 [(.yandex.cloud.value) = "1-24"];</code>
@@ -2091,29 +2263,53 @@ public final class Maintenance {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Information about this maintenance operation.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getInfo();
     /**
+     * <pre>
+     * Information about this maintenance operation.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getInfoBytes();
 
     /**
+     * <pre>
+     * Time until which this maintenance operation is delayed.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     boolean hasDelayedUntil();
     /**
+     * <pre>
+     * Time until which this maintenance operation is delayed.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     com.google.protobuf.Timestamp getDelayedUntil();
     /**
+     * <pre>
+     * Time until which this maintenance operation is delayed.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
   }
   /**
+   * <pre>
+   * A planned maintenance operation.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation}
    */
   public  static final class MaintenanceOperation extends
@@ -2207,6 +2403,10 @@ public final class Maintenance {
     public static final int INFO_FIELD_NUMBER = 1;
     private volatile java.lang.Object info_;
     /**
+     * <pre>
+     * Information about this maintenance operation.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getInfo() {
@@ -2222,6 +2422,10 @@ public final class Maintenance {
       }
     }
     /**
+     * <pre>
+     * Information about this maintenance operation.
+     * </pre>
+     *
      * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2241,18 +2445,30 @@ public final class Maintenance {
     public static final int DELAYED_UNTIL_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp delayedUntil_;
     /**
+     * <pre>
+     * Time until which this maintenance operation is delayed.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     public boolean hasDelayedUntil() {
       return delayedUntil_ != null;
     }
     /**
+     * <pre>
+     * Time until which this maintenance operation is delayed.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     public com.google.protobuf.Timestamp getDelayedUntil() {
       return delayedUntil_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : delayedUntil_;
     }
     /**
+     * <pre>
+     * Time until which this maintenance operation is delayed.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
@@ -2431,6 +2647,10 @@ public final class Maintenance {
       return builder;
     }
     /**
+     * <pre>
+     * A planned maintenance operation.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.MaintenanceOperation}
      */
     public static final class Builder extends
@@ -2594,6 +2814,10 @@ public final class Maintenance {
 
       private java.lang.Object info_ = "";
       /**
+       * <pre>
+       * Information about this maintenance operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getInfo() {
@@ -2609,6 +2833,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Information about this maintenance operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -2625,6 +2853,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Information about this maintenance operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setInfo(
@@ -2638,6 +2870,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Information about this maintenance operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearInfo() {
@@ -2647,6 +2883,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Information about this maintenance operation.
+       * </pre>
+       *
        * <code>string info = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setInfoBytes(
@@ -2665,12 +2905,20 @@ public final class Maintenance {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
       /**
+       * <pre>
+       * Time until which this maintenance operation is delayed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public boolean hasDelayedUntil() {
         return delayedUntilBuilder_ != null || delayedUntil_ != null;
       }
       /**
+       * <pre>
+       * Time until which this maintenance operation is delayed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public com.google.protobuf.Timestamp getDelayedUntil() {
@@ -2681,6 +2929,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Time until which this maintenance operation is delayed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder setDelayedUntil(com.google.protobuf.Timestamp value) {
@@ -2697,6 +2949,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Time until which this maintenance operation is delayed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder setDelayedUntil(
@@ -2711,6 +2967,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Time until which this maintenance operation is delayed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder mergeDelayedUntil(com.google.protobuf.Timestamp value) {
@@ -2729,6 +2989,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Time until which this maintenance operation is delayed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public Builder clearDelayedUntil() {
@@ -2743,6 +3007,10 @@ public final class Maintenance {
         return this;
       }
       /**
+       * <pre>
+       * Time until which this maintenance operation is delayed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getDelayedUntilBuilder() {
@@ -2751,6 +3019,10 @@ public final class Maintenance {
         return getDelayedUntilFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time until which this maintenance operation is delayed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder() {
@@ -2762,6 +3034,10 @@ public final class Maintenance {
         }
       }
       /**
+       * <pre>
+       * Time until which this maintenance operation is delayed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp delayed_until = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

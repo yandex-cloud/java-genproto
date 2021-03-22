@@ -1166,7 +1166,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Reschedule planned maintenance operation.
+     * Reschedules planned maintenance operation.
      * </pre>
      */
     public void rescheduleMaintenance(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
@@ -1326,7 +1326,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Modifies the specified shard group.
+     * Updates the specified shard group.
      * </pre>
      */
     public void updateShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest request,
@@ -1733,7 +1733,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Reschedule planned maintenance operation.
+     * Reschedules planned maintenance operation.
      * </pre>
      */
     public void rescheduleMaintenance(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
@@ -1909,7 +1909,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Modifies the specified shard group.
+     * Updates the specified shard group.
      * </pre>
      */
     public void updateShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest request,
@@ -2087,7 +2087,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Reschedule planned maintenance operation.
+     * Reschedules planned maintenance operation.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation rescheduleMaintenance(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request) {
@@ -2248,7 +2248,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Modifies the specified shard group.
+     * Updates the specified shard group.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateShardGroup(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.UpdateClusterShardGroupRequest request) {
@@ -2433,7 +2433,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Reschedule planned maintenance operation.
+     * Reschedules planned maintenance operation.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> rescheduleMaintenance(
@@ -2598,7 +2598,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Modifies the specified shard group.
+     * Updates the specified shard group.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateShardGroup(

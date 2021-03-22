@@ -350,6 +350,41 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    java.util.List<java.lang.String>
+        getHostGroupIdsList();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    int getHostGroupIdsCount();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    java.lang.String getHostGroupIds(int index);
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    com.google.protobuf.ByteString
+        getHostGroupIdsBytes(int index);
   }
   /**
    * <pre>
@@ -379,6 +414,7 @@ public final class ClusterOuterClass {
       health_ = 0;
       status_ = 0;
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -510,6 +546,15 @@ public final class ClusterOuterClass {
               securityGroupIds_.add(s);
               break;
             }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+                hostGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00002000;
+              }
+              hostGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -530,6 +575,9 @@ public final class ClusterOuterClass {
         }
         if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+          hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1599,6 +1647,51 @@ public final class ClusterOuterClass {
       return securityGroupIds_.getByteString(index);
     }
 
+    public static final int HOST_GROUP_IDS_FIELD_NUMBER = 14;
+    private com.google.protobuf.LazyStringList hostGroupIds_;
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHostGroupIdsList() {
+      return hostGroupIds_;
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    public int getHostGroupIdsCount() {
+      return hostGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    public java.lang.String getHostGroupIds(int index) {
+      return hostGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 14;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostGroupIdsBytes(int index) {
+      return hostGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1654,6 +1747,9 @@ public final class ClusterOuterClass {
       }
       for (int i = 0; i < securityGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, securityGroupIds_.getRaw(i));
+      }
+      for (int i = 0; i < hostGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, hostGroupIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1721,6 +1817,14 @@ public final class ClusterOuterClass {
         size += dataSize;
         size += 1 * getSecurityGroupIdsList().size();
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hostGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(hostGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getHostGroupIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1766,6 +1870,8 @@ public final class ClusterOuterClass {
       result = result && status_ == other.status_;
       result = result && getSecurityGroupIdsList()
           .equals(other.getSecurityGroupIdsList());
+      result = result && getHostGroupIdsList()
+          .equals(other.getHostGroupIdsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1812,6 +1918,10 @@ public final class ClusterOuterClass {
       if (getSecurityGroupIdsCount() > 0) {
         hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
+      }
+      if (getHostGroupIdsCount() > 0) {
+        hash = (37 * hash) + HOST_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getHostGroupIdsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2011,6 +2121,8 @@ public final class ClusterOuterClass {
 
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00001000);
+        hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00002000);
         return this;
       }
 
@@ -2073,6 +2185,11 @@ public final class ClusterOuterClass {
           bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.securityGroupIds_ = securityGroupIds_;
+        if (((bitField0_ & 0x00002000) == 0x00002000)) {
+          hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00002000);
+        }
+        result.hostGroupIds_ = hostGroupIds_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2192,6 +2309,16 @@ public final class ClusterOuterClass {
           } else {
             ensureSecurityGroupIdsIsMutable();
             securityGroupIds_.addAll(other.securityGroupIds_);
+          }
+          onChanged();
+        }
+        if (!other.hostGroupIds_.isEmpty()) {
+          if (hostGroupIds_.isEmpty()) {
+            hostGroupIds_ = other.hostGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00002000);
+          } else {
+            ensureHostGroupIdsIsMutable();
+            hostGroupIds_.addAll(other.hostGroupIds_);
           }
           onChanged();
         }
@@ -3777,6 +3904,136 @@ public final class ClusterOuterClass {
   checkByteStringIsUtf8(value);
         ensureSecurityGroupIdsIsMutable();
         securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureHostGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00002000) == 0x00002000)) {
+          hostGroupIds_ = new com.google.protobuf.LazyStringArrayList(hostGroupIds_);
+          bitField0_ |= 0x00002000;
+         }
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHostGroupIdsList() {
+        return hostGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public int getHostGroupIdsCount() {
+        return hostGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public java.lang.String getHostGroupIds(int index) {
+        return hostGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostGroupIdsBytes(int index) {
+        return hostGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public Builder setHostGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostGroupIdsIsMutable();
+        hostGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public Builder addHostGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostGroupIdsIsMutable();
+        hostGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public Builder addAllHostGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureHostGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, hostGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public Builder clearHostGroupIds() {
+        hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 14;</code>
+       */
+      public Builder addHostGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureHostGroupIdsIsMutable();
+        hostGroupIds_.add(value);
         onChanged();
         return this;
       }
@@ -18824,7 +19081,7 @@ public final class ClusterOuterClass {
       "o\022\031yandex.cloud.mdb.kafka.v1\032\036google/pro" +
       "tobuf/wrappers.proto\032\037google/protobuf/ti" +
       "mestamp.proto\032&yandex/cloud/mdb/kafka/v1" +
-      "/common.proto\"\316\006\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n" +
+      "/common.proto\"\346\006\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n" +
       "\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.g" +
       "oogle.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023" +
       "\n\013description\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132..ya" +
@@ -18837,87 +19094,88 @@ public final class ClusterOuterClass {
       "\030\n \001(\t\0229\n\006health\030\013 \001(\0162).yandex.cloud.md" +
       "b.kafka.v1.Cluster.Health\0229\n\006status\030\014 \001(" +
       "\0162).yandex.cloud.mdb.kafka.v1.Cluster.St" +
-      "atus\022\032\n\022security_group_ids\030\r \003(\t\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
-      "I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPECIFIE" +
-      "D\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006He" +
-      "alth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004D" +
-      "EAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_" +
-      "UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005" +
-      "ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007S" +
-      "TOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004" +
-      "name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030" +
-      "\003 \001(\t\"\337\004\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022:\n" +
-      "\005kafka\030\002 \001(\0132+.yandex.cloud.mdb.kafka.v1" +
-      ".ConfigSpec.Kafka\022B\n\tzookeeper\030\003 \001(\0132/.y" +
-      "andex.cloud.mdb.kafka.v1.ConfigSpec.Zook" +
-      "eeper\022\017\n\007zone_id\030\004 \003(\t\0222\n\rbrokers_count\030" +
-      "\005 \001(\0132\033.google.protobuf.Int64Value\022\030\n\020as" +
-      "sign_public_ip\030\006 \001(\010\022\030\n\020unmanaged_topics" +
-      "\030\007 \001(\010\032\200\002\n\005Kafka\0227\n\tresources\030\001 \001(\0132$.ya" +
-      "ndex.cloud.mdb.kafka.v1.Resources\022V\n\020kaf" +
-      "ka_config_2_1\030\002 \001(\0132).yandex.cloud.mdb.k" +
-      "afka.v1.KafkaConfig2_1H\000R\017kafkaConfig_2_" +
-      "1\022V\n\020kafka_config_2_6\030\003 \001(\0132).yandex.clo" +
-      "ud.mdb.kafka.v1.KafkaConfig2_6H\000R\017kafkaC" +
-      "onfig_2_6B\016\n\014kafka_config\032D\n\tZookeeper\0227" +
-      "\n\tresources\030\001 \001(\0132$.yandex.cloud.mdb.kaf" +
-      "ka.v1.Resources\"P\n\tResources\022\032\n\022resource" +
-      "_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014d" +
-      "isk_type_id\030\003 \001(\t\"\256\006\n\016KafkaConfig2_1\022D\n\020" +
-      "compression_type\030\001 \001(\0162*.yandex.cloud.md" +
-      "b.kafka.v1.CompressionType\022@\n\033log_flush_" +
-      "interval_messages\030\002 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022:\n\025log_flush_interval_ms\030\003 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022D\n\037log_" +
-      "flush_scheduler_interval_ms\030\004 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\0228\n\023log_retention_" +
-      "bytes\030\005 \001(\0132\033.google.protobuf.Int64Value" +
-      "\0228\n\023log_retention_hours\030\006 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022:\n\025log_retention_minu" +
-      "tes\030\007 \001(\0132\033.google.protobuf.Int64Value\0225" +
-      "\n\020log_retention_ms\030\010 \001(\0132\033.google.protob" +
-      "uf.Int64Value\0226\n\021log_segment_bytes\030\t \001(\013" +
-      "2\033.google.protobuf.Int64Value\0223\n\017log_pre" +
-      "allocate\030\n \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022@\n\033socket_rece" +
-      "ive_buffer_bytes\030\014 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022=\n\031auto_create_topics_enable" +
-      "\030\r \001(\0132\032.google.protobuf.BoolValue\"\256\006\n\016K" +
-      "afkaConfig2_6\022D\n\020compression_type\030\001 \001(\0162" +
-      "*.yandex.cloud.mdb.kafka.v1.CompressionT" +
-      "ype\022@\n\033log_flush_interval_messages\030\002 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022:\n\025log_flu" +
-      "sh_interval_ms\030\003 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022D\n\037log_flush_scheduler_interva" +
-      "l_ms\030\004 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "8\n\023log_retention_bytes\030\005 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\0228\n\023log_retention_hours" +
-      "\030\006 \001(\0132\033.google.protobuf.Int64Value\022:\n\025l" +
-      "og_retention_minutes\030\007 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\0225\n\020log_retention_ms\030\010 \001(" +
-      "\0132\033.google.protobuf.Int64Value\0226\n\021log_se" +
-      "gment_bytes\030\t \001(\0132\033.google.protobuf.Int6" +
-      "4Value\0223\n\017log_preallocate\030\n \001(\0132\032.google" +
-      ".protobuf.BoolValue\022=\n\030socket_send_buffe" +
-      "r_bytes\030\013 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022@\n\033socket_receive_buffer_bytes\030\014 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022=\n\031auto_cre" +
-      "ate_topics_enable\030\r \001(\0132\032.google.protobu" +
-      "f.BoolValue\"\375\002\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncl" +
-      "uster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030" +
-      "\004 \001(\0162$.yandex.cloud.mdb.kafka.v1.Host.R" +
-      "ole\0227\n\tresources\030\005 \001(\0132$.yandex.cloud.md" +
-      "b.kafka.v1.Resources\0226\n\006health\030\006 \001(\0162&.y" +
-      "andex.cloud.mdb.kafka.v1.Host.Health\022\021\n\t" +
-      "subnet_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(" +
-      "\010\"6\n\004Role\022\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA" +
-      "\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000" +
-      "\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003Bd\n\035y" +
-      "andex.cloud.api.mdb.kafka.v1ZCgithub.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/m" +
-      "db/kafka/v1;kafkab\006proto3"
+      "atus\022\032\n\022security_group_ids\030\r \003(\t\022\026\n\016host" +
+      "_group_ids\030\016 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033" +
+      "\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTIO" +
+      "N\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_U" +
+      "NKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADE" +
+      "D\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CRE" +
+      "ATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDAT" +
+      "ING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STAR" +
+      "TING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013de" +
+      "scription\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\337\004\n\nConfig" +
+      "Spec\022\017\n\007version\030\001 \001(\t\022:\n\005kafka\030\002 \001(\0132+.y" +
+      "andex.cloud.mdb.kafka.v1.ConfigSpec.Kafk" +
+      "a\022B\n\tzookeeper\030\003 \001(\0132/.yandex.cloud.mdb." +
+      "kafka.v1.ConfigSpec.Zookeeper\022\017\n\007zone_id" +
+      "\030\004 \003(\t\0222\n\rbrokers_count\030\005 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022\030\n\020assign_public_ip\030\006" +
+      " \001(\010\022\030\n\020unmanaged_topics\030\007 \001(\010\032\200\002\n\005Kafka" +
+      "\0227\n\tresources\030\001 \001(\0132$.yandex.cloud.mdb.k" +
+      "afka.v1.Resources\022V\n\020kafka_config_2_1\030\002 " +
+      "\001(\0132).yandex.cloud.mdb.kafka.v1.KafkaCon" +
+      "fig2_1H\000R\017kafkaConfig_2_1\022V\n\020kafka_confi" +
+      "g_2_6\030\003 \001(\0132).yandex.cloud.mdb.kafka.v1." +
+      "KafkaConfig2_6H\000R\017kafkaConfig_2_6B\016\n\014kaf" +
+      "ka_config\032D\n\tZookeeper\0227\n\tresources\030\001 \001(" +
+      "\0132$.yandex.cloud.mdb.kafka.v1.Resources\"" +
+      "P\n\tResources\022\032\n\022resource_preset_id\030\001 \001(\t" +
+      "\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(" +
+      "\t\"\256\006\n\016KafkaConfig2_1\022D\n\020compression_type" +
+      "\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1.Compr" +
+      "essionType\022@\n\033log_flush_interval_message" +
+      "s\030\002 \001(\0132\033.google.protobuf.Int64Value\022:\n\025" +
+      "log_flush_interval_ms\030\003 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022D\n\037log_flush_scheduler_" +
+      "interval_ms\030\004 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0228\n\023log_retention_bytes\030\005 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\0228\n\023log_retentio" +
+      "n_hours\030\006 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022:\n\025log_retention_minutes\030\007 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\0225\n\020log_retention_" +
+      "ms\030\010 \001(\0132\033.google.protobuf.Int64Value\0226\n" +
+      "\021log_segment_bytes\030\t \001(\0132\033.google.protob" +
+      "uf.Int64Value\0223\n\017log_preallocate\030\n \001(\0132\032" +
+      ".google.protobuf.BoolValue\022=\n\030socket_sen" +
+      "d_buffer_bytes\030\013 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022@\n\033socket_receive_buffer_bytes" +
+      "\030\014 \001(\0132\033.google.protobuf.Int64Value\022=\n\031a" +
+      "uto_create_topics_enable\030\r \001(\0132\032.google." +
+      "protobuf.BoolValue\"\256\006\n\016KafkaConfig2_6\022D\n" +
+      "\020compression_type\030\001 \001(\0162*.yandex.cloud.m" +
+      "db.kafka.v1.CompressionType\022@\n\033log_flush" +
+      "_interval_messages\030\002 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022:\n\025log_flush_interval_ms\030\003" +
+      " \001(\0132\033.google.protobuf.Int64Value\022D\n\037log" +
+      "_flush_scheduler_interval_ms\030\004 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\0228\n\023log_retention" +
+      "_bytes\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\0228\n\023log_retention_hours\030\006 \001(\0132\033.google." +
+      "protobuf.Int64Value\022:\n\025log_retention_min" +
+      "utes\030\007 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "5\n\020log_retention_ms\030\010 \001(\0132\033.google.proto" +
+      "buf.Int64Value\0226\n\021log_segment_bytes\030\t \001(" +
+      "\0132\033.google.protobuf.Int64Value\0223\n\017log_pr" +
+      "eallocate\030\n \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033." +
+      "google.protobuf.Int64Value\022@\n\033socket_rec" +
+      "eive_buffer_bytes\030\014 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022=\n\031auto_create_topics_enabl" +
+      "e\030\r \001(\0132\032.google.protobuf.BoolValue\"\375\002\n\004" +
+      "Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017" +
+      "\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.yandex.c" +
+      "loud.mdb.kafka.v1.Host.Role\0227\n\tresources" +
+      "\030\005 \001(\0132$.yandex.cloud.mdb.kafka.v1.Resou" +
+      "rces\0226\n\006health\030\006 \001(\0162&.yandex.cloud.mdb." +
+      "kafka.v1.Host.Health\022\021\n\tsubnet_id\030\010 \001(\t\022" +
+      "\030\n\020assign_public_ip\030\t \001(\010\"6\n\004Role\022\024\n\020ROL" +
+      "E_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPER\020" +
+      "\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004D" +
+      "EAD\020\002\022\014\n\010DEGRADED\020\003Bd\n\035yandex.cloud.api." +
+      "mdb.kafka.v1ZCgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/mdb/kafka/v1;kafk" +
+      "ab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -18939,7 +19197,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "SecurityGroupIds", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "SecurityGroupIds", "HostGroupIds", });
     internal_static_yandex_cloud_mdb_kafka_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_Cluster_LabelsEntry_fieldAccessorTable = new

@@ -964,7 +964,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Reschedule planned maintenance operation.
+     * Reschedules planned maintenance operation.
      * </pre>
      */
     public void rescheduleMaintenance(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
@@ -1095,7 +1095,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Resetup hosts.
+     * Resetups hosts.
      * </pre>
      */
     public void resetupHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest request,
@@ -1105,7 +1105,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Restart hosts.
+     * Restarts hosts.
      * </pre>
      */
     public void restartHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest request,
@@ -1429,7 +1429,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Reschedule planned maintenance operation.
+     * Reschedules planned maintenance operation.
      * </pre>
      */
     public void rescheduleMaintenance(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request,
@@ -1573,7 +1573,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Resetup hosts.
+     * Resetups hosts.
      * </pre>
      */
     public void resetupHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest request,
@@ -1584,7 +1584,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Restart hosts.
+     * Restarts hosts.
      * </pre>
      */
     public void restartHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest request,
@@ -1719,7 +1719,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Reschedule planned maintenance operation.
+     * Reschedules planned maintenance operation.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation rescheduleMaintenance(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RescheduleMaintenanceRequest request) {
@@ -1851,7 +1851,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Resetup hosts.
+     * Resetups hosts.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation resetupHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.ResetupHostsRequest request) {
@@ -1861,7 +1861,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Restart hosts.
+     * Restarts hosts.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation restartHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest request) {
@@ -2005,7 +2005,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Reschedule planned maintenance operation.
+     * Reschedules planned maintenance operation.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> rescheduleMaintenance(
@@ -2138,7 +2138,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Resetup hosts.
+     * Resetups hosts.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> resetupHosts(
@@ -2149,7 +2149,7 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
-     * Restart hosts.
+     * Restarts hosts.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> restartHosts(

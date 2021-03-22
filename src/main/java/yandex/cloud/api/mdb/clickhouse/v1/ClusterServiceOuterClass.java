@@ -7492,7 +7492,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Window of maintenance operations.
+     * New maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -7500,7 +7500,7 @@ public final class ClusterServiceOuterClass {
     boolean hasMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * New maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -7508,7 +7508,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow getMaintenanceWindow();
     /**
      * <pre>
-     * Window of maintenance operations.
+     * New maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -8071,7 +8071,7 @@ public final class ClusterServiceOuterClass {
     private yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow maintenanceWindow_;
     /**
      * <pre>
-     * Window of maintenance operations.
+     * New maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -8081,7 +8081,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * New maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -8091,7 +8091,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Window of maintenance operations.
+     * New maintenance window settings for the cluster.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -9520,7 +9520,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindow.Builder, yandex.cloud.api.mdb.clickhouse.v1.Maintenance.MaintenanceWindowOrBuilder> maintenanceWindowBuilder_;
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -9530,7 +9530,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -9544,7 +9544,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -9564,7 +9564,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -9582,7 +9582,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -9604,7 +9604,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -9622,7 +9622,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -9634,7 +9634,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -9649,7 +9649,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Window of maintenance operations.
+       * New maintenance window settings for the cluster.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.MaintenanceWindow maintenance_window = 8;</code>
@@ -22508,7 +22508,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Required. ID of the ClickHouse cluster to maintenance reschedule.
+     * ID of the ClickHouse cluster to reschedule the maintenance operation for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -22516,7 +22516,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * Required. ID of the ClickHouse cluster to maintenance reschedule.
+     * ID of the ClickHouse cluster to reschedule the maintenance operation for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -22526,7 +22526,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Required. The type of reschedule request.
+     * The type of reschedule request.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -22534,7 +22534,7 @@ public final class ClusterServiceOuterClass {
     int getRescheduleTypeValue();
     /**
      * <pre>
-     * Required. The type of reschedule request.
+     * The type of reschedule request.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -22543,7 +22543,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -22551,7 +22551,7 @@ public final class ClusterServiceOuterClass {
     boolean hasDelayedUntil();
     /**
      * <pre>
-     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -22559,7 +22559,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.Timestamp getDelayedUntil();
     /**
      * <pre>
-     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -22674,14 +22674,26 @@ public final class ClusterServiceOuterClass {
        */
       RESCHEDULE_TYPE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Start the maintenance operation immediately.
+       * </pre>
+       *
        * <code>IMMEDIATE = 1;</code>
        */
       IMMEDIATE(1),
       /**
+       * <pre>
+       * Start the maintenance operation within the next available maintenance window.
+       * </pre>
+       *
        * <code>NEXT_AVAILABLE_WINDOW = 2;</code>
        */
       NEXT_AVAILABLE_WINDOW(2),
       /**
+       * <pre>
+       * Start the maintenance operation at the specific time.
+       * </pre>
+       *
        * <code>SPECIFIC_TIME = 3;</code>
        */
       SPECIFIC_TIME(3),
@@ -22693,14 +22705,26 @@ public final class ClusterServiceOuterClass {
        */
       public static final int RESCHEDULE_TYPE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Start the maintenance operation immediately.
+       * </pre>
+       *
        * <code>IMMEDIATE = 1;</code>
        */
       public static final int IMMEDIATE_VALUE = 1;
       /**
+       * <pre>
+       * Start the maintenance operation within the next available maintenance window.
+       * </pre>
+       *
        * <code>NEXT_AVAILABLE_WINDOW = 2;</code>
        */
       public static final int NEXT_AVAILABLE_WINDOW_VALUE = 2;
       /**
+       * <pre>
+       * Start the maintenance operation at the specific time.
+       * </pre>
+       *
        * <code>SPECIFIC_TIME = 3;</code>
        */
       public static final int SPECIFIC_TIME_VALUE = 3;
@@ -22784,7 +22808,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * Required. ID of the ClickHouse cluster to maintenance reschedule.
+     * ID of the ClickHouse cluster to reschedule the maintenance operation for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -22803,7 +22827,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. ID of the ClickHouse cluster to maintenance reschedule.
+     * ID of the ClickHouse cluster to reschedule the maintenance operation for.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -22826,7 +22850,7 @@ public final class ClusterServiceOuterClass {
     private int rescheduleType_;
     /**
      * <pre>
-     * Required. The type of reschedule request.
+     * The type of reschedule request.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -22836,7 +22860,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. The type of reschedule request.
+     * The type of reschedule request.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.clickhouse.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -22851,7 +22875,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.Timestamp delayedUntil_;
     /**
      * <pre>
-     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -22861,7 +22885,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -22871,7 +22895,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+     * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -23232,7 +23256,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * Required. ID of the ClickHouse cluster to maintenance reschedule.
+       * ID of the ClickHouse cluster to reschedule the maintenance operation for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23251,7 +23275,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the ClickHouse cluster to maintenance reschedule.
+       * ID of the ClickHouse cluster to reschedule the maintenance operation for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23271,7 +23295,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the ClickHouse cluster to maintenance reschedule.
+       * ID of the ClickHouse cluster to reschedule the maintenance operation for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23288,7 +23312,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the ClickHouse cluster to maintenance reschedule.
+       * ID of the ClickHouse cluster to reschedule the maintenance operation for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23301,7 +23325,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. ID of the ClickHouse cluster to maintenance reschedule.
+       * ID of the ClickHouse cluster to reschedule the maintenance operation for.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23321,7 +23345,7 @@ public final class ClusterServiceOuterClass {
       private int rescheduleType_ = 0;
       /**
        * <pre>
-       * Required. The type of reschedule request.
+       * The type of reschedule request.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -23331,7 +23355,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The type of reschedule request.
+       * The type of reschedule request.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -23343,7 +23367,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The type of reschedule request.
+       * The type of reschedule request.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -23355,7 +23379,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The type of reschedule request.
+       * The type of reschedule request.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -23371,7 +23395,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. The type of reschedule request.
+       * The type of reschedule request.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.clickhouse.v1.RescheduleMaintenanceRequest.RescheduleType reschedule_type = 2 [(.yandex.cloud.required) = true];</code>
@@ -23388,7 +23412,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -23398,7 +23422,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -23412,7 +23436,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -23432,7 +23456,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -23450,7 +23474,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -23472,7 +23496,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -23490,7 +23514,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -23502,7 +23526,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -23517,7 +23541,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The time for SPECIFIC_TIME reschedule. Limited by two weeks since first time scheduled.
+       * The time until which this maintenance operation should be delayed. The value should be ahead of the first time when the maintenance operation has been scheduled for no more than two weeks. The value can also point to the past moment of time if [reschedule_type.IMMEDIATE] reschedule type is chosen.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 3;</code>
@@ -23612,7 +23636,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * Required. The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -23620,7 +23644,7 @@ public final class ClusterServiceOuterClass {
     boolean hasDelayedUntil();
     /**
      * <pre>
-     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * Required. The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -23628,7 +23652,7 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.Timestamp getDelayedUntil();
     /**
      * <pre>
-     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * Required. The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -23636,6 +23660,10 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.TimestampOrBuilder getDelayedUntilOrBuilder();
   }
   /**
+   * <pre>
+   * Rescheduled maintenance operation metadata.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.RescheduleMaintenanceMetadata}
    */
   public  static final class RescheduleMaintenanceMetadata extends
@@ -23772,7 +23800,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.Timestamp delayedUntil_;
     /**
      * <pre>
-     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * Required. The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -23782,7 +23810,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * Required. The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -23792,7 +23820,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+     * Required. The time until which this maintenance operation is to be delayed.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -23973,6 +24001,10 @@ public final class ClusterServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Rescheduled maintenance operation metadata.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.RescheduleMaintenanceMetadata}
      */
     public static final class Builder extends
@@ -24228,7 +24260,7 @@ public final class ClusterServiceOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> delayedUntilBuilder_;
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -24238,7 +24270,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -24252,7 +24284,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -24272,7 +24304,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -24290,7 +24322,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -24312,7 +24344,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -24330,7 +24362,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -24342,7 +24374,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -24357,7 +24389,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Required. New time of the planned maintenance. Can be in the past for rescheduled to "IMMEDIATE".
+       * Required. The time until which this maintenance operation is to be delayed.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp delayed_until = 4;</code>
@@ -49983,6 +50015,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the cluster that the shard group belongs to.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -49991,6 +50024,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the cluster that the shard group belongs to.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -50001,7 +50035,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the shard group to request information about.
-     * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+     * To get the name of a shard group, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -50010,7 +50044,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the shard group to request information about.
-     * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+     * To get the name of a shard group, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -50108,6 +50142,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the cluster that the shard group belongs to.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -50127,6 +50162,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the cluster that the shard group belongs to.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -50150,7 +50186,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the shard group to request information about.
-     * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+     * To get the name of a shard group, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -50170,7 +50206,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the shard group to request information about.
-     * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+     * To get the name of a shard group, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -50513,6 +50549,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the cluster that the shard group belongs to.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -50532,6 +50569,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the cluster that the shard group belongs to.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -50552,6 +50590,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the cluster that the shard group belongs to.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -50569,6 +50608,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the cluster that the shard group belongs to.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -50582,6 +50622,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the cluster that the shard group belongs to.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -50602,7 +50643,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group to request information about.
-       * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+       * To get the name of a shard group, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -50622,7 +50663,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group to request information about.
-       * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+       * To get the name of a shard group, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -50643,7 +50684,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group to request information about.
-       * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+       * To get the name of a shard group, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -50661,7 +50702,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group to request information about.
-       * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+       * To get the name of a shard group, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -50675,7 +50716,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group to request information about.
-       * To get the name of a shard group , use a [ClusterService.ListShardGroups] request.
+       * To get the name of a shard group, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -50751,6 +50792,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the cluster that the shard group belongs to.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -50759,6 +50801,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the cluster that the shard group belongs to.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -50768,9 +50811,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -50779,8 +50821,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token.
+     * To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -50788,8 +50830,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token.
+     * To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -50893,6 +50935,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the cluster that the shard group belongs to.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -50912,6 +50955,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the cluster that the shard group belongs to.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -50934,9 +50978,8 @@ public final class ClusterServiceOuterClass {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return.
+     * If the number of available results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -50949,8 +50992,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token.
+     * To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -50969,8 +51012,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
-     * returned by a previous list request.
+     * Page token.
+     * To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -51331,6 +51374,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the cluster that the shard group belongs to.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -51350,6 +51394,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the cluster that the shard group belongs to.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -51370,6 +51415,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the cluster that the shard group belongs to.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -51387,6 +51433,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the cluster that the shard group belongs to.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -51400,6 +51447,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the cluster that the shard group belongs to.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -51419,9 +51467,8 @@ public final class ClusterServiceOuterClass {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -51431,9 +51478,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -51446,9 +51492,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return.
+       * If the number of available results is larger than [page_size], the service returns a [ListClusterShardGroupsResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -51463,8 +51508,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token.
+       * To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -51483,8 +51528,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token.
+       * To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -51504,8 +51549,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token.
+       * To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -51522,8 +51567,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token.
+       * To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -51536,8 +51581,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token]
-       * returned by a previous list request.
+       * Page token.
+       * To get the next page of results, set [page_token] to the [ListClusterShardGroupsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -51612,7 +51657,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * List of ClickHouse Cluster shard groups.
+     * List of ClickHouse cluster's shard groups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -51621,7 +51666,7 @@ public final class ClusterServiceOuterClass {
         getShardGroupsList();
     /**
      * <pre>
-     * List of ClickHouse Cluster shard groups.
+     * List of ClickHouse cluster's shard groups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -51629,7 +51674,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup getShardGroups(int index);
     /**
      * <pre>
-     * List of ClickHouse Cluster shard groups.
+     * List of ClickHouse cluster's shard groups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -51637,7 +51682,7 @@ public final class ClusterServiceOuterClass {
     int getShardGroupsCount();
     /**
      * <pre>
-     * List of ClickHouse Cluster shard groups.
+     * List of ClickHouse cluster's shard groups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -51646,7 +51691,7 @@ public final class ClusterServiceOuterClass {
         getShardGroupsOrBuilderList();
     /**
      * <pre>
-     * List of ClickHouse Cluster shard groups.
+     * List of ClickHouse cluster's shard groups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -51656,10 +51701,9 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -51667,10 +51711,9 @@ public final class ClusterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -51774,7 +51817,7 @@ public final class ClusterServiceOuterClass {
     private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.ShardGroup> shardGroups_;
     /**
      * <pre>
-     * List of ClickHouse Cluster shard groups.
+     * List of ClickHouse cluster's shard groups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -51784,7 +51827,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of ClickHouse Cluster shard groups.
+     * List of ClickHouse cluster's shard groups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -51795,7 +51838,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of ClickHouse Cluster shard groups.
+     * List of ClickHouse cluster's shard groups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -51805,7 +51848,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of ClickHouse Cluster shard groups.
+     * List of ClickHouse cluster's shard groups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -51815,7 +51858,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of ClickHouse Cluster shard groups.
+     * List of ClickHouse cluster's shard groups.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -51829,10 +51872,9 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -51851,10 +51893,9 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results for list requests.
+     * If the number of results is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -52249,7 +52290,7 @@ public final class ClusterServiceOuterClass {
 
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52263,7 +52304,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52277,7 +52318,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52291,7 +52332,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52312,7 +52353,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52330,7 +52371,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52350,7 +52391,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52371,7 +52412,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52389,7 +52430,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52407,7 +52448,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52426,7 +52467,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52443,7 +52484,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52460,7 +52501,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52471,7 +52512,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52485,7 +52526,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52500,7 +52541,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52511,7 +52552,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52523,7 +52564,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of ClickHouse Cluster shard groups.
+       * List of ClickHouse cluster's shard groups.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.ShardGroup shard_groups = 1;</code>
@@ -52550,10 +52591,9 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -52572,10 +52612,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -52595,10 +52634,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -52615,10 +52653,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -52631,10 +52668,9 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results for list requests.
+       * If the number of results is larger than [ListClusterShardGroupsRequest.page_size], use the [next_page_token] as the value for the [ListClusterShardGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -52710,7 +52746,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the ClickHouse cluster to add a shard group to.
-     * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -52719,7 +52755,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the ClickHouse cluster to add a shard group to.
-     * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -52747,7 +52783,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * Description of the new shard group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -52755,7 +52791,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * Description of the new shard group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -52765,7 +52801,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * List of shard names that belongs to the new group.
+     * List of shard names that should be put into the new group.
+     * To get the list, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -52774,7 +52811,8 @@ public final class ClusterServiceOuterClass {
         getShardNamesList();
     /**
      * <pre>
-     * List of shard names that belongs to the new group.
+     * List of shard names that should be put into the new group.
+     * To get the list, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -52782,7 +52820,8 @@ public final class ClusterServiceOuterClass {
     int getShardNamesCount();
     /**
      * <pre>
-     * List of shard names that belongs to the new group.
+     * List of shard names that should be put into the new group.
+     * To get the list, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -52790,7 +52829,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getShardNames(int index);
     /**
      * <pre>
-     * List of shard names that belongs to the new group.
+     * List of shard names that should be put into the new group.
+     * To get the list, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -52909,7 +52949,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the ClickHouse cluster to add a shard group to.
-     * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -52929,7 +52969,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * ID of the ClickHouse cluster to add a shard group to.
-     * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -52994,7 +53034,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * Description of the new shard group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -53013,7 +53053,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * Description of the new shard group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -53036,7 +53076,8 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.LazyStringList shardNames_;
     /**
      * <pre>
-     * List of shard names that belongs to the new group.
+     * List of shard names that should be put into the new group.
+     * To get the list, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -53047,7 +53088,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of shard names that belongs to the new group.
+     * List of shard names that should be put into the new group.
+     * To get the list, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -53057,7 +53099,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of shard names that belongs to the new group.
+     * List of shard names that should be put into the new group.
+     * To get the list, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -53067,7 +53110,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of shard names that belongs to the new group.
+     * List of shard names that should be put into the new group.
+     * To get the list, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>repeated string shard_names = 4;</code>
@@ -53456,7 +53500,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the ClickHouse cluster to add a shard group to.
-       * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -53476,7 +53520,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the ClickHouse cluster to add a shard group to.
-       * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -53497,7 +53541,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the ClickHouse cluster to add a shard group to.
-       * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -53515,7 +53559,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the ClickHouse cluster to add a shard group to.
-       * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -53529,7 +53573,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * ID of the ClickHouse cluster to add a shard group to.
-       * To get the ClickHouse cluster ID, use a [ClusterService.List] request.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -53638,7 +53682,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Description of the new shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -53657,7 +53701,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Description of the new shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -53677,7 +53721,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Description of the new shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -53694,7 +53738,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Description of the new shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -53707,7 +53751,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Description of the new shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -53733,7 +53777,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of shard names that belongs to the new group.
+       * List of shard names that should be put into the new group.
+       * To get the list, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -53744,7 +53789,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of shard names that belongs to the new group.
+       * List of shard names that should be put into the new group.
+       * To get the list, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -53754,7 +53800,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of shard names that belongs to the new group.
+       * List of shard names that should be put into the new group.
+       * To get the list, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -53764,7 +53811,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of shard names that belongs to the new group.
+       * List of shard names that should be put into the new group.
+       * To get the list, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -53775,7 +53823,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of shard names that belongs to the new group.
+       * List of shard names that should be put into the new group.
+       * To get the list, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -53792,7 +53841,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of shard names that belongs to the new group.
+       * List of shard names that should be put into the new group.
+       * To get the list, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -53809,7 +53859,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of shard names that belongs to the new group.
+       * List of shard names that should be put into the new group.
+       * To get the list, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -53824,7 +53875,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of shard names that belongs to the new group.
+       * List of shard names that should be put into the new group.
+       * To get the list, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -53837,7 +53889,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of shard names that belongs to the new group.
+       * List of shard names that should be put into the new group.
+       * To get the list, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>repeated string shard_names = 4;</code>
@@ -53912,7 +53965,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the ClickHouse cluster to add a shard group to.
+     * ID of the cluster to add a shard group to.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -53920,7 +53973,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the ClickHouse cluster to add a shard group to.
+     * ID of the cluster to add a shard group to.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -53930,7 +53983,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name for the new shard group.
+     * Name of the shard group that is being added.
      * </pre>
      *
      * <code>string shard_group_name = 2;</code>
@@ -53938,7 +53991,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getShardGroupName();
     /**
      * <pre>
-     * Name for the new shard group.
+     * Name of the shard group that is being added.
      * </pre>
      *
      * <code>string shard_group_name = 2;</code>
@@ -54035,7 +54088,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the ClickHouse cluster to add a shard group to.
+     * ID of the cluster to add a shard group to.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -54054,7 +54107,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the ClickHouse cluster to add a shard group to.
+     * ID of the cluster to add a shard group to.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -54077,7 +54130,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object shardGroupName_;
     /**
      * <pre>
-     * Name for the new shard group.
+     * Name of the shard group that is being added.
      * </pre>
      *
      * <code>string shard_group_name = 2;</code>
@@ -54096,7 +54149,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name for the new shard group.
+     * Name of the shard group that is being added.
      * </pre>
      *
      * <code>string shard_group_name = 2;</code>
@@ -54438,7 +54491,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the ClickHouse cluster to add a shard group to.
+       * ID of the cluster to add a shard group to.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -54457,7 +54510,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ClickHouse cluster to add a shard group to.
+       * ID of the cluster to add a shard group to.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -54477,7 +54530,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ClickHouse cluster to add a shard group to.
+       * ID of the cluster to add a shard group to.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -54494,7 +54547,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ClickHouse cluster to add a shard group to.
+       * ID of the cluster to add a shard group to.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -54507,7 +54560,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ClickHouse cluster to add a shard group to.
+       * ID of the cluster to add a shard group to.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -54527,7 +54580,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object shardGroupName_ = "";
       /**
        * <pre>
-       * Name for the new shard group.
+       * Name of the shard group that is being added.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -54546,7 +54599,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name for the new shard group.
+       * Name of the shard group that is being added.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -54566,7 +54619,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name for the new shard group.
+       * Name of the shard group that is being added.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -54583,7 +54636,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name for the new shard group.
+       * Name of the shard group that is being added.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -54596,7 +54649,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name for the new shard group.
+       * Name of the shard group that is being added.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -54671,7 +54724,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the cluster that contains the shard group being updated.
+     * ID of the ClickHouse cluster that contains the shard group to update.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -54679,7 +54733,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the cluster that contains the shard group being updated.
+     * ID of the ClickHouse cluster that contains the shard group to update.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -54690,6 +54745,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the shard group that should be updated.
+     * To get the name, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -54698,6 +54754,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the shard group that should be updated.
+     * To get the name, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -54706,33 +54763,21 @@ public final class ClusterServiceOuterClass {
         getShardGroupNameBytes();
 
     /**
-     * <pre>
-     * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-     * </pre>
-     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     boolean hasUpdateMask();
     /**
-     * <pre>
-     * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-     * </pre>
-     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
-     * <pre>
-     * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-     * </pre>
-     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
      * <pre>
-     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * Updated description of the shard group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -54740,7 +54785,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * Updated description of the shard group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -54750,7 +54795,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Updated list of shard names that belongs to the new group.
+     * Updated list of shard names that belongs to the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 5;</code>
@@ -54759,7 +54804,7 @@ public final class ClusterServiceOuterClass {
         getShardNamesList();
     /**
      * <pre>
-     * Updated list of shard names that belongs to the new group.
+     * Updated list of shard names that belongs to the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 5;</code>
@@ -54767,7 +54812,7 @@ public final class ClusterServiceOuterClass {
     int getShardNamesCount();
     /**
      * <pre>
-     * Updated list of shard names that belongs to the new group.
+     * Updated list of shard names that belongs to the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 5;</code>
@@ -54775,7 +54820,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getShardNames(int index);
     /**
      * <pre>
-     * Updated list of shard names that belongs to the new group.
+     * Updated list of shard names that belongs to the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 5;</code>
@@ -54906,7 +54951,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the cluster that contains the shard group being updated.
+     * ID of the ClickHouse cluster that contains the shard group to update.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -54925,7 +54971,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the cluster that contains the shard group being updated.
+     * ID of the ClickHouse cluster that contains the shard group to update.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -54949,6 +54996,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the shard group that should be updated.
+     * To get the name, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -54968,6 +55016,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the shard group that should be updated.
+     * To get the name, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -54989,30 +55038,18 @@ public final class ClusterServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 3;
     private com.google.protobuf.FieldMask updateMask_;
     /**
-     * <pre>
-     * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-     * </pre>
-     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
-     * <pre>
-     * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-     * </pre>
-     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
-     * <pre>
-     * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-     * </pre>
-     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -55023,7 +55060,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * Updated description of the shard group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -55042,7 +55079,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Description of the ClickHouse cluster shard group. 0-256 characters long.
+     * Updated description of the shard group. 0-256 characters long.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -55065,7 +55102,7 @@ public final class ClusterServiceOuterClass {
     private com.google.protobuf.LazyStringList shardNames_;
     /**
      * <pre>
-     * Updated list of shard names that belongs to the new group.
+     * Updated list of shard names that belongs to the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 5;</code>
@@ -55076,7 +55113,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Updated list of shard names that belongs to the new group.
+     * Updated list of shard names that belongs to the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 5;</code>
@@ -55086,7 +55123,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Updated list of shard names that belongs to the new group.
+     * Updated list of shard names that belongs to the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 5;</code>
@@ -55096,7 +55133,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Updated list of shard names that belongs to the new group.
+     * Updated list of shard names that belongs to the shard group.
      * </pre>
      *
      * <code>repeated string shard_names = 5;</code>
@@ -55514,7 +55551,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the cluster that contains the shard group being updated.
+       * ID of the ClickHouse cluster that contains the shard group to update.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -55533,7 +55571,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster that contains the shard group being updated.
+       * ID of the ClickHouse cluster that contains the shard group to update.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -55553,7 +55592,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster that contains the shard group being updated.
+       * ID of the ClickHouse cluster that contains the shard group to update.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -55570,7 +55610,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster that contains the shard group being updated.
+       * ID of the ClickHouse cluster that contains the shard group to update.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -55583,7 +55624,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the cluster that contains the shard group being updated.
+       * ID of the ClickHouse cluster that contains the shard group to update.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -55604,6 +55646,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group that should be updated.
+       * To get the name, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -55623,6 +55666,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group that should be updated.
+       * To get the name, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -55643,6 +55687,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group that should be updated.
+       * To get the name, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -55660,6 +55705,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group that should be updated.
+       * To get the name, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -55673,6 +55719,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group that should be updated.
+       * To get the name, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -55693,20 +55740,12 @@ public final class ClusterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
-       * <pre>
-       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-       * </pre>
-       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
-       * <pre>
-       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-       * </pre>
-       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -55717,10 +55756,6 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
-       * <pre>
-       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-       * </pre>
-       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -55737,10 +55772,6 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-       * </pre>
-       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder setUpdateMask(
@@ -55755,10 +55786,6 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-       * </pre>
-       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -55777,10 +55804,6 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-       * </pre>
-       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder clearUpdateMask() {
@@ -55795,10 +55818,6 @@ public final class ClusterServiceOuterClass {
         return this;
       }
       /**
-       * <pre>
-       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-       * </pre>
-       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -55807,10 +55826,6 @@ public final class ClusterServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
-       * <pre>
-       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-       * </pre>
-       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -55822,10 +55837,6 @@ public final class ClusterServiceOuterClass {
         }
       }
       /**
-       * <pre>
-       * Field mask that specifies which attributes of the ClickHouse shard group should be updated.
-       * </pre>
-       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -55845,7 +55856,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Updated description of the shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -55864,7 +55875,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Updated description of the shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -55884,7 +55895,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Updated description of the shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -55901,7 +55912,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Updated description of the shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -55914,7 +55925,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the ClickHouse cluster shard group. 0-256 characters long.
+       * Updated description of the shard group. 0-256 characters long.
        * </pre>
        *
        * <code>string description = 4;</code>
@@ -55940,7 +55951,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Updated list of shard names that belongs to the new group.
+       * Updated list of shard names that belongs to the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 5;</code>
@@ -55951,7 +55962,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Updated list of shard names that belongs to the new group.
+       * Updated list of shard names that belongs to the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 5;</code>
@@ -55961,7 +55972,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Updated list of shard names that belongs to the new group.
+       * Updated list of shard names that belongs to the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 5;</code>
@@ -55971,7 +55982,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Updated list of shard names that belongs to the new group.
+       * Updated list of shard names that belongs to the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 5;</code>
@@ -55982,7 +55993,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Updated list of shard names that belongs to the new group.
+       * Updated list of shard names that belongs to the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 5;</code>
@@ -55999,7 +56010,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Updated list of shard names that belongs to the new group.
+       * Updated list of shard names that belongs to the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 5;</code>
@@ -56016,7 +56027,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Updated list of shard names that belongs to the new group.
+       * Updated list of shard names that belongs to the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 5;</code>
@@ -56031,7 +56042,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Updated list of shard names that belongs to the new group.
+       * Updated list of shard names that belongs to the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 5;</code>
@@ -56044,7 +56055,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Updated list of shard names that belongs to the new group.
+       * Updated list of shard names that belongs to the shard group.
        * </pre>
        *
        * <code>repeated string shard_names = 5;</code>
@@ -56137,7 +56148,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the shard group that should be updated.
+     * Name of the shard group that is being updated.
      * </pre>
      *
      * <code>string shard_group_name = 2;</code>
@@ -56145,7 +56156,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getShardGroupName();
     /**
      * <pre>
-     * Name of the shard group that should be updated.
+     * Name of the shard group that is being updated.
      * </pre>
      *
      * <code>string shard_group_name = 2;</code>
@@ -56284,7 +56295,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object shardGroupName_;
     /**
      * <pre>
-     * Name of the shard group that should be updated.
+     * Name of the shard group that is being updated.
      * </pre>
      *
      * <code>string shard_group_name = 2;</code>
@@ -56303,7 +56314,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the shard group that should be updated.
+     * Name of the shard group that is being updated.
      * </pre>
      *
      * <code>string shard_group_name = 2;</code>
@@ -56734,7 +56745,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object shardGroupName_ = "";
       /**
        * <pre>
-       * Name of the shard group that should be updated.
+       * Name of the shard group that is being updated.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -56753,7 +56764,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the shard group that should be updated.
+       * Name of the shard group that is being updated.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -56773,7 +56784,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the shard group that should be updated.
+       * Name of the shard group that is being updated.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -56790,7 +56801,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the shard group that should be updated.
+       * Name of the shard group that is being updated.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -56803,7 +56814,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the shard group that should be updated.
+       * Name of the shard group that is being updated.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -56878,7 +56889,8 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the ClickHouse cluster the shard group belongs to.
+     * ID of the ClickHouse cluster that contains the shard group to delete.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -56886,7 +56898,8 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the ClickHouse cluster the shard group belongs to.
+     * ID of the ClickHouse cluster that contains the shard group to delete.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -56897,6 +56910,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the shard group that should be deleted.
+     * To get the name, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -56905,6 +56919,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the shard group that should be deleted.
+     * To get the name, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -57001,7 +57016,8 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the ClickHouse cluster the shard group belongs to.
+     * ID of the ClickHouse cluster that contains the shard group to delete.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -57020,7 +57036,8 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the ClickHouse cluster the shard group belongs to.
+     * ID of the ClickHouse cluster that contains the shard group to delete.
+     * To get the cluster ID, make a [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -57044,6 +57061,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the shard group that should be deleted.
+     * To get the name, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -57063,6 +57081,7 @@ public final class ClusterServiceOuterClass {
     /**
      * <pre>
      * Name of the shard group that should be deleted.
+     * To get the name, make a [ClusterService.ListShardGroups] request.
      * </pre>
      *
      * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -57404,7 +57423,8 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the ClickHouse cluster the shard group belongs to.
+       * ID of the ClickHouse cluster that contains the shard group to delete.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -57423,7 +57443,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ClickHouse cluster the shard group belongs to.
+       * ID of the ClickHouse cluster that contains the shard group to delete.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -57443,7 +57464,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ClickHouse cluster the shard group belongs to.
+       * ID of the ClickHouse cluster that contains the shard group to delete.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -57460,7 +57482,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ClickHouse cluster the shard group belongs to.
+       * ID of the ClickHouse cluster that contains the shard group to delete.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -57473,7 +57496,8 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ClickHouse cluster the shard group belongs to.
+       * ID of the ClickHouse cluster that contains the shard group to delete.
+       * To get the cluster ID, make a [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -57494,6 +57518,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group that should be deleted.
+       * To get the name, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -57513,6 +57538,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group that should be deleted.
+       * To get the name, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -57533,6 +57559,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group that should be deleted.
+       * To get the name, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -57550,6 +57577,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group that should be deleted.
+       * To get the name, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -57563,6 +57591,7 @@ public final class ClusterServiceOuterClass {
       /**
        * <pre>
        * Name of the shard group that should be deleted.
+       * To get the name, make a [ClusterService.ListShardGroups] request.
        * </pre>
        *
        * <code>string shard_group_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
@@ -57637,7 +57666,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the ClickHouse cluster the shard group belongs to.
+     * ID of the cluster that contains the shard group being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -57645,7 +57674,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the ClickHouse cluster the shard group belongs to.
+     * ID of the cluster that contains the shard group being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -57655,7 +57684,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the shard group that should be deleted.
+     * Name of the shard group that is being deleted.
      * </pre>
      *
      * <code>string shard_group_name = 2;</code>
@@ -57663,7 +57692,7 @@ public final class ClusterServiceOuterClass {
     java.lang.String getShardGroupName();
     /**
      * <pre>
-     * Name of the shard group that should be deleted.
+     * Name of the shard group that is being deleted.
      * </pre>
      *
      * <code>string shard_group_name = 2;</code>
@@ -57760,7 +57789,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the ClickHouse cluster the shard group belongs to.
+     * ID of the cluster that contains the shard group being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -57779,7 +57808,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the ClickHouse cluster the shard group belongs to.
+     * ID of the cluster that contains the shard group being deleted.
      * </pre>
      *
      * <code>string cluster_id = 1;</code>
@@ -57802,7 +57831,7 @@ public final class ClusterServiceOuterClass {
     private volatile java.lang.Object shardGroupName_;
     /**
      * <pre>
-     * Name of the shard group that should be deleted.
+     * Name of the shard group that is being deleted.
      * </pre>
      *
      * <code>string shard_group_name = 2;</code>
@@ -57821,7 +57850,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the shard group that should be deleted.
+     * Name of the shard group that is being deleted.
      * </pre>
      *
      * <code>string shard_group_name = 2;</code>
@@ -58163,7 +58192,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the ClickHouse cluster the shard group belongs to.
+       * ID of the cluster that contains the shard group being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -58182,7 +58211,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ClickHouse cluster the shard group belongs to.
+       * ID of the cluster that contains the shard group being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -58202,7 +58231,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ClickHouse cluster the shard group belongs to.
+       * ID of the cluster that contains the shard group being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -58219,7 +58248,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ClickHouse cluster the shard group belongs to.
+       * ID of the cluster that contains the shard group being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -58232,7 +58261,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the ClickHouse cluster the shard group belongs to.
+       * ID of the cluster that contains the shard group being deleted.
        * </pre>
        *
        * <code>string cluster_id = 1;</code>
@@ -58252,7 +58281,7 @@ public final class ClusterServiceOuterClass {
       private java.lang.Object shardGroupName_ = "";
       /**
        * <pre>
-       * Name of the shard group that should be deleted.
+       * Name of the shard group that is being deleted.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -58271,7 +58300,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the shard group that should be deleted.
+       * Name of the shard group that is being deleted.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -58291,7 +58320,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the shard group that should be deleted.
+       * Name of the shard group that is being deleted.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -58308,7 +58337,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the shard group that should be deleted.
+       * Name of the shard group that is being deleted.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
@@ -58321,7 +58350,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the shard group that should be deleted.
+       * Name of the shard group that is being deleted.
        * </pre>
        *
        * <code>string shard_group_name = 2;</code>
