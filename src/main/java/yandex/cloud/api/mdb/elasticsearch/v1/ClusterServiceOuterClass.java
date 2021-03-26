@@ -2954,7 +2954,7 @@ public final class ClusterServiceOuterClass {
      * One or more descriptions of users to be created in Elasticsearch cluster.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
      */
     java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec> 
         getUserSpecsList();
@@ -2963,7 +2963,7 @@ public final class ClusterServiceOuterClass {
      * One or more descriptions of users to be created in Elasticsearch cluster.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
      */
     yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec getUserSpecs(int index);
     /**
@@ -2971,7 +2971,7 @@ public final class ClusterServiceOuterClass {
      * One or more descriptions of users to be created in Elasticsearch cluster.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
      */
     int getUserSpecsCount();
     /**
@@ -2979,7 +2979,7 @@ public final class ClusterServiceOuterClass {
      * One or more descriptions of users to be created in Elasticsearch cluster.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
      */
     java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpecOrBuilder> 
         getUserSpecsOrBuilderList();
@@ -2988,7 +2988,7 @@ public final class ClusterServiceOuterClass {
      * One or more descriptions of users to be created in Elasticsearch cluster.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
      */
     yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpecOrBuilder getUserSpecsOrBuilder(
         int index);
@@ -3561,7 +3561,7 @@ public final class ClusterServiceOuterClass {
      * One or more descriptions of users to be created in Elasticsearch cluster.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
      */
     public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec> getUserSpecsList() {
       return userSpecs_;
@@ -3571,7 +3571,7 @@ public final class ClusterServiceOuterClass {
      * One or more descriptions of users to be created in Elasticsearch cluster.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
      */
     public java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpecOrBuilder> 
         getUserSpecsOrBuilderList() {
@@ -3582,7 +3582,7 @@ public final class ClusterServiceOuterClass {
      * One or more descriptions of users to be created in Elasticsearch cluster.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
      */
     public int getUserSpecsCount() {
       return userSpecs_.size();
@@ -3592,7 +3592,7 @@ public final class ClusterServiceOuterClass {
      * One or more descriptions of users to be created in Elasticsearch cluster.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec getUserSpecs(int index) {
       return userSpecs_.get(index);
@@ -3602,7 +3602,7 @@ public final class ClusterServiceOuterClass {
      * One or more descriptions of users to be created in Elasticsearch cluster.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+     * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
      */
     public yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpecOrBuilder getUserSpecsOrBuilder(
         int index) {
@@ -5008,7 +5008,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec> getUserSpecsList() {
         if (userSpecsBuilder_ == null) {
@@ -5022,7 +5022,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public int getUserSpecsCount() {
         if (userSpecsBuilder_ == null) {
@@ -5036,7 +5036,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec getUserSpecs(int index) {
         if (userSpecsBuilder_ == null) {
@@ -5050,7 +5050,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public Builder setUserSpecs(
           int index, yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec value) {
@@ -5071,7 +5071,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public Builder setUserSpecs(
           int index, yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec.Builder builderForValue) {
@@ -5089,7 +5089,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public Builder addUserSpecs(yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec value) {
         if (userSpecsBuilder_ == null) {
@@ -5109,7 +5109,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public Builder addUserSpecs(
           int index, yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec value) {
@@ -5130,7 +5130,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public Builder addUserSpecs(
           yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec.Builder builderForValue) {
@@ -5148,7 +5148,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public Builder addUserSpecs(
           int index, yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec.Builder builderForValue) {
@@ -5166,7 +5166,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public Builder addAllUserSpecs(
           java.lang.Iterable<? extends yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec> values) {
@@ -5185,7 +5185,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public Builder clearUserSpecs() {
         if (userSpecsBuilder_ == null) {
@@ -5202,7 +5202,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public Builder removeUserSpecs(int index) {
         if (userSpecsBuilder_ == null) {
@@ -5219,7 +5219,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec.Builder getUserSpecsBuilder(
           int index) {
@@ -5230,7 +5230,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpecOrBuilder getUserSpecsOrBuilder(
           int index) {
@@ -5244,7 +5244,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public java.util.List<? extends yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpecOrBuilder> 
            getUserSpecsOrBuilderList() {
@@ -5259,7 +5259,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec.Builder addUserSpecsBuilder() {
         return getUserSpecsFieldBuilder().addBuilder(
@@ -5270,7 +5270,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec.Builder addUserSpecsBuilder(
           int index) {
@@ -5282,7 +5282,7 @@ public final class ClusterServiceOuterClass {
        * One or more descriptions of users to be created in Elasticsearch cluster.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8 [(.yandex.cloud.size) = "&gt;0"];</code>
+       * <code>repeated .yandex.cloud.mdb.elasticsearch.v1.UserSpec user_specs = 8;</code>
        */
       public java.util.List<yandex.cloud.api.mdb.elasticsearch.v1.UserOuterClass.UserSpec.Builder> 
            getUserSpecsBuilderList() {
@@ -34527,7 +34527,7 @@ public final class ClusterServiceOuterClass {
       "\tB\n\212\3101\006<=1000\"m\n\024ListClustersResponse\022<\n" +
       "\010clusters\030\001 \003(\0132*.yandex.cloud.mdb.elast" +
       "icsearch.v1.Cluster\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"\262\005\n\024CreateClusterRequest\022\037\n\tfolder_" +
+      " \001(\t\"\252\005\n\024CreateClusterRequest\022\037\n\tfolder_" +
       "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\307" +
       "1\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013descript" +
       "ion\030\003 \001(\tB\t\212\3101\005<=256\022\224\001\n\006labels\030\004 \003(\0132C." +
@@ -34538,189 +34538,188 @@ public final class ClusterServiceOuterClass {
       "x.cloud.mdb.elasticsearch.v1.Cluster.Env" +
       "ironment\022H\n\013config_spec\030\006 \001(\0132-.yandex.c" +
       "loud.mdb.elasticsearch.v1.ConfigSpecB\004\350\307" +
-      "1\001\022G\n\nuser_specs\030\010 \003(\0132+.yandex.cloud.md" +
-      "b.elasticsearch.v1.UserSpecB\006\202\3101\002>0\022G\n\nh" +
-      "ost_specs\030\t \003(\0132+.yandex.cloud.mdb.elast" +
-      "icsearch.v1.HostSpecB\006\202\3101\002>0\022 \n\nnetwork_" +
-      "id\030\n \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security_group" +
-      "_ids\030\013 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
-      "\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateClusterMetada" +
-      "ta\022\022\n\ncluster_id\030\001 \001(\t\"\331\003\n\024UpdateCluster" +
-      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMask\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=2" +
-      "56\022\224\001\n\006labels\030\004 \003(\0132C.yandex.cloud.mdb.e" +
-      "lasticsearch.v1.UpdateClusterRequest.Lab" +
-      "elsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]" +
-      "*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022B\n\013con" +
-      "fig_spec\030\005 \001(\0132-.yandex.cloud.mdb.elasti" +
-      "csearch.v1.ConfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101" +
-      "\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\032\n\022security_grou" +
-      "p_ids\030\007 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteCluster" +
-      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\"+\n\025DeleteClusterMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t\"\320\003\n\026ListClusterLogsRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_fi" +
-      "lter\030\002 \003(\t\022-\n\tfrom_time\030\003 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022+\n\007to_time\030\004 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022\035\n\tpage_size\030\005 \001(" +
-      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\006 \001(\tB\t\212\3101\005<" +
-      "=100\022\036\n\026always_next_page_token\030\007 \001(\010\022\032\n\006" +
-      "filter\030\010 \001(\tB\n\212\3101\006<=1000\022[\n\014service_type" +
-      "\030\t \001(\0162E.yandex.cloud.mdb.elasticsearch." +
-      "v1.ListClusterLogsRequest.ServiceType\"J\n" +
-      "\013ServiceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED" +
-      "\020\000\022\021\n\rELASTICSEARCH\020\001\022\n\n\006KIBANA\020\002\"\266\001\n\tLo" +
-      "gRecord\022-\n\ttimestamp\030\001 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022J\n\007message\030\002 \003(\01329.yandex" +
-      ".cloud.mdb.elasticsearch.v1.LogRecord.Me" +
-      "ssageEntry\032.\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"n\n\027ListClusterLogsRes" +
-      "ponse\022:\n\004logs\030\001 \003(\0132,.yandex.cloud.mdb.e" +
-      "lasticsearch.v1.LogRecord\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t\"j\n\017StreamLogRecord\022<\n\006record\030" +
-      "\001 \001(\0132,.yandex.cloud.mdb.elasticsearch.v" +
-      "1.LogRecord\022\031\n\021next_record_token\030\002 \001(\t\"\227" +
-      "\003\n\030StreamClusterLogsRequest\022 \n\ncluster_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002" +
-      " \003(\t\022-\n\tfrom_time\030\003 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022+\n\007to_time\030\004 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022\037\n\014record_token\030\005 \001(\tB\t" +
-      "\212\3101\005<=100\022\032\n\006filter\030\006 \001(\tB\n\212\3101\006<=1000\022]\n" +
-      "\014service_type\030\007 \001(\0162G.yandex.cloud.mdb.e" +
-      "lasticsearch.v1.StreamClusterLogsRequest" +
-      ".ServiceType\"J\n\013ServiceType\022\034\n\030SERVICE_T" +
-      "YPE_UNSPECIFIED\020\000\022\021\n\rELASTICSEARCH\020\001\022\n\n\006" +
-      "KIBANA\020\002\"~\n\034ListClusterOperationsRequest" +
-      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
-      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
-      "\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperation" +
-      "sResponse\0225\n\noperations\030\001 \003(\0132!.yandex.c" +
-      "loud.operation.Operation\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\"y\n\027ListClusterHostsRequest\022 \n\n" +
-      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
-      "ize\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(" +
-      "\tB\t\212\3101\005<=100\"k\n\030ListClusterHostsResponse" +
-      "\0226\n\005hosts\030\001 \003(\0132\'.yandex.cloud.mdb.elast" +
-      "icsearch.v1.Host\022\027\n\017next_page_token\030\002 \001(" +
-      "\t\"c\n\022MoveClusterRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_" +
-      "id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveClusterMet" +
-      "adata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020source_fold" +
-      "er_id\030\002 \001(\t\022\035\n\025destination_folder_id\030\003 \001" +
-      "(\t\"7\n\023StartClusterRequest\022 \n\ncluster_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClusterRe" +
-      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"" +
-      ")\n\023StopClusterMetadata\022\022\n\ncluster_id\030\001 \001" +
-      "(\t\"\316\001\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=" +
-      "50\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assig" +
-      "n_public_ip\030\003 \001(\010\022@\n\004type\030\004 \001(\0162,.yandex" +
-      ".cloud.mdb.elasticsearch.v1.Host.TypeB\004\350" +
-      "\3071\001\022.\n\nshard_name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-" +
-      "zA-Z0-9_-]*\"\366\003\n\021ElasticsearchSpec\022P\n\tdat" +
-      "a_node\030\001 \001(\0132=.yandex.cloud.mdb.elastics" +
-      "earch.v1.ElasticsearchSpec.DataNode\022T\n\013m" +
-      "aster_node\030\002 \001(\0132?.yandex.cloud.mdb.elas" +
-      "ticsearch.v1.ElasticsearchSpec.MasterNod" +
-      "e\022\031\n\007plugins\030\003 \003(\tB\010\212\3101\004<=50\032\316\001\n\010DataNod" +
-      "e\022w\n\026elasticsearch_config_7\030\001 \001(\0132>.yand" +
-      "ex.cloud.mdb.elasticsearch.v1.config.Ela" +
-      "sticsearchConfig7H\000R\025elasticsearchConfig" +
-      "_7\022?\n\tresources\030\002 \001(\0132,.yandex.cloud.mdb" +
-      ".elasticsearch.v1.ResourcesB\010\n\006config\032M\n" +
-      "\nMasterNode\022?\n\tresources\030\001 \001(\0132,.yandex." +
-      "cloud.mdb.elasticsearch.v1.Resources\"\230\001\n" +
-      "\nConfigSpec\022\017\n\007version\030\001 \001(\t\022P\n\022elastics" +
-      "earch_spec\030\002 \001(\01324.yandex.cloud.mdb.elas" +
-      "ticsearch.v1.ElasticsearchSpec\022\017\n\007editio" +
-      "n\030\003 \001(\t\022\026\n\016admin_password\030\004 \001(\t\"\203\001\n\026AddC" +
-      "lusterHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022G\n\nhost_specs\030\002 \003(\0132+.yande" +
-      "x.cloud.mdb.elasticsearch.v1.HostSpecB\006\202" +
-      "\3101\002>0\"A\n\027AddClusterHostsMetadata\022\022\n\nclus" +
-      "ter_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"b\n\031Dele" +
-      "teClusterHostsRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101" +
-      "\002>0\212\3101\005<=253\"D\n\032DeleteClusterHostsMetada" +
-      "ta\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003" +
-      "(\t2\212\026\n\016ClusterService\022\240\001\n\003Get\0224.yandex.c" +
-      "loud.mdb.elasticsearch.v1.GetClusterRequ" +
-      "est\032*.yandex.cloud.mdb.elasticsearch.v1." +
-      "Cluster\"7\202\323\344\223\0021\022//managed-elasticsearch/" +
-      "v1/clusters/{cluster_id}\022\243\001\n\004List\0226.yand" +
-      "ex.cloud.mdb.elasticsearch.v1.ListCluste" +
-      "rsRequest\0327.yandex.cloud.mdb.elasticsear" +
-      "ch.v1.ListClustersResponse\"*\202\323\344\223\002$\022\"/man" +
-      "aged-elasticsearch/v1/clusters\022\267\001\n\006Creat" +
-      "e\0227.yandex.cloud.mdb.elasticsearch.v1.Cr" +
-      "eateClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"Q\202\323\344\223\002\'\"\"/managed-elastics" +
-      "earch/v1/clusters:\001*\262\322* \n\025CreateClusterM" +
-      "etadata\022\007Cluster\022\304\001\n\006Update\0227.yandex.clo" +
-      "ud.mdb.elasticsearch.v1.UpdateClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "^\202\323\344\223\00242//managed-elasticsearch/v1/clust" +
-      "ers/{cluster_id}:\001*\262\322* \n\025UpdateClusterMe" +
-      "tadata\022\007Cluster\022\317\001\n\006Delete\0227.yandex.clou" +
-      "d.mdb.elasticsearch.v1.DeleteClusterRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"i" +
-      "\202\323\344\223\0021*//managed-elasticsearch/v1/cluste" +
-      "rs/{cluster_id}\262\322*.\n\025DeleteClusterMetada" +
-      "ta\022\025google.protobuf.Empty\022\303\001\n\004Move\0225.yan" +
-      "dex.cloud.mdb.elasticsearch.v1.MoveClust" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"a\202\323\344\223\0029\"4/managed-elasticsearch/v1/" +
-      "clusters/{cluster_id}:move:\001*\262\322*\036\n\023MoveC" +
-      "lusterMetadata\022\007Cluster\022\304\001\n\005Start\0226.yand" +
-      "ex.cloud.mdb.elasticsearch.v1.StartClust" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"`\202\323\344\223\0027\"5/managed-elasticsearch/v1/" +
-      "clusters/{cluster_id}:start\262\322*\037\n\024StartCl" +
-      "usterMetadata\022\007Cluster\022\300\001\n\004Stop\0225.yandex" +
-      ".cloud.mdb.elasticsearch.v1.StopClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"^\202\323\344\223\0026\"4/managed-elasticsearch/v1/clu" +
-      "sters/{cluster_id}:stop\262\322*\036\n\023StopCluster" +
-      "Metadata\022\007Cluster\022\277\001\n\010ListLogs\0229.yandex." +
-      "cloud.mdb.elasticsearch.v1.ListClusterLo" +
-      "gsRequest\032:.yandex.cloud.mdb.elasticsear" +
-      "ch.v1.ListClusterLogsResponse\"<\202\323\344\223\0026\0224/" +
-      "managed-elasticsearch/v1/clusters/{clust" +
-      "er_id}:logs\022\304\001\n\nStreamLogs\022;.yandex.clou" +
-      "d.mdb.elasticsearch.v1.StreamClusterLogs" +
-      "Request\0322.yandex.cloud.mdb.elasticsearch" +
-      ".v1.StreamLogRecord\"C\202\323\344\223\002=\022;/managed-el" +
-      "asticsearch/v1/clusters/{cluster_id}:str" +
-      "eam_logs0\001\022\327\001\n\016ListOperations\022?.yandex.c" +
-      "loud.mdb.elasticsearch.v1.ListClusterOpe" +
-      "rationsRequest\032@.yandex.cloud.mdb.elasti" +
-      "csearch.v1.ListClusterOperationsResponse" +
-      "\"B\202\323\344\223\002<\022:/managed-elasticsearch/v1/clus" +
-      "ters/{cluster_id}/operations\022\303\001\n\tListHos" +
-      "ts\022:.yandex.cloud.mdb.elasticsearch.v1.L" +
-      "istClusterHostsRequest\032;.yandex.cloud.md" +
-      "b.elasticsearch.v1.ListClusterHostsRespo" +
-      "nse\"=\202\323\344\223\0027\0225/managed-elasticsearch/v1/c" +
-      "lusters/{cluster_id}/hosts\022\353\001\n\010AddHosts\022" +
-      "9.yandex.cloud.mdb.elasticsearch.v1.AddC" +
-      "lusterHostsRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"\200\001\202\323\344\223\002F\"A/managed-elastic" +
-      "search/v1/clusters/{cluster_id}/hosts:ba" +
-      "tchCreate:\001*\262\322*0\n\027AddClusterHostsMetadat" +
-      "a\022\025google.protobuf.Empty\022\364\001\n\013DeleteHosts" +
-      "\022<.yandex.cloud.mdb.elasticsearch.v1.Del" +
-      "eteClusterHostsRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"\203\001\202\323\344\223\002F\"A/managed-ela" +
-      "sticsearch/v1/clusters/{cluster_id}/host" +
-      "s:batchDelete:\001*\262\322*3\n\032DeleteClusterHosts" +
-      "Metadata\022\025google.protobuf.EmptyB|\n%yande" +
-      "x.cloud.api.mdb.elasticsearch.v1ZSgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/mdb/elasticsearch/v1;elasticsearchb\006p" +
-      "roto3"
+      "1\001\022?\n\nuser_specs\030\010 \003(\0132+.yandex.cloud.md" +
+      "b.elasticsearch.v1.UserSpec\022G\n\nhost_spec" +
+      "s\030\t \003(\0132+.yandex.cloud.mdb.elasticsearch" +
+      ".v1.HostSpecB\006\202\3101\002>0\022 \n\nnetwork_id\030\n \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\032\n\022security_group_ids\030\013 \003" +
+      "(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"+\n\025CreateClusterMetadata\022\022\n\ncl" +
+      "uster_id\030\001 \001(\t\"\331\003\n\024UpdateClusterRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013upd" +
+      "ate_mask\030\002 \001(\0132\032.google.protobuf.FieldMa" +
+      "sk\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\224\001\n\006l" +
+      "abels\030\004 \003(\0132C.yandex.cloud.mdb.elasticse" +
+      "arch.v1.UpdateClusterRequest.LabelsEntry" +
+      "B?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041" +
+      "-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022B\n\013config_spec" +
+      "\030\005 \001(\0132-.yandex.cloud.mdb.elasticsearch." +
+      "v1.ConfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362\3071" +
+      "\016[a-zA-Z0-9_-]*\022\032\n\022security_group_ids\030\007 " +
+      "\003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Del" +
+      "eteClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\320" +
+      "\003\n\026ListClusterLogsRequest\022 \n\ncluster_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003" +
+      "(\t\022-\n\tfrom_time\030\003 \001(\0132\032.google.protobuf." +
+      "Timestamp\022+\n\007to_time\030\004 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\035\n\tpage_size\030\005 \001(\003B\n\372\3071\006<" +
+      "=1000\022\035\n\npage_token\030\006 \001(\tB\t\212\3101\005<=100\022\036\n\026" +
+      "always_next_page_token\030\007 \001(\010\022\032\n\006filter\030\010" +
+      " \001(\tB\n\212\3101\006<=1000\022[\n\014service_type\030\t \001(\0162E" +
+      ".yandex.cloud.mdb.elasticsearch.v1.ListC" +
+      "lusterLogsRequest.ServiceType\"J\n\013Service" +
+      "Type\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\021\n\rEL" +
+      "ASTICSEARCH\020\001\022\n\n\006KIBANA\020\002\"\266\001\n\tLogRecord\022" +
+      "-\n\ttimestamp\030\001 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022J\n\007message\030\002 \003(\01329.yandex.cloud.m" +
+      "db.elasticsearch.v1.LogRecord.MessageEnt" +
+      "ry\032.\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"n\n\027ListClusterLogsResponse\022:\n" +
+      "\004logs\030\001 \003(\0132,.yandex.cloud.mdb.elasticse" +
+      "arch.v1.LogRecord\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\"j\n\017StreamLogRecord\022<\n\006record\030\001 \001(\0132,." +
+      "yandex.cloud.mdb.elasticsearch.v1.LogRec" +
+      "ord\022\031\n\021next_record_token\030\002 \001(\t\"\227\003\n\030Strea" +
+      "mClusterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n\t" +
+      "from_time\030\003 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022+\n\007to_time\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022\037\n\014record_token\030\005 \001(\tB\t\212\3101\005<=10" +
+      "0\022\032\n\006filter\030\006 \001(\tB\n\212\3101\006<=1000\022]\n\014service" +
+      "_type\030\007 \001(\0162G.yandex.cloud.mdb.elasticse" +
+      "arch.v1.StreamClusterLogsRequest.Service" +
+      "Type\"J\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSP" +
+      "ECIFIED\020\000\022\021\n\rELASTICSEARCH\020\001\022\n\n\006KIBANA\020\002" +
+      "\"~\n\034ListClusterOperationsRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
+      "\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
+      "\3101\005<=100\"o\n\035ListClusterOperationsRespons" +
+      "e\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.ope" +
+      "ration.Operation\022\027\n\017next_page_token\030\002 \001(" +
+      "\t\"y\n\027ListClusterHostsRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
+      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
+      "=100\"k\n\030ListClusterHostsResponse\0226\n\005host" +
+      "s\030\001 \003(\0132\'.yandex.cloud.mdb.elasticsearch" +
+      ".v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"c\n\022Mov" +
+      "eClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022+\n\025destination_folder_id\030\002 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\"b\n\023MoveClusterMetadata\022\022\n" +
+      "\ncluster_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 " +
+      "\001(\t\022\035\n\025destination_folder_id\030\003 \001(\t\"7\n\023St" +
+      "artClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\"6\n\022StopClusterRequest\022 \n" +
+      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopC" +
+      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\316\001\n\010H" +
+      "ostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022\033\n\tsu" +
+      "bnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public" +
+      "_ip\030\003 \001(\010\022@\n\004type\030\004 \001(\0162,.yandex.cloud.m" +
+      "db.elasticsearch.v1.Host.TypeB\004\350\3071\001\022.\n\ns" +
+      "hard_name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_" +
+      "-]*\"\366\003\n\021ElasticsearchSpec\022P\n\tdata_node\030\001" +
+      " \001(\0132=.yandex.cloud.mdb.elasticsearch.v1" +
+      ".ElasticsearchSpec.DataNode\022T\n\013master_no" +
+      "de\030\002 \001(\0132?.yandex.cloud.mdb.elasticsearc" +
+      "h.v1.ElasticsearchSpec.MasterNode\022\031\n\007plu" +
+      "gins\030\003 \003(\tB\010\212\3101\004<=50\032\316\001\n\010DataNode\022w\n\026ela" +
+      "sticsearch_config_7\030\001 \001(\0132>.yandex.cloud" +
+      ".mdb.elasticsearch.v1.config.Elasticsear" +
+      "chConfig7H\000R\025elasticsearchConfig_7\022?\n\tre" +
+      "sources\030\002 \001(\0132,.yandex.cloud.mdb.elastic" +
+      "search.v1.ResourcesB\010\n\006config\032M\n\nMasterN" +
+      "ode\022?\n\tresources\030\001 \001(\0132,.yandex.cloud.md" +
+      "b.elasticsearch.v1.Resources\"\230\001\n\nConfigS" +
+      "pec\022\017\n\007version\030\001 \001(\t\022P\n\022elasticsearch_sp" +
+      "ec\030\002 \001(\01324.yandex.cloud.mdb.elasticsearc" +
+      "h.v1.ElasticsearchSpec\022\017\n\007edition\030\003 \001(\t\022" +
+      "\026\n\016admin_password\030\004 \001(\t\"\203\001\n\026AddClusterHo" +
+      "stsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022G\n\nhost_specs\030\002 \003(\0132+.yandex.cloud." +
+      "mdb.elasticsearch.v1.HostSpecB\006\202\3101\002>0\"A\n" +
+      "\027AddClusterHostsMetadata\022\022\n\ncluster_id\030\001" +
+      " \001(\t\022\022\n\nhost_names\030\002 \003(\t\"b\n\031DeleteCluste" +
+      "rHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<" +
+      "=253\"D\n\032DeleteClusterHostsMetadata\022\022\n\ncl" +
+      "uster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t2\212\026\n\016C" +
+      "lusterService\022\240\001\n\003Get\0224.yandex.cloud.mdb" +
+      ".elasticsearch.v1.GetClusterRequest\032*.ya" +
+      "ndex.cloud.mdb.elasticsearch.v1.Cluster\"" +
+      "7\202\323\344\223\0021\022//managed-elasticsearch/v1/clust" +
+      "ers/{cluster_id}\022\243\001\n\004List\0226.yandex.cloud" +
+      ".mdb.elasticsearch.v1.ListClustersReques" +
+      "t\0327.yandex.cloud.mdb.elasticsearch.v1.Li" +
+      "stClustersResponse\"*\202\323\344\223\002$\022\"/managed-ela" +
+      "sticsearch/v1/clusters\022\267\001\n\006Create\0227.yand" +
+      "ex.cloud.mdb.elasticsearch.v1.CreateClus" +
+      "terRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"Q\202\323\344\223\002\'\"\"/managed-elasticsearch/v1" +
+      "/clusters:\001*\262\322* \n\025CreateClusterMetadata\022" +
+      "\007Cluster\022\304\001\n\006Update\0227.yandex.cloud.mdb.e" +
+      "lasticsearch.v1.UpdateClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"^\202\323\344\223\00242" +
+      "//managed-elasticsearch/v1/clusters/{clu" +
+      "ster_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007" +
+      "Cluster\022\317\001\n\006Delete\0227.yandex.cloud.mdb.el" +
+      "asticsearch.v1.DeleteClusterRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"i\202\323\344\223\0021*/" +
+      "/managed-elasticsearch/v1/clusters/{clus" +
+      "ter_id}\262\322*.\n\025DeleteClusterMetadata\022\025goog" +
+      "le.protobuf.Empty\022\303\001\n\004Move\0225.yandex.clou" +
+      "d.mdb.elasticsearch.v1.MoveClusterReques" +
+      "t\032!.yandex.cloud.operation.Operation\"a\202\323" +
+      "\344\223\0029\"4/managed-elasticsearch/v1/clusters" +
+      "/{cluster_id}:move:\001*\262\322*\036\n\023MoveClusterMe" +
+      "tadata\022\007Cluster\022\304\001\n\005Start\0226.yandex.cloud" +
+      ".mdb.elasticsearch.v1.StartClusterReques" +
+      "t\032!.yandex.cloud.operation.Operation\"`\202\323" +
+      "\344\223\0027\"5/managed-elasticsearch/v1/clusters" +
+      "/{cluster_id}:start\262\322*\037\n\024StartClusterMet" +
+      "adata\022\007Cluster\022\300\001\n\004Stop\0225.yandex.cloud.m" +
+      "db.elasticsearch.v1.StopClusterRequest\032!" +
+      ".yandex.cloud.operation.Operation\"^\202\323\344\223\002" +
+      "6\"4/managed-elasticsearch/v1/clusters/{c" +
+      "luster_id}:stop\262\322*\036\n\023StopClusterMetadata" +
+      "\022\007Cluster\022\277\001\n\010ListLogs\0229.yandex.cloud.md" +
+      "b.elasticsearch.v1.ListClusterLogsReques" +
+      "t\032:.yandex.cloud.mdb.elasticsearch.v1.Li" +
+      "stClusterLogsResponse\"<\202\323\344\223\0026\0224/managed-" +
+      "elasticsearch/v1/clusters/{cluster_id}:l" +
+      "ogs\022\304\001\n\nStreamLogs\022;.yandex.cloud.mdb.el" +
+      "asticsearch.v1.StreamClusterLogsRequest\032" +
+      "2.yandex.cloud.mdb.elasticsearch.v1.Stre" +
+      "amLogRecord\"C\202\323\344\223\002=\022;/managed-elasticsea" +
+      "rch/v1/clusters/{cluster_id}:stream_logs" +
+      "0\001\022\327\001\n\016ListOperations\022?.yandex.cloud.mdb" +
+      ".elasticsearch.v1.ListClusterOperationsR" +
+      "equest\032@.yandex.cloud.mdb.elasticsearch." +
+      "v1.ListClusterOperationsResponse\"B\202\323\344\223\002<" +
+      "\022:/managed-elasticsearch/v1/clusters/{cl" +
+      "uster_id}/operations\022\303\001\n\tListHosts\022:.yan" +
+      "dex.cloud.mdb.elasticsearch.v1.ListClust" +
+      "erHostsRequest\032;.yandex.cloud.mdb.elasti" +
+      "csearch.v1.ListClusterHostsResponse\"=\202\323\344" +
+      "\223\0027\0225/managed-elasticsearch/v1/clusters/" +
+      "{cluster_id}/hosts\022\353\001\n\010AddHosts\0229.yandex" +
+      ".cloud.mdb.elasticsearch.v1.AddClusterHo" +
+      "stsRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"\200\001\202\323\344\223\002F\"A/managed-elasticsearch/v" +
+      "1/clusters/{cluster_id}/hosts:batchCreat" +
+      "e:\001*\262\322*0\n\027AddClusterHostsMetadata\022\025googl" +
+      "e.protobuf.Empty\022\364\001\n\013DeleteHosts\022<.yande" +
+      "x.cloud.mdb.elasticsearch.v1.DeleteClust" +
+      "erHostsRequest\032!.yandex.cloud.operation." +
+      "Operation\"\203\001\202\323\344\223\002F\"A/managed-elasticsear" +
+      "ch/v1/clusters/{cluster_id}/hosts:batchD" +
+      "elete:\001*\262\322*3\n\032DeleteClusterHostsMetadata" +
+      "\022\025google.protobuf.EmptyB|\n%yandex.cloud." +
+      "api.mdb.elasticsearch.v1ZSgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/mdb/e" +
+      "lasticsearch/v1;elasticsearchb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
