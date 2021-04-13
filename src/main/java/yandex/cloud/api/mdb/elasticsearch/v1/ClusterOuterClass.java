@@ -350,6 +350,24 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 14;</code>
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 14;</code>
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
   }
   /**
    * <pre>
@@ -379,6 +397,7 @@ public final class ClusterOuterClass {
       health_ = 0;
       status_ = 0;
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      serviceAccountId_ = "";
     }
 
     @java.lang.Override
@@ -508,6 +527,12 @@ public final class ClusterOuterClass {
                 mutable_bitField0_ |= 0x00001000;
               }
               securityGroupIds_.add(s);
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
               break;
             }
             default: {
@@ -1599,6 +1624,48 @@ public final class ClusterOuterClass {
       return securityGroupIds_.getByteString(index);
     }
 
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 14;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 14;</code>
+     */
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service account used for access to Yandex Object Storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 14;</code>
+     */
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1654,6 +1721,9 @@ public final class ClusterOuterClass {
       }
       for (int i = 0; i < securityGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, securityGroupIds_.getRaw(i));
+      }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, serviceAccountId_);
       }
       unknownFields.writeTo(output);
     }
@@ -1721,6 +1791,9 @@ public final class ClusterOuterClass {
         size += dataSize;
         size += 1 * getSecurityGroupIdsList().size();
       }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, serviceAccountId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1766,6 +1839,8 @@ public final class ClusterOuterClass {
       result = result && status_ == other.status_;
       result = result && getSecurityGroupIdsList()
           .equals(other.getSecurityGroupIdsList());
+      result = result && getServiceAccountId()
+          .equals(other.getServiceAccountId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1813,6 +1888,8 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
       }
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2011,6 +2088,8 @@ public final class ClusterOuterClass {
 
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00001000);
+        serviceAccountId_ = "";
+
         return this;
       }
 
@@ -2073,6 +2152,7 @@ public final class ClusterOuterClass {
           bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.securityGroupIds_ = securityGroupIds_;
+        result.serviceAccountId_ = serviceAccountId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2193,6 +2273,10 @@ public final class ClusterOuterClass {
             ensureSecurityGroupIdsIsMutable();
             securityGroupIds_.addAll(other.securityGroupIds_);
           }
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3777,6 +3861,95 @@ public final class ClusterOuterClass {
   checkByteStringIsUtf8(value);
         ensureSecurityGroupIdsIsMutable();
         securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 14;</code>
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 14;</code>
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 14;</code>
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 14;</code>
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account used for access to Yandex Object Storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 14;</code>
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
         onChanged();
         return this;
       }
@@ -12911,7 +13084,7 @@ public final class ClusterOuterClass {
       "ter.proto\022!yandex.cloud.mdb.elasticsearc" +
       "h.v1\032\037google/protobuf/timestamp.proto\032<y" +
       "andex/cloud/mdb/elasticsearch/v1/config/" +
-      "elasticsearch.proto\"\201\007\n\007Cluster\022\n\n\002id\030\001 " +
+      "elasticsearch.proto\"\235\007\n\007Cluster\022\n\n\002id\030\001 " +
       "\001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001" +
       "(\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\004" +
       " \001(\t\022\023\n\013description\030\005 \001(\t\022F\n\006labels\030\006 \003(" +
@@ -12926,55 +13099,55 @@ public final class ClusterOuterClass {
       "db.elasticsearch.v1.Cluster.Health\022A\n\006st" +
       "atus\030\014 \001(\01621.yandex.cloud.mdb.elasticsea" +
       "rch.v1.Cluster.Status\022\032\n\022security_group_" +
-      "ids\030\r \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIR" +
-      "ONMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\t" +
-      "PRESTABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020" +
-      "\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006" +
-      "Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001" +
-      "\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014" +
-      "\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"" +
-      "=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descripti" +
-      "on\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"z\n\rClusterConfig\022" +
-      "\017\n\007version\030\001 \001(\t\022G\n\relasticsearch\030\002 \001(\0132" +
-      "0.yandex.cloud.mdb.elasticsearch.v1.Elas" +
-      "ticsearch\022\017\n\007edition\030\003 \001(\t\"\353\003\n\rElasticse" +
-      "arch\022L\n\tdata_node\030\001 \001(\01329.yandex.cloud.m" +
-      "db.elasticsearch.v1.Elasticsearch.DataNo" +
-      "de\022P\n\013master_node\030\002 \001(\0132;.yandex.cloud.m" +
-      "db.elasticsearch.v1.Elasticsearch.Master" +
-      "Node\022\017\n\007plugins\030\003 \003(\t\032\331\001\n\010DataNode\022\201\001\n\032e" +
-      "lasticsearch_config_set_7\030\001 \001(\0132A.yandex" +
-      ".cloud.mdb.elasticsearch.v1.config.Elast" +
-      "icsearchConfigSet7H\000R\030elasticsearchConfi" +
-      "gSet_7\022?\n\tresources\030\002 \001(\0132,.yandex.cloud" +
-      ".mdb.elasticsearch.v1.ResourcesB\010\n\006confi" +
-      "g\032M\n\nMasterNode\022?\n\tresources\030\001 \001(\0132,.yan" +
-      "dex.cloud.mdb.elasticsearch.v1.Resources" +
-      "\"P\n\tResources\022\032\n\022resource_preset_id\030\001 \001(" +
-      "\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001" +
-      "(\t\"\331\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030" +
-      "\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022:\n\004type\030\004 \001(\0162,.y" +
-      "andex.cloud.mdb.elasticsearch.v1.Host.Ty" +
-      "pe\022?\n\tresources\030\005 \001(\0132,.yandex.cloud.mdb" +
-      ".elasticsearch.v1.Resources\022>\n\006health\030\006 " +
-      "\001(\0162..yandex.cloud.mdb.elasticsearch.v1." +
-      "Host.Health\022<\n\010services\030\007 \003(\0132*.yandex.c" +
-      "loud.mdb.elasticsearch.v1.Service\022\021\n\tsub" +
-      "net_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"<" +
-      "\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n\tDATA_NOD" +
-      "E\020\001\022\017\n\013MASTER_NODE\020\002\"8\n\006Health\022\013\n\007UNKNOW" +
-      "N\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\350" +
-      "\001\n\007Service\022=\n\004type\030\001 \001(\0162/.yandex.cloud." +
-      "mdb.elasticsearch.v1.Service.Type\022A\n\006hea" +
-      "lth\030\002 \001(\01621.yandex.cloud.mdb.elasticsear" +
-      "ch.v1.Service.Health\"/\n\004Type\022\024\n\020TYPE_UNS" +
-      "PECIFIED\020\000\022\021\n\rELASTICSEARCH\020\001\"*\n\006Health\022" +
-      "\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002B|\n%yan" +
-      "dex.cloud.api.mdb.elasticsearch.v1ZSgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/mdb/elasticsearch/v1;elasticsearchb" +
-      "\006proto3"
+      "ids\030\r \003(\t\022\032\n\022service_account_id\030\016 \001(\t\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPE" +
+      "CIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"" +
+      "?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001" +
+      "\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016ST" +
+      "ATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020" +
+      "\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005" +
+      "\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitorin" +
+      "g\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004" +
+      "link\030\003 \001(\t\"z\n\rClusterConfig\022\017\n\007version\030\001" +
+      " \001(\t\022G\n\relasticsearch\030\002 \001(\01320.yandex.clo" +
+      "ud.mdb.elasticsearch.v1.Elasticsearch\022\017\n" +
+      "\007edition\030\003 \001(\t\"\353\003\n\rElasticsearch\022L\n\tdata" +
+      "_node\030\001 \001(\01329.yandex.cloud.mdb.elasticse" +
+      "arch.v1.Elasticsearch.DataNode\022P\n\013master" +
+      "_node\030\002 \001(\0132;.yandex.cloud.mdb.elasticse" +
+      "arch.v1.Elasticsearch.MasterNode\022\017\n\007plug" +
+      "ins\030\003 \003(\t\032\331\001\n\010DataNode\022\201\001\n\032elasticsearch" +
+      "_config_set_7\030\001 \001(\0132A.yandex.cloud.mdb.e" +
+      "lasticsearch.v1.config.ElasticsearchConf" +
+      "igSet7H\000R\030elasticsearchConfigSet_7\022?\n\tre" +
+      "sources\030\002 \001(\0132,.yandex.cloud.mdb.elastic" +
+      "search.v1.ResourcesB\010\n\006config\032M\n\nMasterN" +
+      "ode\022?\n\tresources\030\001 \001(\0132,.yandex.cloud.md" +
+      "b.elasticsearch.v1.Resources\"P\n\tResource" +
+      "s\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_si" +
+      "ze\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\331\003\n\004Host\022" +
+      "\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zon" +
+      "e_id\030\003 \001(\t\022:\n\004type\030\004 \001(\0162,.yandex.cloud." +
+      "mdb.elasticsearch.v1.Host.Type\022?\n\tresour" +
+      "ces\030\005 \001(\0132,.yandex.cloud.mdb.elasticsear" +
+      "ch.v1.Resources\022>\n\006health\030\006 \001(\0162..yandex" +
+      ".cloud.mdb.elasticsearch.v1.Host.Health\022" +
+      "<\n\010services\030\007 \003(\0132*.yandex.cloud.mdb.ela" +
+      "sticsearch.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t" +
+      "\022\030\n\020assign_public_ip\030\t \001(\010\"<\n\004Type\022\024\n\020TY" +
+      "PE_UNSPECIFIED\020\000\022\r\n\tDATA_NODE\020\001\022\017\n\013MASTE" +
+      "R_NODE\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE" +
+      "\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\350\001\n\007Service\022=" +
+      "\n\004type\030\001 \001(\0162/.yandex.cloud.mdb.elastics" +
+      "earch.v1.Service.Type\022A\n\006health\030\002 \001(\01621." +
+      "yandex.cloud.mdb.elasticsearch.v1.Servic" +
+      "e.Health\"/\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\021" +
+      "\n\rELASTICSEARCH\020\001\"*\n\006Health\022\013\n\007UNKNOWN\020\000" +
+      "\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002B|\n%yandex.cloud.ap" +
+      "i.mdb.elasticsearch.v1ZSgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/mdb/ela" +
+      "sticsearch/v1;elasticsearchb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12995,7 +13168,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_elasticsearch_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_elasticsearch_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "SecurityGroupIds", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "SecurityGroupIds", "ServiceAccountId", });
     internal_static_yandex_cloud_mdb_elasticsearch_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_elasticsearch_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_Cluster_LabelsEntry_fieldAccessorTable = new

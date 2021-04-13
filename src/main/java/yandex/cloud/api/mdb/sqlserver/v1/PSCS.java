@@ -32061,6 +32061,31 @@ public final class PSCS {
      */
     com.google.type.TimeOfDayOrBuilder getBackupWindowStartOrBuilder();
 
+    /**
+     * <pre>
+     * Access policy to DB
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     */
+    boolean hasAccess();
+    /**
+     * <pre>
+     * Access policy to DB
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getAccess();
+    /**
+     * <pre>
+     * Access policy to DB
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder getAccessOrBuilder();
+
     public yandex.cloud.api.mdb.sqlserver.v1.PSCS.ConfigSpec.SqlserverConfigCase getSqlserverConfigCase();
   }
   /**
@@ -32161,6 +32186,19 @@ public final class PSCS {
                 sqlserverConfig_ = subBuilder.buildPartial();
               }
               sqlserverConfigCase_ = 5;
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder subBuilder = null;
+              if (access_ != null) {
+                subBuilder = access_.toBuilder();
+              }
+              access_ = input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(access_);
+                access_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -32421,6 +32459,39 @@ public final class PSCS {
       return getBackupWindowStart();
     }
 
+    public static final int ACCESS_FIELD_NUMBER = 6;
+    private yandex.cloud.api.mdb.sqlserver.v1.PSC.Access access_;
+    /**
+     * <pre>
+     * Access policy to DB
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     */
+    public boolean hasAccess() {
+      return access_ != null;
+    }
+    /**
+     * <pre>
+     * Access policy to DB
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     */
+    public yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getAccess() {
+      return access_ == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.getDefaultInstance() : access_;
+    }
+    /**
+     * <pre>
+     * Access policy to DB
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     */
+    public yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder getAccessOrBuilder() {
+      return getAccess();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -32450,6 +32521,9 @@ public final class PSCS {
       if (sqlserverConfigCase_ == 5) {
         output.writeMessage(5, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent) sqlserverConfig_);
       }
+      if (access_ != null) {
+        output.writeMessage(6, getAccess());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -32478,6 +32552,10 @@ public final class PSCS {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfig2016sp2ent) sqlserverConfig_);
       }
+      if (access_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getAccess());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -32505,6 +32583,11 @@ public final class PSCS {
       if (hasBackupWindowStart()) {
         result = result && getBackupWindowStart()
             .equals(other.getBackupWindowStart());
+      }
+      result = result && (hasAccess() == other.hasAccess());
+      if (hasAccess()) {
+        result = result && getAccess()
+            .equals(other.getAccess());
       }
       result = result && getSqlserverConfigCase().equals(
           other.getSqlserverConfigCase());
@@ -32541,6 +32624,10 @@ public final class PSCS {
       if (hasBackupWindowStart()) {
         hash = (37 * hash) + BACKUP_WINDOW_START_FIELD_NUMBER;
         hash = (53 * hash) + getBackupWindowStart().hashCode();
+      }
+      if (hasAccess()) {
+        hash = (37 * hash) + ACCESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAccess().hashCode();
       }
       switch (sqlserverConfigCase_) {
         case 2:
@@ -32701,6 +32788,12 @@ public final class PSCS {
           backupWindowStart_ = null;
           backupWindowStartBuilder_ = null;
         }
+        if (accessBuilder_ == null) {
+          access_ = null;
+        } else {
+          access_ = null;
+          accessBuilder_ = null;
+        }
         sqlserverConfigCase_ = 0;
         sqlserverConfig_ = null;
         return this;
@@ -32753,6 +32846,11 @@ public final class PSCS {
           result.backupWindowStart_ = backupWindowStart_;
         } else {
           result.backupWindowStart_ = backupWindowStartBuilder_.build();
+        }
+        if (accessBuilder_ == null) {
+          result.access_ = access_;
+        } else {
+          result.access_ = accessBuilder_.build();
         }
         result.sqlserverConfigCase_ = sqlserverConfigCase_;
         onBuilt();
@@ -32812,6 +32910,9 @@ public final class PSCS {
         }
         if (other.hasBackupWindowStart()) {
           mergeBackupWindowStart(other.getBackupWindowStart());
+        }
+        if (other.hasAccess()) {
+          mergeAccess(other.getAccess());
         }
         switch (other.getSqlserverConfigCase()) {
           case SQLSERVER_CONFIG_2016SP2STD: {
@@ -33618,6 +33719,159 @@ public final class PSCS {
         }
         return backupWindowStartBuilder_;
       }
+
+      private yandex.cloud.api.mdb.sqlserver.v1.PSC.Access access_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.PSC.Access, yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder> accessBuilder_;
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public boolean hasAccess() {
+        return accessBuilder_ != null || access_ != null;
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getAccess() {
+        if (accessBuilder_ == null) {
+          return access_ == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.getDefaultInstance() : access_;
+        } else {
+          return accessBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public Builder setAccess(yandex.cloud.api.mdb.sqlserver.v1.PSC.Access value) {
+        if (accessBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          access_ = value;
+          onChanged();
+        } else {
+          accessBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public Builder setAccess(
+          yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder builderForValue) {
+        if (accessBuilder_ == null) {
+          access_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public Builder mergeAccess(yandex.cloud.api.mdb.sqlserver.v1.PSC.Access value) {
+        if (accessBuilder_ == null) {
+          if (access_ != null) {
+            access_ =
+              yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.newBuilder(access_).mergeFrom(value).buildPartial();
+          } else {
+            access_ = value;
+          }
+          onChanged();
+        } else {
+          accessBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public Builder clearAccess() {
+        if (accessBuilder_ == null) {
+          access_ = null;
+          onChanged();
+        } else {
+          access_ = null;
+          accessBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder getAccessBuilder() {
+        
+        onChanged();
+        return getAccessFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder getAccessOrBuilder() {
+        if (accessBuilder_ != null) {
+          return accessBuilder_.getMessageOrBuilder();
+        } else {
+          return access_ == null ?
+              yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.getDefaultInstance() : access_;
+        }
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.PSC.Access, yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder> 
+          getAccessFieldBuilder() {
+        if (accessBuilder_ == null) {
+          accessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.sqlserver.v1.PSC.Access, yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder>(
+                  getAccess(),
+                  getParentForChildren(),
+                  isClean());
+          access_ = null;
+        }
+        return accessBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -33982,7 +34236,7 @@ public final class PSCS {
       "a\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(" +
       "\t\"\\\n\010HostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50" +
       "\022\033\n\tsubnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_" +
-      "public_ip\030\003 \001(\010\"\255\003\n\nConfigSpec\022\017\n\007versio" +
+      "public_ip\030\003 \001(\010\"\344\003\n\nConfigSpec\022\017\n\007versio" +
       "n\030\001 \001(\t\022\202\001\n\033sqlserver_config_2016sp2std\030" +
       "\002 \001(\0132?.yandex.cloud.mdb.sqlserver.v1.co" +
       "nfig.SQLServerConfig2016sp2stdH\000R\032sqlser" +
@@ -33992,75 +34246,76 @@ public final class PSCS {
       "entH\000R\032sqlserverConfig_2016sp2ent\022;\n\tres" +
       "ources\030\003 \001(\0132(.yandex.cloud.mdb.sqlserve" +
       "r.v1.Resources\0223\n\023backup_window_start\030\004 " +
-      "\001(\0132\026.google.type.TimeOfDayB\022\n\020sqlserver" +
-      "_config2\374\023\n\016ClusterService\022\220\001\n\003Get\0220.yan" +
-      "dex.cloud.mdb.sqlserver.v1.GetClusterReq" +
-      "uest\032&.yandex.cloud.mdb.sqlserver.v1.Clu" +
-      "ster\"/\202\323\344\223\002)\022\'/mdb/sqlserver/v1/clusters" +
-      "/{cluster_id}\022\223\001\n\004List\0222.yandex.cloud.md" +
-      "b.sqlserver.v1.ListClustersRequest\0323.yan" +
-      "dex.cloud.mdb.sqlserver.v1.ListClustersR" +
-      "esponse\"\"\202\323\344\223\002\034\022\032/mdb/sqlserver/v1/clust" +
-      "ers\022\253\001\n\006Create\0223.yandex.cloud.mdb.sqlser" +
-      "ver.v1.CreateClusterRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"I\202\323\344\223\002\037\"\032/mdb/sql" +
-      "server/v1/clusters:\001*\262\322* \n\025CreateCluster" +
-      "Metadata\022\007Cluster\022\270\001\n\006Update\0223.yandex.cl" +
-      "oud.mdb.sqlserver.v1.UpdateClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"V\202\323" +
-      "\344\223\002,2\'/mdb/sqlserver/v1/clusters/{cluste" +
-      "r_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Clu" +
-      "ster\022\303\001\n\006Delete\0223.yandex.cloud.mdb.sqlse" +
-      "rver.v1.DeleteClusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"a\202\323\344\223\002)*\'/mdb/sq" +
-      "lserver/v1/clusters/{cluster_id}\262\322*.\n\025De" +
-      "leteClusterMetadata\022\025google.protobuf.Emp" +
-      "ty\022\270\001\n\005Start\0222.yandex.cloud.mdb.sqlserve" +
-      "r.v1.StartClusterRequest\032!.yandex.cloud." +
-      "operation.Operation\"X\202\323\344\223\002/\"-/mdb/sqlser" +
-      "ver/v1/clusters/{cluster_id}:start\262\322*\037\n\024" +
-      "StartClusterMetadata\022\007Cluster\022\264\001\n\004Stop\0221" +
-      ".yandex.cloud.mdb.sqlserver.v1.StopClust" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"V\202\323\344\223\002.\",/mdb/sqlserver/v1/clusters" +
-      "/{cluster_id}:stop\262\322*\036\n\023StopClusterMetad" +
-      "ata\022\007Cluster\022\267\001\n\004Move\0221.yandex.cloud.mdb" +
-      ".sqlserver.v1.MoveClusterRequest\032!.yande" +
-      "x.cloud.operation.Operation\"Y\202\323\344\223\0021\",/md" +
-      "b/sqlserver/v1/clusters/{cluster_id}:mov" +
-      "e:\001*\262\322*\036\n\023MoveClusterMetadata\022\007Cluster\022\274" +
-      "\001\n\006Backup\0223.yandex.cloud.mdb.sqlserver.v" +
-      "1.BackupClusterRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"Z\202\323\344\223\0020\"./mdb/sqlserve" +
-      "r/v1/clusters/{cluster_id}:backup\262\322* \n\025B" +
-      "ackupClusterMetadata\022\007Cluster\022\266\001\n\007Restor" +
-      "e\0224.yandex.cloud.mdb.sqlserver.v1.Restor" +
-      "eClusterRequest\032!.yandex.cloud.operation" +
-      ".Operation\"R\202\323\344\223\002\'\"\"/mdb/sqlserver/v1/cl" +
-      "usters:restore:\001*\262\322*!\n\026RestoreClusterMet" +
-      "adata\022\007Cluster\022\257\001\n\010ListLogs\0225.yandex.clo" +
-      "ud.mdb.sqlserver.v1.ListClusterLogsReque" +
-      "st\0326.yandex.cloud.mdb.sqlserver.v1.ListC" +
-      "lusterLogsResponse\"4\202\323\344\223\002.\022,/mdb/sqlserv" +
-      "er/v1/clusters/{cluster_id}:logs\022\307\001\n\016Lis" +
-      "tOperations\022;.yandex.cloud.mdb.sqlserver" +
-      ".v1.ListClusterOperationsRequest\032<.yande" +
-      "x.cloud.mdb.sqlserver.v1.ListClusterOper" +
-      "ationsResponse\":\202\323\344\223\0024\0222/mdb/sqlserver/v" +
-      "1/clusters/{cluster_id}/operations\022\273\001\n\013L" +
-      "istBackups\0228.yandex.cloud.mdb.sqlserver." +
-      "v1.ListClusterBackupsRequest\0329.yandex.cl" +
-      "oud.mdb.sqlserver.v1.ListClusterBackupsR" +
-      "esponse\"7\202\323\344\223\0021\022//mdb/sqlserver/v1/clust" +
-      "ers/{cluster_id}/backups\022\263\001\n\tListHosts\0226" +
-      ".yandex.cloud.mdb.sqlserver.v1.ListClust" +
-      "erHostsRequest\0327.yandex.cloud.mdb.sqlser" +
-      "ver.v1.ListClusterHostsResponse\"5\202\323\344\223\002/\022" +
-      "-/mdb/sqlserver/v1/clusters/{cluster_id}" +
-      "/hostsBv\n!yandex.cloud.api.mdb.sqlserver" +
-      ".v1B\004PSCSZKgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/mdb/sqlserver/v1;sql" +
-      "serverb\006proto3"
+      "\001(\0132\026.google.type.TimeOfDay\0225\n\006access\030\006 " +
+      "\001(\0132%.yandex.cloud.mdb.sqlserver.v1.Acce" +
+      "ssB\022\n\020sqlserver_config2\374\023\n\016ClusterServic" +
+      "e\022\220\001\n\003Get\0220.yandex.cloud.mdb.sqlserver.v" +
+      "1.GetClusterRequest\032&.yandex.cloud.mdb.s" +
+      "qlserver.v1.Cluster\"/\202\323\344\223\002)\022\'/mdb/sqlser" +
+      "ver/v1/clusters/{cluster_id}\022\223\001\n\004List\0222." +
+      "yandex.cloud.mdb.sqlserver.v1.ListCluste" +
+      "rsRequest\0323.yandex.cloud.mdb.sqlserver.v" +
+      "1.ListClustersResponse\"\"\202\323\344\223\002\034\022\032/mdb/sql" +
+      "server/v1/clusters\022\253\001\n\006Create\0223.yandex.c" +
+      "loud.mdb.sqlserver.v1.CreateClusterReque" +
+      "st\032!.yandex.cloud.operation.Operation\"I\202" +
+      "\323\344\223\002\037\"\032/mdb/sqlserver/v1/clusters:\001*\262\322* " +
+      "\n\025CreateClusterMetadata\022\007Cluster\022\270\001\n\006Upd" +
+      "ate\0223.yandex.cloud.mdb.sqlserver.v1.Upda" +
+      "teClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"V\202\323\344\223\002,2\'/mdb/sqlserver/v1/c" +
+      "lusters/{cluster_id}:\001*\262\322* \n\025UpdateClust" +
+      "erMetadata\022\007Cluster\022\303\001\n\006Delete\0223.yandex." +
+      "cloud.mdb.sqlserver.v1.DeleteClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"a" +
+      "\202\323\344\223\002)*\'/mdb/sqlserver/v1/clusters/{clus" +
+      "ter_id}\262\322*.\n\025DeleteClusterMetadata\022\025goog" +
+      "le.protobuf.Empty\022\270\001\n\005Start\0222.yandex.clo" +
+      "ud.mdb.sqlserver.v1.StartClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"X\202\323\344\223" +
+      "\002/\"-/mdb/sqlserver/v1/clusters/{cluster_" +
+      "id}:start\262\322*\037\n\024StartClusterMetadata\022\007Clu" +
+      "ster\022\264\001\n\004Stop\0221.yandex.cloud.mdb.sqlserv" +
+      "er.v1.StopClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"V\202\323\344\223\002.\",/mdb/sqlser" +
+      "ver/v1/clusters/{cluster_id}:stop\262\322*\036\n\023S" +
+      "topClusterMetadata\022\007Cluster\022\267\001\n\004Move\0221.y" +
+      "andex.cloud.mdb.sqlserver.v1.MoveCluster" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"Y\202\323\344\223\0021\",/mdb/sqlserver/v1/clusters/{" +
+      "cluster_id}:move:\001*\262\322*\036\n\023MoveClusterMeta" +
+      "data\022\007Cluster\022\274\001\n\006Backup\0223.yandex.cloud." +
+      "mdb.sqlserver.v1.BackupClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"Z\202\323\344\223\0020" +
+      "\"./mdb/sqlserver/v1/clusters/{cluster_id" +
+      "}:backup\262\322* \n\025BackupClusterMetadata\022\007Clu" +
+      "ster\022\266\001\n\007Restore\0224.yandex.cloud.mdb.sqls" +
+      "erver.v1.RestoreClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"R\202\323\344\223\002\'\"\"/mdb/" +
+      "sqlserver/v1/clusters:restore:\001*\262\322*!\n\026Re" +
+      "storeClusterMetadata\022\007Cluster\022\257\001\n\010ListLo" +
+      "gs\0225.yandex.cloud.mdb.sqlserver.v1.ListC" +
+      "lusterLogsRequest\0326.yandex.cloud.mdb.sql" +
+      "server.v1.ListClusterLogsResponse\"4\202\323\344\223\002" +
+      ".\022,/mdb/sqlserver/v1/clusters/{cluster_i" +
+      "d}:logs\022\307\001\n\016ListOperations\022;.yandex.clou" +
+      "d.mdb.sqlserver.v1.ListClusterOperations" +
+      "Request\032<.yandex.cloud.mdb.sqlserver.v1." +
+      "ListClusterOperationsResponse\":\202\323\344\223\0024\0222/" +
+      "mdb/sqlserver/v1/clusters/{cluster_id}/o" +
+      "perations\022\273\001\n\013ListBackups\0228.yandex.cloud" +
+      ".mdb.sqlserver.v1.ListClusterBackupsRequ" +
+      "est\0329.yandex.cloud.mdb.sqlserver.v1.List" +
+      "ClusterBackupsResponse\"7\202\323\344\223\0021\022//mdb/sql" +
+      "server/v1/clusters/{cluster_id}/backups\022" +
+      "\263\001\n\tListHosts\0226.yandex.cloud.mdb.sqlserv" +
+      "er.v1.ListClusterHostsRequest\0327.yandex.c" +
+      "loud.mdb.sqlserver.v1.ListClusterHostsRe" +
+      "sponse\"5\202\323\344\223\002/\022-/mdb/sqlserver/v1/cluste" +
+      "rs/{cluster_id}/hostsBv\n!yandex.cloud.ap" +
+      "i.mdb.sqlserver.v1B\004PSCSZKgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/mdb/s" +
+      "qlserver/v1;sqlserverb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -34295,7 +34550,7 @@ public final class PSCS {
     internal_static_yandex_cloud_mdb_sqlserver_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Version", "SqlserverConfig2016Sp2Std", "SqlserverConfig2016Sp2Ent", "Resources", "BackupWindowStart", "SqlserverConfig", });
+        new java.lang.String[] { "Version", "SqlserverConfig2016Sp2Std", "SqlserverConfig2016Sp2Ent", "Resources", "BackupWindowStart", "Access", "SqlserverConfig", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

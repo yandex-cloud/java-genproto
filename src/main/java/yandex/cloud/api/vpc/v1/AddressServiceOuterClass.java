@@ -12152,6 +12152,1243 @@ public final class AddressServiceOuterClass {
 
   }
 
+  public interface MoveAddressRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.MoveAddressRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getAddressId();
+    /**
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getAddressIdBytes();
+
+    /**
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getDestinationFolderId();
+    /**
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDestinationFolderIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.MoveAddressRequest}
+   */
+  public  static final class MoveAddressRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.MoveAddressRequest)
+      MoveAddressRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MoveAddressRequest.newBuilder() to construct.
+    private MoveAddressRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MoveAddressRequest() {
+      addressId_ = "";
+      destinationFolderId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MoveAddressRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              addressId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              destinationFolderId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.AddressServiceOuterClass.internal_static_yandex_cloud_vpc_v1_MoveAddressRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.AddressServiceOuterClass.internal_static_yandex_cloud_vpc_v1_MoveAddressRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest.class, yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object addressId_;
+    /**
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getAddressId() {
+      java.lang.Object ref = addressId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        addressId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddressIdBytes() {
+      java.lang.Object ref = addressId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addressId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object destinationFolderId_;
+    /**
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getDestinationFolderId() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationFolderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDestinationFolderIdBytes() {
+      java.lang.Object ref = destinationFolderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationFolderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAddressIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, addressId_);
+      }
+      if (!getDestinationFolderIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationFolderId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAddressIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, addressId_);
+      }
+      if (!getDestinationFolderIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationFolderId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest other = (yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest) obj;
+
+      boolean result = true;
+      result = result && getAddressId()
+          .equals(other.getAddressId());
+      result = result && getDestinationFolderId()
+          .equals(other.getDestinationFolderId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAddressId().hashCode();
+      hash = (37 * hash) + DESTINATION_FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDestinationFolderId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.MoveAddressRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.MoveAddressRequest)
+        yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.AddressServiceOuterClass.internal_static_yandex_cloud_vpc_v1_MoveAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.AddressServiceOuterClass.internal_static_yandex_cloud_vpc_v1_MoveAddressRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest.class, yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        addressId_ = "";
+
+        destinationFolderId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.AddressServiceOuterClass.internal_static_yandex_cloud_vpc_v1_MoveAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest build() {
+        yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest buildPartial() {
+        yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest result = new yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest(this);
+        result.addressId_ = addressId_;
+        result.destinationFolderId_ = destinationFolderId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest other) {
+        if (other == yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest.getDefaultInstance()) return this;
+        if (!other.getAddressId().isEmpty()) {
+          addressId_ = other.addressId_;
+          onChanged();
+        }
+        if (!other.getDestinationFolderId().isEmpty()) {
+          destinationFolderId_ = other.destinationFolderId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object addressId_ = "";
+      /**
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getAddressId() {
+        java.lang.Object ref = addressId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          addressId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressIdBytes() {
+        java.lang.Object ref = addressId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addressId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setAddressId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        addressId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearAddressId() {
+        
+        addressId_ = getDefaultInstance().getAddressId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setAddressIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        addressId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destinationFolderId_ = "";
+      /**
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getDestinationFolderId() {
+        java.lang.Object ref = destinationFolderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destinationFolderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDestinationFolderIdBytes() {
+        java.lang.Object ref = destinationFolderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destinationFolderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setDestinationFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearDestinationFolderId() {
+        
+        destinationFolderId_ = getDefaultInstance().getDestinationFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string destination_folder_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setDestinationFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        destinationFolderId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.MoveAddressRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.MoveAddressRequest)
+    private static final yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest();
+    }
+
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MoveAddressRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MoveAddressRequest>() {
+      @java.lang.Override
+      public MoveAddressRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MoveAddressRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MoveAddressRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MoveAddressRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MoveAddressMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.MoveAddressMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address_id = 1;</code>
+     */
+    java.lang.String getAddressId();
+    /**
+     * <code>string address_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddressIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.MoveAddressMetadata}
+   */
+  public  static final class MoveAddressMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.MoveAddressMetadata)
+      MoveAddressMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MoveAddressMetadata.newBuilder() to construct.
+    private MoveAddressMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MoveAddressMetadata() {
+      addressId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MoveAddressMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              addressId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.AddressServiceOuterClass.internal_static_yandex_cloud_vpc_v1_MoveAddressMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.AddressServiceOuterClass.internal_static_yandex_cloud_vpc_v1_MoveAddressMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata.class, yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata.Builder.class);
+    }
+
+    public static final int ADDRESS_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object addressId_;
+    /**
+     * <code>string address_id = 1;</code>
+     */
+    public java.lang.String getAddressId() {
+      java.lang.Object ref = addressId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        addressId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddressIdBytes() {
+      java.lang.Object ref = addressId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addressId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAddressIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, addressId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAddressIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, addressId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata other = (yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata) obj;
+
+      boolean result = true;
+      result = result && getAddressId()
+          .equals(other.getAddressId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAddressId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.MoveAddressMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.MoveAddressMetadata)
+        yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.AddressServiceOuterClass.internal_static_yandex_cloud_vpc_v1_MoveAddressMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.AddressServiceOuterClass.internal_static_yandex_cloud_vpc_v1_MoveAddressMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata.class, yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        addressId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.AddressServiceOuterClass.internal_static_yandex_cloud_vpc_v1_MoveAddressMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata build() {
+        yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata buildPartial() {
+        yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata result = new yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata(this);
+        result.addressId_ = addressId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata other) {
+        if (other == yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata.getDefaultInstance()) return this;
+        if (!other.getAddressId().isEmpty()) {
+          addressId_ = other.addressId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object addressId_ = "";
+      /**
+       * <code>string address_id = 1;</code>
+       */
+      public java.lang.String getAddressId() {
+        java.lang.Object ref = addressId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          addressId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressIdBytes() {
+        java.lang.Object ref = addressId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addressId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address_id = 1;</code>
+       */
+      public Builder setAddressId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        addressId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address_id = 1;</code>
+       */
+      public Builder clearAddressId() {
+        
+        addressId_ = getDefaultInstance().getAddressId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address_id = 1;</code>
+       */
+      public Builder setAddressIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        addressId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.MoveAddressMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.MoveAddressMetadata)
+    private static final yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata();
+    }
+
+    public static yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MoveAddressMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<MoveAddressMetadata>() {
+      @java.lang.Override
+      public MoveAddressMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MoveAddressMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MoveAddressMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MoveAddressMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.AddressServiceOuterClass.MoveAddressMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_vpc_v1_GetAddressRequest_descriptor;
   private static final 
@@ -12227,6 +13464,16 @@ public final class AddressServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_vpc_v1_ListAddressOperationsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_MoveAddressRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_MoveAddressRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_MoveAddressMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_MoveAddressMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12286,35 +13533,42 @@ public final class AddressServiceOuterClass {
       "\t\212\3101\005<=100\"o\n\035ListAddressOperationsRespo" +
       "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
       "peration.Operation\022\027\n\017next_page_token\030\002 " +
-      "\001(\t2\240\010\n\016AddressService\022s\n\003Get\022&.yandex.c" +
-      "loud.vpc.v1.GetAddressRequest\032\034.yandex.c" +
-      "loud.vpc.v1.Address\"&\202\323\344\223\002 \022\036/vpc/v1/add" +
-      "resses/{address_id}\022|\n\nGetByValue\022-.yand" +
-      "ex.cloud.vpc.v1.GetAddressByValueRequest" +
-      "\032\034.yandex.cloud.vpc.v1.Address\"!\202\323\344\223\002\033\022\031" +
-      "/vpc/v1/addresses:byValue\022x\n\004List\022).yand" +
-      "ex.cloud.vpc.v1.ListAddressesRequest\032*.y" +
-      "andex.cloud.vpc.v1.ListAddressesResponse" +
-      "\"\031\202\323\344\223\002\023\022\021/vpc/v1/addresses\022\230\001\n\006Create\022)" +
-      ".yandex.cloud.vpc.v1.CreateAddressReques" +
-      "t\032!.yandex.cloud.operation.Operation\"@\202\323" +
-      "\344\223\002\026\"\021/vpc/v1/addresses:\001*\262\322* \n\025CreateAd" +
-      "dressMetadata\022\007Address\022\245\001\n\006Update\022).yand" +
-      "ex.cloud.vpc.v1.UpdateAddressRequest\032!.y" +
-      "andex.cloud.operation.Operation\"M\202\323\344\223\002#2" +
-      "\036/vpc/v1/addresses/{address_id}:\001*\262\322* \n\025" +
-      "UpdateAddressMetadata\022\007Address\022\260\001\n\006Delet" +
-      "e\022).yandex.cloud.vpc.v1.DeleteAddressReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "X\202\323\344\223\002 *\036/vpc/v1/addresses/{address_id}\262" +
-      "\322*.\n\025DeleteAddressMetadata\022\025google.proto" +
-      "buf.Empty\022\252\001\n\016ListOperations\0221.yandex.cl" +
-      "oud.vpc.v1.ListAddressOperationsRequest\032" +
-      "2.yandex.cloud.vpc.v1.ListAddressOperati" +
-      "onsResponse\"1\202\323\344\223\002+\022)/vpc/v1/addresses/{" +
-      "address_id}/operationsBV\n\027yandex.cloud.a" +
-      "pi.vpc.v1Z;github.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/vpc/v1;vpcb\006proto3"
+      "\001(\t\"c\n\022MoveAddressRequest\022 \n\naddress_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folde" +
+      "r_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023MoveAddressM" +
+      "etadata\022\022\n\naddress_id\030\001 \001(\t2\230\t\n\016AddressS" +
+      "ervice\022s\n\003Get\022&.yandex.cloud.vpc.v1.GetA" +
+      "ddressRequest\032\034.yandex.cloud.vpc.v1.Addr" +
+      "ess\"&\202\323\344\223\002 \022\036/vpc/v1/addresses/{address_" +
+      "id}\022|\n\nGetByValue\022-.yandex.cloud.vpc.v1." +
+      "GetAddressByValueRequest\032\034.yandex.cloud." +
+      "vpc.v1.Address\"!\202\323\344\223\002\033\022\031/vpc/v1/addresse" +
+      "s:byValue\022x\n\004List\022).yandex.cloud.vpc.v1." +
+      "ListAddressesRequest\032*.yandex.cloud.vpc." +
+      "v1.ListAddressesResponse\"\031\202\323\344\223\002\023\022\021/vpc/v" +
+      "1/addresses\022\230\001\n\006Create\022).yandex.cloud.vp" +
+      "c.v1.CreateAddressRequest\032!.yandex.cloud" +
+      ".operation.Operation\"@\202\323\344\223\002\026\"\021/vpc/v1/ad" +
+      "dresses:\001*\262\322* \n\025CreateAddressMetadata\022\007A" +
+      "ddress\022\245\001\n\006Update\022).yandex.cloud.vpc.v1." +
+      "UpdateAddressRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"M\202\323\344\223\002#2\036/vpc/v1/address" +
+      "es/{address_id}:\001*\262\322* \n\025UpdateAddressMet" +
+      "adata\022\007Address\022\260\001\n\006Delete\022).yandex.cloud" +
+      ".vpc.v1.DeleteAddressRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"X\202\323\344\223\002 *\036/vpc/v1" +
+      "/addresses/{address_id}\262\322*.\n\025DeleteAddre" +
+      "ssMetadata\022\025google.protobuf.Empty\022\252\001\n\016Li" +
+      "stOperations\0221.yandex.cloud.vpc.v1.ListA" +
+      "ddressOperationsRequest\0322.yandex.cloud.v" +
+      "pc.v1.ListAddressOperationsResponse\"1\202\323\344" +
+      "\223\002+\022)/vpc/v1/addresses/{address_id}/oper" +
+      "ations\022v\n\004Move\022\'.yandex.cloud.vpc.v1.Mov" +
+      "eAddressRequest\032!.yandex.cloud.operation" +
+      ".Operation\"\"\262\322*\036\n\023MoveAddressMetadata\022\007A" +
+      "ddressBV\n\027yandex.cloud.api.vpc.v1Z;githu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/vpc/v1;vpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12424,6 +13678,18 @@ public final class AddressServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_ListAddressOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
+    internal_static_yandex_cloud_vpc_v1_MoveAddressRequest_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_vpc_v1_MoveAddressRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_MoveAddressRequest_descriptor,
+        new java.lang.String[] { "AddressId", "DestinationFolderId", });
+    internal_static_yandex_cloud_vpc_v1_MoveAddressMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_vpc_v1_MoveAddressMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_MoveAddressMetadata_descriptor,
+        new java.lang.String[] { "AddressId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

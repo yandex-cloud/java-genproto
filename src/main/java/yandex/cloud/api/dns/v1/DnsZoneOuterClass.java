@@ -19,63 +19,117 @@ public final class DnsZoneOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the DNS zone. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the DNS zone. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the folder that the DNS zone belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder that the DNS zone belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Name of the DNS zone. 
+     * The name is unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the DNS zone. 
+     * The name is unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the DNS zone.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the DNS zone.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     boolean containsLabels(
@@ -87,11 +141,19 @@ public final class DnsZoneOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -99,6 +161,10 @@ public final class DnsZoneOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -106,42 +172,84 @@ public final class DnsZoneOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * DNS zone suffix.
+     * </pre>
+     *
      * <code>string zone = 7;</code>
      */
     java.lang.String getZone();
     /**
+     * <pre>
+     * DNS zone suffix.
+     * </pre>
+     *
      * <code>string zone = 7;</code>
      */
     com.google.protobuf.ByteString
         getZoneBytes();
 
     /**
+     * <pre>
+     * Privately visible zone settings.
+     * Specifies whether records within the zone are visible from a VPC networks only.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
      */
     boolean hasPrivateVisibility();
     /**
+     * <pre>
+     * Privately visible zone settings.
+     * Specifies whether records within the zone are visible from a VPC networks only.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility getPrivateVisibility();
     /**
+     * <pre>
+     * Privately visible zone settings.
+     * Specifies whether records within the zone are visible from a VPC networks only.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder getPrivateVisibilityOrBuilder();
 
     /**
+     * <pre>
+     * Publicly visible zone settings. 
+     * Indicates whether records within the zone are publicly visible.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
      */
     boolean hasPublicVisibility();
     /**
+     * <pre>
+     * Publicly visible zone settings. 
+     * Indicates whether records within the zone are publicly visible.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility();
     /**
+     * <pre>
+     * Publicly visible zone settings. 
+     * Indicates whether records within the zone are publicly visible.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder();
   }
   /**
+   * <pre>
+   * A DNS zone. For details about the concept, see [DNS zones](/docs/dns/concepts/dns-zone).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.dns.v1.DnsZone}
    */
   public  static final class DnsZone extends
@@ -315,6 +423,10 @@ public final class DnsZoneOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the DNS zone. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public java.lang.String getId() {
@@ -330,6 +442,10 @@ public final class DnsZoneOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the DNS zone. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -349,6 +465,10 @@ public final class DnsZoneOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder that the DNS zone belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     public java.lang.String getFolderId() {
@@ -364,6 +484,10 @@ public final class DnsZoneOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder that the DNS zone belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -383,18 +507,30 @@ public final class DnsZoneOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -404,6 +540,11 @@ public final class DnsZoneOuterClass {
     public static final int NAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the DNS zone. 
+     * The name is unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     public java.lang.String getName() {
@@ -419,6 +560,11 @@ public final class DnsZoneOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the DNS zone. 
+     * The name is unique within the folder.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -438,6 +584,10 @@ public final class DnsZoneOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 5;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the DNS zone.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      */
     public java.lang.String getDescription() {
@@ -453,6 +603,10 @@ public final class DnsZoneOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the DNS zone.
+     * </pre>
+     *
      * <code>string description = 5;</code>
      */
     public com.google.protobuf.ByteString
@@ -496,6 +650,10 @@ public final class DnsZoneOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -512,6 +670,10 @@ public final class DnsZoneOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -519,6 +681,10 @@ public final class DnsZoneOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -531,6 +697,10 @@ public final class DnsZoneOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 6;</code>
      */
 
@@ -548,6 +718,10 @@ public final class DnsZoneOuterClass {
     public static final int ZONE_FIELD_NUMBER = 7;
     private volatile java.lang.Object zone_;
     /**
+     * <pre>
+     * DNS zone suffix.
+     * </pre>
+     *
      * <code>string zone = 7;</code>
      */
     public java.lang.String getZone() {
@@ -563,6 +737,10 @@ public final class DnsZoneOuterClass {
       }
     }
     /**
+     * <pre>
+     * DNS zone suffix.
+     * </pre>
+     *
      * <code>string zone = 7;</code>
      */
     public com.google.protobuf.ByteString
@@ -582,18 +760,33 @@ public final class DnsZoneOuterClass {
     public static final int PRIVATE_VISIBILITY_FIELD_NUMBER = 8;
     private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility privateVisibility_;
     /**
+     * <pre>
+     * Privately visible zone settings.
+     * Specifies whether records within the zone are visible from a VPC networks only.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
      */
     public boolean hasPrivateVisibility() {
       return privateVisibility_ != null;
     }
     /**
+     * <pre>
+     * Privately visible zone settings.
+     * Specifies whether records within the zone are visible from a VPC networks only.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility getPrivateVisibility() {
       return privateVisibility_ == null ? yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility.getDefaultInstance() : privateVisibility_;
     }
     /**
+     * <pre>
+     * Privately visible zone settings.
+     * Specifies whether records within the zone are visible from a VPC networks only.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder getPrivateVisibilityOrBuilder() {
@@ -603,18 +796,33 @@ public final class DnsZoneOuterClass {
     public static final int PUBLIC_VISIBILITY_FIELD_NUMBER = 9;
     private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility publicVisibility_;
     /**
+     * <pre>
+     * Publicly visible zone settings. 
+     * Indicates whether records within the zone are publicly visible.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
      */
     public boolean hasPublicVisibility() {
       return publicVisibility_ != null;
     }
     /**
+     * <pre>
+     * Publicly visible zone settings. 
+     * Indicates whether records within the zone are publicly visible.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility() {
       return publicVisibility_ == null ? yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility.getDefaultInstance() : publicVisibility_;
     }
     /**
+     * <pre>
+     * Publicly visible zone settings. 
+     * Indicates whether records within the zone are publicly visible.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder() {
@@ -887,6 +1095,10 @@ public final class DnsZoneOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A DNS zone. For details about the concept, see [DNS zones](/docs/dns/concepts/dns-zone).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.dns.v1.DnsZone}
      */
     public static final class Builder extends
@@ -1137,6 +1349,10 @@ public final class DnsZoneOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the DNS zone. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public java.lang.String getId() {
@@ -1152,6 +1368,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -1168,6 +1388,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setId(
@@ -1181,6 +1405,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder clearId() {
@@ -1190,6 +1418,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setIdBytes(
@@ -1206,6 +1438,10 @@ public final class DnsZoneOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder that the DNS zone belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public java.lang.String getFolderId() {
@@ -1221,6 +1457,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the DNS zone belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -1237,6 +1477,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the DNS zone belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public Builder setFolderId(
@@ -1250,6 +1494,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the DNS zone belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public Builder clearFolderId() {
@@ -1259,6 +1507,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the DNS zone belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public Builder setFolderIdBytes(
@@ -1277,12 +1529,20 @@ public final class DnsZoneOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -1293,6 +1553,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1309,6 +1573,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(
@@ -1323,6 +1591,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1341,6 +1613,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder clearCreatedAt() {
@@ -1355,6 +1631,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1363,6 +1643,10 @@ public final class DnsZoneOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1374,6 +1658,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1392,6 +1680,11 @@ public final class DnsZoneOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the DNS zone. 
+       * The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public java.lang.String getName() {
@@ -1407,6 +1700,11 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the DNS zone. 
+       * The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -1423,6 +1721,11 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the DNS zone. 
+       * The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public Builder setName(
@@ -1436,6 +1739,11 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the DNS zone. 
+       * The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public Builder clearName() {
@@ -1445,6 +1753,11 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the DNS zone. 
+       * The name is unique within the folder.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        */
       public Builder setNameBytes(
@@ -1461,6 +1774,10 @@ public final class DnsZoneOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the DNS zone.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public java.lang.String getDescription() {
@@ -1476,6 +1793,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the DNS zone.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public com.google.protobuf.ByteString
@@ -1492,6 +1813,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the DNS zone.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public Builder setDescription(
@@ -1505,6 +1830,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the DNS zone.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public Builder clearDescription() {
@@ -1514,6 +1843,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the DNS zone.
+       * </pre>
+       *
        * <code>string description = 5;</code>
        */
       public Builder setDescriptionBytes(
@@ -1555,6 +1888,10 @@ public final class DnsZoneOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1571,6 +1908,10 @@ public final class DnsZoneOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1578,6 +1919,10 @@ public final class DnsZoneOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1590,6 +1935,10 @@ public final class DnsZoneOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1610,6 +1959,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1629,6 +1982,10 @@ public final class DnsZoneOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
       public Builder putLabels(
@@ -1641,6 +1998,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 6;</code>
        */
 
@@ -1653,6 +2014,10 @@ public final class DnsZoneOuterClass {
 
       private java.lang.Object zone_ = "";
       /**
+       * <pre>
+       * DNS zone suffix.
+       * </pre>
+       *
        * <code>string zone = 7;</code>
        */
       public java.lang.String getZone() {
@@ -1668,6 +2033,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * DNS zone suffix.
+       * </pre>
+       *
        * <code>string zone = 7;</code>
        */
       public com.google.protobuf.ByteString
@@ -1684,6 +2053,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * DNS zone suffix.
+       * </pre>
+       *
        * <code>string zone = 7;</code>
        */
       public Builder setZone(
@@ -1697,6 +2070,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DNS zone suffix.
+       * </pre>
+       *
        * <code>string zone = 7;</code>
        */
       public Builder clearZone() {
@@ -1706,6 +2083,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DNS zone suffix.
+       * </pre>
+       *
        * <code>string zone = 7;</code>
        */
       public Builder setZoneBytes(
@@ -1724,12 +2105,22 @@ public final class DnsZoneOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder> privateVisibilityBuilder_;
       /**
+       * <pre>
+       * Privately visible zone settings.
+       * Specifies whether records within the zone are visible from a VPC networks only.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
        */
       public boolean hasPrivateVisibility() {
         return privateVisibilityBuilder_ != null || privateVisibility_ != null;
       }
       /**
+       * <pre>
+       * Privately visible zone settings.
+       * Specifies whether records within the zone are visible from a VPC networks only.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility getPrivateVisibility() {
@@ -1740,6 +2131,11 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Privately visible zone settings.
+       * Specifies whether records within the zone are visible from a VPC networks only.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
        */
       public Builder setPrivateVisibility(yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility value) {
@@ -1756,6 +2152,11 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Privately visible zone settings.
+       * Specifies whether records within the zone are visible from a VPC networks only.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
        */
       public Builder setPrivateVisibility(
@@ -1770,6 +2171,11 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Privately visible zone settings.
+       * Specifies whether records within the zone are visible from a VPC networks only.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
        */
       public Builder mergePrivateVisibility(yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility value) {
@@ -1788,6 +2194,11 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Privately visible zone settings.
+       * Specifies whether records within the zone are visible from a VPC networks only.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
        */
       public Builder clearPrivateVisibility() {
@@ -1802,6 +2213,11 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Privately visible zone settings.
+       * Specifies whether records within the zone are visible from a VPC networks only.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility.Builder getPrivateVisibilityBuilder() {
@@ -1810,6 +2226,11 @@ public final class DnsZoneOuterClass {
         return getPrivateVisibilityFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Privately visible zone settings.
+       * Specifies whether records within the zone are visible from a VPC networks only.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder getPrivateVisibilityOrBuilder() {
@@ -1821,6 +2242,11 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Privately visible zone settings.
+       * Specifies whether records within the zone are visible from a VPC networks only.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1841,12 +2267,22 @@ public final class DnsZoneOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder> publicVisibilityBuilder_;
       /**
+       * <pre>
+       * Publicly visible zone settings. 
+       * Indicates whether records within the zone are publicly visible.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
        */
       public boolean hasPublicVisibility() {
         return publicVisibilityBuilder_ != null || publicVisibility_ != null;
       }
       /**
+       * <pre>
+       * Publicly visible zone settings. 
+       * Indicates whether records within the zone are publicly visible.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility() {
@@ -1857,6 +2293,11 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Publicly visible zone settings. 
+       * Indicates whether records within the zone are publicly visible.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
        */
       public Builder setPublicVisibility(yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility value) {
@@ -1873,6 +2314,11 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publicly visible zone settings. 
+       * Indicates whether records within the zone are publicly visible.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
        */
       public Builder setPublicVisibility(
@@ -1887,6 +2333,11 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publicly visible zone settings. 
+       * Indicates whether records within the zone are publicly visible.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
        */
       public Builder mergePublicVisibility(yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility value) {
@@ -1905,6 +2356,11 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publicly visible zone settings. 
+       * Indicates whether records within the zone are publicly visible.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
        */
       public Builder clearPublicVisibility() {
@@ -1919,6 +2375,11 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publicly visible zone settings. 
+       * Indicates whether records within the zone are publicly visible.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility.Builder getPublicVisibilityBuilder() {
@@ -1927,6 +2388,11 @@ public final class DnsZoneOuterClass {
         return getPublicVisibilityFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Publicly visible zone settings. 
+       * Indicates whether records within the zone are publicly visible.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder() {
@@ -1938,6 +2404,11 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Publicly visible zone settings. 
+       * Indicates whether records within the zone are publicly visible.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2011,44 +2482,80 @@ public final class DnsZoneOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Domain name.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.length) = "1-254"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Domain name.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.length) = "1-254"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Record type.
+     * </pre>
+     *
      * <code>string type = 2 [(.yandex.cloud.length) = "1-20"];</code>
      */
     java.lang.String getType();
     /**
+     * <pre>
+     * Record type.
+     * </pre>
+     *
      * <code>string type = 2 [(.yandex.cloud.length) = "1-20"];</code>
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
+     * <pre>
+     * Time to live in seconds.
+     * </pre>
+     *
      * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-2147483647"];</code>
      */
     long getTtl();
 
     /**
+     * <pre>
+     * Data of the record set.
+     * </pre>
+     *
      * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
      */
     java.util.List<java.lang.String>
         getDataList();
     /**
+     * <pre>
+     * Data of the record set.
+     * </pre>
+     *
      * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
      */
     int getDataCount();
     /**
+     * <pre>
+     * Data of the record set.
+     * </pre>
+     *
      * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
      */
     java.lang.String getData(int index);
     /**
+     * <pre>
+     * Data of the record set.
+     * </pre>
+     *
      * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -2056,7 +2563,7 @@ public final class DnsZoneOuterClass {
   }
   /**
    * <pre>
-   * name + type is a unique record set identifier
+   * A record set. For details about the concept, see [Resource record](/docs/dns/concepts/resource-record).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.dns.v1.RecordSet}
@@ -2166,6 +2673,10 @@ public final class DnsZoneOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Domain name.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.length) = "1-254"];</code>
      */
     public java.lang.String getName() {
@@ -2181,6 +2692,10 @@ public final class DnsZoneOuterClass {
       }
     }
     /**
+     * <pre>
+     * Domain name.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.length) = "1-254"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2200,6 +2715,10 @@ public final class DnsZoneOuterClass {
     public static final int TYPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object type_;
     /**
+     * <pre>
+     * Record type.
+     * </pre>
+     *
      * <code>string type = 2 [(.yandex.cloud.length) = "1-20"];</code>
      */
     public java.lang.String getType() {
@@ -2215,6 +2734,10 @@ public final class DnsZoneOuterClass {
       }
     }
     /**
+     * <pre>
+     * Record type.
+     * </pre>
+     *
      * <code>string type = 2 [(.yandex.cloud.length) = "1-20"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2234,6 +2757,10 @@ public final class DnsZoneOuterClass {
     public static final int TTL_FIELD_NUMBER = 3;
     private long ttl_;
     /**
+     * <pre>
+     * Time to live in seconds.
+     * </pre>
+     *
      * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-2147483647"];</code>
      */
     public long getTtl() {
@@ -2243,6 +2770,10 @@ public final class DnsZoneOuterClass {
     public static final int DATA_FIELD_NUMBER = 4;
     private com.google.protobuf.LazyStringList data_;
     /**
+     * <pre>
+     * Data of the record set.
+     * </pre>
+     *
      * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -2250,18 +2781,30 @@ public final class DnsZoneOuterClass {
       return data_;
     }
     /**
+     * <pre>
+     * Data of the record set.
+     * </pre>
+     *
      * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
      */
     public int getDataCount() {
       return data_.size();
     }
     /**
+     * <pre>
+     * Data of the record set.
+     * </pre>
+     *
      * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
      */
     public java.lang.String getData(int index) {
       return data_.get(index);
     }
     /**
+     * <pre>
+     * Data of the record set.
+     * </pre>
+     *
      * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -2465,7 +3008,7 @@ public final class DnsZoneOuterClass {
     }
     /**
      * <pre>
-     * name + type is a unique record set identifier
+     * A record set. For details about the concept, see [Resource record](/docs/dns/concepts/resource-record).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.dns.v1.RecordSet}
@@ -2651,6 +3194,10 @@ public final class DnsZoneOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Domain name.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-254"];</code>
        */
       public java.lang.String getName() {
@@ -2666,6 +3213,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Domain name.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-254"];</code>
        */
       public com.google.protobuf.ByteString
@@ -2682,6 +3233,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Domain name.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-254"];</code>
        */
       public Builder setName(
@@ -2695,6 +3250,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Domain name.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-254"];</code>
        */
       public Builder clearName() {
@@ -2704,6 +3263,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Domain name.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.length) = "1-254"];</code>
        */
       public Builder setNameBytes(
@@ -2720,6 +3283,10 @@ public final class DnsZoneOuterClass {
 
       private java.lang.Object type_ = "";
       /**
+       * <pre>
+       * Record type.
+       * </pre>
+       *
        * <code>string type = 2 [(.yandex.cloud.length) = "1-20"];</code>
        */
       public java.lang.String getType() {
@@ -2735,6 +3302,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Record type.
+       * </pre>
+       *
        * <code>string type = 2 [(.yandex.cloud.length) = "1-20"];</code>
        */
       public com.google.protobuf.ByteString
@@ -2751,6 +3322,10 @@ public final class DnsZoneOuterClass {
         }
       }
       /**
+       * <pre>
+       * Record type.
+       * </pre>
+       *
        * <code>string type = 2 [(.yandex.cloud.length) = "1-20"];</code>
        */
       public Builder setType(
@@ -2764,6 +3339,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Record type.
+       * </pre>
+       *
        * <code>string type = 2 [(.yandex.cloud.length) = "1-20"];</code>
        */
       public Builder clearType() {
@@ -2773,6 +3352,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Record type.
+       * </pre>
+       *
        * <code>string type = 2 [(.yandex.cloud.length) = "1-20"];</code>
        */
       public Builder setTypeBytes(
@@ -2789,12 +3372,20 @@ public final class DnsZoneOuterClass {
 
       private long ttl_ ;
       /**
+       * <pre>
+       * Time to live in seconds.
+       * </pre>
+       *
        * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public long getTtl() {
         return ttl_;
       }
       /**
+       * <pre>
+       * Time to live in seconds.
+       * </pre>
+       *
        * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public Builder setTtl(long value) {
@@ -2804,6 +3395,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time to live in seconds.
+       * </pre>
+       *
        * <code>int64 ttl = 3 [(.yandex.cloud.value) = "0-2147483647"];</code>
        */
       public Builder clearTtl() {
@@ -2821,6 +3416,10 @@ public final class DnsZoneOuterClass {
          }
       }
       /**
+       * <pre>
+       * Data of the record set.
+       * </pre>
+       *
        * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -2828,18 +3427,30 @@ public final class DnsZoneOuterClass {
         return data_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Data of the record set.
+       * </pre>
+       *
        * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
        */
       public int getDataCount() {
         return data_.size();
       }
       /**
+       * <pre>
+       * Data of the record set.
+       * </pre>
+       *
        * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
        */
       public java.lang.String getData(int index) {
         return data_.get(index);
       }
       /**
+       * <pre>
+       * Data of the record set.
+       * </pre>
+       *
        * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -2847,6 +3458,10 @@ public final class DnsZoneOuterClass {
         return data_.getByteString(index);
       }
       /**
+       * <pre>
+       * Data of the record set.
+       * </pre>
+       *
        * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
        */
       public Builder setData(
@@ -2860,6 +3475,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Data of the record set.
+       * </pre>
+       *
        * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
        */
       public Builder addData(
@@ -2873,6 +3492,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Data of the record set.
+       * </pre>
+       *
        * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
        */
       public Builder addAllData(
@@ -2884,6 +3507,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Data of the record set.
+       * </pre>
+       *
        * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
        */
       public Builder clearData() {
@@ -2893,6 +3520,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Data of the record set.
+       * </pre>
+       *
        * <code>repeated string data = 4 [(.yandex.cloud.size) = "1-100", (.yandex.cloud.length) = "1-255", (.yandex.cloud.unique) = true];</code>
        */
       public Builder addDataBytes(
@@ -2964,25 +3595,45 @@ public final class DnsZoneOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Network IDs.
+     * </pre>
+     *
      * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      */
     java.util.List<java.lang.String>
         getNetworkIdsList();
     /**
+     * <pre>
+     * Network IDs.
+     * </pre>
+     *
      * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      */
     int getNetworkIdsCount();
     /**
+     * <pre>
+     * Network IDs.
+     * </pre>
+     *
      * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      */
     java.lang.String getNetworkIds(int index);
     /**
+     * <pre>
+     * Network IDs.
+     * </pre>
+     *
      * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      */
     com.google.protobuf.ByteString
         getNetworkIdsBytes(int index);
   }
   /**
+   * <pre>
+   * Configuration for privately visible zones.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.dns.v1.PrivateVisibility}
    */
   public  static final class PrivateVisibility extends
@@ -3069,6 +3720,10 @@ public final class DnsZoneOuterClass {
     public static final int NETWORK_IDS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList networkIds_;
     /**
+     * <pre>
+     * Network IDs.
+     * </pre>
+     *
      * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -3076,18 +3731,30 @@ public final class DnsZoneOuterClass {
       return networkIds_;
     }
     /**
+     * <pre>
+     * Network IDs.
+     * </pre>
+     *
      * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      */
     public int getNetworkIdsCount() {
       return networkIds_.size();
     }
     /**
+     * <pre>
+     * Network IDs.
+     * </pre>
+     *
      * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      */
     public java.lang.String getNetworkIds(int index) {
       return networkIds_.get(index);
     }
     /**
+     * <pre>
+     * Network IDs.
+     * </pre>
+     *
      * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -3258,6 +3925,10 @@ public final class DnsZoneOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Configuration for privately visible zones.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.dns.v1.PrivateVisibility}
      */
     public static final class Builder extends
@@ -3425,6 +4096,10 @@ public final class DnsZoneOuterClass {
          }
       }
       /**
+       * <pre>
+       * Network IDs.
+       * </pre>
+       *
        * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -3432,18 +4107,30 @@ public final class DnsZoneOuterClass {
         return networkIds_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Network IDs.
+       * </pre>
+       *
        * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        */
       public int getNetworkIdsCount() {
         return networkIds_.size();
       }
       /**
+       * <pre>
+       * Network IDs.
+       * </pre>
+       *
        * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        */
       public java.lang.String getNetworkIds(int index) {
         return networkIds_.get(index);
       }
       /**
+       * <pre>
+       * Network IDs.
+       * </pre>
+       *
        * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -3451,6 +4138,10 @@ public final class DnsZoneOuterClass {
         return networkIds_.getByteString(index);
       }
       /**
+       * <pre>
+       * Network IDs.
+       * </pre>
+       *
        * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        */
       public Builder setNetworkIds(
@@ -3464,6 +4155,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network IDs.
+       * </pre>
+       *
        * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        */
       public Builder addNetworkIds(
@@ -3477,6 +4172,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network IDs.
+       * </pre>
+       *
        * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        */
       public Builder addAllNetworkIds(
@@ -3488,6 +4187,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network IDs.
+       * </pre>
+       *
        * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        */
       public Builder clearNetworkIds() {
@@ -3497,6 +4200,10 @@ public final class DnsZoneOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network IDs.
+       * </pre>
+       *
        * <code>repeated string network_ids = 1 [(.yandex.cloud.size) = "0-10", (.yandex.cloud.length) = "20", (.yandex.cloud.unique) = true];</code>
        */
       public Builder addNetworkIdsBytes(
@@ -3568,6 +4275,10 @@ public final class DnsZoneOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Configuration for publicly visible zones.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.dns.v1.PublicVisibility}
    */
   public  static final class PublicVisibility extends
@@ -3783,6 +4494,10 @@ public final class DnsZoneOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Configuration for publicly visible zones.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.dns.v1.PublicVisibility}
      */
     public static final class Builder extends

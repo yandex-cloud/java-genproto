@@ -19,10 +19,20 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the DNS zone to return.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getDnsZoneId();
     /**
+     * <pre>
+     * ID of the DNS zone to return.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -109,6 +119,11 @@ public final class DnsZoneServiceOuterClass {
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
+     * <pre>
+     * ID of the DNS zone to return.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getDnsZoneId() {
@@ -124,6 +139,11 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the DNS zone to return.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -445,6 +465,11 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object dnsZoneId_ = "";
       /**
+       * <pre>
+       * ID of the DNS zone to return.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getDnsZoneId() {
@@ -460,6 +485,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to return.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -476,6 +506,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to return.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setDnsZoneId(
@@ -489,6 +524,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to return.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearDnsZoneId() {
@@ -498,6 +538,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to return.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setDnsZoneIdBytes(
@@ -569,35 +614,79 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list DNS zones in. 
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list DNS zones in. 
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListDnsZonesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListDnsZonesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListDnsZonesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters DNS zones listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-dns-zone`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters DNS zones listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-dns-zone`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
@@ -704,6 +793,11 @@ public final class DnsZoneServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to list DNS zones in. 
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFolderId() {
@@ -719,6 +813,11 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list DNS zones in. 
+     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -738,6 +837,12 @@ public final class DnsZoneServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListDnsZonesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     public long getPageSize() {
@@ -747,6 +852,11 @@ public final class DnsZoneServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListDnsZonesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getPageToken() {
@@ -762,6 +872,11 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListDnsZonesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -781,6 +896,15 @@ public final class DnsZoneServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters DNS zones listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-dns-zone`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -796,6 +920,15 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters DNS zones listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-dns-zone`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1169,6 +1302,11 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to list DNS zones in. 
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFolderId() {
@@ -1184,6 +1322,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list DNS zones in. 
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -1200,6 +1343,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list DNS zones in. 
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderId(
@@ -1213,6 +1361,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list DNS zones in. 
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFolderId() {
@@ -1222,6 +1375,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list DNS zones in. 
+       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderIdBytes(
@@ -1238,12 +1396,24 @@ public final class DnsZoneServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDnsZonesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDnsZonesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -1253,6 +1423,12 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDnsZonesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder clearPageSize() {
@@ -1264,6 +1440,11 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListDnsZonesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getPageToken() {
@@ -1279,6 +1460,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListDnsZonesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1295,6 +1481,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListDnsZonesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setPageToken(
@@ -1308,6 +1499,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListDnsZonesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearPageToken() {
@@ -1317,6 +1513,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListDnsZonesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setPageTokenBytes(
@@ -1333,6 +1534,15 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters DNS zones listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-dns-zone`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -1348,6 +1558,15 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters DNS zones listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-dns-zone`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1364,6 +1583,15 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters DNS zones listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-dns-zone`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -1377,6 +1605,15 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters DNS zones listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-dns-zone`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -1386,6 +1623,15 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters DNS zones listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-dns-zone`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -1457,34 +1703,68 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of DNS zones in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
     java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone> 
         getDnsZonesList();
     /**
+     * <pre>
+     * List of DNS zones in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone getDnsZones(int index);
     /**
+     * <pre>
+     * List of DNS zones in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
     int getDnsZonesCount();
     /**
+     * <pre>
+     * List of DNS zones in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZoneOrBuilder> 
         getDnsZonesOrBuilderList();
     /**
+     * <pre>
+     * List of DNS zones in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZoneOrBuilder getDnsZonesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDnsZonesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDnsZonesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDnsZonesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDnsZonesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -1585,12 +1865,20 @@ public final class DnsZoneServiceOuterClass {
     public static final int DNS_ZONES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone> dnsZones_;
     /**
+     * <pre>
+     * List of DNS zones in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
     public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone> getDnsZonesList() {
       return dnsZones_;
     }
     /**
+     * <pre>
+     * List of DNS zones in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZoneOrBuilder> 
@@ -1598,18 +1886,30 @@ public final class DnsZoneServiceOuterClass {
       return dnsZones_;
     }
     /**
+     * <pre>
+     * List of DNS zones in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
     public int getDnsZonesCount() {
       return dnsZones_.size();
     }
     /**
+     * <pre>
+     * List of DNS zones in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone getDnsZones(int index) {
       return dnsZones_.get(index);
     }
     /**
+     * <pre>
+     * List of DNS zones in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZoneOrBuilder getDnsZonesOrBuilder(
@@ -1620,6 +1920,13 @@ public final class DnsZoneServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDnsZonesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDnsZonesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -1635,6 +1942,13 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDnsZonesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDnsZonesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -2026,6 +2340,10 @@ public final class DnsZoneServiceOuterClass {
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone, yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZoneOrBuilder> dnsZonesBuilder_;
 
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone> getDnsZonesList() {
@@ -2036,6 +2354,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public int getDnsZonesCount() {
@@ -2046,6 +2368,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone getDnsZones(int index) {
@@ -2056,6 +2382,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public Builder setDnsZones(
@@ -2073,6 +2403,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public Builder setDnsZones(
@@ -2087,6 +2421,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public Builder addDnsZones(yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone value) {
@@ -2103,6 +2441,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public Builder addDnsZones(
@@ -2120,6 +2462,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public Builder addDnsZones(
@@ -2134,6 +2480,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public Builder addDnsZones(
@@ -2148,6 +2498,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public Builder addAllDnsZones(
@@ -2163,6 +2517,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public Builder clearDnsZones() {
@@ -2176,6 +2534,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public Builder removeDnsZones(int index) {
@@ -2189,6 +2551,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone.Builder getDnsZonesBuilder(
@@ -2196,6 +2562,10 @@ public final class DnsZoneServiceOuterClass {
         return getDnsZonesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZoneOrBuilder getDnsZonesOrBuilder(
@@ -2206,6 +2576,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZoneOrBuilder> 
@@ -2217,6 +2591,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone.Builder addDnsZonesBuilder() {
@@ -2224,6 +2602,10 @@ public final class DnsZoneServiceOuterClass {
             yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone.Builder addDnsZonesBuilder(
@@ -2232,6 +2614,10 @@ public final class DnsZoneServiceOuterClass {
             index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of DNS zones in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.DnsZone dns_zones = 1;</code>
        */
       public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone.Builder> 
@@ -2255,6 +2641,13 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZonesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZonesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -2270,6 +2663,13 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZonesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZonesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2286,6 +2686,13 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZonesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZonesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -2299,6 +2706,13 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZonesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZonesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -2308,6 +2722,13 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZonesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZonesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -2379,40 +2800,76 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create DNS zones in.
+     * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create DNS zones in.
+     * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the DNS zone. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the DNS zone. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the DNS zone.  
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the DNS zone.  
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.  
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.  
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -2424,11 +2881,19 @@ public final class DnsZoneServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.  
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.  
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2436,6 +2901,10 @@ public final class DnsZoneServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.  
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2443,10 +2912,18 @@ public final class DnsZoneServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * DNS zone suffix.
+     * </pre>
+     *
      * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
      */
     java.lang.String getZone();
     /**
+     * <pre>
+     * DNS zone suffix.
+     * </pre>
+     *
      * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
      */
     com.google.protobuf.ByteString
@@ -2454,7 +2931,8 @@ public final class DnsZoneServiceOuterClass {
 
     /**
      * <pre>
-     * at least one of two visibility fields must be set
+     * Privately visible zone settings. 
+     * At least one of two visibility fields must be set.
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -2462,7 +2940,8 @@ public final class DnsZoneServiceOuterClass {
     boolean hasPrivateVisibility();
     /**
      * <pre>
-     * at least one of two visibility fields must be set
+     * Privately visible zone settings. 
+     * At least one of two visibility fields must be set.
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -2470,7 +2949,8 @@ public final class DnsZoneServiceOuterClass {
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility getPrivateVisibility();
     /**
      * <pre>
-     * at least one of two visibility fields must be set
+     * Privately visible zone settings. 
+     * At least one of two visibility fields must be set.
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -2478,14 +2958,29 @@ public final class DnsZoneServiceOuterClass {
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder getPrivateVisibilityOrBuilder();
 
     /**
+     * <pre>
+     * Publicly visible zone settings.
+     * At least one of two visibility fields must be set.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     boolean hasPublicVisibility();
     /**
+     * <pre>
+     * Publicly visible zone settings.
+     * At least one of two visibility fields must be set.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility();
     /**
+     * <pre>
+     * Publicly visible zone settings.
+     * At least one of two visibility fields must be set.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder();
@@ -2644,6 +3139,11 @@ public final class DnsZoneServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create DNS zones in.
+     * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getFolderId() {
@@ -2659,6 +3159,11 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create DNS zones in.
+     * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2678,6 +3183,11 @@ public final class DnsZoneServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the DNS zone. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public java.lang.String getName() {
@@ -2693,6 +3203,11 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the DNS zone. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2712,6 +3227,10 @@ public final class DnsZoneServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the DNS zone.  
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -2727,6 +3246,10 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the DNS zone.  
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2770,6 +3293,10 @@ public final class DnsZoneServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.  
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2786,6 +3313,10 @@ public final class DnsZoneServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.  
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2793,6 +3324,10 @@ public final class DnsZoneServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.  
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2805,6 +3340,10 @@ public final class DnsZoneServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.  
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -2822,6 +3361,10 @@ public final class DnsZoneServiceOuterClass {
     public static final int ZONE_FIELD_NUMBER = 5;
     private volatile java.lang.Object zone_;
     /**
+     * <pre>
+     * DNS zone suffix.
+     * </pre>
+     *
      * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
      */
     public java.lang.String getZone() {
@@ -2837,6 +3380,10 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * DNS zone suffix.
+     * </pre>
+     *
      * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2857,7 +3404,8 @@ public final class DnsZoneServiceOuterClass {
     private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility privateVisibility_;
     /**
      * <pre>
-     * at least one of two visibility fields must be set
+     * Privately visible zone settings. 
+     * At least one of two visibility fields must be set.
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -2867,7 +3415,8 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * at least one of two visibility fields must be set
+     * Privately visible zone settings. 
+     * At least one of two visibility fields must be set.
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -2877,7 +3426,8 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * at least one of two visibility fields must be set
+     * Privately visible zone settings. 
+     * At least one of two visibility fields must be set.
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -2889,18 +3439,33 @@ public final class DnsZoneServiceOuterClass {
     public static final int PUBLIC_VISIBILITY_FIELD_NUMBER = 7;
     private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility publicVisibility_;
     /**
+     * <pre>
+     * Publicly visible zone settings.
+     * At least one of two visibility fields must be set.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     public boolean hasPublicVisibility() {
       return publicVisibility_ != null;
     }
     /**
+     * <pre>
+     * Publicly visible zone settings.
+     * At least one of two visibility fields must be set.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility() {
       return publicVisibility_ == null ? yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility.getDefaultInstance() : publicVisibility_;
     }
     /**
+     * <pre>
+     * Publicly visible zone settings.
+     * At least one of two visibility fields must be set.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder() {
@@ -3376,6 +3941,11 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create DNS zones in.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getFolderId() {
@@ -3391,6 +3961,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create DNS zones in.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3407,6 +3982,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create DNS zones in.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFolderId(
@@ -3420,6 +4000,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create DNS zones in.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearFolderId() {
@@ -3429,6 +4014,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create DNS zones in.
+       * To get a folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setFolderIdBytes(
@@ -3445,6 +4035,11 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the DNS zone. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public java.lang.String getName() {
@@ -3460,6 +4055,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the DNS zone. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3476,6 +4076,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the DNS zone. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setName(
@@ -3489,6 +4094,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the DNS zone. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder clearName() {
@@ -3498,6 +4108,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the DNS zone. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setNameBytes(
@@ -3514,6 +4129,10 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the DNS zone.  
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -3529,6 +4148,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the DNS zone.  
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3545,6 +4168,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the DNS zone.  
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -3558,6 +4185,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the DNS zone.  
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -3567,6 +4198,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the DNS zone.  
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -3608,6 +4243,10 @@ public final class DnsZoneServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.  
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3624,6 +4263,10 @@ public final class DnsZoneServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.  
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3631,6 +4274,10 @@ public final class DnsZoneServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.  
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3643,6 +4290,10 @@ public final class DnsZoneServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.  
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3663,6 +4314,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.  
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3682,6 +4337,10 @@ public final class DnsZoneServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.  
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -3694,6 +4353,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.  
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -3706,6 +4369,10 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object zone_ = "";
       /**
+       * <pre>
+       * DNS zone suffix.
+       * </pre>
+       *
        * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
        */
       public java.lang.String getZone() {
@@ -3721,6 +4388,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * DNS zone suffix.
+       * </pre>
+       *
        * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3737,6 +4408,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * DNS zone suffix.
+       * </pre>
+       *
        * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
        */
       public Builder setZone(
@@ -3750,6 +4425,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DNS zone suffix.
+       * </pre>
+       *
        * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
        */
       public Builder clearZone() {
@@ -3759,6 +4438,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DNS zone suffix.
+       * </pre>
+       *
        * <code>string zone = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.]|[a-z0-9][-a-z0-9.]*&#92;&#92;.", (.yandex.cloud.length) = "&lt;=255"];</code>
        */
       public Builder setZoneBytes(
@@ -3778,7 +4461,8 @@ public final class DnsZoneServiceOuterClass {
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder> privateVisibilityBuilder_;
       /**
        * <pre>
-       * at least one of two visibility fields must be set
+       * Privately visible zone settings. 
+       * At least one of two visibility fields must be set.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3788,7 +4472,8 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * at least one of two visibility fields must be set
+       * Privately visible zone settings. 
+       * At least one of two visibility fields must be set.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3802,7 +4487,8 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * at least one of two visibility fields must be set
+       * Privately visible zone settings. 
+       * At least one of two visibility fields must be set.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3822,7 +4508,8 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * at least one of two visibility fields must be set
+       * Privately visible zone settings. 
+       * At least one of two visibility fields must be set.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3840,7 +4527,8 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * at least one of two visibility fields must be set
+       * Privately visible zone settings. 
+       * At least one of two visibility fields must be set.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3862,7 +4550,8 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * at least one of two visibility fields must be set
+       * Privately visible zone settings. 
+       * At least one of two visibility fields must be set.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3880,7 +4569,8 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * at least one of two visibility fields must be set
+       * Privately visible zone settings. 
+       * At least one of two visibility fields must be set.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3892,7 +4582,8 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * at least one of two visibility fields must be set
+       * Privately visible zone settings. 
+       * At least one of two visibility fields must be set.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3907,7 +4598,8 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * at least one of two visibility fields must be set
+       * Privately visible zone settings. 
+       * At least one of two visibility fields must be set.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -3930,12 +4622,22 @@ public final class DnsZoneServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder> publicVisibilityBuilder_;
       /**
+       * <pre>
+       * Publicly visible zone settings.
+       * At least one of two visibility fields must be set.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public boolean hasPublicVisibility() {
         return publicVisibilityBuilder_ != null || publicVisibility_ != null;
       }
       /**
+       * <pre>
+       * Publicly visible zone settings.
+       * At least one of two visibility fields must be set.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility() {
@@ -3946,6 +4648,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Publicly visible zone settings.
+       * At least one of two visibility fields must be set.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public Builder setPublicVisibility(yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility value) {
@@ -3962,6 +4669,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publicly visible zone settings.
+       * At least one of two visibility fields must be set.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public Builder setPublicVisibility(
@@ -3976,6 +4688,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publicly visible zone settings.
+       * At least one of two visibility fields must be set.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public Builder mergePublicVisibility(yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility value) {
@@ -3994,6 +4711,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publicly visible zone settings.
+       * At least one of two visibility fields must be set.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public Builder clearPublicVisibility() {
@@ -4008,6 +4730,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Publicly visible zone settings.
+       * At least one of two visibility fields must be set.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility.Builder getPublicVisibilityBuilder() {
@@ -4016,6 +4743,11 @@ public final class DnsZoneServiceOuterClass {
         return getPublicVisibilityFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Publicly visible zone settings.
+       * At least one of two visibility fields must be set.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder() {
@@ -4027,6 +4759,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Publicly visible zone settings.
+       * At least one of two visibility fields must be set.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4100,10 +4837,18 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the DNS zone that is being created.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1;</code>
      */
     java.lang.String getDnsZoneId();
     /**
+     * <pre>
+     * ID of the DNS zone that is being created.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -4190,6 +4935,10 @@ public final class DnsZoneServiceOuterClass {
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
+     * <pre>
+     * ID of the DNS zone that is being created.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1;</code>
      */
     public java.lang.String getDnsZoneId() {
@@ -4205,6 +4954,10 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the DNS zone that is being created.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -4526,6 +5279,10 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object dnsZoneId_ = "";
       /**
+       * <pre>
+       * ID of the DNS zone that is being created.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public java.lang.String getDnsZoneId() {
@@ -4541,6 +5298,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone that is being created.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -4557,6 +5318,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone that is being created.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public Builder setDnsZoneId(
@@ -4570,6 +5335,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone that is being created.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public Builder clearDnsZoneId() {
@@ -4579,6 +5348,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone that is being created.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public Builder setDnsZoneIdBytes(
@@ -4650,53 +5423,113 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the DNS zone to update.
+     *  
+     * To get the DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     java.lang.String getDnsZoneId();
     /**
+     * <pre>
+     * ID of the DNS zone to update.
+     *  
+     * To get the DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
 
     /**
+     * <pre>
+     * Field mask specifying which fields of the DNS zone resource are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask specifying which fields of the DNS zone resource are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask specifying which fields of the DNS zone resource are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New name for the DNS zone. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New name for the DNS zone. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * New description of the DNS zone.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description of the DNS zone.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -4708,11 +5541,29 @@ public final class DnsZoneServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4720,6 +5571,15 @@ public final class DnsZoneServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -4728,7 +5588,7 @@ public final class DnsZoneServiceOuterClass {
 
     /**
      * <pre>
-     * only network_ids change inside private_visibility is allowed
+     * Change network IDs for private visibility.
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -4736,7 +5596,7 @@ public final class DnsZoneServiceOuterClass {
     boolean hasPrivateVisibility();
     /**
      * <pre>
-     * only network_ids change inside private_visibility is allowed
+     * Change network IDs for private visibility.
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -4744,7 +5604,7 @@ public final class DnsZoneServiceOuterClass {
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility getPrivateVisibility();
     /**
      * <pre>
-     * only network_ids change inside private_visibility is allowed
+     * Change network IDs for private visibility.
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -4752,14 +5612,26 @@ public final class DnsZoneServiceOuterClass {
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder getPrivateVisibilityOrBuilder();
 
     /**
+     * <pre>
+     * Public visibility configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     boolean hasPublicVisibility();
     /**
+     * <pre>
+     * Public visibility configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility();
     /**
+     * <pre>
+     * Public visibility configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder();
@@ -4924,6 +5796,12 @@ public final class DnsZoneServiceOuterClass {
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
+     * <pre>
+     * ID of the DNS zone to update.
+     *  
+     * To get the DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public java.lang.String getDnsZoneId() {
@@ -4939,6 +5817,12 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the DNS zone to update.
+     *  
+     * To get the DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public com.google.protobuf.ByteString
@@ -4958,18 +5842,30 @@ public final class DnsZoneServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask specifying which fields of the DNS zone resource are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask specifying which fields of the DNS zone resource are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask specifying which fields of the DNS zone resource are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -4979,6 +5875,11 @@ public final class DnsZoneServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New name for the DNS zone. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public java.lang.String getName() {
@@ -4994,6 +5895,11 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New name for the DNS zone. 
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5013,6 +5919,10 @@ public final class DnsZoneServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description of the DNS zone.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -5028,6 +5938,10 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description of the DNS zone.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5071,6 +5985,15 @@ public final class DnsZoneServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5087,6 +6010,15 @@ public final class DnsZoneServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5094,6 +6026,15 @@ public final class DnsZoneServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5106,6 +6047,15 @@ public final class DnsZoneServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * DNS zone labels as `key:value` pairs.
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5124,7 +6074,7 @@ public final class DnsZoneServiceOuterClass {
     private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility privateVisibility_;
     /**
      * <pre>
-     * only network_ids change inside private_visibility is allowed
+     * Change network IDs for private visibility.
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -5134,7 +6084,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * only network_ids change inside private_visibility is allowed
+     * Change network IDs for private visibility.
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -5144,7 +6094,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * only network_ids change inside private_visibility is allowed
+     * Change network IDs for private visibility.
      * </pre>
      *
      * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -5156,18 +6106,30 @@ public final class DnsZoneServiceOuterClass {
     public static final int PUBLIC_VISIBILITY_FIELD_NUMBER = 7;
     private yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility publicVisibility_;
     /**
+     * <pre>
+     * Public visibility configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     public boolean hasPublicVisibility() {
       return publicVisibility_ != null;
     }
     /**
+     * <pre>
+     * Public visibility configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility() {
       return publicVisibility_ == null ? yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility.getDefaultInstance() : publicVisibility_;
     }
     /**
+     * <pre>
+     * Public visibility configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder() {
@@ -5656,6 +6618,12 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object dnsZoneId_ = "";
       /**
+       * <pre>
+       * ID of the DNS zone to update.
+       *  
+       * To get the DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public java.lang.String getDnsZoneId() {
@@ -5671,6 +6639,12 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to update.
+       *  
+       * To get the DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public com.google.protobuf.ByteString
@@ -5687,6 +6661,12 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to update.
+       *  
+       * To get the DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneId(
@@ -5700,6 +6680,12 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to update.
+       *  
+       * To get the DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder clearDnsZoneId() {
@@ -5709,6 +6695,12 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to update.
+       *  
+       * To get the DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneIdBytes(
@@ -5727,12 +6719,20 @@ public final class DnsZoneServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask specifying which fields of the DNS zone resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields of the DNS zone resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -5743,6 +6743,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask specifying which fields of the DNS zone resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -5759,6 +6763,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields of the DNS zone resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -5773,6 +6781,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields of the DNS zone resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -5791,6 +6803,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields of the DNS zone resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -5805,6 +6821,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask specifying which fields of the DNS zone resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -5813,6 +6833,10 @@ public final class DnsZoneServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask specifying which fields of the DNS zone resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -5824,6 +6848,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask specifying which fields of the DNS zone resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5842,6 +6870,11 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New name for the DNS zone. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public java.lang.String getName() {
@@ -5857,6 +6890,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the DNS zone. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public com.google.protobuf.ByteString
@@ -5873,6 +6911,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name for the DNS zone. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setName(
@@ -5886,6 +6929,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the DNS zone. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder clearName() {
@@ -5895,6 +6943,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name for the DNS zone. 
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        */
       public Builder setNameBytes(
@@ -5911,6 +6964,10 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description of the DNS zone.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -5926,6 +6983,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the DNS zone.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -5942,6 +7003,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the DNS zone.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -5955,6 +7020,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the DNS zone.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -5964,6 +7033,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the DNS zone.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -6005,6 +7078,15 @@ public final class DnsZoneServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6021,6 +7103,15 @@ public final class DnsZoneServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6028,6 +7119,15 @@ public final class DnsZoneServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6040,6 +7140,15 @@ public final class DnsZoneServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6060,6 +7169,15 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6079,6 +7197,15 @@ public final class DnsZoneServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -6091,6 +7218,15 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * DNS zone labels as `key:value` pairs.
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [DnsZoneService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6106,7 +7242,7 @@ public final class DnsZoneServiceOuterClass {
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibility.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PrivateVisibilityOrBuilder> privateVisibilityBuilder_;
       /**
        * <pre>
-       * only network_ids change inside private_visibility is allowed
+       * Change network IDs for private visibility.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6116,7 +7252,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * only network_ids change inside private_visibility is allowed
+       * Change network IDs for private visibility.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6130,7 +7266,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * only network_ids change inside private_visibility is allowed
+       * Change network IDs for private visibility.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6150,7 +7286,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * only network_ids change inside private_visibility is allowed
+       * Change network IDs for private visibility.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6168,7 +7304,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * only network_ids change inside private_visibility is allowed
+       * Change network IDs for private visibility.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6190,7 +7326,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * only network_ids change inside private_visibility is allowed
+       * Change network IDs for private visibility.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6208,7 +7344,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * only network_ids change inside private_visibility is allowed
+       * Change network IDs for private visibility.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6220,7 +7356,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * only network_ids change inside private_visibility is allowed
+       * Change network IDs for private visibility.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6235,7 +7371,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * only network_ids change inside private_visibility is allowed
+       * Change network IDs for private visibility.
        * </pre>
        *
        * <code>.yandex.cloud.dns.v1.PrivateVisibility private_visibility = 6;</code>
@@ -6258,12 +7394,20 @@ public final class DnsZoneServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder> publicVisibilityBuilder_;
       /**
+       * <pre>
+       * Public visibility configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public boolean hasPublicVisibility() {
         return publicVisibilityBuilder_ != null || publicVisibility_ != null;
       }
       /**
+       * <pre>
+       * Public visibility configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility getPublicVisibility() {
@@ -6274,6 +7418,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public visibility configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public Builder setPublicVisibility(yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility value) {
@@ -6290,6 +7438,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public visibility configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public Builder setPublicVisibility(
@@ -6304,6 +7456,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public visibility configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public Builder mergePublicVisibility(yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility value) {
@@ -6322,6 +7478,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public visibility configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public Builder clearPublicVisibility() {
@@ -6336,6 +7496,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public visibility configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibility.Builder getPublicVisibilityBuilder() {
@@ -6344,6 +7508,10 @@ public final class DnsZoneServiceOuterClass {
         return getPublicVisibilityFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Public visibility configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.PublicVisibilityOrBuilder getPublicVisibilityOrBuilder() {
@@ -6355,6 +7523,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public visibility configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.dns.v1.PublicVisibility public_visibility = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6428,10 +7600,18 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the DNS zone that is being updated.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1;</code>
      */
     java.lang.String getDnsZoneId();
     /**
+     * <pre>
+     * ID of the DNS zone that is being updated.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -6518,6 +7698,10 @@ public final class DnsZoneServiceOuterClass {
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
+     * <pre>
+     * ID of the DNS zone that is being updated.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1;</code>
      */
     public java.lang.String getDnsZoneId() {
@@ -6533,6 +7717,10 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the DNS zone that is being updated.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -6854,6 +8042,10 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object dnsZoneId_ = "";
       /**
+       * <pre>
+       * ID of the DNS zone that is being updated.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public java.lang.String getDnsZoneId() {
@@ -6869,6 +8061,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone that is being updated.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -6885,6 +8081,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone that is being updated.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public Builder setDnsZoneId(
@@ -6898,6 +8098,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone that is being updated.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public Builder clearDnsZoneId() {
@@ -6907,6 +8111,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone that is being updated.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public Builder setDnsZoneIdBytes(
@@ -6978,10 +8186,20 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the DNS zone to delete.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     java.lang.String getDnsZoneId();
     /**
+     * <pre>
+     * ID of the DNS zone to delete.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     com.google.protobuf.ByteString
@@ -7068,6 +8286,11 @@ public final class DnsZoneServiceOuterClass {
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
+     * <pre>
+     * ID of the DNS zone to delete.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public java.lang.String getDnsZoneId() {
@@ -7083,6 +8306,11 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the DNS zone to delete.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public com.google.protobuf.ByteString
@@ -7404,6 +8632,11 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object dnsZoneId_ = "";
       /**
+       * <pre>
+       * ID of the DNS zone to delete.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public java.lang.String getDnsZoneId() {
@@ -7419,6 +8652,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to delete.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public com.google.protobuf.ByteString
@@ -7435,6 +8673,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to delete.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneId(
@@ -7448,6 +8691,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to delete.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder clearDnsZoneId() {
@@ -7457,6 +8705,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to delete.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneIdBytes(
@@ -7528,10 +8781,18 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the DNS zone that is being deleted.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1;</code>
      */
     java.lang.String getDnsZoneId();
     /**
+     * <pre>
+     * ID of the DNS zone that is being deleted.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -7618,6 +8879,10 @@ public final class DnsZoneServiceOuterClass {
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
+     * <pre>
+     * ID of the DNS zone that is being deleted.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1;</code>
      */
     public java.lang.String getDnsZoneId() {
@@ -7633,6 +8898,10 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the DNS zone that is being deleted.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -7954,6 +9223,10 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object dnsZoneId_ = "";
       /**
+       * <pre>
+       * ID of the DNS zone that is being deleted.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public java.lang.String getDnsZoneId() {
@@ -7969,6 +9242,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone that is being deleted.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -7985,6 +9262,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone that is being deleted.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public Builder setDnsZoneId(
@@ -7998,6 +9279,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone that is being deleted.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public Builder clearDnsZoneId() {
@@ -8007,6 +9292,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone that is being deleted.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1;</code>
        */
       public Builder setDnsZoneIdBytes(
@@ -8078,30 +9367,56 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the DNS zone to get record set from.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     java.lang.String getDnsZoneId();
     /**
+     * <pre>
+     * ID of the DNS zone to get record set from.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
 
     /**
+     * <pre>
+     * Name of the record set.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the record set.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Type of the record set.
+     * </pre>
+     *
      * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
      */
     java.lang.String getType();
     /**
+     * <pre>
+     * Type of the record set.
+     * </pre>
+     *
      * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
      */
     com.google.protobuf.ByteString
@@ -8202,6 +9517,11 @@ public final class DnsZoneServiceOuterClass {
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
+     * <pre>
+     * ID of the DNS zone to get record set from.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public java.lang.String getDnsZoneId() {
@@ -8217,6 +9537,11 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the DNS zone to get record set from.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public com.google.protobuf.ByteString
@@ -8236,6 +9561,10 @@ public final class DnsZoneServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the record set.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
      */
     public java.lang.String getName() {
@@ -8251,6 +9580,10 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the record set.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
      */
     public com.google.protobuf.ByteString
@@ -8270,6 +9603,10 @@ public final class DnsZoneServiceOuterClass {
     public static final int TYPE_FIELD_NUMBER = 3;
     private volatile java.lang.Object type_;
     /**
+     * <pre>
+     * Type of the record set.
+     * </pre>
+     *
      * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
      */
     public java.lang.String getType() {
@@ -8285,6 +9622,10 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Type of the record set.
+     * </pre>
+     *
      * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
      */
     public com.google.protobuf.ByteString
@@ -8640,6 +9981,11 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object dnsZoneId_ = "";
       /**
+       * <pre>
+       * ID of the DNS zone to get record set from.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public java.lang.String getDnsZoneId() {
@@ -8655,6 +10001,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to get record set from.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public com.google.protobuf.ByteString
@@ -8671,6 +10022,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to get record set from.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneId(
@@ -8684,6 +10040,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to get record set from.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder clearDnsZoneId() {
@@ -8693,6 +10054,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to get record set from.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneIdBytes(
@@ -8709,6 +10075,10 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the record set.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
        */
       public java.lang.String getName() {
@@ -8724,6 +10094,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the record set.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
        */
       public com.google.protobuf.ByteString
@@ -8740,6 +10114,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the record set.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
        */
       public Builder setName(
@@ -8753,6 +10131,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the record set.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
        */
       public Builder clearName() {
@@ -8762,6 +10144,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the record set.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=255"];</code>
        */
       public Builder setNameBytes(
@@ -8778,6 +10164,10 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object type_ = "";
       /**
+       * <pre>
+       * Type of the record set.
+       * </pre>
+       *
        * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
        */
       public java.lang.String getType() {
@@ -8793,6 +10183,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Type of the record set.
+       * </pre>
+       *
        * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
        */
       public com.google.protobuf.ByteString
@@ -8809,6 +10203,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Type of the record set.
+       * </pre>
+       *
        * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
        */
       public Builder setType(
@@ -8822,6 +10220,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the record set.
+       * </pre>
+       *
        * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
        */
       public Builder clearType() {
@@ -8831,6 +10233,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the record set.
+       * </pre>
+       *
        * <code>string type = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=10"];</code>
        */
       public Builder setTypeBytes(
@@ -8902,35 +10308,79 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the DNS zone to list record sets in. 
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     java.lang.String getDnsZoneId();
     /**
+     * <pre>
+     * ID of the DNS zone to list record sets in. 
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListDnsZoneRecordSetsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListDnsZoneRecordSetsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListDnsZoneRecordSetsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters record sets listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-record-set`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters record sets listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-record-set`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
@@ -9037,6 +10487,11 @@ public final class DnsZoneServiceOuterClass {
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
+     * <pre>
+     * ID of the DNS zone to list record sets in. 
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public java.lang.String getDnsZoneId() {
@@ -9052,6 +10507,11 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the DNS zone to list record sets in. 
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public com.google.protobuf.ByteString
@@ -9071,6 +10531,12 @@ public final class DnsZoneServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListDnsZoneRecordSetsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     public long getPageSize() {
@@ -9080,6 +10546,11 @@ public final class DnsZoneServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListDnsZoneRecordSetsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getPageToken() {
@@ -9095,6 +10566,11 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListDnsZoneRecordSetsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -9114,6 +10590,15 @@ public final class DnsZoneServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters record sets listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-record-set`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -9129,6 +10614,15 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters record sets listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-record-set`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -9502,6 +10996,11 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object dnsZoneId_ = "";
       /**
+       * <pre>
+       * ID of the DNS zone to list record sets in. 
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public java.lang.String getDnsZoneId() {
@@ -9517,6 +11016,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to list record sets in. 
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public com.google.protobuf.ByteString
@@ -9533,6 +11037,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to list record sets in. 
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneId(
@@ -9546,6 +11055,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to list record sets in. 
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder clearDnsZoneId() {
@@ -9555,6 +11069,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to list record sets in. 
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneIdBytes(
@@ -9571,12 +11090,24 @@ public final class DnsZoneServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDnsZoneRecordSetsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDnsZoneRecordSetsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -9586,6 +11117,12 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDnsZoneRecordSetsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder clearPageSize() {
@@ -9597,6 +11134,11 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListDnsZoneRecordSetsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getPageToken() {
@@ -9612,6 +11154,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListDnsZoneRecordSetsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -9628,6 +11175,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListDnsZoneRecordSetsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setPageToken(
@@ -9641,6 +11193,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListDnsZoneRecordSetsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearPageToken() {
@@ -9650,6 +11207,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListDnsZoneRecordSetsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setPageTokenBytes(
@@ -9666,6 +11228,15 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters record sets listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-record-set`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -9681,6 +11252,15 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters record sets listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-record-set`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -9697,6 +11277,15 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters record sets listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-record-set`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -9710,6 +11299,15 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters record sets listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-record-set`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -9719,6 +11317,15 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters record sets listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [RecordSet.name] and [RecordSet.type] fields. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-record-set`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -9790,34 +11397,68 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of record sets in the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
     java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> 
         getRecordSetsList();
     /**
+     * <pre>
+     * List of record sets in the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getRecordSets(int index);
     /**
+     * <pre>
+     * List of record sets in the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
     int getRecordSetsCount();
     /**
+     * <pre>
+     * List of record sets in the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
         getRecordSetsOrBuilderList();
     /**
+     * <pre>
+     * List of record sets in the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getRecordSetsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDnsZoneRecordSetsRequest.page_size], use `next_page_token` as the value
+     * for the [ListDnsZoneRecordSetsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDnsZoneRecordSetsRequest.page_size], use `next_page_token` as the value
+     * for the [ListDnsZoneRecordSetsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -9918,12 +11559,20 @@ public final class DnsZoneServiceOuterClass {
     public static final int RECORD_SETS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> recordSets_;
     /**
+     * <pre>
+     * List of record sets in the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
     public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getRecordSetsList() {
       return recordSets_;
     }
     /**
+     * <pre>
+     * List of record sets in the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
@@ -9931,18 +11580,30 @@ public final class DnsZoneServiceOuterClass {
       return recordSets_;
     }
     /**
+     * <pre>
+     * List of record sets in the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
     public int getRecordSetsCount() {
       return recordSets_.size();
     }
     /**
+     * <pre>
+     * List of record sets in the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getRecordSets(int index) {
       return recordSets_.get(index);
     }
     /**
+     * <pre>
+     * List of record sets in the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getRecordSetsOrBuilder(
@@ -9953,6 +11614,13 @@ public final class DnsZoneServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDnsZoneRecordSetsRequest.page_size], use `next_page_token` as the value
+     * for the [ListDnsZoneRecordSetsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -9968,6 +11636,13 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDnsZoneRecordSetsRequest.page_size], use `next_page_token` as the value
+     * for the [ListDnsZoneRecordSetsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -10359,6 +12034,10 @@ public final class DnsZoneServiceOuterClass {
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> recordSetsBuilder_;
 
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getRecordSetsList() {
@@ -10369,6 +12048,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public int getRecordSetsCount() {
@@ -10379,6 +12062,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getRecordSets(int index) {
@@ -10389,6 +12076,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public Builder setRecordSets(
@@ -10406,6 +12097,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public Builder setRecordSets(
@@ -10420,6 +12115,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public Builder addRecordSets(yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet value) {
@@ -10436,6 +12135,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public Builder addRecordSets(
@@ -10453,6 +12156,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public Builder addRecordSets(
@@ -10467,6 +12174,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public Builder addRecordSets(
@@ -10481,6 +12192,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public Builder addAllRecordSets(
@@ -10496,6 +12211,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public Builder clearRecordSets() {
@@ -10509,6 +12228,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public Builder removeRecordSets(int index) {
@@ -10522,6 +12245,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder getRecordSetsBuilder(
@@ -10529,6 +12256,10 @@ public final class DnsZoneServiceOuterClass {
         return getRecordSetsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getRecordSetsOrBuilder(
@@ -10539,6 +12270,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
@@ -10550,6 +12285,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder addRecordSetsBuilder() {
@@ -10557,6 +12296,10 @@ public final class DnsZoneServiceOuterClass {
             yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder addRecordSetsBuilder(
@@ -10565,6 +12308,10 @@ public final class DnsZoneServiceOuterClass {
             index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of record sets in the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet record_sets = 1;</code>
        */
       public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder> 
@@ -10588,6 +12335,13 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZoneRecordSetsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZoneRecordSetsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -10603,6 +12357,13 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZoneRecordSetsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZoneRecordSetsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -10619,6 +12380,13 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZoneRecordSetsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZoneRecordSetsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -10632,6 +12400,13 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZoneRecordSetsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZoneRecordSetsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -10641,6 +12416,13 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZoneRecordSetsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZoneRecordSetsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -10712,58 +12494,110 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the DNS zone to update record sets in.
+     *  
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     java.lang.String getDnsZoneId();
     /**
+     * <pre>
+     * ID of the DNS zone to update record sets in.
+     *  
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
 
     /**
+     * <pre>
+     * List of record sets to delete.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> 
         getDeletionsList();
     /**
+     * <pre>
+     * List of record sets to delete.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getDeletions(int index);
     /**
+     * <pre>
+     * List of record sets to delete.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     int getDeletionsCount();
     /**
+     * <pre>
+     * List of record sets to delete.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
         getDeletionsOrBuilderList();
     /**
+     * <pre>
+     * List of record sets to delete.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getDeletionsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * List of record sets to add.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> 
         getAdditionsList();
     /**
+     * <pre>
+     * List of record sets to add.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getAdditions(int index);
     /**
+     * <pre>
+     * List of record sets to add.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     int getAdditionsCount();
     /**
+     * <pre>
+     * List of record sets to add.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
         getAdditionsOrBuilderList();
     /**
+     * <pre>
+     * List of record sets to add.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getAdditionsOrBuilder(
@@ -10877,6 +12711,12 @@ public final class DnsZoneServiceOuterClass {
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
+     * <pre>
+     * ID of the DNS zone to update record sets in.
+     *  
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public java.lang.String getDnsZoneId() {
@@ -10892,6 +12732,12 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the DNS zone to update record sets in.
+     *  
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public com.google.protobuf.ByteString
@@ -10911,12 +12757,20 @@ public final class DnsZoneServiceOuterClass {
     public static final int DELETIONS_FIELD_NUMBER = 2;
     private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> deletions_;
     /**
+     * <pre>
+     * List of record sets to delete.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getDeletionsList() {
       return deletions_;
     }
     /**
+     * <pre>
+     * List of record sets to delete.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
@@ -10924,18 +12778,30 @@ public final class DnsZoneServiceOuterClass {
       return deletions_;
     }
     /**
+     * <pre>
+     * List of record sets to delete.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public int getDeletionsCount() {
       return deletions_.size();
     }
     /**
+     * <pre>
+     * List of record sets to delete.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getDeletions(int index) {
       return deletions_.get(index);
     }
     /**
+     * <pre>
+     * List of record sets to delete.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getDeletionsOrBuilder(
@@ -10946,12 +12812,20 @@ public final class DnsZoneServiceOuterClass {
     public static final int ADDITIONS_FIELD_NUMBER = 3;
     private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> additions_;
     /**
+     * <pre>
+     * List of record sets to add.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getAdditionsList() {
       return additions_;
     }
     /**
+     * <pre>
+     * List of record sets to add.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
@@ -10959,18 +12833,30 @@ public final class DnsZoneServiceOuterClass {
       return additions_;
     }
     /**
+     * <pre>
+     * List of record sets to add.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public int getAdditionsCount() {
       return additions_.size();
     }
     /**
+     * <pre>
+     * List of record sets to add.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getAdditions(int index) {
       return additions_.get(index);
     }
     /**
+     * <pre>
+     * List of record sets to add.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getAdditionsOrBuilder(
@@ -11397,6 +13283,12 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object dnsZoneId_ = "";
       /**
+       * <pre>
+       * ID of the DNS zone to update record sets in.
+       *  
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public java.lang.String getDnsZoneId() {
@@ -11412,6 +13304,12 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to update record sets in.
+       *  
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public com.google.protobuf.ByteString
@@ -11428,6 +13326,12 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to update record sets in.
+       *  
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneId(
@@ -11441,6 +13345,12 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to update record sets in.
+       *  
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder clearDnsZoneId() {
@@ -11450,6 +13360,12 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to update record sets in.
+       *  
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneIdBytes(
@@ -11477,6 +13393,10 @@ public final class DnsZoneServiceOuterClass {
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> deletionsBuilder_;
 
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getDeletionsList() {
@@ -11487,6 +13407,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public int getDeletionsCount() {
@@ -11497,6 +13421,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getDeletions(int index) {
@@ -11507,6 +13435,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder setDeletions(
@@ -11524,6 +13456,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder setDeletions(
@@ -11538,6 +13474,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addDeletions(yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet value) {
@@ -11554,6 +13494,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addDeletions(
@@ -11571,6 +13515,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addDeletions(
@@ -11585,6 +13533,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addDeletions(
@@ -11599,6 +13551,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addAllDeletions(
@@ -11614,6 +13570,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder clearDeletions() {
@@ -11627,6 +13587,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder removeDeletions(int index) {
@@ -11640,6 +13604,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder getDeletionsBuilder(
@@ -11647,6 +13615,10 @@ public final class DnsZoneServiceOuterClass {
         return getDeletionsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getDeletionsOrBuilder(
@@ -11657,6 +13629,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
@@ -11668,6 +13644,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder addDeletionsBuilder() {
@@ -11675,6 +13655,10 @@ public final class DnsZoneServiceOuterClass {
             yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder addDeletionsBuilder(
@@ -11683,6 +13667,10 @@ public final class DnsZoneServiceOuterClass {
             index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of record sets to delete.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder> 
@@ -11717,6 +13705,10 @@ public final class DnsZoneServiceOuterClass {
           yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> additionsBuilder_;
 
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getAdditionsList() {
@@ -11727,6 +13719,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public int getAdditionsCount() {
@@ -11737,6 +13733,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getAdditions(int index) {
@@ -11747,6 +13747,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder setAdditions(
@@ -11764,6 +13768,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder setAdditions(
@@ -11778,6 +13786,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addAdditions(yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet value) {
@@ -11794,6 +13806,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addAdditions(
@@ -11811,6 +13827,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addAdditions(
@@ -11825,6 +13845,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addAdditions(
@@ -11839,6 +13863,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder addAllAdditions(
@@ -11854,6 +13882,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder clearAdditions() {
@@ -11867,6 +13899,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public Builder removeAdditions(int index) {
@@ -11880,6 +13916,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder getAdditionsBuilder(
@@ -11887,6 +13927,10 @@ public final class DnsZoneServiceOuterClass {
         return getAdditionsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder getAdditionsOrBuilder(
@@ -11897,6 +13941,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSetOrBuilder> 
@@ -11908,6 +13956,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder addAdditionsBuilder() {
@@ -11915,6 +13967,10 @@ public final class DnsZoneServiceOuterClass {
             yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder addAdditionsBuilder(
@@ -11923,6 +13979,10 @@ public final class DnsZoneServiceOuterClass {
             index, yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of record sets to add.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet additions = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
        */
       public java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet.Builder> 
@@ -12413,10 +14473,22 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the DNS zone to upsert record sets to.
+     *  
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     java.lang.String getDnsZoneId();
     /**
+     * <pre>
+     * ID of the DNS zone to upsert record sets to.
+     *  
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     com.google.protobuf.ByteString
@@ -12424,7 +14496,7 @@ public final class DnsZoneServiceOuterClass {
 
     /**
      * <pre>
-     * delete only specified records from record set
+     * Delete only specified records from corresponding record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12433,7 +14505,7 @@ public final class DnsZoneServiceOuterClass {
         getDeletionsList();
     /**
      * <pre>
-     * delete only specified records from record set
+     * Delete only specified records from corresponding record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12441,7 +14513,7 @@ public final class DnsZoneServiceOuterClass {
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getDeletions(int index);
     /**
      * <pre>
-     * delete only specified records from record set
+     * Delete only specified records from corresponding record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12449,7 +14521,7 @@ public final class DnsZoneServiceOuterClass {
     int getDeletionsCount();
     /**
      * <pre>
-     * delete only specified records from record set
+     * Delete only specified records from corresponding record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12458,7 +14530,7 @@ public final class DnsZoneServiceOuterClass {
         getDeletionsOrBuilderList();
     /**
      * <pre>
-     * delete only specified records from record set
+     * Delete only specified records from corresponding record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12468,7 +14540,7 @@ public final class DnsZoneServiceOuterClass {
 
     /**
      * <pre>
-     * replace specified record sets entirely
+     * Entirely replace specified record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12477,7 +14549,7 @@ public final class DnsZoneServiceOuterClass {
         getReplacementsList();
     /**
      * <pre>
-     * replace specified record sets entirely
+     * Entirely replace specified record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12485,7 +14557,7 @@ public final class DnsZoneServiceOuterClass {
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getReplacements(int index);
     /**
      * <pre>
-     * replace specified record sets entirely
+     * Entirely replace specified record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12493,7 +14565,7 @@ public final class DnsZoneServiceOuterClass {
     int getReplacementsCount();
     /**
      * <pre>
-     * replace specified record sets entirely
+     * Entirely replace specified record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12502,7 +14574,7 @@ public final class DnsZoneServiceOuterClass {
         getReplacementsOrBuilderList();
     /**
      * <pre>
-     * replace specified record sets entirely
+     * Entirely replace specified record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12512,7 +14584,7 @@ public final class DnsZoneServiceOuterClass {
 
     /**
      * <pre>
-     * for each record set replace records or add new ones
+     * Replace specified records or add new ones if no such record sets exists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12521,7 +14593,7 @@ public final class DnsZoneServiceOuterClass {
         getMergesList();
     /**
      * <pre>
-     * for each record set replace records or add new ones
+     * Replace specified records or add new ones if no such record sets exists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12529,7 +14601,7 @@ public final class DnsZoneServiceOuterClass {
     yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getMerges(int index);
     /**
      * <pre>
-     * for each record set replace records or add new ones
+     * Replace specified records or add new ones if no such record sets exists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12537,7 +14609,7 @@ public final class DnsZoneServiceOuterClass {
     int getMergesCount();
     /**
      * <pre>
-     * for each record set replace records or add new ones
+     * Replace specified records or add new ones if no such record sets exists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12546,7 +14618,7 @@ public final class DnsZoneServiceOuterClass {
         getMergesOrBuilderList();
     /**
      * <pre>
-     * for each record set replace records or add new ones
+     * Replace specified records or add new ones if no such record sets exists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12675,6 +14747,12 @@ public final class DnsZoneServiceOuterClass {
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
+     * <pre>
+     * ID of the DNS zone to upsert record sets to.
+     *  
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public java.lang.String getDnsZoneId() {
@@ -12690,6 +14768,12 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the DNS zone to upsert record sets to.
+     *  
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public com.google.protobuf.ByteString
@@ -12710,7 +14794,7 @@ public final class DnsZoneServiceOuterClass {
     private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> deletions_;
     /**
      * <pre>
-     * delete only specified records from record set
+     * Delete only specified records from corresponding record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12720,7 +14804,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * delete only specified records from record set
+     * Delete only specified records from corresponding record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12731,7 +14815,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * delete only specified records from record set
+     * Delete only specified records from corresponding record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12741,7 +14825,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * delete only specified records from record set
+     * Delete only specified records from corresponding record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12751,7 +14835,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * delete only specified records from record set
+     * Delete only specified records from corresponding record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12765,7 +14849,7 @@ public final class DnsZoneServiceOuterClass {
     private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> replacements_;
     /**
      * <pre>
-     * replace specified record sets entirely
+     * Entirely replace specified record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12775,7 +14859,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * replace specified record sets entirely
+     * Entirely replace specified record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12786,7 +14870,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * replace specified record sets entirely
+     * Entirely replace specified record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12796,7 +14880,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * replace specified record sets entirely
+     * Entirely replace specified record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12806,7 +14890,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * replace specified record sets entirely
+     * Entirely replace specified record sets.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12820,7 +14904,7 @@ public final class DnsZoneServiceOuterClass {
     private java.util.List<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> merges_;
     /**
      * <pre>
-     * for each record set replace records or add new ones
+     * Replace specified records or add new ones if no such record sets exists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12830,7 +14914,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * for each record set replace records or add new ones
+     * Replace specified records or add new ones if no such record sets exists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12841,7 +14925,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * for each record set replace records or add new ones
+     * Replace specified records or add new ones if no such record sets exists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12851,7 +14935,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * for each record set replace records or add new ones
+     * Replace specified records or add new ones if no such record sets exists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -12861,7 +14945,7 @@ public final class DnsZoneServiceOuterClass {
     }
     /**
      * <pre>
-     * for each record set replace records or add new ones
+     * Replace specified records or add new ones if no such record sets exists.
      * </pre>
      *
      * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13345,6 +15429,12 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object dnsZoneId_ = "";
       /**
+       * <pre>
+       * ID of the DNS zone to upsert record sets to.
+       *  
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public java.lang.String getDnsZoneId() {
@@ -13360,6 +15450,12 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to upsert record sets to.
+       *  
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public com.google.protobuf.ByteString
@@ -13376,6 +15472,12 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to upsert record sets to.
+       *  
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneId(
@@ -13389,6 +15491,12 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to upsert record sets to.
+       *  
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder clearDnsZoneId() {
@@ -13398,6 +15506,12 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to upsert record sets to.
+       *  
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneIdBytes(
@@ -13426,7 +15540,7 @@ public final class DnsZoneServiceOuterClass {
 
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13440,7 +15554,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13454,7 +15568,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13468,7 +15582,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13489,7 +15603,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13507,7 +15621,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13527,7 +15641,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13548,7 +15662,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13566,7 +15680,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13584,7 +15698,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13603,7 +15717,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13620,7 +15734,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13637,7 +15751,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13648,7 +15762,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13662,7 +15776,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13677,7 +15791,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13688,7 +15802,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13700,7 +15814,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * delete only specified records from record set
+       * Delete only specified records from corresponding record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet deletions = 2 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13738,7 +15852,7 @@ public final class DnsZoneServiceOuterClass {
 
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13752,7 +15866,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13766,7 +15880,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13780,7 +15894,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13801,7 +15915,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13819,7 +15933,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13839,7 +15953,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13860,7 +15974,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13878,7 +15992,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13896,7 +16010,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13915,7 +16029,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13932,7 +16046,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13949,7 +16063,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13960,7 +16074,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13974,7 +16088,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -13989,7 +16103,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14000,7 +16114,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14012,7 +16126,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * replace specified record sets entirely
+       * Entirely replace specified record sets.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet replacements = 3 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14050,7 +16164,7 @@ public final class DnsZoneServiceOuterClass {
 
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14064,7 +16178,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14078,7 +16192,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14092,7 +16206,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14113,7 +16227,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14131,7 +16245,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14151,7 +16265,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14172,7 +16286,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14190,7 +16304,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14208,7 +16322,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14227,7 +16341,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14244,7 +16358,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14261,7 +16375,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14272,7 +16386,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14286,7 +16400,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14301,7 +16415,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14312,7 +16426,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14324,7 +16438,7 @@ public final class DnsZoneServiceOuterClass {
       }
       /**
        * <pre>
-       * for each record set replace records or add new ones
+       * Replace specified records or add new ones if no such record sets exists.
        * </pre>
        *
        * <code>repeated .yandex.cloud.dns.v1.RecordSet merges = 4 [(.yandex.cloud.size) = "&lt;=1000"];</code>
@@ -14817,35 +16931,79 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the DNS zone to list operations for.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     java.lang.String getDnsZoneId();
     /**
+     * <pre>
+     * ID of the DNS zone to list operations for.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     com.google.protobuf.ByteString
         getDnsZoneIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListDnsZoneOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the 
+     * [ListDnsZoneOperationsResponse.next_page_token] returned by a previous list request.  
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the 
+     * [ListDnsZoneOperationsResponse.next_page_token] returned by a previous list request.  
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters DNS zones listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-dns-zone`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters DNS zones listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-dns-zone`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
@@ -14952,6 +17110,11 @@ public final class DnsZoneServiceOuterClass {
     public static final int DNS_ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dnsZoneId_;
     /**
+     * <pre>
+     * ID of the DNS zone to list operations for.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public java.lang.String getDnsZoneId() {
@@ -14967,6 +17130,11 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the DNS zone to list operations for.
+     * To get a DNS zone ID, make a [DnsZoneService.List] request.
+     * </pre>
+     *
      * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
      */
     public com.google.protobuf.ByteString
@@ -14986,6 +17154,12 @@ public final class DnsZoneServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than [page_size], the service returns a [ListDnsZoneOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -14995,6 +17169,11 @@ public final class DnsZoneServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the 
+     * [ListDnsZoneOperationsResponse.next_page_token] returned by a previous list request.  
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getPageToken() {
@@ -15010,6 +17189,11 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the 
+     * [ListDnsZoneOperationsResponse.next_page_token] returned by a previous list request.  
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -15029,6 +17213,15 @@ public final class DnsZoneServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters DNS zones listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-dns-zone`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -15044,6 +17237,15 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters DNS zones listed in the response.
+     * The expression must specify: 
+     * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-dns-zone`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -15417,6 +17619,11 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object dnsZoneId_ = "";
       /**
+       * <pre>
+       * ID of the DNS zone to list operations for.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public java.lang.String getDnsZoneId() {
@@ -15432,6 +17639,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to list operations for.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public com.google.protobuf.ByteString
@@ -15448,6 +17660,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the DNS zone to list operations for.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneId(
@@ -15461,6 +17678,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to list operations for.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder clearDnsZoneId() {
@@ -15470,6 +17692,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the DNS zone to list operations for.
+       * To get a DNS zone ID, make a [DnsZoneService.List] request.
+       * </pre>
+       *
        * <code>string dns_zone_id = 1 [(.yandex.cloud.length) = "20"];</code>
        */
       public Builder setDnsZoneIdBytes(
@@ -15486,12 +17713,24 @@ public final class DnsZoneServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListDnsZoneOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListDnsZoneOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -15501,6 +17740,12 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than [page_size], the service returns a [ListDnsZoneOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -15512,6 +17757,11 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the 
+       * [ListDnsZoneOperationsResponse.next_page_token] returned by a previous list request.  
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getPageToken() {
@@ -15527,6 +17777,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the 
+       * [ListDnsZoneOperationsResponse.next_page_token] returned by a previous list request.  
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -15543,6 +17798,11 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the 
+       * [ListDnsZoneOperationsResponse.next_page_token] returned by a previous list request.  
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setPageToken(
@@ -15556,6 +17816,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the 
+       * [ListDnsZoneOperationsResponse.next_page_token] returned by a previous list request.  
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearPageToken() {
@@ -15565,6 +17830,11 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the 
+       * [ListDnsZoneOperationsResponse.next_page_token] returned by a previous list request.  
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setPageTokenBytes(
@@ -15581,6 +17851,15 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters DNS zones listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-dns-zone`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -15596,6 +17875,15 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters DNS zones listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-dns-zone`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -15612,6 +17900,15 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters DNS zones listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-dns-zone`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -15625,6 +17922,15 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters DNS zones listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-dns-zone`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -15634,6 +17940,15 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters DNS zones listed in the response.
+       * The expression must specify: 
+       * 1. The field name. Currently you can use filtering only on the [DnsZone.name] field. 
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value or lists of values. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-dns-zone`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -15705,34 +18020,68 @@ public final class DnsZoneServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of operations for the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
         getOperationsList();
     /**
+     * <pre>
+     * List of operations for the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
+     * <pre>
+     * List of operations for the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     int getOperationsCount();
     /**
+     * <pre>
+     * List of operations for the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList();
     /**
+     * <pre>
+     * List of operations for the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDnsZoneOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListDnsZoneOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDnsZoneOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListDnsZoneOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -15833,12 +18182,20 @@ public final class DnsZoneServiceOuterClass {
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
+     * <pre>
+     * List of operations for the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -15846,18 +18203,30 @@ public final class DnsZoneServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public int getOperationsCount() {
       return operations_.size();
     }
     /**
+     * <pre>
+     * List of operations for the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
     /**
+     * <pre>
+     * List of operations for the specified DNS zone.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -15868,6 +18237,13 @@ public final class DnsZoneServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDnsZoneOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListDnsZoneOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -15883,6 +18259,13 @@ public final class DnsZoneServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDnsZoneOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListDnsZoneOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -16274,6 +18657,10 @@ public final class DnsZoneServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
 
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
@@ -16284,6 +18671,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public int getOperationsCount() {
@@ -16294,6 +18685,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
@@ -16304,6 +18699,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -16321,6 +18720,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -16335,6 +18738,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
@@ -16351,6 +18758,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -16368,6 +18779,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -16382,6 +18797,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -16396,6 +18815,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addAllOperations(
@@ -16411,6 +18834,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder clearOperations() {
@@ -16424,6 +18851,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder removeOperations(int index) {
@@ -16437,6 +18868,10 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
@@ -16444,6 +18879,10 @@ public final class DnsZoneServiceOuterClass {
         return getOperationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -16454,6 +18893,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -16465,6 +18908,10 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
@@ -16472,6 +18919,10 @@ public final class DnsZoneServiceOuterClass {
             yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
@@ -16480,6 +18931,10 @@ public final class DnsZoneServiceOuterClass {
             index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified DNS zone.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
@@ -16503,6 +18958,13 @@ public final class DnsZoneServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZoneOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZoneOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -16518,6 +18980,13 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZoneOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZoneOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -16534,6 +19003,13 @@ public final class DnsZoneServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZoneOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZoneOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -16547,6 +19023,13 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZoneOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZoneOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -16556,6 +19039,13 @@ public final class DnsZoneServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDnsZoneOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListDnsZoneOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(

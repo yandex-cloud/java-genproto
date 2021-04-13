@@ -4831,6 +4831,31 @@ public final class PSC {
      */
     com.google.type.TimeOfDayOrBuilder getBackupWindowStartOrBuilder();
 
+    /**
+     * <pre>
+     * Access policy to DB
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     */
+    boolean hasAccess();
+    /**
+     * <pre>
+     * Access policy to DB
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getAccess();
+    /**
+     * <pre>
+     * Access policy to DB
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     */
+    yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder getAccessOrBuilder();
+
     public yandex.cloud.api.mdb.sqlserver.v1.PSC.ClusterConfig.SqlserverConfigCase getSqlserverConfigCase();
   }
   /**
@@ -4931,6 +4956,19 @@ public final class PSC {
                 sqlserverConfig_ = subBuilder.buildPartial();
               }
               sqlserverConfigCase_ = 5;
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder subBuilder = null;
+              if (access_ != null) {
+                subBuilder = access_.toBuilder();
+              }
+              access_ = input.readMessage(yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(access_);
+                access_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5187,6 +5225,39 @@ public final class PSC {
       return getBackupWindowStart();
     }
 
+    public static final int ACCESS_FIELD_NUMBER = 6;
+    private yandex.cloud.api.mdb.sqlserver.v1.PSC.Access access_;
+    /**
+     * <pre>
+     * Access policy to DB
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     */
+    public boolean hasAccess() {
+      return access_ != null;
+    }
+    /**
+     * <pre>
+     * Access policy to DB
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     */
+    public yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getAccess() {
+      return access_ == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.getDefaultInstance() : access_;
+    }
+    /**
+     * <pre>
+     * Access policy to DB
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+     */
+    public yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder getAccessOrBuilder() {
+      return getAccess();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5216,6 +5287,9 @@ public final class PSC {
       if (sqlserverConfigCase_ == 5) {
         output.writeMessage(5, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent) sqlserverConfig_);
       }
+      if (access_ != null) {
+        output.writeMessage(6, getAccess());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5244,6 +5318,10 @@ public final class PSC {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, (yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.SQLServerConfigSet2016sp2ent) sqlserverConfig_);
       }
+      if (access_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getAccess());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5271,6 +5349,11 @@ public final class PSC {
       if (hasBackupWindowStart()) {
         result = result && getBackupWindowStart()
             .equals(other.getBackupWindowStart());
+      }
+      result = result && (hasAccess() == other.hasAccess());
+      if (hasAccess()) {
+        result = result && getAccess()
+            .equals(other.getAccess());
       }
       result = result && getSqlserverConfigCase().equals(
           other.getSqlserverConfigCase());
@@ -5307,6 +5390,10 @@ public final class PSC {
       if (hasBackupWindowStart()) {
         hash = (37 * hash) + BACKUP_WINDOW_START_FIELD_NUMBER;
         hash = (53 * hash) + getBackupWindowStart().hashCode();
+      }
+      if (hasAccess()) {
+        hash = (37 * hash) + ACCESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAccess().hashCode();
       }
       switch (sqlserverConfigCase_) {
         case 2:
@@ -5467,6 +5554,12 @@ public final class PSC {
           backupWindowStart_ = null;
           backupWindowStartBuilder_ = null;
         }
+        if (accessBuilder_ == null) {
+          access_ = null;
+        } else {
+          access_ = null;
+          accessBuilder_ = null;
+        }
         sqlserverConfigCase_ = 0;
         sqlserverConfig_ = null;
         return this;
@@ -5519,6 +5612,11 @@ public final class PSC {
           result.backupWindowStart_ = backupWindowStart_;
         } else {
           result.backupWindowStart_ = backupWindowStartBuilder_.build();
+        }
+        if (accessBuilder_ == null) {
+          result.access_ = access_;
+        } else {
+          result.access_ = accessBuilder_.build();
         }
         result.sqlserverConfigCase_ = sqlserverConfigCase_;
         onBuilt();
@@ -5578,6 +5676,9 @@ public final class PSC {
         }
         if (other.hasBackupWindowStart()) {
           mergeBackupWindowStart(other.getBackupWindowStart());
+        }
+        if (other.hasAccess()) {
+          mergeAccess(other.getAccess());
         }
         switch (other.getSqlserverConfigCase()) {
           case SQLSERVER_CONFIG_2016SP2STD: {
@@ -6373,6 +6474,159 @@ public final class PSC {
           backupWindowStart_ = null;
         }
         return backupWindowStartBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.sqlserver.v1.PSC.Access access_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.PSC.Access, yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder> accessBuilder_;
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public boolean hasAccess() {
+        return accessBuilder_ != null || access_ != null;
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getAccess() {
+        if (accessBuilder_ == null) {
+          return access_ == null ? yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.getDefaultInstance() : access_;
+        } else {
+          return accessBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public Builder setAccess(yandex.cloud.api.mdb.sqlserver.v1.PSC.Access value) {
+        if (accessBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          access_ = value;
+          onChanged();
+        } else {
+          accessBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public Builder setAccess(
+          yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder builderForValue) {
+        if (accessBuilder_ == null) {
+          access_ = builderForValue.build();
+          onChanged();
+        } else {
+          accessBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public Builder mergeAccess(yandex.cloud.api.mdb.sqlserver.v1.PSC.Access value) {
+        if (accessBuilder_ == null) {
+          if (access_ != null) {
+            access_ =
+              yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.newBuilder(access_).mergeFrom(value).buildPartial();
+          } else {
+            access_ = value;
+          }
+          onChanged();
+        } else {
+          accessBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public Builder clearAccess() {
+        if (accessBuilder_ == null) {
+          access_ = null;
+          onChanged();
+        } else {
+          access_ = null;
+          accessBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder getAccessBuilder() {
+        
+        onChanged();
+        return getAccessFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      public yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder getAccessOrBuilder() {
+        if (accessBuilder_ != null) {
+          return accessBuilder_.getMessageOrBuilder();
+        } else {
+          return access_ == null ?
+              yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.getDefaultInstance() : access_;
+        }
+      }
+      /**
+       * <pre>
+       * Access policy to DB
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.sqlserver.v1.Access access = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.sqlserver.v1.PSC.Access, yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder> 
+          getAccessFieldBuilder() {
+        if (accessBuilder_ == null) {
+          accessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.sqlserver.v1.PSC.Access, yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder, yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder>(
+                  getAccess(),
+                  getParentForChildren(),
+                  isClean());
+          access_ = null;
+        }
+        return accessBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10727,6 +10981,503 @@ public final class PSC {
 
   }
 
+  public interface AccessOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.sqlserver.v1.Access)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Allow access for DataLens
+     * </pre>
+     *
+     * <code>bool data_lens = 1;</code>
+     */
+    boolean getDataLens();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.Access}
+   */
+  public  static final class Access extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.Access)
+      AccessOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Access.newBuilder() to construct.
+    private Access(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Access() {
+      dataLens_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Access(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              dataLens_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSC.internal_static_yandex_cloud_mdb_sqlserver_v1_Access_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSC.internal_static_yandex_cloud_mdb_sqlserver_v1_Access_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.class, yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder.class);
+    }
+
+    public static final int DATA_LENS_FIELD_NUMBER = 1;
+    private boolean dataLens_;
+    /**
+     * <pre>
+     * Allow access for DataLens
+     * </pre>
+     *
+     * <code>bool data_lens = 1;</code>
+     */
+    public boolean getDataLens() {
+      return dataLens_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (dataLens_ != false) {
+        output.writeBool(1, dataLens_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (dataLens_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, dataLens_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.sqlserver.v1.PSC.Access)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.sqlserver.v1.PSC.Access other = (yandex.cloud.api.mdb.sqlserver.v1.PSC.Access) obj;
+
+      boolean result = true;
+      result = result && (getDataLens()
+          == other.getDataLens());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATA_LENS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDataLens());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSC.Access parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSC.Access parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSC.Access parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSC.Access parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSC.Access parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSC.Access parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSC.Access parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSC.Access parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSC.Access parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSC.Access parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSC.Access parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSC.Access parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.sqlserver.v1.PSC.Access prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.Access}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.sqlserver.v1.Access)
+        yandex.cloud.api.mdb.sqlserver.v1.PSC.AccessOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSC.internal_static_yandex_cloud_mdb_sqlserver_v1_Access_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSC.internal_static_yandex_cloud_mdb_sqlserver_v1_Access_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.class, yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        dataLens_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSC.internal_static_yandex_cloud_mdb_sqlserver_v1_Access_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSC.Access build() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSC.Access result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSC.Access buildPartial() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSC.Access result = new yandex.cloud.api.mdb.sqlserver.v1.PSC.Access(this);
+        result.dataLens_ = dataLens_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.sqlserver.v1.PSC.Access) {
+          return mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.PSC.Access)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.sqlserver.v1.PSC.Access other) {
+        if (other == yandex.cloud.api.mdb.sqlserver.v1.PSC.Access.getDefaultInstance()) return this;
+        if (other.getDataLens() != false) {
+          setDataLens(other.getDataLens());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.sqlserver.v1.PSC.Access parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.sqlserver.v1.PSC.Access) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean dataLens_ ;
+      /**
+       * <pre>
+       * Allow access for DataLens
+       * </pre>
+       *
+       * <code>bool data_lens = 1;</code>
+       */
+      public boolean getDataLens() {
+        return dataLens_;
+      }
+      /**
+       * <pre>
+       * Allow access for DataLens
+       * </pre>
+       *
+       * <code>bool data_lens = 1;</code>
+       */
+      public Builder setDataLens(boolean value) {
+        
+        dataLens_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Allow access for DataLens
+       * </pre>
+       *
+       * <code>bool data_lens = 1;</code>
+       */
+      public Builder clearDataLens() {
+        
+        dataLens_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.sqlserver.v1.Access)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.sqlserver.v1.Access)
+    private static final yandex.cloud.api.mdb.sqlserver.v1.PSC.Access DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.sqlserver.v1.PSC.Access();
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Access>
+        PARSER = new com.google.protobuf.AbstractParser<Access>() {
+      @java.lang.Override
+      public Access parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Access(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Access> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Access> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.PSC.Access getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_descriptor;
   private static final 
@@ -10762,6 +11513,11 @@ public final class PSC {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_sqlserver_v1_Resources_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_sqlserver_v1_Access_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_sqlserver_v1_Access_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -10799,7 +11555,7 @@ public final class PSC {
       "RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010ST" +
       "OPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nM" +
       "onitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002" +
-      " \001(\t\022\014\n\004link\030\003 \001(\t\"\266\003\n\rClusterConfig\022\017\n\007" +
+      " \001(\t\022\014\n\004link\030\003 \001(\t\"\355\003\n\rClusterConfig\022\017\n\007" +
       "version\030\001 \001(\t\022\205\001\n\033sqlserver_config_2016s" +
       "p2std\030\002 \001(\0132B.yandex.cloud.mdb.sqlserver" +
       ".v1.config.SQLServerConfigSet2016sp2stdH" +
@@ -10809,30 +11565,32 @@ public final class PSC {
       "igSet2016sp2entH\000R\032sqlserverConfig_2016s" +
       "p2ent\022;\n\tresources\030\003 \001(\0132(.yandex.cloud." +
       "mdb.sqlserver.v1.Resources\0223\n\023backup_win" +
-      "dow_start\030\004 \001(\0132\026.google.type.TimeOfDayB" +
-      "\022\n\020sqlserver_config\"\305\003\n\004Host\022\014\n\004name\030\001 \001" +
-      "(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022" +
-      ";\n\tresources\030\004 \001(\0132(.yandex.cloud.mdb.sq" +
-      "lserver.v1.Resources\0226\n\004role\030\005 \001(\0162(.yan" +
-      "dex.cloud.mdb.sqlserver.v1.Host.Role\022:\n\006" +
-      "health\030\006 \001(\0162*.yandex.cloud.mdb.sqlserve" +
-      "r.v1.Host.Health\0228\n\010services\030\007 \003(\0132&.yan" +
-      "dex.cloud.mdb.sqlserver.v1.Service\022\021\n\tsu" +
-      "bnet_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"" +
-      "1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n" +
-      "\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000" +
-      "\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\343\001\n\007" +
-      "Service\0229\n\004type\030\001 \001(\0162+.yandex.cloud.mdb" +
-      ".sqlserver.v1.Service.Type\022=\n\006health\030\002 \001" +
-      "(\0162-.yandex.cloud.mdb.sqlserver.v1.Servi" +
-      "ce.Health\"+\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022" +
-      "\r\n\tSQLSERVER\020\001\"1\n\006Health\022\022\n\016HEALTH_UNKNO" +
-      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032" +
-      "\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030" +
-      "\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\tBu\n!yandex.cl" +
-      "oud.api.mdb.sqlserver.v1B\003PSCZKgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "mdb/sqlserver/v1;sqlserverb\006proto3"
+      "dow_start\030\004 \001(\0132\026.google.type.TimeOfDay\022" +
+      "5\n\006access\030\006 \001(\0132%.yandex.cloud.mdb.sqlse" +
+      "rver.v1.AccessB\022\n\020sqlserver_config\"\305\003\n\004H" +
+      "ost\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n" +
+      "\007zone_id\030\003 \001(\t\022;\n\tresources\030\004 \001(\0132(.yand" +
+      "ex.cloud.mdb.sqlserver.v1.Resources\0226\n\004r" +
+      "ole\030\005 \001(\0162(.yandex.cloud.mdb.sqlserver.v" +
+      "1.Host.Role\022:\n\006health\030\006 \001(\0162*.yandex.clo" +
+      "ud.mdb.sqlserver.v1.Host.Health\0228\n\010servi" +
+      "ces\030\007 \003(\0132&.yandex.cloud.mdb.sqlserver.v" +
+      "1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_p" +
+      "ublic_ip\030\t \001(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000" +
+      "\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016H" +
+      "EALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010" +
+      "DEGRADED\020\003\"\343\001\n\007Service\0229\n\004type\030\001 \001(\0162+.y" +
+      "andex.cloud.mdb.sqlserver.v1.Service.Typ" +
+      "e\022=\n\006health\030\002 \001(\0162-.yandex.cloud.mdb.sql" +
+      "server.v1.Service.Health\"+\n\004Type\022\024\n\020TYPE" +
+      "_UNSPECIFIED\020\000\022\r\n\tSQLSERVER\020\001\"1\n\006Health\022" +
+      "\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002" +
+      "\"P\n\tResources\022\032\n\022resource_preset_id\030\001 \001(" +
+      "\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001" +
+      "(\t\"\033\n\006Access\022\021\n\tdata_lens\030\001 \001(\010Bu\n!yande" +
+      "x.cloud.api.mdb.sqlserver.v1B\003PSCZKgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/mdb/sqlserver/v1;sqlserverb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10872,7 +11630,7 @@ public final class PSC {
     internal_static_yandex_cloud_mdb_sqlserver_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "SqlserverConfig2016Sp2Std", "SqlserverConfig2016Sp2Ent", "Resources", "BackupWindowStart", "SqlserverConfig", });
+        new java.lang.String[] { "Version", "SqlserverConfig2016Sp2Std", "SqlserverConfig2016Sp2Ent", "Resources", "BackupWindowStart", "Access", "SqlserverConfig", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_Host_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_sqlserver_v1_Host_fieldAccessorTable = new
@@ -10891,6 +11649,12 @@ public final class PSC {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_Resources_descriptor,
         new java.lang.String[] { "ResourcePresetId", "DiskSize", "DiskTypeId", });
+    internal_static_yandex_cloud_mdb_sqlserver_v1_Access_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_mdb_sqlserver_v1_Access_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_sqlserver_v1_Access_descriptor,
+        new java.lang.String[] { "DataLens", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
     yandex.cloud.api.mdb.sqlserver.v1.config.Sqlserver2016Sp2.getDescriptor();

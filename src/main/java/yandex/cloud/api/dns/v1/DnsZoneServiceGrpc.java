@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing DNS zones.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -467,10 +470,17 @@ public final class DnsZoneServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing DNS zones.
+   * </pre>
    */
   public static abstract class DnsZoneServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified DNS zone.
+     * To get the list of all available DNS zones, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone> responseObserver) {
@@ -478,6 +488,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of DNS zones in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse> responseObserver) {
@@ -485,6 +498,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a DNS zone in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -492,6 +508,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified DNS zone.
+     * </pre>
      */
     public void update(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -499,6 +518,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified DNS zone. 
+     * </pre>
      */
     public void delete(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -506,6 +528,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified record set.
+     * </pre>
      */
     public void getRecordSet(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> responseObserver) {
@@ -513,6 +538,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of record sets in the specified folder.
+     * </pre>
      */
     public void listRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse> responseObserver) {
@@ -521,10 +549,12 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Method with strict control for changing zone state. Returns error when deleted record is not found, found record
-     * with matched type and name but different ttl or value, or on attempt to add record with existing name and type.
-     * Deletions come first so if record with same name and type is present in both lists then existing record will be
-     * deleted and new one added.
+     * Method with strict control for changing zone state. Returns error when:
+     * 1. Deleted record is not found.
+     * 2. Found record with matched type and name but different TTL or value.
+     * 3. Attempted to add record with existing name and type.
+     * Deletions happen first. If a record with the same name and type exists in both lists,
+     * then the existing record will be deleted, and a new one added.
      * </pre>
      */
     public void updateRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest request,
@@ -534,8 +564,8 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Method without strict control for changing zone state. Do not returns error when deleted record is not found.
-     * Delete records that match all specified fields which allows to delete only specified records from record set.
+     * Method without strict control for changing zone state. Nothing happens if deleted record doesn't exist.
+     * Deletes records that match all specified fields which allows to delete only specified records from a record set.
      * </pre>
      */
     public void upsertRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest request,
@@ -544,6 +574,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified DNS zone.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse> responseObserver) {
@@ -551,6 +584,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified DNS zone.
+     * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
@@ -558,6 +594,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the specified DNS zone.
+     * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -565,6 +604,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified DNS zone.
+     * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -669,6 +711,9 @@ public final class DnsZoneServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing DNS zones.
+   * </pre>
    */
   public static final class DnsZoneServiceStub extends io.grpc.stub.AbstractStub<DnsZoneServiceStub> {
     private DnsZoneServiceStub(io.grpc.Channel channel) {
@@ -687,6 +732,10 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified DNS zone.
+     * To get the list of all available DNS zones, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone> responseObserver) {
@@ -695,6 +744,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of DNS zones in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse> responseObserver) {
@@ -703,6 +755,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a DNS zone in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -711,6 +766,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified DNS zone.
+     * </pre>
      */
     public void update(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -719,6 +777,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified DNS zone. 
+     * </pre>
      */
     public void delete(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -727,6 +788,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified record set.
+     * </pre>
      */
     public void getRecordSet(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> responseObserver) {
@@ -735,6 +799,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of record sets in the specified folder.
+     * </pre>
      */
     public void listRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse> responseObserver) {
@@ -744,10 +811,12 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Method with strict control for changing zone state. Returns error when deleted record is not found, found record
-     * with matched type and name but different ttl or value, or on attempt to add record with existing name and type.
-     * Deletions come first so if record with same name and type is present in both lists then existing record will be
-     * deleted and new one added.
+     * Method with strict control for changing zone state. Returns error when:
+     * 1. Deleted record is not found.
+     * 2. Found record with matched type and name but different TTL or value.
+     * 3. Attempted to add record with existing name and type.
+     * Deletions happen first. If a record with the same name and type exists in both lists,
+     * then the existing record will be deleted, and a new one added.
      * </pre>
      */
     public void updateRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest request,
@@ -758,8 +827,8 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Method without strict control for changing zone state. Do not returns error when deleted record is not found.
-     * Delete records that match all specified fields which allows to delete only specified records from record set.
+     * Method without strict control for changing zone state. Nothing happens if deleted record doesn't exist.
+     * Deletes records that match all specified fields which allows to delete only specified records from a record set.
      * </pre>
      */
     public void upsertRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest request,
@@ -769,6 +838,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified DNS zone.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse> responseObserver) {
@@ -777,6 +849,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified DNS zone.
+     * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
@@ -785,6 +860,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the specified DNS zone.
+     * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -793,6 +871,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified DNS zone.
+     * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -802,6 +883,9 @@ public final class DnsZoneServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing DNS zones.
+   * </pre>
    */
   public static final class DnsZoneServiceBlockingStub extends io.grpc.stub.AbstractStub<DnsZoneServiceBlockingStub> {
     private DnsZoneServiceBlockingStub(io.grpc.Channel channel) {
@@ -820,6 +904,10 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified DNS zone.
+     * To get the list of all available DNS zones, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone get(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRequest request) {
       return blockingUnaryCall(
@@ -827,6 +915,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of DNS zones in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse list(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest request) {
       return blockingUnaryCall(
@@ -834,6 +925,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a DNS zone in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest request) {
       return blockingUnaryCall(
@@ -841,6 +935,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified DNS zone.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest request) {
       return blockingUnaryCall(
@@ -848,6 +945,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified DNS zone. 
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest request) {
       return blockingUnaryCall(
@@ -855,6 +955,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified record set.
+     * </pre>
      */
     public yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet getRecordSet(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest request) {
       return blockingUnaryCall(
@@ -862,6 +965,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of record sets in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse listRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest request) {
       return blockingUnaryCall(
@@ -870,10 +976,12 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Method with strict control for changing zone state. Returns error when deleted record is not found, found record
-     * with matched type and name but different ttl or value, or on attempt to add record with existing name and type.
-     * Deletions come first so if record with same name and type is present in both lists then existing record will be
-     * deleted and new one added.
+     * Method with strict control for changing zone state. Returns error when:
+     * 1. Deleted record is not found.
+     * 2. Found record with matched type and name but different TTL or value.
+     * 3. Attempted to add record with existing name and type.
+     * Deletions happen first. If a record with the same name and type exists in both lists,
+     * then the existing record will be deleted, and a new one added.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateRecordSetsRequest request) {
@@ -883,8 +991,8 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Method without strict control for changing zone state. Do not returns error when deleted record is not found.
-     * Delete records that match all specified fields which allows to delete only specified records from record set.
+     * Method without strict control for changing zone state. Nothing happens if deleted record doesn't exist.
+     * Deletes records that match all specified fields which allows to delete only specified records from a record set.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation upsertRecordSets(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpsertRecordSetsRequest request) {
@@ -893,6 +1001,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified DNS zone.
+     * </pre>
      */
     public yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse listOperations(yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest request) {
       return blockingUnaryCall(
@@ -900,6 +1011,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified DNS zone.
+     * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
       return blockingUnaryCall(
@@ -907,6 +1021,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the specified DNS zone.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
       return blockingUnaryCall(
@@ -914,6 +1031,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified DNS zone.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
       return blockingUnaryCall(
@@ -922,6 +1042,9 @@ public final class DnsZoneServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing DNS zones.
+   * </pre>
    */
   public static final class DnsZoneServiceFutureStub extends io.grpc.stub.AbstractStub<DnsZoneServiceFutureStub> {
     private DnsZoneServiceFutureStub(io.grpc.Channel channel) {
@@ -940,6 +1063,10 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified DNS zone.
+     * To get the list of all available DNS zones, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dns.v1.DnsZoneOuterClass.DnsZone> get(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRequest request) {
@@ -948,6 +1075,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of DNS zones in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesResponse> list(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZonesRequest request) {
@@ -956,6 +1086,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a DNS zone in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.CreateDnsZoneRequest request) {
@@ -964,6 +1097,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified DNS zone.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.UpdateDnsZoneRequest request) {
@@ -972,6 +1108,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified DNS zone. 
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.DeleteDnsZoneRequest request) {
@@ -980,6 +1119,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified record set.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dns.v1.DnsZoneOuterClass.RecordSet> getRecordSet(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.GetDnsZoneRecordSetRequest request) {
@@ -988,6 +1130,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of record sets in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsResponse> listRecordSets(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneRecordSetsRequest request) {
@@ -997,10 +1142,12 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Method with strict control for changing zone state. Returns error when deleted record is not found, found record
-     * with matched type and name but different ttl or value, or on attempt to add record with existing name and type.
-     * Deletions come first so if record with same name and type is present in both lists then existing record will be
-     * deleted and new one added.
+     * Method with strict control for changing zone state. Returns error when:
+     * 1. Deleted record is not found.
+     * 2. Found record with matched type and name but different TTL or value.
+     * 3. Attempted to add record with existing name and type.
+     * Deletions happen first. If a record with the same name and type exists in both lists,
+     * then the existing record will be deleted, and a new one added.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateRecordSets(
@@ -1011,8 +1158,8 @@ public final class DnsZoneServiceGrpc {
 
     /**
      * <pre>
-     * Method without strict control for changing zone state. Do not returns error when deleted record is not found.
-     * Delete records that match all specified fields which allows to delete only specified records from record set.
+     * Method without strict control for changing zone state. Nothing happens if deleted record doesn't exist.
+     * Deletes records that match all specified fields which allows to delete only specified records from a record set.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> upsertRecordSets(
@@ -1022,6 +1169,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified DNS zone.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsResponse> listOperations(
         yandex.cloud.api.dns.v1.DnsZoneServiceOuterClass.ListDnsZoneOperationsRequest request) {
@@ -1030,6 +1180,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified DNS zone.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
@@ -1038,6 +1191,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the specified DNS zone.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
         yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
@@ -1046,6 +1202,9 @@ public final class DnsZoneServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified DNS zone.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
