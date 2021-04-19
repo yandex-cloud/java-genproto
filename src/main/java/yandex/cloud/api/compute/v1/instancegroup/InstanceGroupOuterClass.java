@@ -976,6 +976,14 @@ public final class InstanceGroupOuterClass {
        * <code>DELETING = 5;</code>
        */
       DELETING(5),
+      /**
+       * <pre>
+       * Instance group is paused.
+       * </pre>
+       *
+       * <code>PAUSED = 6;</code>
+       */
+      PAUSED(6),
       UNRECOGNIZED(-1),
       ;
 
@@ -1029,6 +1037,14 @@ public final class InstanceGroupOuterClass {
        * <code>DELETING = 5;</code>
        */
       public static final int DELETING_VALUE = 5;
+      /**
+       * <pre>
+       * Instance group is paused.
+       * </pre>
+       *
+       * <code>PAUSED = 6;</code>
+       */
+      public static final int PAUSED_VALUE = 6;
 
 
       public final int getNumber() {
@@ -1055,6 +1071,7 @@ public final class InstanceGroupOuterClass {
           case 3: return STOPPING;
           case 4: return STOPPED;
           case 5: return DELETING;
+          case 6: return PAUSED;
           default: return null;
         }
       }
@@ -33577,6 +33594,34 @@ public final class InstanceGroupOuterClass {
      * <code>.yandex.cloud.compute.v1.instancegroup.TargetGroupSpec target_group_spec = 1;</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.TargetGroupSpecOrBuilder getTargetGroupSpecOrBuilder();
+
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    boolean hasMaxOpeningTrafficDuration();
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    com.google.protobuf.Duration getMaxOpeningTrafficDuration();
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getMaxOpeningTrafficDurationOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.LoadBalancerSpec}
@@ -33626,6 +33671,19 @@ public final class InstanceGroupOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(targetGroupSpec_);
                 targetGroupSpec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (maxOpeningTrafficDuration_ != null) {
+                subBuilder = maxOpeningTrafficDuration_.toBuilder();
+              }
+              maxOpeningTrafficDuration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxOpeningTrafficDuration_);
+                maxOpeningTrafficDuration_ = subBuilder.buildPartial();
               }
 
               break;
@@ -33695,6 +33753,42 @@ public final class InstanceGroupOuterClass {
       return getTargetGroupSpec();
     }
 
+    public static final int MAX_OPENING_TRAFFIC_DURATION_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration maxOpeningTrafficDuration_;
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    public boolean hasMaxOpeningTrafficDuration() {
+      return maxOpeningTrafficDuration_ != null;
+    }
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    public com.google.protobuf.Duration getMaxOpeningTrafficDuration() {
+      return maxOpeningTrafficDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maxOpeningTrafficDuration_;
+    }
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    public com.google.protobuf.DurationOrBuilder getMaxOpeningTrafficDurationOrBuilder() {
+      return getMaxOpeningTrafficDuration();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -33712,6 +33806,9 @@ public final class InstanceGroupOuterClass {
       if (targetGroupSpec_ != null) {
         output.writeMessage(1, getTargetGroupSpec());
       }
+      if (maxOpeningTrafficDuration_ != null) {
+        output.writeMessage(2, getMaxOpeningTrafficDuration());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -33724,6 +33821,10 @@ public final class InstanceGroupOuterClass {
       if (targetGroupSpec_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTargetGroupSpec());
+      }
+      if (maxOpeningTrafficDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getMaxOpeningTrafficDuration());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -33746,6 +33847,11 @@ public final class InstanceGroupOuterClass {
         result = result && getTargetGroupSpec()
             .equals(other.getTargetGroupSpec());
       }
+      result = result && (hasMaxOpeningTrafficDuration() == other.hasMaxOpeningTrafficDuration());
+      if (hasMaxOpeningTrafficDuration()) {
+        result = result && getMaxOpeningTrafficDuration()
+            .equals(other.getMaxOpeningTrafficDuration());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -33760,6 +33866,10 @@ public final class InstanceGroupOuterClass {
       if (hasTargetGroupSpec()) {
         hash = (37 * hash) + TARGET_GROUP_SPEC_FIELD_NUMBER;
         hash = (53 * hash) + getTargetGroupSpec().hashCode();
+      }
+      if (hasMaxOpeningTrafficDuration()) {
+        hash = (37 * hash) + MAX_OPENING_TRAFFIC_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxOpeningTrafficDuration().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -33900,6 +34010,12 @@ public final class InstanceGroupOuterClass {
           targetGroupSpec_ = null;
           targetGroupSpecBuilder_ = null;
         }
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          maxOpeningTrafficDuration_ = null;
+        } else {
+          maxOpeningTrafficDuration_ = null;
+          maxOpeningTrafficDurationBuilder_ = null;
+        }
         return this;
       }
 
@@ -33930,6 +34046,11 @@ public final class InstanceGroupOuterClass {
           result.targetGroupSpec_ = targetGroupSpec_;
         } else {
           result.targetGroupSpec_ = targetGroupSpecBuilder_.build();
+        }
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          result.maxOpeningTrafficDuration_ = maxOpeningTrafficDuration_;
+        } else {
+          result.maxOpeningTrafficDuration_ = maxOpeningTrafficDurationBuilder_.build();
         }
         onBuilt();
         return result;
@@ -33981,6 +34102,9 @@ public final class InstanceGroupOuterClass {
         if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.LoadBalancerSpec.getDefaultInstance()) return this;
         if (other.hasTargetGroupSpec()) {
           mergeTargetGroupSpec(other.getTargetGroupSpec());
+        }
+        if (other.hasMaxOpeningTrafficDuration()) {
+          mergeMaxOpeningTrafficDuration(other.getMaxOpeningTrafficDuration());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -34162,6 +34286,168 @@ public final class InstanceGroupOuterClass {
           targetGroupSpec_ = null;
         }
         return targetGroupSpecBuilder_;
+      }
+
+      private com.google.protobuf.Duration maxOpeningTrafficDuration_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> maxOpeningTrafficDurationBuilder_;
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public boolean hasMaxOpeningTrafficDuration() {
+        return maxOpeningTrafficDurationBuilder_ != null || maxOpeningTrafficDuration_ != null;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public com.google.protobuf.Duration getMaxOpeningTrafficDuration() {
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          return maxOpeningTrafficDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maxOpeningTrafficDuration_;
+        } else {
+          return maxOpeningTrafficDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public Builder setMaxOpeningTrafficDuration(com.google.protobuf.Duration value) {
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxOpeningTrafficDuration_ = value;
+          onChanged();
+        } else {
+          maxOpeningTrafficDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public Builder setMaxOpeningTrafficDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          maxOpeningTrafficDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxOpeningTrafficDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public Builder mergeMaxOpeningTrafficDuration(com.google.protobuf.Duration value) {
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          if (maxOpeningTrafficDuration_ != null) {
+            maxOpeningTrafficDuration_ =
+              com.google.protobuf.Duration.newBuilder(maxOpeningTrafficDuration_).mergeFrom(value).buildPartial();
+          } else {
+            maxOpeningTrafficDuration_ = value;
+          }
+          onChanged();
+        } else {
+          maxOpeningTrafficDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public Builder clearMaxOpeningTrafficDuration() {
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          maxOpeningTrafficDuration_ = null;
+          onChanged();
+        } else {
+          maxOpeningTrafficDuration_ = null;
+          maxOpeningTrafficDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getMaxOpeningTrafficDurationBuilder() {
+        
+        onChanged();
+        return getMaxOpeningTrafficDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getMaxOpeningTrafficDurationOrBuilder() {
+        if (maxOpeningTrafficDurationBuilder_ != null) {
+          return maxOpeningTrafficDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return maxOpeningTrafficDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : maxOpeningTrafficDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getMaxOpeningTrafficDurationFieldBuilder() {
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          maxOpeningTrafficDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getMaxOpeningTrafficDuration(),
+                  getParentForChildren(),
+                  isClean());
+          maxOpeningTrafficDuration_ = null;
+        }
+        return maxOpeningTrafficDurationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -35379,6 +35665,34 @@ public final class InstanceGroupOuterClass {
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationTargetGroupSpec target_group_spec = 1 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationTargetGroupSpecOrBuilder getTargetGroupSpecOrBuilder();
+
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    boolean hasMaxOpeningTrafficDuration();
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    com.google.protobuf.Duration getMaxOpeningTrafficDuration();
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getMaxOpeningTrafficDurationOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerSpec}
@@ -35428,6 +35742,19 @@ public final class InstanceGroupOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(targetGroupSpec_);
                 targetGroupSpec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (maxOpeningTrafficDuration_ != null) {
+                subBuilder = maxOpeningTrafficDuration_.toBuilder();
+              }
+              maxOpeningTrafficDuration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxOpeningTrafficDuration_);
+                maxOpeningTrafficDuration_ = subBuilder.buildPartial();
               }
 
               break;
@@ -35497,6 +35824,42 @@ public final class InstanceGroupOuterClass {
       return getTargetGroupSpec();
     }
 
+    public static final int MAX_OPENING_TRAFFIC_DURATION_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration maxOpeningTrafficDuration_;
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    public boolean hasMaxOpeningTrafficDuration() {
+      return maxOpeningTrafficDuration_ != null;
+    }
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    public com.google.protobuf.Duration getMaxOpeningTrafficDuration() {
+      return maxOpeningTrafficDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maxOpeningTrafficDuration_;
+    }
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    public com.google.protobuf.DurationOrBuilder getMaxOpeningTrafficDurationOrBuilder() {
+      return getMaxOpeningTrafficDuration();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -35514,6 +35877,9 @@ public final class InstanceGroupOuterClass {
       if (targetGroupSpec_ != null) {
         output.writeMessage(1, getTargetGroupSpec());
       }
+      if (maxOpeningTrafficDuration_ != null) {
+        output.writeMessage(2, getMaxOpeningTrafficDuration());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -35526,6 +35892,10 @@ public final class InstanceGroupOuterClass {
       if (targetGroupSpec_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTargetGroupSpec());
+      }
+      if (maxOpeningTrafficDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getMaxOpeningTrafficDuration());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -35548,6 +35918,11 @@ public final class InstanceGroupOuterClass {
         result = result && getTargetGroupSpec()
             .equals(other.getTargetGroupSpec());
       }
+      result = result && (hasMaxOpeningTrafficDuration() == other.hasMaxOpeningTrafficDuration());
+      if (hasMaxOpeningTrafficDuration()) {
+        result = result && getMaxOpeningTrafficDuration()
+            .equals(other.getMaxOpeningTrafficDuration());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -35562,6 +35937,10 @@ public final class InstanceGroupOuterClass {
       if (hasTargetGroupSpec()) {
         hash = (37 * hash) + TARGET_GROUP_SPEC_FIELD_NUMBER;
         hash = (53 * hash) + getTargetGroupSpec().hashCode();
+      }
+      if (hasMaxOpeningTrafficDuration()) {
+        hash = (37 * hash) + MAX_OPENING_TRAFFIC_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxOpeningTrafficDuration().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -35702,6 +36081,12 @@ public final class InstanceGroupOuterClass {
           targetGroupSpec_ = null;
           targetGroupSpecBuilder_ = null;
         }
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          maxOpeningTrafficDuration_ = null;
+        } else {
+          maxOpeningTrafficDuration_ = null;
+          maxOpeningTrafficDurationBuilder_ = null;
+        }
         return this;
       }
 
@@ -35732,6 +36117,11 @@ public final class InstanceGroupOuterClass {
           result.targetGroupSpec_ = targetGroupSpec_;
         } else {
           result.targetGroupSpec_ = targetGroupSpecBuilder_.build();
+        }
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          result.maxOpeningTrafficDuration_ = maxOpeningTrafficDuration_;
+        } else {
+          result.maxOpeningTrafficDuration_ = maxOpeningTrafficDurationBuilder_.build();
         }
         onBuilt();
         return result;
@@ -35783,6 +36173,9 @@ public final class InstanceGroupOuterClass {
         if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerSpec.getDefaultInstance()) return this;
         if (other.hasTargetGroupSpec()) {
           mergeTargetGroupSpec(other.getTargetGroupSpec());
+        }
+        if (other.hasMaxOpeningTrafficDuration()) {
+          mergeMaxOpeningTrafficDuration(other.getMaxOpeningTrafficDuration());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -35964,6 +36357,168 @@ public final class InstanceGroupOuterClass {
           targetGroupSpec_ = null;
         }
         return targetGroupSpecBuilder_;
+      }
+
+      private com.google.protobuf.Duration maxOpeningTrafficDuration_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> maxOpeningTrafficDurationBuilder_;
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public boolean hasMaxOpeningTrafficDuration() {
+        return maxOpeningTrafficDurationBuilder_ != null || maxOpeningTrafficDuration_ != null;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public com.google.protobuf.Duration getMaxOpeningTrafficDuration() {
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          return maxOpeningTrafficDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maxOpeningTrafficDuration_;
+        } else {
+          return maxOpeningTrafficDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public Builder setMaxOpeningTrafficDuration(com.google.protobuf.Duration value) {
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxOpeningTrafficDuration_ = value;
+          onChanged();
+        } else {
+          maxOpeningTrafficDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public Builder setMaxOpeningTrafficDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          maxOpeningTrafficDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxOpeningTrafficDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public Builder mergeMaxOpeningTrafficDuration(com.google.protobuf.Duration value) {
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          if (maxOpeningTrafficDuration_ != null) {
+            maxOpeningTrafficDuration_ =
+              com.google.protobuf.Duration.newBuilder(maxOpeningTrafficDuration_).mergeFrom(value).buildPartial();
+          } else {
+            maxOpeningTrafficDuration_ = value;
+          }
+          onChanged();
+        } else {
+          maxOpeningTrafficDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public Builder clearMaxOpeningTrafficDuration() {
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          maxOpeningTrafficDuration_ = null;
+          onChanged();
+        } else {
+          maxOpeningTrafficDuration_ = null;
+          maxOpeningTrafficDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getMaxOpeningTrafficDurationBuilder() {
+        
+        onChanged();
+        return getMaxOpeningTrafficDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getMaxOpeningTrafficDurationOrBuilder() {
+        if (maxOpeningTrafficDurationBuilder_ != null) {
+          return maxOpeningTrafficDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return maxOpeningTrafficDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : maxOpeningTrafficDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to be checked by the load balancer. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_opening_traffic_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getMaxOpeningTrafficDurationFieldBuilder() {
+        if (maxOpeningTrafficDurationBuilder_ == null) {
+          maxOpeningTrafficDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getMaxOpeningTrafficDuration(),
+                  getParentForChildren(),
+                  isClean());
+          maxOpeningTrafficDuration_ = null;
+        }
+        return maxOpeningTrafficDurationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -37200,6 +37755,34 @@ public final class InstanceGroupOuterClass {
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthCheckSpecOrBuilder getHealthCheckSpecsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    boolean hasMaxCheckingHealthDuration();
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    com.google.protobuf.Duration getMaxCheckingHealthDuration();
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getMaxCheckingHealthDurationOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.HealthChecksSpec}
@@ -37250,6 +37833,19 @@ public final class InstanceGroupOuterClass {
                   input.readMessage(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthCheckSpec.parser(), extensionRegistry));
               break;
             }
+            case 18: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (maxCheckingHealthDuration_ != null) {
+                subBuilder = maxCheckingHealthDuration_.toBuilder();
+              }
+              maxCheckingHealthDuration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxCheckingHealthDuration_);
+                maxCheckingHealthDuration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -37285,6 +37881,7 @@ public final class InstanceGroupOuterClass {
               yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec.Builder.class);
     }
 
+    private int bitField0_;
     public static final int HEALTH_CHECK_SPECS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthCheckSpec> healthCheckSpecs_;
     /**
@@ -37340,6 +37937,42 @@ public final class InstanceGroupOuterClass {
       return healthCheckSpecs_.get(index);
     }
 
+    public static final int MAX_CHECKING_HEALTH_DURATION_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration maxCheckingHealthDuration_;
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    public boolean hasMaxCheckingHealthDuration() {
+      return maxCheckingHealthDuration_ != null;
+    }
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    public com.google.protobuf.Duration getMaxCheckingHealthDuration() {
+      return maxCheckingHealthDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maxCheckingHealthDuration_;
+    }
+    /**
+     * <pre>
+     * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+     * the VM will be turned off based on the deployment policy. Specified in seconds.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+     */
+    public com.google.protobuf.DurationOrBuilder getMaxCheckingHealthDurationOrBuilder() {
+      return getMaxCheckingHealthDuration();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -37357,6 +37990,9 @@ public final class InstanceGroupOuterClass {
       for (int i = 0; i < healthCheckSpecs_.size(); i++) {
         output.writeMessage(1, healthCheckSpecs_.get(i));
       }
+      if (maxCheckingHealthDuration_ != null) {
+        output.writeMessage(2, getMaxCheckingHealthDuration());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -37369,6 +38005,10 @@ public final class InstanceGroupOuterClass {
       for (int i = 0; i < healthCheckSpecs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, healthCheckSpecs_.get(i));
+      }
+      if (maxCheckingHealthDuration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getMaxCheckingHealthDuration());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -37388,6 +38028,11 @@ public final class InstanceGroupOuterClass {
       boolean result = true;
       result = result && getHealthCheckSpecsList()
           .equals(other.getHealthCheckSpecsList());
+      result = result && (hasMaxCheckingHealthDuration() == other.hasMaxCheckingHealthDuration());
+      if (hasMaxCheckingHealthDuration()) {
+        result = result && getMaxCheckingHealthDuration()
+            .equals(other.getMaxCheckingHealthDuration());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -37402,6 +38047,10 @@ public final class InstanceGroupOuterClass {
       if (getHealthCheckSpecsCount() > 0) {
         hash = (37 * hash) + HEALTH_CHECK_SPECS_FIELD_NUMBER;
         hash = (53 * hash) + getHealthCheckSpecsList().hashCode();
+      }
+      if (hasMaxCheckingHealthDuration()) {
+        hash = (37 * hash) + MAX_CHECKING_HEALTH_DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxCheckingHealthDuration().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -37543,6 +38192,12 @@ public final class InstanceGroupOuterClass {
         } else {
           healthCheckSpecsBuilder_.clear();
         }
+        if (maxCheckingHealthDurationBuilder_ == null) {
+          maxCheckingHealthDuration_ = null;
+        } else {
+          maxCheckingHealthDuration_ = null;
+          maxCheckingHealthDurationBuilder_ = null;
+        }
         return this;
       }
 
@@ -37570,6 +38225,7 @@ public final class InstanceGroupOuterClass {
       public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec buildPartial() {
         yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.HealthChecksSpec(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (healthCheckSpecsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             healthCheckSpecs_ = java.util.Collections.unmodifiableList(healthCheckSpecs_);
@@ -37579,6 +38235,12 @@ public final class InstanceGroupOuterClass {
         } else {
           result.healthCheckSpecs_ = healthCheckSpecsBuilder_.build();
         }
+        if (maxCheckingHealthDurationBuilder_ == null) {
+          result.maxCheckingHealthDuration_ = maxCheckingHealthDuration_;
+        } else {
+          result.maxCheckingHealthDuration_ = maxCheckingHealthDurationBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -37652,6 +38314,9 @@ public final class InstanceGroupOuterClass {
               healthCheckSpecsBuilder_.addAllMessages(other.healthCheckSpecs_);
             }
           }
+        }
+        if (other.hasMaxCheckingHealthDuration()) {
+          mergeMaxCheckingHealthDuration(other.getMaxCheckingHealthDuration());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -37993,6 +38658,168 @@ public final class InstanceGroupOuterClass {
           healthCheckSpecs_ = null;
         }
         return healthCheckSpecsBuilder_;
+      }
+
+      private com.google.protobuf.Duration maxCheckingHealthDuration_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> maxCheckingHealthDurationBuilder_;
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public boolean hasMaxCheckingHealthDuration() {
+        return maxCheckingHealthDurationBuilder_ != null || maxCheckingHealthDuration_ != null;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public com.google.protobuf.Duration getMaxCheckingHealthDuration() {
+        if (maxCheckingHealthDurationBuilder_ == null) {
+          return maxCheckingHealthDuration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maxCheckingHealthDuration_;
+        } else {
+          return maxCheckingHealthDurationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public Builder setMaxCheckingHealthDuration(com.google.protobuf.Duration value) {
+        if (maxCheckingHealthDurationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxCheckingHealthDuration_ = value;
+          onChanged();
+        } else {
+          maxCheckingHealthDurationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public Builder setMaxCheckingHealthDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (maxCheckingHealthDurationBuilder_ == null) {
+          maxCheckingHealthDuration_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxCheckingHealthDurationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public Builder mergeMaxCheckingHealthDuration(com.google.protobuf.Duration value) {
+        if (maxCheckingHealthDurationBuilder_ == null) {
+          if (maxCheckingHealthDuration_ != null) {
+            maxCheckingHealthDuration_ =
+              com.google.protobuf.Duration.newBuilder(maxCheckingHealthDuration_).mergeFrom(value).buildPartial();
+          } else {
+            maxCheckingHealthDuration_ = value;
+          }
+          onChanged();
+        } else {
+          maxCheckingHealthDurationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public Builder clearMaxCheckingHealthDuration() {
+        if (maxCheckingHealthDurationBuilder_ == null) {
+          maxCheckingHealthDuration_ = null;
+          onChanged();
+        } else {
+          maxCheckingHealthDuration_ = null;
+          maxCheckingHealthDurationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getMaxCheckingHealthDurationBuilder() {
+        
+        onChanged();
+        return getMaxCheckingHealthDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getMaxCheckingHealthDurationOrBuilder() {
+        if (maxCheckingHealthDurationBuilder_ != null) {
+          return maxCheckingHealthDurationBuilder_.getMessageOrBuilder();
+        } else {
+          return maxCheckingHealthDuration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : maxCheckingHealthDuration_;
+        }
+      }
+      /**
+       * <pre>
+       * Timeout for waiting for the VM to become healthy. If the timeout is exceeded,
+       * the VM will be turned off based on the deployment policy. Specified in seconds.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration max_checking_health_duration = 2 [(.yandex.cloud.value) = "&gt;=1s"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getMaxCheckingHealthDurationFieldBuilder() {
+        if (maxCheckingHealthDurationBuilder_ == null) {
+          maxCheckingHealthDurationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getMaxCheckingHealthDuration(),
+                  getParentForChildren(),
+                  isClean());
+          maxCheckingHealthDuration_ = null;
+        }
+        return maxCheckingHealthDurationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -47670,7 +48497,7 @@ public final class InstanceGroupOuterClass {
       "instance_group.proto\022%yandex.cloud.compu" +
       "te.v1.instancegroup\032\035yandex/cloud/valida" +
       "tion.proto\032\037google/protobuf/timestamp.pr" +
-      "oto\032\036google/protobuf/duration.proto\"\251\013\n\r" +
+      "oto\032\036google/protobuf/duration.proto\"\265\013\n\r" +
       "InstanceGroup\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002" +
       " \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protob" +
       "uf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descriptio" +
@@ -47704,223 +48531,229 @@ public final class InstanceGroupOuterClass {
       "tion_load_balancer_state\030\025 \001(\0132C.yandex." +
       "cloud.compute.v1.instancegroup.Applicati" +
       "onLoadBalancerState\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"c\n\006Status\022\026\n\022" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"o\n\006Status\022\026\n\022" +
       "STATUS_UNSPECIFIED\020\000\022\014\n\010STARTING\020\001\022\n\n\006AC" +
       "TIVE\020\002\022\014\n\010STOPPING\020\003\022\013\n\007STOPPED\020\004\022\014\n\010DEL" +
-      "ETING\020\005\"O\n\034ApplicationLoadBalancerState\022" +
-      "\027\n\017target_group_id\030\001 \001(\t\022\026\n\016status_messa" +
-      "ge\030\002 \001(\t\"O\n\010Variable\022)\n\003key\030\001 \001(\tB\034\212\3101\0051" +
-      "-128\362\3071\017[a-zA-Z0-9._-]*\022\030\n\005value\030\002 \001(\tB\t" +
-      "\212\3101\005<=128\"D\n\021LoadBalancerState\022\027\n\017target" +
-      "_group_id\030\001 \001(\t\022\026\n\016status_message\030\002 \001(\t\"" +
-      "\277\002\n\025ManagedInstancesState\022\023\n\013target_size" +
-      "\030\001 \001(\003\022\034\n\024running_actual_count\030\004 \001(\003\022\036\n\026" +
-      "running_outdated_count\030\005 \001(\003\022\030\n\020processi" +
-      "ng_count\030\006 \001(\003\032\270\001\n\010Statuses\022\020\n\010creating\030" +
-      "\001 \001(\003\022\020\n\010starting\030\002 \001(\003\022\017\n\007opening\030\003 \001(\003" +
-      "\022\017\n\007warming\030\004 \001(\003\022\017\n\007running\030\005 \001(\003\022\017\n\007cl" +
-      "osing\030\006 \001(\003\022\020\n\010stopping\030\007 \001(\003\022\020\n\010updatin" +
-      "g\030\010 \001(\003\022\020\n\010deleting\030\t \001(\003\022\016\n\006failed\030\n \001(" +
-      "\003\"\352\014\n\013ScalePolicy\022T\n\013fixed_scale\030\001 \001(\0132=" +
-      ".yandex.cloud.compute.v1.instancegroup.S" +
-      "calePolicy.FixedScaleH\000\022R\n\nauto_scale\030\002 " +
-      "\001(\0132<.yandex.cloud.compute.v1.instancegr" +
-      "oup.ScalePolicy.AutoScaleH\000\022U\n\017test_auto" +
-      "_scale\030\003 \001(\0132<.yandex.cloud.compute.v1.i" +
-      "nstancegroup.ScalePolicy.AutoScale\032\373\003\n\tA" +
-      "utoScale\022 \n\rmin_zone_size\030\001 \001(\003B\t\372\3071\0050-1" +
-      "00\022\033\n\010max_size\030\002 \001(\003B\t\372\3071\0050-100\022G\n\024measu" +
-      "rement_duration\030\003 \001(\0132\031.google.protobuf." +
-      "DurationB\016\350\3071\001\372\3071\0061m-10m\022=\n\017warmup_durat" +
-      "ion\030\004 \001(\0132\031.google.protobuf.DurationB\t\372\307" +
-      "1\005<=10m\022E\n\026stabilization_duration\030\005 \001(\0132" +
-      "\031.google.protobuf.DurationB\n\372\3071\0061m-30m\022\035" +
-      "\n\014initial_size\030\006 \001(\003B\007\372\3071\003>=1\022c\n\024cpu_uti" +
-      "lization_rule\030\007 \001(\0132E.yandex.cloud.compu" +
-      "te.v1.instancegroup.ScalePolicy.CpuUtili" +
-      "zationRule\022\\\n\014custom_rules\030\010 \003(\0132=.yande" +
-      "x.cloud.compute.v1.instancegroup.ScalePo" +
-      "licy.CustomRuleB\007\202\3101\003<=1\032<\n\022CpuUtilizati" +
-      "onRule\022&\n\022utilization_target\030\001 \001(\001B\n\372\3071\006" +
-      "10-100\032\342\005\n\nCustomRule\022_\n\trule_type\030\001 \001(\016" +
-      "2F.yandex.cloud.compute.v1.instancegroup" +
-      ".ScalePolicy.CustomRule.RuleTypeB\004\350\3071\001\022c" +
-      "\n\013metric_type\030\002 \001(\0162H.yandex.cloud.compu" +
-      "te.v1.instancegroup.ScalePolicy.CustomRu" +
-      "le.MetricTypeB\004\350\3071\001\022O\n\013metric_name\030\003 \001(\t" +
-      "B:\350\3071\001\362\30712[a-zA-Z0-9./@_][ 0-9a-zA-Z./@_" +
-      ",:;()\\[\\]<>-]{0,198}\022\263\001\n\006labels\030\005 \003(\0132I." +
-      "yandex.cloud.compute.v1.instancegroup.Sc" +
-      "alePolicy.CustomRule.LabelsEntryBX\362\30712[a" +
-      "-zA-Z0-9./@_][ 0-9a-zA-Z./@_,:;()\\[\\]<>-" +
-      "]{0,198}\262\3101\036\022\034^[a-zA-Z][0-9a-zA-Z_]{0,31" +
-      "}$\022\026\n\006target\030\004 \001(\001B\006\372\3071\002>0\022\033\n\tfolder_id\030" +
-      "\006 \001(\tB\010\212\3101\004<=50\022\032\n\007service\030\007 \001(\tB\t\212\3101\005<=" +
-      "200\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"D\n\010RuleType\022\031\n\025RULE_TYPE_UNSP" +
-      "ECIFIED\020\000\022\017\n\013UTILIZATION\020\001\022\014\n\010WORKLOAD\020\002" +
-      "\"A\n\nMetricType\022\033\n\027METRIC_TYPE_UNSPECIFIE" +
-      "D\020\000\022\t\n\005GAUGE\020\001\022\013\n\007COUNTER\020\002\032%\n\nFixedScal" +
-      "e\022\027\n\004size\030\001 \001(\003B\t\372\3071\0051-100B\022\n\nscale_type" +
-      "\022\004\300\3011\001\"\356\002\n\014DeployPolicy\022\"\n\017max_unavailab" +
-      "le\030\001 \001(\003B\t\372\3071\0050-100\022\037\n\014max_deleting\030\002 \001(" +
-      "\003B\t\372\3071\0050-100\022\037\n\014max_creating\030\003 \001(\003B\t\372\3071\005" +
-      "0-100\022 \n\rmax_expansion\030\006 \001(\003B\t\372\3071\0050-100\022" +
-      ">\n\020startup_duration\030\007 \001(\0132\031.google.proto" +
-      "buf.DurationB\t\372\3071\0050m-1h\022N\n\010strategy\030\010 \001(" +
-      "\0162<.yandex.cloud.compute.v1.instancegrou" +
-      "p.DeployPolicy.Strategy\"F\n\010Strategy\022\030\n\024S" +
-      "TRATEGY_UNSPECIFIED\020\000\022\r\n\tPROACTIVE\020\001\022\021\n\r" +
-      "OPPORTUNISTIC\020\002\"\207\001\n\020AllocationPolicy\022T\n\005" +
-      "zones\030\001 \003(\0132<.yandex.cloud.compute.v1.in" +
-      "stancegroup.AllocationPolicy.ZoneB\007\202\3101\003>" +
-      "=1\032\035\n\004Zone\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\"\205\t\n\020In" +
-      "stanceTemplate\022\036\n\013description\030\001 \001(\tB\t\212\3101" +
-      "\005<=256\022\212\001\n\006labels\030\002 \003(\0132C.yandex.cloud.c" +
-      "ompute.v1.instancegroup.InstanceTemplate" +
-      ".LabelsEntryB5\202\3101\004<=64\212\3101\005<=128\262\3101\006\032\0041-6" +
-      "3\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\031\n\013platform_" +
-      "id\030\003 \001(\tB\004\350\3071\001\022R\n\016resources_spec\030\004 \001(\01324" +
-      ".yandex.cloud.compute.v1.instancegroup.R" +
-      "esourcesSpecB\004\350\3071\001\022\216\001\n\010metadata\030\005 \003(\0132E." +
-      "yandex.cloud.compute.v1.instancegroup.In" +
-      "stanceTemplate.MetadataEntryB5\202\3101\005<=128\212" +
-      "\3101\010<=262144\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-" +
-      "z]*\022U\n\016boot_disk_spec\030\006 \001(\01327.yandex.clo" +
-      "ud.compute.v1.instancegroup.AttachedDisk" +
-      "SpecB\004\350\3071\001\022^\n\024secondary_disk_specs\030\007 \003(\013" +
-      "27.yandex.cloud.compute.v1.instancegroup" +
-      ".AttachedDiskSpecB\007\202\3101\003<=3\022c\n\027network_in" +
-      "terface_specs\030\010 \003(\0132;.yandex.cloud.compu" +
-      "te.v1.instancegroup.NetworkInterfaceSpec" +
-      "B\005\202\3101\0011\022R\n\021scheduling_policy\030\t \001(\01327.yan" +
-      "dex.cloud.compute.v1.instancegroup.Sched" +
-      "ulingPolicy\022\032\n\022service_account_id\030\n \001(\t\022" +
-      "P\n\020network_settings\030\013 \001(\01326.yandex.cloud" +
-      ".compute.v1.instancegroup.NetworkSetting" +
-      "s\022\027\n\004name\030\014 \001(\tB\t\212\3101\005<=128\022\033\n\010hostname\030\r" +
-      " \001(\tB\t\212\3101\005<=128\022P\n\020placement_policy\030\016 \001(" +
-      "\01326.yandex.cloud.compute.v1.instancegrou" +
-      "p.PlacementPolicy\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\017Pla" +
-      "cementPolicy\022\032\n\022placement_group_id\030\001 \001(\t" +
-      "\"\337\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001(\003B\022\372\3071\016" +
-      "<=824633720832\022e\n\005cores\030\002 \001(\003BV\372\3071R2,4,6" +
-      ",8,10,12,14,16,18,20,22,24,26,28,30,32,3" +
-      "4,36,40,44,48,52,56,60,64,68,72,76,80\022(\n" +
-      "\rcore_fraction\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022" +
-      "\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\302\004\n\020AttachedD" +
-      "iskSpec\022P\n\004mode\030\001 \001(\0162<.yandex.cloud.com" +
-      "pute.v1.instancegroup.AttachedDiskSpec.M" +
-      "odeB\004\350\3071\001\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-" +
-      "z][-_0-9a-z]{0,19}\022Y\n\tdisk_spec\030\003 \001(\0132@." +
-      "yandex.cloud.compute.v1.instancegroup.At" +
-      "tachedDiskSpec.DiskSpecB\004\350\3071\001\022/\n\007disk_id" +
-      "\030\004 \001(\tB\036\212\3101\005<=128\362\3071\021[-a-zA-Z0-9._{}]*\032\341" +
-      "\001\n\010DiskSpec\022\036\n\013description\030\001 \001(\tB\t\212\3101\005<=" +
-      "256\022\025\n\007type_id\030\002 \001(\tB\004\350\3071\001\022\'\n\004size\030\003 \001(\003" +
-      "B\031\372\3071\0254194304-4398046511104\022\034\n\010image_id\030" +
-      "\004 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\005 \001(\tB\010" +
-      "\212\3101\004<=50H\000\022&\n\036preserve_after_instance_de" +
-      "lete\030\006 \001(\010B\016\n\014source_oneof\";\n\004Mode\022\024\n\020MO" +
-      "DE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_" +
-      "WRITE\020\002\"\222\002\n\024NetworkInterfaceSpec\022\022\n\nnetw" +
-      "ork_id\030\001 \001(\t\022\022\n\nsubnet_ids\030\002 \003(\t\022Z\n\027prim" +
-      "ary_v4_address_spec\030\003 \001(\01329.yandex.cloud" +
-      ".compute.v1.instancegroup.PrimaryAddress" +
-      "Spec\022Z\n\027primary_v6_address_spec\030\004 \001(\01329." +
+      "ETING\020\005\022\n\n\006PAUSED\020\006\"O\n\034ApplicationLoadBa" +
+      "lancerState\022\027\n\017target_group_id\030\001 \001(\t\022\026\n\016" +
+      "status_message\030\002 \001(\t\"O\n\010Variable\022)\n\003key\030" +
+      "\001 \001(\tB\034\212\3101\0051-128\362\3071\017[a-zA-Z0-9._-]*\022\030\n\005v" +
+      "alue\030\002 \001(\tB\t\212\3101\005<=128\"D\n\021LoadBalancerSta" +
+      "te\022\027\n\017target_group_id\030\001 \001(\t\022\026\n\016status_me" +
+      "ssage\030\002 \001(\t\"\277\002\n\025ManagedInstancesState\022\023\n" +
+      "\013target_size\030\001 \001(\003\022\034\n\024running_actual_cou" +
+      "nt\030\004 \001(\003\022\036\n\026running_outdated_count\030\005 \001(\003" +
+      "\022\030\n\020processing_count\030\006 \001(\003\032\270\001\n\010Statuses\022" +
+      "\020\n\010creating\030\001 \001(\003\022\020\n\010starting\030\002 \001(\003\022\017\n\007o" +
+      "pening\030\003 \001(\003\022\017\n\007warming\030\004 \001(\003\022\017\n\007running" +
+      "\030\005 \001(\003\022\017\n\007closing\030\006 \001(\003\022\020\n\010stopping\030\007 \001(" +
+      "\003\022\020\n\010updating\030\010 \001(\003\022\020\n\010deleting\030\t \001(\003\022\016\n" +
+      "\006failed\030\n \001(\003\"\352\014\n\013ScalePolicy\022T\n\013fixed_s" +
+      "cale\030\001 \001(\0132=.yandex.cloud.compute.v1.ins" +
+      "tancegroup.ScalePolicy.FixedScaleH\000\022R\n\na" +
+      "uto_scale\030\002 \001(\0132<.yandex.cloud.compute.v" +
+      "1.instancegroup.ScalePolicy.AutoScaleH\000\022" +
+      "U\n\017test_auto_scale\030\003 \001(\0132<.yandex.cloud." +
+      "compute.v1.instancegroup.ScalePolicy.Aut" +
+      "oScale\032\373\003\n\tAutoScale\022 \n\rmin_zone_size\030\001 " +
+      "\001(\003B\t\372\3071\0050-100\022\033\n\010max_size\030\002 \001(\003B\t\372\3071\0050-" +
+      "100\022G\n\024measurement_duration\030\003 \001(\0132\031.goog" +
+      "le.protobuf.DurationB\016\350\3071\001\372\3071\0061m-10m\022=\n\017" +
+      "warmup_duration\030\004 \001(\0132\031.google.protobuf." +
+      "DurationB\t\372\3071\005<=10m\022E\n\026stabilization_dur" +
+      "ation\030\005 \001(\0132\031.google.protobuf.DurationB\n" +
+      "\372\3071\0061m-30m\022\035\n\014initial_size\030\006 \001(\003B\007\372\3071\003>=" +
+      "1\022c\n\024cpu_utilization_rule\030\007 \001(\0132E.yandex" +
+      ".cloud.compute.v1.instancegroup.ScalePol" +
+      "icy.CpuUtilizationRule\022\\\n\014custom_rules\030\010" +
+      " \003(\0132=.yandex.cloud.compute.v1.instanceg" +
+      "roup.ScalePolicy.CustomRuleB\007\202\3101\003<=1\032<\n\022" +
+      "CpuUtilizationRule\022&\n\022utilization_target" +
+      "\030\001 \001(\001B\n\372\3071\00610-100\032\342\005\n\nCustomRule\022_\n\trul" +
+      "e_type\030\001 \001(\0162F.yandex.cloud.compute.v1.i" +
+      "nstancegroup.ScalePolicy.CustomRule.Rule" +
+      "TypeB\004\350\3071\001\022c\n\013metric_type\030\002 \001(\0162H.yandex" +
+      ".cloud.compute.v1.instancegroup.ScalePol" +
+      "icy.CustomRule.MetricTypeB\004\350\3071\001\022O\n\013metri" +
+      "c_name\030\003 \001(\tB:\350\3071\001\362\30712[a-zA-Z0-9./@_][ 0" +
+      "-9a-zA-Z./@_,:;()\\[\\]<>-]{0,198}\022\263\001\n\006lab" +
+      "els\030\005 \003(\0132I.yandex.cloud.compute.v1.inst" +
+      "ancegroup.ScalePolicy.CustomRule.LabelsE" +
+      "ntryBX\362\30712[a-zA-Z0-9./@_][ 0-9a-zA-Z./@_" +
+      ",:;()\\[\\]<>-]{0,198}\262\3101\036\022\034^[a-zA-Z][0-9a" +
+      "-zA-Z_]{0,31}$\022\026\n\006target\030\004 \001(\001B\006\372\3071\002>0\022\033" +
+      "\n\tfolder_id\030\006 \001(\tB\010\212\3101\004<=50\022\032\n\007service\030\007" +
+      " \001(\tB\t\212\3101\005<=200\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"D\n\010RuleType\022\031\n\025RU" +
+      "LE_TYPE_UNSPECIFIED\020\000\022\017\n\013UTILIZATION\020\001\022\014" +
+      "\n\010WORKLOAD\020\002\"A\n\nMetricType\022\033\n\027METRIC_TYP" +
+      "E_UNSPECIFIED\020\000\022\t\n\005GAUGE\020\001\022\013\n\007COUNTER\020\002\032" +
+      "%\n\nFixedScale\022\027\n\004size\030\001 \001(\003B\t\372\3071\0051-100B\022" +
+      "\n\nscale_type\022\004\300\3011\001\"\356\002\n\014DeployPolicy\022\"\n\017m" +
+      "ax_unavailable\030\001 \001(\003B\t\372\3071\0050-100\022\037\n\014max_d" +
+      "eleting\030\002 \001(\003B\t\372\3071\0050-100\022\037\n\014max_creating" +
+      "\030\003 \001(\003B\t\372\3071\0050-100\022 \n\rmax_expansion\030\006 \001(\003" +
+      "B\t\372\3071\0050-100\022>\n\020startup_duration\030\007 \001(\0132\031." +
+      "google.protobuf.DurationB\t\372\3071\0050m-1h\022N\n\010s" +
+      "trategy\030\010 \001(\0162<.yandex.cloud.compute.v1." +
+      "instancegroup.DeployPolicy.Strategy\"F\n\010S" +
+      "trategy\022\030\n\024STRATEGY_UNSPECIFIED\020\000\022\r\n\tPRO" +
+      "ACTIVE\020\001\022\021\n\rOPPORTUNISTIC\020\002\"\207\001\n\020Allocati" +
+      "onPolicy\022T\n\005zones\030\001 \003(\0132<.yandex.cloud.c" +
+      "ompute.v1.instancegroup.AllocationPolicy" +
+      ".ZoneB\007\202\3101\003>=1\032\035\n\004Zone\022\025\n\007zone_id\030\001 \001(\tB" +
+      "\004\350\3071\001\"\205\t\n\020InstanceTemplate\022\036\n\013descriptio" +
+      "n\030\001 \001(\tB\t\212\3101\005<=256\022\212\001\n\006labels\030\002 \003(\0132C.ya" +
+      "ndex.cloud.compute.v1.instancegroup.Inst" +
+      "anceTemplate.LabelsEntryB5\202\3101\004<=64\212\3101\005<=" +
+      "128\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
+      "\031\n\013platform_id\030\003 \001(\tB\004\350\3071\001\022R\n\016resources_" +
+      "spec\030\004 \001(\01324.yandex.cloud.compute.v1.ins" +
+      "tancegroup.ResourcesSpecB\004\350\3071\001\022\216\001\n\010metad" +
+      "ata\030\005 \003(\0132E.yandex.cloud.compute.v1.inst" +
+      "ancegroup.InstanceTemplate.MetadataEntry" +
+      "B5\202\3101\005<=128\212\3101\010<=262144\262\3101\006\032\0041-63\262\3101\022\022\020[" +
+      "a-z][-_0-9a-z]*\022U\n\016boot_disk_spec\030\006 \001(\0132" +
+      "7.yandex.cloud.compute.v1.instancegroup." +
+      "AttachedDiskSpecB\004\350\3071\001\022^\n\024secondary_disk" +
+      "_specs\030\007 \003(\01327.yandex.cloud.compute.v1.i" +
+      "nstancegroup.AttachedDiskSpecB\007\202\3101\003<=3\022c" +
+      "\n\027network_interface_specs\030\010 \003(\0132;.yandex" +
+      ".cloud.compute.v1.instancegroup.NetworkI" +
+      "nterfaceSpecB\005\202\3101\0011\022R\n\021scheduling_policy" +
+      "\030\t \001(\01327.yandex.cloud.compute.v1.instanc" +
+      "egroup.SchedulingPolicy\022\032\n\022service_accou" +
+      "nt_id\030\n \001(\t\022P\n\020network_settings\030\013 \001(\01326." +
+      "yandex.cloud.compute.v1.instancegroup.Ne" +
+      "tworkSettings\022\027\n\004name\030\014 \001(\tB\t\212\3101\005<=128\022\033" +
+      "\n\010hostname\030\r \001(\tB\t\212\3101\005<=128\022P\n\020placement" +
+      "_policy\030\016 \001(\01326.yandex.cloud.compute.v1." +
+      "instancegroup.PlacementPolicy\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\r" +
+      "MetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\"-\n\017PlacementPolicy\022\032\n\022placement_gr" +
+      "oup_id\030\001 \001(\t\"\337\001\n\rResourcesSpec\022\"\n\006memory" +
+      "\030\001 \001(\003B\022\372\3071\016<=824633720832\022e\n\005cores\030\002 \001(" +
+      "\003BV\372\3071R2,4,6,8,10,12,14,16,18,20,22,24,2" +
+      "6,28,30,32,34,36,40,44,48,52,56,60,64,68" +
+      ",72,76,80\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r0," +
+      "5,20,50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\302" +
+      "\004\n\020AttachedDiskSpec\022P\n\004mode\030\001 \001(\0162<.yand" +
+      "ex.cloud.compute.v1.instancegroup.Attach" +
+      "edDiskSpec.ModeB\004\350\3071\001\022/\n\013device_name\030\002 \001" +
+      "(\tB\032\362\3071\026|[a-z][-_0-9a-z]{0,19}\022Y\n\tdisk_s" +
+      "pec\030\003 \001(\0132@.yandex.cloud.compute.v1.inst" +
+      "ancegroup.AttachedDiskSpec.DiskSpecB\004\350\3071" +
+      "\001\022/\n\007disk_id\030\004 \001(\tB\036\212\3101\005<=128\362\3071\021[-a-zA-" +
+      "Z0-9._{}]*\032\341\001\n\010DiskSpec\022\036\n\013description\030\001" +
+      " \001(\tB\t\212\3101\005<=256\022\025\n\007type_id\030\002 \001(\tB\004\350\3071\001\022\'" +
+      "\n\004size\030\003 \001(\003B\031\372\3071\0254194304-4398046511104\022" +
+      "\034\n\010image_id\030\004 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapsho" +
+      "t_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022&\n\036preserve_after" +
+      "_instance_delete\030\006 \001(\010B\016\n\014source_oneof\";" +
+      "\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONL" +
+      "Y\020\001\022\016\n\nREAD_WRITE\020\002\"\222\002\n\024NetworkInterface" +
+      "Spec\022\022\n\nnetwork_id\030\001 \001(\t\022\022\n\nsubnet_ids\030\002" +
+      " \003(\t\022Z\n\027primary_v4_address_spec\030\003 \001(\01329." +
       "yandex.cloud.compute.v1.instancegroup.Pr" +
-      "imaryAddressSpec\022\032\n\022security_group_ids\030\005" +
-      " \003(\t\"\271\001\n\022PrimaryAddressSpec\022S\n\023one_to_on" +
-      "e_nat_spec\030\001 \001(\01326.yandex.cloud.compute." +
-      "v1.instancegroup.OneToOneNatSpec\022N\n\020dns_" +
-      "record_specs\030\002 \003(\01324.yandex.cloud.comput" +
-      "e.v1.instancegroup.DnsRecordSpec\"\270\001\n\017One" +
-      "ToOneNatSpec\022D\n\nip_version\030\001 \001(\01620.yande" +
-      "x.cloud.compute.v1.instancegroup.IpVersi" +
-      "on\022\017\n\007address\030\002 \001(\t\022N\n\020dns_record_specs\030" +
-      "\003 \003(\01324.yandex.cloud.compute.v1.instance" +
-      "group.DnsRecordSpec\"_\n\rDnsRecordSpec\022\022\n\004" +
-      "fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n" +
-      "\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"\'\n\020" +
-      "SchedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"\274\001" +
-      "\n\017NetworkSettings\022I\n\004type\030\001 \001(\0162;.yandex" +
-      ".cloud.compute.v1.instancegroup.NetworkS" +
-      "ettings.Type\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIED" +
-      "\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACCELERATED" +
-      "\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"e\n\020LoadBala" +
-      "ncerSpec\022Q\n\021target_group_spec\030\001 \001(\01326.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Targ" +
-      "etGroupSpec\"\262\002\n\017TargetGroupSpec\0222\n\004name\030" +
-      "\001 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9" +
-      "])?\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022\233\001\n\006" +
-      "labels\030\003 \003(\0132B.yandex.cloud.compute.v1.i" +
-      "nstancegroup.TargetGroupSpec.LabelsEntry" +
-      "BG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101" +
-      "\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\"\201\001\n\033ApplicationLoadBalancerSpec\022b\n\021targ" +
-      "et_group_spec\030\001 \001(\0132A.yandex.cloud.compu" +
-      "te.v1.instancegroup.ApplicationTargetGro" +
-      "upSpecB\004\350\3071\001\"\315\001\n\032ApplicationTargetGroupS" +
-      "pec\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022]" +
-      "\n\006labels\030\003 \003(\0132M.yandex.cloud.compute.v1" +
-      ".instancegroup.ApplicationTargetGroupSpe" +
-      "c.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"o\n\020HealthChecksSpec" +
-      "\022[\n\022health_check_specs\030\001 \003(\01326.yandex.cl" +
-      "oud.compute.v1.instancegroup.HealthCheck" +
-      "SpecB\007\202\3101\003>=1\"\244\004\n\017HealthCheckSpec\0228\n\010int" +
-      "erval\030\001 \001(\0132\031.google.protobuf.DurationB\013" +
-      "\372\3071\0071s-300s\0226\n\007timeout\030\002 \001(\0132\031.google.pr" +
-      "otobuf.DurationB\n\372\3071\0061s-60s\0225\n\023unhealthy" +
-      "_threshold\030\003 \001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9," +
-      "10\0223\n\021healthy_threshold\030\004 \001(\003B\030\372\3071\0240,2,3" +
-      ",4,5,6,7,8,9,10\022X\n\013tcp_options\030\005 \001(\0132A.y" +
-      "andex.cloud.compute.v1.instancegroup.Hea" +
-      "lthCheckSpec.TcpOptionsH\000\022Z\n\014http_option" +
-      "s\030\006 \001(\0132B.yandex.cloud.compute.v1.instan" +
-      "cegroup.HealthCheckSpec.HttpOptionsH\000\032\'\n" +
-      "\nTcpOptions\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-65535\0326" +
-      "\n\013HttpOptions\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-65535" +
-      "\022\014\n\004path\030\002 \001(\tB\034\n\024health_check_options\022\004" +
-      "\300\3011\001\"\250\005\n\017ManagedInstance\022\n\n\002id\030\001 \001(\t\022M\n\006" +
-      "status\030\002 \001(\0162=.yandex.cloud.compute.v1.i" +
-      "nstancegroup.ManagedInstance.Status\022\023\n\013i" +
-      "nstance_id\030\003 \001(\t\022\014\n\004fqdn\030\004 \001(\t\022\014\n\004name\030\005" +
-      " \001(\t\022\026\n\016status_message\030\006 \001(\t\022\017\n\007zone_id\030" +
-      "\007 \001(\t\022S\n\022network_interfaces\030\010 \003(\01327.yand" +
-      "ex.cloud.compute.v1.instancegroup.Networ" +
-      "kInterface\0225\n\021status_changed_at\030\t \001(\0132\032." +
-      "google.protobuf.Timestamp\"\323\002\n\006Status\022\026\n\022" +
-      "STATUS_UNSPECIFIED\020\000\022\025\n\021CREATING_INSTANC" +
-      "E\020\013\022\025\n\021UPDATING_INSTANCE\020\014\022\025\n\021DELETING_I" +
-      "NSTANCE\020\r\022\025\n\021STARTING_INSTANCE\020\016\022\025\n\021STOP" +
-      "PING_INSTANCE\020\017\022\035\n\031AWAITING_STARTUP_DURA" +
-      "TION\020\020\022\023\n\017CHECKING_HEALTH\020\021\022\023\n\017OPENING_T" +
-      "RAFFIC\020\022\022\034\n\030AWAITING_WARMUP_DURATION\020\023\022\023" +
-      "\n\017CLOSING_TRAFFIC\020\024\022\022\n\016RUNNING_ACTUAL\020\025\022" +
-      "\024\n\020RUNNING_OUTDATED\020\026\022\013\n\007STOPPED\020\027\022\013\n\007DE" +
-      "LETED\020\030\"\357\001\n\020NetworkInterface\022\r\n\005index\030\001 " +
-      "\001(\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n\tsubnet_id\030\003 " +
-      "\001(\t\022Q\n\022primary_v4_address\030\004 \001(\01325.yandex" +
-      ".cloud.compute.v1.instancegroup.PrimaryA" +
-      "ddress\022Q\n\022primary_v6_address\030\005 \001(\01325.yan" +
-      "dex.cloud.compute.v1.instancegroup.Prima" +
-      "ryAddress\"m\n\016PrimaryAddress\022\017\n\007address\030\001" +
-      " \001(\t\022J\n\016one_to_one_nat\030\002 \001(\01322.yandex.cl" +
+      "imaryAddressSpec\022Z\n\027primary_v6_address_s" +
+      "pec\030\004 \001(\01329.yandex.cloud.compute.v1.inst" +
+      "ancegroup.PrimaryAddressSpec\022\032\n\022security" +
+      "_group_ids\030\005 \003(\t\"\271\001\n\022PrimaryAddressSpec\022" +
+      "S\n\023one_to_one_nat_spec\030\001 \001(\01326.yandex.cl" +
       "oud.compute.v1.instancegroup.OneToOneNat" +
-      "\"d\n\013OneToOneNat\022\017\n\007address\030\001 \001(\t\022D\n\nip_v" +
-      "ersion\030\002 \001(\01620.yandex.cloud.compute.v1.i" +
-      "nstancegroup.IpVersion\"K\n\tLogRecord\022-\n\tt" +
-      "imestamp\030\001 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022\017\n\007message\030\002 \001(\t*;\n\tIpVersion\022\032\n\026IP_V" +
-      "ERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002" +
-      "B\204\001\n)yandex.cloud.api.compute.v1.instanc" +
-      "egroupZWgithub.com/yandex-cloud/go-genpr" +
-      "oto/yandex/cloud/compute/v1/instancegrou" +
-      "p;instancegroupb\006proto3"
+      "Spec\022N\n\020dns_record_specs\030\002 \003(\01324.yandex." +
+      "cloud.compute.v1.instancegroup.DnsRecord" +
+      "Spec\"\270\001\n\017OneToOneNatSpec\022D\n\nip_version\030\001" +
+      " \001(\01620.yandex.cloud.compute.v1.instanceg" +
+      "roup.IpVersion\022\017\n\007address\030\002 \001(\t\022N\n\020dns_r" +
+      "ecord_specs\030\003 \003(\01324.yandex.cloud.compute" +
+      ".v1.instancegroup.DnsRecordSpec\"_\n\rDnsRe" +
+      "cordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone" +
+      "_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003p" +
+      "tr\030\004 \001(\010\"\'\n\020SchedulingPolicy\022\023\n\013preempti" +
+      "ble\030\001 \001(\010\"\274\001\n\017NetworkSettings\022I\n\004type\030\001 " +
+      "\001(\0162;.yandex.cloud.compute.v1.instancegr" +
+      "oup.NetworkSettings.Type\"^\n\004Type\022\024\n\020TYPE" +
+      "_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE" +
+      "_ACCELERATED\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003" +
+      "\"\260\001\n\020LoadBalancerSpec\022Q\n\021target_group_sp" +
+      "ec\030\001 \001(\01326.yandex.cloud.compute.v1.insta" +
+      "ncegroup.TargetGroupSpec\022I\n\034max_opening_" +
+      "traffic_duration\030\002 \001(\0132\031.google.protobuf" +
+      ".DurationB\010\372\3071\004>=1s\"\262\002\n\017TargetGroupSpec\022" +
+      "2\n\004name\030\001 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61" +
+      "}[a-z0-9])?\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=" +
+      "256\022\233\001\n\006labels\030\003 \003(\0132B.yandex.cloud.comp" +
+      "ute.v1.instancegroup.TargetGroupSpec.Lab" +
+      "elsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9" +
+      "a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]" +
+      "*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"\314\001\n\033ApplicationLoadBalancerSpec" +
+      "\022b\n\021target_group_spec\030\001 \001(\0132A.yandex.clo" +
+      "ud.compute.v1.instancegroup.ApplicationT" +
+      "argetGroupSpecB\004\350\3071\001\022I\n\034max_opening_traf" +
+      "fic_duration\030\002 \001(\0132\031.google.protobuf.Dur" +
+      "ationB\010\372\3071\004>=1s\"\315\001\n\032ApplicationTargetGro" +
+      "upSpec\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(" +
+      "\t\022]\n\006labels\030\003 \003(\0132M.yandex.cloud.compute" +
+      ".v1.instancegroup.ApplicationTargetGroup" +
+      "Spec.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\272\001\n\020HealthChecks" +
+      "Spec\022[\n\022health_check_specs\030\001 \003(\01326.yande" +
+      "x.cloud.compute.v1.instancegroup.HealthC" +
+      "heckSpecB\007\202\3101\003>=1\022I\n\034max_checking_health" +
+      "_duration\030\002 \001(\0132\031.google.protobuf.Durati" +
+      "onB\010\372\3071\004>=1s\"\244\004\n\017HealthCheckSpec\0228\n\010inte" +
+      "rval\030\001 \001(\0132\031.google.protobuf.DurationB\013\372" +
+      "\3071\0071s-300s\0226\n\007timeout\030\002 \001(\0132\031.google.pro" +
+      "tobuf.DurationB\n\372\3071\0061s-60s\0225\n\023unhealthy_" +
+      "threshold\030\003 \001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,1" +
+      "0\0223\n\021healthy_threshold\030\004 \001(\003B\030\372\3071\0240,2,3," +
+      "4,5,6,7,8,9,10\022X\n\013tcp_options\030\005 \001(\0132A.ya" +
+      "ndex.cloud.compute.v1.instancegroup.Heal" +
+      "thCheckSpec.TcpOptionsH\000\022Z\n\014http_options" +
+      "\030\006 \001(\0132B.yandex.cloud.compute.v1.instanc" +
+      "egroup.HealthCheckSpec.HttpOptionsH\000\032\'\n\n" +
+      "TcpOptions\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-65535\0326\n" +
+      "\013HttpOptions\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-65535\022" +
+      "\014\n\004path\030\002 \001(\tB\034\n\024health_check_options\022\004\300" +
+      "\3011\001\"\250\005\n\017ManagedInstance\022\n\n\002id\030\001 \001(\t\022M\n\006s" +
+      "tatus\030\002 \001(\0162=.yandex.cloud.compute.v1.in" +
+      "stancegroup.ManagedInstance.Status\022\023\n\013in" +
+      "stance_id\030\003 \001(\t\022\014\n\004fqdn\030\004 \001(\t\022\014\n\004name\030\005 " +
+      "\001(\t\022\026\n\016status_message\030\006 \001(\t\022\017\n\007zone_id\030\007" +
+      " \001(\t\022S\n\022network_interfaces\030\010 \003(\01327.yande" +
+      "x.cloud.compute.v1.instancegroup.Network" +
+      "Interface\0225\n\021status_changed_at\030\t \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\"\323\002\n\006Status\022\026\n\022S" +
+      "TATUS_UNSPECIFIED\020\000\022\025\n\021CREATING_INSTANCE" +
+      "\020\013\022\025\n\021UPDATING_INSTANCE\020\014\022\025\n\021DELETING_IN" +
+      "STANCE\020\r\022\025\n\021STARTING_INSTANCE\020\016\022\025\n\021STOPP" +
+      "ING_INSTANCE\020\017\022\035\n\031AWAITING_STARTUP_DURAT" +
+      "ION\020\020\022\023\n\017CHECKING_HEALTH\020\021\022\023\n\017OPENING_TR" +
+      "AFFIC\020\022\022\034\n\030AWAITING_WARMUP_DURATION\020\023\022\023\n" +
+      "\017CLOSING_TRAFFIC\020\024\022\022\n\016RUNNING_ACTUAL\020\025\022\024" +
+      "\n\020RUNNING_OUTDATED\020\026\022\013\n\007STOPPED\020\027\022\013\n\007DEL" +
+      "ETED\020\030\"\357\001\n\020NetworkInterface\022\r\n\005index\030\001 \001" +
+      "(\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n\tsubnet_id\030\003 \001" +
+      "(\t\022Q\n\022primary_v4_address\030\004 \001(\01325.yandex." +
+      "cloud.compute.v1.instancegroup.PrimaryAd" +
+      "dress\022Q\n\022primary_v6_address\030\005 \001(\01325.yand" +
+      "ex.cloud.compute.v1.instancegroup.Primar" +
+      "yAddress\"m\n\016PrimaryAddress\022\017\n\007address\030\001 " +
+      "\001(\t\022J\n\016one_to_one_nat\030\002 \001(\01322.yandex.clo" +
+      "ud.compute.v1.instancegroup.OneToOneNat\"" +
+      "d\n\013OneToOneNat\022\017\n\007address\030\001 \001(\t\022D\n\nip_ve" +
+      "rsion\030\002 \001(\01620.yandex.cloud.compute.v1.in" +
+      "stancegroup.IpVersion\"K\n\tLogRecord\022-\n\tti" +
+      "mestamp\030\001 \001(\0132\032.google.protobuf.Timestam" +
+      "p\022\017\n\007message\030\002 \001(\t*;\n\tIpVersion\022\032\n\026IP_VE" +
+      "RSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002B" +
+      "\204\001\n)yandex.cloud.api.compute.v1.instance" +
+      "groupZWgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/compute/v1/instancegroup" +
+      ";instancegroupb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -48116,7 +48949,7 @@ public final class InstanceGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_LoadBalancerSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_LoadBalancerSpec_descriptor,
-        new java.lang.String[] { "TargetGroupSpec", });
+        new java.lang.String[] { "TargetGroupSpec", "MaxOpeningTrafficDuration", });
     internal_static_yandex_cloud_compute_v1_instancegroup_TargetGroupSpec_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_compute_v1_instancegroup_TargetGroupSpec_fieldAccessorTable = new
@@ -48134,7 +48967,7 @@ public final class InstanceGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationLoadBalancerSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationLoadBalancerSpec_descriptor,
-        new java.lang.String[] { "TargetGroupSpec", });
+        new java.lang.String[] { "TargetGroupSpec", "MaxOpeningTrafficDuration", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_compute_v1_instancegroup_ApplicationTargetGroupSpec_fieldAccessorTable = new
@@ -48152,7 +48985,7 @@ public final class InstanceGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_HealthChecksSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_HealthChecksSpec_descriptor,
-        new java.lang.String[] { "HealthCheckSpecs", });
+        new java.lang.String[] { "HealthCheckSpecs", "MaxCheckingHealthDuration", });
     internal_static_yandex_cloud_compute_v1_instancegroup_HealthCheckSpec_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_compute_v1_instancegroup_HealthCheckSpec_fieldAccessorTable = new

@@ -1401,6 +1401,143 @@ public final class Mysql80 {
      * <code>.google.protobuf.Int64Value mdb_preserve_binlog_bytes = 51 [(.yandex.cloud.value) = "1073741824-107374182400"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMdbPreserveBinlogBytesOrBuilder();
+
+    /**
+     * <pre>
+     * The number of seconds the server waits for activity on an interactive connection before closing it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+     */
+    boolean hasInteractiveTimeout();
+    /**
+     * <pre>
+     * The number of seconds the server waits for activity on an interactive connection before closing it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+     */
+    com.google.protobuf.Int64Value getInteractiveTimeout();
+    /**
+     * <pre>
+     * The number of seconds the server waits for activity on an interactive connection before closing it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInteractiveTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+     */
+    boolean hasWaitTimeout();
+    /**
+     * <pre>
+     * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+     */
+    com.google.protobuf.Int64Value getWaitTimeout();
+    /**
+     * <pre>
+     * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getWaitTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+     */
+    boolean hasMdbOfflineModeEnableLag();
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+     */
+    com.google.protobuf.Int64Value getMdbOfflineModeEnableLag();
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeEnableLagOrBuilder();
+
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+     * Should be less than mdb_offline_mode_enable_lag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+     */
+    boolean hasMdbOfflineModeDisableLag();
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+     * Should be less than mdb_offline_mode_enable_lag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+     */
+    com.google.protobuf.Int64Value getMdbOfflineModeDisableLag();
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+     * Should be less than mdb_offline_mode_enable_lag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeDisableLagOrBuilder();
+
+    /**
+     * <pre>
+     * The limit on memory consumption for the range optimizer.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     */
+    boolean hasRangeOptimizerMaxMemSize();
+    /**
+     * <pre>
+     * The limit on memory consumption for the range optimizer.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     */
+    com.google.protobuf.Int64Value getRangeOptimizerMaxMemSize();
+    /**
+     * <pre>
+     * The limit on memory consumption for the range optimizer.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getRangeOptimizerMaxMemSizeOrBuilder();
   }
   /**
    * <pre>
@@ -2074,6 +2211,71 @@ public final class Mysql80 {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(mdbPreserveBinlogBytes_);
                 mdbPreserveBinlogBytes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 418: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (interactiveTimeout_ != null) {
+                subBuilder = interactiveTimeout_.toBuilder();
+              }
+              interactiveTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(interactiveTimeout_);
+                interactiveTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 426: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (waitTimeout_ != null) {
+                subBuilder = waitTimeout_.toBuilder();
+              }
+              waitTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(waitTimeout_);
+                waitTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 434: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (mdbOfflineModeEnableLag_ != null) {
+                subBuilder = mdbOfflineModeEnableLag_.toBuilder();
+              }
+              mdbOfflineModeEnableLag_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mdbOfflineModeEnableLag_);
+                mdbOfflineModeEnableLag_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 442: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (mdbOfflineModeDisableLag_ != null) {
+                subBuilder = mdbOfflineModeDisableLag_.toBuilder();
+              }
+              mdbOfflineModeDisableLag_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mdbOfflineModeDisableLag_);
+                mdbOfflineModeDisableLag_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 450: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (rangeOptimizerMaxMemSize_ != null) {
+                subBuilder = rangeOptimizerMaxMemSize_.toBuilder();
+              }
+              rangeOptimizerMaxMemSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rangeOptimizerMaxMemSize_);
+                rangeOptimizerMaxMemSize_ = subBuilder.buildPartial();
               }
 
               break;
@@ -4728,6 +4930,183 @@ public final class Mysql80 {
       return getMdbPreserveBinlogBytes();
     }
 
+    public static final int INTERACTIVE_TIMEOUT_FIELD_NUMBER = 52;
+    private com.google.protobuf.Int64Value interactiveTimeout_;
+    /**
+     * <pre>
+     * The number of seconds the server waits for activity on an interactive connection before closing it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+     */
+    public boolean hasInteractiveTimeout() {
+      return interactiveTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * The number of seconds the server waits for activity on an interactive connection before closing it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+     */
+    public com.google.protobuf.Int64Value getInteractiveTimeout() {
+      return interactiveTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : interactiveTimeout_;
+    }
+    /**
+     * <pre>
+     * The number of seconds the server waits for activity on an interactive connection before closing it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getInteractiveTimeoutOrBuilder() {
+      return getInteractiveTimeout();
+    }
+
+    public static final int WAIT_TIMEOUT_FIELD_NUMBER = 53;
+    private com.google.protobuf.Int64Value waitTimeout_;
+    /**
+     * <pre>
+     * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+     */
+    public boolean hasWaitTimeout() {
+      return waitTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+     */
+    public com.google.protobuf.Int64Value getWaitTimeout() {
+      return waitTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : waitTimeout_;
+    }
+    /**
+     * <pre>
+     * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getWaitTimeoutOrBuilder() {
+      return getWaitTimeout();
+    }
+
+    public static final int MDB_OFFLINE_MODE_ENABLE_LAG_FIELD_NUMBER = 54;
+    private com.google.protobuf.Int64Value mdbOfflineModeEnableLag_;
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+     */
+    public boolean hasMdbOfflineModeEnableLag() {
+      return mdbOfflineModeEnableLag_ != null;
+    }
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+     */
+    public com.google.protobuf.Int64Value getMdbOfflineModeEnableLag() {
+      return mdbOfflineModeEnableLag_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mdbOfflineModeEnableLag_;
+    }
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeEnableLagOrBuilder() {
+      return getMdbOfflineModeEnableLag();
+    }
+
+    public static final int MDB_OFFLINE_MODE_DISABLE_LAG_FIELD_NUMBER = 55;
+    private com.google.protobuf.Int64Value mdbOfflineModeDisableLag_;
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+     * Should be less than mdb_offline_mode_enable_lag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+     */
+    public boolean hasMdbOfflineModeDisableLag() {
+      return mdbOfflineModeDisableLag_ != null;
+    }
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+     * Should be less than mdb_offline_mode_enable_lag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+     */
+    public com.google.protobuf.Int64Value getMdbOfflineModeDisableLag() {
+      return mdbOfflineModeDisableLag_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mdbOfflineModeDisableLag_;
+    }
+    /**
+     * <pre>
+     * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+     * Should be less than mdb_offline_mode_enable_lag.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeDisableLagOrBuilder() {
+      return getMdbOfflineModeDisableLag();
+    }
+
+    public static final int RANGE_OPTIMIZER_MAX_MEM_SIZE_FIELD_NUMBER = 56;
+    private com.google.protobuf.Int64Value rangeOptimizerMaxMemSize_;
+    /**
+     * <pre>
+     * The limit on memory consumption for the range optimizer.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     */
+    public boolean hasRangeOptimizerMaxMemSize() {
+      return rangeOptimizerMaxMemSize_ != null;
+    }
+    /**
+     * <pre>
+     * The limit on memory consumption for the range optimizer.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     */
+    public com.google.protobuf.Int64Value getRangeOptimizerMaxMemSize() {
+      return rangeOptimizerMaxMemSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : rangeOptimizerMaxMemSize_;
+    }
+    /**
+     * <pre>
+     * The limit on memory consumption for the range optimizer.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getRangeOptimizerMaxMemSizeOrBuilder() {
+      return getRangeOptimizerMaxMemSize();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4899,6 +5278,21 @@ public final class Mysql80 {
       }
       if (mdbPreserveBinlogBytes_ != null) {
         output.writeMessage(51, getMdbPreserveBinlogBytes());
+      }
+      if (interactiveTimeout_ != null) {
+        output.writeMessage(52, getInteractiveTimeout());
+      }
+      if (waitTimeout_ != null) {
+        output.writeMessage(53, getWaitTimeout());
+      }
+      if (mdbOfflineModeEnableLag_ != null) {
+        output.writeMessage(54, getMdbOfflineModeEnableLag());
+      }
+      if (mdbOfflineModeDisableLag_ != null) {
+        output.writeMessage(55, getMdbOfflineModeDisableLag());
+      }
+      if (rangeOptimizerMaxMemSize_ != null) {
+        output.writeMessage(56, getRangeOptimizerMaxMemSize());
       }
       unknownFields.writeTo(output);
     }
@@ -5117,6 +5511,26 @@ public final class Mysql80 {
       if (mdbPreserveBinlogBytes_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(51, getMdbPreserveBinlogBytes());
+      }
+      if (interactiveTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(52, getInteractiveTimeout());
+      }
+      if (waitTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(53, getWaitTimeout());
+      }
+      if (mdbOfflineModeEnableLag_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(54, getMdbOfflineModeEnableLag());
+      }
+      if (mdbOfflineModeDisableLag_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(55, getMdbOfflineModeDisableLag());
+      }
+      if (rangeOptimizerMaxMemSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(56, getRangeOptimizerMaxMemSize());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5360,6 +5774,31 @@ public final class Mysql80 {
         result = result && getMdbPreserveBinlogBytes()
             .equals(other.getMdbPreserveBinlogBytes());
       }
+      result = result && (hasInteractiveTimeout() == other.hasInteractiveTimeout());
+      if (hasInteractiveTimeout()) {
+        result = result && getInteractiveTimeout()
+            .equals(other.getInteractiveTimeout());
+      }
+      result = result && (hasWaitTimeout() == other.hasWaitTimeout());
+      if (hasWaitTimeout()) {
+        result = result && getWaitTimeout()
+            .equals(other.getWaitTimeout());
+      }
+      result = result && (hasMdbOfflineModeEnableLag() == other.hasMdbOfflineModeEnableLag());
+      if (hasMdbOfflineModeEnableLag()) {
+        result = result && getMdbOfflineModeEnableLag()
+            .equals(other.getMdbOfflineModeEnableLag());
+      }
+      result = result && (hasMdbOfflineModeDisableLag() == other.hasMdbOfflineModeDisableLag());
+      if (hasMdbOfflineModeDisableLag()) {
+        result = result && getMdbOfflineModeDisableLag()
+            .equals(other.getMdbOfflineModeDisableLag());
+      }
+      result = result && (hasRangeOptimizerMaxMemSize() == other.hasRangeOptimizerMaxMemSize());
+      if (hasRangeOptimizerMaxMemSize()) {
+        result = result && getRangeOptimizerMaxMemSize()
+            .equals(other.getRangeOptimizerMaxMemSize());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5560,6 +5999,26 @@ public final class Mysql80 {
       if (hasMdbPreserveBinlogBytes()) {
         hash = (37 * hash) + MDB_PRESERVE_BINLOG_BYTES_FIELD_NUMBER;
         hash = (53 * hash) + getMdbPreserveBinlogBytes().hashCode();
+      }
+      if (hasInteractiveTimeout()) {
+        hash = (37 * hash) + INTERACTIVE_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getInteractiveTimeout().hashCode();
+      }
+      if (hasWaitTimeout()) {
+        hash = (37 * hash) + WAIT_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getWaitTimeout().hashCode();
+      }
+      if (hasMdbOfflineModeEnableLag()) {
+        hash = (37 * hash) + MDB_OFFLINE_MODE_ENABLE_LAG_FIELD_NUMBER;
+        hash = (53 * hash) + getMdbOfflineModeEnableLag().hashCode();
+      }
+      if (hasMdbOfflineModeDisableLag()) {
+        hash = (37 * hash) + MDB_OFFLINE_MODE_DISABLE_LAG_FIELD_NUMBER;
+        hash = (53 * hash) + getMdbOfflineModeDisableLag().hashCode();
+      }
+      if (hasRangeOptimizerMaxMemSize()) {
+        hash = (37 * hash) + RANGE_OPTIMIZER_MAX_MEM_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getRangeOptimizerMaxMemSize().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5972,6 +6431,36 @@ public final class Mysql80 {
           mdbPreserveBinlogBytes_ = null;
           mdbPreserveBinlogBytesBuilder_ = null;
         }
+        if (interactiveTimeoutBuilder_ == null) {
+          interactiveTimeout_ = null;
+        } else {
+          interactiveTimeout_ = null;
+          interactiveTimeoutBuilder_ = null;
+        }
+        if (waitTimeoutBuilder_ == null) {
+          waitTimeout_ = null;
+        } else {
+          waitTimeout_ = null;
+          waitTimeoutBuilder_ = null;
+        }
+        if (mdbOfflineModeEnableLagBuilder_ == null) {
+          mdbOfflineModeEnableLag_ = null;
+        } else {
+          mdbOfflineModeEnableLag_ = null;
+          mdbOfflineModeEnableLagBuilder_ = null;
+        }
+        if (mdbOfflineModeDisableLagBuilder_ == null) {
+          mdbOfflineModeDisableLag_ = null;
+        } else {
+          mdbOfflineModeDisableLag_ = null;
+          mdbOfflineModeDisableLagBuilder_ = null;
+        }
+        if (rangeOptimizerMaxMemSizeBuilder_ == null) {
+          rangeOptimizerMaxMemSize_ = null;
+        } else {
+          rangeOptimizerMaxMemSize_ = null;
+          rangeOptimizerMaxMemSizeBuilder_ = null;
+        }
         return this;
       }
 
@@ -6229,6 +6718,31 @@ public final class Mysql80 {
         } else {
           result.mdbPreserveBinlogBytes_ = mdbPreserveBinlogBytesBuilder_.build();
         }
+        if (interactiveTimeoutBuilder_ == null) {
+          result.interactiveTimeout_ = interactiveTimeout_;
+        } else {
+          result.interactiveTimeout_ = interactiveTimeoutBuilder_.build();
+        }
+        if (waitTimeoutBuilder_ == null) {
+          result.waitTimeout_ = waitTimeout_;
+        } else {
+          result.waitTimeout_ = waitTimeoutBuilder_.build();
+        }
+        if (mdbOfflineModeEnableLagBuilder_ == null) {
+          result.mdbOfflineModeEnableLag_ = mdbOfflineModeEnableLag_;
+        } else {
+          result.mdbOfflineModeEnableLag_ = mdbOfflineModeEnableLagBuilder_.build();
+        }
+        if (mdbOfflineModeDisableLagBuilder_ == null) {
+          result.mdbOfflineModeDisableLag_ = mdbOfflineModeDisableLag_;
+        } else {
+          result.mdbOfflineModeDisableLag_ = mdbOfflineModeDisableLagBuilder_.build();
+        }
+        if (rangeOptimizerMaxMemSizeBuilder_ == null) {
+          result.rangeOptimizerMaxMemSize_ = rangeOptimizerMaxMemSize_;
+        } else {
+          result.rangeOptimizerMaxMemSize_ = rangeOptimizerMaxMemSizeBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -6441,6 +6955,21 @@ public final class Mysql80 {
         }
         if (other.hasMdbPreserveBinlogBytes()) {
           mergeMdbPreserveBinlogBytes(other.getMdbPreserveBinlogBytes());
+        }
+        if (other.hasInteractiveTimeout()) {
+          mergeInteractiveTimeout(other.getInteractiveTimeout());
+        }
+        if (other.hasWaitTimeout()) {
+          mergeWaitTimeout(other.getWaitTimeout());
+        }
+        if (other.hasMdbOfflineModeEnableLag()) {
+          mergeMdbOfflineModeEnableLag(other.getMdbOfflineModeEnableLag());
+        }
+        if (other.hasMdbOfflineModeDisableLag()) {
+          mergeMdbOfflineModeDisableLag(other.getMdbOfflineModeDisableLag());
+        }
+        if (other.hasRangeOptimizerMaxMemSize()) {
+          mergeRangeOptimizerMaxMemSize(other.getRangeOptimizerMaxMemSize());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14169,6 +14698,807 @@ public final class Mysql80 {
         }
         return mdbPreserveBinlogBytesBuilder_;
       }
+
+      private com.google.protobuf.Int64Value interactiveTimeout_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> interactiveTimeoutBuilder_;
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on an interactive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public boolean hasInteractiveTimeout() {
+        return interactiveTimeoutBuilder_ != null || interactiveTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on an interactive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public com.google.protobuf.Int64Value getInteractiveTimeout() {
+        if (interactiveTimeoutBuilder_ == null) {
+          return interactiveTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : interactiveTimeout_;
+        } else {
+          return interactiveTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on an interactive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public Builder setInteractiveTimeout(com.google.protobuf.Int64Value value) {
+        if (interactiveTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          interactiveTimeout_ = value;
+          onChanged();
+        } else {
+          interactiveTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on an interactive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public Builder setInteractiveTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (interactiveTimeoutBuilder_ == null) {
+          interactiveTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          interactiveTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on an interactive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public Builder mergeInteractiveTimeout(com.google.protobuf.Int64Value value) {
+        if (interactiveTimeoutBuilder_ == null) {
+          if (interactiveTimeout_ != null) {
+            interactiveTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(interactiveTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            interactiveTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          interactiveTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on an interactive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public Builder clearInteractiveTimeout() {
+        if (interactiveTimeoutBuilder_ == null) {
+          interactiveTimeout_ = null;
+          onChanged();
+        } else {
+          interactiveTimeout_ = null;
+          interactiveTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on an interactive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInteractiveTimeoutBuilder() {
+        
+        onChanged();
+        return getInteractiveTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on an interactive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInteractiveTimeoutOrBuilder() {
+        if (interactiveTimeoutBuilder_ != null) {
+          return interactiveTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return interactiveTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : interactiveTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on an interactive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_interactive_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value interactive_timeout = 52 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInteractiveTimeoutFieldBuilder() {
+        if (interactiveTimeoutBuilder_ == null) {
+          interactiveTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInteractiveTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          interactiveTimeout_ = null;
+        }
+        return interactiveTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value waitTimeout_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> waitTimeoutBuilder_;
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public boolean hasWaitTimeout() {
+        return waitTimeoutBuilder_ != null || waitTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public com.google.protobuf.Int64Value getWaitTimeout() {
+        if (waitTimeoutBuilder_ == null) {
+          return waitTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : waitTimeout_;
+        } else {
+          return waitTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public Builder setWaitTimeout(com.google.protobuf.Int64Value value) {
+        if (waitTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          waitTimeout_ = value;
+          onChanged();
+        } else {
+          waitTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public Builder setWaitTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (waitTimeoutBuilder_ == null) {
+          waitTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          waitTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public Builder mergeWaitTimeout(com.google.protobuf.Int64Value value) {
+        if (waitTimeoutBuilder_ == null) {
+          if (waitTimeout_ != null) {
+            waitTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(waitTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            waitTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          waitTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public Builder clearWaitTimeout() {
+        if (waitTimeoutBuilder_ == null) {
+          waitTimeout_ = null;
+          onChanged();
+        } else {
+          waitTimeout_ = null;
+          waitTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getWaitTimeoutBuilder() {
+        
+        onChanged();
+        return getWaitTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getWaitTimeoutOrBuilder() {
+        if (waitTimeoutBuilder_ != null) {
+          return waitTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return waitTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : waitTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of seconds the server waits for activity on a noninteractive connection before closing it.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_wait_timeout).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value wait_timeout = 53 [(.yandex.cloud.value) = "600-86400"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getWaitTimeoutFieldBuilder() {
+        if (waitTimeoutBuilder_ == null) {
+          waitTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getWaitTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          waitTimeout_ = null;
+        }
+        return waitTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value mdbOfflineModeEnableLag_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mdbOfflineModeEnableLagBuilder_;
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+       */
+      public boolean hasMdbOfflineModeEnableLag() {
+        return mdbOfflineModeEnableLagBuilder_ != null || mdbOfflineModeEnableLag_ != null;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+       */
+      public com.google.protobuf.Int64Value getMdbOfflineModeEnableLag() {
+        if (mdbOfflineModeEnableLagBuilder_ == null) {
+          return mdbOfflineModeEnableLag_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mdbOfflineModeEnableLag_;
+        } else {
+          return mdbOfflineModeEnableLagBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+       */
+      public Builder setMdbOfflineModeEnableLag(com.google.protobuf.Int64Value value) {
+        if (mdbOfflineModeEnableLagBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mdbOfflineModeEnableLag_ = value;
+          onChanged();
+        } else {
+          mdbOfflineModeEnableLagBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+       */
+      public Builder setMdbOfflineModeEnableLag(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (mdbOfflineModeEnableLagBuilder_ == null) {
+          mdbOfflineModeEnableLag_ = builderForValue.build();
+          onChanged();
+        } else {
+          mdbOfflineModeEnableLagBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+       */
+      public Builder mergeMdbOfflineModeEnableLag(com.google.protobuf.Int64Value value) {
+        if (mdbOfflineModeEnableLagBuilder_ == null) {
+          if (mdbOfflineModeEnableLag_ != null) {
+            mdbOfflineModeEnableLag_ =
+              com.google.protobuf.Int64Value.newBuilder(mdbOfflineModeEnableLag_).mergeFrom(value).buildPartial();
+          } else {
+            mdbOfflineModeEnableLag_ = value;
+          }
+          onChanged();
+        } else {
+          mdbOfflineModeEnableLagBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+       */
+      public Builder clearMdbOfflineModeEnableLag() {
+        if (mdbOfflineModeEnableLagBuilder_ == null) {
+          mdbOfflineModeEnableLag_ = null;
+          onChanged();
+        } else {
+          mdbOfflineModeEnableLag_ = null;
+          mdbOfflineModeEnableLagBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMdbOfflineModeEnableLagBuilder() {
+        
+        onChanged();
+        return getMdbOfflineModeEnableLagFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeEnableLagOrBuilder() {
+        if (mdbOfflineModeEnableLagBuilder_ != null) {
+          return mdbOfflineModeEnableLagBuilder_.getMessageOrBuilder();
+        } else {
+          return mdbOfflineModeEnableLag_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : mdbOfflineModeEnableLag_;
+        }
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = ON' to prevent users from reading stale data.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_enable_lag = 54 [(.yandex.cloud.value) = "600-432000"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMdbOfflineModeEnableLagFieldBuilder() {
+        if (mdbOfflineModeEnableLagBuilder_ == null) {
+          mdbOfflineModeEnableLagBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMdbOfflineModeEnableLag(),
+                  getParentForChildren(),
+                  isClean());
+          mdbOfflineModeEnableLag_ = null;
+        }
+        return mdbOfflineModeEnableLagBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value mdbOfflineModeDisableLag_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mdbOfflineModeDisableLagBuilder_;
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+       * Should be less than mdb_offline_mode_enable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+       */
+      public boolean hasMdbOfflineModeDisableLag() {
+        return mdbOfflineModeDisableLagBuilder_ != null || mdbOfflineModeDisableLag_ != null;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+       * Should be less than mdb_offline_mode_enable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+       */
+      public com.google.protobuf.Int64Value getMdbOfflineModeDisableLag() {
+        if (mdbOfflineModeDisableLagBuilder_ == null) {
+          return mdbOfflineModeDisableLag_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mdbOfflineModeDisableLag_;
+        } else {
+          return mdbOfflineModeDisableLagBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+       * Should be less than mdb_offline_mode_enable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+       */
+      public Builder setMdbOfflineModeDisableLag(com.google.protobuf.Int64Value value) {
+        if (mdbOfflineModeDisableLagBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mdbOfflineModeDisableLag_ = value;
+          onChanged();
+        } else {
+          mdbOfflineModeDisableLagBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+       * Should be less than mdb_offline_mode_enable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+       */
+      public Builder setMdbOfflineModeDisableLag(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (mdbOfflineModeDisableLagBuilder_ == null) {
+          mdbOfflineModeDisableLag_ = builderForValue.build();
+          onChanged();
+        } else {
+          mdbOfflineModeDisableLagBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+       * Should be less than mdb_offline_mode_enable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+       */
+      public Builder mergeMdbOfflineModeDisableLag(com.google.protobuf.Int64Value value) {
+        if (mdbOfflineModeDisableLagBuilder_ == null) {
+          if (mdbOfflineModeDisableLag_ != null) {
+            mdbOfflineModeDisableLag_ =
+              com.google.protobuf.Int64Value.newBuilder(mdbOfflineModeDisableLag_).mergeFrom(value).buildPartial();
+          } else {
+            mdbOfflineModeDisableLag_ = value;
+          }
+          onChanged();
+        } else {
+          mdbOfflineModeDisableLagBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+       * Should be less than mdb_offline_mode_enable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+       */
+      public Builder clearMdbOfflineModeDisableLag() {
+        if (mdbOfflineModeDisableLagBuilder_ == null) {
+          mdbOfflineModeDisableLag_ = null;
+          onChanged();
+        } else {
+          mdbOfflineModeDisableLag_ = null;
+          mdbOfflineModeDisableLagBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+       * Should be less than mdb_offline_mode_enable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMdbOfflineModeDisableLagBuilder() {
+        
+        onChanged();
+        return getMdbOfflineModeDisableLagFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+       * Should be less than mdb_offline_mode_enable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMdbOfflineModeDisableLagOrBuilder() {
+        if (mdbOfflineModeDisableLagBuilder_ != null) {
+          return mdbOfflineModeDisableLagBuilder_.getMessageOrBuilder();
+        } else {
+          return mdbOfflineModeDisableLag_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : mdbOfflineModeDisableLag_;
+        }
+      }
+      /**
+       * <pre>
+       * Replication lag threshold (seconds) which will switch MySQL to 'offline_mode = OFF'.
+       * Should be less than mdb_offline_mode_enable_lag.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value mdb_offline_mode_disable_lag = 55 [(.yandex.cloud.value) = "60-86400"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMdbOfflineModeDisableLagFieldBuilder() {
+        if (mdbOfflineModeDisableLagBuilder_ == null) {
+          mdbOfflineModeDisableLagBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMdbOfflineModeDisableLag(),
+                  getParentForChildren(),
+                  isClean());
+          mdbOfflineModeDisableLag_ = null;
+        }
+        return mdbOfflineModeDisableLagBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value rangeOptimizerMaxMemSize_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> rangeOptimizerMaxMemSizeBuilder_;
+      /**
+       * <pre>
+       * The limit on memory consumption for the range optimizer.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public boolean hasRangeOptimizerMaxMemSize() {
+        return rangeOptimizerMaxMemSizeBuilder_ != null || rangeOptimizerMaxMemSize_ != null;
+      }
+      /**
+       * <pre>
+       * The limit on memory consumption for the range optimizer.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public com.google.protobuf.Int64Value getRangeOptimizerMaxMemSize() {
+        if (rangeOptimizerMaxMemSizeBuilder_ == null) {
+          return rangeOptimizerMaxMemSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : rangeOptimizerMaxMemSize_;
+        } else {
+          return rangeOptimizerMaxMemSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The limit on memory consumption for the range optimizer.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public Builder setRangeOptimizerMaxMemSize(com.google.protobuf.Int64Value value) {
+        if (rangeOptimizerMaxMemSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rangeOptimizerMaxMemSize_ = value;
+          onChanged();
+        } else {
+          rangeOptimizerMaxMemSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The limit on memory consumption for the range optimizer.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public Builder setRangeOptimizerMaxMemSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (rangeOptimizerMaxMemSizeBuilder_ == null) {
+          rangeOptimizerMaxMemSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          rangeOptimizerMaxMemSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The limit on memory consumption for the range optimizer.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public Builder mergeRangeOptimizerMaxMemSize(com.google.protobuf.Int64Value value) {
+        if (rangeOptimizerMaxMemSizeBuilder_ == null) {
+          if (rangeOptimizerMaxMemSize_ != null) {
+            rangeOptimizerMaxMemSize_ =
+              com.google.protobuf.Int64Value.newBuilder(rangeOptimizerMaxMemSize_).mergeFrom(value).buildPartial();
+          } else {
+            rangeOptimizerMaxMemSize_ = value;
+          }
+          onChanged();
+        } else {
+          rangeOptimizerMaxMemSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The limit on memory consumption for the range optimizer.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public Builder clearRangeOptimizerMaxMemSize() {
+        if (rangeOptimizerMaxMemSizeBuilder_ == null) {
+          rangeOptimizerMaxMemSize_ = null;
+          onChanged();
+        } else {
+          rangeOptimizerMaxMemSize_ = null;
+          rangeOptimizerMaxMemSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The limit on memory consumption for the range optimizer.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getRangeOptimizerMaxMemSizeBuilder() {
+        
+        onChanged();
+        return getRangeOptimizerMaxMemSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The limit on memory consumption for the range optimizer.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getRangeOptimizerMaxMemSizeOrBuilder() {
+        if (rangeOptimizerMaxMemSizeBuilder_ != null) {
+          return rangeOptimizerMaxMemSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return rangeOptimizerMaxMemSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : rangeOptimizerMaxMemSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The limit on memory consumption for the range optimizer.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_range_optimizer_max_mem_size).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value range_optimizer_max_mem_size = 56 [(.yandex.cloud.value) = "1048576-268435456"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getRangeOptimizerMaxMemSizeFieldBuilder() {
+        if (rangeOptimizerMaxMemSizeBuilder_ == null) {
+          rangeOptimizerMaxMemSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getRangeOptimizerMaxMemSize(),
+                  getParentForChildren(),
+                  isClean());
+          rangeOptimizerMaxMemSize_ = null;
+        }
+        return rangeOptimizerMaxMemSizeBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -15434,7 +16764,7 @@ public final class Mysql80 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "8_0.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\216$\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\226\'\n\016MysqlConf" +
       "ig8_0\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -15526,40 +16856,50 @@ public final class Mysql80 {
       "e_limit\0302 \001(\0132\033.google.protobuf.Int64Val" +
       "ueB\r\372\3071\t0-1048576\022[\n\031mdb_preserve_binlog" +
       "_bytes\0303 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\033\372\3071\0271073741824-107374182400\"\210\004\n\007SQLMo" +
-      "de\022\027\n\023SQLMODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INV" +
-      "ALID_DATES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_F" +
-      "OR_DIVISION_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECED" +
-      "ENCE\020\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALU" +
-      "E_ON_ZERO\020\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n" +
-      "\026NO_ENGINE_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED" +
-      "_SUBTRACTION\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_Z" +
-      "ERO_IN_DATE\020\013\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n" +
-      "\027PAD_CHAR_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_C" +
-      "ONCAT\020\021\022\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL" +
-      "_TABLES\020\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\034\n\030TI" +
-      "ME_TRUNCATE_FRACTIONAL\020\025\022\010\n\004ANSI\020\026\022\017\n\013TR" +
-      "ADITIONAL\020\027\022\024\n\020NO_DIR_IN_CREATE\020\030\"t\n\nAut" +
-      "hPlugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025" +
-      "MYSQL_NATIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_" +
-      "PASSWORD\020\002\022\023\n\017SHA256_PASSWORD\020\003\"x\n\024Trans" +
-      "actionIsolation\022%\n!TRANSACTION_ISOLATION" +
-      "_UNSPECIFIED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017RE" +
-      "PEATABLE_READ\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016Bin" +
-      "logRowImage\022 \n\034BINLOG_ROW_IMAGE_UNSPECIF" +
-      "IED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003" +
-      "\"Y\n\021SlaveParallelType\022#\n\037SLAVE_PARALLEL_" +
-      "TYPE_UNSPECIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGI" +
-      "CAL_CLOCK\020\002\"\360\001\n\021MysqlConfigSet8_0\022J\n\020eff" +
-      "ective_config\030\001 \001(\01320.yandex.cloud.mdb.m" +
-      "ysql.v1.config.MysqlConfig8_0\022E\n\013user_co" +
-      "nfig\030\002 \001(\01320.yandex.cloud.mdb.mysql.v1.c" +
-      "onfig.MysqlConfig8_0\022H\n\016default_config\030\003" +
-      " \001(\01320.yandex.cloud.mdb.mysql.v1.config." +
-      "MysqlConfig8_0Br\n$yandex.cloud.api.mdb.m" +
-      "ysql.v1.configZJgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/mdb/mysql/v1/co" +
-      "nfig;mysqlb\006proto3"
+      "eB\033\372\3071\0271073741824-107374182400\022G\n\023intera" +
+      "ctive_timeout\0304 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\r\372\3071\t600-86400\022@\n\014wait_timeout\030" +
+      "5 \001(\0132\033.google.protobuf.Int64ValueB\r\372\3071\t" +
+      "600-86400\022P\n\033mdb_offline_mode_enable_lag" +
+      "\0306 \001(\0132\033.google.protobuf.Int64ValueB\016\372\3071" +
+      "\n600-432000\022O\n\034mdb_offline_mode_disable_" +
+      "lag\0307 \001(\0132\033.google.protobuf.Int64ValueB\014" +
+      "\372\3071\01060-86400\022X\n\034range_optimizer_max_mem_" +
+      "size\0308 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\025\372\3071\0211048576-268435456\"\210\004\n\007SQLMode\022\027\n\023SQ" +
+      "LMODE_UNSPECIFIED\020\000\022\027\n\023ALLOW_INVALID_DAT" +
+      "ES\020\001\022\017\n\013ANSI_QUOTES\020\002\022\036\n\032ERROR_FOR_DIVIS" +
+      "ION_BY_ZERO\020\003\022\027\n\023HIGH_NOT_PRECEDENCE\020\004\022\020" +
+      "\n\014IGNORE_SPACE\020\005\022\031\n\025NO_AUTO_VALUE_ON_ZER" +
+      "O\020\006\022\030\n\024NO_BACKSLASH_ESCAPES\020\007\022\032\n\026NO_ENGI" +
+      "NE_SUBSTITUTION\020\010\022\033\n\027NO_UNSIGNED_SUBTRAC" +
+      "TION\020\t\022\020\n\014NO_ZERO_DATE\020\n\022\023\n\017NO_ZERO_IN_D" +
+      "ATE\020\013\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD_CHA" +
+      "R_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCAT\020\021\022" +
+      "\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TABLES\020" +
+      "\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\034\n\030TIME_TRUNC" +
+      "ATE_FRACTIONAL\020\025\022\010\n\004ANSI\020\026\022\017\n\013TRADITIONA" +
+      "L\020\027\022\024\n\020NO_DIR_IN_CREATE\020\030\"t\n\nAuthPlugin\022" +
+      "\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_NA" +
+      "TIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWORD" +
+      "\020\002\022\023\n\017SHA256_PASSWORD\020\003\"x\n\024TransactionIs" +
+      "olation\022%\n!TRANSACTION_ISOLATION_UNSPECI" +
+      "FIED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017REPEATABLE" +
+      "_READ\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016BinlogRowIm" +
+      "age\022 \n\034BINLOG_ROW_IMAGE_UNSPECIFIED\020\000\022\010\n" +
+      "\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020\003\"Y\n\021Slav" +
+      "eParallelType\022#\n\037SLAVE_PARALLEL_TYPE_UNS" +
+      "PECIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOGICAL_CLOC" +
+      "K\020\002\"\360\001\n\021MysqlConfigSet8_0\022J\n\020effective_c" +
+      "onfig\030\001 \001(\01320.yandex.cloud.mdb.mysql.v1." +
+      "config.MysqlConfig8_0\022E\n\013user_config\030\002 \001" +
+      "(\01320.yandex.cloud.mdb.mysql.v1.config.My" +
+      "sqlConfig8_0\022H\n\016default_config\030\003 \001(\01320.y" +
+      "andex.cloud.mdb.mysql.v1.config.MysqlCon" +
+      "fig8_0Br\n$yandex.cloud.api.mdb.mysql.v1." +
+      "configZJgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/mdb/mysql/v1/config;mys" +
+      "qlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15580,7 +16920,7 @@ public final class Mysql80 {
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig8_0_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig8_0_descriptor,
-        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "RegexpTimeLimit", "MdbPreserveBinlogBytes", });
+        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "RegexpTimeLimit", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet8_0_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet8_0_fieldAccessorTable = new

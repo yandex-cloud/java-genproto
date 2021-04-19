@@ -128,6 +128,2206 @@ public final class InstanceGroupServiceOuterClass {
     // @@protoc_insertion_point(enum_scope:yandex.cloud.compute.v1.instancegroup.InstanceGroupView)
   }
 
+  public interface ResumeInstanceGroupProcessesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getInstanceGroupId();
+    /**
+     * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getInstanceGroupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessesRequest}
+   */
+  public  static final class ResumeInstanceGroupProcessesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessesRequest)
+      ResumeInstanceGroupProcessesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResumeInstanceGroupProcessesRequest.newBuilder() to construct.
+    private ResumeInstanceGroupProcessesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResumeInstanceGroupProcessesRequest() {
+      instanceGroupId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResumeInstanceGroupProcessesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceGroupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest.Builder.class);
+    }
+
+    public static final int INSTANCE_GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceGroupId_;
+    /**
+     * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getInstanceGroupId() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getInstanceGroupIdBytes() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInstanceGroupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceGroupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInstanceGroupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceGroupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest other = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest) obj;
+
+      boolean result = true;
+      result = result && getInstanceGroupId()
+          .equals(other.getInstanceGroupId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceGroupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessesRequest)
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceGroupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest build() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest buildPartial() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest(this);
+        result.instanceGroupId_ = instanceGroupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest other) {
+        if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest.getDefaultInstance()) return this;
+        if (!other.getInstanceGroupId().isEmpty()) {
+          instanceGroupId_ = other.instanceGroupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceGroupId_ = "";
+      /**
+       * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getInstanceGroupId() {
+        java.lang.Object ref = instanceGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getInstanceGroupIdBytes() {
+        java.lang.Object ref = instanceGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setInstanceGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearInstanceGroupId() {
+        
+        instanceGroupId_ = getDefaultInstance().getInstanceGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setInstanceGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessesRequest)
+    private static final yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResumeInstanceGroupProcessesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ResumeInstanceGroupProcessesRequest>() {
+      @java.lang.Override
+      public ResumeInstanceGroupProcessesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResumeInstanceGroupProcessesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResumeInstanceGroupProcessesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResumeInstanceGroupProcessesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ResumeInstanceGroupProcessMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string instance_group_id = 1;</code>
+     */
+    java.lang.String getInstanceGroupId();
+    /**
+     * <code>string instance_group_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getInstanceGroupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessMetadata}
+   */
+  public  static final class ResumeInstanceGroupProcessMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessMetadata)
+      ResumeInstanceGroupProcessMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ResumeInstanceGroupProcessMetadata.newBuilder() to construct.
+    private ResumeInstanceGroupProcessMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ResumeInstanceGroupProcessMetadata() {
+      instanceGroupId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ResumeInstanceGroupProcessMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceGroupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata.Builder.class);
+    }
+
+    public static final int INSTANCE_GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceGroupId_;
+    /**
+     * <code>string instance_group_id = 1;</code>
+     */
+    public java.lang.String getInstanceGroupId() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string instance_group_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInstanceGroupIdBytes() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInstanceGroupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceGroupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInstanceGroupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceGroupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata other = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata) obj;
+
+      boolean result = true;
+      result = result && getInstanceGroupId()
+          .equals(other.getInstanceGroupId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceGroupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessMetadata)
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceGroupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata build() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata buildPartial() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata(this);
+        result.instanceGroupId_ = instanceGroupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata) {
+          return mergeFrom((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata other) {
+        if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata.getDefaultInstance()) return this;
+        if (!other.getInstanceGroupId().isEmpty()) {
+          instanceGroupId_ = other.instanceGroupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceGroupId_ = "";
+      /**
+       * <code>string instance_group_id = 1;</code>
+       */
+      public java.lang.String getInstanceGroupId() {
+        java.lang.Object ref = instanceGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string instance_group_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getInstanceGroupIdBytes() {
+        java.lang.Object ref = instanceGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string instance_group_id = 1;</code>
+       */
+      public Builder setInstanceGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string instance_group_id = 1;</code>
+       */
+      public Builder clearInstanceGroupId() {
+        
+        instanceGroupId_ = getDefaultInstance().getInstanceGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string instance_group_id = 1;</code>
+       */
+      public Builder setInstanceGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.instancegroup.ResumeInstanceGroupProcessMetadata)
+    private static final yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata();
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ResumeInstanceGroupProcessMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<ResumeInstanceGroupProcessMetadata>() {
+      @java.lang.Override
+      public ResumeInstanceGroupProcessMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ResumeInstanceGroupProcessMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ResumeInstanceGroupProcessMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ResumeInstanceGroupProcessMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PauseInstanceGroupProcessesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getInstanceGroupId();
+    /**
+     * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getInstanceGroupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessesRequest}
+   */
+  public  static final class PauseInstanceGroupProcessesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessesRequest)
+      PauseInstanceGroupProcessesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PauseInstanceGroupProcessesRequest.newBuilder() to construct.
+    private PauseInstanceGroupProcessesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PauseInstanceGroupProcessesRequest() {
+      instanceGroupId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PauseInstanceGroupProcessesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceGroupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest.Builder.class);
+    }
+
+    public static final int INSTANCE_GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceGroupId_;
+    /**
+     * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getInstanceGroupId() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getInstanceGroupIdBytes() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInstanceGroupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceGroupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInstanceGroupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceGroupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest other = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest) obj;
+
+      boolean result = true;
+      result = result && getInstanceGroupId()
+          .equals(other.getInstanceGroupId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceGroupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessesRequest)
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceGroupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest build() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest buildPartial() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest(this);
+        result.instanceGroupId_ = instanceGroupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest other) {
+        if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest.getDefaultInstance()) return this;
+        if (!other.getInstanceGroupId().isEmpty()) {
+          instanceGroupId_ = other.instanceGroupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceGroupId_ = "";
+      /**
+       * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getInstanceGroupId() {
+        java.lang.Object ref = instanceGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getInstanceGroupIdBytes() {
+        java.lang.Object ref = instanceGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setInstanceGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearInstanceGroupId() {
+        
+        instanceGroupId_ = getDefaultInstance().getInstanceGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setInstanceGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessesRequest)
+    private static final yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PauseInstanceGroupProcessesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<PauseInstanceGroupProcessesRequest>() {
+      @java.lang.Override
+      public PauseInstanceGroupProcessesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PauseInstanceGroupProcessesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PauseInstanceGroupProcessesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PauseInstanceGroupProcessesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PauseInstanceGroupProcessMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string instance_group_id = 1;</code>
+     */
+    java.lang.String getInstanceGroupId();
+    /**
+     * <code>string instance_group_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getInstanceGroupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessMetadata}
+   */
+  public  static final class PauseInstanceGroupProcessMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessMetadata)
+      PauseInstanceGroupProcessMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PauseInstanceGroupProcessMetadata.newBuilder() to construct.
+    private PauseInstanceGroupProcessMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PauseInstanceGroupProcessMetadata() {
+      instanceGroupId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PauseInstanceGroupProcessMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceGroupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata.Builder.class);
+    }
+
+    public static final int INSTANCE_GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceGroupId_;
+    /**
+     * <code>string instance_group_id = 1;</code>
+     */
+    public java.lang.String getInstanceGroupId() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string instance_group_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInstanceGroupIdBytes() {
+      java.lang.Object ref = instanceGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInstanceGroupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceGroupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInstanceGroupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceGroupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata other = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata) obj;
+
+      boolean result = true;
+      result = result && getInstanceGroupId()
+          .equals(other.getInstanceGroupId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceGroupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessMetadata)
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceGroupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata build() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata buildPartial() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata(this);
+        result.instanceGroupId_ = instanceGroupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata) {
+          return mergeFrom((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata other) {
+        if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata.getDefaultInstance()) return this;
+        if (!other.getInstanceGroupId().isEmpty()) {
+          instanceGroupId_ = other.instanceGroupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceGroupId_ = "";
+      /**
+       * <code>string instance_group_id = 1;</code>
+       */
+      public java.lang.String getInstanceGroupId() {
+        java.lang.Object ref = instanceGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string instance_group_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getInstanceGroupIdBytes() {
+        java.lang.Object ref = instanceGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string instance_group_id = 1;</code>
+       */
+      public Builder setInstanceGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string instance_group_id = 1;</code>
+       */
+      public Builder clearInstanceGroupId() {
+        
+        instanceGroupId_ = getDefaultInstance().getInstanceGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string instance_group_id = 1;</code>
+       */
+      public Builder setInstanceGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.instancegroup.PauseInstanceGroupProcessMetadata)
+    private static final yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata();
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PauseInstanceGroupProcessMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<PauseInstanceGroupProcessMetadata>() {
+      @java.lang.Override
+      public PauseInstanceGroupProcessMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PauseInstanceGroupProcessMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PauseInstanceGroupProcessMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PauseInstanceGroupProcessMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GetInstanceGroupRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.GetInstanceGroupRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -26480,6 +28680,26 @@ public final class InstanceGroupServiceOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_instancegroup_GetInstanceGroupRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -26632,7 +28852,14 @@ public final class InstanceGroupServiceOuterClass {
       ":yandex/cloud/compute/v1/instancegroup/i" +
       "nstance_group.proto\032&yandex/cloud/operat" +
       "ion/operation.proto\032\035yandex/cloud/valida" +
-      "tion.proto\"\212\001\n\027GetInstanceGroupRequest\022\'" +
+      "tion.proto\"J\n#ResumeInstanceGroupProcess" +
+      "esRequest\022#\n\021instance_group_id\030\001 \001(\tB\010\212\310" +
+      "1\004<=50\"?\n\"ResumeInstanceGroupProcessMeta" +
+      "data\022\031\n\021instance_group_id\030\001 \001(\t\"I\n\"Pause" +
+      "InstanceGroupProcessesRequest\022#\n\021instanc" +
+      "e_group_id\030\001 \001(\tB\010\212\3101\004<=50\">\n!PauseInsta" +
+      "nceGroupProcessMetadata\022\031\n\021instance_grou" +
+      "p_id\030\001 \001(\t\"\212\001\n\027GetInstanceGroupRequest\022\'" +
       "\n\021instance_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
       "F\n\004view\030\002 \001(\01628.yandex.cloud.compute.v1." +
       "instancegroup.InstanceGroupView\"\312\010\n\032Crea" +
@@ -26749,7 +28976,7 @@ public final class InstanceGroupServiceOuterClass {
       "nse\022E\n\013log_records\030\001 \003(\01320.yandex.cloud." +
       "compute.v1.instancegroup.LogRecord\022\027\n\017ne" +
       "xt_page_token\030\002 \001(\t*(\n\021InstanceGroupView" +
-      "\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\247\034\n\024InstanceGroupS" +
+      "\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\234\037\n\024InstanceGroupS" +
       "ervice\022\263\001\n\003Get\022>.yandex.cloud.compute.v1" +
       ".instancegroup.GetInstanceGroupRequest\0324" +
       ".yandex.cloud.compute.v1.instancegroup.I" +
@@ -26840,10 +29067,20 @@ public final class InstanceGroupServiceOuterClass {
       "compute/v1/instanceGroups/{resource_id}:" +
       "updateAccessBindings:\001*\262\322*<\n#access.Upda" +
       "teAccessBindingsMetadata\022\025google.protobu" +
-      "f.EmptyB\204\001\n)yandex.cloud.api.compute.v1." +
-      "instancegroupZWgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/compute/v1/insta" +
-      "ncegroup;instancegroupb\006proto3"
+      "f.Empty\022\271\001\n\017ResumeProcesses\022J.yandex.clo" +
+      "ud.compute.v1.instancegroup.ResumeInstan" +
+      "ceGroupProcessesRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"7\262\322*3\n\"ResumeInstance" +
+      "GroupProcessMetadata\022\rInstanceGroup\022\266\001\n\016" +
+      "PauseProcesses\022I.yandex.cloud.compute.v1" +
+      ".instancegroup.PauseInstanceGroupProcess" +
+      "esRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"6\262\322*2\n!PauseInstanceGroupProcessMet" +
+      "adata\022\rInstanceGroupB\204\001\n)yandex.cloud.ap" +
+      "i.compute.v1.instancegroupZWgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/com" +
+      "pute/v1/instancegroup;instancegroupb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -26864,14 +29101,38 @@ public final class InstanceGroupServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
-    internal_static_yandex_cloud_compute_v1_instancegroup_GetInstanceGroupRequest_descriptor =
+    internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessesRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessesRequest_descriptor,
+        new java.lang.String[] { "InstanceGroupId", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_ResumeInstanceGroupProcessMetadata_descriptor,
+        new java.lang.String[] { "InstanceGroupId", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessesRequest_descriptor,
+        new java.lang.String[] { "InstanceGroupId", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_PauseInstanceGroupProcessMetadata_descriptor,
+        new java.lang.String[] { "InstanceGroupId", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_GetInstanceGroupRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_compute_v1_instancegroup_GetInstanceGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_GetInstanceGroupRequest_descriptor,
         new java.lang.String[] { "InstanceGroupId", "View", });
     internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_descriptor,
@@ -26883,19 +29144,19 @@ public final class InstanceGroupServiceOuterClass {
         internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupFromYamlRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupFromYamlRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupFromYamlRequest_descriptor,
         new java.lang.String[] { "FolderId", "InstanceGroupYaml", });
     internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_CreateInstanceGroupMetadata_descriptor,
         new java.lang.String[] { "InstanceGroupId", });
     internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_descriptor,
@@ -26907,121 +29168,121 @@ public final class InstanceGroupServiceOuterClass {
         internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupFromYamlRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupFromYamlRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupFromYamlRequest_descriptor,
         new java.lang.String[] { "InstanceGroupId", "InstanceGroupYaml", });
     internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_UpdateInstanceGroupMetadata_descriptor,
         new java.lang.String[] { "InstanceGroupId", });
     internal_static_yandex_cloud_compute_v1_instancegroup_StartInstanceGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_compute_v1_instancegroup_StartInstanceGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_StartInstanceGroupRequest_descriptor,
         new java.lang.String[] { "InstanceGroupId", });
     internal_static_yandex_cloud_compute_v1_instancegroup_StartInstanceGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_compute_v1_instancegroup_StartInstanceGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_StartInstanceGroupMetadata_descriptor,
         new java.lang.String[] { "InstanceGroupId", });
     internal_static_yandex_cloud_compute_v1_instancegroup_StopInstanceGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_compute_v1_instancegroup_StopInstanceGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_StopInstanceGroupRequest_descriptor,
         new java.lang.String[] { "InstanceGroupId", });
     internal_static_yandex_cloud_compute_v1_instancegroup_StopInstanceGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_compute_v1_instancegroup_StopInstanceGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_StopInstanceGroupMetadata_descriptor,
         new java.lang.String[] { "InstanceGroupId", });
     internal_static_yandex_cloud_compute_v1_instancegroup_DeleteInstanceGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_compute_v1_instancegroup_DeleteInstanceGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_DeleteInstanceGroupRequest_descriptor,
         new java.lang.String[] { "InstanceGroupId", });
     internal_static_yandex_cloud_compute_v1_instancegroup_DeleteInstanceGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_compute_v1_instancegroup_DeleteInstanceGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_DeleteInstanceGroupMetadata_descriptor,
         new java.lang.String[] { "InstanceGroupId", });
     internal_static_yandex_cloud_compute_v1_instancegroup_DeleteInstancesMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_compute_v1_instancegroup_DeleteInstancesMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_DeleteInstancesMetadata_descriptor,
         new java.lang.String[] { "InstanceGroupId", });
     internal_static_yandex_cloud_compute_v1_instancegroup_StopInstancesMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_compute_v1_instancegroup_StopInstancesMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_StopInstancesMetadata_descriptor,
         new java.lang.String[] { "InstanceGroupId", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupsRequest_descriptor,
         new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", "View", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupsResponse_descriptor,
         new java.lang.String[] { "InstanceGroups", "NextPageToken", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupInstancesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupInstancesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupInstancesRequest_descriptor,
         new java.lang.String[] { "InstanceGroupId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupInstancesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupInstancesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupInstancesResponse_descriptor,
         new java.lang.String[] { "Instances", "NextPageToken", });
     internal_static_yandex_cloud_compute_v1_instancegroup_DeleteInstancesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_compute_v1_instancegroup_DeleteInstancesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_DeleteInstancesRequest_descriptor,
         new java.lang.String[] { "InstanceGroupId", "ManagedInstanceIds", "CreateAnother", });
     internal_static_yandex_cloud_compute_v1_instancegroup_StopInstancesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_compute_v1_instancegroup_StopInstancesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_StopInstancesRequest_descriptor,
         new java.lang.String[] { "InstanceGroupId", "ManagedInstanceIds", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupOperationsRequest_descriptor,
         new java.lang.String[] { "InstanceGroupId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupLogRecordsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupLogRecordsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupLogRecordsRequest_descriptor,
         new java.lang.String[] { "InstanceGroupId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupLogRecordsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupLogRecordsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_ListInstanceGroupLogRecordsResponse_descriptor,

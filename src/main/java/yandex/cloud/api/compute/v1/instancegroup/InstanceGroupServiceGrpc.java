@@ -574,6 +574,70 @@ public final class InstanceGroupServiceGrpc {
      return getUpdateAccessBindingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getResumeProcessesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ResumeProcesses",
+      requestType = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getResumeProcessesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getResumeProcessesMethod;
+    if ((getResumeProcessesMethod = InstanceGroupServiceGrpc.getResumeProcessesMethod) == null) {
+      synchronized (InstanceGroupServiceGrpc.class) {
+        if ((getResumeProcessesMethod = InstanceGroupServiceGrpc.getResumeProcessesMethod) == null) {
+          InstanceGroupServiceGrpc.getResumeProcessesMethod = getResumeProcessesMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.compute.v1.instancegroup.InstanceGroupService", "ResumeProcesses"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new InstanceGroupServiceMethodDescriptorSupplier("ResumeProcesses"))
+                  .build();
+          }
+        }
+     }
+     return getResumeProcessesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getPauseProcessesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "PauseProcesses",
+      requestType = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getPauseProcessesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getPauseProcessesMethod;
+    if ((getPauseProcessesMethod = InstanceGroupServiceGrpc.getPauseProcessesMethod) == null) {
+      synchronized (InstanceGroupServiceGrpc.class) {
+        if ((getPauseProcessesMethod = InstanceGroupServiceGrpc.getPauseProcessesMethod) == null) {
+          InstanceGroupServiceGrpc.getPauseProcessesMethod = getPauseProcessesMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.compute.v1.instancegroup.InstanceGroupService", "PauseProcesses"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new InstanceGroupServiceMethodDescriptorSupplier("PauseProcesses"))
+                  .build();
+          }
+        }
+     }
+     return getPauseProcessesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -779,6 +843,26 @@ public final class InstanceGroupServiceGrpc {
       asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Resume all process in instance group.
+     * </pre>
+     */
+    public void resumeProcesses(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getResumeProcessesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Pause all process in instance group.
+     * </pre>
+     */
+    public void pauseProcesses(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getPauseProcessesMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -900,6 +984,20 @@ public final class InstanceGroupServiceGrpc {
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_ACCESS_BINDINGS)))
+          .addMethod(
+            getResumeProcessesMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RESUME_PROCESSES)))
+          .addMethod(
+            getPauseProcessesMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_PAUSE_PROCESSES)))
           .build();
     }
   }
@@ -1116,6 +1214,28 @@ public final class InstanceGroupServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Resume all process in instance group.
+     * </pre>
+     */
+    public void resumeProcesses(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getResumeProcessesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Pause all process in instance group.
+     * </pre>
+     */
+    public void pauseProcesses(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getPauseProcessesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1312,6 +1432,26 @@ public final class InstanceGroupServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Resume all process in instance group.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation resumeProcesses(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getResumeProcessesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Pause all process in instance group.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation pauseProcesses(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getPauseProcessesMethod(), getCallOptions(), request);
     }
   }
 
@@ -1527,6 +1667,28 @@ public final class InstanceGroupServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Resume all process in instance group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> resumeProcesses(
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getResumeProcessesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Pause all process in instance group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> pauseProcesses(
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getPauseProcessesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1546,6 +1708,8 @@ public final class InstanceGroupServiceGrpc {
   private static final int METHODID_LIST_ACCESS_BINDINGS = 14;
   private static final int METHODID_SET_ACCESS_BINDINGS = 15;
   private static final int METHODID_UPDATE_ACCESS_BINDINGS = 16;
+  private static final int METHODID_RESUME_PROCESSES = 17;
+  private static final int METHODID_PAUSE_PROCESSES = 18;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1632,6 +1796,14 @@ public final class InstanceGroupServiceGrpc {
           serviceImpl.updateAccessBindings((yandex.cloud.api.access.Access.UpdateAccessBindingsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_RESUME_PROCESSES:
+          serviceImpl.resumeProcesses((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_PAUSE_PROCESSES:
+          serviceImpl.pauseProcesses((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -1710,6 +1882,8 @@ public final class InstanceGroupServiceGrpc {
               .addMethod(getListAccessBindingsMethod())
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())
+              .addMethod(getResumeProcessesMethod())
+              .addMethod(getPauseProcessesMethod())
               .build();
         }
       }
