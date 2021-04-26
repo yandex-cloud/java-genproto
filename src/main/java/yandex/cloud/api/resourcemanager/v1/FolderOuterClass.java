@@ -361,6 +361,14 @@ public final class FolderOuterClass {
        * <code>DELETING = 2;</code>
        */
       DELETING(2),
+      /**
+       * <pre>
+       * Stopping folder resources and waiting for the deletion start timestamp.
+       * </pre>
+       *
+       * <code>PENDING_DELETION = 3;</code>
+       */
+      PENDING_DELETION(3),
       UNRECOGNIZED(-1),
       ;
 
@@ -384,6 +392,14 @@ public final class FolderOuterClass {
        * <code>DELETING = 2;</code>
        */
       public static final int DELETING_VALUE = 2;
+      /**
+       * <pre>
+       * Stopping folder resources and waiting for the deletion start timestamp.
+       * </pre>
+       *
+       * <code>PENDING_DELETION = 3;</code>
+       */
+      public static final int PENDING_DELETION_VALUE = 3;
 
 
       public final int getNumber() {
@@ -407,6 +423,7 @@ public final class FolderOuterClass {
           case 0: return STATUS_UNSPECIFIED;
           case 1: return ACTIVE;
           case 2: return DELETING;
+          case 3: return PENDING_DELETION;
           default: return null;
         }
       }
@@ -2040,7 +2057,7 @@ public final class FolderOuterClass {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/resourcemanager/v1/folder" +
       ".proto\022\037yandex.cloud.resourcemanager.v1\032" +
-      "\037google/protobuf/timestamp.proto\"\351\002\n\006Fol" +
+      "\037google/protobuf/timestamp.proto\"\377\002\n\006Fol" +
       "der\022\n\n\002id\030\001 \001(\t\022\020\n\010cloud_id\030\002 \001(\t\022.\n\ncre" +
       "ated_at\030\003 \001(\0132\032.google.protobuf.Timestam" +
       "p\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022C\n\006" +
@@ -2048,12 +2065,12 @@ public final class FolderOuterClass {
       "ger.v1.Folder.LabelsEntry\022>\n\006status\030\007 \001(" +
       "\0162..yandex.cloud.resourcemanager.v1.Fold" +
       "er.Status\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\":\n\006Status\022\026\n\022STATUS_UNS" +
-      "PECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\014\n\010DELETING\020\002Bz\n#" +
-      "yandex.cloud.api.resourcemanager.v1ZSgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/resourcemanager/v1;resourcemanager" +
-      "b\006proto3"
+      "\005value\030\002 \001(\t:\0028\001\"P\n\006Status\022\026\n\022STATUS_UNS" +
+      "PECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\014\n\010DELETING\020\002\022\024\n\020" +
+      "PENDING_DELETION\020\003Bz\n#yandex.cloud.api.r" +
+      "esourcemanager.v1ZSgithub.com/yandex-clo" +
+      "ud/go-genproto/yandex/cloud/resourcemana" +
+      "ger/v1;resourcemanagerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

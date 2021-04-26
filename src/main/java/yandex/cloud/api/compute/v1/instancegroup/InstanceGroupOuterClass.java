@@ -29182,6 +29182,24 @@ public final class InstanceGroupOuterClass {
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpecOrBuilder getDnsRecordSpecsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Optional. Manual set static internal IP. To set use variables.
+     * </pre>
+     *
+     * <code>string address = 3;</code>
+     */
+    java.lang.String getAddress();
+    /**
+     * <pre>
+     * Optional. Manual set static internal IP. To set use variables.
+     * </pre>
+     *
+     * <code>string address = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.PrimaryAddressSpec}
@@ -29197,6 +29215,7 @@ public final class InstanceGroupOuterClass {
     }
     private PrimaryAddressSpec() {
       dnsRecordSpecs_ = java.util.Collections.emptyList();
+      address_ = "";
     }
 
     @java.lang.Override
@@ -29243,6 +29262,12 @@ public final class InstanceGroupOuterClass {
               }
               dnsRecordSpecs_.add(
                   input.readMessage(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DnsRecordSpec.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              address_ = s;
               break;
             }
             default: {
@@ -29372,6 +29397,48 @@ public final class InstanceGroupOuterClass {
       return dnsRecordSpecs_.get(index);
     }
 
+    public static final int ADDRESS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object address_;
+    /**
+     * <pre>
+     * Optional. Manual set static internal IP. To set use variables.
+     * </pre>
+     *
+     * <code>string address = 3;</code>
+     */
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Manual set static internal IP. To set use variables.
+     * </pre>
+     *
+     * <code>string address = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -29392,6 +29459,9 @@ public final class InstanceGroupOuterClass {
       for (int i = 0; i < dnsRecordSpecs_.size(); i++) {
         output.writeMessage(2, dnsRecordSpecs_.get(i));
       }
+      if (!getAddressBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, address_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -29408,6 +29478,9 @@ public final class InstanceGroupOuterClass {
       for (int i = 0; i < dnsRecordSpecs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, dnsRecordSpecs_.get(i));
+      }
+      if (!getAddressBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, address_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -29432,6 +29505,8 @@ public final class InstanceGroupOuterClass {
       }
       result = result && getDnsRecordSpecsList()
           .equals(other.getDnsRecordSpecsList());
+      result = result && getAddress()
+          .equals(other.getAddress());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -29451,6 +29526,8 @@ public final class InstanceGroupOuterClass {
         hash = (37 * hash) + DNS_RECORD_SPECS_FIELD_NUMBER;
         hash = (53 * hash) + getDnsRecordSpecsList().hashCode();
       }
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -29597,6 +29674,8 @@ public final class InstanceGroupOuterClass {
         } else {
           dnsRecordSpecsBuilder_.clear();
         }
+        address_ = "";
+
         return this;
       }
 
@@ -29639,6 +29718,7 @@ public final class InstanceGroupOuterClass {
         } else {
           result.dnsRecordSpecs_ = dnsRecordSpecsBuilder_.build();
         }
+        result.address_ = address_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -29716,6 +29796,10 @@ public final class InstanceGroupOuterClass {
               dnsRecordSpecsBuilder_.addAllMessages(other.dnsRecordSpecs_);
             }
           }
+        }
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -30219,6 +30303,95 @@ public final class InstanceGroupOuterClass {
           dnsRecordSpecs_ = null;
         }
         return dnsRecordSpecsBuilder_;
+      }
+
+      private java.lang.Object address_ = "";
+      /**
+       * <pre>
+       * Optional. Manual set static internal IP. To set use variables.
+       * </pre>
+       *
+       * <code>string address = 3;</code>
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Manual set static internal IP. To set use variables.
+       * </pre>
+       *
+       * <code>string address = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional. Manual set static internal IP. To set use variables.
+       * </pre>
+       *
+       * <code>string address = 3;</code>
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Manual set static internal IP. To set use variables.
+       * </pre>
+       *
+       * <code>string address = 3;</code>
+       */
+      public Builder clearAddress() {
+        
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Manual set static internal IP. To set use variables.
+       * </pre>
+       *
+       * <code>string address = 3;</code>
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        address_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -48659,101 +48832,101 @@ public final class InstanceGroupOuterClass {
       "imaryAddressSpec\022Z\n\027primary_v6_address_s" +
       "pec\030\004 \001(\01329.yandex.cloud.compute.v1.inst" +
       "ancegroup.PrimaryAddressSpec\022\032\n\022security" +
-      "_group_ids\030\005 \003(\t\"\271\001\n\022PrimaryAddressSpec\022" +
+      "_group_ids\030\005 \003(\t\"\312\001\n\022PrimaryAddressSpec\022" +
       "S\n\023one_to_one_nat_spec\030\001 \001(\01326.yandex.cl" +
       "oud.compute.v1.instancegroup.OneToOneNat" +
       "Spec\022N\n\020dns_record_specs\030\002 \003(\01324.yandex." +
       "cloud.compute.v1.instancegroup.DnsRecord" +
-      "Spec\"\270\001\n\017OneToOneNatSpec\022D\n\nip_version\030\001" +
-      " \001(\01620.yandex.cloud.compute.v1.instanceg" +
-      "roup.IpVersion\022\017\n\007address\030\002 \001(\t\022N\n\020dns_r" +
-      "ecord_specs\030\003 \003(\01324.yandex.cloud.compute" +
-      ".v1.instancegroup.DnsRecordSpec\"_\n\rDnsRe" +
-      "cordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone" +
-      "_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003p" +
-      "tr\030\004 \001(\010\"\'\n\020SchedulingPolicy\022\023\n\013preempti" +
-      "ble\030\001 \001(\010\"\274\001\n\017NetworkSettings\022I\n\004type\030\001 " +
-      "\001(\0162;.yandex.cloud.compute.v1.instancegr" +
-      "oup.NetworkSettings.Type\"^\n\004Type\022\024\n\020TYPE" +
-      "_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE" +
-      "_ACCELERATED\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003" +
-      "\"\260\001\n\020LoadBalancerSpec\022Q\n\021target_group_sp" +
-      "ec\030\001 \001(\01326.yandex.cloud.compute.v1.insta" +
-      "ncegroup.TargetGroupSpec\022I\n\034max_opening_" +
-      "traffic_duration\030\002 \001(\0132\031.google.protobuf" +
-      ".DurationB\010\372\3071\004>=1s\"\262\002\n\017TargetGroupSpec\022" +
-      "2\n\004name\030\001 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61" +
-      "}[a-z0-9])?\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=" +
-      "256\022\233\001\n\006labels\030\003 \003(\0132B.yandex.cloud.comp" +
-      "ute.v1.instancegroup.TargetGroupSpec.Lab" +
-      "elsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9" +
-      "a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]" +
-      "*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"\314\001\n\033ApplicationLoadBalancerSpec" +
-      "\022b\n\021target_group_spec\030\001 \001(\0132A.yandex.clo" +
-      "ud.compute.v1.instancegroup.ApplicationT" +
-      "argetGroupSpecB\004\350\3071\001\022I\n\034max_opening_traf" +
-      "fic_duration\030\002 \001(\0132\031.google.protobuf.Dur" +
-      "ationB\010\372\3071\004>=1s\"\315\001\n\032ApplicationTargetGro" +
-      "upSpec\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(" +
-      "\t\022]\n\006labels\030\003 \003(\0132M.yandex.cloud.compute" +
-      ".v1.instancegroup.ApplicationTargetGroup" +
-      "Spec.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\272\001\n\020HealthChecks" +
-      "Spec\022[\n\022health_check_specs\030\001 \003(\01326.yande" +
-      "x.cloud.compute.v1.instancegroup.HealthC" +
-      "heckSpecB\007\202\3101\003>=1\022I\n\034max_checking_health" +
-      "_duration\030\002 \001(\0132\031.google.protobuf.Durati" +
-      "onB\010\372\3071\004>=1s\"\244\004\n\017HealthCheckSpec\0228\n\010inte" +
-      "rval\030\001 \001(\0132\031.google.protobuf.DurationB\013\372" +
-      "\3071\0071s-300s\0226\n\007timeout\030\002 \001(\0132\031.google.pro" +
-      "tobuf.DurationB\n\372\3071\0061s-60s\0225\n\023unhealthy_" +
-      "threshold\030\003 \001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,1" +
-      "0\0223\n\021healthy_threshold\030\004 \001(\003B\030\372\3071\0240,2,3," +
-      "4,5,6,7,8,9,10\022X\n\013tcp_options\030\005 \001(\0132A.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Heal" +
-      "thCheckSpec.TcpOptionsH\000\022Z\n\014http_options" +
-      "\030\006 \001(\0132B.yandex.cloud.compute.v1.instanc" +
-      "egroup.HealthCheckSpec.HttpOptionsH\000\032\'\n\n" +
-      "TcpOptions\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-65535\0326\n" +
-      "\013HttpOptions\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071-65535\022" +
-      "\014\n\004path\030\002 \001(\tB\034\n\024health_check_options\022\004\300" +
-      "\3011\001\"\250\005\n\017ManagedInstance\022\n\n\002id\030\001 \001(\t\022M\n\006s" +
-      "tatus\030\002 \001(\0162=.yandex.cloud.compute.v1.in" +
-      "stancegroup.ManagedInstance.Status\022\023\n\013in" +
-      "stance_id\030\003 \001(\t\022\014\n\004fqdn\030\004 \001(\t\022\014\n\004name\030\005 " +
-      "\001(\t\022\026\n\016status_message\030\006 \001(\t\022\017\n\007zone_id\030\007" +
-      " \001(\t\022S\n\022network_interfaces\030\010 \003(\01327.yande" +
-      "x.cloud.compute.v1.instancegroup.Network" +
-      "Interface\0225\n\021status_changed_at\030\t \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\"\323\002\n\006Status\022\026\n\022S" +
-      "TATUS_UNSPECIFIED\020\000\022\025\n\021CREATING_INSTANCE" +
-      "\020\013\022\025\n\021UPDATING_INSTANCE\020\014\022\025\n\021DELETING_IN" +
-      "STANCE\020\r\022\025\n\021STARTING_INSTANCE\020\016\022\025\n\021STOPP" +
-      "ING_INSTANCE\020\017\022\035\n\031AWAITING_STARTUP_DURAT" +
-      "ION\020\020\022\023\n\017CHECKING_HEALTH\020\021\022\023\n\017OPENING_TR" +
-      "AFFIC\020\022\022\034\n\030AWAITING_WARMUP_DURATION\020\023\022\023\n" +
-      "\017CLOSING_TRAFFIC\020\024\022\022\n\016RUNNING_ACTUAL\020\025\022\024" +
-      "\n\020RUNNING_OUTDATED\020\026\022\013\n\007STOPPED\020\027\022\013\n\007DEL" +
-      "ETED\020\030\"\357\001\n\020NetworkInterface\022\r\n\005index\030\001 \001" +
-      "(\t\022\023\n\013mac_address\030\002 \001(\t\022\021\n\tsubnet_id\030\003 \001" +
-      "(\t\022Q\n\022primary_v4_address\030\004 \001(\01325.yandex." +
-      "cloud.compute.v1.instancegroup.PrimaryAd" +
-      "dress\022Q\n\022primary_v6_address\030\005 \001(\01325.yand" +
-      "ex.cloud.compute.v1.instancegroup.Primar" +
-      "yAddress\"m\n\016PrimaryAddress\022\017\n\007address\030\001 " +
-      "\001(\t\022J\n\016one_to_one_nat\030\002 \001(\01322.yandex.clo" +
-      "ud.compute.v1.instancegroup.OneToOneNat\"" +
-      "d\n\013OneToOneNat\022\017\n\007address\030\001 \001(\t\022D\n\nip_ve" +
-      "rsion\030\002 \001(\01620.yandex.cloud.compute.v1.in" +
-      "stancegroup.IpVersion\"K\n\tLogRecord\022-\n\tti" +
-      "mestamp\030\001 \001(\0132\032.google.protobuf.Timestam" +
-      "p\022\017\n\007message\030\002 \001(\t*;\n\tIpVersion\022\032\n\026IP_VE" +
-      "RSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002B" +
-      "\204\001\n)yandex.cloud.api.compute.v1.instance" +
-      "groupZWgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/compute/v1/instancegroup" +
-      ";instancegroupb\006proto3"
+      "Spec\022\017\n\007address\030\003 \001(\t\"\270\001\n\017OneToOneNatSpe" +
+      "c\022D\n\nip_version\030\001 \001(\01620.yandex.cloud.com" +
+      "pute.v1.instancegroup.IpVersion\022\017\n\007addre" +
+      "ss\030\002 \001(\t\022N\n\020dns_record_specs\030\003 \003(\01324.yan" +
+      "dex.cloud.compute.v1.instancegroup.DnsRe" +
+      "cordSpec\"_\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 \001(\tB" +
+      "\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B" +
+      "\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"\'\n\020SchedulingP" +
+      "olicy\022\023\n\013preemptible\030\001 \001(\010\"\274\001\n\017NetworkSe" +
+      "ttings\022I\n\004type\030\001 \001(\0162;.yandex.cloud.comp" +
+      "ute.v1.instancegroup.NetworkSettings.Typ" +
+      "e\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STAND" +
+      "ARD\020\001\022\030\n\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HARDW" +
+      "ARE_ACCELERATED\020\003\"\260\001\n\020LoadBalancerSpec\022Q" +
+      "\n\021target_group_spec\030\001 \001(\01326.yandex.cloud" +
+      ".compute.v1.instancegroup.TargetGroupSpe" +
+      "c\022I\n\034max_opening_traffic_duration\030\002 \001(\0132" +
+      "\031.google.protobuf.DurationB\010\372\3071\004>=1s\"\262\002\n" +
+      "\017TargetGroupSpec\0222\n\004name\030\001 \001(\tB$\362\3071 |[a-" +
+      "z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descript" +
+      "ion\030\002 \001(\tB\t\212\3101\005<=256\022\233\001\n\006labels\030\003 \003(\0132B." +
+      "yandex.cloud.compute.v1.instancegroup.Ta" +
+      "rgetGroupSpec.LabelsEntryBG\202\3101\004<=64\212\3101\004<" +
+      "=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a" +
+      "-z][-_./\\@0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\314\001\n\033Applicatio" +
+      "nLoadBalancerSpec\022b\n\021target_group_spec\030\001" +
+      " \001(\0132A.yandex.cloud.compute.v1.instanceg" +
+      "roup.ApplicationTargetGroupSpecB\004\350\3071\001\022I\n" +
+      "\034max_opening_traffic_duration\030\002 \001(\0132\031.go" +
+      "ogle.protobuf.DurationB\010\372\3071\004>=1s\"\315\001\n\032App" +
+      "licationTargetGroupSpec\022\014\n\004name\030\001 \001(\t\022\023\n" +
+      "\013description\030\002 \001(\t\022]\n\006labels\030\003 \003(\0132M.yan" +
+      "dex.cloud.compute.v1.instancegroup.Appli" +
+      "cationTargetGroupSpec.LabelsEntry\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\"\272\001\n\020HealthChecksSpec\022[\n\022health_check_sp" +
+      "ecs\030\001 \003(\01326.yandex.cloud.compute.v1.inst" +
+      "ancegroup.HealthCheckSpecB\007\202\3101\003>=1\022I\n\034ma" +
+      "x_checking_health_duration\030\002 \001(\0132\031.googl" +
+      "e.protobuf.DurationB\010\372\3071\004>=1s\"\244\004\n\017Health" +
+      "CheckSpec\0228\n\010interval\030\001 \001(\0132\031.google.pro" +
+      "tobuf.DurationB\013\372\3071\0071s-300s\0226\n\007timeout\030\002" +
+      " \001(\0132\031.google.protobuf.DurationB\n\372\3071\0061s-" +
+      "60s\0225\n\023unhealthy_threshold\030\003 \001(\003B\030\372\3071\0240," +
+      "2,3,4,5,6,7,8,9,10\0223\n\021healthy_threshold\030" +
+      "\004 \001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013tcp_o" +
+      "ptions\030\005 \001(\0132A.yandex.cloud.compute.v1.i" +
+      "nstancegroup.HealthCheckSpec.TcpOptionsH" +
+      "\000\022Z\n\014http_options\030\006 \001(\0132B.yandex.cloud.c" +
+      "ompute.v1.instancegroup.HealthCheckSpec." +
+      "HttpOptionsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(" +
+      "\003B\013\372\3071\0071-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 " +
+      "\001(\003B\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024health" +
+      "_check_options\022\004\300\3011\001\"\250\005\n\017ManagedInstance" +
+      "\022\n\n\002id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yandex.cl" +
+      "oud.compute.v1.instancegroup.ManagedInst" +
+      "ance.Status\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fqdn" +
+      "\030\004 \001(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_message\030\006" +
+      " \001(\t\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network_interfa" +
+      "ces\030\010 \003(\01327.yandex.cloud.compute.v1.inst" +
+      "ancegroup.NetworkInterface\0225\n\021status_cha" +
+      "nged_at\030\t \001(\0132\032.google.protobuf.Timestam" +
+      "p\"\323\002\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\025\n\021" +
+      "CREATING_INSTANCE\020\013\022\025\n\021UPDATING_INSTANCE" +
+      "\020\014\022\025\n\021DELETING_INSTANCE\020\r\022\025\n\021STARTING_IN" +
+      "STANCE\020\016\022\025\n\021STOPPING_INSTANCE\020\017\022\035\n\031AWAIT" +
+      "ING_STARTUP_DURATION\020\020\022\023\n\017CHECKING_HEALT" +
+      "H\020\021\022\023\n\017OPENING_TRAFFIC\020\022\022\034\n\030AWAITING_WAR" +
+      "MUP_DURATION\020\023\022\023\n\017CLOSING_TRAFFIC\020\024\022\022\n\016R" +
+      "UNNING_ACTUAL\020\025\022\024\n\020RUNNING_OUTDATED\020\026\022\013\n" +
+      "\007STOPPED\020\027\022\013\n\007DELETED\020\030\"\357\001\n\020NetworkInter" +
+      "face\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t" +
+      "\022\021\n\tsubnet_id\030\003 \001(\t\022Q\n\022primary_v4_addres" +
+      "s\030\004 \001(\01325.yandex.cloud.compute.v1.instan" +
+      "cegroup.PrimaryAddress\022Q\n\022primary_v6_add" +
+      "ress\030\005 \001(\01325.yandex.cloud.compute.v1.ins" +
+      "tancegroup.PrimaryAddress\"m\n\016PrimaryAddr" +
+      "ess\022\017\n\007address\030\001 \001(\t\022J\n\016one_to_one_nat\030\002" +
+      " \001(\01322.yandex.cloud.compute.v1.instanceg" +
+      "roup.OneToOneNat\"d\n\013OneToOneNat\022\017\n\007addre" +
+      "ss\030\001 \001(\t\022D\n\nip_version\030\002 \001(\01620.yandex.cl" +
+      "oud.compute.v1.instancegroup.IpVersion\"K" +
+      "\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.google." +
+      "protobuf.Timestamp\022\017\n\007message\030\002 \001(\t*;\n\tI" +
+      "pVersion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004" +
+      "IPV4\020\001\022\010\n\004IPV6\020\002B\204\001\n)yandex.cloud.api.co" +
+      "mpute.v1.instancegroupZWgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/compute" +
+      "/v1/instancegroup;instancegroupb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -48919,7 +49092,7 @@ public final class InstanceGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddressSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_PrimaryAddressSpec_descriptor,
-        new java.lang.String[] { "OneToOneNatSpec", "DnsRecordSpecs", });
+        new java.lang.String[] { "OneToOneNatSpec", "DnsRecordSpecs", "Address", });
     internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNatSpec_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_compute_v1_instancegroup_OneToOneNatSpec_fieldAccessorTable = new

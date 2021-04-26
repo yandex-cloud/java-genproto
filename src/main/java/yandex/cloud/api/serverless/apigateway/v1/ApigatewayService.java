@@ -6882,6 +6882,1524 @@ public final class ApigatewayService {
 
   }
 
+  public interface AddDomainRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.apigateway.v1.AddDomainRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the API gateway that the domain is attached to.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getApiGatewayId();
+    /**
+     * <pre>
+     * ID of the API gateway that the domain is attached to.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getApiGatewayIdBytes();
+
+    /**
+     * <pre>
+     * ID of the attaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getDomainId();
+    /**
+     * <pre>
+     * ID of the attaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getDomainIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.AddDomainRequest}
+   */
+  public  static final class AddDomainRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.AddDomainRequest)
+      AddDomainRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddDomainRequest.newBuilder() to construct.
+    private AddDomainRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddDomainRequest() {
+      apiGatewayId_ = "";
+      domainId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AddDomainRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              apiGatewayId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domainId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest.class, yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest.Builder.class);
+    }
+
+    public static final int API_GATEWAY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object apiGatewayId_;
+    /**
+     * <pre>
+     * ID of the API gateway that the domain is attached to.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getApiGatewayId() {
+      java.lang.Object ref = apiGatewayId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        apiGatewayId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the API gateway that the domain is attached to.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getApiGatewayIdBytes() {
+      java.lang.Object ref = apiGatewayId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        apiGatewayId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object domainId_;
+    /**
+     * <pre>
+     * ID of the attaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getDomainId() {
+      java.lang.Object ref = domainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the attaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDomainIdBytes() {
+      java.lang.Object ref = domainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getApiGatewayIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
+      }
+      if (!getDomainIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domainId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getApiGatewayIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
+      }
+      if (!getDomainIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domainId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest) obj;
+
+      boolean result = true;
+      result = result && getApiGatewayId()
+          .equals(other.getApiGatewayId());
+      result = result && getDomainId()
+          .equals(other.getDomainId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + API_GATEWAY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getApiGatewayId().hashCode();
+      hash = (37 * hash) + DOMAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDomainId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.AddDomainRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.apigateway.v1.AddDomainRequest)
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest.class, yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        apiGatewayId_ = "";
+
+        domainId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest build() {
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest buildPartial() {
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest result = new yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest(this);
+        result.apiGatewayId_ = apiGatewayId_;
+        result.domainId_ = domainId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest) {
+          return mergeFrom((yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest other) {
+        if (other == yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest.getDefaultInstance()) return this;
+        if (!other.getApiGatewayId().isEmpty()) {
+          apiGatewayId_ = other.apiGatewayId_;
+          onChanged();
+        }
+        if (!other.getDomainId().isEmpty()) {
+          domainId_ = other.domainId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object apiGatewayId_ = "";
+      /**
+       * <pre>
+       * ID of the API gateway that the domain is attached to.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getApiGatewayId() {
+        java.lang.Object ref = apiGatewayId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          apiGatewayId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the API gateway that the domain is attached to.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getApiGatewayIdBytes() {
+        java.lang.Object ref = apiGatewayId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          apiGatewayId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the API gateway that the domain is attached to.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setApiGatewayId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        apiGatewayId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the API gateway that the domain is attached to.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearApiGatewayId() {
+        
+        apiGatewayId_ = getDefaultInstance().getApiGatewayId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the API gateway that the domain is attached to.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setApiGatewayIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        apiGatewayId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domainId_ = "";
+      /**
+       * <pre>
+       * ID of the attaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getDomainId() {
+        java.lang.Object ref = domainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the attaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDomainIdBytes() {
+        java.lang.Object ref = domainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the attaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setDomainId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domainId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the attaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearDomainId() {
+        
+        domainId_ = getDefaultInstance().getDomainId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the attaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setDomainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domainId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.apigateway.v1.AddDomainRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.apigateway.v1.AddDomainRequest)
+    private static final yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest();
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddDomainRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AddDomainRequest>() {
+      @java.lang.Override
+      public AddDomainRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AddDomainRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddDomainRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddDomainRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemoveDomainRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.apigateway.v1.RemoveDomainRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the API gateway from which the domain is being detached.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getApiGatewayId();
+    /**
+     * <pre>
+     * ID of the API gateway from which the domain is being detached.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getApiGatewayIdBytes();
+
+    /**
+     * <pre>
+     * ID of the detaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getDomainId();
+    /**
+     * <pre>
+     * ID of the detaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getDomainIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.RemoveDomainRequest}
+   */
+  public  static final class RemoveDomainRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.RemoveDomainRequest)
+      RemoveDomainRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemoveDomainRequest.newBuilder() to construct.
+    private RemoveDomainRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemoveDomainRequest() {
+      apiGatewayId_ = "";
+      domainId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RemoveDomainRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              apiGatewayId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domainId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest.class, yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest.Builder.class);
+    }
+
+    public static final int API_GATEWAY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object apiGatewayId_;
+    /**
+     * <pre>
+     * ID of the API gateway from which the domain is being detached.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getApiGatewayId() {
+      java.lang.Object ref = apiGatewayId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        apiGatewayId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the API gateway from which the domain is being detached.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getApiGatewayIdBytes() {
+      java.lang.Object ref = apiGatewayId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        apiGatewayId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object domainId_;
+    /**
+     * <pre>
+     * ID of the detaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getDomainId() {
+      java.lang.Object ref = domainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the detaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDomainIdBytes() {
+      java.lang.Object ref = domainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getApiGatewayIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
+      }
+      if (!getDomainIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domainId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getApiGatewayIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
+      }
+      if (!getDomainIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domainId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest) obj;
+
+      boolean result = true;
+      result = result && getApiGatewayId()
+          .equals(other.getApiGatewayId());
+      result = result && getDomainId()
+          .equals(other.getDomainId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + API_GATEWAY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getApiGatewayId().hashCode();
+      hash = (37 * hash) + DOMAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDomainId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.RemoveDomainRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.apigateway.v1.RemoveDomainRequest)
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest.class, yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        apiGatewayId_ = "";
+
+        domainId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest build() {
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest buildPartial() {
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest result = new yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest(this);
+        result.apiGatewayId_ = apiGatewayId_;
+        result.domainId_ = domainId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest) {
+          return mergeFrom((yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest other) {
+        if (other == yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest.getDefaultInstance()) return this;
+        if (!other.getApiGatewayId().isEmpty()) {
+          apiGatewayId_ = other.apiGatewayId_;
+          onChanged();
+        }
+        if (!other.getDomainId().isEmpty()) {
+          domainId_ = other.domainId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object apiGatewayId_ = "";
+      /**
+       * <pre>
+       * ID of the API gateway from which the domain is being detached.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getApiGatewayId() {
+        java.lang.Object ref = apiGatewayId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          apiGatewayId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the API gateway from which the domain is being detached.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getApiGatewayIdBytes() {
+        java.lang.Object ref = apiGatewayId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          apiGatewayId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the API gateway from which the domain is being detached.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setApiGatewayId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        apiGatewayId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the API gateway from which the domain is being detached.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearApiGatewayId() {
+        
+        apiGatewayId_ = getDefaultInstance().getApiGatewayId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the API gateway from which the domain is being detached.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setApiGatewayIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        apiGatewayId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domainId_ = "";
+      /**
+       * <pre>
+       * ID of the detaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getDomainId() {
+        java.lang.Object ref = domainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the detaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDomainIdBytes() {
+        java.lang.Object ref = domainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the detaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setDomainId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domainId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the detaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearDomainId() {
+        
+        domainId_ = getDefaultInstance().getDomainId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the detaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setDomainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domainId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.apigateway.v1.RemoveDomainRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.apigateway.v1.RemoveDomainRequest)
+    private static final yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest();
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemoveDomainRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RemoveDomainRequest>() {
+      @java.lang.Override
+      public RemoveDomainRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RemoveDomainRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemoveDomainRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemoveDomainRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CreateApiGatewayMetadataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.apigateway.v1.CreateApiGatewayMetadata)
       com.google.protobuf.MessageOrBuilder {
@@ -8635,6 +10153,1524 @@ public final class ApigatewayService {
 
     @java.lang.Override
     public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.DeleteApiGatewayMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddDomainMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.apigateway.v1.AddDomainMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the API gateway that the domain is attached to.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1;</code>
+     */
+    java.lang.String getApiGatewayId();
+    /**
+     * <pre>
+     * ID of the API gateway that the domain is attached to.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getApiGatewayIdBytes();
+
+    /**
+     * <pre>
+     * ID of the attaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2;</code>
+     */
+    java.lang.String getDomainId();
+    /**
+     * <pre>
+     * ID of the attaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getDomainIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.AddDomainMetadata}
+   */
+  public  static final class AddDomainMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.AddDomainMetadata)
+      AddDomainMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddDomainMetadata.newBuilder() to construct.
+    private AddDomainMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddDomainMetadata() {
+      apiGatewayId_ = "";
+      domainId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AddDomainMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              apiGatewayId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domainId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata.class, yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata.Builder.class);
+    }
+
+    public static final int API_GATEWAY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object apiGatewayId_;
+    /**
+     * <pre>
+     * ID of the API gateway that the domain is attached to.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1;</code>
+     */
+    public java.lang.String getApiGatewayId() {
+      java.lang.Object ref = apiGatewayId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        apiGatewayId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the API gateway that the domain is attached to.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getApiGatewayIdBytes() {
+      java.lang.Object ref = apiGatewayId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        apiGatewayId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object domainId_;
+    /**
+     * <pre>
+     * ID of the attaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2;</code>
+     */
+    public java.lang.String getDomainId() {
+      java.lang.Object ref = domainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the attaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDomainIdBytes() {
+      java.lang.Object ref = domainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getApiGatewayIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
+      }
+      if (!getDomainIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domainId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getApiGatewayIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
+      }
+      if (!getDomainIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domainId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata) obj;
+
+      boolean result = true;
+      result = result && getApiGatewayId()
+          .equals(other.getApiGatewayId());
+      result = result && getDomainId()
+          .equals(other.getDomainId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + API_GATEWAY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getApiGatewayId().hashCode();
+      hash = (37 * hash) + DOMAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDomainId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.AddDomainMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.apigateway.v1.AddDomainMetadata)
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata.class, yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        apiGatewayId_ = "";
+
+        domainId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata build() {
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata buildPartial() {
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata result = new yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata(this);
+        result.apiGatewayId_ = apiGatewayId_;
+        result.domainId_ = domainId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata) {
+          return mergeFrom((yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata other) {
+        if (other == yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata.getDefaultInstance()) return this;
+        if (!other.getApiGatewayId().isEmpty()) {
+          apiGatewayId_ = other.apiGatewayId_;
+          onChanged();
+        }
+        if (!other.getDomainId().isEmpty()) {
+          domainId_ = other.domainId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object apiGatewayId_ = "";
+      /**
+       * <pre>
+       * ID of the API gateway that the domain is attached to.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1;</code>
+       */
+      public java.lang.String getApiGatewayId() {
+        java.lang.Object ref = apiGatewayId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          apiGatewayId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the API gateway that the domain is attached to.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getApiGatewayIdBytes() {
+        java.lang.Object ref = apiGatewayId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          apiGatewayId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the API gateway that the domain is attached to.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1;</code>
+       */
+      public Builder setApiGatewayId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        apiGatewayId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the API gateway that the domain is attached to.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1;</code>
+       */
+      public Builder clearApiGatewayId() {
+        
+        apiGatewayId_ = getDefaultInstance().getApiGatewayId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the API gateway that the domain is attached to.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1;</code>
+       */
+      public Builder setApiGatewayIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        apiGatewayId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domainId_ = "";
+      /**
+       * <pre>
+       * ID of the attaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2;</code>
+       */
+      public java.lang.String getDomainId() {
+        java.lang.Object ref = domainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the attaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDomainIdBytes() {
+        java.lang.Object ref = domainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the attaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2;</code>
+       */
+      public Builder setDomainId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domainId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the attaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2;</code>
+       */
+      public Builder clearDomainId() {
+        
+        domainId_ = getDefaultInstance().getDomainId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the attaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2;</code>
+       */
+      public Builder setDomainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domainId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.apigateway.v1.AddDomainMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.apigateway.v1.AddDomainMetadata)
+    private static final yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata();
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddDomainMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<AddDomainMetadata>() {
+      @java.lang.Override
+      public AddDomainMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AddDomainMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddDomainMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddDomainMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemoveDomainMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.apigateway.v1.RemoveDomainMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the API gateway from which the domain is being detached.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1;</code>
+     */
+    java.lang.String getApiGatewayId();
+    /**
+     * <pre>
+     * ID of the API gateway from which the domain is being detached.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getApiGatewayIdBytes();
+
+    /**
+     * <pre>
+     * ID of the detaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2;</code>
+     */
+    java.lang.String getDomainId();
+    /**
+     * <pre>
+     * ID of the detaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getDomainIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.RemoveDomainMetadata}
+   */
+  public  static final class RemoveDomainMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.RemoveDomainMetadata)
+      RemoveDomainMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemoveDomainMetadata.newBuilder() to construct.
+    private RemoveDomainMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemoveDomainMetadata() {
+      apiGatewayId_ = "";
+      domainId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RemoveDomainMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              apiGatewayId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domainId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata.class, yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata.Builder.class);
+    }
+
+    public static final int API_GATEWAY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object apiGatewayId_;
+    /**
+     * <pre>
+     * ID of the API gateway from which the domain is being detached.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1;</code>
+     */
+    public java.lang.String getApiGatewayId() {
+      java.lang.Object ref = apiGatewayId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        apiGatewayId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the API gateway from which the domain is being detached.
+     * </pre>
+     *
+     * <code>string api_gateway_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getApiGatewayIdBytes() {
+      java.lang.Object ref = apiGatewayId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        apiGatewayId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DOMAIN_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object domainId_;
+    /**
+     * <pre>
+     * ID of the detaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2;</code>
+     */
+    public java.lang.String getDomainId() {
+      java.lang.Object ref = domainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the detaching domain.
+     * </pre>
+     *
+     * <code>string domain_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDomainIdBytes() {
+      java.lang.Object ref = domainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getApiGatewayIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apiGatewayId_);
+      }
+      if (!getDomainIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, domainId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getApiGatewayIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apiGatewayId_);
+      }
+      if (!getDomainIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, domainId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata other = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata) obj;
+
+      boolean result = true;
+      result = result && getApiGatewayId()
+          .equals(other.getApiGatewayId());
+      result = result && getDomainId()
+          .equals(other.getDomainId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + API_GATEWAY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getApiGatewayId().hashCode();
+      hash = (37 * hash) + DOMAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDomainId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.RemoveDomainMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.apigateway.v1.RemoveDomainMetadata)
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata.class, yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        apiGatewayId_ = "";
+
+        domainId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata build() {
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata buildPartial() {
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata result = new yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata(this);
+        result.apiGatewayId_ = apiGatewayId_;
+        result.domainId_ = domainId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata) {
+          return mergeFrom((yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata other) {
+        if (other == yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata.getDefaultInstance()) return this;
+        if (!other.getApiGatewayId().isEmpty()) {
+          apiGatewayId_ = other.apiGatewayId_;
+          onChanged();
+        }
+        if (!other.getDomainId().isEmpty()) {
+          domainId_ = other.domainId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object apiGatewayId_ = "";
+      /**
+       * <pre>
+       * ID of the API gateway from which the domain is being detached.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1;</code>
+       */
+      public java.lang.String getApiGatewayId() {
+        java.lang.Object ref = apiGatewayId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          apiGatewayId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the API gateway from which the domain is being detached.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getApiGatewayIdBytes() {
+        java.lang.Object ref = apiGatewayId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          apiGatewayId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the API gateway from which the domain is being detached.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1;</code>
+       */
+      public Builder setApiGatewayId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        apiGatewayId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the API gateway from which the domain is being detached.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1;</code>
+       */
+      public Builder clearApiGatewayId() {
+        
+        apiGatewayId_ = getDefaultInstance().getApiGatewayId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the API gateway from which the domain is being detached.
+       * </pre>
+       *
+       * <code>string api_gateway_id = 1;</code>
+       */
+      public Builder setApiGatewayIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        apiGatewayId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domainId_ = "";
+      /**
+       * <pre>
+       * ID of the detaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2;</code>
+       */
+      public java.lang.String getDomainId() {
+        java.lang.Object ref = domainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the detaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDomainIdBytes() {
+        java.lang.Object ref = domainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the detaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2;</code>
+       */
+      public Builder setDomainId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domainId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the detaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2;</code>
+       */
+      public Builder clearDomainId() {
+        
+        domainId_ = getDefaultInstance().getDomainId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the detaching domain.
+       * </pre>
+       *
+       * <code>string domain_id = 2;</code>
+       */
+      public Builder setDomainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domainId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.apigateway.v1.RemoveDomainMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.apigateway.v1.RemoveDomainMetadata)
+    private static final yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata();
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemoveDomainMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RemoveDomainMetadata>() {
+      @java.lang.Override
+      public RemoveDomainMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RemoveDomainMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemoveDomainMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemoveDomainMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -12454,6 +15490,16 @@ public final class ApigatewayService {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_apigateway_v1_DeleteApiGatewayRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -12468,6 +15514,16 @@ public final class ApigatewayService {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_apigateway_v1_DeleteApiGatewayMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_apigateway_v1_ListOperationsRequest_descriptor;
   private static final 
@@ -12535,79 +15591,97 @@ public final class ApigatewayService {
       "i_spec\030\006 \001(\tH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
       "(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004spec\022\004\300\3011\001\"7\n\027D" +
       "eleteApiGatewayRequest\022\034\n\016api_gateway_id" +
-      "\030\001 \001(\tB\004\350\3071\001\"2\n\030CreateApiGatewayMetadata" +
-      "\022\026\n\016api_gateway_id\030\001 \001(\t\"2\n\030UpdateApiGat" +
-      "ewayMetadata\022\026\n\016api_gateway_id\030\001 \001(\t\"2\n\030" +
-      "DeleteApiGatewayMetadata\022\026\n\016api_gateway_" +
-      "id\030\001 \001(\t\"\217\001\n\025ListOperationsRequest\022\034\n\016ap" +
-      "i_gateway_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"h\n\026Li" +
-      "stOperationsResponse\0225\n\noperations\030\001 \003(\013" +
-      "2!.yandex.cloud.operation.Operation\022\027\n\017n" +
-      "ext_page_token\030\002 \001(\t\"\300\001\n\025GetOpenapiSpecR" +
-      "equest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022S\n\006" +
-      "format\030\002 \001(\0162C.yandex.cloud.serverless.a" +
-      "pigateway.v1.GetOpenapiSpecRequest.Forma" +
-      "t\"4\n\006Format\022\026\n\022FORMAT_UNSPECIFIED\020\000\022\010\n\004J" +
-      "SON\020\001\022\010\n\004YAML\020\002\"F\n\026GetOpenapiSpecRespons" +
-      "e\022\026\n\016api_gateway_id\030\001 \001(\t\022\024\n\014openapi_spe" +
-      "c\030\002 \001(\t2\230\020\n\021ApiGatewayService\022\253\001\n\003Get\022;." +
-      "yandex.cloud.serverless.apigateway.v1.Ge" +
-      "tApiGatewayRequest\0321.yandex.cloud.server" +
-      "less.apigateway.v1.ApiGateway\"4\202\323\344\223\002.\022,/" +
-      "apigateways/v1/apigateways/{api_gateway_" +
-      "id}\022\250\001\n\004List\022<.yandex.cloud.serverless.a" +
-      "pigateway.v1.ListApiGatewayRequest\032=.yan" +
-      "dex.cloud.serverless.apigateway.v1.ListA" +
-      "piGatewayResponse\"#\202\323\344\223\002\035\022\033/apigateways/" +
-      "v1/apigateways\022\275\001\n\006Create\022>.yandex.cloud" +
-      ".serverless.apigateway.v1.CreateApiGatew" +
-      "ayRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"P\202\323\344\223\002 \"\033/apigateways/v1/apigateway" +
-      "s:\001*\262\322*&\n\030CreateApiGatewayMetadata\022\nApiG" +
-      "ateway\022\316\001\n\006Update\022>.yandex.cloud.serverl" +
-      "ess.apigateway.v1.UpdateApiGatewayReques" +
-      "t\032!.yandex.cloud.operation.Operation\"a\202\323" +
-      "\344\223\00212,/apigateways/v1/apigateways/{api_g" +
-      "ateway_id}:\001*\262\322*&\n\030UpdateApiGatewayMetad" +
-      "ata\022\nApiGateway\022\326\001\n\006Delete\022>.yandex.clou" +
-      "d.serverless.apigateway.v1.DeleteApiGate" +
-      "wayRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"i\202\323\344\223\002.*,/apigateways/v1/apigatewa" +
-      "ys/{api_gateway_id}\262\322*1\n\030DeleteApiGatewa" +
-      "yMetadata\022\025google.protobuf.Empty\022\310\001\n\016Get" +
-      "OpenapiSpec\022<.yandex.cloud.serverless.ap" +
-      "igateway.v1.GetOpenapiSpecRequest\032=.yand" +
-      "ex.cloud.serverless.apigateway.v1.GetOpe" +
-      "napiSpecResponse\"9\202\323\344\223\0023\0221/apigateways/v" +
-      "1/apigateways/{api_gateway_id}:spec\022\316\001\n\016" +
-      "ListOperations\022<.yandex.cloud.serverless" +
-      ".apigateway.v1.ListOperationsRequest\032=.y" +
-      "andex.cloud.serverless.apigateway.v1.Lis" +
-      "tOperationsResponse\"?\202\323\344\223\0029\0227/apigateway" +
-      "s/v1/apigateways/{api_gateway_id}/operat" +
-      "ions\022\273\001\n\022ListAccessBindings\022..yandex.clo" +
-      "ud.access.ListAccessBindingsRequest\032/.ya" +
-      "ndex.cloud.access.ListAccessBindingsResp" +
-      "onse\"D\202\323\344\223\002>\022</apigateways/v1/apigateway" +
-      "s/{resource_id}:listAccessBindings\022\353\001\n\021S" +
-      "etAccessBindings\022-.yandex.cloud.access.S" +
-      "etAccessBindingsRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"\203\001\202\323\344\223\002@\";/apigateway" +
-      "s/v1/apigateways/{resource_id}:setAccess" +
-      "Bindings:\001*\262\322*9\n access.SetAccessBinding" +
-      "sMetadata\022\025google.protobuf.Empty\022\367\001\n\024Upd" +
-      "ateAccessBindings\0220.yandex.cloud.access." +
-      "UpdateAccessBindingsRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"\211\001\202\323\344\223\002C2>/apigat" +
-      "eways/v1/apigateways/{resource_id}:updat" +
-      "eAccessBindings:\001*\262\322*<\n#access.UpdateAcc" +
-      "essBindingsMetadata\022\025google.protobuf.Emp" +
-      "tyB\201\001\n)yandex.cloud.api.serverless.apiga" +
-      "teway.v1ZTgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/serverless/apigateway" +
-      "/v1;apigatewayb\006proto3"
+      "\030\001 \001(\tB\004\350\3071\001\"I\n\020AddDomainRequest\022\034\n\016api_" +
+      "gateway_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tdomain_id\030\002 \001(" +
+      "\tB\004\350\3071\001\"L\n\023RemoveDomainRequest\022\034\n\016api_ga" +
+      "teway_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tdomain_id\030\002 \001(\tB" +
+      "\004\350\3071\001\"2\n\030CreateApiGatewayMetadata\022\026\n\016api" +
+      "_gateway_id\030\001 \001(\t\"2\n\030UpdateApiGatewayMet" +
+      "adata\022\026\n\016api_gateway_id\030\001 \001(\t\"2\n\030DeleteA" +
+      "piGatewayMetadata\022\026\n\016api_gateway_id\030\001 \001(" +
+      "\t\">\n\021AddDomainMetadata\022\026\n\016api_gateway_id" +
+      "\030\001 \001(\t\022\021\n\tdomain_id\030\002 \001(\t\"A\n\024RemoveDomai" +
+      "nMetadata\022\026\n\016api_gateway_id\030\001 \001(\t\022\021\n\tdom" +
+      "ain_id\030\002 \001(\t\"\217\001\n\025ListOperationsRequest\022\034" +
+      "\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"h" +
+      "\n\026ListOperationsResponse\0225\n\noperations\030\001" +
+      " \003(\0132!.yandex.cloud.operation.Operation\022" +
+      "\027\n\017next_page_token\030\002 \001(\t\"\300\001\n\025GetOpenapiS" +
+      "pecRequest\022\034\n\016api_gateway_id\030\001 \001(\tB\004\350\3071\001" +
+      "\022S\n\006format\030\002 \001(\0162C.yandex.cloud.serverle" +
+      "ss.apigateway.v1.GetOpenapiSpecRequest.F" +
+      "ormat\"4\n\006Format\022\026\n\022FORMAT_UNSPECIFIED\020\000\022" +
+      "\010\n\004JSON\020\001\022\010\n\004YAML\020\002\"F\n\026GetOpenapiSpecRes" +
+      "ponse\022\026\n\016api_gateway_id\030\001 \001(\t\022\024\n\014openapi" +
+      "_spec\030\002 \001(\t2\332\023\n\021ApiGatewayService\022\253\001\n\003Ge" +
+      "t\022;.yandex.cloud.serverless.apigateway.v" +
+      "1.GetApiGatewayRequest\0321.yandex.cloud.se" +
+      "rverless.apigateway.v1.ApiGateway\"4\202\323\344\223\002" +
+      ".\022,/apigateways/v1/apigateways/{api_gate" +
+      "way_id}\022\250\001\n\004List\022<.yandex.cloud.serverle" +
+      "ss.apigateway.v1.ListApiGatewayRequest\032=" +
+      ".yandex.cloud.serverless.apigateway.v1.L" +
+      "istApiGatewayResponse\"#\202\323\344\223\002\035\022\033/apigatew" +
+      "ays/v1/apigateways\022\275\001\n\006Create\022>.yandex.c" +
+      "loud.serverless.apigateway.v1.CreateApiG" +
+      "atewayRequest\032!.yandex.cloud.operation.O" +
+      "peration\"P\202\323\344\223\002 \"\033/apigateways/v1/apigat" +
+      "eways:\001*\262\322*&\n\030CreateApiGatewayMetadata\022\n" +
+      "ApiGateway\022\316\001\n\006Update\022>.yandex.cloud.ser" +
+      "verless.apigateway.v1.UpdateApiGatewayRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"a\202\323\344\223\00212,/apigateways/v1/apigateways/{a" +
+      "pi_gateway_id}:\001*\262\322*&\n\030UpdateApiGatewayM" +
+      "etadata\022\nApiGateway\022\326\001\n\006Delete\022>.yandex." +
+      "cloud.serverless.apigateway.v1.DeleteApi" +
+      "GatewayRequest\032!.yandex.cloud.operation." +
+      "Operation\"i\202\323\344\223\002.*,/apigateways/v1/apiga" +
+      "teways/{api_gateway_id}\262\322*1\n\030DeleteApiGa" +
+      "tewayMetadata\022\025google.protobuf.Empty\022\330\001\n" +
+      "\tAddDomain\0227.yandex.cloud.serverless.api" +
+      "gateway.v1.AddDomainRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"o\202\323\344\223\002;\"6/apigate" +
+      "ways/v1/apigateways/{api_gateway_id}:add" +
+      "Domain:\001*\262\322**\n\021AddDomainMetadata\022\025google" +
+      ".protobuf.Empty\022\344\001\n\014RemoveDomain\022:.yande" +
+      "x.cloud.serverless.apigateway.v1.RemoveD" +
+      "omainRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"u\202\323\344\223\002>\"9/apigateways/v1/apigate" +
+      "ways/{api_gateway_id}:removeDomain:\001*\262\322*" +
+      "-\n\024RemoveDomainMetadata\022\025google.protobuf" +
+      ".Empty\022\310\001\n\016GetOpenapiSpec\022<.yandex.cloud" +
+      ".serverless.apigateway.v1.GetOpenapiSpec" +
+      "Request\032=.yandex.cloud.serverless.apigat" +
+      "eway.v1.GetOpenapiSpecResponse\"9\202\323\344\223\0023\0221" +
+      "/apigateways/v1/apigateways/{api_gateway" +
+      "_id}:spec\022\316\001\n\016ListOperations\022<.yandex.cl" +
+      "oud.serverless.apigateway.v1.ListOperati" +
+      "onsRequest\032=.yandex.cloud.serverless.api" +
+      "gateway.v1.ListOperationsResponse\"?\202\323\344\223\002" +
+      "9\0227/apigateways/v1/apigateways/{api_gate" +
+      "way_id}/operations\022\273\001\n\022ListAccessBinding" +
+      "s\022..yandex.cloud.access.ListAccessBindin" +
+      "gsRequest\032/.yandex.cloud.access.ListAcce" +
+      "ssBindingsResponse\"D\202\323\344\223\002>\022</apigateways" +
+      "/v1/apigateways/{resource_id}:listAccess" +
+      "Bindings\022\353\001\n\021SetAccessBindings\022-.yandex." +
+      "cloud.access.SetAccessBindingsRequest\032!." +
+      "yandex.cloud.operation.Operation\"\203\001\202\323\344\223\002" +
+      "@\";/apigateways/v1/apigateways/{resource" +
+      "_id}:setAccessBindings:\001*\262\322*9\n access.Se" +
+      "tAccessBindingsMetadata\022\025google.protobuf" +
+      ".Empty\022\367\001\n\024UpdateAccessBindings\0220.yandex" +
+      ".cloud.access.UpdateAccessBindingsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\211\001\202" +
+      "\323\344\223\002C2>/apigateways/v1/apigateways/{reso" +
+      "urce_id}:updateAccessBindings:\001*\262\322*<\n#ac" +
+      "cess.UpdateAccessBindingsMetadata\022\025googl" +
+      "e.protobuf.EmptyB\201\001\n)yandex.cloud.api.se" +
+      "rverless.apigateway.v1ZTgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/serverl" +
+      "ess/apigateway/v1;apigatewayb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12676,44 +15750,68 @@ public final class ApigatewayService {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_DeleteApiGatewayRequest_descriptor,
         new java.lang.String[] { "ApiGatewayId", });
-    internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayMetadata_descriptor =
+    internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainRequest_descriptor,
+        new java.lang.String[] { "ApiGatewayId", "DomainId", });
+    internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainRequest_descriptor,
+        new java.lang.String[] { "ApiGatewayId", "DomainId", });
+    internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_CreateApiGatewayMetadata_descriptor,
         new java.lang.String[] { "ApiGatewayId", });
     internal_static_yandex_cloud_serverless_apigateway_v1_UpdateApiGatewayMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_serverless_apigateway_v1_UpdateApiGatewayMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_UpdateApiGatewayMetadata_descriptor,
         new java.lang.String[] { "ApiGatewayId", });
     internal_static_yandex_cloud_serverless_apigateway_v1_DeleteApiGatewayMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_serverless_apigateway_v1_DeleteApiGatewayMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_DeleteApiGatewayMetadata_descriptor,
         new java.lang.String[] { "ApiGatewayId", });
+    internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_apigateway_v1_AddDomainMetadata_descriptor,
+        new java.lang.String[] { "ApiGatewayId", "DomainId", });
+    internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_apigateway_v1_RemoveDomainMetadata_descriptor,
+        new java.lang.String[] { "ApiGatewayId", "DomainId", });
     internal_static_yandex_cloud_serverless_apigateway_v1_ListOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_serverless_apigateway_v1_ListOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_ListOperationsRequest_descriptor,
         new java.lang.String[] { "ApiGatewayId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_serverless_apigateway_v1_ListOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_serverless_apigateway_v1_ListOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_ListOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_serverless_apigateway_v1_GetOpenapiSpecRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_serverless_apigateway_v1_GetOpenapiSpecRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_GetOpenapiSpecRequest_descriptor,
         new java.lang.String[] { "ApiGatewayId", "Format", });
     internal_static_yandex_cloud_serverless_apigateway_v1_GetOpenapiSpecResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_serverless_apigateway_v1_GetOpenapiSpecResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_GetOpenapiSpecResponse_descriptor,

@@ -221,6 +221,50 @@ public final class Apigateway {
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
+
+    /**
+     * <pre>
+     * List of domains attached to API gateway.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+     */
+    java.util.List<yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain> 
+        getAttachedDomainsList();
+    /**
+     * <pre>
+     * List of domains attached to API gateway.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+     */
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain getAttachedDomains(int index);
+    /**
+     * <pre>
+     * List of domains attached to API gateway.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+     */
+    int getAttachedDomainsCount();
+    /**
+     * <pre>
+     * List of domains attached to API gateway.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomainOrBuilder> 
+        getAttachedDomainsOrBuilderList();
+    /**
+     * <pre>
+     * List of domains attached to API gateway.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+     */
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomainOrBuilder getAttachedDomainsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.ApiGateway}
@@ -242,6 +286,7 @@ public final class Apigateway {
       status_ = 0;
       domain_ = "";
       logGroupId_ = "";
+      attachedDomains_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -336,6 +381,15 @@ public final class Apigateway {
               logGroupId_ = s;
               break;
             }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+                attachedDomains_ = new java.util.ArrayList<yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain>();
+                mutable_bitField0_ |= 0x00000200;
+              }
+              attachedDomains_.add(
+                  input.readMessage(yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -351,6 +405,9 @@ public final class Apigateway {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+          attachedDomains_ = java.util.Collections.unmodifiableList(attachedDomains_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -957,6 +1014,61 @@ public final class Apigateway {
       }
     }
 
+    public static final int ATTACHED_DOMAINS_FIELD_NUMBER = 11;
+    private java.util.List<yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain> attachedDomains_;
+    /**
+     * <pre>
+     * List of domains attached to API gateway.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+     */
+    public java.util.List<yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain> getAttachedDomainsList() {
+      return attachedDomains_;
+    }
+    /**
+     * <pre>
+     * List of domains attached to API gateway.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomainOrBuilder> 
+        getAttachedDomainsOrBuilderList() {
+      return attachedDomains_;
+    }
+    /**
+     * <pre>
+     * List of domains attached to API gateway.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+     */
+    public int getAttachedDomainsCount() {
+      return attachedDomains_.size();
+    }
+    /**
+     * <pre>
+     * List of domains attached to API gateway.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+     */
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain getAttachedDomains(int index) {
+      return attachedDomains_.get(index);
+    }
+    /**
+     * <pre>
+     * List of domains attached to API gateway.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+     */
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomainOrBuilder getAttachedDomainsOrBuilder(
+        int index) {
+      return attachedDomains_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1000,6 +1112,9 @@ public final class Apigateway {
       }
       if (!getLogGroupIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, logGroupId_);
+      }
+      for (int i = 0; i < attachedDomains_.size(); i++) {
+        output.writeMessage(11, attachedDomains_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1046,6 +1161,10 @@ public final class Apigateway {
       if (!getLogGroupIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, logGroupId_);
       }
+      for (int i = 0; i < attachedDomains_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, attachedDomains_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1082,6 +1201,8 @@ public final class Apigateway {
           .equals(other.getDomain());
       result = result && getLogGroupId()
           .equals(other.getLogGroupId());
+      result = result && getAttachedDomainsList()
+          .equals(other.getAttachedDomainsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1115,6 +1236,10 @@ public final class Apigateway {
       hash = (53 * hash) + getDomain().hashCode();
       hash = (37 * hash) + LOG_GROUP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getLogGroupId().hashCode();
+      if (getAttachedDomainsCount() > 0) {
+        hash = (37 * hash) + ATTACHED_DOMAINS_FIELD_NUMBER;
+        hash = (53 * hash) + getAttachedDomainsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1265,6 +1390,7 @@ public final class Apigateway {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getAttachedDomainsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1291,6 +1417,12 @@ public final class Apigateway {
 
         logGroupId_ = "";
 
+        if (attachedDomainsBuilder_ == null) {
+          attachedDomains_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+        } else {
+          attachedDomainsBuilder_.clear();
+        }
         return this;
       }
 
@@ -1333,6 +1465,15 @@ public final class Apigateway {
         result.status_ = status_;
         result.domain_ = domain_;
         result.logGroupId_ = logGroupId_;
+        if (attachedDomainsBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+            attachedDomains_ = java.util.Collections.unmodifiableList(attachedDomains_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.attachedDomains_ = attachedDomains_;
+        } else {
+          result.attachedDomains_ = attachedDomainsBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1413,6 +1554,32 @@ public final class Apigateway {
         if (!other.getLogGroupId().isEmpty()) {
           logGroupId_ = other.logGroupId_;
           onChanged();
+        }
+        if (attachedDomainsBuilder_ == null) {
+          if (!other.attachedDomains_.isEmpty()) {
+            if (attachedDomains_.isEmpty()) {
+              attachedDomains_ = other.attachedDomains_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureAttachedDomainsIsMutable();
+              attachedDomains_.addAll(other.attachedDomains_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.attachedDomains_.isEmpty()) {
+            if (attachedDomainsBuilder_.isEmpty()) {
+              attachedDomainsBuilder_.dispose();
+              attachedDomainsBuilder_ = null;
+              attachedDomains_ = other.attachedDomains_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              attachedDomainsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAttachedDomainsFieldBuilder() : null;
+            } else {
+              attachedDomainsBuilder_.addAllMessages(other.attachedDomains_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2346,6 +2513,318 @@ public final class Apigateway {
         onChanged();
         return this;
       }
+
+      private java.util.List<yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain> attachedDomains_ =
+        java.util.Collections.emptyList();
+      private void ensureAttachedDomainsIsMutable() {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+          attachedDomains_ = new java.util.ArrayList<yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain>(attachedDomains_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomainOrBuilder> attachedDomainsBuilder_;
+
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public java.util.List<yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain> getAttachedDomainsList() {
+        if (attachedDomainsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(attachedDomains_);
+        } else {
+          return attachedDomainsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public int getAttachedDomainsCount() {
+        if (attachedDomainsBuilder_ == null) {
+          return attachedDomains_.size();
+        } else {
+          return attachedDomainsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain getAttachedDomains(int index) {
+        if (attachedDomainsBuilder_ == null) {
+          return attachedDomains_.get(index);
+        } else {
+          return attachedDomainsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public Builder setAttachedDomains(
+          int index, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain value) {
+        if (attachedDomainsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachedDomainsIsMutable();
+          attachedDomains_.set(index, value);
+          onChanged();
+        } else {
+          attachedDomainsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public Builder setAttachedDomains(
+          int index, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.Builder builderForValue) {
+        if (attachedDomainsBuilder_ == null) {
+          ensureAttachedDomainsIsMutable();
+          attachedDomains_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          attachedDomainsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public Builder addAttachedDomains(yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain value) {
+        if (attachedDomainsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachedDomainsIsMutable();
+          attachedDomains_.add(value);
+          onChanged();
+        } else {
+          attachedDomainsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public Builder addAttachedDomains(
+          int index, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain value) {
+        if (attachedDomainsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttachedDomainsIsMutable();
+          attachedDomains_.add(index, value);
+          onChanged();
+        } else {
+          attachedDomainsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public Builder addAttachedDomains(
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.Builder builderForValue) {
+        if (attachedDomainsBuilder_ == null) {
+          ensureAttachedDomainsIsMutable();
+          attachedDomains_.add(builderForValue.build());
+          onChanged();
+        } else {
+          attachedDomainsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public Builder addAttachedDomains(
+          int index, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.Builder builderForValue) {
+        if (attachedDomainsBuilder_ == null) {
+          ensureAttachedDomainsIsMutable();
+          attachedDomains_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          attachedDomainsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public Builder addAllAttachedDomains(
+          java.lang.Iterable<? extends yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain> values) {
+        if (attachedDomainsBuilder_ == null) {
+          ensureAttachedDomainsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, attachedDomains_);
+          onChanged();
+        } else {
+          attachedDomainsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public Builder clearAttachedDomains() {
+        if (attachedDomainsBuilder_ == null) {
+          attachedDomains_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          attachedDomainsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public Builder removeAttachedDomains(int index) {
+        if (attachedDomainsBuilder_ == null) {
+          ensureAttachedDomainsIsMutable();
+          attachedDomains_.remove(index);
+          onChanged();
+        } else {
+          attachedDomainsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.Builder getAttachedDomainsBuilder(
+          int index) {
+        return getAttachedDomainsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomainOrBuilder getAttachedDomainsOrBuilder(
+          int index) {
+        if (attachedDomainsBuilder_ == null) {
+          return attachedDomains_.get(index);  } else {
+          return attachedDomainsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomainOrBuilder> 
+           getAttachedDomainsOrBuilderList() {
+        if (attachedDomainsBuilder_ != null) {
+          return attachedDomainsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(attachedDomains_);
+        }
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.Builder addAttachedDomainsBuilder() {
+        return getAttachedDomainsFieldBuilder().addBuilder(
+            yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.Builder addAttachedDomainsBuilder(
+          int index) {
+        return getAttachedDomainsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of domains attached to API gateway.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.serverless.apigateway.v1.AttachedDomain attached_domains = 11;</code>
+       */
+      public java.util.List<yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.Builder> 
+           getAttachedDomainsBuilderList() {
+        return getAttachedDomainsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomainOrBuilder> 
+          getAttachedDomainsFieldBuilder() {
+        if (attachedDomainsBuilder_ == null) {
+          attachedDomainsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomainOrBuilder>(
+                  attachedDomains_,
+                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  getParentForChildren(),
+                  isClean());
+          attachedDomains_ = null;
+        }
+        return attachedDomainsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2399,6 +2878,1022 @@ public final class Apigateway {
 
   }
 
+  public interface AttachedDomainOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.apigateway.v1.AttachedDomain)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the domain.
+     * </pre>
+     *
+     * <code>string domain_id = 1;</code>
+     */
+    java.lang.String getDomainId();
+    /**
+     * <pre>
+     * ID of the domain.
+     * </pre>
+     *
+     * <code>string domain_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getDomainIdBytes();
+
+    /**
+     * <pre>
+     * ID of the domain certificate.
+     * </pre>
+     *
+     * <code>string certificate_id = 2;</code>
+     */
+    java.lang.String getCertificateId();
+    /**
+     * <pre>
+     * ID of the domain certificate.
+     * </pre>
+     *
+     * <code>string certificate_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getCertificateIdBytes();
+
+    /**
+     * <pre>
+     * Enabling flag.
+     * </pre>
+     *
+     * <code>bool enabled = 3;</code>
+     */
+    boolean getEnabled();
+
+    /**
+     * <pre>
+     * Name of the domain.
+     * </pre>
+     *
+     * <code>string domain = 5;</code>
+     */
+    java.lang.String getDomain();
+    /**
+     * <pre>
+     * Name of the domain.
+     * </pre>
+     *
+     * <code>string domain = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.AttachedDomain}
+   */
+  public  static final class AttachedDomain extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.AttachedDomain)
+      AttachedDomainOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AttachedDomain.newBuilder() to construct.
+    private AttachedDomain(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AttachedDomain() {
+      domainId_ = "";
+      certificateId_ = "";
+      enabled_ = false;
+      domain_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AttachedDomain(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domainId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              certificateId_ = s;
+              break;
+            }
+            case 24: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              domain_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_AttachedDomain_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_AttachedDomain_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.class, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.Builder.class);
+    }
+
+    public static final int DOMAIN_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object domainId_;
+    /**
+     * <pre>
+     * ID of the domain.
+     * </pre>
+     *
+     * <code>string domain_id = 1;</code>
+     */
+    public java.lang.String getDomainId() {
+      java.lang.Object ref = domainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the domain.
+     * </pre>
+     *
+     * <code>string domain_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDomainIdBytes() {
+      java.lang.Object ref = domainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CERTIFICATE_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object certificateId_;
+    /**
+     * <pre>
+     * ID of the domain certificate.
+     * </pre>
+     *
+     * <code>string certificate_id = 2;</code>
+     */
+    public java.lang.String getCertificateId() {
+      java.lang.Object ref = certificateId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        certificateId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the domain certificate.
+     * </pre>
+     *
+     * <code>string certificate_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCertificateIdBytes() {
+      java.lang.Object ref = certificateId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        certificateId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 3;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Enabling flag.
+     * </pre>
+     *
+     * <code>bool enabled = 3;</code>
+     */
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    public static final int DOMAIN_FIELD_NUMBER = 5;
+    private volatile java.lang.Object domain_;
+    /**
+     * <pre>
+     * Name of the domain.
+     * </pre>
+     *
+     * <code>string domain = 5;</code>
+     */
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        domain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the domain.
+     * </pre>
+     *
+     * <code>string domain = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getDomainIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, domainId_);
+      }
+      if (!getCertificateIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, certificateId_);
+      }
+      if (enabled_ != false) {
+        output.writeBool(3, enabled_);
+      }
+      if (!getDomainBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, domain_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getDomainIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, domainId_);
+      }
+      if (!getCertificateIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, certificateId_);
+      }
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, enabled_);
+      }
+      if (!getDomainBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, domain_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain other = (yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain) obj;
+
+      boolean result = true;
+      result = result && getDomainId()
+          .equals(other.getDomainId());
+      result = result && getCertificateId()
+          .equals(other.getCertificateId());
+      result = result && (getEnabled()
+          == other.getEnabled());
+      result = result && getDomain()
+          .equals(other.getDomain());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOMAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDomainId().hashCode();
+      hash = (37 * hash) + CERTIFICATE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCertificateId().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (37 * hash) + DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDomain().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.AttachedDomain}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.apigateway.v1.AttachedDomain)
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomainOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_AttachedDomain_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_AttachedDomain_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.class, yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        domainId_ = "";
+
+        certificateId_ = "";
+
+        enabled_ = false;
+
+        domain_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_AttachedDomain_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain build() {
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain buildPartial() {
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain result = new yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain(this);
+        result.domainId_ = domainId_;
+        result.certificateId_ = certificateId_;
+        result.enabled_ = enabled_;
+        result.domain_ = domain_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain) {
+          return mergeFrom((yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain other) {
+        if (other == yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain.getDefaultInstance()) return this;
+        if (!other.getDomainId().isEmpty()) {
+          domainId_ = other.domainId_;
+          onChanged();
+        }
+        if (!other.getCertificateId().isEmpty()) {
+          certificateId_ = other.certificateId_;
+          onChanged();
+        }
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        if (!other.getDomain().isEmpty()) {
+          domain_ = other.domain_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object domainId_ = "";
+      /**
+       * <pre>
+       * ID of the domain.
+       * </pre>
+       *
+       * <code>string domain_id = 1;</code>
+       */
+      public java.lang.String getDomainId() {
+        java.lang.Object ref = domainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the domain.
+       * </pre>
+       *
+       * <code>string domain_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDomainIdBytes() {
+        java.lang.Object ref = domainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the domain.
+       * </pre>
+       *
+       * <code>string domain_id = 1;</code>
+       */
+      public Builder setDomainId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domainId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the domain.
+       * </pre>
+       *
+       * <code>string domain_id = 1;</code>
+       */
+      public Builder clearDomainId() {
+        
+        domainId_ = getDefaultInstance().getDomainId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the domain.
+       * </pre>
+       *
+       * <code>string domain_id = 1;</code>
+       */
+      public Builder setDomainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domainId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object certificateId_ = "";
+      /**
+       * <pre>
+       * ID of the domain certificate.
+       * </pre>
+       *
+       * <code>string certificate_id = 2;</code>
+       */
+      public java.lang.String getCertificateId() {
+        java.lang.Object ref = certificateId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          certificateId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the domain certificate.
+       * </pre>
+       *
+       * <code>string certificate_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCertificateIdBytes() {
+        java.lang.Object ref = certificateId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          certificateId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the domain certificate.
+       * </pre>
+       *
+       * <code>string certificate_id = 2;</code>
+       */
+      public Builder setCertificateId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        certificateId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the domain certificate.
+       * </pre>
+       *
+       * <code>string certificate_id = 2;</code>
+       */
+      public Builder clearCertificateId() {
+        
+        certificateId_ = getDefaultInstance().getCertificateId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the domain certificate.
+       * </pre>
+       *
+       * <code>string certificate_id = 2;</code>
+       */
+      public Builder setCertificateIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        certificateId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * Enabling flag.
+       * </pre>
+       *
+       * <code>bool enabled = 3;</code>
+       */
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * Enabling flag.
+       * </pre>
+       *
+       * <code>bool enabled = 3;</code>
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enabling flag.
+       * </pre>
+       *
+       * <code>bool enabled = 3;</code>
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object domain_ = "";
+      /**
+       * <pre>
+       * Name of the domain.
+       * </pre>
+       *
+       * <code>string domain = 5;</code>
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the domain.
+       * </pre>
+       *
+       * <code>string domain = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the domain.
+       * </pre>
+       *
+       * <code>string domain = 5;</code>
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the domain.
+       * </pre>
+       *
+       * <code>string domain = 5;</code>
+       */
+      public Builder clearDomain() {
+        
+        domain_ = getDefaultInstance().getDomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the domain.
+       * </pre>
+       *
+       * <code>string domain = 5;</code>
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.apigateway.v1.AttachedDomain)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.apigateway.v1.AttachedDomain)
+    private static final yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain();
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AttachedDomain>
+        PARSER = new com.google.protobuf.AbstractParser<AttachedDomain>() {
+      @java.lang.Override
+      public AttachedDomain parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AttachedDomain(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AttachedDomain> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AttachedDomain> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.AttachedDomain getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_descriptor;
   private static final 
@@ -2409,6 +3904,11 @@ public final class Apigateway {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_apigateway_v1_AttachedDomain_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_apigateway_v1_AttachedDomain_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2422,22 +3922,26 @@ public final class Apigateway {
       "apigateway.proto\022%yandex.cloud.serverles" +
       "s.apigateway.v1\032\037google/protobuf/timesta" +
       "mp.proto\032\035yandex/cloud/validation.proto\"" +
-      "\317\003\n\nApiGateway\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030" +
+      "\240\004\n\nApiGateway\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030" +
       "\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.proto" +
       "buf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descripti" +
       "on\030\005 \001(\t\022M\n\006labels\030\007 \003(\0132=.yandex.cloud." +
       "serverless.apigateway.v1.ApiGateway.Labe" +
       "lsEntry\022H\n\006status\030\010 \001(\01628.yandex.cloud.s" +
       "erverless.apigateway.v1.ApiGateway.Statu" +
-      "s\022\016\n\006domain\030\t \001(\t\022\024\n\014log_group_id\030\n \001(\t\032" +
-      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"a\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000" +
-      "\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003" +
-      "\022\t\n\005ERROR\020\004\022\014\n\010UPDATING\020\005B\201\001\n)yandex.clo" +
-      "ud.api.serverless.apigateway.v1ZTgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/serverless/apigateway/v1;apigatewayb\006p" +
-      "roto3"
+      "s\022\016\n\006domain\030\t \001(\t\022\024\n\014log_group_id\030\n \001(\t\022" +
+      "O\n\020attached_domains\030\013 \003(\01325.yandex.cloud" +
+      ".serverless.apigateway.v1.AttachedDomain" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"a\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
+      "\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020" +
+      "\003\022\t\n\005ERROR\020\004\022\014\n\010UPDATING\020\005\"\\\n\016AttachedDo" +
+      "main\022\021\n\tdomain_id\030\001 \001(\t\022\026\n\016certificate_i" +
+      "d\030\002 \001(\t\022\017\n\007enabled\030\003 \001(\010\022\016\n\006domain\030\005 \001(\t" +
+      "B\201\001\n)yandex.cloud.api.serverless.apigate" +
+      "way.v1ZTgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/serverless/apigateway/v" +
+      "1;apigatewayb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2458,13 +3962,19 @@ public final class Apigateway {
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Domain", "LogGroupId", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Domain", "LogGroupId", "AttachedDomains", });
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_serverless_apigateway_v1_AttachedDomain_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_serverless_apigateway_v1_AttachedDomain_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_apigateway_v1_AttachedDomain_descriptor,
+        new java.lang.String[] { "DomainId", "CertificateId", "Enabled", "Domain", });
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

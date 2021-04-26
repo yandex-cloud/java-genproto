@@ -190,6 +190,70 @@ public final class ApiGatewayServiceGrpc {
      return getDeleteMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddDomainMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddDomain",
+      requestType = yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddDomainMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getAddDomainMethod;
+    if ((getAddDomainMethod = ApiGatewayServiceGrpc.getAddDomainMethod) == null) {
+      synchronized (ApiGatewayServiceGrpc.class) {
+        if ((getAddDomainMethod = ApiGatewayServiceGrpc.getAddDomainMethod) == null) {
+          ApiGatewayServiceGrpc.getAddDomainMethod = getAddDomainMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.serverless.apigateway.v1.ApiGatewayService", "AddDomain"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ApiGatewayServiceMethodDescriptorSupplier("AddDomain"))
+                  .build();
+          }
+        }
+     }
+     return getAddDomainMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveDomainMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveDomain",
+      requestType = yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveDomainMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveDomainMethod;
+    if ((getRemoveDomainMethod = ApiGatewayServiceGrpc.getRemoveDomainMethod) == null) {
+      synchronized (ApiGatewayServiceGrpc.class) {
+        if ((getRemoveDomainMethod = ApiGatewayServiceGrpc.getRemoveDomainMethod) == null) {
+          ApiGatewayServiceGrpc.getRemoveDomainMethod = getRemoveDomainMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.serverless.apigateway.v1.ApiGatewayService", "RemoveDomain"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ApiGatewayServiceMethodDescriptorSupplier("RemoveDomain"))
+                  .build();
+          }
+        }
+     }
+     return getRemoveDomainMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecRequest,
       yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.GetOpenapiSpecResponse> getGetOpenapiSpecMethod;
 
@@ -434,6 +498,26 @@ public final class ApiGatewayServiceGrpc {
 
     /**
      * <pre>
+     * Attaches domain to the specified API gateway.
+     * </pre>
+     */
+    public void addDomain(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getAddDomainMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Detaches domain from the specified API gateway.
+     * </pre>
+     */
+    public void removeDomain(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getRemoveDomainMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Returns the OpenAPI specification of specified API gateway.
      * </pre>
      */
@@ -519,6 +603,20 @@ public final class ApiGatewayServiceGrpc {
                 yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.DeleteApiGatewayRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE)))
+          .addMethod(
+            getAddDomainMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ADD_DOMAIN)))
+          .addMethod(
+            getRemoveDomainMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_REMOVE_DOMAIN)))
           .addMethod(
             getGetOpenapiSpecMethod(),
             asyncUnaryCall(
@@ -634,6 +732,28 @@ public final class ApiGatewayServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Attaches domain to the specified API gateway.
+     * </pre>
+     */
+    public void addDomain(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getAddDomainMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Detaches domain from the specified API gateway.
+     * </pre>
+     */
+    public void removeDomain(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getRemoveDomainMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -767,6 +887,26 @@ public final class ApiGatewayServiceGrpc {
 
     /**
      * <pre>
+     * Attaches domain to the specified API gateway.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation addDomain(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getAddDomainMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Detaches domain from the specified API gateway.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation removeDomain(yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getRemoveDomainMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Returns the OpenAPI specification of specified API gateway.
      * </pre>
      */
@@ -896,6 +1036,28 @@ public final class ApiGatewayServiceGrpc {
 
     /**
      * <pre>
+     * Attaches domain to the specified API gateway.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addDomain(
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getAddDomainMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Detaches domain from the specified API gateway.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeDomain(
+        yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getRemoveDomainMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Returns the OpenAPI specification of specified API gateway.
      * </pre>
      */
@@ -955,11 +1117,13 @@ public final class ApiGatewayServiceGrpc {
   private static final int METHODID_CREATE = 2;
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
-  private static final int METHODID_GET_OPENAPI_SPEC = 5;
-  private static final int METHODID_LIST_OPERATIONS = 6;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 7;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 8;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 9;
+  private static final int METHODID_ADD_DOMAIN = 5;
+  private static final int METHODID_REMOVE_DOMAIN = 6;
+  private static final int METHODID_GET_OPENAPI_SPEC = 7;
+  private static final int METHODID_LIST_OPERATIONS = 8;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 9;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 10;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -996,6 +1160,14 @@ public final class ApiGatewayServiceGrpc {
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.DeleteApiGatewayRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ADD_DOMAIN:
+          serviceImpl.addDomain((yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.AddDomainRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_REMOVE_DOMAIN:
+          serviceImpl.removeDomain((yandex.cloud.api.serverless.apigateway.v1.ApigatewayService.RemoveDomainRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_GET_OPENAPI_SPEC:
@@ -1084,6 +1256,8 @@ public final class ApiGatewayServiceGrpc {
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
+              .addMethod(getAddDomainMethod())
+              .addMethod(getRemoveDomainMethod())
               .addMethod(getGetOpenapiSpecMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getListAccessBindingsMethod())

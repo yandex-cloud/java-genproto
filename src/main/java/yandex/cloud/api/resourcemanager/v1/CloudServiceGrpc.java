@@ -126,6 +126,38 @@ public final class CloudServiceGrpc {
      return getUpdateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Delete",
+      requestType = yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+    if ((getDeleteMethod = CloudServiceGrpc.getDeleteMethod) == null) {
+      synchronized (CloudServiceGrpc.class) {
+        if ((getDeleteMethod = CloudServiceGrpc.getDeleteMethod) == null) {
+          CloudServiceGrpc.getDeleteMethod = getDeleteMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.resourcemanager.v1.CloudService", "Delete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new CloudServiceMethodDescriptorSupplier("Delete"))
+                  .build();
+          }
+        }
+     }
+     return getDeleteMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.ListCloudOperationsRequest,
       yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.ListCloudOperationsResponse> getListOperationsMethod;
 
@@ -317,6 +349,17 @@ public final class CloudServiceGrpc {
 
     /**
      * <pre>
+     * Deletes the specified cloud.
+     * The method is temporarily unavailable.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified cloud.
      * </pre>
      */
@@ -378,6 +421,13 @@ public final class CloudServiceGrpc {
                 yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.UpdateCloudRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE)))
+          .addMethod(
+            getDeleteMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE)))
           .addMethod(
             getListOperationsMethod(),
             asyncUnaryCall(
@@ -463,6 +513,18 @@ public final class CloudServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified cloud.
+     * The method is temporarily unavailable.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -564,6 +626,17 @@ public final class CloudServiceGrpc {
 
     /**
      * <pre>
+     * Deletes the specified cloud.
+     * The method is temporarily unavailable.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified cloud.
      * </pre>
      */
@@ -660,6 +733,18 @@ public final class CloudServiceGrpc {
 
     /**
      * <pre>
+     * Deletes the specified cloud.
+     * The method is temporarily unavailable.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified cloud.
      * </pre>
      */
@@ -706,10 +791,11 @@ public final class CloudServiceGrpc {
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
   private static final int METHODID_UPDATE = 2;
-  private static final int METHODID_LIST_OPERATIONS = 3;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 4;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 5;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 6;
+  private static final int METHODID_DELETE = 3;
+  private static final int METHODID_LIST_OPERATIONS = 4;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 5;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 6;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -738,6 +824,10 @@ public final class CloudServiceGrpc {
           break;
         case METHODID_UPDATE:
           serviceImpl.update((yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.UpdateCloudRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_DELETE:
+          serviceImpl.delete((yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:
@@ -820,6 +910,7 @@ public final class CloudServiceGrpc {
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
               .addMethod(getUpdateMethod())
+              .addMethod(getDeleteMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getListAccessBindingsMethod())
               .addMethod(getSetAccessBindingsMethod())

@@ -6924,6 +6924,46 @@ public final class FolderServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
+
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the folder should begin.
+     * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+     * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+     * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+     * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+     * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    boolean hasDeleteAfter();
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the folder should begin.
+     * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+     * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+     * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+     * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+     * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    com.google.protobuf.Timestamp getDeleteAfter();
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the folder should begin.
+     * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+     * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+     * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+     * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+     * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.resourcemanager.v1.DeleteFolderRequest}
@@ -6969,6 +7009,19 @@ public final class FolderServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               folderId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (deleteAfter_ != null) {
+                subBuilder = deleteAfter_.toBuilder();
+              }
+              deleteAfter_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deleteAfter_);
+                deleteAfter_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7047,6 +7100,54 @@ public final class FolderServiceOuterClass {
       }
     }
 
+    public static final int DELETE_AFTER_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp deleteAfter_;
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the folder should begin.
+     * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+     * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+     * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+     * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+     * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    public boolean hasDeleteAfter() {
+      return deleteAfter_ != null;
+    }
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the folder should begin.
+     * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+     * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+     * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+     * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+     * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    public com.google.protobuf.Timestamp getDeleteAfter() {
+      return deleteAfter_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteAfter_;
+    }
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the folder should begin.
+     * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+     * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+     * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+     * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+     * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder() {
+      return getDeleteAfter();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7064,6 +7165,9 @@ public final class FolderServiceOuterClass {
       if (!getFolderIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
+      if (deleteAfter_ != null) {
+        output.writeMessage(2, getDeleteAfter());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7075,6 +7179,10 @@ public final class FolderServiceOuterClass {
       size = 0;
       if (!getFolderIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      if (deleteAfter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDeleteAfter());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7094,6 +7202,11 @@ public final class FolderServiceOuterClass {
       boolean result = true;
       result = result && getFolderId()
           .equals(other.getFolderId());
+      result = result && (hasDeleteAfter() == other.hasDeleteAfter());
+      if (hasDeleteAfter()) {
+        result = result && getDeleteAfter()
+            .equals(other.getDeleteAfter());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7107,6 +7220,10 @@ public final class FolderServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFolderId().hashCode();
+      if (hasDeleteAfter()) {
+        hash = (37 * hash) + DELETE_AFTER_FIELD_NUMBER;
+        hash = (53 * hash) + getDeleteAfter().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7242,6 +7359,12 @@ public final class FolderServiceOuterClass {
         super.clear();
         folderId_ = "";
 
+        if (deleteAfterBuilder_ == null) {
+          deleteAfter_ = null;
+        } else {
+          deleteAfter_ = null;
+          deleteAfterBuilder_ = null;
+        }
         return this;
       }
 
@@ -7269,6 +7392,11 @@ public final class FolderServiceOuterClass {
       public yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest buildPartial() {
         yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest result = new yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderRequest(this);
         result.folderId_ = folderId_;
+        if (deleteAfterBuilder_ == null) {
+          result.deleteAfter_ = deleteAfter_;
+        } else {
+          result.deleteAfter_ = deleteAfterBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -7320,6 +7448,9 @@ public final class FolderServiceOuterClass {
         if (!other.getFolderId().isEmpty()) {
           folderId_ = other.folderId_;
           onChanged();
+        }
+        if (other.hasDeleteAfter()) {
+          mergeDeleteAfter(other.getDeleteAfter());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7443,6 +7574,204 @@ public final class FolderServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.Timestamp deleteAfter_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deleteAfterBuilder_;
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+       * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+       * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public boolean hasDeleteAfter() {
+        return deleteAfterBuilder_ != null || deleteAfter_ != null;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+       * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+       * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public com.google.protobuf.Timestamp getDeleteAfter() {
+        if (deleteAfterBuilder_ == null) {
+          return deleteAfter_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteAfter_;
+        } else {
+          return deleteAfterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+       * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+       * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder setDeleteAfter(com.google.protobuf.Timestamp value) {
+        if (deleteAfterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deleteAfter_ = value;
+          onChanged();
+        } else {
+          deleteAfterBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+       * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+       * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder setDeleteAfter(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (deleteAfterBuilder_ == null) {
+          deleteAfter_ = builderForValue.build();
+          onChanged();
+        } else {
+          deleteAfterBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+       * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+       * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder mergeDeleteAfter(com.google.protobuf.Timestamp value) {
+        if (deleteAfterBuilder_ == null) {
+          if (deleteAfter_ != null) {
+            deleteAfter_ =
+              com.google.protobuf.Timestamp.newBuilder(deleteAfter_).mergeFrom(value).buildPartial();
+          } else {
+            deleteAfter_ = value;
+          }
+          onChanged();
+        } else {
+          deleteAfterBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+       * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+       * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder clearDeleteAfter() {
+        if (deleteAfterBuilder_ == null) {
+          deleteAfter_ = null;
+          onChanged();
+        } else {
+          deleteAfter_ = null;
+          deleteAfterBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+       * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+       * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDeleteAfterBuilder() {
+        
+        onChanged();
+        return getDeleteAfterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+       * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+       * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder() {
+        if (deleteAfterBuilder_ != null) {
+          return deleteAfterBuilder_.getMessageOrBuilder();
+        } else {
+          return deleteAfter_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : deleteAfter_;
+        }
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * Until this timestamp, the folder goes into the [Folder.Status.PENDING_DELETION] state and all resources in this
+       * folder are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the folder will become [Folder.Status.DELETING] and the process of deleting
+       * all the resources  of the folder will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDeleteAfterFieldBuilder() {
+        if (deleteAfterBuilder_ == null) {
+          deleteAfterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDeleteAfter(),
+                  getParentForChildren(),
+                  isClean());
+          deleteAfter_ = null;
+        }
+        return deleteAfterBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7517,6 +7846,31 @@ public final class FolderServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
+
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the folder should begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    boolean hasDeleteAfter();
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the folder should begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    com.google.protobuf.Timestamp getDeleteAfter();
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the folder should begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.resourcemanager.v1.DeleteFolderMetadata}
@@ -7562,6 +7916,19 @@ public final class FolderServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               folderId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (deleteAfter_ != null) {
+                subBuilder = deleteAfter_.toBuilder();
+              }
+              deleteAfter_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deleteAfter_);
+                deleteAfter_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7638,6 +8005,39 @@ public final class FolderServiceOuterClass {
       }
     }
 
+    public static final int DELETE_AFTER_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp deleteAfter_;
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the folder should begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    public boolean hasDeleteAfter() {
+      return deleteAfter_ != null;
+    }
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the folder should begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    public com.google.protobuf.Timestamp getDeleteAfter() {
+      return deleteAfter_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteAfter_;
+    }
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the folder should begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder() {
+      return getDeleteAfter();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7655,6 +8055,9 @@ public final class FolderServiceOuterClass {
       if (!getFolderIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
       }
+      if (deleteAfter_ != null) {
+        output.writeMessage(2, getDeleteAfter());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7666,6 +8069,10 @@ public final class FolderServiceOuterClass {
       size = 0;
       if (!getFolderIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      if (deleteAfter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDeleteAfter());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7685,6 +8092,11 @@ public final class FolderServiceOuterClass {
       boolean result = true;
       result = result && getFolderId()
           .equals(other.getFolderId());
+      result = result && (hasDeleteAfter() == other.hasDeleteAfter());
+      if (hasDeleteAfter()) {
+        result = result && getDeleteAfter()
+            .equals(other.getDeleteAfter());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7698,6 +8110,10 @@ public final class FolderServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFolderId().hashCode();
+      if (hasDeleteAfter()) {
+        hash = (37 * hash) + DELETE_AFTER_FIELD_NUMBER;
+        hash = (53 * hash) + getDeleteAfter().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7833,6 +8249,12 @@ public final class FolderServiceOuterClass {
         super.clear();
         folderId_ = "";
 
+        if (deleteAfterBuilder_ == null) {
+          deleteAfter_ = null;
+        } else {
+          deleteAfter_ = null;
+          deleteAfterBuilder_ = null;
+        }
         return this;
       }
 
@@ -7860,6 +8282,11 @@ public final class FolderServiceOuterClass {
       public yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderMetadata buildPartial() {
         yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderMetadata result = new yandex.cloud.api.resourcemanager.v1.FolderServiceOuterClass.DeleteFolderMetadata(this);
         result.folderId_ = folderId_;
+        if (deleteAfterBuilder_ == null) {
+          result.deleteAfter_ = deleteAfter_;
+        } else {
+          result.deleteAfter_ = deleteAfterBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -7911,6 +8338,9 @@ public final class FolderServiceOuterClass {
         if (!other.getFolderId().isEmpty()) {
           folderId_ = other.folderId_;
           onChanged();
+        }
+        if (other.hasDeleteAfter()) {
+          mergeDeleteAfter(other.getDeleteAfter());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8028,6 +8458,159 @@ public final class FolderServiceOuterClass {
         folderId_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.Timestamp deleteAfter_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deleteAfterBuilder_;
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public boolean hasDeleteAfter() {
+        return deleteAfterBuilder_ != null || deleteAfter_ != null;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public com.google.protobuf.Timestamp getDeleteAfter() {
+        if (deleteAfterBuilder_ == null) {
+          return deleteAfter_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteAfter_;
+        } else {
+          return deleteAfterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder setDeleteAfter(com.google.protobuf.Timestamp value) {
+        if (deleteAfterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deleteAfter_ = value;
+          onChanged();
+        } else {
+          deleteAfterBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder setDeleteAfter(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (deleteAfterBuilder_ == null) {
+          deleteAfter_ = builderForValue.build();
+          onChanged();
+        } else {
+          deleteAfterBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder mergeDeleteAfter(com.google.protobuf.Timestamp value) {
+        if (deleteAfterBuilder_ == null) {
+          if (deleteAfter_ != null) {
+            deleteAfter_ =
+              com.google.protobuf.Timestamp.newBuilder(deleteAfter_).mergeFrom(value).buildPartial();
+          } else {
+            deleteAfter_ = value;
+          }
+          onChanged();
+        } else {
+          deleteAfterBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder clearDeleteAfter() {
+        if (deleteAfterBuilder_ == null) {
+          deleteAfter_ = null;
+          onChanged();
+        } else {
+          deleteAfter_ = null;
+          deleteAfterBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDeleteAfterBuilder() {
+        
+        onChanged();
+        return getDeleteAfterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder() {
+        if (deleteAfterBuilder_ != null) {
+          return deleteAfterBuilder_.getMessageOrBuilder();
+        } else {
+          return deleteAfter_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : deleteAfter_;
+        }
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the folder should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDeleteAfterFieldBuilder() {
+        if (deleteAfterBuilder_ == null) {
+          deleteAfterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDeleteAfter(),
+                  getParentForChildren(),
+                  isClean());
+          deleteAfter_ = null;
+        }
+        return deleteAfterBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10132,96 +10715,99 @@ public final class FolderServiceOuterClass {
       "\n4yandex/cloud/resourcemanager/v1/folder" +
       "_service.proto\022\037yandex.cloud.resourceman" +
       "ager.v1\032\034google/api/annotations.proto\032 g" +
-      "oogle/protobuf/field_mask.proto\032 yandex/" +
-      "cloud/api/operation.proto\032,yandex/cloud/" +
-      "resourcemanager/v1/folder.proto\032 yandex/" +
-      "cloud/access/access.proto\032&yandex/cloud/" +
-      "operation/operation.proto\032\035yandex/cloud/" +
-      "validation.proto\"3\n\020GetFolderRequest\022\037\n\t" +
-      "folder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\216\001\n\022ListFo" +
-      "ldersRequest\022\036\n\010cloud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\np" +
-      "age_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001" +
-      "(\tB\n\212\3101\006<=1000\"h\n\023ListFoldersResponse\0228\n" +
-      "\007folders\030\001 \003(\0132\'.yandex.cloud.resourcema" +
-      "nager.v1.Folder\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\315\002\n\023CreateFolderRequest\022\036\n\010cloud_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\0223\n\004name\030\002 \001(\tB%\350\3071\001\362\3071\035" +
-      "|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descrip" +
-      "tion\030\003 \001(\tB\t\212\3101\005<=256\022\221\001\n\006labels\030\004 \003(\0132@" +
-      ".yandex.cloud.resourcemanager.v1.CreateF" +
-      "olderRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=" +
-      "63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-" +
-      "_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\")\n\024CreateFolderMetadata" +
-      "\022\021\n\tfolder_id\030\001 \001(\t\"\377\002\n\023UpdateFolderRequ" +
-      "est\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013" +
-      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
-      "dMask\0223\n\004name\030\003 \001(\tB%\350\3071\001\362\3071\035|[a-z][-a-z" +
-      "0-9]{1,61}[a-z0-9]\022\036\n\013description\030\004 \001(\tB" +
-      "\t\212\3101\005<=256\022\221\001\n\006labels\030\005 \003(\0132@.yandex.clo" +
-      "ud.resourcemanager.v1.UpdateFolderReques" +
-      "t.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-" +
-      "9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\")\n\024UpdateFolderMetadata\022\021\n\tfolder_" +
-      "id\030\001 \001(\t\"6\n\023DeleteFolderRequest\022\037\n\tfolde" +
-      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteFolder" +
-      "Metadata\022\021\n\tfolder_id\030\001 \001(\t\"|\n\033ListFolde" +
-      "rOperationsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=10" +
-      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"n\n\034Lis" +
-      "tFolderOperationsResponse\0225\n\noperations\030" +
-      "\001 \003(\0132!.yandex.cloud.operation.Operation" +
-      "\022\027\n\017next_page_token\030\002 \001(\t2\346\r\n\rFolderServ" +
-      "ice\022\223\001\n\003Get\0221.yandex.cloud.resourcemanag" +
-      "er.v1.GetFolderRequest\032\'.yandex.cloud.re" +
-      "sourcemanager.v1.Folder\"0\202\323\344\223\002*\022(/resour" +
-      "ce-manager/v1/folders/{folder_id}\022\227\001\n\004Li" +
-      "st\0223.yandex.cloud.resourcemanager.v1.Lis" +
-      "tFoldersRequest\0324.yandex.cloud.resourcem" +
-      "anager.v1.ListFoldersResponse\"$\202\323\344\223\002\036\022\034/" +
-      "resource-manager/v1/folders\022\254\001\n\006Create\0224" +
-      ".yandex.cloud.resourcemanager.v1.CreateF" +
-      "olderRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"I\202\323\344\223\002!\"\034/resource-manager/v1/fo" +
-      "lders:\001*\262\322*\036\n\024CreateFolderMetadata\022\006Fold" +
-      "er\022\270\001\n\006Update\0224.yandex.cloud.resourceman" +
-      "ager.v1.UpdateFolderRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"U\202\323\344\223\002-2(/resourc" +
-      "e-manager/v1/folders/{folder_id}:\001*\262\322*\036\n" +
-      "\024UpdateFolderMetadata\022\006Folder\022\304\001\n\006Delete" +
-      "\0224.yandex.cloud.resourcemanager.v1.Delet" +
-      "eFolderRequest\032!.yandex.cloud.operation." +
-      "Operation\"a\202\323\344\223\002**(/resource-manager/v1/" +
-      "folders/{folder_id}\262\322*-\n\024DeleteFolderMet" +
-      "adata\022\025google.protobuf.Empty\022\312\001\n\016ListOpe" +
-      "rations\022<.yandex.cloud.resourcemanager.v" +
-      "1.ListFolderOperationsRequest\032=.yandex.c" +
-      "loud.resourcemanager.v1.ListFolderOperat" +
-      "ionsResponse\";\202\323\344\223\0025\0223/resource-manager/" +
-      "v1/folders/{folder_id}/operations\022\274\001\n\022Li" +
-      "stAccessBindings\022..yandex.cloud.access.L" +
-      "istAccessBindingsRequest\032/.yandex.cloud." +
-      "access.ListAccessBindingsResponse\"E\202\323\344\223\002" +
-      "?\022=/resource-manager/v1/folders/{resourc" +
-      "e_id}:listAccessBindings\022\354\001\n\021SetAccessBi" +
-      "ndings\022-.yandex.cloud.access.SetAccessBi" +
-      "ndingsRequest\032!.yandex.cloud.operation.O" +
-      "peration\"\204\001\202\323\344\223\002A\"</resource-manager/v1/" +
-      "folders/{resource_id}:setAccessBindings:" +
-      "\001*\262\322*9\n access.SetAccessBindingsMetadata" +
-      "\022\025google.protobuf.Empty\022\370\001\n\024UpdateAccess" +
-      "Bindings\0220.yandex.cloud.access.UpdateAcc" +
-      "essBindingsRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"\212\001\202\323\344\223\002D\"?/resource-manage" +
-      "r/v1/folders/{resource_id}:updateAccessB" +
-      "indings:\001*\262\322*<\n#access.UpdateAccessBindi" +
-      "ngsMetadata\022\025google.protobuf.EmptyBz\n#ya" +
-      "ndex.cloud.api.resourcemanager.v1ZSgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/resourcemanager/v1;resourcemanagerb\006" +
-      "proto3"
+      "oogle/protobuf/field_mask.proto\032\037google/" +
+      "protobuf/timestamp.proto\032 yandex/cloud/a" +
+      "pi/operation.proto\032,yandex/cloud/resourc" +
+      "emanager/v1/folder.proto\032 yandex/cloud/a" +
+      "ccess/access.proto\032&yandex/cloud/operati" +
+      "on/operation.proto\032\035yandex/cloud/validat" +
+      "ion.proto\"3\n\020GetFolderRequest\022\037\n\tfolder_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\216\001\n\022ListFoldersRe" +
+      "quest\022\036\n\010cloud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
+      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
+      "en\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101" +
+      "\006<=1000\"h\n\023ListFoldersResponse\0228\n\007folder" +
+      "s\030\001 \003(\0132\'.yandex.cloud.resourcemanager.v" +
+      "1.Folder\022\027\n\017next_page_token\030\002 \001(\t\"\315\002\n\023Cr" +
+      "eateFolderRequest\022\036\n\010cloud_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\0223\n\004name\030\002 \001(\tB%\350\3071\001\362\3071\035|[a-z][" +
+      "-a-z0-9]{1,61}[a-z0-9]\022\036\n\013description\030\003 " +
+      "\001(\tB\t\212\3101\005<=256\022\221\001\n\006labels\030\004 \003(\0132@.yandex" +
+      ".cloud.resourcemanager.v1.CreateFolderRe" +
+      "quest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[" +
+      "-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z" +
+      "]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\")\n\024CreateFolderMetadata\022\021\n\tfol" +
+      "der_id\030\001 \001(\t\"\377\002\n\023UpdateFolderRequest\022\037\n\t" +
+      "folder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_" +
+      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\0223" +
+      "\n\004name\030\003 \001(\tB%\350\3071\001\362\3071\035|[a-z][-a-z0-9]{1," +
+      "61}[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=" +
+      "256\022\221\001\n\006labels\030\005 \003(\0132@.yandex.cloud.reso" +
+      "urcemanager.v1.UpdateFolderRequest.Label" +
+      "sEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262" +
+      "\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")" +
+      "\n\024UpdateFolderMetadata\022\021\n\tfolder_id\030\001 \001(" +
+      "\t\"h\n\023DeleteFolderRequest\022\037\n\tfolder_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\014delete_after\030\002 \001(\0132" +
+      "\032.google.protobuf.Timestamp\"[\n\024DeleteFol" +
+      "derMetadata\022\021\n\tfolder_id\030\001 \001(\t\0220\n\014delete" +
+      "_after\030\002 \001(\0132\032.google.protobuf.Timestamp" +
+      "\"|\n\033ListFolderOperationsRequest\022\037\n\tfolde" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
+      "\005<=100\"n\n\034ListFolderOperationsResponse\0225" +
+      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
+      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t2\346" +
+      "\r\n\rFolderService\022\223\001\n\003Get\0221.yandex.cloud." +
+      "resourcemanager.v1.GetFolderRequest\032\'.ya" +
+      "ndex.cloud.resourcemanager.v1.Folder\"0\202\323" +
+      "\344\223\002*\022(/resource-manager/v1/folders/{fold" +
+      "er_id}\022\227\001\n\004List\0223.yandex.cloud.resourcem" +
+      "anager.v1.ListFoldersRequest\0324.yandex.cl" +
+      "oud.resourcemanager.v1.ListFoldersRespon" +
+      "se\"$\202\323\344\223\002\036\022\034/resource-manager/v1/folders" +
+      "\022\254\001\n\006Create\0224.yandex.cloud.resourcemanag" +
+      "er.v1.CreateFolderRequest\032!.yandex.cloud" +
+      ".operation.Operation\"I\202\323\344\223\002!\"\034/resource-" +
+      "manager/v1/folders:\001*\262\322*\036\n\024CreateFolderM" +
+      "etadata\022\006Folder\022\270\001\n\006Update\0224.yandex.clou" +
+      "d.resourcemanager.v1.UpdateFolderRequest" +
+      "\032!.yandex.cloud.operation.Operation\"U\202\323\344" +
+      "\223\002-2(/resource-manager/v1/folders/{folde" +
+      "r_id}:\001*\262\322*\036\n\024UpdateFolderMetadata\022\006Fold" +
+      "er\022\304\001\n\006Delete\0224.yandex.cloud.resourceman" +
+      "ager.v1.DeleteFolderRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"a\202\323\344\223\002**(/resourc" +
+      "e-manager/v1/folders/{folder_id}\262\322*-\n\024De" +
+      "leteFolderMetadata\022\025google.protobuf.Empt" +
+      "y\022\312\001\n\016ListOperations\022<.yandex.cloud.reso" +
+      "urcemanager.v1.ListFolderOperationsReque" +
+      "st\032=.yandex.cloud.resourcemanager.v1.Lis" +
+      "tFolderOperationsResponse\";\202\323\344\223\0025\0223/reso" +
+      "urce-manager/v1/folders/{folder_id}/oper" +
+      "ations\022\274\001\n\022ListAccessBindings\022..yandex.c" +
+      "loud.access.ListAccessBindingsRequest\032/." +
+      "yandex.cloud.access.ListAccessBindingsRe" +
+      "sponse\"E\202\323\344\223\002?\022=/resource-manager/v1/fol" +
+      "ders/{resource_id}:listAccessBindings\022\354\001" +
+      "\n\021SetAccessBindings\022-.yandex.cloud.acces" +
+      "s.SetAccessBindingsRequest\032!.yandex.clou" +
+      "d.operation.Operation\"\204\001\202\323\344\223\002A\"</resourc" +
+      "e-manager/v1/folders/{resource_id}:setAc" +
+      "cessBindings:\001*\262\322*9\n access.SetAccessBin" +
+      "dingsMetadata\022\025google.protobuf.Empty\022\370\001\n" +
+      "\024UpdateAccessBindings\0220.yandex.cloud.acc" +
+      "ess.UpdateAccessBindingsRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\212\001\202\323\344\223\002D\"?/re" +
+      "source-manager/v1/folders/{resource_id}:" +
+      "updateAccessBindings:\001*\262\322*<\n#access.Upda" +
+      "teAccessBindingsMetadata\022\025google.protobu" +
+      "f.EmptyBz\n#yandex.cloud.api.resourcemana" +
+      "ger.v1ZSgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/resourcemanager/v1;reso" +
+      "urcemanagerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10236,6 +10822,7 @@ public final class FolderServiceOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.resourcemanager.v1.FolderOuterClass.getDescriptor(),
           yandex.cloud.api.access.Access.getDescriptor(),
@@ -10301,13 +10888,13 @@ public final class FolderServiceOuterClass {
     internal_static_yandex_cloud_resourcemanager_v1_DeleteFolderRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_DeleteFolderRequest_descriptor,
-        new java.lang.String[] { "FolderId", });
+        new java.lang.String[] { "FolderId", "DeleteAfter", });
     internal_static_yandex_cloud_resourcemanager_v1_DeleteFolderMetadata_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_resourcemanager_v1_DeleteFolderMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_DeleteFolderMetadata_descriptor,
-        new java.lang.String[] { "FolderId", });
+        new java.lang.String[] { "FolderId", "DeleteAfter", });
     internal_static_yandex_cloud_resourcemanager_v1_ListFolderOperationsRequest_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_resourcemanager_v1_ListFolderOperationsRequest_fieldAccessorTable = new
@@ -10334,6 +10921,7 @@ public final class FolderServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.resourcemanager.v1.FolderOuterClass.getDescriptor();
     yandex.cloud.api.access.Access.getDescriptor();

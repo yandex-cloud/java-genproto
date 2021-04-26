@@ -6395,6 +6395,1770 @@ public final class CloudServiceOuterClass {
 
   }
 
+  public interface DeleteCloudRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.resourcemanager.v1.DeleteCloudRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the cloud to delete.
+     * To get the cloud ID, use a [CloudService.List] request.
+     * </pre>
+     *
+     * <code>string cloud_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getCloudId();
+    /**
+     * <pre>
+     * ID of the cloud to delete.
+     * To get the cloud ID, use a [CloudService.List] request.
+     * </pre>
+     *
+     * <code>string cloud_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getCloudIdBytes();
+
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the cloud should begin.
+     * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+     * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+     * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+     * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+     * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    boolean hasDeleteAfter();
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the cloud should begin.
+     * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+     * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+     * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+     * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+     * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    com.google.protobuf.Timestamp getDeleteAfter();
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the cloud should begin.
+     * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+     * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+     * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+     * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+     * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.resourcemanager.v1.DeleteCloudRequest}
+   */
+  public  static final class DeleteCloudRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.resourcemanager.v1.DeleteCloudRequest)
+      DeleteCloudRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteCloudRequest.newBuilder() to construct.
+    private DeleteCloudRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteCloudRequest() {
+      cloudId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteCloudRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cloudId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (deleteAfter_ != null) {
+                subBuilder = deleteAfter_.toBuilder();
+              }
+              deleteAfter_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deleteAfter_);
+                deleteAfter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest.class, yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest.Builder.class);
+    }
+
+    public static final int CLOUD_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object cloudId_;
+    /**
+     * <pre>
+     * ID of the cloud to delete.
+     * To get the cloud ID, use a [CloudService.List] request.
+     * </pre>
+     *
+     * <code>string cloud_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getCloudId() {
+      java.lang.Object ref = cloudId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cloudId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cloud to delete.
+     * To get the cloud ID, use a [CloudService.List] request.
+     * </pre>
+     *
+     * <code>string cloud_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getCloudIdBytes() {
+      java.lang.Object ref = cloudId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cloudId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELETE_AFTER_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp deleteAfter_;
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the cloud should begin.
+     * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+     * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+     * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+     * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+     * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    public boolean hasDeleteAfter() {
+      return deleteAfter_ != null;
+    }
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the cloud should begin.
+     * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+     * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+     * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+     * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+     * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    public com.google.protobuf.Timestamp getDeleteAfter() {
+      return deleteAfter_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteAfter_;
+    }
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the cloud should begin.
+     * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+     * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+     * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+     * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+     * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder() {
+      return getDeleteAfter();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getCloudIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cloudId_);
+      }
+      if (deleteAfter_ != null) {
+        output.writeMessage(2, getDeleteAfter());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getCloudIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cloudId_);
+      }
+      if (deleteAfter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDeleteAfter());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest other = (yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest) obj;
+
+      boolean result = true;
+      result = result && getCloudId()
+          .equals(other.getCloudId());
+      result = result && (hasDeleteAfter() == other.hasDeleteAfter());
+      if (hasDeleteAfter()) {
+        result = result && getDeleteAfter()
+            .equals(other.getDeleteAfter());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLOUD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCloudId().hashCode();
+      if (hasDeleteAfter()) {
+        hash = (37 * hash) + DELETE_AFTER_FIELD_NUMBER;
+        hash = (53 * hash) + getDeleteAfter().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.resourcemanager.v1.DeleteCloudRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.resourcemanager.v1.DeleteCloudRequest)
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest.class, yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        cloudId_ = "";
+
+        if (deleteAfterBuilder_ == null) {
+          deleteAfter_ = null;
+        } else {
+          deleteAfter_ = null;
+          deleteAfterBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest build() {
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest buildPartial() {
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest result = new yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest(this);
+        result.cloudId_ = cloudId_;
+        if (deleteAfterBuilder_ == null) {
+          result.deleteAfter_ = deleteAfter_;
+        } else {
+          result.deleteAfter_ = deleteAfterBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest) {
+          return mergeFrom((yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest other) {
+        if (other == yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest.getDefaultInstance()) return this;
+        if (!other.getCloudId().isEmpty()) {
+          cloudId_ = other.cloudId_;
+          onChanged();
+        }
+        if (other.hasDeleteAfter()) {
+          mergeDeleteAfter(other.getDeleteAfter());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object cloudId_ = "";
+      /**
+       * <pre>
+       * ID of the cloud to delete.
+       * To get the cloud ID, use a [CloudService.List] request.
+       * </pre>
+       *
+       * <code>string cloud_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getCloudId() {
+        java.lang.Object ref = cloudId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cloudId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cloud to delete.
+       * To get the cloud ID, use a [CloudService.List] request.
+       * </pre>
+       *
+       * <code>string cloud_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getCloudIdBytes() {
+        java.lang.Object ref = cloudId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cloudId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cloud to delete.
+       * To get the cloud ID, use a [CloudService.List] request.
+       * </pre>
+       *
+       * <code>string cloud_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setCloudId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cloudId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cloud to delete.
+       * To get the cloud ID, use a [CloudService.List] request.
+       * </pre>
+       *
+       * <code>string cloud_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearCloudId() {
+        
+        cloudId_ = getDefaultInstance().getCloudId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cloud to delete.
+       * To get the cloud ID, use a [CloudService.List] request.
+       * </pre>
+       *
+       * <code>string cloud_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setCloudIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cloudId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp deleteAfter_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deleteAfterBuilder_;
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+       * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+       * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public boolean hasDeleteAfter() {
+        return deleteAfterBuilder_ != null || deleteAfter_ != null;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+       * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+       * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public com.google.protobuf.Timestamp getDeleteAfter() {
+        if (deleteAfterBuilder_ == null) {
+          return deleteAfter_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteAfter_;
+        } else {
+          return deleteAfterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+       * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+       * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder setDeleteAfter(com.google.protobuf.Timestamp value) {
+        if (deleteAfterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deleteAfter_ = value;
+          onChanged();
+        } else {
+          deleteAfterBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+       * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+       * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder setDeleteAfter(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (deleteAfterBuilder_ == null) {
+          deleteAfter_ = builderForValue.build();
+          onChanged();
+        } else {
+          deleteAfterBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+       * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+       * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder mergeDeleteAfter(com.google.protobuf.Timestamp value) {
+        if (deleteAfterBuilder_ == null) {
+          if (deleteAfter_ != null) {
+            deleteAfter_ =
+              com.google.protobuf.Timestamp.newBuilder(deleteAfter_).mergeFrom(value).buildPartial();
+          } else {
+            deleteAfter_ = value;
+          }
+          onChanged();
+        } else {
+          deleteAfterBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+       * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+       * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder clearDeleteAfter() {
+        if (deleteAfterBuilder_ == null) {
+          deleteAfter_ = null;
+          onChanged();
+        } else {
+          deleteAfter_ = null;
+          deleteAfterBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+       * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+       * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDeleteAfterBuilder() {
+        
+        onChanged();
+        return getDeleteAfterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+       * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+       * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder() {
+        if (deleteAfterBuilder_ != null) {
+          return deleteAfterBuilder_.getMessageOrBuilder();
+        } else {
+          return deleteAfter_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : deleteAfter_;
+        }
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * Until this timestamp, the cloud goes into the PENDING_DELETION state and all resources in this
+       * cloud are stopped. In this state, it is possible to cancel the delete operation without any loss.
+       * After this timestamp, the status of the cloud will become DELETING and the process of deleting
+       * all the resources  of the cloud will be started. If [delete_after] is not specified it will be
+       * (now + 24 hours). To initiate an immediate deletion [delete_after] must be &lt;= now.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDeleteAfterFieldBuilder() {
+        if (deleteAfterBuilder_ == null) {
+          deleteAfterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDeleteAfter(),
+                  getParentForChildren(),
+                  isClean());
+          deleteAfter_ = null;
+        }
+        return deleteAfterBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.resourcemanager.v1.DeleteCloudRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.resourcemanager.v1.DeleteCloudRequest)
+    private static final yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest();
+    }
+
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteCloudRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteCloudRequest>() {
+      @java.lang.Override
+      public DeleteCloudRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteCloudRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteCloudRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteCloudRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteCloudMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.resourcemanager.v1.DeleteCloudMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the cloud that is being deleted.
+     * </pre>
+     *
+     * <code>string cloud_id = 1;</code>
+     */
+    java.lang.String getCloudId();
+    /**
+     * <pre>
+     * ID of the cloud that is being deleted.
+     * </pre>
+     *
+     * <code>string cloud_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getCloudIdBytes();
+
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the cloud should begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    boolean hasDeleteAfter();
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the cloud should begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    com.google.protobuf.Timestamp getDeleteAfter();
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the cloud should begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.resourcemanager.v1.DeleteCloudMetadata}
+   */
+  public  static final class DeleteCloudMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.resourcemanager.v1.DeleteCloudMetadata)
+      DeleteCloudMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteCloudMetadata.newBuilder() to construct.
+    private DeleteCloudMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteCloudMetadata() {
+      cloudId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteCloudMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cloudId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (deleteAfter_ != null) {
+                subBuilder = deleteAfter_.toBuilder();
+              }
+              deleteAfter_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deleteAfter_);
+                deleteAfter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata.class, yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata.Builder.class);
+    }
+
+    public static final int CLOUD_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object cloudId_;
+    /**
+     * <pre>
+     * ID of the cloud that is being deleted.
+     * </pre>
+     *
+     * <code>string cloud_id = 1;</code>
+     */
+    public java.lang.String getCloudId() {
+      java.lang.Object ref = cloudId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cloudId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cloud that is being deleted.
+     * </pre>
+     *
+     * <code>string cloud_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCloudIdBytes() {
+      java.lang.Object ref = cloudId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cloudId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DELETE_AFTER_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp deleteAfter_;
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the cloud should begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    public boolean hasDeleteAfter() {
+      return deleteAfter_ != null;
+    }
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the cloud should begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    public com.google.protobuf.Timestamp getDeleteAfter() {
+      return deleteAfter_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteAfter_;
+    }
+    /**
+     * <pre>
+     * The timestamp after which the process of deleting the cloud should begin.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder() {
+      return getDeleteAfter();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getCloudIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cloudId_);
+      }
+      if (deleteAfter_ != null) {
+        output.writeMessage(2, getDeleteAfter());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getCloudIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cloudId_);
+      }
+      if (deleteAfter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDeleteAfter());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata other = (yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata) obj;
+
+      boolean result = true;
+      result = result && getCloudId()
+          .equals(other.getCloudId());
+      result = result && (hasDeleteAfter() == other.hasDeleteAfter());
+      if (hasDeleteAfter()) {
+        result = result && getDeleteAfter()
+            .equals(other.getDeleteAfter());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLOUD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCloudId().hashCode();
+      if (hasDeleteAfter()) {
+        hash = (37 * hash) + DELETE_AFTER_FIELD_NUMBER;
+        hash = (53 * hash) + getDeleteAfter().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.resourcemanager.v1.DeleteCloudMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.resourcemanager.v1.DeleteCloudMetadata)
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata.class, yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        cloudId_ = "";
+
+        if (deleteAfterBuilder_ == null) {
+          deleteAfter_ = null;
+        } else {
+          deleteAfter_ = null;
+          deleteAfterBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata build() {
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata buildPartial() {
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata result = new yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata(this);
+        result.cloudId_ = cloudId_;
+        if (deleteAfterBuilder_ == null) {
+          result.deleteAfter_ = deleteAfter_;
+        } else {
+          result.deleteAfter_ = deleteAfterBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata) {
+          return mergeFrom((yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata other) {
+        if (other == yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata.getDefaultInstance()) return this;
+        if (!other.getCloudId().isEmpty()) {
+          cloudId_ = other.cloudId_;
+          onChanged();
+        }
+        if (other.hasDeleteAfter()) {
+          mergeDeleteAfter(other.getDeleteAfter());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object cloudId_ = "";
+      /**
+       * <pre>
+       * ID of the cloud that is being deleted.
+       * </pre>
+       *
+       * <code>string cloud_id = 1;</code>
+       */
+      public java.lang.String getCloudId() {
+        java.lang.Object ref = cloudId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cloudId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cloud that is being deleted.
+       * </pre>
+       *
+       * <code>string cloud_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCloudIdBytes() {
+        java.lang.Object ref = cloudId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cloudId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cloud that is being deleted.
+       * </pre>
+       *
+       * <code>string cloud_id = 1;</code>
+       */
+      public Builder setCloudId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cloudId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cloud that is being deleted.
+       * </pre>
+       *
+       * <code>string cloud_id = 1;</code>
+       */
+      public Builder clearCloudId() {
+        
+        cloudId_ = getDefaultInstance().getCloudId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cloud that is being deleted.
+       * </pre>
+       *
+       * <code>string cloud_id = 1;</code>
+       */
+      public Builder setCloudIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cloudId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp deleteAfter_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deleteAfterBuilder_;
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public boolean hasDeleteAfter() {
+        return deleteAfterBuilder_ != null || deleteAfter_ != null;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public com.google.protobuf.Timestamp getDeleteAfter() {
+        if (deleteAfterBuilder_ == null) {
+          return deleteAfter_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteAfter_;
+        } else {
+          return deleteAfterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder setDeleteAfter(com.google.protobuf.Timestamp value) {
+        if (deleteAfterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deleteAfter_ = value;
+          onChanged();
+        } else {
+          deleteAfterBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder setDeleteAfter(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (deleteAfterBuilder_ == null) {
+          deleteAfter_ = builderForValue.build();
+          onChanged();
+        } else {
+          deleteAfterBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder mergeDeleteAfter(com.google.protobuf.Timestamp value) {
+        if (deleteAfterBuilder_ == null) {
+          if (deleteAfter_ != null) {
+            deleteAfter_ =
+              com.google.protobuf.Timestamp.newBuilder(deleteAfter_).mergeFrom(value).buildPartial();
+          } else {
+            deleteAfter_ = value;
+          }
+          onChanged();
+        } else {
+          deleteAfterBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public Builder clearDeleteAfter() {
+        if (deleteAfterBuilder_ == null) {
+          deleteAfter_ = null;
+          onChanged();
+        } else {
+          deleteAfter_ = null;
+          deleteAfterBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDeleteAfterBuilder() {
+        
+        onChanged();
+        return getDeleteAfterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder() {
+        if (deleteAfterBuilder_ != null) {
+          return deleteAfterBuilder_.getMessageOrBuilder();
+        } else {
+          return deleteAfter_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : deleteAfter_;
+        }
+      }
+      /**
+       * <pre>
+       * The timestamp after which the process of deleting the cloud should begin.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp delete_after = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDeleteAfterFieldBuilder() {
+        if (deleteAfterBuilder_ == null) {
+          deleteAfterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDeleteAfter(),
+                  getParentForChildren(),
+                  isClean());
+          deleteAfter_ = null;
+        }
+        return deleteAfterBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.resourcemanager.v1.DeleteCloudMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.resourcemanager.v1.DeleteCloudMetadata)
+    private static final yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata();
+    }
+
+    public static yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteCloudMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteCloudMetadata>() {
+      @java.lang.Override
+      public DeleteCloudMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteCloudMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteCloudMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteCloudMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.resourcemanager.v1.CloudServiceOuterClass.DeleteCloudMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_resourcemanager_v1_GetCloudRequest_descriptor;
   private static final 
@@ -6430,6 +8194,16 @@ public final class CloudServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6442,68 +8216,77 @@ public final class CloudServiceOuterClass {
       "\n3yandex/cloud/resourcemanager/v1/cloud_" +
       "service.proto\022\037yandex.cloud.resourcemana" +
       "ger.v1\032\034google/api/annotations.proto\032 go" +
-      "ogle/protobuf/field_mask.proto\032+yandex/c" +
-      "loud/resourcemanager/v1/cloud.proto\032 yan" +
-      "dex/cloud/api/operation.proto\032 yandex/cl" +
-      "oud/access/access.proto\032&yandex/cloud/op" +
-      "eration/operation.proto\032\035yandex/cloud/va" +
-      "lidation.proto\"1\n\017GetCloudRequest\022\036\n\010clo" +
-      "ud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"m\n\021ListCloudsR" +
-      "equest\022\035\n\tpage_size\030\001 \001(\003B\n\372\3071\006<=1000\022\035\n" +
-      "\npage_token\030\002 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\003" +
-      " \001(\tB\n\212\3101\006<=1000\"e\n\022ListCloudsResponse\0226" +
-      "\n\006clouds\030\001 \003(\0132&.yandex.cloud.resourcema" +
-      "nager.v1.Cloud\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "z\n\032ListCloudOperationsRequest\022\036\n\010cloud_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
-      "B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
-      "100\"m\n\033ListCloudOperationsResponse\0225\n\nop" +
-      "erations\030\001 \003(\0132!.yandex.cloud.operation." +
-      "Operation\022\027\n\017next_page_token\030\002 \001(\t\"\270\001\n\022U" +
-      "pdateCloudRequest\022\036\n\010cloud_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google." +
-      "protobuf.FieldMask\0221\n\004name\030\003 \001(\tB#\362\3071\037[a" +
-      "-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descrip" +
-      "tion\030\004 \001(\tB\t\212\3101\005<=256\"\'\n\023UpdateCloudMeta" +
-      "data\022\020\n\010cloud_id\030\001 \001(\t2\334\n\n\014CloudService\022" +
-      "\217\001\n\003Get\0220.yandex.cloud.resourcemanager.v" +
-      "1.GetCloudRequest\032&.yandex.cloud.resourc" +
-      "emanager.v1.Cloud\".\202\323\344\223\002(\022&/resource-man" +
-      "ager/v1/clouds/{cloud_id}\022\224\001\n\004List\0222.yan" +
+      "ogle/protobuf/field_mask.proto\032\037google/p" +
+      "rotobuf/timestamp.proto\032+yandex/cloud/re" +
+      "sourcemanager/v1/cloud.proto\032 yandex/clo" +
+      "ud/api/operation.proto\032 yandex/cloud/acc" +
+      "ess/access.proto\032&yandex/cloud/operation" +
+      "/operation.proto\032\035yandex/cloud/validatio" +
+      "n.proto\"1\n\017GetCloudRequest\022\036\n\010cloud_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"m\n\021ListCloudsRequest\022" +
+      "\035\n\tpage_size\030\001 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_t" +
+      "oken\030\002 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\003 \001(\tB\n\212" +
+      "\3101\006<=1000\"e\n\022ListCloudsResponse\0226\n\006cloud" +
+      "s\030\001 \003(\0132&.yandex.cloud.resourcemanager.v" +
+      "1.Cloud\022\027\n\017next_page_token\030\002 \001(\t\"z\n\032List" +
+      "CloudOperationsRequest\022\036\n\010cloud_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
+      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"m\n\033" +
+      "ListCloudOperationsResponse\0225\n\noperation" +
+      "s\030\001 \003(\0132!.yandex.cloud.operation.Operati" +
+      "on\022\027\n\017next_page_token\030\002 \001(\t\"\270\001\n\022UpdateCl" +
+      "oudRequest\022\036\n\010cloud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMask\0221\n\004name\030\003 \001(\tB#\362\3071\037[a-z]([-a" +
+      "-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 " +
+      "\001(\tB\t\212\3101\005<=256\"\'\n\023UpdateCloudMetadata\022\020\n" +
+      "\010cloud_id\030\001 \001(\t\"f\n\022DeleteCloudRequest\022\036\n" +
+      "\010cloud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\014delete_" +
+      "after\030\002 \001(\0132\032.google.protobuf.Timestamp\"" +
+      "Y\n\023DeleteCloudMetadata\022\020\n\010cloud_id\030\001 \001(\t" +
+      "\0220\n\014delete_after\030\002 \001(\0132\032.google.protobuf" +
+      ".Timestamp2\361\013\n\014CloudService\022\217\001\n\003Get\0220.ya" +
+      "ndex.cloud.resourcemanager.v1.GetCloudRe" +
+      "quest\032&.yandex.cloud.resourcemanager.v1." +
+      "Cloud\".\202\323\344\223\002(\022&/resource-manager/v1/clou" +
+      "ds/{cloud_id}\022\224\001\n\004List\0222.yandex.cloud.re" +
+      "sourcemanager.v1.ListCloudsRequest\0323.yan" +
       "dex.cloud.resourcemanager.v1.ListCloudsR" +
-      "equest\0323.yandex.cloud.resourcemanager.v1" +
-      ".ListCloudsResponse\"#\202\323\344\223\002\035\022\033/resource-m" +
-      "anager/v1/clouds\022\263\001\n\006Update\0223.yandex.clo" +
-      "ud.resourcemanager.v1.UpdateCloudRequest" +
-      "\032!.yandex.cloud.operation.Operation\"Q\202\323\344" +
-      "\223\002+2&/resource-manager/v1/clouds/{cloud_" +
-      "id}:\001*\262\322*\034\n\023UpdateCloudMetadata\022\005Cloud\022\306" +
-      "\001\n\016ListOperations\022;.yandex.cloud.resourc" +
-      "emanager.v1.ListCloudOperationsRequest\032<" +
-      ".yandex.cloud.resourcemanager.v1.ListClo" +
-      "udOperationsResponse\"9\202\323\344\223\0023\0221/resource-" +
-      "manager/v1/clouds/{cloud_id}/operations\022" +
-      "\273\001\n\022ListAccessBindings\022..yandex.cloud.ac" +
-      "cess.ListAccessBindingsRequest\032/.yandex." +
-      "cloud.access.ListAccessBindingsResponse\"" +
-      "D\202\323\344\223\002>\022</resource-manager/v1/clouds/{re" +
-      "source_id}:listAccessBindings\022\353\001\n\021SetAcc" +
-      "essBindings\022-.yandex.cloud.access.SetAcc" +
-      "essBindingsRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"\203\001\202\323\344\223\002@\";/resource-manage" +
-      "r/v1/clouds/{resource_id}:setAccessBindi" +
-      "ngs:\001*\262\322*9\n access.SetAccessBindingsMeta" +
-      "data\022\025google.protobuf.Empty\022\367\001\n\024UpdateAc" +
-      "cessBindings\0220.yandex.cloud.access.Updat" +
-      "eAccessBindingsRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"\211\001\202\323\344\223\002C\">/resource-ma" +
-      "nager/v1/clouds/{resource_id}:updateAcce" +
-      "ssBindings:\001*\262\322*<\n#access.UpdateAccessBi" +
-      "ndingsMetadata\022\025google.protobuf.EmptyBz\n" +
-      "#yandex.cloud.api.resourcemanager.v1ZSgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/resourcemanager/v1;resourcemanage" +
-      "rb\006proto3"
+      "esponse\"#\202\323\344\223\002\035\022\033/resource-manager/v1/cl" +
+      "ouds\022\263\001\n\006Update\0223.yandex.cloud.resourcem" +
+      "anager.v1.UpdateCloudRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"Q\202\323\344\223\002+2&/resour" +
+      "ce-manager/v1/clouds/{cloud_id}:\001*\262\322*\034\n\023" +
+      "UpdateCloudMetadata\022\005Cloud\022\222\001\n\006Delete\0223." +
+      "yandex.cloud.resourcemanager.v1.DeleteCl" +
+      "oudRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"0\262\322*,\n\023DeleteCloudMetadata\022\025google" +
+      ".protobuf.Empty\022\306\001\n\016ListOperations\022;.yan" +
+      "dex.cloud.resourcemanager.v1.ListCloudOp" +
+      "erationsRequest\032<.yandex.cloud.resourcem" +
+      "anager.v1.ListCloudOperationsResponse\"9\202" +
+      "\323\344\223\0023\0221/resource-manager/v1/clouds/{clou" +
+      "d_id}/operations\022\273\001\n\022ListAccessBindings\022" +
+      "..yandex.cloud.access.ListAccessBindings" +
+      "Request\032/.yandex.cloud.access.ListAccess" +
+      "BindingsResponse\"D\202\323\344\223\002>\022</resource-mana" +
+      "ger/v1/clouds/{resource_id}:listAccessBi" +
+      "ndings\022\353\001\n\021SetAccessBindings\022-.yandex.cl" +
+      "oud.access.SetAccessBindingsRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\203\001\202\323\344\223\002@\"" +
+      ";/resource-manager/v1/clouds/{resource_i" +
+      "d}:setAccessBindings:\001*\262\322*9\n access.SetA" +
+      "ccessBindingsMetadata\022\025google.protobuf.E" +
+      "mpty\022\367\001\n\024UpdateAccessBindings\0220.yandex.c" +
+      "loud.access.UpdateAccessBindingsRequest\032" +
+      "!.yandex.cloud.operation.Operation\"\211\001\202\323\344" +
+      "\223\002C\">/resource-manager/v1/clouds/{resour" +
+      "ce_id}:updateAccessBindings:\001*\262\322*<\n#acce" +
+      "ss.UpdateAccessBindingsMetadata\022\025google." +
+      "protobuf.EmptyBz\n#yandex.cloud.api.resou" +
+      "rcemanager.v1ZSgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/resourcemanager/" +
+      "v1;resourcemanagerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6518,6 +8301,7 @@ public final class CloudServiceOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.resourcemanager.v1.CloudOuterClass.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.access.Access.getDescriptor(),
@@ -6566,6 +8350,18 @@ public final class CloudServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_UpdateCloudMetadata_descriptor,
         new java.lang.String[] { "CloudId", });
+    internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudRequest_descriptor,
+        new java.lang.String[] { "CloudId", "DeleteAfter", });
+    internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_descriptor,
+        new java.lang.String[] { "CloudId", "DeleteAfter", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -6578,6 +8374,7 @@ public final class CloudServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.resourcemanager.v1.CloudOuterClass.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.access.Access.getDescriptor();
