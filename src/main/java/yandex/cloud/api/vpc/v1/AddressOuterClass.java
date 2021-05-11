@@ -202,6 +202,40 @@ public final class AddressOuterClass {
      */
     boolean getUsed();
 
+    /**
+     * <pre>
+     * Type of the IP address.
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.Address.Type type = 17;</code>
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Type of the IP address.
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.Address.Type type = 17;</code>
+     */
+    yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Type getType();
+
+    /**
+     * <pre>
+     * Vervion of the IP address.
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.Address.IpVersion ip_version = 18;</code>
+     */
+    int getIpVersionValue();
+    /**
+     * <pre>
+     * Vervion of the IP address.
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.Address.IpVersion ip_version = 18;</code>
+     */
+    yandex.cloud.api.vpc.v1.AddressOuterClass.Address.IpVersion getIpVersion();
+
     public yandex.cloud.api.vpc.v1.AddressOuterClass.Address.AddressCase getAddressCase();
   }
   /**
@@ -227,6 +261,8 @@ public final class AddressOuterClass {
       description_ = "";
       reserved_ = false;
       used_ = false;
+      type_ = 0;
+      ipVersion_ = 0;
     }
 
     @java.lang.Override
@@ -327,6 +363,18 @@ public final class AddressOuterClass {
               used_ = input.readBool();
               break;
             }
+            case 136: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+            case 144: {
+              int rawValue = input.readEnum();
+
+              ipVersion_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -369,6 +417,252 @@ public final class AddressOuterClass {
       return yandex.cloud.api.vpc.v1.AddressOuterClass.internal_static_yandex_cloud_vpc_v1_Address_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.vpc.v1.AddressOuterClass.Address.class, yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.vpc.v1.Address.Type}
+     */
+    public enum Type
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>TYPE_UNSPECIFIED = 0;</code>
+       */
+      TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Internal IP address.
+       * </pre>
+       *
+       * <code>INTERNAL = 1;</code>
+       */
+      INTERNAL(1),
+      /**
+       * <pre>
+       * Public IP address.
+       * </pre>
+       *
+       * <code>EXTERNAL = 2;</code>
+       */
+      EXTERNAL(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Internal IP address.
+       * </pre>
+       *
+       * <code>INTERNAL = 1;</code>
+       */
+      public static final int INTERNAL_VALUE = 1;
+      /**
+       * <pre>
+       * Public IP address.
+       * </pre>
+       *
+       * <code>EXTERNAL = 2;</code>
+       */
+      public static final int EXTERNAL_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Type valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static Type forNumber(int value) {
+        switch (value) {
+          case 0: return TYPE_UNSPECIFIED;
+          case 1: return INTERNAL;
+          case 2: return EXTERNAL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Type>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Type> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+              public Type findValueByNumber(int number) {
+                return Type.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.AddressOuterClass.Address.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Type[] VALUES = values();
+
+      public static Type valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Type(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.vpc.v1.Address.Type)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.vpc.v1.Address.IpVersion}
+     */
+    public enum IpVersion
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>IP_VERSION_UNSPECIFIED = 0;</code>
+       */
+      IP_VERSION_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * IPv4 address.
+       * </pre>
+       *
+       * <code>IPV4 = 1;</code>
+       */
+      IPV4(1),
+      /**
+       * <pre>
+       * IPv6 address.
+       * </pre>
+       *
+       * <code>IPV6 = 2;</code>
+       */
+      IPV6(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>IP_VERSION_UNSPECIFIED = 0;</code>
+       */
+      public static final int IP_VERSION_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * IPv4 address.
+       * </pre>
+       *
+       * <code>IPV4 = 1;</code>
+       */
+      public static final int IPV4_VALUE = 1;
+      /**
+       * <pre>
+       * IPv6 address.
+       * </pre>
+       *
+       * <code>IPV6 = 2;</code>
+       */
+      public static final int IPV6_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static IpVersion valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static IpVersion forNumber(int value) {
+        switch (value) {
+          case 0: return IP_VERSION_UNSPECIFIED;
+          case 1: return IPV4;
+          case 2: return IPV6;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<IpVersion>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          IpVersion> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<IpVersion>() {
+              public IpVersion findValueByNumber(int number) {
+                return IpVersion.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.AddressOuterClass.Address.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final IpVersion[] VALUES = values();
+
+      public static IpVersion valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private IpVersion(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.vpc.v1.Address.IpVersion)
     }
 
     private int bitField0_;
@@ -755,6 +1049,56 @@ public final class AddressOuterClass {
       return used_;
     }
 
+    public static final int TYPE_FIELD_NUMBER = 17;
+    private int type_;
+    /**
+     * <pre>
+     * Type of the IP address.
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.Address.Type type = 17;</code>
+     */
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Type of the IP address.
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.Address.Type type = 17;</code>
+     */
+    public yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Type getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Type result = yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Type.valueOf(type_);
+      return result == null ? yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Type.UNRECOGNIZED : result;
+    }
+
+    public static final int IP_VERSION_FIELD_NUMBER = 18;
+    private int ipVersion_;
+    /**
+     * <pre>
+     * Vervion of the IP address.
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.Address.IpVersion ip_version = 18;</code>
+     */
+    public int getIpVersionValue() {
+      return ipVersion_;
+    }
+    /**
+     * <pre>
+     * Vervion of the IP address.
+     * </pre>
+     *
+     * <code>.yandex.cloud.vpc.v1.Address.IpVersion ip_version = 18;</code>
+     */
+    public yandex.cloud.api.vpc.v1.AddressOuterClass.Address.IpVersion getIpVersion() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.vpc.v1.AddressOuterClass.Address.IpVersion result = yandex.cloud.api.vpc.v1.AddressOuterClass.Address.IpVersion.valueOf(ipVersion_);
+      return result == null ? yandex.cloud.api.vpc.v1.AddressOuterClass.Address.IpVersion.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -798,6 +1142,12 @@ public final class AddressOuterClass {
       }
       if (used_ != false) {
         output.writeBool(16, used_);
+      }
+      if (type_ != yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Type.TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(17, type_);
+      }
+      if (ipVersion_ != yandex.cloud.api.vpc.v1.AddressOuterClass.Address.IpVersion.IP_VERSION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(18, ipVersion_);
       }
       unknownFields.writeTo(output);
     }
@@ -846,6 +1196,14 @@ public final class AddressOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(16, used_);
       }
+      if (type_ != yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Type.TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(17, type_);
+      }
+      if (ipVersion_ != yandex.cloud.api.vpc.v1.AddressOuterClass.Address.IpVersion.IP_VERSION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(18, ipVersion_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -881,6 +1239,8 @@ public final class AddressOuterClass {
           == other.getReserved());
       result = result && (getUsed()
           == other.getUsed());
+      result = result && type_ == other.type_;
+      result = result && ipVersion_ == other.ipVersion_;
       result = result && getAddressCase().equals(
           other.getAddressCase());
       if (!result) return false;
@@ -925,6 +1285,10 @@ public final class AddressOuterClass {
       hash = (37 * hash) + USED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getUsed());
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + IP_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + ipVersion_;
       switch (addressCase_) {
         case 7:
           hash = (37 * hash) + EXTERNAL_IPV4_ADDRESS_FIELD_NUMBER;
@@ -1111,6 +1475,10 @@ public final class AddressOuterClass {
 
         used_ = false;
 
+        type_ = 0;
+
+        ipVersion_ = 0;
+
         addressCase_ = 0;
         address_ = null;
         return this;
@@ -1161,6 +1529,8 @@ public final class AddressOuterClass {
         }
         result.reserved_ = reserved_;
         result.used_ = used_;
+        result.type_ = type_;
+        result.ipVersion_ = ipVersion_;
         result.bitField0_ = to_bitField0_;
         result.addressCase_ = addressCase_;
         onBuilt();
@@ -1237,6 +1607,12 @@ public final class AddressOuterClass {
         }
         if (other.getUsed() != false) {
           setUsed(other.getUsed());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (other.ipVersion_ != 0) {
+          setIpVersionValue(other.getIpVersionValue());
         }
         switch (other.getAddressCase()) {
           case EXTERNAL_IPV4_ADDRESS: {
@@ -2165,6 +2541,136 @@ public final class AddressOuterClass {
       public Builder clearUsed() {
         
         used_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Type of the IP address.
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.Address.Type type = 17;</code>
+       */
+      public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Type of the IP address.
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.Address.Type type = 17;</code>
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of the IP address.
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.Address.Type type = 17;</code>
+       */
+      public yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Type getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Type result = yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Type.valueOf(type_);
+        return result == null ? yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Type.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of the IP address.
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.Address.Type type = 17;</code>
+       */
+      public Builder setType(yandex.cloud.api.vpc.v1.AddressOuterClass.Address.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of the IP address.
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.Address.Type type = 17;</code>
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int ipVersion_ = 0;
+      /**
+       * <pre>
+       * Vervion of the IP address.
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.Address.IpVersion ip_version = 18;</code>
+       */
+      public int getIpVersionValue() {
+        return ipVersion_;
+      }
+      /**
+       * <pre>
+       * Vervion of the IP address.
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.Address.IpVersion ip_version = 18;</code>
+       */
+      public Builder setIpVersionValue(int value) {
+        ipVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Vervion of the IP address.
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.Address.IpVersion ip_version = 18;</code>
+       */
+      public yandex.cloud.api.vpc.v1.AddressOuterClass.Address.IpVersion getIpVersion() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.vpc.v1.AddressOuterClass.Address.IpVersion result = yandex.cloud.api.vpc.v1.AddressOuterClass.Address.IpVersion.valueOf(ipVersion_);
+        return result == null ? yandex.cloud.api.vpc.v1.AddressOuterClass.Address.IpVersion.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Vervion of the IP address.
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.Address.IpVersion ip_version = 18;</code>
+       */
+      public Builder setIpVersion(yandex.cloud.api.vpc.v1.AddressOuterClass.Address.IpVersion value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        ipVersion_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Vervion of the IP address.
+       * </pre>
+       *
+       * <code>.yandex.cloud.vpc.v1.Address.IpVersion ip_version = 18;</code>
+       */
+      public Builder clearIpVersion() {
+        
+        ipVersion_ = 0;
         onChanged();
         return this;
       }
@@ -4025,23 +4531,29 @@ public final class AddressOuterClass {
       "\n!yandex/cloud/vpc/v1/address.proto\022\023yan" +
       "dex.cloud.vpc.v1\032\037google/protobuf/timest" +
       "amp.proto\032\035yandex/cloud/validation.proto" +
-      "\"\340\002\n\007Address\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
+      "\"\304\004\n\007Address\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 " +
       "\001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobu" +
       "f.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description" +
       "\030\005 \001(\t\0228\n\006labels\030\006 \003(\0132(.yandex.cloud.vp" +
       "c.v1.Address.LabelsEntry\022I\n\025external_ipv" +
       "4_address\030\007 \001(\0132(.yandex.cloud.vpc.v1.Ex" +
       "ternalIpv4AddressH\000\022\020\n\010reserved\030\017 \001(\010\022\014\n" +
-      "\004used\030\020 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001B\017\n\007address\022\004\300\3011\001\"w\n\023E" +
-      "xternalIpv4Address\022\017\n\007address\030\001 \001(\t\022\017\n\007z" +
-      "one_id\030\002 \001(\t\022>\n\014requirements\030\003 \001(\0132(.yan" +
-      "dex.cloud.vpc.v1.AddressRequirements\"Y\n\023" +
-      "AddressRequirements\022 \n\030ddos_protection_p" +
-      "rovider\030\001 \001(\t\022 \n\030outgoing_smtp_capabilit" +
-      "y\030\002 \001(\tBV\n\027yandex.cloud.api.vpc.v1Z;gith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/vpc/v1;vpcb\006proto3"
+      "\004used\030\020 \001(\010\022/\n\004type\030\021 \001(\0162!.yandex.cloud" +
+      ".vpc.v1.Address.Type\022:\n\nip_version\030\022 \001(\016" +
+      "2&.yandex.cloud.vpc.v1.Address.IpVersion" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"8\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n" +
+      "\010INTERNAL\020\001\022\014\n\010EXTERNAL\020\002\";\n\tIpVersion\022\032" +
+      "\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004" +
+      "IPV6\020\002B\017\n\007address\022\004\300\3011\001\"w\n\023ExternalIpv4A" +
+      "ddress\022\017\n\007address\030\001 \001(\t\022\017\n\007zone_id\030\002 \001(\t" +
+      "\022>\n\014requirements\030\003 \001(\0132(.yandex.cloud.vp" +
+      "c.v1.AddressRequirements\"Y\n\023AddressRequi" +
+      "rements\022 \n\030ddos_protection_provider\030\001 \001(" +
+      "\t\022 \n\030outgoing_smtp_capability\030\002 \001(\tBV\n\027y" +
+      "andex.cloud.api.vpc.v1Z;github.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/vpc/v1;" +
+      "vpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4062,7 +4574,7 @@ public final class AddressOuterClass {
     internal_static_yandex_cloud_vpc_v1_Address_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_Address_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ExternalIpv4Address", "Reserved", "Used", "Address", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ExternalIpv4Address", "Reserved", "Used", "Type", "IpVersion", "Address", });
     internal_static_yandex_cloud_vpc_v1_Address_LabelsEntry_descriptor =
       internal_static_yandex_cloud_vpc_v1_Address_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_vpc_v1_Address_LabelsEntry_fieldAccessorTable = new

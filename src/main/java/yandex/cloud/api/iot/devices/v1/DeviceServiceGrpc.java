@@ -62,6 +62,38 @@ public final class DeviceServiceGrpc {
      return getGetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest,
+      yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> getGetByNameMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetByName",
+      requestType = yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest.class,
+      responseType = yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest,
+      yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> getGetByNameMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> getGetByNameMethod;
+    if ((getGetByNameMethod = DeviceServiceGrpc.getGetByNameMethod) == null) {
+      synchronized (DeviceServiceGrpc.class) {
+        if ((getGetByNameMethod = DeviceServiceGrpc.getGetByNameMethod) == null) {
+          DeviceServiceGrpc.getGetByNameMethod = getGetByNameMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest, yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.iot.devices.v1.DeviceService", "GetByName"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device.getDefaultInstance()))
+                  .setSchemaDescriptor(new DeviceServiceMethodDescriptorSupplier("GetByName"))
+                  .build();
+          }
+        }
+     }
+     return getGetByNameMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesRequest,
       yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.ListDevicesResponse> getListMethod;
 
@@ -456,6 +488,13 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     */
+    public void getByName(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetByNameMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * Retrieves the list of devices in the specified registry.
      * </pre>
@@ -575,6 +614,13 @@ public final class DeviceServiceGrpc {
                 yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device>(
                   this, METHODID_GET)))
           .addMethod(
+            getGetByNameMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest,
+                yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device>(
+                  this, METHODID_GET_BY_NAME)))
+          .addMethod(
             getListMethod(),
             asyncUnaryCall(
               new MethodHandlers<
@@ -686,6 +732,14 @@ public final class DeviceServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getByName(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetByNameMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -843,6 +897,13 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     */
+    public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device getByName(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetByNameMethod(), getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * Retrieves the list of devices in the specified registry.
      * </pre>
@@ -987,6 +1048,14 @@ public final class DeviceServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device> getByName(
+        yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetByNameMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * Retrieves the list of devices in the specified registry.
      * </pre>
@@ -1109,17 +1178,18 @@ public final class DeviceServiceGrpc {
   }
 
   private static final int METHODID_GET = 0;
-  private static final int METHODID_LIST = 1;
-  private static final int METHODID_CREATE = 2;
-  private static final int METHODID_UPDATE = 3;
-  private static final int METHODID_DELETE = 4;
-  private static final int METHODID_LIST_CERTIFICATES = 5;
-  private static final int METHODID_ADD_CERTIFICATE = 6;
-  private static final int METHODID_DELETE_CERTIFICATE = 7;
-  private static final int METHODID_LIST_PASSWORDS = 8;
-  private static final int METHODID_ADD_PASSWORD = 9;
-  private static final int METHODID_DELETE_PASSWORD = 10;
-  private static final int METHODID_LIST_OPERATIONS = 11;
+  private static final int METHODID_GET_BY_NAME = 1;
+  private static final int METHODID_LIST = 2;
+  private static final int METHODID_CREATE = 3;
+  private static final int METHODID_UPDATE = 4;
+  private static final int METHODID_DELETE = 5;
+  private static final int METHODID_LIST_CERTIFICATES = 6;
+  private static final int METHODID_ADD_CERTIFICATE = 7;
+  private static final int METHODID_DELETE_CERTIFICATE = 8;
+  private static final int METHODID_LIST_PASSWORDS = 9;
+  private static final int METHODID_ADD_PASSWORD = 10;
+  private static final int METHODID_DELETE_PASSWORD = 11;
+  private static final int METHODID_LIST_OPERATIONS = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1140,6 +1210,10 @@ public final class DeviceServiceGrpc {
       switch (methodId) {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetDeviceRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device>) responseObserver);
+          break;
+        case METHODID_GET_BY_NAME:
+          serviceImpl.getByName((yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.DeviceOuterClass.Device>) responseObserver);
           break;
         case METHODID_LIST:
@@ -1248,6 +1322,7 @@ public final class DeviceServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new DeviceServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
+              .addMethod(getGetByNameMethod())
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())

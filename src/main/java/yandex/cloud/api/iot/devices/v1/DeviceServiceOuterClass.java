@@ -748,6 +748,922 @@ public final class DeviceServiceOuterClass {
 
   }
 
+  public interface GetByNameDeviceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.GetByNameDeviceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the registry to get device.
+     * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getRegistryId();
+    /**
+     * <pre>
+     * ID of the registry to get device.
+     * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getRegistryIdBytes();
+
+    /**
+     * <pre>
+     * Name of the device to return.
+     * To get a device name make a [DeviceService.List] request.
+     * </pre>
+     *
+     * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getDeviceName();
+    /**
+     * <pre>
+     * Name of the device to return.
+     * To get a device name make a [DeviceService.List] request.
+     * </pre>
+     *
+     * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDeviceNameBytes();
+
+    /**
+     * <pre>
+     * Specifies which parts of the device resource should be returned
+     * in the response.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+     */
+    int getDeviceViewValue();
+    /**
+     * <pre>
+     * Specifies which parts of the device resource should be returned
+     * in the response.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+     */
+    yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.iot.devices.v1.GetByNameDeviceRequest}
+   */
+  public  static final class GetByNameDeviceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.iot.devices.v1.GetByNameDeviceRequest)
+      GetByNameDeviceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetByNameDeviceRequest.newBuilder() to construct.
+    private GetByNameDeviceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetByNameDeviceRequest() {
+      registryId_ = "";
+      deviceName_ = "";
+      deviceView_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetByNameDeviceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              registryId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              deviceName_ = s;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              deviceView_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_GetByNameDeviceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_GetByNameDeviceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest.class, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest.Builder.class);
+    }
+
+    public static final int REGISTRY_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object registryId_;
+    /**
+     * <pre>
+     * ID of the registry to get device.
+     * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getRegistryId() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registryId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the registry to get device.
+     * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+     * </pre>
+     *
+     * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getRegistryIdBytes() {
+      java.lang.Object ref = registryId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEVICE_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object deviceName_;
+    /**
+     * <pre>
+     * Name of the device to return.
+     * To get a device name make a [DeviceService.List] request.
+     * </pre>
+     *
+     * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getDeviceName() {
+      java.lang.Object ref = deviceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deviceName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the device to return.
+     * To get a device name make a [DeviceService.List] request.
+     * </pre>
+     *
+     * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDeviceNameBytes() {
+      java.lang.Object ref = deviceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deviceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEVICE_VIEW_FIELD_NUMBER = 3;
+    private int deviceView_;
+    /**
+     * <pre>
+     * Specifies which parts of the device resource should be returned
+     * in the response.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+     */
+    public int getDeviceViewValue() {
+      return deviceView_;
+    }
+    /**
+     * <pre>
+     * Specifies which parts of the device resource should be returned
+     * in the response.
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+     */
+    public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView result = yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.valueOf(deviceView_);
+      return result == null ? yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getRegistryIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, registryId_);
+      }
+      if (!getDeviceNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deviceName_);
+      }
+      if (deviceView_ != yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.BASIC.getNumber()) {
+        output.writeEnum(3, deviceView_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getRegistryIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, registryId_);
+      }
+      if (!getDeviceNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deviceName_);
+      }
+      if (deviceView_ != yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.BASIC.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, deviceView_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest other = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest) obj;
+
+      boolean result = true;
+      result = result && getRegistryId()
+          .equals(other.getRegistryId());
+      result = result && getDeviceName()
+          .equals(other.getDeviceName());
+      result = result && deviceView_ == other.deviceView_;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REGISTRY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRegistryId().hashCode();
+      hash = (37 * hash) + DEVICE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceName().hashCode();
+      hash = (37 * hash) + DEVICE_VIEW_FIELD_NUMBER;
+      hash = (53 * hash) + deviceView_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.iot.devices.v1.GetByNameDeviceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.iot.devices.v1.GetByNameDeviceRequest)
+        yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_GetByNameDeviceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_GetByNameDeviceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest.class, yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        registryId_ = "";
+
+        deviceName_ = "";
+
+        deviceView_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.internal_static_yandex_cloud_iot_devices_v1_GetByNameDeviceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest build() {
+        yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest buildPartial() {
+        yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest result = new yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest(this);
+        result.registryId_ = registryId_;
+        result.deviceName_ = deviceName_;
+        result.deviceView_ = deviceView_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest) {
+          return mergeFrom((yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest other) {
+        if (other == yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest.getDefaultInstance()) return this;
+        if (!other.getRegistryId().isEmpty()) {
+          registryId_ = other.registryId_;
+          onChanged();
+        }
+        if (!other.getDeviceName().isEmpty()) {
+          deviceName_ = other.deviceName_;
+          onChanged();
+        }
+        if (other.deviceView_ != 0) {
+          setDeviceViewValue(other.getDeviceViewValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object registryId_ = "";
+      /**
+       * <pre>
+       * ID of the registry to get device.
+       * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getRegistryId() {
+        java.lang.Object ref = registryId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registryId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry to get device.
+       * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getRegistryIdBytes() {
+        java.lang.Object ref = registryId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registryId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the registry to get device.
+       * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setRegistryId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry to get device.
+       * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearRegistryId() {
+        
+        registryId_ = getDefaultInstance().getRegistryId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the registry to get device.
+       * To get a registry ID make a [yandex.cloud.iot.devices.v1.RegistryService.List] request.
+       * </pre>
+       *
+       * <code>string registry_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setRegistryIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        registryId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deviceName_ = "";
+      /**
+       * <pre>
+       * Name of the device to return.
+       * To get a device name make a [DeviceService.List] request.
+       * </pre>
+       *
+       * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getDeviceName() {
+        java.lang.Object ref = deviceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deviceName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the device to return.
+       * To get a device name make a [DeviceService.List] request.
+       * </pre>
+       *
+       * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDeviceNameBytes() {
+        java.lang.Object ref = deviceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deviceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the device to return.
+       * To get a device name make a [DeviceService.List] request.
+       * </pre>
+       *
+       * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setDeviceName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        deviceName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the device to return.
+       * To get a device name make a [DeviceService.List] request.
+       * </pre>
+       *
+       * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearDeviceName() {
+        
+        deviceName_ = getDefaultInstance().getDeviceName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the device to return.
+       * To get a device name make a [DeviceService.List] request.
+       * </pre>
+       *
+       * <code>string device_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setDeviceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        deviceName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int deviceView_ = 0;
+      /**
+       * <pre>
+       * Specifies which parts of the device resource should be returned
+       * in the response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+       */
+      public int getDeviceViewValue() {
+        return deviceView_;
+      }
+      /**
+       * <pre>
+       * Specifies which parts of the device resource should be returned
+       * in the response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+       */
+      public Builder setDeviceViewValue(int value) {
+        deviceView_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies which parts of the device resource should be returned
+       * in the response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+       */
+      public yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView getDeviceView() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView result = yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.valueOf(deviceView_);
+        return result == null ? yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Specifies which parts of the device resource should be returned
+       * in the response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+       */
+      public Builder setDeviceView(yandex.cloud.api.iot.devices.v1.DeviceOuterClass.DeviceView value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        deviceView_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies which parts of the device resource should be returned
+       * in the response.
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.devices.v1.DeviceView device_view = 3;</code>
+       */
+      public Builder clearDeviceView() {
+        
+        deviceView_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.iot.devices.v1.GetByNameDeviceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.iot.devices.v1.GetByNameDeviceRequest)
+    private static final yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest();
+    }
+
+    public static yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetByNameDeviceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetByNameDeviceRequest>() {
+      @java.lang.Override
+      public GetByNameDeviceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetByNameDeviceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetByNameDeviceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetByNameDeviceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.iot.devices.v1.DeviceServiceOuterClass.GetByNameDeviceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListDevicesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.iot.devices.v1.ListDevicesRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -20950,6 +21866,11 @@ public final class DeviceServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_iot_devices_v1_GetDeviceRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_iot_devices_v1_GetByNameDeviceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_iot_devices_v1_GetByNameDeviceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_iot_devices_v1_ListDevicesRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -21093,132 +22014,140 @@ public final class DeviceServiceOuterClass {
       "vice.proto\"q\n\020GetDeviceRequest\022\037\n\tdevice" +
       "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022<\n\013device_view\030\002" +
       " \001(\0162\'.yandex.cloud.iot.devices.v1.Devic" +
-      "eView\"\334\001\n\022ListDevicesRequest\022\037\n\013registry" +
-      "_id\030\001 \001(\tB\010\212\3101\004<=50H\000\022\035\n\tfolder_id\030\002 \001(\t" +
-      "B\010\212\3101\004<=50H\000\022\035\n\tpage_size\030\003 \001(\003B\n\372\3071\0060-1" +
-      "000\022\035\n\npage_token\030\004 \001(\tB\t\212\3101\005<=100\022<\n\013de" +
-      "vice_view\030\005 \001(\0162\'.yandex.cloud.iot.devic" +
-      "es.v1.DeviceViewB\n\n\002id\022\004\300\3011\001\"d\n\023ListDevi" +
-      "cesResponse\0224\n\007devices\030\001 \003(\0132#.yandex.cl" +
-      "oud.iot.devices.v1.Device\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t\"\245\003\n\023CreateDeviceRequest\022!\n\013re" +
-      "gistry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 " +
-      "\001(\tB\036\350\3071\001\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013d" +
-      "escription\030\003 \001(\tB\t\212\3101\005<=256\022R\n\014certifica" +
-      "tes\030\004 \003(\0132<.yandex.cloud.iot.devices.v1." +
-      "CreateDeviceRequest.Certificate\022Y\n\rtopic" +
-      "_aliases\030\005 \003(\0132B.yandex.cloud.iot.device" +
-      "s.v1.CreateDeviceRequest.TopicAliasesEnt" +
-      "ry\022\020\n\010password\030\006 \001(\t\0323\n\021TopicAliasesEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\'\n\013Cer" +
-      "tificate\022\030\n\020certificate_data\030\001 \001(\t\")\n\024Cr" +
-      "eateDeviceMetadata\022\021\n\tdevice_id\030\001 \001(\t\"\301\002" +
-      "\n\023UpdateDeviceRequest\022\037\n\tdevice_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMask\022(\n\004name\030\003 \001(\tB\032\212" +
-      "\3101\004<=50\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description" +
-      "\030\004 \001(\tB\t\212\3101\005<=256\022Y\n\rtopic_aliases\030\005 \003(\013" +
-      "2B.yandex.cloud.iot.devices.v1.UpdateDev" +
-      "iceRequest.TopicAliasesEntry\0323\n\021TopicAli" +
-      "asesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
-      "\001\")\n\024UpdateDeviceMetadata\022\021\n\tdevice_id\030\001" +
-      " \001(\t\"6\n\023DeleteDeviceRequest\022\037\n\tdevice_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteDeviceMeta" +
-      "data\022\021\n\tdevice_id\030\001 \001(\t\"@\n\035ListDeviceCer" +
-      "tificatesRequest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\"f\n\036ListDeviceCertificatesRespo" +
-      "nse\022D\n\014certificates\030\001 \003(\0132..yandex.cloud" +
-      ".iot.devices.v1.DeviceCertificate\"X\n\033Add" +
-      "DeviceCertificateRequest\022\037\n\tdevice_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n\020certificate_data\030\003 " +
-      "\001(\t\"F\n\034AddDeviceCertificateMetadata\022\021\n\td" +
-      "evice_id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\"d\n\036D" +
-      "eleteDeviceCertificateRequest\022\037\n\tdevice_" +
+      "eView\"\256\001\n\026GetByNameDeviceRequest\022!\n\013regi" +
+      "stry_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0223\n\013device_na" +
+      "me\030\002 \001(\tB\036\350\3071\001\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-]*" +
+      "\022<\n\013device_view\030\003 \001(\0162\'.yandex.cloud.iot" +
+      ".devices.v1.DeviceView\"\334\001\n\022ListDevicesRe" +
+      "quest\022\037\n\013registry_id\030\001 \001(\tB\010\212\3101\004<=50H\000\022\035" +
+      "\n\tfolder_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022\035\n\tpage_si" +
+      "ze\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\t" +
+      "B\t\212\3101\005<=100\022<\n\013device_view\030\005 \001(\0162\'.yande" +
+      "x.cloud.iot.devices.v1.DeviceViewB\n\n\002id\022" +
+      "\004\300\3011\001\"d\n\023ListDevicesResponse\0224\n\007devices\030" +
+      "\001 \003(\0132#.yandex.cloud.iot.devices.v1.Devi" +
+      "ce\022\027\n\017next_page_token\030\002 \001(\t\"\245\003\n\023CreateDe" +
+      "viceRequest\022!\n\013registry_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=50\362\3071\016[a" +
+      "-zA-Z0-9_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<" +
+      "=256\022R\n\014certificates\030\004 \003(\0132<.yandex.clou" +
+      "d.iot.devices.v1.CreateDeviceRequest.Cer" +
+      "tificate\022Y\n\rtopic_aliases\030\005 \003(\0132B.yandex" +
+      ".cloud.iot.devices.v1.CreateDeviceReques" +
+      "t.TopicAliasesEntry\022\020\n\010password\030\006 \001(\t\0323\n" +
+      "\021TopicAliasesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\032\'\n\013Certificate\022\030\n\020certificate" +
+      "_data\030\001 \001(\t\")\n\024CreateDeviceMetadata\022\021\n\td" +
+      "evice_id\030\001 \001(\t\"\301\002\n\023UpdateDeviceRequest\022\037" +
+      "\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013updat" +
+      "e_mask\030\002 \001(\0132\032.google.protobuf.FieldMask" +
+      "\022(\n\004name\030\003 \001(\tB\032\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-" +
+      "]*\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022Y\n\rto" +
+      "pic_aliases\030\005 \003(\0132B.yandex.cloud.iot.dev" +
+      "ices.v1.UpdateDeviceRequest.TopicAliases" +
+      "Entry\0323\n\021TopicAliasesEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\")\n\024UpdateDeviceMetada" +
+      "ta\022\021\n\tdevice_id\030\001 \001(\t\"6\n\023DeleteDeviceReq" +
+      "uest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n" +
+      "\024DeleteDeviceMetadata\022\021\n\tdevice_id\030\001 \001(\t" +
+      "\"@\n\035ListDeviceCertificatesRequest\022\037\n\tdev" +
+      "ice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"f\n\036ListDevice" +
+      "CertificatesResponse\022D\n\014certificates\030\001 \003" +
+      "(\0132..yandex.cloud.iot.devices.v1.DeviceC" +
+      "ertificate\"X\n\033AddDeviceCertificateReques" +
+      "t\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\030\n\020ce" +
+      "rtificate_data\030\003 \001(\t\"F\n\034AddDeviceCertifi" +
+      "cateMetadata\022\021\n\tdevice_id\030\001 \001(\t\022\023\n\013finge" +
+      "rprint\030\002 \001(\t\"d\n\036DeleteDeviceCertificateR" +
+      "equest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"e\n\037De" +
+      "leteDeviceCertificateMetadata\022\037\n\tdevice_" +
       "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerprint\030\002 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\"e\n\037DeleteDeviceCertifi" +
-      "cateMetadata\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\"=\n\032ListDevicePasswordsRequest\022\037\n\tdevice" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"]\n\033ListDevicePas" +
-      "swordsResponse\022>\n\tpasswords\030\001 \003(\0132+.yand" +
-      "ex.cloud.iot.devices.v1.DevicePassword\"W" +
-      "\n\030AddDevicePasswordRequest\022\037\n\tdevice_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\010password\030\002 \001(\tB\010\212" +
-      "\3101\004>=14\"C\n\031AddDevicePasswordMetadata\022\021\n\t" +
-      "device_id\030\001 \001(\t\022\023\n\013password_id\030\002 \001(\t\"a\n\033" +
-      "DeleteDevicePasswordRequest\022\037\n\tdevice_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"b\n\034DeleteDevicePasswordM" +
-      "etadata\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022!\n\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\033" +
-      "ListDeviceOperationsRequest\022\027\n\tdevice_id" +
-      "\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1" +
-      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006fi" +
-      "lter\030\004 \001(\tB\n\212\3101\006<=1000\"n\n\034ListDeviceOper" +
-      "ationsResponse\0225\n\noperations\030\001 \003(\0132!.yan" +
-      "dex.cloud.operation.Operation\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t2\235\022\n\rDeviceService\022\206\001\n\003Get" +
-      "\022-.yandex.cloud.iot.devices.v1.GetDevice" +
-      "Request\032#.yandex.cloud.iot.devices.v1.De" +
-      "vice\"+\202\323\344\223\002%\022#/iot-devices/v1/devices/{d" +
-      "evice_id}\022\212\001\n\004List\022/.yandex.cloud.iot.de" +
-      "vices.v1.ListDevicesRequest\0320.yandex.clo" +
-      "ud.iot.devices.v1.ListDevicesResponse\"\037\202" +
-      "\323\344\223\002\031\022\027/iot-devices/v1/devices\022\243\001\n\006Creat" +
-      "e\0220.yandex.cloud.iot.devices.v1.CreateDe" +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"=\n\032ListDevicePasswords" +
+      "Request\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\"]\n\033ListDevicePasswordsResponse\022>\n\tpassw" +
+      "ords\030\001 \003(\0132+.yandex.cloud.iot.devices.v1" +
+      ".DevicePassword\"W\n\030AddDevicePasswordRequ" +
+      "est\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\010" +
+      "password\030\002 \001(\tB\010\212\3101\004>=14\"C\n\031AddDevicePas" +
+      "swordMetadata\022\021\n\tdevice_id\030\001 \001(\t\022\023\n\013pass" +
+      "word_id\030\002 \001(\t\"a\n\033DeleteDevicePasswordReq" +
+      "uest\022\037\n\tdevice_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n" +
+      "\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\034Dele" +
+      "teDevicePasswordMetadata\022\037\n\tdevice_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"\220\001\n\033ListDeviceOperationsReq" +
+      "uest\022\027\n\tdevice_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_si" +
+      "ze\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\t" +
+      "B\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"" +
+      "n\n\034ListDeviceOperationsResponse\0225\n\nopera" +
+      "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
+      "ration\022\027\n\017next_page_token\030\002 \001(\t2\246\023\n\rDevi" +
+      "ceService\022\206\001\n\003Get\022-.yandex.cloud.iot.dev" +
+      "ices.v1.GetDeviceRequest\032#.yandex.cloud." +
+      "iot.devices.v1.Device\"+\202\323\344\223\002%\022#/iot-devi" +
+      "ces/v1/devices/{device_id}\022\206\001\n\tGetByName" +
+      "\0223.yandex.cloud.iot.devices.v1.GetByName" +
+      "DeviceRequest\032#.yandex.cloud.iot.devices" +
+      ".v1.Device\"\037\202\323\344\223\002\031\022\027/iot-devices/v1/devi" +
+      "ces\022\212\001\n\004List\022/.yandex.cloud.iot.devices." +
+      "v1.ListDevicesRequest\0320.yandex.cloud.iot" +
+      ".devices.v1.ListDevicesResponse\"\037\202\323\344\223\002\031\022" +
+      "\027/iot-devices/v1/devices\022\243\001\n\006Create\0220.ya" +
+      "ndex.cloud.iot.devices.v1.CreateDeviceRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"D\202\323\344\223\002\034\"\027/iot-devices/v1/devices:\001*\262\322*\036" +
+      "\n\024CreateDeviceMetadata\022\006Device\022\257\001\n\006Updat" +
+      "e\0220.yandex.cloud.iot.devices.v1.UpdateDe" +
       "viceRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"D\202\323\344\223\002\034\"\027/iot-devices/v1/devices:" +
-      "\001*\262\322*\036\n\024CreateDeviceMetadata\022\006Device\022\257\001\n" +
-      "\006Update\0220.yandex.cloud.iot.devices.v1.Up" +
-      "dateDeviceRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"P\202\323\344\223\002(2#/iot-devices/v1/de" +
-      "vices/{device_id}:\001*\262\322*\036\n\024UpdateDeviceMe" +
-      "tadata\022\006Device\022\273\001\n\006Delete\0220.yandex.cloud" +
-      ".iot.devices.v1.DeleteDeviceRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\\\202\323\344\223\002%*#" +
-      "/iot-devices/v1/devices/{device_id}\262\322*-\n" +
-      "\024DeleteDeviceMetadata\022\025google.protobuf.E" +
-      "mpty\022\305\001\n\020ListCertificates\022:.yandex.cloud" +
-      ".iot.devices.v1.ListDeviceCertificatesRe" +
-      "quest\032;.yandex.cloud.iot.devices.v1.List" +
-      "DeviceCertificatesResponse\"8\202\323\344\223\0022\0220/iot" +
-      "-devices/v1/devices/{device_id}/certific" +
-      "ates\022\337\001\n\016AddCertificate\0228.yandex.cloud.i" +
-      "ot.devices.v1.AddDeviceCertificateReques" +
-      "t\032!.yandex.cloud.operation.Operation\"p\202\323" +
-      "\344\223\0025\"0/iot-devices/v1/devices/{device_id" +
-      "}/certificates:\001*\262\322*1\n\034AddDeviceCertific" +
-      "ateMetadata\022\021DeviceCertificate\022\370\001\n\021Delet" +
-      "eCertificate\022;.yandex.cloud.iot.devices." +
-      "v1.DeleteDeviceCertificateRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"\202\001\202\323\344\223\002@*>/" +
-      "iot-devices/v1/devices/{device_id}/certi" +
-      "ficates/{fingerprint}\262\322*8\n\037DeleteDeviceC" +
-      "ertificateMetadata\022\025google.protobuf.Empt" +
-      "y\022\271\001\n\rListPasswords\0227.yandex.cloud.iot.d" +
-      "evices.v1.ListDevicePasswordsRequest\0328.y" +
-      "andex.cloud.iot.devices.v1.ListDevicePas" +
-      "swordsResponse\"5\202\323\344\223\002/\022-/iot-devices/v1/" +
-      "devices/{device_id}/passwords\022\320\001\n\013AddPas" +
-      "sword\0225.yandex.cloud.iot.devices.v1.AddD" +
-      "evicePasswordRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"g\202\323\344\223\0022\"-/iot-devices/v1" +
-      "/devices/{device_id}/passwords:\001*\262\322*+\n\031A" +
-      "ddDevicePasswordMetadata\022\016DevicePassword" +
-      "\022\353\001\n\016DeletePassword\0228.yandex.cloud.iot.d" +
-      "evices.v1.DeleteDevicePasswordRequest\032!." +
-      "yandex.cloud.operation.Operation\"|\202\323\344\223\002=" +
-      "*;/iot-devices/v1/devices/{device_id}/pa" +
-      "sswords/{password_id}\262\322*5\n\034DeleteDeviceP" +
-      "asswordMetadata\022\025google.protobuf.Empty\022\275" +
-      "\001\n\016ListOperations\0228.yandex.cloud.iot.dev" +
-      "ices.v1.ListDeviceOperationsRequest\0329.ya" +
-      "ndex.cloud.iot.devices.v1.ListDeviceOper" +
-      "ationsResponse\"6\202\323\344\223\0020\022./iot-devices/v1/" +
-      "devices/{device_id}/operationsBj\n\037yandex" +
-      ".cloud.api.iot.devices.v1ZGgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/iot/" +
-      "devices/v1;devicesb\006proto3"
+      "ration\"P\202\323\344\223\002(2#/iot-devices/v1/devices/" +
+      "{device_id}:\001*\262\322*\036\n\024UpdateDeviceMetadata" +
+      "\022\006Device\022\273\001\n\006Delete\0220.yandex.cloud.iot.d" +
+      "evices.v1.DeleteDeviceRequest\032!.yandex.c" +
+      "loud.operation.Operation\"\\\202\323\344\223\002%*#/iot-d" +
+      "evices/v1/devices/{device_id}\262\322*-\n\024Delet" +
+      "eDeviceMetadata\022\025google.protobuf.Empty\022\305" +
+      "\001\n\020ListCertificates\022:.yandex.cloud.iot.d" +
+      "evices.v1.ListDeviceCertificatesRequest\032" +
+      ";.yandex.cloud.iot.devices.v1.ListDevice" +
+      "CertificatesResponse\"8\202\323\344\223\0022\0220/iot-devic" +
+      "es/v1/devices/{device_id}/certificates\022\337" +
+      "\001\n\016AddCertificate\0228.yandex.cloud.iot.dev" +
+      "ices.v1.AddDeviceCertificateRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"p\202\323\344\223\0025\"0" +
+      "/iot-devices/v1/devices/{device_id}/cert" +
+      "ificates:\001*\262\322*1\n\034AddDeviceCertificateMet" +
+      "adata\022\021DeviceCertificate\022\370\001\n\021DeleteCerti" +
+      "ficate\022;.yandex.cloud.iot.devices.v1.Del" +
+      "eteDeviceCertificateRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"\202\001\202\323\344\223\002@*>/iot-de" +
+      "vices/v1/devices/{device_id}/certificate" +
+      "s/{fingerprint}\262\322*8\n\037DeleteDeviceCertifi" +
+      "cateMetadata\022\025google.protobuf.Empty\022\271\001\n\r" +
+      "ListPasswords\0227.yandex.cloud.iot.devices" +
+      ".v1.ListDevicePasswordsRequest\0328.yandex." +
+      "cloud.iot.devices.v1.ListDevicePasswords" +
+      "Response\"5\202\323\344\223\002/\022-/iot-devices/v1/device" +
+      "s/{device_id}/passwords\022\320\001\n\013AddPassword\022" +
+      "5.yandex.cloud.iot.devices.v1.AddDeviceP" +
+      "asswordRequest\032!.yandex.cloud.operation." +
+      "Operation\"g\202\323\344\223\0022\"-/iot-devices/v1/devic" +
+      "es/{device_id}/passwords:\001*\262\322*+\n\031AddDevi" +
+      "cePasswordMetadata\022\016DevicePassword\022\353\001\n\016D" +
+      "eletePassword\0228.yandex.cloud.iot.devices" +
+      ".v1.DeleteDevicePasswordRequest\032!.yandex" +
+      ".cloud.operation.Operation\"|\202\323\344\223\002=*;/iot" +
+      "-devices/v1/devices/{device_id}/password" +
+      "s/{password_id}\262\322*5\n\034DeleteDevicePasswor" +
+      "dMetadata\022\025google.protobuf.Empty\022\275\001\n\016Lis" +
+      "tOperations\0228.yandex.cloud.iot.devices.v" +
+      "1.ListDeviceOperationsRequest\0329.yandex.c" +
+      "loud.iot.devices.v1.ListDeviceOperations" +
+      "Response\"6\202\323\344\223\0020\022./iot-devices/v1/device" +
+      "s/{device_id}/operationsBj\n\037yandex.cloud" +
+      ".api.iot.devices.v1ZGgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/iot/device" +
+      "s/v1;devicesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -21244,20 +22173,26 @@ public final class DeviceServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_GetDeviceRequest_descriptor,
         new java.lang.String[] { "DeviceId", "DeviceView", });
-    internal_static_yandex_cloud_iot_devices_v1_ListDevicesRequest_descriptor =
+    internal_static_yandex_cloud_iot_devices_v1_GetByNameDeviceRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_iot_devices_v1_GetByNameDeviceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_iot_devices_v1_GetByNameDeviceRequest_descriptor,
+        new java.lang.String[] { "RegistryId", "DeviceName", "DeviceView", });
+    internal_static_yandex_cloud_iot_devices_v1_ListDevicesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_iot_devices_v1_ListDevicesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_ListDevicesRequest_descriptor,
         new java.lang.String[] { "RegistryId", "FolderId", "PageSize", "PageToken", "DeviceView", "Id", });
     internal_static_yandex_cloud_iot_devices_v1_ListDevicesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_iot_devices_v1_ListDevicesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_ListDevicesResponse_descriptor,
         new java.lang.String[] { "Devices", "NextPageToken", });
     internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_descriptor,
@@ -21275,13 +22210,13 @@ public final class DeviceServiceOuterClass {
         internal_static_yandex_cloud_iot_devices_v1_CreateDeviceRequest_Certificate_descriptor,
         new java.lang.String[] { "CertificateData", });
     internal_static_yandex_cloud_iot_devices_v1_CreateDeviceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_iot_devices_v1_CreateDeviceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_CreateDeviceMetadata_descriptor,
         new java.lang.String[] { "DeviceId", });
     internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_descriptor,
@@ -21293,103 +22228,103 @@ public final class DeviceServiceOuterClass {
         internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceRequest_TopicAliasesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_UpdateDeviceMetadata_descriptor,
         new java.lang.String[] { "DeviceId", });
     internal_static_yandex_cloud_iot_devices_v1_DeleteDeviceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_iot_devices_v1_DeleteDeviceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_DeleteDeviceRequest_descriptor,
         new java.lang.String[] { "DeviceId", });
     internal_static_yandex_cloud_iot_devices_v1_DeleteDeviceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_iot_devices_v1_DeleteDeviceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_DeleteDeviceMetadata_descriptor,
         new java.lang.String[] { "DeviceId", });
     internal_static_yandex_cloud_iot_devices_v1_ListDeviceCertificatesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_iot_devices_v1_ListDeviceCertificatesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_ListDeviceCertificatesRequest_descriptor,
         new java.lang.String[] { "DeviceId", });
     internal_static_yandex_cloud_iot_devices_v1_ListDeviceCertificatesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_iot_devices_v1_ListDeviceCertificatesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_ListDeviceCertificatesResponse_descriptor,
         new java.lang.String[] { "Certificates", });
     internal_static_yandex_cloud_iot_devices_v1_AddDeviceCertificateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_iot_devices_v1_AddDeviceCertificateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_AddDeviceCertificateRequest_descriptor,
         new java.lang.String[] { "DeviceId", "CertificateData", });
     internal_static_yandex_cloud_iot_devices_v1_AddDeviceCertificateMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_iot_devices_v1_AddDeviceCertificateMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_AddDeviceCertificateMetadata_descriptor,
         new java.lang.String[] { "DeviceId", "Fingerprint", });
     internal_static_yandex_cloud_iot_devices_v1_DeleteDeviceCertificateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_iot_devices_v1_DeleteDeviceCertificateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_DeleteDeviceCertificateRequest_descriptor,
         new java.lang.String[] { "DeviceId", "Fingerprint", });
     internal_static_yandex_cloud_iot_devices_v1_DeleteDeviceCertificateMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_iot_devices_v1_DeleteDeviceCertificateMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_DeleteDeviceCertificateMetadata_descriptor,
         new java.lang.String[] { "DeviceId", "Fingerprint", });
     internal_static_yandex_cloud_iot_devices_v1_ListDevicePasswordsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_iot_devices_v1_ListDevicePasswordsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_ListDevicePasswordsRequest_descriptor,
         new java.lang.String[] { "DeviceId", });
     internal_static_yandex_cloud_iot_devices_v1_ListDevicePasswordsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_iot_devices_v1_ListDevicePasswordsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_ListDevicePasswordsResponse_descriptor,
         new java.lang.String[] { "Passwords", });
     internal_static_yandex_cloud_iot_devices_v1_AddDevicePasswordRequest_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_iot_devices_v1_AddDevicePasswordRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_AddDevicePasswordRequest_descriptor,
         new java.lang.String[] { "DeviceId", "Password", });
     internal_static_yandex_cloud_iot_devices_v1_AddDevicePasswordMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_iot_devices_v1_AddDevicePasswordMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_AddDevicePasswordMetadata_descriptor,
         new java.lang.String[] { "DeviceId", "PasswordId", });
     internal_static_yandex_cloud_iot_devices_v1_DeleteDevicePasswordRequest_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_iot_devices_v1_DeleteDevicePasswordRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_DeleteDevicePasswordRequest_descriptor,
         new java.lang.String[] { "DeviceId", "PasswordId", });
     internal_static_yandex_cloud_iot_devices_v1_DeleteDevicePasswordMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_iot_devices_v1_DeleteDevicePasswordMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_DeleteDevicePasswordMetadata_descriptor,
         new java.lang.String[] { "DeviceId", "PasswordId", });
     internal_static_yandex_cloud_iot_devices_v1_ListDeviceOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_iot_devices_v1_ListDeviceOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_ListDeviceOperationsRequest_descriptor,
         new java.lang.String[] { "DeviceId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_iot_devices_v1_ListDeviceOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_iot_devices_v1_ListDeviceOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_devices_v1_ListDeviceOperationsResponse_descriptor,

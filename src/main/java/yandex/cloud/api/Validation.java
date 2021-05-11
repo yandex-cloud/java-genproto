@@ -15,6 +15,7 @@ public final class Validation {
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.unique);
     registry.add(yandex.cloud.api.Validation.mapKey);
+    registry.add(yandex.cloud.api.Validation.bytes);
   }
 
   public static void registerAllExtensions(
@@ -934,6 +935,17 @@ public final class Validation {
           .newFileScopedGeneratedExtension(
         yandex.cloud.api.Validation.MapKeySpec.class,
         yandex.cloud.api.Validation.MapKeySpec.getDefaultInstance());
+  public static final int BYTES_FIELD_NUMBER = 101511;
+  /**
+   * <code>extend .google.protobuf.FieldOptions { ... }</code>
+   */
+  public static final
+    com.google.protobuf.GeneratedMessage.GeneratedExtension<
+      com.google.protobuf.DescriptorProtos.FieldOptions,
+      java.lang.String> bytes = com.google.protobuf.GeneratedMessage
+          .newFileScopedGeneratedExtension(
+        java.lang.String.class,
+        null);
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_MapKeySpec_descriptor;
   private static final 
@@ -962,9 +974,10 @@ public final class Validation {
       ":/\n\006unique\022\035.google.protobuf.FieldOption" +
       "s\030\202\231\006 \001(\010:J\n\007map_key\022\035.google.protobuf.F" +
       "ieldOptions\030\206\231\006 \001(\0132\030.yandex.cloud.MapKe" +
-      "ySpecBJ\n\020yandex.cloud.apiZ6github.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud;clou" +
-      "db\006proto3"
+      "ySpec:.\n\005bytes\022\035.google.protobuf.FieldOp" +
+      "tions\030\207\231\006 \001(\tBJ\n\020yandex.cloud.apiZ6githu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud;cloudb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -993,6 +1006,7 @@ public final class Validation {
     length.internalInit(descriptor.getExtensions().get(5));
     unique.internalInit(descriptor.getExtensions().get(6));
     mapKey.internalInit(descriptor.getExtensions().get(7));
+    bytes.internalInit(descriptor.getExtensions().get(8));
     com.google.protobuf.DescriptorProtos.getDescriptor();
   }
 

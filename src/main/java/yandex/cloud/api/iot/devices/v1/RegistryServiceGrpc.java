@@ -62,6 +62,38 @@ public final class RegistryServiceGrpc {
      return getGetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest,
+      yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> getGetByNameMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetByName",
+      requestType = yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest.class,
+      responseType = yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest,
+      yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> getGetByNameMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> getGetByNameMethod;
+    if ((getGetByNameMethod = RegistryServiceGrpc.getGetByNameMethod) == null) {
+      synchronized (RegistryServiceGrpc.class) {
+        if ((getGetByNameMethod = RegistryServiceGrpc.getGetByNameMethod) == null) {
+          RegistryServiceGrpc.getGetByNameMethod = getGetByNameMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest, yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.iot.devices.v1.RegistryService", "GetByName"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry.getDefaultInstance()))
+                  .setSchemaDescriptor(new RegistryServiceMethodDescriptorSupplier("GetByName"))
+                  .build();
+          }
+        }
+     }
+     return getGetByNameMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesRequest,
       yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.ListRegistriesResponse> getListMethod;
 
@@ -488,6 +520,13 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     */
+    public void getByName(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetByNameMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * Retrieves the list of registries in the specified folder.
      * </pre>
@@ -617,6 +656,13 @@ public final class RegistryServiceGrpc {
                 yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry>(
                   this, METHODID_GET)))
           .addMethod(
+            getGetByNameMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest,
+                yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry>(
+                  this, METHODID_GET_BY_NAME)))
+          .addMethod(
             getListMethod(),
             asyncUnaryCall(
               new MethodHandlers<
@@ -735,6 +781,14 @@ public final class RegistryServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getByName(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetByNameMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -903,6 +957,13 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     */
+    public yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry getByName(yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetByNameMethod(), getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * Retrieves the list of registries in the specified folder.
      * </pre>
@@ -1057,6 +1118,14 @@ public final class RegistryServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry> getByName(
+        yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetByNameMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * Retrieves the list of registries in the specified folder.
      * </pre>
@@ -1190,18 +1259,19 @@ public final class RegistryServiceGrpc {
   }
 
   private static final int METHODID_GET = 0;
-  private static final int METHODID_LIST = 1;
-  private static final int METHODID_CREATE = 2;
-  private static final int METHODID_UPDATE = 3;
-  private static final int METHODID_DELETE = 4;
-  private static final int METHODID_LIST_CERTIFICATES = 5;
-  private static final int METHODID_ADD_CERTIFICATE = 6;
-  private static final int METHODID_DELETE_CERTIFICATE = 7;
-  private static final int METHODID_LIST_PASSWORDS = 8;
-  private static final int METHODID_ADD_PASSWORD = 9;
-  private static final int METHODID_DELETE_PASSWORD = 10;
-  private static final int METHODID_LIST_DEVICE_TOPIC_ALIASES = 11;
-  private static final int METHODID_LIST_OPERATIONS = 12;
+  private static final int METHODID_GET_BY_NAME = 1;
+  private static final int METHODID_LIST = 2;
+  private static final int METHODID_CREATE = 3;
+  private static final int METHODID_UPDATE = 4;
+  private static final int METHODID_DELETE = 5;
+  private static final int METHODID_LIST_CERTIFICATES = 6;
+  private static final int METHODID_ADD_CERTIFICATE = 7;
+  private static final int METHODID_DELETE_CERTIFICATE = 8;
+  private static final int METHODID_LIST_PASSWORDS = 9;
+  private static final int METHODID_ADD_PASSWORD = 10;
+  private static final int METHODID_DELETE_PASSWORD = 11;
+  private static final int METHODID_LIST_DEVICE_TOPIC_ALIASES = 12;
+  private static final int METHODID_LIST_OPERATIONS = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1222,6 +1292,10 @@ public final class RegistryServiceGrpc {
       switch (methodId) {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetRegistryRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry>) responseObserver);
+          break;
+        case METHODID_GET_BY_NAME:
+          serviceImpl.getByName((yandex.cloud.api.iot.devices.v1.RegistryServiceOuterClass.GetByNameRegistryRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.iot.devices.v1.RegistryOuterClass.Registry>) responseObserver);
           break;
         case METHODID_LIST:
@@ -1334,6 +1408,7 @@ public final class RegistryServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new RegistryServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
+              .addMethod(getGetByNameMethod())
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())

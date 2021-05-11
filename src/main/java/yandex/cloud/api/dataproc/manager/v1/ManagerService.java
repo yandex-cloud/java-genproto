@@ -12012,6 +12012,19 @@ public final class ManagerService {
      * <code>.yandex.cloud.dataproc.manager.v1.Info info = 3;</code>
      */
     yandex.cloud.api.dataproc.manager.v1.ManagerService.InfoOrBuilder getInfoOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+     */
+    boolean hasCollectedAt();
+    /**
+     * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+     */
+    com.google.protobuf.Timestamp getCollectedAt();
+    /**
+     * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCollectedAtOrBuilder();
   }
   /**
    * <pre>
@@ -12078,6 +12091,19 @@ public final class ManagerService {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(info_);
                 info_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (collectedAt_ != null) {
+                subBuilder = collectedAt_.toBuilder();
+              }
+              collectedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(collectedAt_);
+                collectedAt_ = subBuilder.buildPartial();
               }
 
               break;
@@ -12178,6 +12204,27 @@ public final class ManagerService {
       return getInfo();
     }
 
+    public static final int COLLECTED_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp collectedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+     */
+    public boolean hasCollectedAt() {
+      return collectedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+     */
+    public com.google.protobuf.Timestamp getCollectedAt() {
+      return collectedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : collectedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getCollectedAtOrBuilder() {
+      return getCollectedAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12201,6 +12248,9 @@ public final class ManagerService {
       if (info_ != null) {
         output.writeMessage(3, getInfo());
       }
+      if (collectedAt_ != null) {
+        output.writeMessage(4, getCollectedAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12220,6 +12270,10 @@ public final class ManagerService {
       if (info_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getInfo());
+      }
+      if (collectedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCollectedAt());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12246,6 +12300,11 @@ public final class ManagerService {
         result = result && getInfo()
             .equals(other.getInfo());
       }
+      result = result && (hasCollectedAt() == other.hasCollectedAt());
+      if (hasCollectedAt()) {
+        result = result && getCollectedAt()
+            .equals(other.getCollectedAt());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -12265,6 +12324,10 @@ public final class ManagerService {
       if (hasInfo()) {
         hash = (37 * hash) + INFO_FIELD_NUMBER;
         hash = (53 * hash) + getInfo().hashCode();
+      }
+      if (hasCollectedAt()) {
+        hash = (37 * hash) + COLLECTED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCollectedAt().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -12413,6 +12476,12 @@ public final class ManagerService {
           info_ = null;
           infoBuilder_ = null;
         }
+        if (collectedAtBuilder_ == null) {
+          collectedAt_ = null;
+        } else {
+          collectedAt_ = null;
+          collectedAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -12445,6 +12514,11 @@ public final class ManagerService {
           result.info_ = info_;
         } else {
           result.info_ = infoBuilder_.build();
+        }
+        if (collectedAtBuilder_ == null) {
+          result.collectedAt_ = collectedAt_;
+        } else {
+          result.collectedAt_ = collectedAtBuilder_.build();
         }
         onBuilt();
         return result;
@@ -12503,6 +12577,9 @@ public final class ManagerService {
         }
         if (other.hasInfo()) {
           mergeInfo(other.getInfo());
+        }
+        if (other.hasCollectedAt()) {
+          mergeCollectedAt(other.getCollectedAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -12743,6 +12820,123 @@ public final class ManagerService {
           info_ = null;
         }
         return infoBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp collectedAt_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> collectedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+       */
+      public boolean hasCollectedAt() {
+        return collectedAtBuilder_ != null || collectedAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp getCollectedAt() {
+        if (collectedAtBuilder_ == null) {
+          return collectedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : collectedAt_;
+        } else {
+          return collectedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+       */
+      public Builder setCollectedAt(com.google.protobuf.Timestamp value) {
+        if (collectedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          collectedAt_ = value;
+          onChanged();
+        } else {
+          collectedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+       */
+      public Builder setCollectedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (collectedAtBuilder_ == null) {
+          collectedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          collectedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+       */
+      public Builder mergeCollectedAt(com.google.protobuf.Timestamp value) {
+        if (collectedAtBuilder_ == null) {
+          if (collectedAt_ != null) {
+            collectedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(collectedAt_).mergeFrom(value).buildPartial();
+          } else {
+            collectedAt_ = value;
+          }
+          onChanged();
+        } else {
+          collectedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+       */
+      public Builder clearCollectedAt() {
+        if (collectedAtBuilder_ == null) {
+          collectedAt_ = null;
+          onChanged();
+        } else {
+          collectedAt_ = null;
+          collectedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCollectedAtBuilder() {
+        
+        onChanged();
+        return getCollectedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCollectedAtOrBuilder() {
+        if (collectedAtBuilder_ != null) {
+          return collectedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return collectedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : collectedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp collected_at = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCollectedAtFieldBuilder() {
+        if (collectedAtBuilder_ == null) {
+          collectedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCollectedAt(),
+                  getParentForChildren(),
+                  isClean());
+          collectedAt_ = null;
+        }
+        return collectedAtBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13741,68 +13935,70 @@ public final class ManagerService {
     java.lang.String[] descriptorData = {
       "\n6yandex/cloud/dataproc/manager/v1/manag" +
       "er_service.proto\022 yandex.cloud.dataproc." +
-      "manager.v1\"_\n\rHbaseNodeInfo\022\014\n\004name\030\001 \001(" +
-      "\t\022\020\n\010requests\030\002 \001(\003\022\024\n\014heap_size_mb\030\003 \001(" +
-      "\003\022\030\n\020max_heap_size_mb\030\004 \001(\003\"\341\001\n\tHbaseInf" +
-      "o\022\021\n\tavailable\030\001 \001(\010\022\017\n\007regions\030\002 \001(\003\022\020\n" +
-      "\010requests\030\003 \001(\003\022\024\n\014average_load\030\004 \001(\001\022C\n" +
-      "\nlive_nodes\030\005 \003(\0132/.yandex.cloud.datapro" +
-      "c.manager.v1.HbaseNodeInfo\022C\n\ndead_nodes" +
-      "\030\006 \003(\0132/.yandex.cloud.dataproc.manager.v" +
-      "1.HbaseNodeInfo\"r\n\014HDFSNodeInfo\022\014\n\004name\030" +
-      "\001 \001(\t\022\014\n\004used\030\002 \001(\003\022\021\n\tremaining\030\003 \001(\003\022\020" +
-      "\n\010capacity\030\004 \001(\003\022\022\n\nnum_blocks\030\005 \001(\003\022\r\n\005" +
-      "state\030\006 \001(\t\"\211\004\n\010HDFSInfo\022\021\n\tavailable\030\001 " +
-      "\001(\010\022\031\n\021percent_remaining\030\002 \001(\001\022\014\n\004used\030\003" +
-      " \001(\003\022\014\n\004free\030\004 \001(\003\022\024\n\014total_blocks\030\005 \001(\003" +
-      "\022\026\n\016missing_blocks\030\006 \001(\003\022\"\n\032missing_bloc" +
-      "ks_replica_one\030\007 \001(\003\022B\n\nlive_nodes\030\010 \003(\013" +
-      "2..yandex.cloud.dataproc.manager.v1.HDFS" +
-      "NodeInfo\022B\n\ndead_nodes\030\t \003(\0132..yandex.cl" +
-      "oud.dataproc.manager.v1.HDFSNodeInfo\022\020\n\010" +
-      "safemode\030\013 \001(\t\022M\n\025decommissioning_nodes\030" +
-      "\014 \003(\0132..yandex.cloud.dataproc.manager.v1" +
-      ".HDFSNodeInfo\022L\n\024decommissioned_nodes\030\r " +
-      "\003(\0132..yandex.cloud.dataproc.manager.v1.H" +
-      "DFSNodeInfo\022$\n\034requested_decommission_ho" +
-      "sts\030\016 \003(\tJ\004\010\n\020\013\"\233\001\n\010HiveInfo\022\021\n\tavailabl" +
-      "e\030\001 \001(\010\022\031\n\021queries_succeeded\030\002 \001(\003\022\026\n\016qu" +
-      "eries_failed\030\003 \001(\003\022\031\n\021queries_executing\030" +
-      "\004 \001(\003\022\025\n\rsessions_open\030\005 \001(\003\022\027\n\017sessions" +
-      "_active\030\006 \001(\003\"\215\001\n\014YarnNodeInfo\022\014\n\004name\030\001" +
-      " \001(\t\022\r\n\005state\030\002 \001(\t\022\026\n\016num_containers\030\003 " +
-      "\001(\003\022\026\n\016used_memory_mb\030\004 \001(\003\022\033\n\023available" +
-      "_memory_mb\030\005 \001(\003\022\023\n\013update_time\030\006 \001(\003\"\207\001" +
-      "\n\010YarnInfo\022\021\n\tavailable\030\001 \001(\010\022B\n\nlive_no" +
-      "des\030\002 \003(\0132..yandex.cloud.dataproc.manage" +
-      "r.v1.YarnNodeInfo\022$\n\034requested_decommiss" +
-      "ion_hosts\030\003 \003(\t\"\036\n\rZookeeperInfo\022\r\n\005aliv" +
-      "e\030\001 \001(\010\"\032\n\tOozieInfo\022\r\n\005alive\030\001 \001(\010\"\031\n\010L" +
-      "ivyInfo\022\r\n\005alive\030\001 \001(\010\"\300\003\n\004Info\0228\n\004hdfs\030" +
-      "\001 \001(\0132*.yandex.cloud.dataproc.manager.v1" +
-      ".HDFSInfo\0228\n\004yarn\030\002 \001(\0132*.yandex.cloud.d" +
-      "ataproc.manager.v1.YarnInfo\0228\n\004hive\030\003 \001(" +
-      "\0132*.yandex.cloud.dataproc.manager.v1.Hiv" +
-      "eInfo\022B\n\tzookeeper\030\004 \001(\0132/.yandex.cloud." +
-      "dataproc.manager.v1.ZookeeperInfo\022:\n\005hba" +
-      "se\030\005 \001(\0132+.yandex.cloud.dataproc.manager" +
-      ".v1.HbaseInfo\022:\n\005oozie\030\006 \001(\0132+.yandex.cl" +
-      "oud.dataproc.manager.v1.OozieInfo\022\024\n\014rep" +
-      "ort_count\030\007 \001(\003\0228\n\004livy\030\010 \001(\0132*.yandex.c" +
-      "loud.dataproc.manager.v1.LivyInfo\"m\n\rRep" +
-      "ortRequest\022\013\n\003cid\030\001 \001(\t\022\031\n\021topology_revi" +
-      "sion\030\002 \001(\003\0224\n\004info\030\003 \001(\0132&.yandex.cloud." +
-      "dataproc.manager.v1.Info\"s\n\013ReportReply\022" +
-      "\034\n\024decommission_timeout\030\001 \001(\003\022\"\n\032yarn_ho" +
-      "sts_to_decommission\030\002 \003(\t\022\"\n\032hdfs_hosts_" +
-      "to_decommission\030\003 \003(\t2\204\001\n\026DataprocManage" +
-      "rService\022j\n\006Report\022/.yandex.cloud.datapr" +
-      "oc.manager.v1.ReportRequest\032-.yandex.clo" +
-      "ud.dataproc.manager.v1.ReportReply\"\000B}\n$" +
-      "yandex.cloud.api.dataproc.manager.v1ZUgi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/dataproc/manager/v1;dataproc_mana" +
-      "gerb\006proto3"
+      "manager.v1\032\037google/protobuf/timestamp.pr" +
+      "oto\"_\n\rHbaseNodeInfo\022\014\n\004name\030\001 \001(\t\022\020\n\010re" +
+      "quests\030\002 \001(\003\022\024\n\014heap_size_mb\030\003 \001(\003\022\030\n\020ma" +
+      "x_heap_size_mb\030\004 \001(\003\"\341\001\n\tHbaseInfo\022\021\n\tav" +
+      "ailable\030\001 \001(\010\022\017\n\007regions\030\002 \001(\003\022\020\n\010reques" +
+      "ts\030\003 \001(\003\022\024\n\014average_load\030\004 \001(\001\022C\n\nlive_n" +
+      "odes\030\005 \003(\0132/.yandex.cloud.dataproc.manag" +
+      "er.v1.HbaseNodeInfo\022C\n\ndead_nodes\030\006 \003(\0132" +
+      "/.yandex.cloud.dataproc.manager.v1.Hbase" +
+      "NodeInfo\"r\n\014HDFSNodeInfo\022\014\n\004name\030\001 \001(\t\022\014" +
+      "\n\004used\030\002 \001(\003\022\021\n\tremaining\030\003 \001(\003\022\020\n\010capac" +
+      "ity\030\004 \001(\003\022\022\n\nnum_blocks\030\005 \001(\003\022\r\n\005state\030\006" +
+      " \001(\t\"\211\004\n\010HDFSInfo\022\021\n\tavailable\030\001 \001(\010\022\031\n\021" +
+      "percent_remaining\030\002 \001(\001\022\014\n\004used\030\003 \001(\003\022\014\n" +
+      "\004free\030\004 \001(\003\022\024\n\014total_blocks\030\005 \001(\003\022\026\n\016mis" +
+      "sing_blocks\030\006 \001(\003\022\"\n\032missing_blocks_repl" +
+      "ica_one\030\007 \001(\003\022B\n\nlive_nodes\030\010 \003(\0132..yand" +
+      "ex.cloud.dataproc.manager.v1.HDFSNodeInf" +
+      "o\022B\n\ndead_nodes\030\t \003(\0132..yandex.cloud.dat" +
+      "aproc.manager.v1.HDFSNodeInfo\022\020\n\010safemod" +
+      "e\030\013 \001(\t\022M\n\025decommissioning_nodes\030\014 \003(\0132." +
+      ".yandex.cloud.dataproc.manager.v1.HDFSNo" +
+      "deInfo\022L\n\024decommissioned_nodes\030\r \003(\0132..y" +
+      "andex.cloud.dataproc.manager.v1.HDFSNode" +
+      "Info\022$\n\034requested_decommission_hosts\030\016 \003" +
+      "(\tJ\004\010\n\020\013\"\233\001\n\010HiveInfo\022\021\n\tavailable\030\001 \001(\010" +
+      "\022\031\n\021queries_succeeded\030\002 \001(\003\022\026\n\016queries_f" +
+      "ailed\030\003 \001(\003\022\031\n\021queries_executing\030\004 \001(\003\022\025" +
+      "\n\rsessions_open\030\005 \001(\003\022\027\n\017sessions_active" +
+      "\030\006 \001(\003\"\215\001\n\014YarnNodeInfo\022\014\n\004name\030\001 \001(\t\022\r\n" +
+      "\005state\030\002 \001(\t\022\026\n\016num_containers\030\003 \001(\003\022\026\n\016" +
+      "used_memory_mb\030\004 \001(\003\022\033\n\023available_memory" +
+      "_mb\030\005 \001(\003\022\023\n\013update_time\030\006 \001(\003\"\207\001\n\010YarnI" +
+      "nfo\022\021\n\tavailable\030\001 \001(\010\022B\n\nlive_nodes\030\002 \003" +
+      "(\0132..yandex.cloud.dataproc.manager.v1.Ya" +
+      "rnNodeInfo\022$\n\034requested_decommission_hos" +
+      "ts\030\003 \003(\t\"\036\n\rZookeeperInfo\022\r\n\005alive\030\001 \001(\010" +
+      "\"\032\n\tOozieInfo\022\r\n\005alive\030\001 \001(\010\"\031\n\010LivyInfo" +
+      "\022\r\n\005alive\030\001 \001(\010\"\300\003\n\004Info\0228\n\004hdfs\030\001 \001(\0132*" +
+      ".yandex.cloud.dataproc.manager.v1.HDFSIn" +
+      "fo\0228\n\004yarn\030\002 \001(\0132*.yandex.cloud.dataproc" +
+      ".manager.v1.YarnInfo\0228\n\004hive\030\003 \001(\0132*.yan" +
+      "dex.cloud.dataproc.manager.v1.HiveInfo\022B" +
+      "\n\tzookeeper\030\004 \001(\0132/.yandex.cloud.datapro" +
+      "c.manager.v1.ZookeeperInfo\022:\n\005hbase\030\005 \001(" +
+      "\0132+.yandex.cloud.dataproc.manager.v1.Hba" +
+      "seInfo\022:\n\005oozie\030\006 \001(\0132+.yandex.cloud.dat" +
+      "aproc.manager.v1.OozieInfo\022\024\n\014report_cou" +
+      "nt\030\007 \001(\003\0228\n\004livy\030\010 \001(\0132*.yandex.cloud.da" +
+      "taproc.manager.v1.LivyInfo\"\237\001\n\rReportReq" +
+      "uest\022\013\n\003cid\030\001 \001(\t\022\031\n\021topology_revision\030\002" +
+      " \001(\003\0224\n\004info\030\003 \001(\0132&.yandex.cloud.datapr" +
+      "oc.manager.v1.Info\0220\n\014collected_at\030\004 \001(\013" +
+      "2\032.google.protobuf.Timestamp\"s\n\013ReportRe" +
+      "ply\022\034\n\024decommission_timeout\030\001 \001(\003\022\"\n\032yar" +
+      "n_hosts_to_decommission\030\002 \003(\t\022\"\n\032hdfs_ho" +
+      "sts_to_decommission\030\003 \003(\t2\204\001\n\026DataprocMa" +
+      "nagerService\022j\n\006Report\022/.yandex.cloud.da" +
+      "taproc.manager.v1.ReportRequest\032-.yandex" +
+      ".cloud.dataproc.manager.v1.ReportReply\"\000" +
+      "B}\n$yandex.cloud.api.dataproc.manager.v1" +
+      "ZUgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/dataproc/manager/v1;dataproc_" +
+      "managerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13815,6 +14011,7 @@ public final class ManagerService {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.TimestampProto.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_dataproc_manager_v1_HbaseNodeInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -13887,13 +14084,14 @@ public final class ManagerService {
     internal_static_yandex_cloud_dataproc_manager_v1_ReportRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_ReportRequest_descriptor,
-        new java.lang.String[] { "Cid", "TopologyRevision", "Info", });
+        new java.lang.String[] { "Cid", "TopologyRevision", "Info", "CollectedAt", });
     internal_static_yandex_cloud_dataproc_manager_v1_ReportReply_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_dataproc_manager_v1_ReportReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_ReportReply_descriptor,
         new java.lang.String[] { "DecommissionTimeout", "YarnHostsToDecommission", "HdfsHostsToDecommission", });
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
