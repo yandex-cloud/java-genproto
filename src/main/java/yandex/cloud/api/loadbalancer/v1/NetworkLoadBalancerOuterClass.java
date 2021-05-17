@@ -456,7 +456,7 @@ public final class NetworkLoadBalancerOuterClass {
   }
   /**
    * <pre>
-   * A NetworkLoadBalancer resource. For more information, see [Network Load Balancer](/docs/load-balancer/concepts).
+   * A NetworkLoadBalancer resource. For more information, see [Network Load Balancer](/docs/network-load-balancer/concepts).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.loadbalancer.v1.NetworkLoadBalancer}
@@ -991,7 +991,7 @@ public final class NetworkLoadBalancerOuterClass {
     /**
      * <pre>
      * Type of session affinity. Only 5-tuple affinity is currently available.
-     * For more information, see [Load Balancer concepts](/load-balancer/concepts/).
+     * For more information, see [Load Balancer concepts](/docs/network-load-balancer/concepts/).
      * </pre>
      *
      * Protobuf enum {@code yandex.cloud.loadbalancer.v1.NetworkLoadBalancer.SessionAffinity}
@@ -1911,7 +1911,7 @@ public final class NetworkLoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * A NetworkLoadBalancer resource. For more information, see [Network Load Balancer](/docs/load-balancer/concepts).
+     * A NetworkLoadBalancer resource. For more information, see [Network Load Balancer](/docs/network-load-balancer/concepts).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.loadbalancer.v1.NetworkLoadBalancer}
@@ -3929,7 +3929,7 @@ public final class NetworkLoadBalancerOuterClass {
   }
   /**
    * <pre>
-   * An AttachedTargetGroup resource. For more information, see [Targets and groups](/docs/load-balancer/concepts/target-resources).
+   * An AttachedTargetGroup resource. For more information, see [Targets and groups](/docs/network-load-balancer/concepts/target-resources).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.loadbalancer.v1.AttachedTargetGroup}
@@ -4295,7 +4295,7 @@ public final class NetworkLoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * An AttachedTargetGroup resource. For more information, see [Targets and groups](/docs/load-balancer/concepts/target-resources).
+     * An AttachedTargetGroup resource. For more information, see [Targets and groups](/docs/network-load-balancer/concepts/target-resources).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.loadbalancer.v1.AttachedTargetGroup}
@@ -5074,7 +5074,7 @@ public final class NetworkLoadBalancerOuterClass {
   }
   /**
    * <pre>
-   * A Listener resource. For more information, see [Listener](/docs/load-balancer/concepts/listener)
+   * A Listener resource. For more information, see [Listener](/docs/network-load-balancer/concepts/listener)
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.loadbalancer.v1.Listener}
@@ -5728,7 +5728,7 @@ public final class NetworkLoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * A Listener resource. For more information, see [Listener](/docs/load-balancer/concepts/listener)
+     * A Listener resource. For more information, see [Listener](/docs/network-load-balancer/concepts/listener)
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.loadbalancer.v1.Listener}

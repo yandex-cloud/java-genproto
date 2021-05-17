@@ -158,7 +158,7 @@ public final class HealthCheckOuterClass {
   }
   /**
    * <pre>
-   * A HealthCheck resource. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+   * A HealthCheck resource. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.loadbalancer.v1.HealthCheck}
@@ -1998,7 +1998,7 @@ public final class HealthCheckOuterClass {
     }
     /**
      * <pre>
-     * A HealthCheck resource. For more information, see [Health check](/docs/load-balancer/concepts/health-check).
+     * A HealthCheck resource. For more information, see [Health check](/docs/network-load-balancer/concepts/health-check).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.loadbalancer.v1.HealthCheck}

@@ -11639,14 +11639,60 @@ public final class InstanceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the A/AAAA record as specified when creating the instance.
+     * Note that if `fqdn' has no trailing '.', it is specified relative to the zone (&#64;see dns_zone_id).
+     * </pre>
+     *
      * <code>string fqdn = 1;</code>
      */
     java.lang.String getFqdn();
     /**
+     * <pre>
+     * Name of the A/AAAA record as specified when creating the instance.
+     * Note that if `fqdn' has no trailing '.', it is specified relative to the zone (&#64;see dns_zone_id).
+     * </pre>
+     *
      * <code>string fqdn = 1;</code>
      */
     com.google.protobuf.ByteString
         getFqdnBytes();
+
+    /**
+     * <pre>
+     * DNS zone id for the record (optional, if not set, some private zone is used).
+     * </pre>
+     *
+     * <code>string dns_zone_id = 2;</code>
+     */
+    java.lang.String getDnsZoneId();
+    /**
+     * <pre>
+     * DNS zone id for the record (optional, if not set, some private zone is used).
+     * </pre>
+     *
+     * <code>string dns_zone_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getDnsZoneIdBytes();
+
+    /**
+     * <pre>
+     * DNS record ttl (optional, if not set, a reasonable default is used.)
+     * </pre>
+     *
+     * <code>int64 ttl = 3;</code>
+     */
+    long getTtl();
+
+    /**
+     * <pre>
+     * When true, indicates there is a corresponding auto-created PTR DNS record.
+     * </pre>
+     *
+     * <code>bool ptr = 4;</code>
+     */
+    boolean getPtr();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.DnsRecord}
@@ -11662,6 +11708,9 @@ public final class InstanceOuterClass {
     }
     private DnsRecord() {
       fqdn_ = "";
+      dnsZoneId_ = "";
+      ttl_ = 0L;
+      ptr_ = false;
     }
 
     @java.lang.Override
@@ -11692,6 +11741,22 @@ public final class InstanceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               fqdn_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dnsZoneId_ = s;
+              break;
+            }
+            case 24: {
+
+              ttl_ = input.readInt64();
+              break;
+            }
+            case 32: {
+
+              ptr_ = input.readBool();
               break;
             }
             default: {
@@ -11729,6 +11794,11 @@ public final class InstanceOuterClass {
     public static final int FQDN_FIELD_NUMBER = 1;
     private volatile java.lang.Object fqdn_;
     /**
+     * <pre>
+     * Name of the A/AAAA record as specified when creating the instance.
+     * Note that if `fqdn' has no trailing '.', it is specified relative to the zone (&#64;see dns_zone_id).
+     * </pre>
+     *
      * <code>string fqdn = 1;</code>
      */
     public java.lang.String getFqdn() {
@@ -11744,6 +11814,11 @@ public final class InstanceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the A/AAAA record as specified when creating the instance.
+     * Note that if `fqdn' has no trailing '.', it is specified relative to the zone (&#64;see dns_zone_id).
+     * </pre>
+     *
      * <code>string fqdn = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -11758,6 +11833,74 @@ public final class InstanceOuterClass {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int DNS_ZONE_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object dnsZoneId_;
+    /**
+     * <pre>
+     * DNS zone id for the record (optional, if not set, some private zone is used).
+     * </pre>
+     *
+     * <code>string dns_zone_id = 2;</code>
+     */
+    public java.lang.String getDnsZoneId() {
+      java.lang.Object ref = dnsZoneId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dnsZoneId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * DNS zone id for the record (optional, if not set, some private zone is used).
+     * </pre>
+     *
+     * <code>string dns_zone_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDnsZoneIdBytes() {
+      java.lang.Object ref = dnsZoneId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dnsZoneId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TTL_FIELD_NUMBER = 3;
+    private long ttl_;
+    /**
+     * <pre>
+     * DNS record ttl (optional, if not set, a reasonable default is used.)
+     * </pre>
+     *
+     * <code>int64 ttl = 3;</code>
+     */
+    public long getTtl() {
+      return ttl_;
+    }
+
+    public static final int PTR_FIELD_NUMBER = 4;
+    private boolean ptr_;
+    /**
+     * <pre>
+     * When true, indicates there is a corresponding auto-created PTR DNS record.
+     * </pre>
+     *
+     * <code>bool ptr = 4;</code>
+     */
+    public boolean getPtr() {
+      return ptr_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11777,6 +11920,15 @@ public final class InstanceOuterClass {
       if (!getFqdnBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fqdn_);
       }
+      if (!getDnsZoneIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dnsZoneId_);
+      }
+      if (ttl_ != 0L) {
+        output.writeInt64(3, ttl_);
+      }
+      if (ptr_ != false) {
+        output.writeBool(4, ptr_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11788,6 +11940,17 @@ public final class InstanceOuterClass {
       size = 0;
       if (!getFqdnBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fqdn_);
+      }
+      if (!getDnsZoneIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dnsZoneId_);
+      }
+      if (ttl_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, ttl_);
+      }
+      if (ptr_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, ptr_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11807,6 +11970,12 @@ public final class InstanceOuterClass {
       boolean result = true;
       result = result && getFqdn()
           .equals(other.getFqdn());
+      result = result && getDnsZoneId()
+          .equals(other.getDnsZoneId());
+      result = result && (getTtl()
+          == other.getTtl());
+      result = result && (getPtr()
+          == other.getPtr());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -11820,6 +11989,14 @@ public final class InstanceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FQDN_FIELD_NUMBER;
       hash = (53 * hash) + getFqdn().hashCode();
+      hash = (37 * hash) + DNS_ZONE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDnsZoneId().hashCode();
+      hash = (37 * hash) + TTL_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTtl());
+      hash = (37 * hash) + PTR_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPtr());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11955,6 +12132,12 @@ public final class InstanceOuterClass {
         super.clear();
         fqdn_ = "";
 
+        dnsZoneId_ = "";
+
+        ttl_ = 0L;
+
+        ptr_ = false;
+
         return this;
       }
 
@@ -11982,6 +12165,9 @@ public final class InstanceOuterClass {
       public yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord buildPartial() {
         yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord result = new yandex.cloud.api.compute.v1.InstanceOuterClass.DnsRecord(this);
         result.fqdn_ = fqdn_;
+        result.dnsZoneId_ = dnsZoneId_;
+        result.ttl_ = ttl_;
+        result.ptr_ = ptr_;
         onBuilt();
         return result;
       }
@@ -12034,6 +12220,16 @@ public final class InstanceOuterClass {
           fqdn_ = other.fqdn_;
           onChanged();
         }
+        if (!other.getDnsZoneId().isEmpty()) {
+          dnsZoneId_ = other.dnsZoneId_;
+          onChanged();
+        }
+        if (other.getTtl() != 0L) {
+          setTtl(other.getTtl());
+        }
+        if (other.getPtr() != false) {
+          setPtr(other.getPtr());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -12065,6 +12261,11 @@ public final class InstanceOuterClass {
 
       private java.lang.Object fqdn_ = "";
       /**
+       * <pre>
+       * Name of the A/AAAA record as specified when creating the instance.
+       * Note that if `fqdn' has no trailing '.', it is specified relative to the zone (&#64;see dns_zone_id).
+       * </pre>
+       *
        * <code>string fqdn = 1;</code>
        */
       public java.lang.String getFqdn() {
@@ -12080,6 +12281,11 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the A/AAAA record as specified when creating the instance.
+       * Note that if `fqdn' has no trailing '.', it is specified relative to the zone (&#64;see dns_zone_id).
+       * </pre>
+       *
        * <code>string fqdn = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -12096,6 +12302,11 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the A/AAAA record as specified when creating the instance.
+       * Note that if `fqdn' has no trailing '.', it is specified relative to the zone (&#64;see dns_zone_id).
+       * </pre>
+       *
        * <code>string fqdn = 1;</code>
        */
       public Builder setFqdn(
@@ -12109,6 +12320,11 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the A/AAAA record as specified when creating the instance.
+       * Note that if `fqdn' has no trailing '.', it is specified relative to the zone (&#64;see dns_zone_id).
+       * </pre>
+       *
        * <code>string fqdn = 1;</code>
        */
       public Builder clearFqdn() {
@@ -12118,6 +12334,11 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the A/AAAA record as specified when creating the instance.
+       * Note that if `fqdn' has no trailing '.', it is specified relative to the zone (&#64;see dns_zone_id).
+       * </pre>
+       *
        * <code>string fqdn = 1;</code>
        */
       public Builder setFqdnBytes(
@@ -12128,6 +12349,171 @@ public final class InstanceOuterClass {
   checkByteStringIsUtf8(value);
         
         fqdn_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object dnsZoneId_ = "";
+      /**
+       * <pre>
+       * DNS zone id for the record (optional, if not set, some private zone is used).
+       * </pre>
+       *
+       * <code>string dns_zone_id = 2;</code>
+       */
+      public java.lang.String getDnsZoneId() {
+        java.lang.Object ref = dnsZoneId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dnsZoneId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DNS zone id for the record (optional, if not set, some private zone is used).
+       * </pre>
+       *
+       * <code>string dns_zone_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDnsZoneIdBytes() {
+        java.lang.Object ref = dnsZoneId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dnsZoneId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * DNS zone id for the record (optional, if not set, some private zone is used).
+       * </pre>
+       *
+       * <code>string dns_zone_id = 2;</code>
+       */
+      public Builder setDnsZoneId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dnsZoneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DNS zone id for the record (optional, if not set, some private zone is used).
+       * </pre>
+       *
+       * <code>string dns_zone_id = 2;</code>
+       */
+      public Builder clearDnsZoneId() {
+        
+        dnsZoneId_ = getDefaultInstance().getDnsZoneId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DNS zone id for the record (optional, if not set, some private zone is used).
+       * </pre>
+       *
+       * <code>string dns_zone_id = 2;</code>
+       */
+      public Builder setDnsZoneIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dnsZoneId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long ttl_ ;
+      /**
+       * <pre>
+       * DNS record ttl (optional, if not set, a reasonable default is used.)
+       * </pre>
+       *
+       * <code>int64 ttl = 3;</code>
+       */
+      public long getTtl() {
+        return ttl_;
+      }
+      /**
+       * <pre>
+       * DNS record ttl (optional, if not set, a reasonable default is used.)
+       * </pre>
+       *
+       * <code>int64 ttl = 3;</code>
+       */
+      public Builder setTtl(long value) {
+        
+        ttl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * DNS record ttl (optional, if not set, a reasonable default is used.)
+       * </pre>
+       *
+       * <code>int64 ttl = 3;</code>
+       */
+      public Builder clearTtl() {
+        
+        ttl_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean ptr_ ;
+      /**
+       * <pre>
+       * When true, indicates there is a corresponding auto-created PTR DNS record.
+       * </pre>
+       *
+       * <code>bool ptr = 4;</code>
+       */
+      public boolean getPtr() {
+        return ptr_;
+      }
+      /**
+       * <pre>
+       * When true, indicates there is a corresponding auto-created PTR DNS record.
+       * </pre>
+       *
+       * <code>bool ptr = 4;</code>
+       */
+      public Builder setPtr(boolean value) {
+        
+        ptr_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * When true, indicates there is a corresponding auto-created PTR DNS record.
+       * </pre>
+       *
+       * <code>bool ptr = 4;</code>
+       */
+      public Builder clearPtr() {
+        
+        ptr_ = false;
         onChanged();
         return this;
       }
@@ -15651,26 +16037,27 @@ public final class InstanceOuterClass {
       "1.DnsRecord\"\217\001\n\013OneToOneNat\022\017\n\007address\030\001" +
       " \001(\t\0226\n\nip_version\030\002 \001(\0162\".yandex.cloud." +
       "compute.v1.IpVersion\0227\n\013dns_records\030\003 \003(" +
-      "\0132\".yandex.cloud.compute.v1.DnsRecord\"\031\n" +
-      "\tDnsRecord\022\014\n\004fqdn\030\001 \001(\t\"\'\n\020SchedulingPo" +
-      "licy\022\023\n\013preemptible\030\001 \001(\010\"\256\001\n\017NetworkSet" +
-      "tings\022;\n\004type\030\001 \001(\0162-.yandex.cloud.compu" +
-      "te.v1.NetworkSettings.Type\"^\n\004Type\022\024\n\020TY" +
-      "PE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWA" +
-      "RE_ACCELERATED\020\002\022\030\n\024HARDWARE_ACCELERATED" +
-      "\020\003\"\301\002\n\017PlacementPolicy\022\032\n\022placement_grou" +
-      "p_id\030\001 \001(\t\022V\n\023host_affinity_rules\030\002 \003(\0132" +
-      "9.yandex.cloud.compute.v1.PlacementPolic" +
-      "y.HostAffinityRule\032\271\001\n\020HostAffinityRule\022" +
-      "\013\n\003key\030\001 \001(\t\022N\n\002op\030\002 \001(\0162B.yandex.cloud." +
-      "compute.v1.PlacementPolicy.HostAffinityR" +
-      "ule.Operator\022\016\n\006values\030\003 \003(\t\"8\n\010Operator" +
-      "\022\030\n\024OPERATOR_UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n\006NO" +
-      "T_IN\020\002*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPEC" +
-      "IFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002Bb\n\033yandex.cl" +
-      "oud.api.compute.v1ZCgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/compute/v1;" +
-      "computeb\006proto3"
+      "\0132\".yandex.cloud.compute.v1.DnsRecord\"H\n" +
+      "\tDnsRecord\022\014\n\004fqdn\030\001 \001(\t\022\023\n\013dns_zone_id\030" +
+      "\002 \001(\t\022\013\n\003ttl\030\003 \001(\003\022\013\n\003ptr\030\004 \001(\010\"\'\n\020Sched" +
+      "ulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"\256\001\n\017Net" +
+      "workSettings\022;\n\004type\030\001 \001(\0162-.yandex.clou" +
+      "d.compute.v1.NetworkSettings.Type\"^\n\004Typ" +
+      "e\022\024\n\020TYPE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n" +
+      "\024SOFTWARE_ACCELERATED\020\002\022\030\n\024HARDWARE_ACCE" +
+      "LERATED\020\003\"\301\002\n\017PlacementPolicy\022\032\n\022placeme" +
+      "nt_group_id\030\001 \001(\t\022V\n\023host_affinity_rules" +
+      "\030\002 \003(\01329.yandex.cloud.compute.v1.Placeme" +
+      "ntPolicy.HostAffinityRule\032\271\001\n\020HostAffini" +
+      "tyRule\022\013\n\003key\030\001 \001(\t\022N\n\002op\030\002 \001(\0162B.yandex" +
+      ".cloud.compute.v1.PlacementPolicy.HostAf" +
+      "finityRule.Operator\022\016\n\006values\030\003 \003(\t\"8\n\010O" +
+      "perator\022\030\n\024OPERATOR_UNSPECIFIED\020\000\022\006\n\002IN\020" +
+      "\001\022\n\n\006NOT_IN\020\002*;\n\tIpVersion\022\032\n\026IP_VERSION" +
+      "_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002Bb\n\033ya" +
+      "ndex.cloud.api.compute.v1ZCgithub.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/comp" +
+      "ute/v1;computeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15738,7 +16125,7 @@ public final class InstanceOuterClass {
     internal_static_yandex_cloud_compute_v1_DnsRecord_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_DnsRecord_descriptor,
-        new java.lang.String[] { "Fqdn", });
+        new java.lang.String[] { "Fqdn", "DnsZoneId", "Ttl", "Ptr", });
     internal_static_yandex_cloud_compute_v1_SchedulingPolicy_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_compute_v1_SchedulingPolicy_fieldAccessorTable = new
