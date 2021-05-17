@@ -8711,6 +8711,1451 @@ public final class FunctionOuterClass {
 
   }
 
+  public interface ScalingPolicyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.functions.v1.ScalingPolicy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the function that the scaling policy belongs to.
+     * </pre>
+     *
+     * <code>string function_id = 1;</code>
+     */
+    java.lang.String getFunctionId();
+    /**
+     * <pre>
+     * ID of the function that the scaling policy belongs to.
+     * </pre>
+     *
+     * <code>string function_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getFunctionIdBytes();
+
+    /**
+     * <pre>
+     * Tag of the version that the scaling policy belongs to. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
+     * <code>string tag = 2;</code>
+     */
+    java.lang.String getTag();
+    /**
+     * <pre>
+     * Tag of the version that the scaling policy belongs to. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
+     * <code>string tag = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTagBytes();
+
+    /**
+     * <pre>
+     * Creation timestamp for the scaling policy
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * Creation timestamp for the scaling policy
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * Creation timestamp for the scaling policy
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Modification timestamp for the scaling policy
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+     */
+    boolean hasModifiedAt();
+    /**
+     * <pre>
+     * Modification timestamp for the scaling policy
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+     */
+    com.google.protobuf.Timestamp getModifiedAt();
+    /**
+     * <pre>
+     * Modification timestamp for the scaling policy
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getModifiedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Upper limit for instance count in each zone.
+     * 0 means no limit.
+     * </pre>
+     *
+     * <code>int64 zone_instances_limit = 7;</code>
+     */
+    long getZoneInstancesLimit();
+
+    /**
+     * <pre>
+     * Upper limit of requests count in each zone.
+     * 0 means no limit.
+     * </pre>
+     *
+     * <code>int64 zone_requests_limit = 8;</code>
+     */
+    long getZoneRequestsLimit();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.functions.v1.ScalingPolicy}
+   */
+  public  static final class ScalingPolicy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.ScalingPolicy)
+      ScalingPolicyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ScalingPolicy.newBuilder() to construct.
+    private ScalingPolicy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ScalingPolicy() {
+      functionId_ = "";
+      tag_ = "";
+      zoneInstancesLimit_ = 0L;
+      zoneRequestsLimit_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ScalingPolicy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              functionId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tag_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (modifiedAt_ != null) {
+                subBuilder = modifiedAt_.toBuilder();
+              }
+              modifiedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(modifiedAt_);
+                modifiedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 56: {
+
+              zoneInstancesLimit_ = input.readInt64();
+              break;
+            }
+            case 64: {
+
+              zoneRequestsLimit_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy.class, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy.Builder.class);
+    }
+
+    public static final int FUNCTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object functionId_;
+    /**
+     * <pre>
+     * ID of the function that the scaling policy belongs to.
+     * </pre>
+     *
+     * <code>string function_id = 1;</code>
+     */
+    public java.lang.String getFunctionId() {
+      java.lang.Object ref = functionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        functionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the function that the scaling policy belongs to.
+     * </pre>
+     *
+     * <code>string function_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFunctionIdBytes() {
+      java.lang.Object ref = functionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        functionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAG_FIELD_NUMBER = 2;
+    private volatile java.lang.Object tag_;
+    /**
+     * <pre>
+     * Tag of the version that the scaling policy belongs to. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
+     * <code>string tag = 2;</code>
+     */
+    public java.lang.String getTag() {
+      java.lang.Object ref = tag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Tag of the version that the scaling policy belongs to. For details, see [Version tag](/docs/functions/concepts/function#tag).
+     * </pre>
+     *
+     * <code>string tag = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTagBytes() {
+      java.lang.Object ref = tag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * Creation timestamp for the scaling policy
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * Creation timestamp for the scaling policy
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * Creation timestamp for the scaling policy
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
+    public static final int MODIFIED_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp modifiedAt_;
+    /**
+     * <pre>
+     * Modification timestamp for the scaling policy
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+     */
+    public boolean hasModifiedAt() {
+      return modifiedAt_ != null;
+    }
+    /**
+     * <pre>
+     * Modification timestamp for the scaling policy
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+     */
+    public com.google.protobuf.Timestamp getModifiedAt() {
+      return modifiedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modifiedAt_;
+    }
+    /**
+     * <pre>
+     * Modification timestamp for the scaling policy
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getModifiedAtOrBuilder() {
+      return getModifiedAt();
+    }
+
+    public static final int ZONE_INSTANCES_LIMIT_FIELD_NUMBER = 7;
+    private long zoneInstancesLimit_;
+    /**
+     * <pre>
+     * Upper limit for instance count in each zone.
+     * 0 means no limit.
+     * </pre>
+     *
+     * <code>int64 zone_instances_limit = 7;</code>
+     */
+    public long getZoneInstancesLimit() {
+      return zoneInstancesLimit_;
+    }
+
+    public static final int ZONE_REQUESTS_LIMIT_FIELD_NUMBER = 8;
+    private long zoneRequestsLimit_;
+    /**
+     * <pre>
+     * Upper limit of requests count in each zone.
+     * 0 means no limit.
+     * </pre>
+     *
+     * <code>int64 zone_requests_limit = 8;</code>
+     */
+    public long getZoneRequestsLimit() {
+      return zoneRequestsLimit_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getFunctionIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, functionId_);
+      }
+      if (!getTagBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tag_);
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(3, getCreatedAt());
+      }
+      if (modifiedAt_ != null) {
+        output.writeMessage(4, getModifiedAt());
+      }
+      if (zoneInstancesLimit_ != 0L) {
+        output.writeInt64(7, zoneInstancesLimit_);
+      }
+      if (zoneRequestsLimit_ != 0L) {
+        output.writeInt64(8, zoneRequestsLimit_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getFunctionIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, functionId_);
+      }
+      if (!getTagBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tag_);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCreatedAt());
+      }
+      if (modifiedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getModifiedAt());
+      }
+      if (zoneInstancesLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, zoneInstancesLimit_);
+      }
+      if (zoneRequestsLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(8, zoneRequestsLimit_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy other = (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy) obj;
+
+      boolean result = true;
+      result = result && getFunctionId()
+          .equals(other.getFunctionId());
+      result = result && getTag()
+          .equals(other.getTag());
+      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (hasCreatedAt()) {
+        result = result && getCreatedAt()
+            .equals(other.getCreatedAt());
+      }
+      result = result && (hasModifiedAt() == other.hasModifiedAt());
+      if (hasModifiedAt()) {
+        result = result && getModifiedAt()
+            .equals(other.getModifiedAt());
+      }
+      result = result && (getZoneInstancesLimit()
+          == other.getZoneInstancesLimit());
+      result = result && (getZoneRequestsLimit()
+          == other.getZoneRequestsLimit());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FUNCTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFunctionId().hashCode();
+      hash = (37 * hash) + TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getTag().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      if (hasModifiedAt()) {
+        hash = (37 * hash) + MODIFIED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getModifiedAt().hashCode();
+      }
+      hash = (37 * hash) + ZONE_INSTANCES_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getZoneInstancesLimit());
+      hash = (37 * hash) + ZONE_REQUESTS_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getZoneRequestsLimit());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.functions.v1.ScalingPolicy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.functions.v1.ScalingPolicy)
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy.class, yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        functionId_ = "";
+
+        tag_ = "";
+
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+        if (modifiedAtBuilder_ == null) {
+          modifiedAt_ = null;
+        } else {
+          modifiedAt_ = null;
+          modifiedAtBuilder_ = null;
+        }
+        zoneInstancesLimit_ = 0L;
+
+        zoneRequestsLimit_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy build() {
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy buildPartial() {
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy result = new yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy(this);
+        result.functionId_ = functionId_;
+        result.tag_ = tag_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
+        if (modifiedAtBuilder_ == null) {
+          result.modifiedAt_ = modifiedAt_;
+        } else {
+          result.modifiedAt_ = modifiedAtBuilder_.build();
+        }
+        result.zoneInstancesLimit_ = zoneInstancesLimit_;
+        result.zoneRequestsLimit_ = zoneRequestsLimit_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy) {
+          return mergeFrom((yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy other) {
+        if (other == yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy.getDefaultInstance()) return this;
+        if (!other.getFunctionId().isEmpty()) {
+          functionId_ = other.functionId_;
+          onChanged();
+        }
+        if (!other.getTag().isEmpty()) {
+          tag_ = other.tag_;
+          onChanged();
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasModifiedAt()) {
+          mergeModifiedAt(other.getModifiedAt());
+        }
+        if (other.getZoneInstancesLimit() != 0L) {
+          setZoneInstancesLimit(other.getZoneInstancesLimit());
+        }
+        if (other.getZoneRequestsLimit() != 0L) {
+          setZoneRequestsLimit(other.getZoneRequestsLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object functionId_ = "";
+      /**
+       * <pre>
+       * ID of the function that the scaling policy belongs to.
+       * </pre>
+       *
+       * <code>string function_id = 1;</code>
+       */
+      public java.lang.String getFunctionId() {
+        java.lang.Object ref = functionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          functionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the function that the scaling policy belongs to.
+       * </pre>
+       *
+       * <code>string function_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFunctionIdBytes() {
+        java.lang.Object ref = functionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          functionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the function that the scaling policy belongs to.
+       * </pre>
+       *
+       * <code>string function_id = 1;</code>
+       */
+      public Builder setFunctionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        functionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the function that the scaling policy belongs to.
+       * </pre>
+       *
+       * <code>string function_id = 1;</code>
+       */
+      public Builder clearFunctionId() {
+        
+        functionId_ = getDefaultInstance().getFunctionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the function that the scaling policy belongs to.
+       * </pre>
+       *
+       * <code>string function_id = 1;</code>
+       */
+      public Builder setFunctionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        functionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tag_ = "";
+      /**
+       * <pre>
+       * Tag of the version that the scaling policy belongs to. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>string tag = 2;</code>
+       */
+      public java.lang.String getTag() {
+        java.lang.Object ref = tag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Tag of the version that the scaling policy belongs to. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>string tag = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTagBytes() {
+        java.lang.Object ref = tag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Tag of the version that the scaling policy belongs to. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>string tag = 2;</code>
+       */
+      public Builder setTag(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tag_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Tag of the version that the scaling policy belongs to. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>string tag = 2;</code>
+       */
+      public Builder clearTag() {
+        
+        tag_ = getDefaultInstance().getTag();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Tag of the version that the scaling policy belongs to. For details, see [Version tag](/docs/functions/concepts/function#tag).
+       * </pre>
+       *
+       * <code>string tag = 2;</code>
+       */
+      public Builder setTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tag_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * Creation timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * Creation timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Creation timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Creation timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Creation timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Creation timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp modifiedAt_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> modifiedAtBuilder_;
+      /**
+       * <pre>
+       * Modification timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+       */
+      public boolean hasModifiedAt() {
+        return modifiedAtBuilder_ != null || modifiedAt_ != null;
+      }
+      /**
+       * <pre>
+       * Modification timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp getModifiedAt() {
+        if (modifiedAtBuilder_ == null) {
+          return modifiedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : modifiedAt_;
+        } else {
+          return modifiedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Modification timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+       */
+      public Builder setModifiedAt(com.google.protobuf.Timestamp value) {
+        if (modifiedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          modifiedAt_ = value;
+          onChanged();
+        } else {
+          modifiedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Modification timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+       */
+      public Builder setModifiedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (modifiedAtBuilder_ == null) {
+          modifiedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          modifiedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Modification timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+       */
+      public Builder mergeModifiedAt(com.google.protobuf.Timestamp value) {
+        if (modifiedAtBuilder_ == null) {
+          if (modifiedAt_ != null) {
+            modifiedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(modifiedAt_).mergeFrom(value).buildPartial();
+          } else {
+            modifiedAt_ = value;
+          }
+          onChanged();
+        } else {
+          modifiedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Modification timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+       */
+      public Builder clearModifiedAt() {
+        if (modifiedAtBuilder_ == null) {
+          modifiedAt_ = null;
+          onChanged();
+        } else {
+          modifiedAt_ = null;
+          modifiedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Modification timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getModifiedAtBuilder() {
+        
+        onChanged();
+        return getModifiedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Modification timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getModifiedAtOrBuilder() {
+        if (modifiedAtBuilder_ != null) {
+          return modifiedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return modifiedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : modifiedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Modification timestamp for the scaling policy
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp modified_at = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getModifiedAtFieldBuilder() {
+        if (modifiedAtBuilder_ == null) {
+          modifiedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getModifiedAt(),
+                  getParentForChildren(),
+                  isClean());
+          modifiedAt_ = null;
+        }
+        return modifiedAtBuilder_;
+      }
+
+      private long zoneInstancesLimit_ ;
+      /**
+       * <pre>
+       * Upper limit for instance count in each zone.
+       * 0 means no limit.
+       * </pre>
+       *
+       * <code>int64 zone_instances_limit = 7;</code>
+       */
+      public long getZoneInstancesLimit() {
+        return zoneInstancesLimit_;
+      }
+      /**
+       * <pre>
+       * Upper limit for instance count in each zone.
+       * 0 means no limit.
+       * </pre>
+       *
+       * <code>int64 zone_instances_limit = 7;</code>
+       */
+      public Builder setZoneInstancesLimit(long value) {
+        
+        zoneInstancesLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Upper limit for instance count in each zone.
+       * 0 means no limit.
+       * </pre>
+       *
+       * <code>int64 zone_instances_limit = 7;</code>
+       */
+      public Builder clearZoneInstancesLimit() {
+        
+        zoneInstancesLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long zoneRequestsLimit_ ;
+      /**
+       * <pre>
+       * Upper limit of requests count in each zone.
+       * 0 means no limit.
+       * </pre>
+       *
+       * <code>int64 zone_requests_limit = 8;</code>
+       */
+      public long getZoneRequestsLimit() {
+        return zoneRequestsLimit_;
+      }
+      /**
+       * <pre>
+       * Upper limit of requests count in each zone.
+       * 0 means no limit.
+       * </pre>
+       *
+       * <code>int64 zone_requests_limit = 8;</code>
+       */
+      public Builder setZoneRequestsLimit(long value) {
+        
+        zoneRequestsLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Upper limit of requests count in each zone.
+       * 0 means no limit.
+       * </pre>
+       *
+       * <code>int64 zone_requests_limit = 8;</code>
+       */
+      public Builder clearZoneRequestsLimit() {
+        
+        zoneRequestsLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.functions.v1.ScalingPolicy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.functions.v1.ScalingPolicy)
+    private static final yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy();
+    }
+
+    public static yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ScalingPolicy>
+        PARSER = new com.google.protobuf.AbstractParser<ScalingPolicy>() {
+      @java.lang.Override
+      public ScalingPolicy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ScalingPolicy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ScalingPolicy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ScalingPolicy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionOuterClass.ScalingPolicy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_functions_v1_Function_descriptor;
   private static final 
@@ -8751,6 +10196,11 @@ public final class FunctionOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_functions_v1_Connectivity_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8803,10 +10253,16 @@ public final class FunctionOuterClass {
       "8\"O\n\007Package\022\031\n\013bucket_name\030\001 \001(\tB\004\350\3071\001\022" +
       "\031\n\013object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001" +
       "(\t\"5\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\021" +
-      "\n\tsubnet_id\030\002 \003(\tB~\n(yandex.cloud.api.se" +
-      "rverless.functions.v1ZRgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/serverle" +
-      "ss/functions/v1;functionsb\006proto3"
+      "\n\tsubnet_id\030\002 \003(\t\"\315\001\n\rScalingPolicy\022\023\n\013f" +
+      "unction_id\030\001 \001(\t\022\013\n\003tag\030\002 \001(\t\022.\n\ncreated" +
+      "_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022/\n" +
+      "\013modified_at\030\004 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022\034\n\024zone_instances_limit\030\007 \001(\003\022\033\n\023" +
+      "zone_requests_limit\030\010 \001(\003B~\n(yandex.clou" +
+      "d.api.serverless.functions.v1ZRgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "serverless/functions/v1;functionsb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8871,6 +10327,12 @@ public final class FunctionOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_Connectivity_descriptor,
         new java.lang.String[] { "NetworkId", "SubnetId", });
+    internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_descriptor,
+        new java.lang.String[] { "FunctionId", "Tag", "CreatedAt", "ModifiedAt", "ZoneInstancesLimit", "ZoneRequestsLimit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

@@ -574,6 +574,102 @@ public final class FunctionServiceGrpc {
      return getUpdateAccessBindingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest,
+      yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse> getListScalingPoliciesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListScalingPolicies",
+      requestType = yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest.class,
+      responseType = yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest,
+      yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse> getListScalingPoliciesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse> getListScalingPoliciesMethod;
+    if ((getListScalingPoliciesMethod = FunctionServiceGrpc.getListScalingPoliciesMethod) == null) {
+      synchronized (FunctionServiceGrpc.class) {
+        if ((getListScalingPoliciesMethod = FunctionServiceGrpc.getListScalingPoliciesMethod) == null) {
+          FunctionServiceGrpc.getListScalingPoliciesMethod = getListScalingPoliciesMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.serverless.functions.v1.FunctionService", "ListScalingPolicies"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("ListScalingPolicies"))
+                  .build();
+          }
+        }
+     }
+     return getListScalingPoliciesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetScalingPolicyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetScalingPolicy",
+      requestType = yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetScalingPolicyMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getSetScalingPolicyMethod;
+    if ((getSetScalingPolicyMethod = FunctionServiceGrpc.getSetScalingPolicyMethod) == null) {
+      synchronized (FunctionServiceGrpc.class) {
+        if ((getSetScalingPolicyMethod = FunctionServiceGrpc.getSetScalingPolicyMethod) == null) {
+          FunctionServiceGrpc.getSetScalingPolicyMethod = getSetScalingPolicyMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.serverless.functions.v1.FunctionService", "SetScalingPolicy"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("SetScalingPolicy"))
+                  .build();
+          }
+        }
+     }
+     return getSetScalingPolicyMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveScalingPolicyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveScalingPolicy",
+      requestType = yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveScalingPolicyMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveScalingPolicyMethod;
+    if ((getRemoveScalingPolicyMethod = FunctionServiceGrpc.getRemoveScalingPolicyMethod) == null) {
+      synchronized (FunctionServiceGrpc.class) {
+        if ((getRemoveScalingPolicyMethod = FunctionServiceGrpc.getRemoveScalingPolicyMethod) == null) {
+          FunctionServiceGrpc.getRemoveScalingPolicyMethod = getRemoveScalingPolicyMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.serverless.functions.v1.FunctionService", "RemoveScalingPolicy"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("RemoveScalingPolicy"))
+                  .build();
+          }
+        }
+     }
+     return getRemoveScalingPolicyMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -778,6 +874,36 @@ public final class FunctionServiceGrpc {
       asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Lists existing scaling policies for specified function
+     * </pre>
+     */
+    public void listScalingPolicies(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListScalingPoliciesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Set scaling policy for specified function and tag
+     * </pre>
+     */
+    public void setScalingPolicy(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getSetScalingPolicyMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Remove scaling policy for specified function and tag
+     * </pre>
+     */
+    public void removeScalingPolicy(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getRemoveScalingPolicyMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -899,6 +1025,27 @@ public final class FunctionServiceGrpc {
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_ACCESS_BINDINGS)))
+          .addMethod(
+            getListScalingPoliciesMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest,
+                yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse>(
+                  this, METHODID_LIST_SCALING_POLICIES)))
+          .addMethod(
+            getSetScalingPolicyMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_SET_SCALING_POLICY)))
+          .addMethod(
+            getRemoveScalingPolicyMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_REMOVE_SCALING_POLICY)))
           .build();
     }
   }
@@ -1114,6 +1261,39 @@ public final class FunctionServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Lists existing scaling policies for specified function
+     * </pre>
+     */
+    public void listScalingPolicies(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListScalingPoliciesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Set scaling policy for specified function and tag
+     * </pre>
+     */
+    public void setScalingPolicy(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getSetScalingPolicyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Remove scaling policy for specified function and tag
+     * </pre>
+     */
+    public void removeScalingPolicy(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getRemoveScalingPolicyMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1309,6 +1489,36 @@ public final class FunctionServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists existing scaling policies for specified function
+     * </pre>
+     */
+    public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse listScalingPolicies(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListScalingPoliciesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Set scaling policy for specified function and tag
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation setScalingPolicy(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getSetScalingPolicyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Remove scaling policy for specified function and tag
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation removeScalingPolicy(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getRemoveScalingPolicyMethod(), getCallOptions(), request);
     }
   }
 
@@ -1523,6 +1733,39 @@ public final class FunctionServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Lists existing scaling policies for specified function
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse> listScalingPolicies(
+        yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListScalingPoliciesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Set scaling policy for specified function and tag
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setScalingPolicy(
+        yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getSetScalingPolicyMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Remove scaling policy for specified function and tag
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeScalingPolicy(
+        yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getRemoveScalingPolicyMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1542,6 +1785,9 @@ public final class FunctionServiceGrpc {
   private static final int METHODID_LIST_ACCESS_BINDINGS = 14;
   private static final int METHODID_SET_ACCESS_BINDINGS = 15;
   private static final int METHODID_UPDATE_ACCESS_BINDINGS = 16;
+  private static final int METHODID_LIST_SCALING_POLICIES = 17;
+  private static final int METHODID_SET_SCALING_POLICY = 18;
+  private static final int METHODID_REMOVE_SCALING_POLICY = 19;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1628,6 +1874,18 @@ public final class FunctionServiceGrpc {
           serviceImpl.updateAccessBindings((yandex.cloud.api.access.Access.UpdateAccessBindingsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_LIST_SCALING_POLICIES:
+          serviceImpl.listScalingPolicies((yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListScalingPoliciesResponse>) responseObserver);
+          break;
+        case METHODID_SET_SCALING_POLICY:
+          serviceImpl.setScalingPolicy((yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetScalingPolicyRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_REMOVE_SCALING_POLICY:
+          serviceImpl.removeScalingPolicy((yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.RemoveScalingPolicyRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -1706,6 +1964,9 @@ public final class FunctionServiceGrpc {
               .addMethod(getListAccessBindingsMethod())
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())
+              .addMethod(getListScalingPoliciesMethod())
+              .addMethod(getSetScalingPolicyMethod())
+              .addMethod(getRemoveScalingPolicyMethod())
               .build();
         }
       }
