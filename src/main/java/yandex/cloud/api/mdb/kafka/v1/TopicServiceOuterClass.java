@@ -44,7 +44,7 @@ public final class TopicServiceOuterClass {
      * To get the name of the topic, make a [TopicService.List] request.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     java.lang.String getTopicName();
     /**
@@ -53,7 +53,7 @@ public final class TopicServiceOuterClass {
      * To get the name of the topic, make a [TopicService.List] request.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     com.google.protobuf.ByteString
         getTopicNameBytes();
@@ -195,7 +195,7 @@ public final class TopicServiceOuterClass {
      * To get the name of the topic, make a [TopicService.List] request.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     public java.lang.String getTopicName() {
       java.lang.Object ref = topicName_;
@@ -215,7 +215,7 @@ public final class TopicServiceOuterClass {
      * To get the name of the topic, make a [TopicService.List] request.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     public com.google.protobuf.ByteString
         getTopicNameBytes() {
@@ -652,7 +652,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public java.lang.String getTopicName() {
         java.lang.Object ref = topicName_;
@@ -672,7 +672,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public com.google.protobuf.ByteString
           getTopicNameBytes() {
@@ -693,7 +693,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder setTopicName(
           java.lang.String value) {
@@ -711,7 +711,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder clearTopicName() {
         
@@ -725,7 +725,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder setTopicNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3621,7 +3621,7 @@ public final class TopicServiceOuterClass {
      * Name of the Kafka topic that is being created.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getTopicName();
     /**
@@ -3629,7 +3629,7 @@ public final class TopicServiceOuterClass {
      * Name of the Kafka topic that is being created.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getTopicNameBytes();
@@ -3768,7 +3768,7 @@ public final class TopicServiceOuterClass {
      * Name of the Kafka topic that is being created.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getTopicName() {
       java.lang.Object ref = topicName_;
@@ -3787,7 +3787,7 @@ public final class TopicServiceOuterClass {
      * Name of the Kafka topic that is being created.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
         getTopicNameBytes() {
@@ -4218,7 +4218,7 @@ public final class TopicServiceOuterClass {
        * Name of the Kafka topic that is being created.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getTopicName() {
         java.lang.Object ref = topicName_;
@@ -4237,7 +4237,7 @@ public final class TopicServiceOuterClass {
        * Name of the Kafka topic that is being created.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
           getTopicNameBytes() {
@@ -4257,7 +4257,7 @@ public final class TopicServiceOuterClass {
        * Name of the Kafka topic that is being created.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setTopicName(
           java.lang.String value) {
@@ -4274,7 +4274,7 @@ public final class TopicServiceOuterClass {
        * Name of the Kafka topic that is being created.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearTopicName() {
         
@@ -4287,7 +4287,7 @@ public final class TopicServiceOuterClass {
        * Name of the Kafka topic that is being created.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setTopicNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4383,7 +4383,7 @@ public final class TopicServiceOuterClass {
      * To get the name of the topic, make a [TopicService.List] request.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     java.lang.String getTopicName();
     /**
@@ -4392,7 +4392,7 @@ public final class TopicServiceOuterClass {
      * To get the name of the topic, make a [TopicService.List] request.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     com.google.protobuf.ByteString
         getTopicNameBytes();
@@ -4601,7 +4601,7 @@ public final class TopicServiceOuterClass {
      * To get the name of the topic, make a [TopicService.List] request.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     public java.lang.String getTopicName() {
       java.lang.Object ref = topicName_;
@@ -4621,7 +4621,7 @@ public final class TopicServiceOuterClass {
      * To get the name of the topic, make a [TopicService.List] request.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     public com.google.protobuf.ByteString
         getTopicNameBytes() {
@@ -5175,7 +5175,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public java.lang.String getTopicName() {
         java.lang.Object ref = topicName_;
@@ -5195,7 +5195,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public com.google.protobuf.ByteString
           getTopicNameBytes() {
@@ -5216,7 +5216,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder setTopicName(
           java.lang.String value) {
@@ -5234,7 +5234,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder clearTopicName() {
         
@@ -5248,7 +5248,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder setTopicNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6382,7 +6382,7 @@ public final class TopicServiceOuterClass {
      * To get the name of the topic, make a [TopicService.List] request.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     java.lang.String getTopicName();
     /**
@@ -6391,7 +6391,7 @@ public final class TopicServiceOuterClass {
      * To get the name of the topic, make a [TopicService.List] request.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     com.google.protobuf.ByteString
         getTopicNameBytes();
@@ -6533,7 +6533,7 @@ public final class TopicServiceOuterClass {
      * To get the name of the topic, make a [TopicService.List] request.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     public java.lang.String getTopicName() {
       java.lang.Object ref = topicName_;
@@ -6553,7 +6553,7 @@ public final class TopicServiceOuterClass {
      * To get the name of the topic, make a [TopicService.List] request.
      * </pre>
      *
-     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+     * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
      */
     public com.google.protobuf.ByteString
         getTopicNameBytes() {
@@ -6990,7 +6990,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public java.lang.String getTopicName() {
         java.lang.Object ref = topicName_;
@@ -7010,7 +7010,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public com.google.protobuf.ByteString
           getTopicNameBytes() {
@@ -7031,7 +7031,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder setTopicName(
           java.lang.String value) {
@@ -7049,7 +7049,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder clearTopicName() {
         
@@ -7063,7 +7063,7 @@ public final class TopicServiceOuterClass {
        * To get the name of the topic, make a [TopicService.List] request.
        * </pre>
        *
-       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-63"];</code>
+       * <code>string topic_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "1-256"];</code>
        */
       public Builder setTopicNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7949,57 +7949,57 @@ public final class TopicServiceOuterClass {
       "ration.proto\032&yandex/cloud/operation/ope" +
       "ration.proto\032\035yandex/cloud/validation.pr" +
       "oto\032%yandex/cloud/mdb/kafka/v1/topic.pro" +
-      "to\"g\n\017GetTopicRequest\022 \n\ncluster_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\0222\n\ntopic_name\030\002 \001(\tB\036\350\3071" +
-      "\001\212\3101\0041-63\362\3071\016[a-zA-Z0-9_-]*\"s\n\021ListTopic" +
-      "sRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npag" +
-      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"_\n\022ListTopicsRe" +
-      "sponse\0220\n\006topics\030\001 \003(\0132 .yandex.cloud.md" +
-      "b.kafka.v1.Topic\022\027\n\017next_page_token\030\002 \001(" +
-      "\t\"v\n\022CreateTopicRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\ntopic_spec\030\002 \001(\0132$." +
-      "yandex.cloud.mdb.kafka.v1.TopicSpecB\004\350\3071" +
-      "\001\"]\n\023CreateTopicMetadata\022\022\n\ncluster_id\030\001" +
-      " \001(\t\0222\n\ntopic_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\307" +
-      "1\016[a-zA-Z0-9_-]*\"\325\001\n\022UpdateTopicRequest\022" +
-      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\ntop" +
-      "ic_name\030\002 \001(\tB\036\350\3071\001\212\3101\0041-63\362\3071\016[a-zA-Z0-" +
-      "9_-]*\022/\n\013update_mask\030\003 \001(\0132\032.google.prot" +
-      "obuf.FieldMask\0228\n\ntopic_spec\030\004 \001(\0132$.yan" +
-      "dex.cloud.mdb.kafka.v1.TopicSpec\"=\n\023Upda" +
-      "teTopicMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nt" +
-      "opic_name\030\002 \001(\t\"j\n\022DeleteTopicRequest\022 \n" +
-      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\ntopic" +
-      "_name\030\002 \001(\tB\036\350\3071\001\212\3101\0041-63\362\3071\016[a-zA-Z0-9_" +
-      "-]*\"=\n\023DeleteTopicMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t\022\022\n\ntopic_name\030\002 \001(\t2\226\007\n\014TopicServ" +
-      "ice\022\230\001\n\003Get\022*.yandex.cloud.mdb.kafka.v1." +
-      "GetTopicRequest\032 .yandex.cloud.mdb.kafka" +
-      ".v1.Topic\"C\202\323\344\223\002=\022;/managed-kafka/v1/clu" +
-      "sters/{cluster_id}/topics/{topic_name}\022\233" +
-      "\001\n\004List\022,.yandex.cloud.mdb.kafka.v1.List" +
-      "TopicsRequest\032-.yandex.cloud.mdb.kafka.v" +
-      "1.ListTopicsResponse\"6\202\323\344\223\0020\022./managed-k" +
-      "afka/v1/clusters/{cluster_id}/topics\022\265\001\n" +
-      "\006Create\022-.yandex.cloud.mdb.kafka.v1.Crea" +
-      "teTopicRequest\032!.yandex.cloud.operation." +
-      "Operation\"Y\202\323\344\223\0023\"./managed-kafka/v1/clu" +
-      "sters/{cluster_id}/topics:\001*\262\322*\034\n\023Create" +
-      "TopicMetadata\022\005Topic\022\302\001\n\006Update\022-.yandex" +
-      ".cloud.mdb.kafka.v1.UpdateTopicRequest\032!" +
-      ".yandex.cloud.operation.Operation\"f\202\323\344\223\002" +
-      "@2;/managed-kafka/v1/clusters/{cluster_i" +
-      "d}/topics/{topic_name}:\001*\262\322*\034\n\023UpdateTop" +
-      "icMetadata\022\005Topic\022\317\001\n\006Delete\022-.yandex.cl" +
-      "oud.mdb.kafka.v1.DeleteTopicRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"s\202\323\344\223\002=*;" +
-      "/managed-kafka/v1/clusters/{cluster_id}/" +
-      "topics/{topic_name}\262\322*,\n\023DeleteTopicMeta" +
-      "data\022\025google.protobuf.EmptyBd\n\035yandex.cl" +
-      "oud.api.mdb.kafka.v1ZCgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/mdb/kafka" +
-      "/v1;kafkab\006proto3"
+      "to\"h\n\017GetTopicRequest\022 \n\ncluster_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\0223\n\ntopic_name\030\002 \001(\tB\037\350\3071" +
+      "\001\212\3101\0051-256\362\3071\016[a-zA-Z0-9_-]*\"s\n\021ListTopi" +
+      "csRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npa" +
+      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\"_\n\022ListTopicsR" +
+      "esponse\0220\n\006topics\030\001 \003(\0132 .yandex.cloud.m" +
+      "db.kafka.v1.Topic\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\"v\n\022CreateTopicRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\ntopic_spec\030\002 \001(\0132$" +
+      ".yandex.cloud.mdb.kafka.v1.TopicSpecB\004\350\307" +
+      "1\001\"^\n\023CreateTopicMetadata\022\022\n\ncluster_id\030" +
+      "\001 \001(\t\0223\n\ntopic_name\030\002 \001(\tB\037\350\3071\001\212\3101\005<=256" +
+      "\362\3071\016[a-zA-Z0-9_-]*\"\326\001\n\022UpdateTopicReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0223\n\nt" +
+      "opic_name\030\002 \001(\tB\037\350\3071\001\212\3101\0051-256\362\3071\016[a-zA-" +
+      "Z0-9_-]*\022/\n\013update_mask\030\003 \001(\0132\032.google.p" +
+      "rotobuf.FieldMask\0228\n\ntopic_spec\030\004 \001(\0132$." +
+      "yandex.cloud.mdb.kafka.v1.TopicSpec\"=\n\023U" +
+      "pdateTopicMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022" +
+      "\n\ntopic_name\030\002 \001(\t\"k\n\022DeleteTopicRequest" +
+      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0223\n\nto" +
+      "pic_name\030\002 \001(\tB\037\350\3071\001\212\3101\0051-256\362\3071\016[a-zA-Z" +
+      "0-9_-]*\"=\n\023DeleteTopicMetadata\022\022\n\ncluste" +
+      "r_id\030\001 \001(\t\022\022\n\ntopic_name\030\002 \001(\t2\226\007\n\014Topic" +
+      "Service\022\230\001\n\003Get\022*.yandex.cloud.mdb.kafka" +
+      ".v1.GetTopicRequest\032 .yandex.cloud.mdb.k" +
+      "afka.v1.Topic\"C\202\323\344\223\002=\022;/managed-kafka/v1" +
+      "/clusters/{cluster_id}/topics/{topic_nam" +
+      "e}\022\233\001\n\004List\022,.yandex.cloud.mdb.kafka.v1." +
+      "ListTopicsRequest\032-.yandex.cloud.mdb.kaf" +
+      "ka.v1.ListTopicsResponse\"6\202\323\344\223\0020\022./manag" +
+      "ed-kafka/v1/clusters/{cluster_id}/topics" +
+      "\022\265\001\n\006Create\022-.yandex.cloud.mdb.kafka.v1." +
+      "CreateTopicRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"Y\202\323\344\223\0023\"./managed-kafka/v1" +
+      "/clusters/{cluster_id}/topics:\001*\262\322*\034\n\023Cr" +
+      "eateTopicMetadata\022\005Topic\022\302\001\n\006Update\022-.ya" +
+      "ndex.cloud.mdb.kafka.v1.UpdateTopicReque" +
+      "st\032!.yandex.cloud.operation.Operation\"f\202" +
+      "\323\344\223\002@2;/managed-kafka/v1/clusters/{clust" +
+      "er_id}/topics/{topic_name}:\001*\262\322*\034\n\023Updat" +
+      "eTopicMetadata\022\005Topic\022\317\001\n\006Delete\022-.yande" +
+      "x.cloud.mdb.kafka.v1.DeleteTopicRequest\032" +
+      "!.yandex.cloud.operation.Operation\"s\202\323\344\223" +
+      "\002=*;/managed-kafka/v1/clusters/{cluster_" +
+      "id}/topics/{topic_name}\262\322*,\n\023DeleteTopic" +
+      "Metadata\022\025google.protobuf.EmptyBd\n\035yande" +
+      "x.cloud.api.mdb.kafka.v1ZCgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/mdb/k" +
+      "afka/v1;kafkab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

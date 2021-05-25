@@ -1294,7 +1294,7 @@ public final class AddressServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the 
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListAddressesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -1303,7 +1303,7 @@ public final class AddressServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the 
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListAddressesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -1315,8 +1315,8 @@ public final class AddressServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters Address listed in the response.
-     * The expression must specify: 
-     * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Address.name] field.
      * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-address`.
@@ -1328,8 +1328,8 @@ public final class AddressServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters Address listed in the response.
-     * The expression must specify: 
-     * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Address.name] field.
      * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-address`.
@@ -1502,7 +1502,7 @@ public final class AddressServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the 
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListAddressesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -1522,7 +1522,7 @@ public final class AddressServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set `page_token` to the 
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListAddressesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -1547,8 +1547,8 @@ public final class AddressServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters Address listed in the response.
-     * The expression must specify: 
-     * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Address.name] field.
      * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-address`.
@@ -1571,8 +1571,8 @@ public final class AddressServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters Address listed in the response.
-     * The expression must specify: 
-     * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Address.name] field.
      * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
      * Example of a filter: `name=my-address`.
@@ -2093,7 +2093,7 @@ public final class AddressServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the 
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListAddressesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -2113,7 +2113,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the 
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListAddressesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -2134,7 +2134,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the 
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListAddressesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -2152,7 +2152,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the 
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListAddressesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -2166,7 +2166,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set `page_token` to the 
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListAddressesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -2188,8 +2188,8 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters Address listed in the response.
-       * The expression must specify: 
-       * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Address.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-address`.
@@ -2212,8 +2212,8 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters Address listed in the response.
-       * The expression must specify: 
-       * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Address.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-address`.
@@ -2237,8 +2237,8 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters Address listed in the response.
-       * The expression must specify: 
-       * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Address.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-address`.
@@ -2259,8 +2259,8 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters Address listed in the response.
-       * The expression must specify: 
-       * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Address.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-address`.
@@ -2277,8 +2277,8 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters Address listed in the response.
-       * The expression must specify: 
-       * 1. The field name. Currently you can use filtering only on [Address.name] field. 
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Address.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
        * Example of a filter: `name=my-address`.
@@ -3473,7 +3473,7 @@ public final class AddressServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the address. 
+     * Name of the address.
      * The name must be unique within the folder.
      * </pre>
      *
@@ -3482,7 +3482,7 @@ public final class AddressServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the address. 
+     * Name of the address.
      * The name must be unique within the folder.
      * </pre>
      *
@@ -3794,7 +3794,7 @@ public final class AddressServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the address. 
+     * Name of the address.
      * The name must be unique within the folder.
      * </pre>
      *
@@ -3814,7 +3814,7 @@ public final class AddressServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the address. 
+     * Name of the address.
      * The name must be unique within the folder.
      * </pre>
      *
@@ -4541,7 +4541,7 @@ public final class AddressServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the address. 
+       * Name of the address.
        * The name must be unique within the folder.
        * </pre>
        *
@@ -4561,7 +4561,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the address. 
+       * Name of the address.
        * The name must be unique within the folder.
        * </pre>
        *
@@ -4582,7 +4582,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the address. 
+       * Name of the address.
        * The name must be unique within the folder.
        * </pre>
        *
@@ -4600,7 +4600,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the address. 
+       * Name of the address.
        * The name must be unique within the folder.
        * </pre>
        *
@@ -4614,7 +4614,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the address. 
+       * Name of the address.
        * The name must be unique within the folder.
        * </pre>
        *
@@ -6666,7 +6666,6 @@ public final class AddressServiceOuterClass {
     /**
      * <pre>
      * ID of the address to update.
-     *  
      * To get the address ID make a [AddressService.List] request.
      * </pre>
      *
@@ -6676,7 +6675,6 @@ public final class AddressServiceOuterClass {
     /**
      * <pre>
      * ID of the address to update.
-     *  
      * To get the address ID make a [AddressService.List] request.
      * </pre>
      *
@@ -6712,7 +6710,7 @@ public final class AddressServiceOuterClass {
 
     /**
      * <pre>
-     * New name for the address. 
+     * New name for the address.
      * The name must be unique within the folder.
      * </pre>
      *
@@ -6721,7 +6719,7 @@ public final class AddressServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * New name for the address. 
+     * New name for the address.
      * The name must be unique within the folder.
      * </pre>
      *
@@ -6978,7 +6976,6 @@ public final class AddressServiceOuterClass {
     /**
      * <pre>
      * ID of the address to update.
-     *  
      * To get the address ID make a [AddressService.List] request.
      * </pre>
      *
@@ -6999,7 +6996,6 @@ public final class AddressServiceOuterClass {
     /**
      * <pre>
      * ID of the address to update.
-     *  
      * To get the address ID make a [AddressService.List] request.
      * </pre>
      *
@@ -7056,7 +7052,7 @@ public final class AddressServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * New name for the address. 
+     * New name for the address.
      * The name must be unique within the folder.
      * </pre>
      *
@@ -7076,7 +7072,7 @@ public final class AddressServiceOuterClass {
     }
     /**
      * <pre>
-     * New name for the address. 
+     * New name for the address.
      * The name must be unique within the folder.
      * </pre>
      *
@@ -7705,7 +7701,6 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * ID of the address to update.
-       *  
        * To get the address ID make a [AddressService.List] request.
        * </pre>
        *
@@ -7726,7 +7721,6 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * ID of the address to update.
-       *  
        * To get the address ID make a [AddressService.List] request.
        * </pre>
        *
@@ -7748,7 +7742,6 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * ID of the address to update.
-       *  
        * To get the address ID make a [AddressService.List] request.
        * </pre>
        *
@@ -7767,7 +7760,6 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * ID of the address to update.
-       *  
        * To get the address ID make a [AddressService.List] request.
        * </pre>
        *
@@ -7782,7 +7774,6 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * ID of the address to update.
-       *  
        * To get the address ID make a [AddressService.List] request.
        * </pre>
        *
@@ -7956,7 +7947,7 @@ public final class AddressServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * New name for the address. 
+       * New name for the address.
        * The name must be unique within the folder.
        * </pre>
        *
@@ -7976,7 +7967,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * New name for the address. 
+       * New name for the address.
        * The name must be unique within the folder.
        * </pre>
        *
@@ -7997,7 +7988,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * New name for the address. 
+       * New name for the address.
        * The name must be unique within the folder.
        * </pre>
        *
@@ -8015,7 +8006,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * New name for the address. 
+       * New name for the address.
        * The name must be unique within the folder.
        * </pre>
        *
@@ -8029,7 +8020,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * New name for the address. 
+       * New name for the address.
        * The name must be unique within the folder.
        * </pre>
        *
@@ -10217,7 +10208,7 @@ public final class AddressServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the 
+     * Page token. To get the next page of results, set [page_token] to the
      * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -10226,7 +10217,7 @@ public final class AddressServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the 
+     * Page token. To get the next page of results, set [page_token] to the
      * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -10390,7 +10381,7 @@ public final class AddressServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the 
+     * Page token. To get the next page of results, set [page_token] to the
      * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -10410,7 +10401,7 @@ public final class AddressServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the 
+     * Page token. To get the next page of results, set [page_token] to the
      * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -10912,7 +10903,7 @@ public final class AddressServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the 
+       * Page token. To get the next page of results, set [page_token] to the
        * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -10932,7 +10923,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the 
+       * Page token. To get the next page of results, set [page_token] to the
        * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -10953,7 +10944,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the 
+       * Page token. To get the next page of results, set [page_token] to the
        * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -10971,7 +10962,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the 
+       * Page token. To get the next page of results, set [page_token] to the
        * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -10985,7 +10976,7 @@ public final class AddressServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the 
+       * Page token. To get the next page of results, set [page_token] to the
        * [ListAddressOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -13536,7 +13527,7 @@ public final class AddressServiceOuterClass {
       "\001(\t\"c\n\022MoveAddressRequest\022 \n\naddress_id\030" +
       "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folde" +
       "r_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023MoveAddressM" +
-      "etadata\022\022\n\naddress_id\030\001 \001(\t2\230\t\n\016AddressS" +
+      "etadata\022\022\n\naddress_id\030\001 \001(\t2\307\t\n\016AddressS" +
       "ervice\022s\n\003Get\022&.yandex.cloud.vpc.v1.GetA" +
       "ddressRequest\032\034.yandex.cloud.vpc.v1.Addr" +
       "ess\"&\202\323\344\223\002 \022\036/vpc/v1/addresses/{address_" +
@@ -13563,12 +13554,13 @@ public final class AddressServiceOuterClass {
       "ddressOperationsRequest\0322.yandex.cloud.v" +
       "pc.v1.ListAddressOperationsResponse\"1\202\323\344" +
       "\223\002+\022)/vpc/v1/addresses/{address_id}/oper" +
-      "ations\022v\n\004Move\022\'.yandex.cloud.vpc.v1.Mov" +
-      "eAddressRequest\032!.yandex.cloud.operation" +
-      ".Operation\"\"\262\322*\036\n\023MoveAddressMetadata\022\007A" +
-      "ddressBV\n\027yandex.cloud.api.vpc.v1Z;githu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/vpc/v1;vpcb\006proto3"
+      "ations\022\244\001\n\004Move\022\'.yandex.cloud.vpc.v1.Mo" +
+      "veAddressRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"P\202\323\344\223\002(\"#/vpc/v1/addresses/{" +
+      "address_id}:move:\001*\262\322*\036\n\023MoveAddressMeta" +
+      "data\022\007AddressBV\n\027yandex.cloud.api.vpc.v1" +
+      "Z;github.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/vpc/v1;vpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

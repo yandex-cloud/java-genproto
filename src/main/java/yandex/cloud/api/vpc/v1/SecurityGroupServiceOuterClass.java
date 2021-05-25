@@ -8595,6 +8595,25 @@ public final class SecurityGroupServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdBytes();
+
+    /**
+     * <code>repeated string added_rule_ids = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getAddedRuleIdsList();
+    /**
+     * <code>repeated string added_rule_ids = 2;</code>
+     */
+    int getAddedRuleIdsCount();
+    /**
+     * <code>repeated string added_rule_ids = 2;</code>
+     */
+    java.lang.String getAddedRuleIds(int index);
+    /**
+     * <code>repeated string added_rule_ids = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddedRuleIdsBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.vpc.v1.UpdateSecurityGroupMetadata}
@@ -8610,6 +8629,7 @@ public final class SecurityGroupServiceOuterClass {
     }
     private UpdateSecurityGroupMetadata() {
       securityGroupId_ = "";
+      addedRuleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -8642,6 +8662,15 @@ public final class SecurityGroupServiceOuterClass {
               securityGroupId_ = s;
               break;
             }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                addedRuleIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              addedRuleIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -8657,6 +8686,9 @@ public final class SecurityGroupServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          addedRuleIds_ = addedRuleIds_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -8674,6 +8706,7 @@ public final class SecurityGroupServiceOuterClass {
               yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupMetadata.class, yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupMetadata.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SECURITY_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object securityGroupId_;
     /**
@@ -8708,6 +8741,35 @@ public final class SecurityGroupServiceOuterClass {
       }
     }
 
+    public static final int ADDED_RULE_IDS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList addedRuleIds_;
+    /**
+     * <code>repeated string added_rule_ids = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAddedRuleIdsList() {
+      return addedRuleIds_;
+    }
+    /**
+     * <code>repeated string added_rule_ids = 2;</code>
+     */
+    public int getAddedRuleIdsCount() {
+      return addedRuleIds_.size();
+    }
+    /**
+     * <code>repeated string added_rule_ids = 2;</code>
+     */
+    public java.lang.String getAddedRuleIds(int index) {
+      return addedRuleIds_.get(index);
+    }
+    /**
+     * <code>repeated string added_rule_ids = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddedRuleIdsBytes(int index) {
+      return addedRuleIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8725,6 +8787,9 @@ public final class SecurityGroupServiceOuterClass {
       if (!getSecurityGroupIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, securityGroupId_);
       }
+      for (int i = 0; i < addedRuleIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, addedRuleIds_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8736,6 +8801,14 @@ public final class SecurityGroupServiceOuterClass {
       size = 0;
       if (!getSecurityGroupIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, securityGroupId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < addedRuleIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(addedRuleIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAddedRuleIdsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8755,6 +8828,8 @@ public final class SecurityGroupServiceOuterClass {
       boolean result = true;
       result = result && getSecurityGroupId()
           .equals(other.getSecurityGroupId());
+      result = result && getAddedRuleIdsList()
+          .equals(other.getAddedRuleIdsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -8768,6 +8843,10 @@ public final class SecurityGroupServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SECURITY_GROUP_ID_FIELD_NUMBER;
       hash = (53 * hash) + getSecurityGroupId().hashCode();
+      if (getAddedRuleIdsCount() > 0) {
+        hash = (37 * hash) + ADDED_RULE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddedRuleIdsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8903,6 +8982,8 @@ public final class SecurityGroupServiceOuterClass {
         super.clear();
         securityGroupId_ = "";
 
+        addedRuleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -8929,7 +9010,15 @@ public final class SecurityGroupServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupMetadata buildPartial() {
         yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupMetadata result = new yandex.cloud.api.vpc.v1.SecurityGroupServiceOuterClass.UpdateSecurityGroupMetadata(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.securityGroupId_ = securityGroupId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          addedRuleIds_ = addedRuleIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.addedRuleIds_ = addedRuleIds_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -8982,6 +9071,16 @@ public final class SecurityGroupServiceOuterClass {
           securityGroupId_ = other.securityGroupId_;
           onChanged();
         }
+        if (!other.addedRuleIds_.isEmpty()) {
+          if (addedRuleIds_.isEmpty()) {
+            addedRuleIds_ = other.addedRuleIds_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureAddedRuleIdsIsMutable();
+            addedRuleIds_.addAll(other.addedRuleIds_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9010,6 +9109,7 @@ public final class SecurityGroupServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object securityGroupId_ = "";
       /**
@@ -9076,6 +9176,100 @@ public final class SecurityGroupServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         securityGroupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList addedRuleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureAddedRuleIdsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          addedRuleIds_ = new com.google.protobuf.LazyStringArrayList(addedRuleIds_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string added_rule_ids = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAddedRuleIdsList() {
+        return addedRuleIds_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string added_rule_ids = 2;</code>
+       */
+      public int getAddedRuleIdsCount() {
+        return addedRuleIds_.size();
+      }
+      /**
+       * <code>repeated string added_rule_ids = 2;</code>
+       */
+      public java.lang.String getAddedRuleIds(int index) {
+        return addedRuleIds_.get(index);
+      }
+      /**
+       * <code>repeated string added_rule_ids = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddedRuleIdsBytes(int index) {
+        return addedRuleIds_.getByteString(index);
+      }
+      /**
+       * <code>repeated string added_rule_ids = 2;</code>
+       */
+      public Builder setAddedRuleIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAddedRuleIdsIsMutable();
+        addedRuleIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string added_rule_ids = 2;</code>
+       */
+      public Builder addAddedRuleIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAddedRuleIdsIsMutable();
+        addedRuleIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string added_rule_ids = 2;</code>
+       */
+      public Builder addAllAddedRuleIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAddedRuleIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, addedRuleIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string added_rule_ids = 2;</code>
+       */
+      public Builder clearAddedRuleIds() {
+        addedRuleIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string added_rule_ids = 2;</code>
+       */
+      public Builder addAddedRuleIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureAddedRuleIdsIsMutable();
+        addedRuleIds_.add(value);
         onChanged();
         return this;
       }
@@ -16495,68 +16689,81 @@ public final class SecurityGroupServiceOuterClass {
       "pdateSecurityGroupRequest.LabelsEntry\022>\n" +
       "\nrule_specs\030\006 \003(\0132*.yandex.cloud.vpc.v1." +
       "SecurityGroupRuleSpec\032-\n\013LabelsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"8\n\033UpdateSe" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"P\n\033UpdateSe" +
       "curityGroupMetadata\022\031\n\021security_group_id" +
-      "\030\001 \001(\t\"\246\001\n\037UpdateSecurityGroupRulesReque" +
-      "st\022\037\n\021security_group_id\030\001 \001(\tB\004\350\3071\001\022\031\n\021d" +
-      "eletion_rule_ids\030\002 \003(\t\022G\n\023addition_rule_" +
-      "specs\030\003 \003(\0132*.yandex.cloud.vpc.v1.Securi" +
-      "tyGroupRuleSpec\"\236\002\n\036UpdateSecurityGroupR" +
-      "uleRequest\022\037\n\021security_group_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022\025\n\007rule_id\030\002 \001(\tB\004\350\3071\001\022/\n\013update_mas" +
-      "k\030\003 \001(\0132\032.google.protobuf.FieldMask\022\023\n\013d" +
-      "escription\030\004 \001(\t\022O\n\006labels\030\005 \003(\0132?.yande" +
-      "x.cloud.vpc.v1.UpdateSecurityGroupRuleRe" +
-      "quest.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"M\n\037UpdateSecuri" +
-      "tyGroupRuleMetadata\022\031\n\021security_group_id" +
-      "\030\001 \001(\t\022\017\n\007rule_id\030\002 \001(\t\"=\n\032DeleteSecurit" +
-      "yGroupRequest\022\037\n\021security_group_id\030\001 \001(\t" +
-      "B\004\350\3071\001\"8\n\033DeleteSecurityGroupMetadata\022\031\n" +
-      "\021security_group_id\030\001 \001(\t\"l\n\"ListSecurity" +
-      "GroupOperationsRequest\022\037\n\021security_group" +
-      "_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npa" +
-      "ge_token\030\003 \001(\t\"u\n#ListSecurityGroupOpera" +
-      "tionsResponse\0225\n\noperations\030\001 \003(\0132!.yand" +
-      "ex.cloud.operation.Operation\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"`\n\030MoveSecurityGroupReques" +
-      "t\022\037\n\021security_group_id\030\001 \001(\tB\004\350\3071\001\022#\n\025de" +
-      "stination_folder_id\030\002 \001(\tB\004\350\3071\001\"6\n\031MoveS" +
-      "ecurityGroupMetadata\022\031\n\021security_group_i" +
-      "d\030\001 \001(\t2\340\t\n\024SecurityGroupService\022W\n\003Get\022" +
-      ",.yandex.cloud.vpc.v1.GetSecurityGroupRe" +
-      "quest\032\".yandex.cloud.vpc.v1.SecurityGrou" +
-      "p\022g\n\004List\022..yandex.cloud.vpc.v1.ListSecu" +
-      "rityGroupsRequest\032/.yandex.cloud.vpc.v1." +
-      "ListSecurityGroupsResponse\022\216\001\n\006Create\022/." +
-      "yandex.cloud.vpc.v1.CreateSecurityGroupR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"0\262\322*,\n\033CreateSecurityGroupMetadata\022\rSe" +
-      "curityGroup\022\216\001\n\006Update\022/.yandex.cloud.vp" +
-      "c.v1.UpdateSecurityGroupRequest\032!.yandex" +
-      ".cloud.operation.Operation\"0\262\322*,\n\033Update" +
-      "SecurityGroupMetadata\022\rSecurityGroup\022\230\001\n" +
-      "\013UpdateRules\0224.yandex.cloud.vpc.v1.Updat" +
-      "eSecurityGroupRulesRequest\032!.yandex.clou" +
-      "d.operation.Operation\"0\262\322*,\n\033UpdateSecur" +
-      "ityGroupMetadata\022\rSecurityGroup\022\236\001\n\nUpda" +
-      "teRule\0223.yandex.cloud.vpc.v1.UpdateSecur" +
-      "ityGroupRuleRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"8\262\322*4\n\037UpdateSecurityGrou" +
-      "pRuleMetadata\022\021SecurityGroupRule\022\226\001\n\006Del" +
-      "ete\022/.yandex.cloud.vpc.v1.DeleteSecurity" +
-      "GroupRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"8\262\322*4\n\033DeleteSecurityGroupMetada" +
-      "ta\022\025google.protobuf.Empty\022\210\001\n\004Move\022-.yan" +
-      "dex.cloud.vpc.v1.MoveSecurityGroupReques" +
-      "t\032!.yandex.cloud.operation.Operation\".\262\322" +
-      "**\n\031MoveSecurityGroupMetadata\022\rSecurityG" +
-      "roup\022\203\001\n\016ListOperations\0227.yandex.cloud.v" +
-      "pc.v1.ListSecurityGroupOperationsRequest" +
-      "\0328.yandex.cloud.vpc.v1.ListSecurityGroup" +
-      "OperationsResponseBV\n\027yandex.cloud.api.v" +
-      "pc.v1Z;github.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/vpc/v1;vpcb\006proto3"
+      "\030\001 \001(\t\022\026\n\016added_rule_ids\030\002 \003(\t\"\246\001\n\037Updat" +
+      "eSecurityGroupRulesRequest\022\037\n\021security_g" +
+      "roup_id\030\001 \001(\tB\004\350\3071\001\022\031\n\021deletion_rule_ids" +
+      "\030\002 \003(\t\022G\n\023addition_rule_specs\030\003 \003(\0132*.ya" +
+      "ndex.cloud.vpc.v1.SecurityGroupRuleSpec\"" +
+      "\236\002\n\036UpdateSecurityGroupRuleRequest\022\037\n\021se" +
+      "curity_group_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007rule_id\030\002" +
+      " \001(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.google" +
+      ".protobuf.FieldMask\022\023\n\013description\030\004 \001(\t" +
+      "\022O\n\006labels\030\005 \003(\0132?.yandex.cloud.vpc.v1.U" +
+      "pdateSecurityGroupRuleRequest.LabelsEntr" +
+      "y\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"M\n\037UpdateSecurityGroupRuleMetad" +
+      "ata\022\031\n\021security_group_id\030\001 \001(\t\022\017\n\007rule_i" +
+      "d\030\002 \001(\t\"=\n\032DeleteSecurityGroupRequest\022\037\n" +
+      "\021security_group_id\030\001 \001(\tB\004\350\3071\001\"8\n\033Delete" +
+      "SecurityGroupMetadata\022\031\n\021security_group_" +
+      "id\030\001 \001(\t\"l\n\"ListSecurityGroupOperationsR" +
+      "equest\022\037\n\021security_group_id\030\001 \001(\tB\004\350\3071\001\022" +
+      "\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"u" +
+      "\n#ListSecurityGroupOperationsResponse\0225\n" +
+      "\noperations\030\001 \003(\0132!.yandex.cloud.operati" +
+      "on.Operation\022\027\n\017next_page_token\030\002 \001(\t\"`\n" +
+      "\030MoveSecurityGroupRequest\022\037\n\021security_gr" +
+      "oup_id\030\001 \001(\tB\004\350\3071\001\022#\n\025destination_folder" +
+      "_id\030\002 \001(\tB\004\350\3071\001\"6\n\031MoveSecurityGroupMeta" +
+      "data\022\031\n\021security_group_id\030\001 \001(\t2\267\r\n\024Secu" +
+      "rityGroupService\022\213\001\n\003Get\022,.yandex.cloud." +
+      "vpc.v1.GetSecurityGroupRequest\032\".yandex." +
+      "cloud.vpc.v1.SecurityGroup\"2\202\323\344\223\002,\022*/vpc" +
+      "/v1/securityGroups/{security_group_id}\022\207" +
+      "\001\n\004List\022..yandex.cloud.vpc.v1.ListSecuri" +
+      "tyGroupsRequest\032/.yandex.cloud.vpc.v1.Li" +
+      "stSecurityGroupsResponse\"\036\202\323\344\223\002\030\022\026/vpc/v" +
+      "1/securityGroups\022\257\001\n\006Create\022/.yandex.clo" +
+      "ud.vpc.v1.CreateSecurityGroupRequest\032!.y" +
+      "andex.cloud.operation.Operation\"Q\202\323\344\223\002\033\"" +
+      "\026/vpc/v1/securityGroups:\001*\262\322*,\n\033CreateSe" +
+      "curityGroupMetadata\022\rSecurityGroup\022\303\001\n\006U" +
+      "pdate\022/.yandex.cloud.vpc.v1.UpdateSecuri" +
+      "tyGroupRequest\032!.yandex.cloud.operation." +
+      "Operation\"e\202\323\344\223\002/2*/vpc/v1/securityGroup" +
+      "s/{security_group_id}:\001*\262\322*,\n\033UpdateSecu" +
+      "rityGroupMetadata\022\rSecurityGroup\022\323\001\n\013Upd" +
+      "ateRules\0224.yandex.cloud.vpc.v1.UpdateSec" +
+      "urityGroupRulesRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"k\202\323\344\223\002520/vpc/v1/secur" +
+      "ityGroups/{security_group_id}/rules:\001*\262\322" +
+      "*,\n\033UpdateSecurityGroupMetadata\022\rSecurit" +
+      "yGroup\022\343\001\n\nUpdateRule\0223.yandex.cloud.vpc" +
+      ".v1.UpdateSecurityGroupRuleRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"}\202\323\344\223\002?2:/" +
+      "vpc/v1/securityGroups/{security_group_id" +
+      "}/rules/{rule_id}:\001*\262\322*4\n\037UpdateSecurity" +
+      "GroupRuleMetadata\022\021SecurityGroupRule\022\310\001\n" +
+      "\006Delete\022/.yandex.cloud.vpc.v1.DeleteSecu" +
+      "rityGroupRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"j\202\323\344\223\002,**/vpc/v1/securityGro" +
+      "ups/{security_group_id}\262\322*4\n\033DeleteSecur" +
+      "ityGroupMetadata\022\025google.protobuf.Empty\022" +
+      "\302\001\n\004Move\022-.yandex.cloud.vpc.v1.MoveSecur" +
+      "ityGroupRequest\032!.yandex.cloud.operation" +
+      ".Operation\"h\202\323\344\223\0024\"//vpc/v1/securityGrou" +
+      "ps/{security_group_id}:move:\001*\262\322**\n\031Move" +
+      "SecurityGroupMetadata\022\rSecurityGroup\022\302\001\n" +
+      "\016ListOperations\0227.yandex.cloud.vpc.v1.Li" +
+      "stSecurityGroupOperationsRequest\0328.yande" +
+      "x.cloud.vpc.v1.ListSecurityGroupOperatio" +
+      "nsResponse\"=\202\323\344\223\0027\0225/vpc/v1/securityGrou" +
+      "ps/{security_group_id}/operationsBV\n\027yan" +
+      "dex.cloud.api.vpc.v1Z;github.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/vpc/v1;vp" +
+      "cb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16641,7 +16848,7 @@ public final class SecurityGroupServiceOuterClass {
     internal_static_yandex_cloud_vpc_v1_UpdateSecurityGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_UpdateSecurityGroupMetadata_descriptor,
-        new java.lang.String[] { "SecurityGroupId", });
+        new java.lang.String[] { "SecurityGroupId", "AddedRuleIds", });
     internal_static_yandex_cloud_vpc_v1_UpdateSecurityGroupRulesRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_vpc_v1_UpdateSecurityGroupRulesRequest_fieldAccessorTable = new
@@ -16704,6 +16911,7 @@ public final class SecurityGroupServiceOuterClass {
         new java.lang.String[] { "SecurityGroupId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.required);
