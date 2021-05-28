@@ -546,7 +546,22 @@ public final class ClusterOuterClass {
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
 
+    /**
+     * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+     */
+    boolean hasCilium();
+    /**
+     * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium getCilium();
+    /**
+     * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.CiliumOrBuilder getCiliumOrBuilder();
+
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster.InternetGatewayCase getInternetGatewayCase();
+
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cluster.NetworkImplementationCase getNetworkImplementationCase();
   }
   /**
    * <pre>
@@ -750,6 +765,20 @@ public final class ClusterOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               logGroupId_ = s;
+              break;
+            }
+            case 154: {
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.Builder subBuilder = null;
+              if (networkImplementationCase_ == 19) {
+                subBuilder = ((yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_).toBuilder();
+              }
+              networkImplementation_ =
+                  input.readMessage(yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_);
+                networkImplementation_ = subBuilder.buildPartial();
+              }
+              networkImplementationCase_ = 19;
               break;
             }
             default: {
@@ -1162,6 +1191,42 @@ public final class ClusterOuterClass {
     getInternetGatewayCase() {
       return InternetGatewayCase.forNumber(
           internetGatewayCase_);
+    }
+
+    private int networkImplementationCase_ = 0;
+    private java.lang.Object networkImplementation_;
+    public enum NetworkImplementationCase
+        implements com.google.protobuf.Internal.EnumLite {
+      CILIUM(19),
+      NETWORKIMPLEMENTATION_NOT_SET(0);
+      private final int value;
+      private NetworkImplementationCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static NetworkImplementationCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static NetworkImplementationCase forNumber(int value) {
+        switch (value) {
+          case 19: return CILIUM;
+          case 0: return NETWORKIMPLEMENTATION_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public NetworkImplementationCase
+    getNetworkImplementationCase() {
+      return NetworkImplementationCase.forNumber(
+          networkImplementationCase_);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1877,6 +1942,32 @@ public final class ClusterOuterClass {
       }
     }
 
+    public static final int CILIUM_FIELD_NUMBER = 19;
+    /**
+     * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+     */
+    public boolean hasCilium() {
+      return networkImplementationCase_ == 19;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium getCilium() {
+      if (networkImplementationCase_ == 19) {
+         return (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_;
+      }
+      return yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.CiliumOrBuilder getCiliumOrBuilder() {
+      if (networkImplementationCase_ == 19) {
+         return (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_;
+      }
+      return yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1947,6 +2038,9 @@ public final class ClusterOuterClass {
       }
       if (!getLogGroupIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 18, logGroupId_);
+      }
+      if (networkImplementationCase_ == 19) {
+        output.writeMessage(19, (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_);
       }
       unknownFields.writeTo(output);
     }
@@ -2026,6 +2120,10 @@ public final class ClusterOuterClass {
       if (!getLogGroupIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, logGroupId_);
       }
+      if (networkImplementationCase_ == 19) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2099,6 +2197,17 @@ public final class ClusterOuterClass {
         case 0:
         default:
       }
+      result = result && getNetworkImplementationCase().equals(
+          other.getNetworkImplementationCase());
+      if (!result) return false;
+      switch (networkImplementationCase_) {
+        case 19:
+          result = result && getCilium()
+              .equals(other.getCilium());
+          break;
+        case 0:
+        default:
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2160,6 +2269,14 @@ public final class ClusterOuterClass {
         case 12:
           hash = (37 * hash) + GATEWAY_IPV4_ADDRESS_FIELD_NUMBER;
           hash = (53 * hash) + getGatewayIpv4Address().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      switch (networkImplementationCase_) {
+        case 19:
+          hash = (37 * hash) + CILIUM_FIELD_NUMBER;
+          hash = (53 * hash) + getCilium().hashCode();
           break;
         case 0:
         default:
@@ -2378,6 +2495,8 @@ public final class ClusterOuterClass {
 
         internetGatewayCase_ = 0;
         internetGateway_ = null;
+        networkImplementationCase_ = 0;
+        networkImplementation_ = null;
         return this;
       }
 
@@ -2447,8 +2566,16 @@ public final class ClusterOuterClass {
           result.kmsProvider_ = kmsProviderBuilder_.build();
         }
         result.logGroupId_ = logGroupId_;
+        if (networkImplementationCase_ == 19) {
+          if (ciliumBuilder_ == null) {
+            result.networkImplementation_ = networkImplementation_;
+          } else {
+            result.networkImplementation_ = ciliumBuilder_.build();
+          }
+        }
         result.bitField0_ = to_bitField0_;
         result.internetGatewayCase_ = internetGatewayCase_;
+        result.networkImplementationCase_ = networkImplementationCase_;
         onBuilt();
         return result;
       }
@@ -2566,6 +2693,15 @@ public final class ClusterOuterClass {
             break;
           }
         }
+        switch (other.getNetworkImplementationCase()) {
+          case CILIUM: {
+            mergeCilium(other.getCilium());
+            break;
+          }
+          case NETWORKIMPLEMENTATION_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2605,6 +2741,21 @@ public final class ClusterOuterClass {
       public Builder clearInternetGateway() {
         internetGatewayCase_ = 0;
         internetGateway_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int networkImplementationCase_ = 0;
+      private java.lang.Object networkImplementation_;
+      public NetworkImplementationCase
+          getNetworkImplementationCase() {
+        return NetworkImplementationCase.forNumber(
+            networkImplementationCase_);
+      }
+
+      public Builder clearNetworkImplementation() {
+        networkImplementationCase_ = 0;
+        networkImplementation_ = null;
         onChanged();
         return this;
       }
@@ -4511,6 +4662,142 @@ public final class ClusterOuterClass {
         logGroupId_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium, yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.CiliumOrBuilder> ciliumBuilder_;
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+       */
+      public boolean hasCilium() {
+        return networkImplementationCase_ == 19;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium getCilium() {
+        if (ciliumBuilder_ == null) {
+          if (networkImplementationCase_ == 19) {
+            return (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_;
+          }
+          return yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.getDefaultInstance();
+        } else {
+          if (networkImplementationCase_ == 19) {
+            return ciliumBuilder_.getMessage();
+          }
+          return yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+       */
+      public Builder setCilium(yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium value) {
+        if (ciliumBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          networkImplementation_ = value;
+          onChanged();
+        } else {
+          ciliumBuilder_.setMessage(value);
+        }
+        networkImplementationCase_ = 19;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+       */
+      public Builder setCilium(
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.Builder builderForValue) {
+        if (ciliumBuilder_ == null) {
+          networkImplementation_ = builderForValue.build();
+          onChanged();
+        } else {
+          ciliumBuilder_.setMessage(builderForValue.build());
+        }
+        networkImplementationCase_ = 19;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+       */
+      public Builder mergeCilium(yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium value) {
+        if (ciliumBuilder_ == null) {
+          if (networkImplementationCase_ == 19 &&
+              networkImplementation_ != yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.getDefaultInstance()) {
+            networkImplementation_ = yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.newBuilder((yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            networkImplementation_ = value;
+          }
+          onChanged();
+        } else {
+          if (networkImplementationCase_ == 19) {
+            ciliumBuilder_.mergeFrom(value);
+          }
+          ciliumBuilder_.setMessage(value);
+        }
+        networkImplementationCase_ = 19;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+       */
+      public Builder clearCilium() {
+        if (ciliumBuilder_ == null) {
+          if (networkImplementationCase_ == 19) {
+            networkImplementationCase_ = 0;
+            networkImplementation_ = null;
+            onChanged();
+          }
+        } else {
+          if (networkImplementationCase_ == 19) {
+            networkImplementationCase_ = 0;
+            networkImplementation_ = null;
+          }
+          ciliumBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.Builder getCiliumBuilder() {
+        return getCiliumFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.CiliumOrBuilder getCiliumOrBuilder() {
+        if ((networkImplementationCase_ == 19) && (ciliumBuilder_ != null)) {
+          return ciliumBuilder_.getMessageOrBuilder();
+        } else {
+          if (networkImplementationCase_ == 19) {
+            return (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_;
+          }
+          return yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium cilium = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium, yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.CiliumOrBuilder> 
+          getCiliumFieldBuilder() {
+        if (ciliumBuilder_ == null) {
+          if (!(networkImplementationCase_ == 19)) {
+            networkImplementation_ = yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.getDefaultInstance();
+          }
+          ciliumBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium, yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.CiliumOrBuilder>(
+                  (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) networkImplementation_,
+                  getParentForChildren(),
+                  isClean());
+          networkImplementation_ = null;
+        }
+        networkImplementationCase_ = 19;
+        onChanged();;
+        return ciliumBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13469,6 +13756,611 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface CiliumOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.Cilium)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.k8s.v1.Cilium.RoutingMode routing_mode = 1;</code>
+     */
+    int getRoutingModeValue();
+    /**
+     * <code>.yandex.cloud.k8s.v1.Cilium.RoutingMode routing_mode = 1;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.RoutingMode getRoutingMode();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.Cilium}
+   */
+  public  static final class Cilium extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.Cilium)
+      CiliumOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Cilium.newBuilder() to construct.
+    private Cilium(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Cilium() {
+      routingMode_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Cilium(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              routingMode_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_Cilium_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_Cilium_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.class, yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.k8s.v1.Cilium.RoutingMode}
+     */
+    public enum RoutingMode
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>ROUTING_MODE_UNSPECIFIED = 0;</code>
+       */
+      ROUTING_MODE_UNSPECIFIED(0),
+      /**
+       * <code>TUNNEL = 1;</code>
+       */
+      TUNNEL(1),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>ROUTING_MODE_UNSPECIFIED = 0;</code>
+       */
+      public static final int ROUTING_MODE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>TUNNEL = 1;</code>
+       */
+      public static final int TUNNEL_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static RoutingMode valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static RoutingMode forNumber(int value) {
+        switch (value) {
+          case 0: return ROUTING_MODE_UNSPECIFIED;
+          case 1: return TUNNEL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<RoutingMode>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          RoutingMode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<RoutingMode>() {
+              public RoutingMode findValueByNumber(int number) {
+                return RoutingMode.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final RoutingMode[] VALUES = values();
+
+      public static RoutingMode valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private RoutingMode(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.k8s.v1.Cilium.RoutingMode)
+    }
+
+    public static final int ROUTING_MODE_FIELD_NUMBER = 1;
+    private int routingMode_;
+    /**
+     * <code>.yandex.cloud.k8s.v1.Cilium.RoutingMode routing_mode = 1;</code>
+     */
+    public int getRoutingModeValue() {
+      return routingMode_;
+    }
+    /**
+     * <code>.yandex.cloud.k8s.v1.Cilium.RoutingMode routing_mode = 1;</code>
+     */
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.RoutingMode getRoutingMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.RoutingMode result = yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.RoutingMode.valueOf(routingMode_);
+      return result == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.RoutingMode.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (routingMode_ != yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.RoutingMode.ROUTING_MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, routingMode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (routingMode_ != yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.RoutingMode.ROUTING_MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, routingMode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium other = (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) obj;
+
+      boolean result = true;
+      result = result && routingMode_ == other.routingMode_;
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ROUTING_MODE_FIELD_NUMBER;
+      hash = (53 * hash) + routingMode_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.Cilium}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.Cilium)
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.CiliumOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_Cilium_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_Cilium_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.class, yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        routingMode_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_Cilium_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium build() {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium buildPartial() {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium result = new yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium(this);
+        result.routingMode_ = routingMode_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium other) {
+        if (other == yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.getDefaultInstance()) return this;
+        if (other.routingMode_ != 0) {
+          setRoutingModeValue(other.getRoutingModeValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int routingMode_ = 0;
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium.RoutingMode routing_mode = 1;</code>
+       */
+      public int getRoutingModeValue() {
+        return routingMode_;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium.RoutingMode routing_mode = 1;</code>
+       */
+      public Builder setRoutingModeValue(int value) {
+        routingMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium.RoutingMode routing_mode = 1;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.RoutingMode getRoutingMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.RoutingMode result = yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.RoutingMode.valueOf(routingMode_);
+        return result == null ? yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.RoutingMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium.RoutingMode routing_mode = 1;</code>
+       */
+      public Builder setRoutingMode(yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium.RoutingMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        routingMode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.k8s.v1.Cilium.RoutingMode routing_mode = 1;</code>
+       */
+      public Builder clearRoutingMode() {
+        
+        routingMode_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.Cilium)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.Cilium)
+    private static final yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium();
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Cilium>
+        PARSER = new com.google.protobuf.AbstractParser<Cilium>() {
+      @java.lang.Override
+      public Cilium parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Cilium(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Cilium> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Cilium> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.Cilium getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_Cluster_descriptor;
   private static final 
@@ -13524,6 +14416,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_KMSProvider_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_Cilium_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_Cilium_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13537,7 +14434,7 @@ public final class ClusterOuterClass {
       "dex.cloud.k8s.v1\032\037google/protobuf/timest" +
       "amp.proto\032%yandex/cloud/k8s/v1/maintenan" +
       "ce.proto\032!yandex/cloud/k8s/v1/version.pr" +
-      "oto\032\035yandex/cloud/validation.proto\"\341\007\n\007C" +
+      "oto\032\035yandex/cloud/validation.proto\"\252\010\n\007C" +
       "luster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n" +
       "\ncreated_at\030\003 \001(\0132\032.google.protobuf.Time" +
       "stamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t" +
@@ -13556,49 +14453,54 @@ public final class ClusterOuterClass {
       "icy\030\020 \001(\0132\".yandex.cloud.k8s.v1.NetworkP" +
       "olicy\0226\n\014kms_provider\030\021 \001(\0132 .yandex.clo" +
       "ud.k8s.v1.KMSProvider\022\024\n\014log_group_id\030\022 " +
-      "\001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"\207\001\n\006Status\022\026\n\022STATUS_UNSPECIF" +
-      "IED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022\017\n\013" +
-      "RECONCILING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020\005" +
-      "\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\"<\n\006Health\022\026" +
-      "\n\022HEALTH_UNSPECIFIED\020\000\022\013\n\007HEALTHY\020\001\022\r\n\tU" +
-      "NHEALTHY\020\002B\022\n\020internet_gateway\"\257\003\n\006Maste" +
-      "r\0228\n\014zonal_master\030\001 \001(\0132 .yandex.cloud.k" +
-      "8s.v1.ZonalMasterH\000\022>\n\017regional_master\030\007" +
-      " \001(\0132#.yandex.cloud.k8s.v1.RegionalMaste" +
-      "rH\000\022\017\n\007version\030\002 \001(\t\0227\n\tendpoints\030\003 \001(\0132" +
-      "$.yandex.cloud.k8s.v1.MasterEndpoints\0224\n" +
-      "\013master_auth\030\004 \001(\0132\037.yandex.cloud.k8s.v1" +
-      ".MasterAuth\0226\n\014version_info\030\005 \001(\0132 .yand" +
-      "ex.cloud.k8s.v1.VersionInfo\022H\n\022maintenan" +
-      "ce_policy\030\006 \001(\0132,.yandex.cloud.k8s.v1.Ma" +
-      "sterMaintenancePolicy\022\032\n\022security_group_" +
-      "ids\030\010 \003(\tB\r\n\013master_type\",\n\nMasterAuth\022\036" +
-      "\n\026cluster_ca_certificate\030\001 \001(\t\"X\n\013ZonalM" +
-      "aster\022\017\n\007zone_id\030\001 \001(\t\022\033\n\023internal_v4_ad" +
-      "dress\030\002 \001(\t\022\033\n\023external_v4_address\030\003 \001(\t" +
-      "\"]\n\016RegionalMaster\022\021\n\tregion_id\030\001 \001(\t\022\033\n" +
-      "\023internal_v4_address\030\002 \001(\t\022\033\n\023external_v" +
-      "4_address\030\003 \001(\t\"M\n\017MasterEndpoints\022\034\n\024in" +
-      "ternal_v4_endpoint\030\001 \001(\t\022\034\n\024external_v4_" +
-      "endpoint\030\002 \001(\t\"\320\001\n\022IPAllocationPolicy\022\037\n" +
-      "\027cluster_ipv4_cidr_block\030\001 \001(\t\0226\n\030node_i" +
-      "pv4_cidr_mask_size\030\005 \001(\003B\024\372\3071\0200,24,25,26" +
-      ",27,28\022\037\n\027service_ipv4_cidr_block\030\002 \001(\t\022" +
-      "\037\n\027cluster_ipv6_cidr_block\030\006 \001(\t\022\037\n\027serv" +
-      "ice_ipv6_cidr_block\030\007 \001(\t\"s\n\027MasterMaint" +
-      "enancePolicy\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n\022ma" +
-      "intenance_window\030\002 \001(\0132&.yandex.cloud.k8" +
-      "s.v1.MaintenanceWindow\"\200\001\n\rNetworkPolicy" +
-      "\022=\n\010provider\030\001 \001(\0162+.yandex.cloud.k8s.v1" +
-      ".NetworkPolicy.Provider\"0\n\010Provider\022\030\n\024P" +
-      "ROVIDER_UNSPECIFIED\020\000\022\n\n\006CALICO\020\001\"\035\n\013KMS" +
-      "Provider\022\016\n\006key_id\030\001 \001(\t*U\n\016ReleaseChann" +
-      "el\022\037\n\033RELEASE_CHANNEL_UNSPECIFIED\020\000\022\t\n\005R" +
-      "APID\020\001\022\013\n\007REGULAR\020\002\022\n\n\006STABLE\020\003BV\n\027yande" +
-      "x.cloud.api.k8s.v1Z;github.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/k8s/v1;k8sb" +
-      "\006proto3"
+      "\001(\t\022-\n\006cilium\030\023 \001(\0132\033.yandex.cloud.k8s.v" +
+      "1.CiliumH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\"\207\001\n\006Status\022\026\n\022STATUS_U" +
+      "NSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNIN" +
+      "G\020\002\022\017\n\013RECONCILING\020\003\022\014\n\010STOPPING\020\004\022\013\n\007ST" +
+      "OPPED\020\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\"<\n\006H" +
+      "ealth\022\026\n\022HEALTH_UNSPECIFIED\020\000\022\013\n\007HEALTHY" +
+      "\020\001\022\r\n\tUNHEALTHY\020\002B\022\n\020internet_gatewayB\030\n" +
+      "\026network_implementation\"\257\003\n\006Master\0228\n\014zo" +
+      "nal_master\030\001 \001(\0132 .yandex.cloud.k8s.v1.Z" +
+      "onalMasterH\000\022>\n\017regional_master\030\007 \001(\0132#." +
+      "yandex.cloud.k8s.v1.RegionalMasterH\000\022\017\n\007" +
+      "version\030\002 \001(\t\0227\n\tendpoints\030\003 \001(\0132$.yande" +
+      "x.cloud.k8s.v1.MasterEndpoints\0224\n\013master" +
+      "_auth\030\004 \001(\0132\037.yandex.cloud.k8s.v1.Master" +
+      "Auth\0226\n\014version_info\030\005 \001(\0132 .yandex.clou" +
+      "d.k8s.v1.VersionInfo\022H\n\022maintenance_poli" +
+      "cy\030\006 \001(\0132,.yandex.cloud.k8s.v1.MasterMai" +
+      "ntenancePolicy\022\032\n\022security_group_ids\030\010 \003" +
+      "(\tB\r\n\013master_type\",\n\nMasterAuth\022\036\n\026clust" +
+      "er_ca_certificate\030\001 \001(\t\"X\n\013ZonalMaster\022\017" +
+      "\n\007zone_id\030\001 \001(\t\022\033\n\023internal_v4_address\030\002" +
+      " \001(\t\022\033\n\023external_v4_address\030\003 \001(\t\"]\n\016Reg" +
+      "ionalMaster\022\021\n\tregion_id\030\001 \001(\t\022\033\n\023intern" +
+      "al_v4_address\030\002 \001(\t\022\033\n\023external_v4_addre" +
+      "ss\030\003 \001(\t\"M\n\017MasterEndpoints\022\034\n\024internal_" +
+      "v4_endpoint\030\001 \001(\t\022\034\n\024external_v4_endpoin" +
+      "t\030\002 \001(\t\"\320\001\n\022IPAllocationPolicy\022\037\n\027cluste" +
+      "r_ipv4_cidr_block\030\001 \001(\t\0226\n\030node_ipv4_cid" +
+      "r_mask_size\030\005 \001(\003B\024\372\3071\0200,24,25,26,27,28\022" +
+      "\037\n\027service_ipv4_cidr_block\030\002 \001(\t\022\037\n\027clus" +
+      "ter_ipv6_cidr_block\030\006 \001(\t\022\037\n\027service_ipv" +
+      "6_cidr_block\030\007 \001(\t\"s\n\027MasterMaintenanceP" +
+      "olicy\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n\022maintenan" +
+      "ce_window\030\002 \001(\0132&.yandex.cloud.k8s.v1.Ma" +
+      "intenanceWindow\"\200\001\n\rNetworkPolicy\022=\n\010pro" +
+      "vider\030\001 \001(\0162+.yandex.cloud.k8s.v1.Networ" +
+      "kPolicy.Provider\"0\n\010Provider\022\030\n\024PROVIDER" +
+      "_UNSPECIFIED\020\000\022\n\n\006CALICO\020\001\"\035\n\013KMSProvide" +
+      "r\022\016\n\006key_id\030\001 \001(\t\"\200\001\n\006Cilium\022=\n\014routing_" +
+      "mode\030\001 \001(\0162\'.yandex.cloud.k8s.v1.Cilium." +
+      "RoutingMode\"7\n\013RoutingMode\022\034\n\030ROUTING_MO" +
+      "DE_UNSPECIFIED\020\000\022\n\n\006TUNNEL\020\001*U\n\016ReleaseC" +
+      "hannel\022\037\n\033RELEASE_CHANNEL_UNSPECIFIED\020\000\022" +
+      "\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022\n\n\006STABLE\020\003BV\n\027y" +
+      "andex.cloud.api.k8s.v1Z;github.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/k8s/v1;" +
+      "k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13621,7 +14523,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_k8s_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Health", "NetworkId", "Master", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "KmsProvider", "LogGroupId", "InternetGateway", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Health", "NetworkId", "Master", "IpAllocationPolicy", "GatewayIpv4Address", "ServiceAccountId", "NodeServiceAccountId", "ReleaseChannel", "NetworkPolicy", "KmsProvider", "LogGroupId", "Cilium", "InternetGateway", "NetworkImplementation", });
     internal_static_yandex_cloud_k8s_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_k8s_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_k8s_v1_Cluster_LabelsEntry_fieldAccessorTable = new
@@ -13682,6 +14584,12 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_KMSProvider_descriptor,
         new java.lang.String[] { "KeyId", });
+    internal_static_yandex_cloud_k8s_v1_Cilium_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_k8s_v1_Cilium_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_Cilium_descriptor,
+        new java.lang.String[] { "RoutingMode", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

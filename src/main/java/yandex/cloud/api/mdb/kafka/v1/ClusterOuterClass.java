@@ -9856,6 +9856,56 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getAutoCreateTopicsEnableOrBuilder();
+
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    boolean hasNumPartitions();
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    com.google.protobuf.Int64Value getNumPartitions();
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getNumPartitionsOrBuilder();
+
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    boolean hasDefaultReplicationFactor();
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    com.google.protobuf.Int64Value getDefaultReplicationFactor();
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getDefaultReplicationFactorOrBuilder();
   }
   /**
    * <pre>
@@ -10059,6 +10109,32 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(autoCreateTopicsEnable_);
                 autoCreateTopicsEnable_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (numPartitions_ != null) {
+                subBuilder = numPartitions_.toBuilder();
+              }
+              numPartitions_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(numPartitions_);
+                numPartitions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (defaultReplicationFactor_ != null) {
+                subBuilder = defaultReplicationFactor_.toBuilder();
+              }
+              defaultReplicationFactor_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(defaultReplicationFactor_);
+                defaultReplicationFactor_ = subBuilder.buildPartial();
               }
 
               break;
@@ -10549,6 +10625,72 @@ public final class ClusterOuterClass {
       return getAutoCreateTopicsEnable();
     }
 
+    public static final int NUM_PARTITIONS_FIELD_NUMBER = 14;
+    private com.google.protobuf.Int64Value numPartitions_;
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    public boolean hasNumPartitions() {
+      return numPartitions_ != null;
+    }
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    public com.google.protobuf.Int64Value getNumPartitions() {
+      return numPartitions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : numPartitions_;
+    }
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getNumPartitionsOrBuilder() {
+      return getNumPartitions();
+    }
+
+    public static final int DEFAULT_REPLICATION_FACTOR_FIELD_NUMBER = 15;
+    private com.google.protobuf.Int64Value defaultReplicationFactor_;
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    public boolean hasDefaultReplicationFactor() {
+      return defaultReplicationFactor_ != null;
+    }
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    public com.google.protobuf.Int64Value getDefaultReplicationFactor() {
+      return defaultReplicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : defaultReplicationFactor_;
+    }
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getDefaultReplicationFactorOrBuilder() {
+      return getDefaultReplicationFactor();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10601,6 +10743,12 @@ public final class ClusterOuterClass {
       }
       if (autoCreateTopicsEnable_ != null) {
         output.writeMessage(13, getAutoCreateTopicsEnable());
+      }
+      if (numPartitions_ != null) {
+        output.writeMessage(14, getNumPartitions());
+      }
+      if (defaultReplicationFactor_ != null) {
+        output.writeMessage(15, getDefaultReplicationFactor());
       }
       unknownFields.writeTo(output);
     }
@@ -10662,6 +10810,14 @@ public final class ClusterOuterClass {
       if (autoCreateTopicsEnable_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getAutoCreateTopicsEnable());
+      }
+      if (numPartitions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getNumPartitions());
+      }
+      if (defaultReplicationFactor_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getDefaultReplicationFactor());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10740,6 +10896,16 @@ public final class ClusterOuterClass {
         result = result && getAutoCreateTopicsEnable()
             .equals(other.getAutoCreateTopicsEnable());
       }
+      result = result && (hasNumPartitions() == other.hasNumPartitions());
+      if (hasNumPartitions()) {
+        result = result && getNumPartitions()
+            .equals(other.getNumPartitions());
+      }
+      result = result && (hasDefaultReplicationFactor() == other.hasDefaultReplicationFactor());
+      if (hasDefaultReplicationFactor()) {
+        result = result && getDefaultReplicationFactor()
+            .equals(other.getDefaultReplicationFactor());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -10800,6 +10966,14 @@ public final class ClusterOuterClass {
       if (hasAutoCreateTopicsEnable()) {
         hash = (37 * hash) + AUTO_CREATE_TOPICS_ENABLE_FIELD_NUMBER;
         hash = (53 * hash) + getAutoCreateTopicsEnable().hashCode();
+      }
+      if (hasNumPartitions()) {
+        hash = (37 * hash) + NUM_PARTITIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getNumPartitions().hashCode();
+      }
+      if (hasDefaultReplicationFactor()) {
+        hash = (37 * hash) + DEFAULT_REPLICATION_FACTOR_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaultReplicationFactor().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11012,6 +11186,18 @@ public final class ClusterOuterClass {
           autoCreateTopicsEnable_ = null;
           autoCreateTopicsEnableBuilder_ = null;
         }
+        if (numPartitionsBuilder_ == null) {
+          numPartitions_ = null;
+        } else {
+          numPartitions_ = null;
+          numPartitionsBuilder_ = null;
+        }
+        if (defaultReplicationFactorBuilder_ == null) {
+          defaultReplicationFactor_ = null;
+        } else {
+          defaultReplicationFactor_ = null;
+          defaultReplicationFactorBuilder_ = null;
+        }
         return this;
       }
 
@@ -11099,6 +11285,16 @@ public final class ClusterOuterClass {
         } else {
           result.autoCreateTopicsEnable_ = autoCreateTopicsEnableBuilder_.build();
         }
+        if (numPartitionsBuilder_ == null) {
+          result.numPartitions_ = numPartitions_;
+        } else {
+          result.numPartitions_ = numPartitionsBuilder_.build();
+        }
+        if (defaultReplicationFactorBuilder_ == null) {
+          result.defaultReplicationFactor_ = defaultReplicationFactor_;
+        } else {
+          result.defaultReplicationFactor_ = defaultReplicationFactorBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -11185,6 +11381,12 @@ public final class ClusterOuterClass {
         }
         if (other.hasAutoCreateTopicsEnable()) {
           mergeAutoCreateTopicsEnable(other.getAutoCreateTopicsEnable());
+        }
+        if (other.hasNumPartitions()) {
+          mergeNumPartitions(other.getNumPartitions());
+        }
+        if (other.hasDefaultReplicationFactor()) {
+          mergeDefaultReplicationFactor(other.getDefaultReplicationFactor());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13214,6 +13416,312 @@ public final class ClusterOuterClass {
         }
         return autoCreateTopicsEnableBuilder_;
       }
+
+      private com.google.protobuf.Int64Value numPartitions_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> numPartitionsBuilder_;
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public boolean hasNumPartitions() {
+        return numPartitionsBuilder_ != null || numPartitions_ != null;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public com.google.protobuf.Int64Value getNumPartitions() {
+        if (numPartitionsBuilder_ == null) {
+          return numPartitions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : numPartitions_;
+        } else {
+          return numPartitionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public Builder setNumPartitions(com.google.protobuf.Int64Value value) {
+        if (numPartitionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          numPartitions_ = value;
+          onChanged();
+        } else {
+          numPartitionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public Builder setNumPartitions(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (numPartitionsBuilder_ == null) {
+          numPartitions_ = builderForValue.build();
+          onChanged();
+        } else {
+          numPartitionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public Builder mergeNumPartitions(com.google.protobuf.Int64Value value) {
+        if (numPartitionsBuilder_ == null) {
+          if (numPartitions_ != null) {
+            numPartitions_ =
+              com.google.protobuf.Int64Value.newBuilder(numPartitions_).mergeFrom(value).buildPartial();
+          } else {
+            numPartitions_ = value;
+          }
+          onChanged();
+        } else {
+          numPartitionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public Builder clearNumPartitions() {
+        if (numPartitionsBuilder_ == null) {
+          numPartitions_ = null;
+          onChanged();
+        } else {
+          numPartitions_ = null;
+          numPartitionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getNumPartitionsBuilder() {
+        
+        onChanged();
+        return getNumPartitionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getNumPartitionsOrBuilder() {
+        if (numPartitionsBuilder_ != null) {
+          return numPartitionsBuilder_.getMessageOrBuilder();
+        } else {
+          return numPartitions_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : numPartitions_;
+        }
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getNumPartitionsFieldBuilder() {
+        if (numPartitionsBuilder_ == null) {
+          numPartitionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getNumPartitions(),
+                  getParentForChildren(),
+                  isClean());
+          numPartitions_ = null;
+        }
+        return numPartitionsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value defaultReplicationFactor_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> defaultReplicationFactorBuilder_;
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public boolean hasDefaultReplicationFactor() {
+        return defaultReplicationFactorBuilder_ != null || defaultReplicationFactor_ != null;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public com.google.protobuf.Int64Value getDefaultReplicationFactor() {
+        if (defaultReplicationFactorBuilder_ == null) {
+          return defaultReplicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : defaultReplicationFactor_;
+        } else {
+          return defaultReplicationFactorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public Builder setDefaultReplicationFactor(com.google.protobuf.Int64Value value) {
+        if (defaultReplicationFactorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          defaultReplicationFactor_ = value;
+          onChanged();
+        } else {
+          defaultReplicationFactorBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public Builder setDefaultReplicationFactor(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (defaultReplicationFactorBuilder_ == null) {
+          defaultReplicationFactor_ = builderForValue.build();
+          onChanged();
+        } else {
+          defaultReplicationFactorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public Builder mergeDefaultReplicationFactor(com.google.protobuf.Int64Value value) {
+        if (defaultReplicationFactorBuilder_ == null) {
+          if (defaultReplicationFactor_ != null) {
+            defaultReplicationFactor_ =
+              com.google.protobuf.Int64Value.newBuilder(defaultReplicationFactor_).mergeFrom(value).buildPartial();
+          } else {
+            defaultReplicationFactor_ = value;
+          }
+          onChanged();
+        } else {
+          defaultReplicationFactorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public Builder clearDefaultReplicationFactor() {
+        if (defaultReplicationFactorBuilder_ == null) {
+          defaultReplicationFactor_ = null;
+          onChanged();
+        } else {
+          defaultReplicationFactor_ = null;
+          defaultReplicationFactorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getDefaultReplicationFactorBuilder() {
+        
+        onChanged();
+        return getDefaultReplicationFactorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getDefaultReplicationFactorOrBuilder() {
+        if (defaultReplicationFactorBuilder_ != null) {
+          return defaultReplicationFactorBuilder_.getMessageOrBuilder();
+        } else {
+          return defaultReplicationFactor_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : defaultReplicationFactor_;
+        }
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getDefaultReplicationFactorFieldBuilder() {
+        if (defaultReplicationFactorBuilder_ == null) {
+          defaultReplicationFactorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getDefaultReplicationFactor(),
+                  getParentForChildren(),
+                  isClean());
+          defaultReplicationFactor_ = null;
+        }
+        return defaultReplicationFactorBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13620,6 +14128,56 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.BoolValue auto_create_topics_enable = 13;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getAutoCreateTopicsEnableOrBuilder();
+
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    boolean hasNumPartitions();
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    com.google.protobuf.Int64Value getNumPartitions();
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getNumPartitionsOrBuilder();
+
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    boolean hasDefaultReplicationFactor();
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    com.google.protobuf.Int64Value getDefaultReplicationFactor();
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getDefaultReplicationFactorOrBuilder();
   }
   /**
    * <pre>
@@ -13823,6 +14381,32 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(autoCreateTopicsEnable_);
                 autoCreateTopicsEnable_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (numPartitions_ != null) {
+                subBuilder = numPartitions_.toBuilder();
+              }
+              numPartitions_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(numPartitions_);
+                numPartitions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (defaultReplicationFactor_ != null) {
+                subBuilder = defaultReplicationFactor_.toBuilder();
+              }
+              defaultReplicationFactor_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(defaultReplicationFactor_);
+                defaultReplicationFactor_ = subBuilder.buildPartial();
               }
 
               break;
@@ -14313,6 +14897,72 @@ public final class ClusterOuterClass {
       return getAutoCreateTopicsEnable();
     }
 
+    public static final int NUM_PARTITIONS_FIELD_NUMBER = 14;
+    private com.google.protobuf.Int64Value numPartitions_;
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    public boolean hasNumPartitions() {
+      return numPartitions_ != null;
+    }
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    public com.google.protobuf.Int64Value getNumPartitions() {
+      return numPartitions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : numPartitions_;
+    }
+    /**
+     * <pre>
+     * Default number of partitions per topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getNumPartitionsOrBuilder() {
+      return getNumPartitions();
+    }
+
+    public static final int DEFAULT_REPLICATION_FACTOR_FIELD_NUMBER = 15;
+    private com.google.protobuf.Int64Value defaultReplicationFactor_;
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    public boolean hasDefaultReplicationFactor() {
+      return defaultReplicationFactor_ != null;
+    }
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    public com.google.protobuf.Int64Value getDefaultReplicationFactor() {
+      return defaultReplicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : defaultReplicationFactor_;
+    }
+    /**
+     * <pre>
+     * Default replication factor of the topic on the whole cluster
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getDefaultReplicationFactorOrBuilder() {
+      return getDefaultReplicationFactor();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -14365,6 +15015,12 @@ public final class ClusterOuterClass {
       }
       if (autoCreateTopicsEnable_ != null) {
         output.writeMessage(13, getAutoCreateTopicsEnable());
+      }
+      if (numPartitions_ != null) {
+        output.writeMessage(14, getNumPartitions());
+      }
+      if (defaultReplicationFactor_ != null) {
+        output.writeMessage(15, getDefaultReplicationFactor());
       }
       unknownFields.writeTo(output);
     }
@@ -14426,6 +15082,14 @@ public final class ClusterOuterClass {
       if (autoCreateTopicsEnable_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getAutoCreateTopicsEnable());
+      }
+      if (numPartitions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getNumPartitions());
+      }
+      if (defaultReplicationFactor_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getDefaultReplicationFactor());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -14504,6 +15168,16 @@ public final class ClusterOuterClass {
         result = result && getAutoCreateTopicsEnable()
             .equals(other.getAutoCreateTopicsEnable());
       }
+      result = result && (hasNumPartitions() == other.hasNumPartitions());
+      if (hasNumPartitions()) {
+        result = result && getNumPartitions()
+            .equals(other.getNumPartitions());
+      }
+      result = result && (hasDefaultReplicationFactor() == other.hasDefaultReplicationFactor());
+      if (hasDefaultReplicationFactor()) {
+        result = result && getDefaultReplicationFactor()
+            .equals(other.getDefaultReplicationFactor());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -14564,6 +15238,14 @@ public final class ClusterOuterClass {
       if (hasAutoCreateTopicsEnable()) {
         hash = (37 * hash) + AUTO_CREATE_TOPICS_ENABLE_FIELD_NUMBER;
         hash = (53 * hash) + getAutoCreateTopicsEnable().hashCode();
+      }
+      if (hasNumPartitions()) {
+        hash = (37 * hash) + NUM_PARTITIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getNumPartitions().hashCode();
+      }
+      if (hasDefaultReplicationFactor()) {
+        hash = (37 * hash) + DEFAULT_REPLICATION_FACTOR_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaultReplicationFactor().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -14776,6 +15458,18 @@ public final class ClusterOuterClass {
           autoCreateTopicsEnable_ = null;
           autoCreateTopicsEnableBuilder_ = null;
         }
+        if (numPartitionsBuilder_ == null) {
+          numPartitions_ = null;
+        } else {
+          numPartitions_ = null;
+          numPartitionsBuilder_ = null;
+        }
+        if (defaultReplicationFactorBuilder_ == null) {
+          defaultReplicationFactor_ = null;
+        } else {
+          defaultReplicationFactor_ = null;
+          defaultReplicationFactorBuilder_ = null;
+        }
         return this;
       }
 
@@ -14863,6 +15557,16 @@ public final class ClusterOuterClass {
         } else {
           result.autoCreateTopicsEnable_ = autoCreateTopicsEnableBuilder_.build();
         }
+        if (numPartitionsBuilder_ == null) {
+          result.numPartitions_ = numPartitions_;
+        } else {
+          result.numPartitions_ = numPartitionsBuilder_.build();
+        }
+        if (defaultReplicationFactorBuilder_ == null) {
+          result.defaultReplicationFactor_ = defaultReplicationFactor_;
+        } else {
+          result.defaultReplicationFactor_ = defaultReplicationFactorBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -14949,6 +15653,12 @@ public final class ClusterOuterClass {
         }
         if (other.hasAutoCreateTopicsEnable()) {
           mergeAutoCreateTopicsEnable(other.getAutoCreateTopicsEnable());
+        }
+        if (other.hasNumPartitions()) {
+          mergeNumPartitions(other.getNumPartitions());
+        }
+        if (other.hasDefaultReplicationFactor()) {
+          mergeDefaultReplicationFactor(other.getDefaultReplicationFactor());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -16977,6 +17687,312 @@ public final class ClusterOuterClass {
           autoCreateTopicsEnable_ = null;
         }
         return autoCreateTopicsEnableBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value numPartitions_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> numPartitionsBuilder_;
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public boolean hasNumPartitions() {
+        return numPartitionsBuilder_ != null || numPartitions_ != null;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public com.google.protobuf.Int64Value getNumPartitions() {
+        if (numPartitionsBuilder_ == null) {
+          return numPartitions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : numPartitions_;
+        } else {
+          return numPartitionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public Builder setNumPartitions(com.google.protobuf.Int64Value value) {
+        if (numPartitionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          numPartitions_ = value;
+          onChanged();
+        } else {
+          numPartitionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public Builder setNumPartitions(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (numPartitionsBuilder_ == null) {
+          numPartitions_ = builderForValue.build();
+          onChanged();
+        } else {
+          numPartitionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public Builder mergeNumPartitions(com.google.protobuf.Int64Value value) {
+        if (numPartitionsBuilder_ == null) {
+          if (numPartitions_ != null) {
+            numPartitions_ =
+              com.google.protobuf.Int64Value.newBuilder(numPartitions_).mergeFrom(value).buildPartial();
+          } else {
+            numPartitions_ = value;
+          }
+          onChanged();
+        } else {
+          numPartitionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public Builder clearNumPartitions() {
+        if (numPartitionsBuilder_ == null) {
+          numPartitions_ = null;
+          onChanged();
+        } else {
+          numPartitions_ = null;
+          numPartitionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getNumPartitionsBuilder() {
+        
+        onChanged();
+        return getNumPartitionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getNumPartitionsOrBuilder() {
+        if (numPartitionsBuilder_ != null) {
+          return numPartitionsBuilder_.getMessageOrBuilder();
+        } else {
+          return numPartitions_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : numPartitions_;
+        }
+      }
+      /**
+       * <pre>
+       * Default number of partitions per topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value num_partitions = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getNumPartitionsFieldBuilder() {
+        if (numPartitionsBuilder_ == null) {
+          numPartitionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getNumPartitions(),
+                  getParentForChildren(),
+                  isClean());
+          numPartitions_ = null;
+        }
+        return numPartitionsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value defaultReplicationFactor_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> defaultReplicationFactorBuilder_;
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public boolean hasDefaultReplicationFactor() {
+        return defaultReplicationFactorBuilder_ != null || defaultReplicationFactor_ != null;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public com.google.protobuf.Int64Value getDefaultReplicationFactor() {
+        if (defaultReplicationFactorBuilder_ == null) {
+          return defaultReplicationFactor_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : defaultReplicationFactor_;
+        } else {
+          return defaultReplicationFactorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public Builder setDefaultReplicationFactor(com.google.protobuf.Int64Value value) {
+        if (defaultReplicationFactorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          defaultReplicationFactor_ = value;
+          onChanged();
+        } else {
+          defaultReplicationFactorBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public Builder setDefaultReplicationFactor(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (defaultReplicationFactorBuilder_ == null) {
+          defaultReplicationFactor_ = builderForValue.build();
+          onChanged();
+        } else {
+          defaultReplicationFactorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public Builder mergeDefaultReplicationFactor(com.google.protobuf.Int64Value value) {
+        if (defaultReplicationFactorBuilder_ == null) {
+          if (defaultReplicationFactor_ != null) {
+            defaultReplicationFactor_ =
+              com.google.protobuf.Int64Value.newBuilder(defaultReplicationFactor_).mergeFrom(value).buildPartial();
+          } else {
+            defaultReplicationFactor_ = value;
+          }
+          onChanged();
+        } else {
+          defaultReplicationFactorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public Builder clearDefaultReplicationFactor() {
+        if (defaultReplicationFactorBuilder_ == null) {
+          defaultReplicationFactor_ = null;
+          onChanged();
+        } else {
+          defaultReplicationFactor_ = null;
+          defaultReplicationFactorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getDefaultReplicationFactorBuilder() {
+        
+        onChanged();
+        return getDefaultReplicationFactorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getDefaultReplicationFactorOrBuilder() {
+        if (defaultReplicationFactorBuilder_ != null) {
+          return defaultReplicationFactorBuilder_.getMessageOrBuilder();
+        } else {
+          return defaultReplicationFactor_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : defaultReplicationFactor_;
+        }
+      }
+      /**
+       * <pre>
+       * Default replication factor of the topic on the whole cluster
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value default_replication_factor = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getDefaultReplicationFactorFieldBuilder() {
+        if (defaultReplicationFactorBuilder_ == null) {
+          defaultReplicationFactorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getDefaultReplicationFactor(),
+                  getParentForChildren(),
+                  isClean());
+          defaultReplicationFactor_ = null;
+        }
+        return defaultReplicationFactorBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -19122,7 +20138,7 @@ public final class ClusterOuterClass {
       "\0132$.yandex.cloud.mdb.kafka.v1.Resources\"" +
       "P\n\tResources\022\032\n\022resource_preset_id\030\001 \001(\t" +
       "\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(" +
-      "\t\"\256\006\n\016KafkaConfig2_1\022D\n\020compression_type" +
+      "\t\"\244\007\n\016KafkaConfig2_1\022D\n\020compression_type" +
       "\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1.Compr" +
       "essionType\022@\n\033log_flush_interval_message" +
       "s\030\002 \001(\0132\033.google.protobuf.Int64Value\022:\n\025" +
@@ -19142,40 +20158,46 @@ public final class ClusterOuterClass {
       "nt64Value\022@\n\033socket_receive_buffer_bytes" +
       "\030\014 \001(\0132\033.google.protobuf.Int64Value\022=\n\031a" +
       "uto_create_topics_enable\030\r \001(\0132\032.google." +
-      "protobuf.BoolValue\"\256\006\n\016KafkaConfig2_6\022D\n" +
-      "\020compression_type\030\001 \001(\0162*.yandex.cloud.m" +
-      "db.kafka.v1.CompressionType\022@\n\033log_flush" +
-      "_interval_messages\030\002 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022:\n\025log_flush_interval_ms\030\003" +
-      " \001(\0132\033.google.protobuf.Int64Value\022D\n\037log" +
-      "_flush_scheduler_interval_ms\030\004 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\0228\n\023log_retention" +
-      "_bytes\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\0228\n\023log_retention_hours\030\006 \001(\0132\033.google." +
-      "protobuf.Int64Value\022:\n\025log_retention_min" +
-      "utes\030\007 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "5\n\020log_retention_ms\030\010 \001(\0132\033.google.proto" +
-      "buf.Int64Value\0226\n\021log_segment_bytes\030\t \001(" +
-      "\0132\033.google.protobuf.Int64Value\0223\n\017log_pr" +
-      "eallocate\030\n \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033." +
-      "google.protobuf.Int64Value\022@\n\033socket_rec" +
-      "eive_buffer_bytes\030\014 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022=\n\031auto_create_topics_enabl" +
-      "e\030\r \001(\0132\032.google.protobuf.BoolValue\"\375\002\n\004" +
-      "Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017" +
-      "\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.yandex.c" +
-      "loud.mdb.kafka.v1.Host.Role\0227\n\tresources" +
-      "\030\005 \001(\0132$.yandex.cloud.mdb.kafka.v1.Resou" +
-      "rces\0226\n\006health\030\006 \001(\0162&.yandex.cloud.mdb." +
-      "kafka.v1.Host.Health\022\021\n\tsubnet_id\030\010 \001(\t\022" +
-      "\030\n\020assign_public_ip\030\t \001(\010\"6\n\004Role\022\024\n\020ROL" +
-      "E_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPER\020" +
-      "\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004D" +
-      "EAD\020\002\022\014\n\010DEGRADED\020\003Bd\n\035yandex.cloud.api." +
-      "mdb.kafka.v1ZCgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/mdb/kafka/v1;kafk" +
-      "ab\006proto3"
+      "protobuf.BoolValue\0223\n\016num_partitions\030\016 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022?\n\032defau" +
+      "lt_replication_factor\030\017 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\"\244\007\n\016KafkaConfig2_6\022D\n\020c" +
+      "ompression_type\030\001 \001(\0162*.yandex.cloud.mdb" +
+      ".kafka.v1.CompressionType\022@\n\033log_flush_i" +
+      "nterval_messages\030\002 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022:\n\025log_flush_interval_ms\030\003 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022D\n\037log_f" +
+      "lush_scheduler_interval_ms\030\004 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\0228\n\023log_retention_b" +
+      "ytes\030\005 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "8\n\023log_retention_hours\030\006 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022:\n\025log_retention_minut" +
+      "es\030\007 \001(\0132\033.google.protobuf.Int64Value\0225\n" +
+      "\020log_retention_ms\030\010 \001(\0132\033.google.protobu" +
+      "f.Int64Value\0226\n\021log_segment_bytes\030\t \001(\0132" +
+      "\033.google.protobuf.Int64Value\0223\n\017log_prea" +
+      "llocate\030\n \001(\0132\032.google.protobuf.BoolValu" +
+      "e\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022@\n\033socket_recei" +
+      "ve_buffer_bytes\030\014 \001(\0132\033.google.protobuf." +
+      "Int64Value\022=\n\031auto_create_topics_enable\030" +
+      "\r \001(\0132\032.google.protobuf.BoolValue\0223\n\016num" +
+      "_partitions\030\016 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022?\n\032default_replication_factor\030\017 \001" +
+      "(\0132\033.google.protobuf.Int64Value\"\375\002\n\004Host" +
+      "\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zo" +
+      "ne_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.yandex.cloud" +
+      ".mdb.kafka.v1.Host.Role\0227\n\tresources\030\005 \001" +
+      "(\0132$.yandex.cloud.mdb.kafka.v1.Resources" +
+      "\0226\n\006health\030\006 \001(\0162&.yandex.cloud.mdb.kafk" +
+      "a.v1.Host.Health\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020a" +
+      "ssign_public_ip\030\t \001(\010\"6\n\004Role\022\024\n\020ROLE_UN" +
+      "SPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPER\020\002\"8\n" +
+      "\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020" +
+      "\002\022\014\n\010DEGRADED\020\003Bd\n\035yandex.cloud.api.mdb." +
+      "kafka.v1ZCgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/mdb/kafka/v1;kafkab\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19239,13 +20261,13 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_1_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_1_descriptor,
-        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", });
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", });
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_KafkaConfig2_6_descriptor,
-        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", });
+        new java.lang.String[] { "CompressionType", "LogFlushIntervalMessages", "LogFlushIntervalMs", "LogFlushSchedulerIntervalMs", "LogRetentionBytes", "LogRetentionHours", "LogRetentionMinutes", "LogRetentionMs", "LogSegmentBytes", "LogPreallocate", "SocketSendBufferBytes", "SocketReceiveBufferBytes", "AutoCreateTopicsEnable", "NumPartitions", "DefaultReplicationFactor", });
     internal_static_yandex_cloud_mdb_kafka_v1_Host_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_kafka_v1_Host_fieldAccessorTable = new
