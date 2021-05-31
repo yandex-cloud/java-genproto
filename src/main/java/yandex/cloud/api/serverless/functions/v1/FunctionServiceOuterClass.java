@@ -28067,7 +28067,7 @@ public final class FunctionServiceOuterClass {
      * To get the history of version tags make a [FunctionService.ListTagHistory] request.
      * </pre>
      *
-     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     java.lang.String getTag();
     /**
@@ -28076,7 +28076,7 @@ public final class FunctionServiceOuterClass {
      * To get the history of version tags make a [FunctionService.ListTagHistory] request.
      * </pre>
      *
-     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     com.google.protobuf.ByteString
         getTagBytes();
@@ -28250,7 +28250,7 @@ public final class FunctionServiceOuterClass {
      * To get the history of version tags make a [FunctionService.ListTagHistory] request.
      * </pre>
      *
-     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     public java.lang.String getTag() {
       java.lang.Object ref = tag_;
@@ -28270,7 +28270,7 @@ public final class FunctionServiceOuterClass {
      * To get the history of version tags make a [FunctionService.ListTagHistory] request.
      * </pre>
      *
-     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     public com.google.protobuf.ByteString
         getTagBytes() {
@@ -28771,7 +28771,7 @@ public final class FunctionServiceOuterClass {
        * To get the history of version tags make a [FunctionService.ListTagHistory] request.
        * </pre>
        *
-       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public java.lang.String getTag() {
         java.lang.Object ref = tag_;
@@ -28791,7 +28791,7 @@ public final class FunctionServiceOuterClass {
        * To get the history of version tags make a [FunctionService.ListTagHistory] request.
        * </pre>
        *
-       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public com.google.protobuf.ByteString
           getTagBytes() {
@@ -28812,7 +28812,7 @@ public final class FunctionServiceOuterClass {
        * To get the history of version tags make a [FunctionService.ListTagHistory] request.
        * </pre>
        *
-       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public Builder setTag(
           java.lang.String value) {
@@ -28830,7 +28830,7 @@ public final class FunctionServiceOuterClass {
        * To get the history of version tags make a [FunctionService.ListTagHistory] request.
        * </pre>
        *
-       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public Builder clearTag() {
         
@@ -28844,7 +28844,7 @@ public final class FunctionServiceOuterClass {
        * To get the history of version tags make a [FunctionService.ListTagHistory] request.
        * </pre>
        *
-       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public Builder setTagBytes(
           com.google.protobuf.ByteString value) {
@@ -29608,7 +29608,7 @@ public final class FunctionServiceOuterClass {
      * To get the history of version tags make a [FunctionService.ListTagHistory] request.
      * </pre>
      *
-     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     java.lang.String getTag();
     /**
@@ -29617,7 +29617,7 @@ public final class FunctionServiceOuterClass {
      * To get the history of version tags make a [FunctionService.ListTagHistory] request.
      * </pre>
      *
-     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     com.google.protobuf.ByteString
         getTagBytes();
@@ -29759,7 +29759,7 @@ public final class FunctionServiceOuterClass {
      * To get the history of version tags make a [FunctionService.ListTagHistory] request.
      * </pre>
      *
-     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     public java.lang.String getTag() {
       java.lang.Object ref = tag_;
@@ -29779,7 +29779,7 @@ public final class FunctionServiceOuterClass {
      * To get the history of version tags make a [FunctionService.ListTagHistory] request.
      * </pre>
      *
-     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+     * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
      */
     public com.google.protobuf.ByteString
         getTagBytes() {
@@ -30216,7 +30216,7 @@ public final class FunctionServiceOuterClass {
        * To get the history of version tags make a [FunctionService.ListTagHistory] request.
        * </pre>
        *
-       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public java.lang.String getTag() {
         java.lang.Object ref = tag_;
@@ -30236,7 +30236,7 @@ public final class FunctionServiceOuterClass {
        * To get the history of version tags make a [FunctionService.ListTagHistory] request.
        * </pre>
        *
-       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public com.google.protobuf.ByteString
           getTagBytes() {
@@ -30257,7 +30257,7 @@ public final class FunctionServiceOuterClass {
        * To get the history of version tags make a [FunctionService.ListTagHistory] request.
        * </pre>
        *
-       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public Builder setTag(
           java.lang.String value) {
@@ -30275,7 +30275,7 @@ public final class FunctionServiceOuterClass {
        * To get the history of version tags make a [FunctionService.ListTagHistory] request.
        * </pre>
        *
-       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public Builder clearTag() {
         
@@ -30289,7 +30289,7 @@ public final class FunctionServiceOuterClass {
        * To get the history of version tags make a [FunctionService.ListTagHistory] request.
        * </pre>
        *
-       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*"];</code>
+       * <code>string tag = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-z][-_0-9a-z]*|[$]latest"];</code>
        */
       public Builder setTagBytes(
           com.google.protobuf.ByteString value) {
@@ -31243,122 +31243,122 @@ public final class FunctionServiceOuterClass {
       "n\030\003 \001(\tB\t\212\3101\005<=100\"\205\001\n\033ListScalingPolici" +
       "esResponse\022M\n\020scaling_policies\030\001 \003(\01323.y" +
       "andex.cloud.serverless.functions.v1.Scal" +
-      "ingPolicy\022\027\n\017next_page_token\030\002 \001(\t\"\256\001\n\027S" +
+      "ingPolicy\022\027\n\017next_page_token\030\002 \001(\t\"\270\001\n\027S" +
       "etScalingPolicyRequest\022\031\n\013function_id\030\001 " +
-      "\001(\tB\004\350\3071\001\022%\n\003tag\030\002 \001(\tB\030\350\3071\001\362\3071\020[a-z][-_" +
-      "0-9a-z]*\022(\n\024zone_instances_limit\030\005 \001(\003B\n" +
-      "\372\3071\0060-1000\022\'\n\023zone_requests_limit\030\006 \001(\003B" +
-      "\n\372\3071\0060-1000\"/\n\030SetScalingPolicyMetadata\022" +
-      "\023\n\013function_id\030\001 \001(\t\"^\n\032RemoveScalingPol" +
-      "icyRequest\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022%\n" +
-      "\003tag\030\002 \001(\tB\030\350\3071\001\362\3071\020[a-z][-_0-9a-z]*\"2\n\033" +
-      "RemoveScalingPolicyMetadata\022\023\n\013function_" +
-      "id\030\001 \001(\t2\333\037\n\017FunctionService\022\236\001\n\003Get\0228.y" +
-      "andex.cloud.serverless.functions.v1.GetF" +
-      "unctionRequest\032..yandex.cloud.serverless" +
-      ".functions.v1.Function\"-\202\323\344\223\002\'\022%/functio" +
-      "ns/v1/functions/{function_id}\022\240\001\n\004List\022:" +
+      "\001(\tB\004\350\3071\001\022/\n\003tag\030\002 \001(\tB\"\350\3071\001\362\3071\032[a-z][-_" +
+      "0-9a-z]*|[$]latest\022(\n\024zone_instances_lim" +
+      "it\030\005 \001(\003B\n\372\3071\0060-1000\022\'\n\023zone_requests_li" +
+      "mit\030\006 \001(\003B\n\372\3071\0060-1000\"/\n\030SetScalingPolic" +
+      "yMetadata\022\023\n\013function_id\030\001 \001(\t\"h\n\032Remove" +
+      "ScalingPolicyRequest\022\031\n\013function_id\030\001 \001(" +
+      "\tB\004\350\3071\001\022/\n\003tag\030\002 \001(\tB\"\350\3071\001\362\3071\032[a-z][-_0-" +
+      "9a-z]*|[$]latest\"2\n\033RemoveScalingPolicyM" +
+      "etadata\022\023\n\013function_id\030\001 \001(\t2\333\037\n\017Functio" +
+      "nService\022\236\001\n\003Get\0228.yandex.cloud.serverle" +
+      "ss.functions.v1.GetFunctionRequest\032..yan" +
+      "dex.cloud.serverless.functions.v1.Functi" +
+      "on\"-\202\323\344\223\002\'\022%/functions/v1/functions/{fun" +
+      "ction_id}\022\240\001\n\004List\022:.yandex.cloud.server" +
+      "less.functions.v1.ListFunctionsRequest\032;" +
       ".yandex.cloud.serverless.functions.v1.Li" +
-      "stFunctionsRequest\032;.yandex.cloud.server" +
-      "less.functions.v1.ListFunctionsResponse\"" +
-      "\037\202\323\344\223\002\031\022\027/functions/v1/functions\022\262\001\n\006Cre" +
-      "ate\022;.yandex.cloud.serverless.functions." +
-      "v1.CreateFunctionRequest\032!.yandex.cloud." +
-      "operation.Operation\"H\202\323\344\223\002\034\"\027/functions/" +
-      "v1/functions:\001*\262\322*\"\n\026CreateFunctionMetad" +
-      "ata\022\010Function\022\300\001\n\006Update\022;.yandex.cloud." +
-      "serverless.functions.v1.UpdateFunctionRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"V\202\323\344\223\002*2%/functions/v1/functions/{funct" +
-      "ion_id}:\001*\262\322*\"\n\026UpdateFunctionMetadata\022\010" +
-      "Function\022\312\001\n\006Delete\022;.yandex.cloud.serve" +
-      "rless.functions.v1.DeleteFunctionRequest" +
-      "\032!.yandex.cloud.operation.Operation\"`\202\323\344" +
-      "\223\002\'*%/functions/v1/functions/{function_i" +
-      "d}\262\322*/\n\026DeleteFunctionMetadata\022\025google.p" +
-      "rotobuf.Empty\022\262\001\n\nGetVersion\022?.yandex.cl" +
-      "oud.serverless.functions.v1.GetFunctionV" +
-      "ersionRequest\032-.yandex.cloud.serverless." +
-      "functions.v1.Version\"4\202\323\344\223\002.\022,/functions" +
-      "/v1/versions/{function_version_id}\022\254\001\n\017G" +
-      "etVersionByTag\022D.yandex.cloud.serverless" +
-      ".functions.v1.GetFunctionVersionByTagReq" +
-      "uest\032-.yandex.cloud.serverless.functions" +
-      ".v1.Version\"$\202\323\344\223\002\036\022\034/functions/v1/versi" +
-      "ons:byTag\022\267\001\n\014ListVersions\022B.yandex.clou" +
-      "d.serverless.functions.v1.ListFunctionsV" +
-      "ersionsRequest\032C.yandex.cloud.serverless" +
-      ".functions.v1.ListFunctionsVersionsRespo" +
-      "nse\"\036\202\323\344\223\002\030\022\026/functions/v1/versions\022\315\001\n\006" +
-      "SetTag\022;.yandex.cloud.serverless.functio" +
-      "ns.v1.SetFunctionTagRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"c\202\323\344\223\0028\"3/functio" +
-      "ns/v1/versions/{function_version_id}:set" +
-      "Tag:\001*\262\322*!\n\026SetFunctionTagMetadata\022\007Vers" +
-      "ion\022\331\001\n\tRemoveTag\022>.yandex.cloud.serverl" +
-      "ess.functions.v1.RemoveFunctionTagReques" +
-      "t\032!.yandex.cloud.operation.Operation\"i\202\323" +
-      "\344\223\002;\"6/functions/v1/versions/{function_v" +
-      "ersion_id}:removeTag:\001*\262\322*$\n\031RemoveFunct" +
-      "ionTagMetadata\022\007Version\022\325\001\n\016ListTagHisto" +
-      "ry\022C.yandex.cloud.serverless.functions.v" +
-      "1.ListFunctionTagHistoryRequest\032D.yandex" +
-      ".cloud.serverless.functions.v1.ListFunct" +
-      "ionTagHistoryResponse\"8\202\323\344\223\0022\0220/function" +
-      "s/v1/functions/{function_id}:tagHistory\022" +
-      "\305\001\n\rCreateVersion\022B.yandex.cloud.serverl" +
-      "ess.functions.v1.CreateFunctionVersionRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"M\202\323\344\223\002\033\"\026/functions/v1/versions:\001*\262\322*(\n" +
-      "\035CreateFunctionVersionMetadata\022\007Version\022" +
-      "\245\001\n\014ListRuntimes\0229.yandex.cloud.serverle" +
-      "ss.functions.v1.ListRuntimesRequest\032:.ya" +
-      "ndex.cloud.serverless.functions.v1.ListR" +
-      "untimesResponse\"\036\202\323\344\223\002\030\022\026/functions/v1/r" +
-      "untimes\022\325\001\n\016ListOperations\022C.yandex.clou" +
-      "d.serverless.functions.v1.ListFunctionOp" +
-      "erationsRequest\032D.yandex.cloud.serverles" +
-      "s.functions.v1.ListFunctionOperationsRes" +
-      "ponse\"8\202\323\344\223\0022\0220/functions/v1/functions/{" +
-      "function_id}/operations\022\267\001\n\022ListAccessBi" +
-      "ndings\022..yandex.cloud.access.ListAccessB" +
-      "indingsRequest\032/.yandex.cloud.access.Lis" +
-      "tAccessBindingsResponse\"@\202\323\344\223\002:\0228/functi" +
-      "ons/v1/functions/{resource_id}:listAcces" +
-      "sBindings\022\346\001\n\021SetAccessBindings\022-.yandex" +
-      ".cloud.access.SetAccessBindingsRequest\032!" +
-      ".yandex.cloud.operation.Operation\"\177\202\323\344\223\002" +
-      "<\"7/functions/v1/functions/{resource_id}" +
-      ":setAccessBindings:\001*\262\322*9\n access.SetAcc" +
-      "essBindingsMetadata\022\025google.protobuf.Emp" +
-      "ty\022\363\001\n\024UpdateAccessBindings\0220.yandex.clo" +
-      "ud.access.UpdateAccessBindingsRequest\032!." +
-      "yandex.cloud.operation.Operation\"\205\001\202\323\344\223\002" +
-      "?\":/functions/v1/functions/{resource_id}" +
-      ":updateAccessBindings:\001*\262\322*<\n#access.Upd" +
-      "ateAccessBindingsMetadata\022\025google.protob" +
-      "uf.Empty\022\331\001\n\023ListScalingPolicies\022@.yande" +
-      "x.cloud.serverless.functions.v1.ListScal" +
-      "ingPoliciesRequest\032A.yandex.cloud.server" +
-      "less.functions.v1.ListScalingPoliciesRes" +
-      "ponse\"=\202\323\344\223\0027\0225/functions/v1/functions/{" +
-      "function_id}/scalingPolicies\022\344\001\n\020SetScal" +
-      "ingPolicy\022=.yandex.cloud.serverless.func" +
-      "tions.v1.SetScalingPolicyRequest\032!.yande" +
-      "x.cloud.operation.Operation\"n\202\323\344\223\002;\"6/fu" +
-      "nctions/v1/functions/{function_id}:setSc" +
-      "alingPolicy:\001*\262\322*)\n\030SetScalingPolicyMeta" +
-      "data\022\rScalingPolicy\022\370\001\n\023RemoveScalingPol" +
-      "icy\022@.yandex.cloud.serverless.functions." +
-      "v1.RemoveScalingPolicyRequest\032!.yandex.c" +
-      "loud.operation.Operation\"|\202\323\344\223\002>\"9/funct" +
-      "ions/v1/functions/{function_id}:removeSc" +
-      "alingPolicy:\001*\262\322*4\n\033RemoveScalingPolicyM" +
-      "etadata\022\025google.protobuf.EmptyB~\n(yandex" +
-      ".cloud.api.serverless.functions.v1ZRgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/serverless/functions/v1;functionsb\006" +
-      "proto3"
+      "stFunctionsResponse\"\037\202\323\344\223\002\031\022\027/functions/" +
+      "v1/functions\022\262\001\n\006Create\022;.yandex.cloud.s" +
+      "erverless.functions.v1.CreateFunctionReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "H\202\323\344\223\002\034\"\027/functions/v1/functions:\001*\262\322*\"\n" +
+      "\026CreateFunctionMetadata\022\010Function\022\300\001\n\006Up" +
+      "date\022;.yandex.cloud.serverless.functions" +
+      ".v1.UpdateFunctionRequest\032!.yandex.cloud" +
+      ".operation.Operation\"V\202\323\344\223\002*2%/functions" +
+      "/v1/functions/{function_id}:\001*\262\322*\"\n\026Upda" +
+      "teFunctionMetadata\022\010Function\022\312\001\n\006Delete\022" +
+      ";.yandex.cloud.serverless.functions.v1.D" +
+      "eleteFunctionRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"`\202\323\344\223\002\'*%/functions/v1/f" +
+      "unctions/{function_id}\262\322*/\n\026DeleteFuncti" +
+      "onMetadata\022\025google.protobuf.Empty\022\262\001\n\nGe" +
+      "tVersion\022?.yandex.cloud.serverless.funct" +
+      "ions.v1.GetFunctionVersionRequest\032-.yand" +
+      "ex.cloud.serverless.functions.v1.Version" +
+      "\"4\202\323\344\223\002.\022,/functions/v1/versions/{functi" +
+      "on_version_id}\022\254\001\n\017GetVersionByTag\022D.yan" +
+      "dex.cloud.serverless.functions.v1.GetFun" +
+      "ctionVersionByTagRequest\032-.yandex.cloud." +
+      "serverless.functions.v1.Version\"$\202\323\344\223\002\036\022" +
+      "\034/functions/v1/versions:byTag\022\267\001\n\014ListVe" +
+      "rsions\022B.yandex.cloud.serverless.functio" +
+      "ns.v1.ListFunctionsVersionsRequest\032C.yan" +
+      "dex.cloud.serverless.functions.v1.ListFu" +
+      "nctionsVersionsResponse\"\036\202\323\344\223\002\030\022\026/functi" +
+      "ons/v1/versions\022\315\001\n\006SetTag\022;.yandex.clou" +
+      "d.serverless.functions.v1.SetFunctionTag" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"c\202\323\344\223\0028\"3/functions/v1/versions/{func" +
+      "tion_version_id}:setTag:\001*\262\322*!\n\026SetFunct" +
+      "ionTagMetadata\022\007Version\022\331\001\n\tRemoveTag\022>." +
+      "yandex.cloud.serverless.functions.v1.Rem" +
+      "oveFunctionTagRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"i\202\323\344\223\002;\"6/functions/v1/" +
+      "versions/{function_version_id}:removeTag" +
+      ":\001*\262\322*$\n\031RemoveFunctionTagMetadata\022\007Vers" +
+      "ion\022\325\001\n\016ListTagHistory\022C.yandex.cloud.se" +
+      "rverless.functions.v1.ListFunctionTagHis" +
+      "toryRequest\032D.yandex.cloud.serverless.fu" +
+      "nctions.v1.ListFunctionTagHistoryRespons" +
+      "e\"8\202\323\344\223\0022\0220/functions/v1/functions/{func" +
+      "tion_id}:tagHistory\022\305\001\n\rCreateVersion\022B." +
+      "yandex.cloud.serverless.functions.v1.Cre" +
+      "ateFunctionVersionRequest\032!.yandex.cloud" +
+      ".operation.Operation\"M\202\323\344\223\002\033\"\026/functions" +
+      "/v1/versions:\001*\262\322*(\n\035CreateFunctionVersi" +
+      "onMetadata\022\007Version\022\245\001\n\014ListRuntimes\0229.y" +
+      "andex.cloud.serverless.functions.v1.List" +
+      "RuntimesRequest\032:.yandex.cloud.serverles" +
+      "s.functions.v1.ListRuntimesResponse\"\036\202\323\344" +
+      "\223\002\030\022\026/functions/v1/runtimes\022\325\001\n\016ListOper" +
+      "ations\022C.yandex.cloud.serverless.functio" +
+      "ns.v1.ListFunctionOperationsRequest\032D.ya" +
+      "ndex.cloud.serverless.functions.v1.ListF" +
+      "unctionOperationsResponse\"8\202\323\344\223\0022\0220/func" +
+      "tions/v1/functions/{function_id}/operati" +
+      "ons\022\267\001\n\022ListAccessBindings\022..yandex.clou" +
+      "d.access.ListAccessBindingsRequest\032/.yan" +
+      "dex.cloud.access.ListAccessBindingsRespo" +
+      "nse\"@\202\323\344\223\002:\0228/functions/v1/functions/{re" +
+      "source_id}:listAccessBindings\022\346\001\n\021SetAcc" +
+      "essBindings\022-.yandex.cloud.access.SetAcc" +
+      "essBindingsRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"\177\202\323\344\223\002<\"7/functions/v1/fun" +
+      "ctions/{resource_id}:setAccessBindings:\001" +
+      "*\262\322*9\n access.SetAccessBindingsMetadata\022" +
+      "\025google.protobuf.Empty\022\363\001\n\024UpdateAccessB" +
+      "indings\0220.yandex.cloud.access.UpdateAcce" +
+      "ssBindingsRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"\205\001\202\323\344\223\002?\":/functions/v1/fun" +
+      "ctions/{resource_id}:updateAccessBinding" +
+      "s:\001*\262\322*<\n#access.UpdateAccessBindingsMet" +
+      "adata\022\025google.protobuf.Empty\022\331\001\n\023ListSca" +
+      "lingPolicies\022@.yandex.cloud.serverless.f" +
+      "unctions.v1.ListScalingPoliciesRequest\032A" +
+      ".yandex.cloud.serverless.functions.v1.Li" +
+      "stScalingPoliciesResponse\"=\202\323\344\223\0027\0225/func" +
+      "tions/v1/functions/{function_id}/scaling" +
+      "Policies\022\344\001\n\020SetScalingPolicy\022=.yandex.c" +
+      "loud.serverless.functions.v1.SetScalingP" +
+      "olicyRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"n\202\323\344\223\002;\"6/functions/v1/functions" +
+      "/{function_id}:setScalingPolicy:\001*\262\322*)\n\030" +
+      "SetScalingPolicyMetadata\022\rScalingPolicy\022" +
+      "\370\001\n\023RemoveScalingPolicy\022@.yandex.cloud.s" +
+      "erverless.functions.v1.RemoveScalingPoli" +
+      "cyRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"|\202\323\344\223\002>\"9/functions/v1/functions/{f" +
+      "unction_id}:removeScalingPolicy:\001*\262\322*4\n\033" +
+      "RemoveScalingPolicyMetadata\022\025google.prot" +
+      "obuf.EmptyB~\n(yandex.cloud.api.serverles" +
+      "s.functions.v1ZRgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/serverless/func" +
+      "tions/v1;functionsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

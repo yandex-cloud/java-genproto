@@ -303,6 +303,16 @@ public final class DatabaseOuterClass {
     com.google.protobuf.ByteString
         getDocumentApiEndpointBytes();
 
+    /**
+     * <code>string kinesis_api_endpoint = 23;</code>
+     */
+    java.lang.String getKinesisApiEndpoint();
+    /**
+     * <code>string kinesis_api_endpoint = 23;</code>
+     */
+    com.google.protobuf.ByteString
+        getKinesisApiEndpointBytes();
+
     public yandex.cloud.api.ydb.v1.DatabaseOuterClass.Database.DatabaseTypeCase getDatabaseTypeCase();
   }
   /**
@@ -334,6 +344,7 @@ public final class DatabaseOuterClass {
       assignPublicIps_ = false;
       locationId_ = "";
       documentApiEndpoint_ = "";
+      kinesisApiEndpoint_ = "";
     }
 
     @java.lang.Override
@@ -553,6 +564,12 @@ public final class DatabaseOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               documentApiEndpoint_ = s;
+              break;
+            }
+            case 186: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              kinesisApiEndpoint_ = s;
               break;
             }
             default: {
@@ -1446,6 +1463,40 @@ public final class DatabaseOuterClass {
       }
     }
 
+    public static final int KINESIS_API_ENDPOINT_FIELD_NUMBER = 23;
+    private volatile java.lang.Object kinesisApiEndpoint_;
+    /**
+     * <code>string kinesis_api_endpoint = 23;</code>
+     */
+    public java.lang.String getKinesisApiEndpoint() {
+      java.lang.Object ref = kinesisApiEndpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        kinesisApiEndpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string kinesis_api_endpoint = 23;</code>
+     */
+    public com.google.protobuf.ByteString
+        getKinesisApiEndpointBytes() {
+      java.lang.Object ref = kinesisApiEndpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        kinesisApiEndpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1525,6 +1576,9 @@ public final class DatabaseOuterClass {
       }
       if (!getDocumentApiEndpointBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 22, documentApiEndpoint_);
+      }
+      if (!getKinesisApiEndpointBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 23, kinesisApiEndpoint_);
       }
       unknownFields.writeTo(output);
     }
@@ -1620,6 +1674,9 @@ public final class DatabaseOuterClass {
       if (!getDocumentApiEndpointBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, documentApiEndpoint_);
       }
+      if (!getKinesisApiEndpointBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, kinesisApiEndpoint_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1681,6 +1738,8 @@ public final class DatabaseOuterClass {
       }
       result = result && getDocumentApiEndpoint()
           .equals(other.getDocumentApiEndpoint());
+      result = result && getKinesisApiEndpoint()
+          .equals(other.getKinesisApiEndpoint());
       result = result && getDatabaseTypeCase().equals(
           other.getDatabaseTypeCase());
       if (!result) return false;
@@ -1762,6 +1821,8 @@ public final class DatabaseOuterClass {
       }
       hash = (37 * hash) + DOCUMENT_API_ENDPOINT_FIELD_NUMBER;
       hash = (53 * hash) + getDocumentApiEndpoint().hashCode();
+      hash = (37 * hash) + KINESIS_API_ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getKinesisApiEndpoint().hashCode();
       switch (databaseTypeCase_) {
         case 14:
           hash = (37 * hash) + ZONAL_DATABASE_FIELD_NUMBER;
@@ -1990,6 +2051,8 @@ public final class DatabaseOuterClass {
         }
         documentApiEndpoint_ = "";
 
+        kinesisApiEndpoint_ = "";
+
         databaseTypeCase_ = 0;
         databaseType_ = null;
         return this;
@@ -2086,6 +2149,7 @@ public final class DatabaseOuterClass {
           result.backupConfig_ = backupConfigBuilder_.build();
         }
         result.documentApiEndpoint_ = documentApiEndpoint_;
+        result.kinesisApiEndpoint_ = kinesisApiEndpoint_;
         result.bitField0_ = to_bitField0_;
         result.databaseTypeCase_ = databaseTypeCase_;
         onBuilt();
@@ -2200,6 +2264,10 @@ public final class DatabaseOuterClass {
         }
         if (!other.getDocumentApiEndpoint().isEmpty()) {
           documentApiEndpoint_ = other.documentApiEndpoint_;
+          onChanged();
+        }
+        if (!other.getKinesisApiEndpoint().isEmpty()) {
+          kinesisApiEndpoint_ = other.kinesisApiEndpoint_;
           onChanged();
         }
         switch (other.getDatabaseTypeCase()) {
@@ -4257,6 +4325,75 @@ public final class DatabaseOuterClass {
   checkByteStringIsUtf8(value);
         
         documentApiEndpoint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object kinesisApiEndpoint_ = "";
+      /**
+       * <code>string kinesis_api_endpoint = 23;</code>
+       */
+      public java.lang.String getKinesisApiEndpoint() {
+        java.lang.Object ref = kinesisApiEndpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          kinesisApiEndpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string kinesis_api_endpoint = 23;</code>
+       */
+      public com.google.protobuf.ByteString
+          getKinesisApiEndpointBytes() {
+        java.lang.Object ref = kinesisApiEndpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          kinesisApiEndpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string kinesis_api_endpoint = 23;</code>
+       */
+      public Builder setKinesisApiEndpoint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        kinesisApiEndpoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string kinesis_api_endpoint = 23;</code>
+       */
+      public Builder clearKinesisApiEndpoint() {
+        
+        kinesisApiEndpoint_ = getDefaultInstance().getKinesisApiEndpoint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string kinesis_api_endpoint = 23;</code>
+       */
+      public Builder setKinesisApiEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        kinesisApiEndpoint_ = value;
         onChanged();
         return this;
       }
@@ -9793,7 +9930,7 @@ public final class DatabaseOuterClass {
       "\n\"yandex/cloud/ydb/v1/database.proto\022\023ya" +
       "ndex.cloud.ydb.v1\032\037google/protobuf/times" +
       "tamp.proto\032\035yandex/cloud/validation.prot" +
-      "o\032 yandex/cloud/ydb/v1/backup.proto\"\224\010\n\010" +
+      "o\032 yandex/cloud/ydb/v1/backup.proto\"\262\010\n\010" +
       "Database\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022" +
       ".\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Ti" +
       "mestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001" +
@@ -9815,30 +9952,30 @@ public final class DatabaseOuterClass {
       "dex.cloud.ydb.v1.Database.LabelsEntry\0228\n" +
       "\rbackup_config\030\025 \001(\0132!.yandex.cloud.ydb." +
       "v1.BackupConfig\022\035\n\025document_api_endpoint" +
-      "\030\026 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001\"\201\001\n\006Status\022\026\n\022STATUS_UNSPE" +
-      "CIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022" +
-      "\014\n\010UPDATING\020\004\022\t\n\005ERROR\020\005\022\014\n\010DELETING\020\006\022\014" +
-      "\n\010STARTING\020\007\022\013\n\007STOPPED\020\010B\017\n\rdatabase_ty" +
-      "pe\"\346\001\n\021DedicatedDatabase\022\032\n\022resource_pre" +
-      "set_id\030\001 \001(\t\022:\n\016storage_config\030\002 \001(\0132\".y" +
-      "andex.cloud.ydb.v1.StorageConfig\0226\n\014scal" +
-      "e_policy\030\003 \001(\0132 .yandex.cloud.ydb.v1.Sca" +
-      "lePolicy\022\022\n\nnetwork_id\030\004 \001(\t\022\022\n\nsubnet_i" +
-      "ds\030\005 \003(\t\022\031\n\021assign_public_ips\030\006 \001(\010\"\024\n\022S" +
-      "erverlessDatabase\"&\n\rZonalDatabase\022\025\n\007zo" +
-      "ne_id\030\001 \001(\tB\004\350\3071\001\"+\n\020RegionalDatabase\022\027\n" +
-      "\tregion_id\030\001 \001(\tB\004\350\3071\001\"\212\001\n\013ScalePolicy\022B" +
-      "\n\013fixed_scale\030\001 \001(\0132+.yandex.cloud.ydb.v" +
-      "1.ScalePolicy.FixedScaleH\000\032#\n\nFixedScale" +
-      "\022\025\n\004size\030\001 \001(\003B\007\372\3071\003>=1B\022\n\nscale_type\022\004\300" +
-      "\3011\001\"U\n\rStorageConfig\022D\n\017storage_options\030" +
-      "\001 \003(\0132\".yandex.cloud.ydb.v1.StorageOptio" +
-      "nB\007\202\3101\003>=1\"=\n\rStorageOption\022\027\n\017storage_t" +
-      "ype_id\030\001 \001(\t\022\023\n\013group_count\030\002 \001(\003BV\n\027yan" +
-      "dex.cloud.api.ydb.v1Z;github.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/ydb/v1;yd" +
-      "bb\006proto3"
+      "\030\026 \001(\t\022\034\n\024kinesis_api_endpoint\030\027 \001(\t\032-\n\013" +
+      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"\201\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\020" +
+      "\n\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022\014\n\010UPDATIN" +
+      "G\020\004\022\t\n\005ERROR\020\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING" +
+      "\020\007\022\013\n\007STOPPED\020\010B\017\n\rdatabase_type\"\346\001\n\021Ded" +
+      "icatedDatabase\022\032\n\022resource_preset_id\030\001 \001" +
+      "(\t\022:\n\016storage_config\030\002 \001(\0132\".yandex.clou" +
+      "d.ydb.v1.StorageConfig\0226\n\014scale_policy\030\003" +
+      " \001(\0132 .yandex.cloud.ydb.v1.ScalePolicy\022\022" +
+      "\n\nnetwork_id\030\004 \001(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\031" +
+      "\n\021assign_public_ips\030\006 \001(\010\"\024\n\022ServerlessD" +
+      "atabase\"&\n\rZonalDatabase\022\025\n\007zone_id\030\001 \001(" +
+      "\tB\004\350\3071\001\"+\n\020RegionalDatabase\022\027\n\tregion_id" +
+      "\030\001 \001(\tB\004\350\3071\001\"\212\001\n\013ScalePolicy\022B\n\013fixed_sc" +
+      "ale\030\001 \001(\0132+.yandex.cloud.ydb.v1.ScalePol" +
+      "icy.FixedScaleH\000\032#\n\nFixedScale\022\025\n\004size\030\001" +
+      " \001(\003B\007\372\3071\003>=1B\022\n\nscale_type\022\004\300\3011\001\"U\n\rSto" +
+      "rageConfig\022D\n\017storage_options\030\001 \003(\0132\".ya" +
+      "ndex.cloud.ydb.v1.StorageOptionB\007\202\3101\003>=1" +
+      "\"=\n\rStorageOption\022\027\n\017storage_type_id\030\001 \001" +
+      "(\t\022\023\n\013group_count\030\002 \001(\003BV\n\027yandex.cloud." +
+      "api.ydb.v1Z;github.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/ydb/v1;ydbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9860,7 +9997,7 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_ydb_v1_Database_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_Database_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Status", "Endpoint", "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "ZonalDatabase", "RegionalDatabase", "DedicatedDatabase", "ServerlessDatabase", "AssignPublicIps", "LocationId", "Labels", "BackupConfig", "DocumentApiEndpoint", "DatabaseType", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Status", "Endpoint", "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "ZonalDatabase", "RegionalDatabase", "DedicatedDatabase", "ServerlessDatabase", "AssignPublicIps", "LocationId", "Labels", "BackupConfig", "DocumentApiEndpoint", "KinesisApiEndpoint", "DatabaseType", });
     internal_static_yandex_cloud_ydb_v1_Database_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ydb_v1_Database_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ydb_v1_Database_LabelsEntry_fieldAccessorTable = new
