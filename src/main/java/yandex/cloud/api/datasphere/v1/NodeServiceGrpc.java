@@ -94,7 +94,7 @@ public final class NodeServiceGrpc {
 
     /**
      * <pre>
-     * Executes deployed Node
+     * Executes deployed Node.
      * </pre>
      */
     public void execute(yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionRequest request,
@@ -138,7 +138,7 @@ public final class NodeServiceGrpc {
 
     /**
      * <pre>
-     * Executes deployed Node
+     * Executes deployed Node.
      * </pre>
      */
     public void execute(yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionRequest request,
@@ -171,7 +171,7 @@ public final class NodeServiceGrpc {
 
     /**
      * <pre>
-     * Executes deployed Node
+     * Executes deployed Node.
      * </pre>
      */
     public yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionResponse execute(yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionRequest request) {
@@ -203,7 +203,7 @@ public final class NodeServiceGrpc {
 
     /**
      * <pre>
-     * Executes deployed Node
+     * Executes deployed Node.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v1.NodeServiceOuterClass.NodeExecutionResponse> execute(

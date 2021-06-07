@@ -20,7 +20,7 @@ public final class NodeServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the folder that will be matched with Node ACL
+     * ID of the folder that will be matched with Node ACL.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -28,7 +28,7 @@ public final class NodeServiceOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * ID of the folder that will be matched with Node ACL
+     * ID of the folder that will be matched with Node ACL.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -38,7 +38,7 @@ public final class NodeServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Node to perform request on
+     * ID of the Node to perform request on.
      * </pre>
      *
      * <code>string node_id = 2;</code>
@@ -46,7 +46,7 @@ public final class NodeServiceOuterClass {
     java.lang.String getNodeId();
     /**
      * <pre>
-     * ID of the Node to perform request on
+     * ID of the Node to perform request on.
      * </pre>
      *
      * <code>string node_id = 2;</code>
@@ -56,7 +56,7 @@ public final class NodeServiceOuterClass {
 
     /**
      * <pre>
-     * Input data for the execution
+     * Input data for the execution.
      * </pre>
      *
      * <code>.google.protobuf.Struct input = 3;</code>
@@ -64,7 +64,7 @@ public final class NodeServiceOuterClass {
     boolean hasInput();
     /**
      * <pre>
-     * Input data for the execution
+     * Input data for the execution.
      * </pre>
      *
      * <code>.google.protobuf.Struct input = 3;</code>
@@ -72,7 +72,7 @@ public final class NodeServiceOuterClass {
     com.google.protobuf.Struct getInput();
     /**
      * <pre>
-     * Input data for the execution
+     * Input data for the execution.
      * </pre>
      *
      * <code>.google.protobuf.Struct input = 3;</code>
@@ -181,7 +181,7 @@ public final class NodeServiceOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * ID of the folder that will be matched with Node ACL
+     * ID of the folder that will be matched with Node ACL.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -200,7 +200,7 @@ public final class NodeServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the folder that will be matched with Node ACL
+     * ID of the folder that will be matched with Node ACL.
      * </pre>
      *
      * <code>string folder_id = 1;</code>
@@ -223,7 +223,7 @@ public final class NodeServiceOuterClass {
     private volatile java.lang.Object nodeId_;
     /**
      * <pre>
-     * ID of the Node to perform request on
+     * ID of the Node to perform request on.
      * </pre>
      *
      * <code>string node_id = 2;</code>
@@ -242,7 +242,7 @@ public final class NodeServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Node to perform request on
+     * ID of the Node to perform request on.
      * </pre>
      *
      * <code>string node_id = 2;</code>
@@ -265,7 +265,7 @@ public final class NodeServiceOuterClass {
     private com.google.protobuf.Struct input_;
     /**
      * <pre>
-     * Input data for the execution
+     * Input data for the execution.
      * </pre>
      *
      * <code>.google.protobuf.Struct input = 3;</code>
@@ -275,7 +275,7 @@ public final class NodeServiceOuterClass {
     }
     /**
      * <pre>
-     * Input data for the execution
+     * Input data for the execution.
      * </pre>
      *
      * <code>.google.protobuf.Struct input = 3;</code>
@@ -285,7 +285,7 @@ public final class NodeServiceOuterClass {
     }
     /**
      * <pre>
-     * Input data for the execution
+     * Input data for the execution.
      * </pre>
      *
      * <code>.google.protobuf.Struct input = 3;</code>
@@ -647,7 +647,7 @@ public final class NodeServiceOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * ID of the folder that will be matched with Node ACL
+       * ID of the folder that will be matched with Node ACL.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -666,7 +666,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that will be matched with Node ACL
+       * ID of the folder that will be matched with Node ACL.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -686,7 +686,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that will be matched with Node ACL
+       * ID of the folder that will be matched with Node ACL.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -703,7 +703,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that will be matched with Node ACL
+       * ID of the folder that will be matched with Node ACL.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -716,7 +716,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that will be matched with Node ACL
+       * ID of the folder that will be matched with Node ACL.
        * </pre>
        *
        * <code>string folder_id = 1;</code>
@@ -736,7 +736,7 @@ public final class NodeServiceOuterClass {
       private java.lang.Object nodeId_ = "";
       /**
        * <pre>
-       * ID of the Node to perform request on
+       * ID of the Node to perform request on.
        * </pre>
        *
        * <code>string node_id = 2;</code>
@@ -755,7 +755,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Node to perform request on
+       * ID of the Node to perform request on.
        * </pre>
        *
        * <code>string node_id = 2;</code>
@@ -775,7 +775,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Node to perform request on
+       * ID of the Node to perform request on.
        * </pre>
        *
        * <code>string node_id = 2;</code>
@@ -792,7 +792,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Node to perform request on
+       * ID of the Node to perform request on.
        * </pre>
        *
        * <code>string node_id = 2;</code>
@@ -805,7 +805,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Node to perform request on
+       * ID of the Node to perform request on.
        * </pre>
        *
        * <code>string node_id = 2;</code>
@@ -827,7 +827,7 @@ public final class NodeServiceOuterClass {
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> inputBuilder_;
       /**
        * <pre>
-       * Input data for the execution
+       * Input data for the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct input = 3;</code>
@@ -837,7 +837,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Input data for the execution
+       * Input data for the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct input = 3;</code>
@@ -851,7 +851,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Input data for the execution
+       * Input data for the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct input = 3;</code>
@@ -871,7 +871,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Input data for the execution
+       * Input data for the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct input = 3;</code>
@@ -889,7 +889,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Input data for the execution
+       * Input data for the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct input = 3;</code>
@@ -911,7 +911,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Input data for the execution
+       * Input data for the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct input = 3;</code>
@@ -929,7 +929,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Input data for the execution
+       * Input data for the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct input = 3;</code>
@@ -941,7 +941,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Input data for the execution
+       * Input data for the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct input = 3;</code>
@@ -956,7 +956,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Input data for the execution
+       * Input data for the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct input = 3;</code>
@@ -1033,7 +1033,7 @@ public final class NodeServiceOuterClass {
 
     /**
      * <pre>
-     * Result of the execution
+     * Result of the execution.
      * </pre>
      *
      * <code>.google.protobuf.Struct output = 1;</code>
@@ -1041,7 +1041,7 @@ public final class NodeServiceOuterClass {
     boolean hasOutput();
     /**
      * <pre>
-     * Result of the execution
+     * Result of the execution.
      * </pre>
      *
      * <code>.google.protobuf.Struct output = 1;</code>
@@ -1049,7 +1049,7 @@ public final class NodeServiceOuterClass {
     com.google.protobuf.Struct getOutput();
     /**
      * <pre>
-     * Result of the execution
+     * Result of the execution.
      * </pre>
      *
      * <code>.google.protobuf.Struct output = 1;</code>
@@ -1144,7 +1144,7 @@ public final class NodeServiceOuterClass {
     private com.google.protobuf.Struct output_;
     /**
      * <pre>
-     * Result of the execution
+     * Result of the execution.
      * </pre>
      *
      * <code>.google.protobuf.Struct output = 1;</code>
@@ -1154,7 +1154,7 @@ public final class NodeServiceOuterClass {
     }
     /**
      * <pre>
-     * Result of the execution
+     * Result of the execution.
      * </pre>
      *
      * <code>.google.protobuf.Struct output = 1;</code>
@@ -1164,7 +1164,7 @@ public final class NodeServiceOuterClass {
     }
     /**
      * <pre>
-     * Result of the execution
+     * Result of the execution.
      * </pre>
      *
      * <code>.google.protobuf.Struct output = 1;</code>
@@ -1494,7 +1494,7 @@ public final class NodeServiceOuterClass {
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> outputBuilder_;
       /**
        * <pre>
-       * Result of the execution
+       * Result of the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct output = 1;</code>
@@ -1504,7 +1504,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of the execution
+       * Result of the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct output = 1;</code>
@@ -1518,7 +1518,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of the execution
+       * Result of the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct output = 1;</code>
@@ -1538,7 +1538,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of the execution
+       * Result of the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct output = 1;</code>
@@ -1556,7 +1556,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of the execution
+       * Result of the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct output = 1;</code>
@@ -1578,7 +1578,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of the execution
+       * Result of the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct output = 1;</code>
@@ -1596,7 +1596,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of the execution
+       * Result of the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct output = 1;</code>
@@ -1608,7 +1608,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of the execution
+       * Result of the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct output = 1;</code>
@@ -1623,7 +1623,7 @@ public final class NodeServiceOuterClass {
       }
       /**
        * <pre>
-       * Result of the execution
+       * Result of the execution.
        * </pre>
        *
        * <code>.google.protobuf.Struct output = 1;</code>
