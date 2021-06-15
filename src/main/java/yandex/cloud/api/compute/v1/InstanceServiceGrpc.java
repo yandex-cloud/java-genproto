@@ -696,6 +696,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Enables One-to-one NAT on the network interface.
+     * </pre>
      */
     public void addOneToOneNat(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -703,6 +706,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Removes One-to-one NAT from the network interface.
+     * </pre>
      */
     public void removeOneToOneNat(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -710,6 +716,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified instance network interface.
+     * </pre>
      */
     public void updateNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -1001,6 +1010,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Enables One-to-one NAT on the network interface.
+     * </pre>
      */
     public void addOneToOneNat(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -1009,6 +1021,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Removes One-to-one NAT from the network interface.
+     * </pre>
      */
     public void removeOneToOneNat(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -1017,6 +1032,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified instance network interface.
+     * </pre>
      */
     public void updateNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -1181,6 +1199,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Enables One-to-one NAT on the network interface.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addOneToOneNat(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest request) {
       return blockingUnaryCall(
@@ -1188,6 +1209,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Removes One-to-one NAT from the network interface.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeOneToOneNat(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest request) {
       return blockingUnaryCall(
@@ -1195,6 +1219,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified instance network interface.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateNetworkInterface(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest request) {
       return blockingUnaryCall(
@@ -1369,6 +1396,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Enables One-to-one NAT on the network interface.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addOneToOneNat(
         yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest request) {
@@ -1377,6 +1407,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Removes One-to-one NAT from the network interface.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeOneToOneNat(
         yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RemoveInstanceOneToOneNatRequest request) {
@@ -1385,6 +1418,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified instance network interface.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateNetworkInterface(
         yandex.cloud.api.compute.v1.InstanceServiceOuterClass.UpdateInstanceNetworkInterfaceRequest request) {

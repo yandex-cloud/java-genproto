@@ -52,7 +52,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+     * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
      */
     boolean hasMaxConnections();
     /**
@@ -61,7 +61,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+     * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
      */
     com.google.protobuf.Int64Value getMaxConnections();
     /**
@@ -70,7 +70,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+     * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder();
 
@@ -445,7 +445,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
      */
     boolean hasTmpTableSize();
     /**
@@ -454,7 +454,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
      */
     com.google.protobuf.Int64Value getTmpTableSize();
     /**
@@ -463,7 +463,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getTmpTableSizeOrBuilder();
 
@@ -473,7 +473,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
      */
     boolean hasMaxHeapTableSize();
     /**
@@ -482,7 +482,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
      */
     com.google.protobuf.Int64Value getMaxHeapTableSize();
     /**
@@ -491,7 +491,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getMaxHeapTableSizeOrBuilder();
 
@@ -3160,7 +3160,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+     * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
      */
     public boolean hasMaxConnections() {
       return maxConnections_ != null;
@@ -3171,7 +3171,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+     * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
      */
     public com.google.protobuf.Int64Value getMaxConnections() {
       return maxConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
@@ -3182,7 +3182,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+     * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
       return getMaxConnections();
@@ -3681,7 +3681,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
      */
     public boolean hasTmpTableSize() {
       return tmpTableSize_ != null;
@@ -3692,7 +3692,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
      */
     public com.google.protobuf.Int64Value getTmpTableSize() {
       return tmpTableSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : tmpTableSize_;
@@ -3703,7 +3703,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+     * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getTmpTableSizeOrBuilder() {
       return getTmpTableSize();
@@ -3717,7 +3717,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
      */
     public boolean hasMaxHeapTableSize() {
       return maxHeapTableSize_ != null;
@@ -3728,7 +3728,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
      */
     public com.google.protobuf.Int64Value getMaxHeapTableSize() {
       return maxHeapTableSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxHeapTableSize_;
@@ -3739,7 +3739,7 @@ public final class Mysql57 {
      * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+     * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
      */
     public com.google.protobuf.Int64ValueOrBuilder getMaxHeapTableSizeOrBuilder() {
       return getMaxHeapTableSize();
@@ -7149,7 +7149,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
        */
       public boolean hasMaxConnections() {
         return maxConnectionsBuilder_ != null || maxConnections_ != null;
@@ -7160,7 +7160,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
        */
       public com.google.protobuf.Int64Value getMaxConnections() {
         if (maxConnectionsBuilder_ == null) {
@@ -7175,7 +7175,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
        */
       public Builder setMaxConnections(com.google.protobuf.Int64Value value) {
         if (maxConnectionsBuilder_ == null) {
@@ -7196,7 +7196,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
        */
       public Builder setMaxConnections(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -7215,7 +7215,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
        */
       public Builder mergeMaxConnections(com.google.protobuf.Int64Value value) {
         if (maxConnectionsBuilder_ == null) {
@@ -7238,7 +7238,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
        */
       public Builder clearMaxConnections() {
         if (maxConnectionsBuilder_ == null) {
@@ -7257,7 +7257,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxConnectionsBuilder() {
         
@@ -7270,7 +7270,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
         if (maxConnectionsBuilder_ != null) {
@@ -7286,7 +7286,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_connections).
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-10000"];</code>
+       * <code>.google.protobuf.Int64Value max_connections = 2 [(.yandex.cloud.value) = "10-16384"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -9249,7 +9249,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
        */
       public boolean hasTmpTableSize() {
         return tmpTableSizeBuilder_ != null || tmpTableSize_ != null;
@@ -9260,7 +9260,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
        */
       public com.google.protobuf.Int64Value getTmpTableSize() {
         if (tmpTableSizeBuilder_ == null) {
@@ -9275,7 +9275,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
        */
       public Builder setTmpTableSize(com.google.protobuf.Int64Value value) {
         if (tmpTableSizeBuilder_ == null) {
@@ -9296,7 +9296,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
        */
       public Builder setTmpTableSize(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -9315,7 +9315,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
        */
       public Builder mergeTmpTableSize(com.google.protobuf.Int64Value value) {
         if (tmpTableSizeBuilder_ == null) {
@@ -9338,7 +9338,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
        */
       public Builder clearTmpTableSize() {
         if (tmpTableSizeBuilder_ == null) {
@@ -9357,7 +9357,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getTmpTableSizeBuilder() {
         
@@ -9370,7 +9370,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getTmpTableSizeOrBuilder() {
         if (tmpTableSizeBuilder_ != null) {
@@ -9386,7 +9386,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_tmp_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-134217728"];</code>
+       * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -9411,7 +9411,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
        */
       public boolean hasMaxHeapTableSize() {
         return maxHeapTableSizeBuilder_ != null || maxHeapTableSize_ != null;
@@ -9422,7 +9422,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
        */
       public com.google.protobuf.Int64Value getMaxHeapTableSize() {
         if (maxHeapTableSizeBuilder_ == null) {
@@ -9437,7 +9437,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
        */
       public Builder setMaxHeapTableSize(com.google.protobuf.Int64Value value) {
         if (maxHeapTableSizeBuilder_ == null) {
@@ -9458,7 +9458,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
        */
       public Builder setMaxHeapTableSize(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -9477,7 +9477,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
        */
       public Builder mergeMaxHeapTableSize(com.google.protobuf.Int64Value value) {
         if (maxHeapTableSizeBuilder_ == null) {
@@ -9500,7 +9500,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
        */
       public Builder clearMaxHeapTableSize() {
         if (maxHeapTableSizeBuilder_ == null) {
@@ -9519,7 +9519,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaxHeapTableSizeBuilder() {
         
@@ -9532,7 +9532,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getMaxHeapTableSizeOrBuilder() {
         if (maxHeapTableSizeBuilder_ != null) {
@@ -9548,7 +9548,7 @@ public final class Mysql57 {
        * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_heap_table_size)
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-134217728"];</code>
+       * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -16582,7 +16582,7 @@ public final class Mysql57 {
       "ig5_7\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\014\372\3071\01010-10000\0225\n\017long_q" +
+      "tobuf.Int64ValueB\014\372\3071\01010-16384\0225\n\017long_q" +
       "uery_time\030\003 \001(\0132\034.google.protobuf.Double" +
       "Value\022/\n\013general_log\030\004 \001(\0132\032.google.prot" +
       "obuf.BoolValue\022-\n\taudit_log\030\005 \001(\0132\032.goog" +
@@ -16607,9 +16607,9 @@ public final class Mysql57 {
       "\372\3071\0061-1200\022I\n\024group_concat_max_len\030\017 \001(\013" +
       "2\033.google.protobuf.Int64ValueB\016\372\3071\n4-335" +
       "54432\022G\n\016tmp_table_size\030\020 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\022\372\3071\0161024-134217728\022M" +
+      "rotobuf.Int64ValueB\022\372\3071\0161024-536870912\022M" +
       "\n\023max_heap_table_size\030\021 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\023\372\3071\01716384-134217728\022\031\n" +
+      "tobuf.Int64ValueB\023\372\3071\01716384-536870912\022\031\n" +
       "\021default_time_zone\030\022 \001(\t\022\034\n\024character_se" +
       "t_server\030\023 \001(\t\022\030\n\020collation_server\030\024 \001(\t" +
       "\022>\n\032innodb_adaptive_hash_index\030\025 \001(\0132\032.g" +

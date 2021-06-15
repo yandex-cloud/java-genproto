@@ -23489,20 +23489,36 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the instance to enable One-to-One NAT on.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the instance to enable One-to-One NAT on.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getInstanceIdBytes();
 
     /**
+     * <pre>
+     * The index of the network interface to enable One-to-One NAT on.
+     * </pre>
+     *
      * <code>string network_interface_index = 2;</code>
      */
     java.lang.String getNetworkInterfaceIndex();
     /**
+     * <pre>
+     * The index of the network interface to enable One-to-One NAT on.
+     * </pre>
+     *
      * <code>string network_interface_index = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -23510,7 +23526,7 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * optional
+     * The network address that is assigned to the instance for this network interface.
      * </pre>
      *
      * <code>string internal_address = 3;</code>
@@ -23518,7 +23534,7 @@ public final class InstanceServiceOuterClass {
     java.lang.String getInternalAddress();
     /**
      * <pre>
-     * optional
+     * The network address that is assigned to the instance for this network interface.
      * </pre>
      *
      * <code>string internal_address = 3;</code>
@@ -23527,19 +23543,38 @@ public final class InstanceServiceOuterClass {
         getInternalAddressBytes();
 
     /**
+     * <pre>
+     * An external IP address configuration.
+     * If not specified, then this instance will have no external internet access.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
      */
     boolean hasOneToOneNatSpec();
     /**
+     * <pre>
+     * An external IP address configuration.
+     * If not specified, then this instance will have no external internet access.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
      */
     yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpec getOneToOneNatSpec();
     /**
+     * <pre>
+     * An external IP address configuration.
+     * If not specified, then this instance will have no external internet access.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
      */
     yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpecOrBuilder getOneToOneNatSpecOrBuilder();
   }
   /**
+   * <pre>
+   * Enables One-to-one NAT on the network interface.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.compute.v1.AddInstanceOneToOneNatRequest}
    */
   public  static final class AddInstanceOneToOneNatRequest extends
@@ -23647,6 +23682,10 @@ public final class InstanceServiceOuterClass {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the instance to enable One-to-One NAT on.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     public java.lang.String getInstanceId() {
@@ -23662,6 +23701,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the instance to enable One-to-One NAT on.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -23681,6 +23724,10 @@ public final class InstanceServiceOuterClass {
     public static final int NETWORK_INTERFACE_INDEX_FIELD_NUMBER = 2;
     private volatile java.lang.Object networkInterfaceIndex_;
     /**
+     * <pre>
+     * The index of the network interface to enable One-to-One NAT on.
+     * </pre>
+     *
      * <code>string network_interface_index = 2;</code>
      */
     public java.lang.String getNetworkInterfaceIndex() {
@@ -23696,6 +23743,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * The index of the network interface to enable One-to-One NAT on.
+     * </pre>
+     *
      * <code>string network_interface_index = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -23716,7 +23767,7 @@ public final class InstanceServiceOuterClass {
     private volatile java.lang.Object internalAddress_;
     /**
      * <pre>
-     * optional
+     * The network address that is assigned to the instance for this network interface.
      * </pre>
      *
      * <code>string internal_address = 3;</code>
@@ -23735,7 +23786,7 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * optional
+     * The network address that is assigned to the instance for this network interface.
      * </pre>
      *
      * <code>string internal_address = 3;</code>
@@ -23757,18 +23808,33 @@ public final class InstanceServiceOuterClass {
     public static final int ONE_TO_ONE_NAT_SPEC_FIELD_NUMBER = 4;
     private yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpec oneToOneNatSpec_;
     /**
+     * <pre>
+     * An external IP address configuration.
+     * If not specified, then this instance will have no external internet access.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
      */
     public boolean hasOneToOneNatSpec() {
       return oneToOneNatSpec_ != null;
     }
     /**
+     * <pre>
+     * An external IP address configuration.
+     * If not specified, then this instance will have no external internet access.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
      */
     public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpec getOneToOneNatSpec() {
       return oneToOneNatSpec_ == null ? yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpec.getDefaultInstance() : oneToOneNatSpec_;
     }
     /**
+     * <pre>
+     * An external IP address configuration.
+     * If not specified, then this instance will have no external internet access.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
      */
     public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpecOrBuilder getOneToOneNatSpecOrBuilder() {
@@ -23967,6 +24033,10 @@ public final class InstanceServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Enables One-to-one NAT on the network interface.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.compute.v1.AddInstanceOneToOneNatRequest}
      */
     public static final class Builder extends
@@ -24144,6 +24214,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the instance to enable One-to-One NAT on.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public java.lang.String getInstanceId() {
@@ -24159,6 +24233,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance to enable One-to-One NAT on.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -24175,6 +24253,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance to enable One-to-One NAT on.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder setInstanceId(
@@ -24188,6 +24270,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance to enable One-to-One NAT on.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder clearInstanceId() {
@@ -24197,6 +24283,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance to enable One-to-One NAT on.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder setInstanceIdBytes(
@@ -24213,6 +24303,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object networkInterfaceIndex_ = "";
       /**
+       * <pre>
+       * The index of the network interface to enable One-to-One NAT on.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public java.lang.String getNetworkInterfaceIndex() {
@@ -24228,6 +24322,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The index of the network interface to enable One-to-One NAT on.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -24244,6 +24342,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The index of the network interface to enable One-to-One NAT on.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public Builder setNetworkInterfaceIndex(
@@ -24257,6 +24359,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The index of the network interface to enable One-to-One NAT on.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public Builder clearNetworkInterfaceIndex() {
@@ -24266,6 +24372,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The index of the network interface to enable One-to-One NAT on.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public Builder setNetworkInterfaceIndexBytes(
@@ -24283,7 +24393,7 @@ public final class InstanceServiceOuterClass {
       private java.lang.Object internalAddress_ = "";
       /**
        * <pre>
-       * optional
+       * The network address that is assigned to the instance for this network interface.
        * </pre>
        *
        * <code>string internal_address = 3;</code>
@@ -24302,7 +24412,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * optional
+       * The network address that is assigned to the instance for this network interface.
        * </pre>
        *
        * <code>string internal_address = 3;</code>
@@ -24322,7 +24432,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * optional
+       * The network address that is assigned to the instance for this network interface.
        * </pre>
        *
        * <code>string internal_address = 3;</code>
@@ -24339,7 +24449,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * optional
+       * The network address that is assigned to the instance for this network interface.
        * </pre>
        *
        * <code>string internal_address = 3;</code>
@@ -24352,7 +24462,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * optional
+       * The network address that is assigned to the instance for this network interface.
        * </pre>
        *
        * <code>string internal_address = 3;</code>
@@ -24373,12 +24483,22 @@ public final class InstanceServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpecOrBuilder> oneToOneNatSpecBuilder_;
       /**
+       * <pre>
+       * An external IP address configuration.
+       * If not specified, then this instance will have no external internet access.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
        */
       public boolean hasOneToOneNatSpec() {
         return oneToOneNatSpecBuilder_ != null || oneToOneNatSpec_ != null;
       }
       /**
+       * <pre>
+       * An external IP address configuration.
+       * If not specified, then this instance will have no external internet access.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
        */
       public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpec getOneToOneNatSpec() {
@@ -24389,6 +24509,11 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * An external IP address configuration.
+       * If not specified, then this instance will have no external internet access.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
        */
       public Builder setOneToOneNatSpec(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpec value) {
@@ -24405,6 +24530,11 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * An external IP address configuration.
+       * If not specified, then this instance will have no external internet access.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
        */
       public Builder setOneToOneNatSpec(
@@ -24419,6 +24549,11 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * An external IP address configuration.
+       * If not specified, then this instance will have no external internet access.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
        */
       public Builder mergeOneToOneNatSpec(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpec value) {
@@ -24437,6 +24572,11 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * An external IP address configuration.
+       * If not specified, then this instance will have no external internet access.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
        */
       public Builder clearOneToOneNatSpec() {
@@ -24451,6 +24591,11 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * An external IP address configuration.
+       * If not specified, then this instance will have no external internet access.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
        */
       public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpec.Builder getOneToOneNatSpecBuilder() {
@@ -24459,6 +24604,11 @@ public final class InstanceServiceOuterClass {
         return getOneToOneNatSpecFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * An external IP address configuration.
+       * If not specified, then this instance will have no external internet access.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
        */
       public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.OneToOneNatSpecOrBuilder getOneToOneNatSpecOrBuilder() {
@@ -24470,6 +24620,11 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * An external IP address configuration.
+       * If not specified, then this instance will have no external internet access.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.OneToOneNatSpec one_to_one_nat_spec = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -24543,10 +24698,18 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -24633,6 +24796,10 @@ public final class InstanceServiceOuterClass {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     public java.lang.String getInstanceId() {
@@ -24648,6 +24815,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -24969,6 +25140,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public java.lang.String getInstanceId() {
@@ -24984,6 +25159,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -25000,6 +25179,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder setInstanceId(
@@ -25013,6 +25196,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder clearInstanceId() {
@@ -25022,6 +25209,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder setInstanceIdBytes(
@@ -25093,20 +25284,36 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the instance to remove One-to-one NAT.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the instance to remove One-to-one NAT.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getInstanceIdBytes();
 
     /**
+     * <pre>
+     * The index of the network interface to remove One-to-One NAT from.
+     * </pre>
+     *
      * <code>string network_interface_index = 2;</code>
      */
     java.lang.String getNetworkInterfaceIndex();
     /**
+     * <pre>
+     * The index of the network interface to remove One-to-One NAT from.
+     * </pre>
+     *
      * <code>string network_interface_index = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -25114,7 +25321,7 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * optional
+     * The network address that is assigned to the instance for this network interface.
      * </pre>
      *
      * <code>string internal_address = 3;</code>
@@ -25122,7 +25329,7 @@ public final class InstanceServiceOuterClass {
     java.lang.String getInternalAddress();
     /**
      * <pre>
-     * optional
+     * The network address that is assigned to the instance for this network interface.
      * </pre>
      *
      * <code>string internal_address = 3;</code>
@@ -25225,6 +25432,10 @@ public final class InstanceServiceOuterClass {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the instance to remove One-to-one NAT.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     public java.lang.String getInstanceId() {
@@ -25240,6 +25451,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the instance to remove One-to-one NAT.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -25259,6 +25474,10 @@ public final class InstanceServiceOuterClass {
     public static final int NETWORK_INTERFACE_INDEX_FIELD_NUMBER = 2;
     private volatile java.lang.Object networkInterfaceIndex_;
     /**
+     * <pre>
+     * The index of the network interface to remove One-to-One NAT from.
+     * </pre>
+     *
      * <code>string network_interface_index = 2;</code>
      */
     public java.lang.String getNetworkInterfaceIndex() {
@@ -25274,6 +25493,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * The index of the network interface to remove One-to-One NAT from.
+     * </pre>
+     *
      * <code>string network_interface_index = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -25294,7 +25517,7 @@ public final class InstanceServiceOuterClass {
     private volatile java.lang.Object internalAddress_;
     /**
      * <pre>
-     * optional
+     * The network address that is assigned to the instance for this network interface.
      * </pre>
      *
      * <code>string internal_address = 3;</code>
@@ -25313,7 +25536,7 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * optional
+     * The network address that is assigned to the instance for this network interface.
      * </pre>
      *
      * <code>string internal_address = 3;</code>
@@ -25671,6 +25894,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the instance to remove One-to-one NAT.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public java.lang.String getInstanceId() {
@@ -25686,6 +25913,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance to remove One-to-one NAT.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -25702,6 +25933,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance to remove One-to-one NAT.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder setInstanceId(
@@ -25715,6 +25950,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance to remove One-to-one NAT.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder clearInstanceId() {
@@ -25724,6 +25963,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance to remove One-to-one NAT.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder setInstanceIdBytes(
@@ -25740,6 +25983,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object networkInterfaceIndex_ = "";
       /**
+       * <pre>
+       * The index of the network interface to remove One-to-One NAT from.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public java.lang.String getNetworkInterfaceIndex() {
@@ -25755,6 +26002,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The index of the network interface to remove One-to-One NAT from.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -25771,6 +26022,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The index of the network interface to remove One-to-One NAT from.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public Builder setNetworkInterfaceIndex(
@@ -25784,6 +26039,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The index of the network interface to remove One-to-One NAT from.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public Builder clearNetworkInterfaceIndex() {
@@ -25793,6 +26052,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The index of the network interface to remove One-to-One NAT from.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public Builder setNetworkInterfaceIndexBytes(
@@ -25810,7 +26073,7 @@ public final class InstanceServiceOuterClass {
       private java.lang.Object internalAddress_ = "";
       /**
        * <pre>
-       * optional
+       * The network address that is assigned to the instance for this network interface.
        * </pre>
        *
        * <code>string internal_address = 3;</code>
@@ -25829,7 +26092,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * optional
+       * The network address that is assigned to the instance for this network interface.
        * </pre>
        *
        * <code>string internal_address = 3;</code>
@@ -25849,7 +26112,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * optional
+       * The network address that is assigned to the instance for this network interface.
        * </pre>
        *
        * <code>string internal_address = 3;</code>
@@ -25866,7 +26129,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * optional
+       * The network address that is assigned to the instance for this network interface.
        * </pre>
        *
        * <code>string internal_address = 3;</code>
@@ -25879,7 +26142,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * optional
+       * The network address that is assigned to the instance for this network interface.
        * </pre>
        *
        * <code>string internal_address = 3;</code>
@@ -25953,10 +26216,18 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -26043,6 +26314,10 @@ public final class InstanceServiceOuterClass {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     public java.lang.String getInstanceId() {
@@ -26058,6 +26333,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -26379,6 +26658,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public java.lang.String getInstanceId() {
@@ -26394,6 +26677,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -26410,6 +26697,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder setInstanceId(
@@ -26423,6 +26714,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder clearInstanceId() {
@@ -26432,6 +26727,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder setInstanceIdBytes(
@@ -26503,88 +26802,164 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the network interface that is being updated.
+     * </pre>
+     *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the network interface that is being updated.
+     * </pre>
+     *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getInstanceIdBytes();
 
     /**
+     * <pre>
+     * The index of the network interface to be updated.
+     * </pre>
+     *
      * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getNetworkInterfaceIndex();
     /**
+     * <pre>
+     * The index of the network interface to be updated.
+     * </pre>
+     *
      * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getNetworkInterfaceIndexBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the instance should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the instance should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the instance should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
      * <code>string subnet_id = 4;</code>
      */
     java.lang.String getSubnetId();
     /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
      * <code>string subnet_id = 4;</code>
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
 
     /**
+     * <pre>
+     * Primary IPv4 address that will be assigned to the instance for this network interface.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
      */
     boolean hasPrimaryV4AddressSpec();
     /**
+     * <pre>
+     * Primary IPv4 address that will be assigned to the instance for this network interface.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
      */
     yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec getPrimaryV4AddressSpec();
     /**
+     * <pre>
+     * Primary IPv4 address that will be assigned to the instance for this network interface.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
      */
     yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder getPrimaryV4AddressSpecOrBuilder();
 
     /**
+     * <pre>
+     * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
      */
     boolean hasPrimaryV6AddressSpec();
     /**
+     * <pre>
+     * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
      */
     yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec getPrimaryV6AddressSpec();
     /**
+     * <pre>
+     * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
      */
     yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder getPrimaryV6AddressSpecOrBuilder();
 
     /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
      * <code>repeated string security_group_ids = 7;</code>
      */
     java.util.List<java.lang.String>
         getSecurityGroupIdsList();
     /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
      * <code>repeated string security_group_ids = 7;</code>
      */
     int getSecurityGroupIdsCount();
     /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
      * <code>repeated string security_group_ids = 7;</code>
      */
     java.lang.String getSecurityGroupIds(int index);
     /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
      * <code>repeated string security_group_ids = 7;</code>
      */
     com.google.protobuf.ByteString
@@ -26738,6 +27113,10 @@ public final class InstanceServiceOuterClass {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the network interface that is being updated.
+     * </pre>
+     *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getInstanceId() {
@@ -26753,6 +27132,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the network interface that is being updated.
+     * </pre>
+     *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -26772,6 +27155,10 @@ public final class InstanceServiceOuterClass {
     public static final int NETWORK_INTERFACE_INDEX_FIELD_NUMBER = 2;
     private volatile java.lang.Object networkInterfaceIndex_;
     /**
+     * <pre>
+     * The index of the network interface to be updated.
+     * </pre>
+     *
      * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getNetworkInterfaceIndex() {
@@ -26787,6 +27174,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * The index of the network interface to be updated.
+     * </pre>
+     *
      * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -26806,18 +27197,30 @@ public final class InstanceServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 3;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the instance should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the instance should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the instance should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -26827,6 +27230,10 @@ public final class InstanceServiceOuterClass {
     public static final int SUBNET_ID_FIELD_NUMBER = 4;
     private volatile java.lang.Object subnetId_;
     /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
      * <code>string subnet_id = 4;</code>
      */
     public java.lang.String getSubnetId() {
@@ -26842,6 +27249,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subnet.
+     * </pre>
+     *
      * <code>string subnet_id = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -26861,18 +27272,30 @@ public final class InstanceServiceOuterClass {
     public static final int PRIMARY_V4_ADDRESS_SPEC_FIELD_NUMBER = 5;
     private yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec primaryV4AddressSpec_;
     /**
+     * <pre>
+     * Primary IPv4 address that will be assigned to the instance for this network interface.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
      */
     public boolean hasPrimaryV4AddressSpec() {
       return primaryV4AddressSpec_ != null;
     }
     /**
+     * <pre>
+     * Primary IPv4 address that will be assigned to the instance for this network interface.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
      */
     public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec getPrimaryV4AddressSpec() {
       return primaryV4AddressSpec_ == null ? yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.getDefaultInstance() : primaryV4AddressSpec_;
     }
     /**
+     * <pre>
+     * Primary IPv4 address that will be assigned to the instance for this network interface.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
      */
     public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder getPrimaryV4AddressSpecOrBuilder() {
@@ -26882,18 +27305,30 @@ public final class InstanceServiceOuterClass {
     public static final int PRIMARY_V6_ADDRESS_SPEC_FIELD_NUMBER = 6;
     private yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec primaryV6AddressSpec_;
     /**
+     * <pre>
+     * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
      */
     public boolean hasPrimaryV6AddressSpec() {
       return primaryV6AddressSpec_ != null;
     }
     /**
+     * <pre>
+     * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
      */
     public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec getPrimaryV6AddressSpec() {
       return primaryV6AddressSpec_ == null ? yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.getDefaultInstance() : primaryV6AddressSpec_;
     }
     /**
+     * <pre>
+     * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+     * </pre>
+     *
      * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
      */
     public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder getPrimaryV6AddressSpecOrBuilder() {
@@ -26903,6 +27338,10 @@ public final class InstanceServiceOuterClass {
     public static final int SECURITY_GROUP_IDS_FIELD_NUMBER = 7;
     private com.google.protobuf.LazyStringList securityGroupIds_;
     /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
      * <code>repeated string security_group_ids = 7;</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -26910,18 +27349,30 @@ public final class InstanceServiceOuterClass {
       return securityGroupIds_;
     }
     /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
      * <code>repeated string security_group_ids = 7;</code>
      */
     public int getSecurityGroupIdsCount() {
       return securityGroupIds_.size();
     }
     /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
      * <code>repeated string security_group_ids = 7;</code>
      */
     public java.lang.String getSecurityGroupIds(int index) {
       return securityGroupIds_.get(index);
     }
     /**
+     * <pre>
+     * ID's of security groups attached to the interface.
+     * </pre>
+     *
      * <code>repeated string security_group_ids = 7;</code>
      */
     public com.google.protobuf.ByteString
@@ -27396,6 +27847,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the network interface that is being updated.
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getInstanceId() {
@@ -27411,6 +27866,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the network interface that is being updated.
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -27427,6 +27886,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the network interface that is being updated.
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setInstanceId(
@@ -27440,6 +27903,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the network interface that is being updated.
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearInstanceId() {
@@ -27449,6 +27916,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the network interface that is being updated.
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setInstanceIdBytes(
@@ -27465,6 +27936,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object networkInterfaceIndex_ = "";
       /**
+       * <pre>
+       * The index of the network interface to be updated.
+       * </pre>
+       *
        * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getNetworkInterfaceIndex() {
@@ -27480,6 +27955,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The index of the network interface to be updated.
+       * </pre>
+       *
        * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -27496,6 +27975,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The index of the network interface to be updated.
+       * </pre>
+       *
        * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setNetworkInterfaceIndex(
@@ -27509,6 +27992,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The index of the network interface to be updated.
+       * </pre>
+       *
        * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearNetworkInterfaceIndex() {
@@ -27518,6 +28005,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The index of the network interface to be updated.
+       * </pre>
+       *
        * <code>string network_interface_index = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setNetworkInterfaceIndexBytes(
@@ -27536,12 +28027,20 @@ public final class InstanceServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the instance should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the instance should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -27552,6 +28051,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the instance should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -27568,6 +28071,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the instance should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder setUpdateMask(
@@ -27582,6 +28089,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the instance should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -27600,6 +28111,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the instance should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder clearUpdateMask() {
@@ -27614,6 +28129,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the instance should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -27622,6 +28141,10 @@ public final class InstanceServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the instance should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -27633,6 +28156,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the instance should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -27651,6 +28178,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object subnetId_ = "";
       /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
        * <code>string subnet_id = 4;</code>
        */
       public java.lang.String getSubnetId() {
@@ -27666,6 +28197,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
        * <code>string subnet_id = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -27682,6 +28217,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
        * <code>string subnet_id = 4;</code>
        */
       public Builder setSubnetId(
@@ -27695,6 +28234,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
        * <code>string subnet_id = 4;</code>
        */
       public Builder clearSubnetId() {
@@ -27704,6 +28247,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subnet.
+       * </pre>
+       *
        * <code>string subnet_id = 4;</code>
        */
       public Builder setSubnetIdBytes(
@@ -27722,12 +28269,20 @@ public final class InstanceServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder> primaryV4AddressSpecBuilder_;
       /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
        */
       public boolean hasPrimaryV4AddressSpec() {
         return primaryV4AddressSpecBuilder_ != null || primaryV4AddressSpec_ != null;
       }
       /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
        */
       public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec getPrimaryV4AddressSpec() {
@@ -27738,6 +28293,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
        */
       public Builder setPrimaryV4AddressSpec(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec value) {
@@ -27754,6 +28313,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
        */
       public Builder setPrimaryV4AddressSpec(
@@ -27768,6 +28331,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
        */
       public Builder mergePrimaryV4AddressSpec(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec value) {
@@ -27786,6 +28353,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
        */
       public Builder clearPrimaryV4AddressSpec() {
@@ -27800,6 +28371,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
        */
       public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.Builder getPrimaryV4AddressSpecBuilder() {
@@ -27808,6 +28383,10 @@ public final class InstanceServiceOuterClass {
         return getPrimaryV4AddressSpecFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
        */
       public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder getPrimaryV4AddressSpecOrBuilder() {
@@ -27819,6 +28398,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Primary IPv4 address that will be assigned to the instance for this network interface.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v4_address_spec = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -27839,12 +28422,20 @@ public final class InstanceServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder> primaryV6AddressSpecBuilder_;
       /**
+       * <pre>
+       * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
        */
       public boolean hasPrimaryV6AddressSpec() {
         return primaryV6AddressSpecBuilder_ != null || primaryV6AddressSpec_ != null;
       }
       /**
+       * <pre>
+       * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
        */
       public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec getPrimaryV6AddressSpec() {
@@ -27855,6 +28446,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
        */
       public Builder setPrimaryV6AddressSpec(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec value) {
@@ -27871,6 +28466,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
        */
       public Builder setPrimaryV6AddressSpec(
@@ -27885,6 +28484,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
        */
       public Builder mergePrimaryV6AddressSpec(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec value) {
@@ -27903,6 +28506,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
        */
       public Builder clearPrimaryV6AddressSpec() {
@@ -27917,6 +28524,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
        */
       public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpec.Builder getPrimaryV6AddressSpecBuilder() {
@@ -27925,6 +28536,10 @@ public final class InstanceServiceOuterClass {
         return getPrimaryV6AddressSpecFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
        */
       public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.PrimaryAddressSpecOrBuilder getPrimaryV6AddressSpecOrBuilder() {
@@ -27936,6 +28551,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Primary IPv6 address that will be assigned to the instance for this network interface. IPv6 not available yet.
+       * </pre>
+       *
        * <code>.yandex.cloud.compute.v1.PrimaryAddressSpec primary_v6_address_spec = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -27960,6 +28579,10 @@ public final class InstanceServiceOuterClass {
          }
       }
       /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
        * <code>repeated string security_group_ids = 7;</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -27967,18 +28590,30 @@ public final class InstanceServiceOuterClass {
         return securityGroupIds_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
        * <code>repeated string security_group_ids = 7;</code>
        */
       public int getSecurityGroupIdsCount() {
         return securityGroupIds_.size();
       }
       /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
        * <code>repeated string security_group_ids = 7;</code>
        */
       public java.lang.String getSecurityGroupIds(int index) {
         return securityGroupIds_.get(index);
       }
       /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
        * <code>repeated string security_group_ids = 7;</code>
        */
       public com.google.protobuf.ByteString
@@ -27986,6 +28621,10 @@ public final class InstanceServiceOuterClass {
         return securityGroupIds_.getByteString(index);
       }
       /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
        * <code>repeated string security_group_ids = 7;</code>
        */
       public Builder setSecurityGroupIds(
@@ -27999,6 +28638,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
        * <code>repeated string security_group_ids = 7;</code>
        */
       public Builder addSecurityGroupIds(
@@ -28012,6 +28655,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
        * <code>repeated string security_group_ids = 7;</code>
        */
       public Builder addAllSecurityGroupIds(
@@ -28023,6 +28670,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
        * <code>repeated string security_group_ids = 7;</code>
        */
       public Builder clearSecurityGroupIds() {
@@ -28032,6 +28683,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID's of security groups attached to the interface.
+       * </pre>
+       *
        * <code>repeated string security_group_ids = 7;</code>
        */
       public Builder addSecurityGroupIdsBytes(
@@ -28103,20 +28758,36 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the instant network interface that is being updated.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the instant network interface that is being updated.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getInstanceIdBytes();
 
     /**
+     * <pre>
+     * The index of the network interface.
+     * </pre>
+     *
      * <code>string network_interface_index = 2;</code>
      */
     java.lang.String getNetworkInterfaceIndex();
     /**
+     * <pre>
+     * The index of the network interface.
+     * </pre>
+     *
      * <code>string network_interface_index = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -28210,6 +28881,10 @@ public final class InstanceServiceOuterClass {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the instant network interface that is being updated.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     public java.lang.String getInstanceId() {
@@ -28225,6 +28900,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the instant network interface that is being updated.
+     * </pre>
+     *
      * <code>string instance_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -28244,6 +28923,10 @@ public final class InstanceServiceOuterClass {
     public static final int NETWORK_INTERFACE_INDEX_FIELD_NUMBER = 2;
     private volatile java.lang.Object networkInterfaceIndex_;
     /**
+     * <pre>
+     * The index of the network interface.
+     * </pre>
+     *
      * <code>string network_interface_index = 2;</code>
      */
     public java.lang.String getNetworkInterfaceIndex() {
@@ -28259,6 +28942,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * The index of the network interface.
+     * </pre>
+     *
      * <code>string network_interface_index = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -28597,6 +29284,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public java.lang.String getInstanceId() {
@@ -28612,6 +29303,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -28628,6 +29323,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder setInstanceId(
@@ -28641,6 +29340,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder clearInstanceId() {
@@ -28650,6 +29353,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instant network interface that is being updated.
+       * </pre>
+       *
        * <code>string instance_id = 1;</code>
        */
       public Builder setInstanceIdBytes(
@@ -28666,6 +29373,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object networkInterfaceIndex_ = "";
       /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public java.lang.String getNetworkInterfaceIndex() {
@@ -28681,6 +29392,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -28697,6 +29412,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public Builder setNetworkInterfaceIndex(
@@ -28710,6 +29429,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public Builder clearNetworkInterfaceIndex() {
@@ -28719,6 +29442,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The index of the network interface.
+       * </pre>
+       *
        * <code>string network_interface_index = 2;</code>
        */
       public Builder setNetworkInterfaceIndexBytes(
