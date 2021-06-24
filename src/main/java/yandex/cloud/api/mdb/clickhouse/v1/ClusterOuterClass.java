@@ -413,6 +413,15 @@ public final class ClusterOuterClass {
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 17;</code>
+     */
+    boolean getDeletionProtection();
   }
   /**
    * <pre>
@@ -443,6 +452,7 @@ public final class ClusterOuterClass {
       status_ = 0;
       serviceAccountId_ = "";
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      deletionProtection_ = false;
     }
 
     @java.lang.Override
@@ -604,6 +614,11 @@ public final class ClusterOuterClass {
                 mutable_bitField0_ |= 0x00008000;
               }
               securityGroupIds_.add(s);
+              break;
+            }
+            case 136: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -1807,6 +1822,19 @@ public final class ClusterOuterClass {
       return securityGroupIds_.getByteString(index);
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 17;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 17;</code>
+     */
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1871,6 +1899,9 @@ public final class ClusterOuterClass {
       }
       for (int i = 0; i < securityGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16, securityGroupIds_.getRaw(i));
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(17, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -1949,6 +1980,10 @@ public final class ClusterOuterClass {
         size += dataSize;
         size += 2 * getSecurityGroupIdsList().size();
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(17, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2006,6 +2041,8 @@ public final class ClusterOuterClass {
       }
       result = result && getSecurityGroupIdsList()
           .equals(other.getSecurityGroupIdsList());
+      result = result && (getDeletionProtection()
+          == other.getDeletionProtection());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2063,6 +2100,9 @@ public final class ClusterOuterClass {
         hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2275,6 +2315,8 @@ public final class ClusterOuterClass {
         }
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00008000);
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -2348,6 +2390,7 @@ public final class ClusterOuterClass {
           bitField0_ = (bitField0_ & ~0x00008000);
         }
         result.securityGroupIds_ = securityGroupIds_;
+        result.deletionProtection_ = deletionProtection_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2479,6 +2522,9 @@ public final class ClusterOuterClass {
             securityGroupIds_.addAll(other.securityGroupIds_);
           }
           onChanged();
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4450,6 +4496,44 @@ public final class ClusterOuterClass {
   checkByteStringIsUtf8(value);
         ensureSecurityGroupIdsIsMutable();
         securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 17;</code>
+       */
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 17;</code>
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 17;</code>
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
         onChanged();
         return this;
       }
@@ -19176,7 +19260,7 @@ public final class ClusterOuterClass {
       "protobuf/wrappers.proto\032\033google/type/tim" +
       "eofday.proto\0326yandex/cloud/mdb/clickhous" +
       "e/v1/config/clickhouse.proto\0320yandex/clo" +
-      "ud/mdb/clickhouse/v1/maintenance.proto\"\253" +
+      "ud/mdb/clickhouse/v1/maintenance.proto\"\310" +
       "\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(" +
       "\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf." +
       "Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005" +
@@ -19195,73 +19279,74 @@ public final class ClusterOuterClass {
       ".yandex.cloud.mdb.clickhouse.v1.Maintena" +
       "nceWindow\022O\n\021planned_operation\030\017 \001(\01324.y" +
       "andex.cloud.mdb.clickhouse.v1.Maintenanc" +
-      "eOperation\022\032\n\022security_group_ids\030\020 \003(\t\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNSP" +
-      "ECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002" +
-      "\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020" +
-      "\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016S" +
-      "TATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING" +
-      "\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020" +
-      "\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitori" +
-      "ng\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n" +
-      "\004link\030\003 \001(\t\"\306\005\n\rClusterConfig\022\017\n\007version" +
-      "\030\001 \001(\t\022L\n\nclickhouse\030\002 \001(\01328.yandex.clou" +
-      "d.mdb.clickhouse.v1.ClusterConfig.Clickh" +
-      "ouse\022J\n\tzookeeper\030\003 \001(\01327.yandex.cloud.m" +
-      "db.clickhouse.v1.ClusterConfig.Zookeeper" +
-      "\0223\n\023backup_window_start\030\004 \001(\0132\026.google.t" +
-      "ype.TimeOfDay\0226\n\006access\030\005 \001(\0132&.yandex.c" +
-      "loud.mdb.clickhouse.v1.Access\022C\n\rcloud_s" +
-      "torage\030\006 \001(\0132,.yandex.cloud.mdb.clickhou" +
-      "se.v1.CloudStorage\022;\n\027sql_database_manag" +
-      "ement\030\007 \001(\0132\032.google.protobuf.BoolValue\022" +
-      "7\n\023sql_user_management\030\010 \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\032\226\001\n\nClickhouse\022J\n\006confi" +
-      "g\030\001 \001(\0132:.yandex.cloud.mdb.clickhouse.v1" +
-      ".config.ClickhouseConfigSet\022<\n\tresources" +
-      "\030\002 \001(\0132).yandex.cloud.mdb.clickhouse.v1." +
-      "Resources\032I\n\tZookeeper\022<\n\tresources\030\001 \001(" +
-      "\0132).yandex.cloud.mdb.clickhouse.v1.Resou" +
-      "rces\"f\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_i" +
-      "d\030\002 \001(\t\022;\n\006config\030\003 \001(\0132+.yandex.cloud.m" +
-      "db.clickhouse.v1.ShardConfig\"X\n\nShardGro" +
-      "up\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\023\n\013" +
-      "description\030\003 \001(\t\022\023\n\013shard_names\030\004 \003(\t\"\237" +
-      "\002\n\013ShardConfig\022J\n\nclickhouse\030\001 \001(\01326.yan" +
-      "dex.cloud.mdb.clickhouse.v1.ShardConfig." +
-      "Clickhouse\032\303\001\n\nClickhouse\022J\n\006config\030\001 \001(" +
-      "\0132:.yandex.cloud.mdb.clickhouse.v1.confi" +
-      "g.ClickhouseConfigSet\022<\n\tresources\030\002 \001(\013" +
-      "2).yandex.cloud.mdb.clickhouse.v1.Resour" +
-      "ces\022+\n\006weight\030\003 \001(\0132\033.google.protobuf.In" +
-      "t64Value\"\340\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\nclust" +
-      "er_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\004type\030\004 \001" +
-      "(\0162).yandex.cloud.mdb.clickhouse.v1.Host" +
-      ".Type\022<\n\tresources\030\005 \001(\0132).yandex.cloud." +
-      "mdb.clickhouse.v1.Resources\022;\n\006health\030\006 " +
-      "\001(\0162+.yandex.cloud.mdb.clickhouse.v1.Hos" +
-      "t.Health\0229\n\010services\030\007 \003(\0132\'.yandex.clou" +
-      "d.mdb.clickhouse.v1.Service\022\021\n\tsubnet_id" +
-      "\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\022\022\n\nshar" +
-      "d_name\030\n \001(\t\";\n\004Type\022\024\n\020TYPE_UNSPECIFIED" +
-      "\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Hea" +
-      "lth\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n" +
-      "\010DEGRADED\020\003\"\356\001\n\007Service\022:\n\004type\030\001 \001(\0162,." +
-      "yandex.cloud.mdb.clickhouse.v1.Service.T" +
-      "ype\022>\n\006health\030\002 \001(\0162..yandex.cloud.mdb.c" +
-      "lickhouse.v1.Service.Health\";\n\004Type\022\024\n\020T" +
-      "YPE_UNSPECIFIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOO" +
-      "KEEPER\020\002\"*\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE" +
-      "\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_pr" +
-      "eset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk" +
-      "_type_id\030\003 \001(\t\"Q\n\006Access\022\021\n\tdata_lens\030\001 " +
-      "\001(\010\022\017\n\007web_sql\030\002 \001(\010\022\017\n\007metrika\030\003 \001(\010\022\022\n" +
-      "\nserverless\030\004 \001(\010\"\037\n\014CloudStorage\022\017\n\007ena" +
-      "bled\030\001 \001(\010Bs\n\"yandex.cloud.api.mdb.click" +
-      "house.v1ZMgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/mdb/clickhouse/v1;cli" +
-      "ckhouseb\006proto3"
+      "eOperation\022\032\n\022security_group_ids\030\020 \003(\t\022\033" +
+      "\n\023deletion_protection\030\021 \001(\010\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013En" +
+      "vironment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016" +
+      "\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006Health\022" +
+      "\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002" +
+      "\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_UNKNO" +
+      "WN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR" +
+      "\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPE" +
+      "D\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name\030" +
+      "\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t" +
+      "\"\306\005\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022L\n\nc" +
+      "lickhouse\030\002 \001(\01328.yandex.cloud.mdb.click" +
+      "house.v1.ClusterConfig.Clickhouse\022J\n\tzoo" +
+      "keeper\030\003 \001(\01327.yandex.cloud.mdb.clickhou" +
+      "se.v1.ClusterConfig.Zookeeper\0223\n\023backup_" +
+      "window_start\030\004 \001(\0132\026.google.type.TimeOfD" +
+      "ay\0226\n\006access\030\005 \001(\0132&.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.Access\022C\n\rcloud_storage\030\006 \001(" +
+      "\0132,.yandex.cloud.mdb.clickhouse.v1.Cloud" +
+      "Storage\022;\n\027sql_database_management\030\007 \001(\013" +
+      "2\032.google.protobuf.BoolValue\0227\n\023sql_user" +
+      "_management\030\010 \001(\0132\032.google.protobuf.Bool" +
+      "Value\032\226\001\n\nClickhouse\022J\n\006config\030\001 \001(\0132:.y" +
+      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
+      "ckhouseConfigSet\022<\n\tresources\030\002 \001(\0132).ya" +
+      "ndex.cloud.mdb.clickhouse.v1.Resources\032I" +
+      "\n\tZookeeper\022<\n\tresources\030\001 \001(\0132).yandex." +
+      "cloud.mdb.clickhouse.v1.Resources\"f\n\005Sha" +
+      "rd\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022;\n\006" +
+      "config\030\003 \001(\0132+.yandex.cloud.mdb.clickhou" +
+      "se.v1.ShardConfig\"X\n\nShardGroup\022\014\n\004name\030" +
+      "\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\023\n\013description" +
+      "\030\003 \001(\t\022\023\n\013shard_names\030\004 \003(\t\"\237\002\n\013ShardCon" +
+      "fig\022J\n\nclickhouse\030\001 \001(\01326.yandex.cloud.m" +
+      "db.clickhouse.v1.ShardConfig.Clickhouse\032" +
+      "\303\001\n\nClickhouse\022J\n\006config\030\001 \001(\0132:.yandex." +
+      "cloud.mdb.clickhouse.v1.config.Clickhous" +
+      "eConfigSet\022<\n\tresources\030\002 \001(\0132).yandex.c" +
+      "loud.mdb.clickhouse.v1.Resources\022+\n\006weig" +
+      "ht\030\003 \001(\0132\033.google.protobuf.Int64Value\"\340\003" +
+      "\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t" +
+      "\022\017\n\007zone_id\030\003 \001(\t\0227\n\004type\030\004 \001(\0162).yandex" +
+      ".cloud.mdb.clickhouse.v1.Host.Type\022<\n\tre" +
+      "sources\030\005 \001(\0132).yandex.cloud.mdb.clickho" +
+      "use.v1.Resources\022;\n\006health\030\006 \001(\0162+.yande" +
+      "x.cloud.mdb.clickhouse.v1.Host.Health\0229\n" +
+      "\010services\030\007 \003(\0132\'.yandex.cloud.mdb.click" +
+      "house.v1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020a" +
+      "ssign_public_ip\030\t \001(\010\022\022\n\nshard_name\030\n \001(" +
+      "\t\";\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nCLICK" +
+      "HOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKN" +
+      "OWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003" +
+      "\"\356\001\n\007Service\022:\n\004type\030\001 \001(\0162,.yandex.clou" +
+      "d.mdb.clickhouse.v1.Service.Type\022>\n\006heal" +
+      "th\030\002 \001(\0162..yandex.cloud.mdb.clickhouse.v" +
+      "1.Service.Health\";\n\004Type\022\024\n\020TYPE_UNSPECI" +
+      "FIED\020\000\022\016\n\nCLICKHOUSE\020\001\022\r\n\tZOOKEEPER\020\002\"*\n" +
+      "\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020" +
+      "\002\"P\n\tResources\022\032\n\022resource_preset_id\030\001 \001" +
+      "(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 " +
+      "\001(\t\"Q\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_" +
+      "sql\030\002 \001(\010\022\017\n\007metrika\030\003 \001(\010\022\022\n\nserverless" +
+      "\030\004 \001(\010\"\037\n\014CloudStorage\022\017\n\007enabled\030\001 \001(\010B" +
+      "s\n\"yandex.cloud.api.mdb.clickhouse.v1ZMg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/mdb/clickhouse/v1;clickhouseb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19285,7 +19370,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "ServiceAccountId", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "ServiceAccountId", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "DeletionProtection", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_Cluster_LabelsEntry_fieldAccessorTable = new

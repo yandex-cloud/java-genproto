@@ -8400,6 +8400,15 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getHostGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 13;</code>
+     */
+    boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.CreateClusterRequest}
@@ -8423,6 +8432,7 @@ public final class ClusterServiceOuterClass {
       uiProxy_ = false;
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      deletionProtection_ = false;
     }
 
     @java.lang.Override
@@ -8532,6 +8542,11 @@ public final class ClusterServiceOuterClass {
                 mutable_bitField0_ |= 0x00000400;
               }
               hostGroupIds_.add(s);
+              break;
+            }
+            case 104: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -9071,6 +9086,19 @@ public final class ClusterServiceOuterClass {
       return hostGroupIds_.getByteString(index);
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 13;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 13;</code>
+     */
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9120,6 +9148,9 @@ public final class ClusterServiceOuterClass {
       }
       for (int i = 0; i < hostGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, hostGroupIds_.getRaw(i));
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(13, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -9182,6 +9213,10 @@ public final class ClusterServiceOuterClass {
         size += dataSize;
         size += 1 * getHostGroupIdsList().size();
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9223,6 +9258,8 @@ public final class ClusterServiceOuterClass {
           .equals(other.getSecurityGroupIdsList());
       result = result && getHostGroupIdsList()
           .equals(other.getHostGroupIdsList());
+      result = result && (getDeletionProtection()
+          == other.getDeletionProtection());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -9265,6 +9302,9 @@ public final class ClusterServiceOuterClass {
         hash = (37 * hash) + HOST_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getHostGroupIdsList().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9445,6 +9485,8 @@ public final class ClusterServiceOuterClass {
         bitField0_ = (bitField0_ & ~0x00000200);
         hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000400);
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -9497,6 +9539,7 @@ public final class ClusterServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.hostGroupIds_ = hostGroupIds_;
+        result.deletionProtection_ = deletionProtection_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -9597,6 +9640,9 @@ public final class ClusterServiceOuterClass {
             hostGroupIds_.addAll(other.hostGroupIds_);
           }
           onChanged();
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10778,6 +10824,44 @@ public final class ClusterServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 13;</code>
+       */
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 13;</code>
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 13;</code>
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11669,6 +11753,15 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 12;</code>
+     */
+    boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.dataproc.v1.UpdateClusterRequest}
@@ -11691,6 +11784,7 @@ public final class ClusterServiceOuterClass {
       decommissionTimeout_ = 0L;
       uiProxy_ = false;
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      deletionProtection_ = false;
     }
 
     @java.lang.Override
@@ -11803,6 +11897,11 @@ public final class ClusterServiceOuterClass {
                 mutable_bitField0_ |= 0x00000400;
               }
               securityGroupIds_.add(s);
+              break;
+            }
+            case 96: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -12294,6 +12393,19 @@ public final class ClusterServiceOuterClass {
       return securityGroupIds_.getByteString(index);
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 12;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 12;</code>
+     */
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12343,6 +12455,9 @@ public final class ClusterServiceOuterClass {
       }
       for (int i = 0; i < securityGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, securityGroupIds_.getRaw(i));
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(12, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -12402,6 +12517,10 @@ public final class ClusterServiceOuterClass {
         size += dataSize;
         size += 1 * getSecurityGroupIdsList().size();
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -12446,6 +12565,8 @@ public final class ClusterServiceOuterClass {
           == other.getUiProxy());
       result = result && getSecurityGroupIdsList()
           .equals(other.getSecurityGroupIdsList());
+      result = result && (getDeletionProtection()
+          == other.getDeletionProtection());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -12489,6 +12610,9 @@ public final class ClusterServiceOuterClass {
         hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12673,6 +12797,8 @@ public final class ClusterServiceOuterClass {
 
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000400);
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -12725,6 +12851,7 @@ public final class ClusterServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.securityGroupIds_ = securityGroupIds_;
+        result.deletionProtection_ = deletionProtection_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -12817,6 +12944,9 @@ public final class ClusterServiceOuterClass {
             securityGroupIds_.addAll(other.securityGroupIds_);
           }
           onChanged();
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13957,6 +14087,44 @@ public final class ClusterServiceOuterClass {
   checkByteStringIsUtf8(value);
         ensureSecurityGroupIdsIsMutable();
         securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 12;</code>
+       */
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 12;</code>
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 12;</code>
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
         onChanged();
         return this;
       }
@@ -24811,7 +24979,7 @@ public final class ClusterServiceOuterClass {
       "lusters_spec\030\001 \003(\01324.yandex.cloud.datapr" +
       "oc.v1.UpdateSubclusterConfigSpec\0226\n\006hado" +
       "op\030\002 \001(\0132&.yandex.cloud.dataproc.v1.Hado" +
-      "opConfig\"\252\004\n\024CreateClusterRequest\022\037\n\tfol" +
+      "opConfig\"\307\004\n\024CreateClusterRequest\022\037\n\tfol" +
       "der_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\t" +
       "B!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013d" +
       "escription\030\003 \001(\tB\t\212\3101\005<=256\022\213\001\n\006labels\030\004" +
@@ -24823,96 +24991,98 @@ public final class ClusterServiceOuterClass {
       "cB\004\350\3071\001\022\035\n\007zone_id\030\007 \001(\tB\014\350\3071\001\212\3101\004<=50\022 " +
       "\n\022service_account_id\030\010 \001(\tB\004\350\3071\001\022\016\n\006buck" +
       "et\030\t \001(\t\022\020\n\010ui_proxy\030\n \001(\010\022\032\n\022security_g" +
-      "roup_ids\030\013 \003(\t\022\026\n\016host_group_ids\030\014 \003(\t\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"+\n\025CreateClusterMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\"\300\004\n\024UpdateClusterRequest\022\034\n\nc" +
-      "luster_id\030\001 \001(\tB\010\212\3101\004<=50\022/\n\013update_mask" +
-      "\030\002 \001(\0132\032.google.protobuf.FieldMask\022\036\n\013de" +
-      "scription\030\003 \001(\tB\t\212\3101\005<=256\022\213\001\n\006labels\030\004 " +
-      "\003(\0132:.yandex.cloud.dataproc.v1.UpdateClu" +
-      "sterRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
-      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
-      "0-9a-z]*\022F\n\013config_spec\030\005 \001(\01321.yandex.c" +
-      "loud.dataproc.v1.UpdateClusterConfigSpec" +
-      "\022/\n\004name\030\006 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61" +
-      "}[a-z0-9]\022\032\n\022service_account_id\030\007 \001(\t\022\016\n" +
-      "\006bucket\030\010 \001(\t\022)\n\024decommission_timeout\030\t " +
-      "\001(\003B\013\372\3071\0070-86400\022\020\n\010ui_proxy\030\n \001(\010\022\032\n\022se" +
-      "curity_group_ids\030\013 \003(\t\032-\n\013LabelsEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateC" +
-      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"c\n\024De" +
-      "leteClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022)\n\024decommission_timeout\030\002 \001" +
-      "(\003B\013\372\3071\0070-86400\"+\n\025DeleteClusterMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\"7\n\023StartClusterRequ" +
-      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n" +
-      "\024StartClusterMetadata\022\022\n\ncluster_id\030\001 \001(" +
-      "\t\"a\n\022StopClusterRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\024decommission_timeou" +
-      "t\030\002 \001(\003B\013\372\3071\0070-86400\")\n\023StopClusterMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\"~\n\034ListClusterOp" +
-      "erationsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000" +
-      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListC" +
-      "lusterOperationsResponse\0225\n\noperations\030\001" +
-      " \003(\0132!.yandex.cloud.operation.Operation\022" +
-      "\027\n\017next_page_token\030\002 \001(\t\"\221\001\n\027ListCluster" +
-      "HostsRequest\022\034\n\ncluster_id\030\001 \001(\tB\010\212\3101\004<=" +
-      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npag" +
-      "e_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\t" +
-      "B\n\212\3101\006<=1000\"b\n\030ListClusterHostsResponse" +
-      "\022-\n\005hosts\030\001 \003(\0132\036.yandex.cloud.dataproc." +
-      "v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"2\n\022List" +
-      "UILinksRequest\022\034\n\ncluster_id\030\001 \001(\tB\010\212\3101\004" +
-      "<=50\"#\n\006UILink\022\014\n\004name\030\001 \001(\t\022\013\n\003url\030\002 \001(" +
-      "\t\"F\n\023ListUILinksResponse\022/\n\005links\030\001 \003(\0132" +
-      " .yandex.cloud.dataproc.v1.UILink2\221\r\n\016Cl" +
-      "usterService\022\201\001\n\003Get\022+.yandex.cloud.data" +
-      "proc.v1.GetClusterRequest\032!.yandex.cloud" +
-      ".dataproc.v1.Cluster\"*\202\323\344\223\002$\022\"/dataproc/" +
-      "v1/clusters/{cluster_id}\022\204\001\n\004List\022-.yand" +
-      "ex.cloud.dataproc.v1.ListClustersRequest" +
-      "\032..yandex.cloud.dataproc.v1.ListClusters" +
-      "Response\"\035\202\323\344\223\002\027\022\025/dataproc/v1/clusters\022" +
-      "\241\001\n\006Create\022..yandex.cloud.dataproc.v1.Cr" +
-      "eateClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"D\202\323\344\223\002\032\"\025/dataproc/v1/clus" +
-      "ters:\001*\262\322* \n\025CreateClusterMetadata\022\007Clus" +
-      "ter\022\256\001\n\006Update\022..yandex.cloud.dataproc.v" +
-      "1.UpdateClusterRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"Q\202\323\344\223\002\'2\"/dataproc/v1/" +
-      "clusters/{cluster_id}:\001*\262\322* \n\025UpdateClus" +
-      "terMetadata\022\007Cluster\022\271\001\n\006Delete\022..yandex" +
-      ".cloud.dataproc.v1.DeleteClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"\\\202\323\344\223" +
-      "\002$*\"/dataproc/v1/clusters/{cluster_id}\262\322" +
-      "*.\n\025DeleteClusterMetadata\022\025google.protob" +
-      "uf.Empty\022\256\001\n\005Start\022-.yandex.cloud.datapr" +
-      "oc.v1.StartClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"S\202\323\344\223\002*\"(/dataproc/" +
-      "v1/clusters/{cluster_id}:start\262\322*\037\n\024Star" +
-      "tClusterMetadata\022\007Cluster\022\255\001\n\004Stop\022,.yan" +
-      "dex.cloud.dataproc.v1.StopClusterRequest" +
-      "\032!.yandex.cloud.operation.Operation\"T\202\323\344" +
-      "\223\002,\"\'/dataproc/v1/clusters/{cluster_id}:" +
-      "stop:\001*\262\322*\036\n\023StopClusterMetadata\022\007Cluste" +
-      "r\022\270\001\n\016ListOperations\0226.yandex.cloud.data" +
-      "proc.v1.ListClusterOperationsRequest\0327.y" +
-      "andex.cloud.dataproc.v1.ListClusterOpera" +
-      "tionsResponse\"5\202\323\344\223\002/\022-/dataproc/v1/clus" +
-      "ters/{cluster_id}/operations\022\244\001\n\tListHos" +
-      "ts\0221.yandex.cloud.dataproc.v1.ListCluste" +
-      "rHostsRequest\0322.yandex.cloud.dataproc.v1" +
-      ".ListClusterHostsResponse\"0\202\323\344\223\002*\022(/data" +
-      "proc/v1/clusters/{cluster_id}/hosts\022\237\001\n\013" +
-      "ListUILinks\022,.yandex.cloud.dataproc.v1.L" +
-      "istUILinksRequest\032-.yandex.cloud.datapro" +
-      "c.v1.ListUILinksResponse\"3\202\323\344\223\002-\022+/datap" +
-      "roc/v1/clusters/{cluster_id}/ui_linksBe\n" +
-      "\034yandex.cloud.api.dataproc.v1ZEgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "dataproc/v1;dataprocb\006proto3"
+      "roup_ids\030\013 \003(\t\022\026\n\016host_group_ids\030\014 \003(\t\022\033" +
+      "\n\023deletion_protection\030\r \001(\010\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025Cr" +
+      "eateClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"" +
+      "\335\004\n\024UpdateClusterRequest\022\034\n\ncluster_id\030\001" +
+      " \001(\tB\010\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.go" +
+      "ogle.protobuf.FieldMask\022\036\n\013description\030\003" +
+      " \001(\tB\t\212\3101\005<=256\022\213\001\n\006labels\030\004 \003(\0132:.yande" +
+      "x.cloud.dataproc.v1.UpdateClusterRequest" +
+      ".LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9" +
+      "a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022F\n" +
+      "\013config_spec\030\005 \001(\01321.yandex.cloud.datapr" +
+      "oc.v1.UpdateClusterConfigSpec\022/\n\004name\030\006 " +
+      "\001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\032" +
+      "\n\022service_account_id\030\007 \001(\t\022\016\n\006bucket\030\010 \001" +
+      "(\t\022)\n\024decommission_timeout\030\t \001(\003B\013\372\3071\0070-" +
+      "86400\022\020\n\010ui_proxy\030\n \001(\010\022\032\n\022security_grou" +
+      "p_ids\030\013 \003(\t\022\033\n\023deletion_protection\030\014 \001(\010" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\nclus" +
+      "ter_id\030\001 \001(\t\"c\n\024DeleteClusterRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\024decomm" +
+      "ission_timeout\030\002 \001(\003B\013\372\3071\0070-86400\"+\n\025Del" +
+      "eteClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"7" +
+      "\n\023StartClusterRequest\022 \n\ncluster_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022" +
+      "\022\n\ncluster_id\030\001 \001(\t\"a\n\022StopClusterReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022)\n\024d" +
+      "ecommission_timeout\030\002 \001(\003B\013\372\3071\0070-86400\")" +
+      "\n\023StopClusterMetadata\022\022\n\ncluster_id\030\001 \001(" +
+      "\t\"~\n\034ListClusterOperationsRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size" +
+      "\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t" +
+      "\212\3101\005<=100\"o\n\035ListClusterOperationsRespon" +
+      "se\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.op" +
+      "eration.Operation\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\"\221\001\n\027ListClusterHostsRequest\022\034\n\ncluste" +
+      "r_id\030\001 \001(\tB\010\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
+      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
+      "00\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"b\n\030ListCl" +
+      "usterHostsResponse\022-\n\005hosts\030\001 \003(\0132\036.yand" +
+      "ex.cloud.dataproc.v1.Host\022\027\n\017next_page_t" +
+      "oken\030\002 \001(\t\"2\n\022ListUILinksRequest\022\034\n\nclus" +
+      "ter_id\030\001 \001(\tB\010\212\3101\004<=50\"#\n\006UILink\022\014\n\004name" +
+      "\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\"F\n\023ListUILinksRespon" +
+      "se\022/\n\005links\030\001 \003(\0132 .yandex.cloud.datapro" +
+      "c.v1.UILink2\221\r\n\016ClusterService\022\201\001\n\003Get\022+" +
+      ".yandex.cloud.dataproc.v1.GetClusterRequ" +
+      "est\032!.yandex.cloud.dataproc.v1.Cluster\"*" +
+      "\202\323\344\223\002$\022\"/dataproc/v1/clusters/{cluster_i" +
+      "d}\022\204\001\n\004List\022-.yandex.cloud.dataproc.v1.L" +
+      "istClustersRequest\032..yandex.cloud.datapr" +
+      "oc.v1.ListClustersResponse\"\035\202\323\344\223\002\027\022\025/dat" +
+      "aproc/v1/clusters\022\241\001\n\006Create\022..yandex.cl" +
+      "oud.dataproc.v1.CreateClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"D\202\323\344\223\002\032\"" +
+      "\025/dataproc/v1/clusters:\001*\262\322* \n\025CreateClu" +
+      "sterMetadata\022\007Cluster\022\256\001\n\006Update\022..yande" +
+      "x.cloud.dataproc.v1.UpdateClusterRequest" +
+      "\032!.yandex.cloud.operation.Operation\"Q\202\323\344" +
+      "\223\002\'2\"/dataproc/v1/clusters/{cluster_id}:" +
+      "\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluster\022\271" +
+      "\001\n\006Delete\022..yandex.cloud.dataproc.v1.Del" +
+      "eteClusterRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"\\\202\323\344\223\002$*\"/dataproc/v1/clust" +
+      "ers/{cluster_id}\262\322*.\n\025DeleteClusterMetad" +
+      "ata\022\025google.protobuf.Empty\022\256\001\n\005Start\022-.y" +
+      "andex.cloud.dataproc.v1.StartClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"S" +
+      "\202\323\344\223\002*\"(/dataproc/v1/clusters/{cluster_i" +
+      "d}:start\262\322*\037\n\024StartClusterMetadata\022\007Clus" +
+      "ter\022\255\001\n\004Stop\022,.yandex.cloud.dataproc.v1." +
+      "StopClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"T\202\323\344\223\002,\"\'/dataproc/v1/clus" +
+      "ters/{cluster_id}:stop:\001*\262\322*\036\n\023StopClust" +
+      "erMetadata\022\007Cluster\022\270\001\n\016ListOperations\0226" +
+      ".yandex.cloud.dataproc.v1.ListClusterOpe" +
+      "rationsRequest\0327.yandex.cloud.dataproc.v" +
+      "1.ListClusterOperationsResponse\"5\202\323\344\223\002/\022" +
+      "-/dataproc/v1/clusters/{cluster_id}/oper" +
+      "ations\022\244\001\n\tListHosts\0221.yandex.cloud.data" +
+      "proc.v1.ListClusterHostsRequest\0322.yandex" +
+      ".cloud.dataproc.v1.ListClusterHostsRespo" +
+      "nse\"0\202\323\344\223\002*\022(/dataproc/v1/clusters/{clus" +
+      "ter_id}/hosts\022\237\001\n\013ListUILinks\022,.yandex.c" +
+      "loud.dataproc.v1.ListUILinksRequest\032-.ya" +
+      "ndex.cloud.dataproc.v1.ListUILinksRespon" +
+      "se\"3\202\323\344\223\002-\022+/dataproc/v1/clusters/{clust" +
+      "er_id}/ui_linksBe\n\034yandex.cloud.api.data" +
+      "proc.v1ZEgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/dataproc/v1;dataprocb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -24981,7 +25151,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_dataproc_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "ConfigSpec", "ZoneId", "ServiceAccountId", "Bucket", "UiProxy", "SecurityGroupIds", "HostGroupIds", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "ConfigSpec", "ZoneId", "ServiceAccountId", "Bucket", "UiProxy", "SecurityGroupIds", "HostGroupIds", "DeletionProtection", });
     internal_static_yandex_cloud_dataproc_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_dataproc_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_dataproc_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -24999,7 +25169,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_dataproc_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "ServiceAccountId", "Bucket", "DecommissionTimeout", "UiProxy", "SecurityGroupIds", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "ServiceAccountId", "Bucket", "DecommissionTimeout", "UiProxy", "SecurityGroupIds", "DeletionProtection", });
     internal_static_yandex_cloud_dataproc_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_dataproc_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_dataproc_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new

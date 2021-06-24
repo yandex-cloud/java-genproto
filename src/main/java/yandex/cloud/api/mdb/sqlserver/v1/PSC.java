@@ -338,6 +338,15 @@ public final class PSC {
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 14;</code>
+     */
+    boolean getDeletionProtection();
   }
   /**
    * <pre>
@@ -367,6 +376,7 @@ public final class PSC {
       health_ = 0;
       status_ = 0;
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      deletionProtection_ = false;
     }
 
     @java.lang.Override
@@ -496,6 +506,11 @@ public final class PSC {
                 mutable_bitField0_ |= 0x00001000;
               }
               securityGroupIds_.add(s);
+              break;
+            }
+            case 112: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -1579,6 +1594,19 @@ public final class PSC {
       return securityGroupIds_.getByteString(index);
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 14;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 14;</code>
+     */
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1634,6 +1662,9 @@ public final class PSC {
       }
       for (int i = 0; i < securityGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, securityGroupIds_.getRaw(i));
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(14, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -1701,6 +1732,10 @@ public final class PSC {
         size += dataSize;
         size += 1 * getSecurityGroupIdsList().size();
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1746,6 +1781,8 @@ public final class PSC {
       result = result && status_ == other.status_;
       result = result && getSecurityGroupIdsList()
           .equals(other.getSecurityGroupIdsList());
+      result = result && (getDeletionProtection()
+          == other.getDeletionProtection());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1793,6 +1830,9 @@ public final class PSC {
         hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1991,6 +2031,8 @@ public final class PSC {
 
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00001000);
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -2053,6 +2095,7 @@ public final class PSC {
           bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.securityGroupIds_ = securityGroupIds_;
+        result.deletionProtection_ = deletionProtection_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2174,6 +2217,9 @@ public final class PSC {
             securityGroupIds_.addAll(other.securityGroupIds_);
           }
           onChanged();
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3721,6 +3767,44 @@ public final class PSC {
   checkByteStringIsUtf8(value);
         ensureSecurityGroupIdsIsMutable();
         securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 14;</code>
+       */
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 14;</code>
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 14;</code>
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
         onChanged();
         return this;
       }
@@ -11532,7 +11616,7 @@ public final class PSC {
       "ogle/protobuf/timestamp.proto\032\033google/ty" +
       "pe/timeofday.proto\032;yandex/cloud/mdb/sql" +
       "server/v1/config/sqlserver2016sp2.proto\"" +
-      "\351\006\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001" +
+      "\206\007\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001" +
       "(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf" +
       ".Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030" +
       "\005 \001(\t\022B\n\006labels\030\006 \003(\01322.yandex.cloud.mdb" +
@@ -11546,51 +11630,52 @@ public final class PSC {
       "ud.mdb.sqlserver.v1.Cluster.Health\022=\n\006st" +
       "atus\030\014 \001(\0162-.yandex.cloud.mdb.sqlserver." +
       "v1.Cluster.Status\022\032\n\022security_group_ids\030" +
-      "\r \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONME" +
-      "NT_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRES" +
-      "TABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n" +
-      "\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Stat" +
-      "us\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007" +
-      "RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010ST" +
-      "OPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nM" +
-      "onitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002" +
-      " \001(\t\022\014\n\004link\030\003 \001(\t\"\355\003\n\rClusterConfig\022\017\n\007" +
-      "version\030\001 \001(\t\022\205\001\n\033sqlserver_config_2016s" +
-      "p2std\030\002 \001(\0132B.yandex.cloud.mdb.sqlserver" +
-      ".v1.config.SQLServerConfigSet2016sp2stdH" +
-      "\000R\032sqlserverConfig_2016sp2std\022\205\001\n\033sqlser" +
-      "ver_config_2016sp2ent\030\005 \001(\0132B.yandex.clo" +
-      "ud.mdb.sqlserver.v1.config.SQLServerConf" +
-      "igSet2016sp2entH\000R\032sqlserverConfig_2016s" +
-      "p2ent\022;\n\tresources\030\003 \001(\0132(.yandex.cloud." +
-      "mdb.sqlserver.v1.Resources\0223\n\023backup_win" +
-      "dow_start\030\004 \001(\0132\026.google.type.TimeOfDay\022" +
-      "5\n\006access\030\006 \001(\0132%.yandex.cloud.mdb.sqlse" +
-      "rver.v1.AccessB\022\n\020sqlserver_config\"\305\003\n\004H" +
-      "ost\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n" +
-      "\007zone_id\030\003 \001(\t\022;\n\tresources\030\004 \001(\0132(.yand" +
-      "ex.cloud.mdb.sqlserver.v1.Resources\0226\n\004r" +
-      "ole\030\005 \001(\0162(.yandex.cloud.mdb.sqlserver.v" +
-      "1.Host.Role\022:\n\006health\030\006 \001(\0162*.yandex.clo" +
-      "ud.mdb.sqlserver.v1.Host.Health\0228\n\010servi" +
-      "ces\030\007 \003(\0132&.yandex.cloud.mdb.sqlserver.v" +
-      "1.Service\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_p" +
-      "ublic_ip\030\t \001(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000" +
-      "\022\n\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016H" +
-      "EALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010" +
-      "DEGRADED\020\003\"\343\001\n\007Service\0229\n\004type\030\001 \001(\0162+.y" +
-      "andex.cloud.mdb.sqlserver.v1.Service.Typ" +
-      "e\022=\n\006health\030\002 \001(\0162-.yandex.cloud.mdb.sql" +
-      "server.v1.Service.Health\"+\n\004Type\022\024\n\020TYPE" +
-      "_UNSPECIFIED\020\000\022\r\n\tSQLSERVER\020\001\"1\n\006Health\022" +
-      "\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002" +
-      "\"P\n\tResources\022\032\n\022resource_preset_id\030\001 \001(" +
-      "\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001" +
-      "(\t\"\033\n\006Access\022\021\n\tdata_lens\030\001 \001(\010Bu\n!yande" +
-      "x.cloud.api.mdb.sqlserver.v1B\003PSCZKgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/mdb/sqlserver/v1;sqlserverb\006proto3"
+      "\r \003(\t\022\033\n\023deletion_protection\030\016 \001(\010\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPECIF" +
+      "IED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006" +
+      "Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
+      "\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATU" +
+      "S_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t" +
+      "\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n" +
+      "\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014" +
+      "\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004lin" +
+      "k\030\003 \001(\t\"\355\003\n\rClusterConfig\022\017\n\007version\030\001 \001" +
+      "(\t\022\205\001\n\033sqlserver_config_2016sp2std\030\002 \001(\013" +
+      "2B.yandex.cloud.mdb.sqlserver.v1.config." +
+      "SQLServerConfigSet2016sp2stdH\000R\032sqlserve" +
+      "rConfig_2016sp2std\022\205\001\n\033sqlserver_config_" +
+      "2016sp2ent\030\005 \001(\0132B.yandex.cloud.mdb.sqls" +
+      "erver.v1.config.SQLServerConfigSet2016sp" +
+      "2entH\000R\032sqlserverConfig_2016sp2ent\022;\n\tre" +
+      "sources\030\003 \001(\0132(.yandex.cloud.mdb.sqlserv" +
+      "er.v1.Resources\0223\n\023backup_window_start\030\004" +
+      " \001(\0132\026.google.type.TimeOfDay\0225\n\006access\030\006" +
+      " \001(\0132%.yandex.cloud.mdb.sqlserver.v1.Acc" +
+      "essB\022\n\020sqlserver_config\"\305\003\n\004Host\022\014\n\004name" +
+      "\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 " +
+      "\001(\t\022;\n\tresources\030\004 \001(\0132(.yandex.cloud.md" +
+      "b.sqlserver.v1.Resources\0226\n\004role\030\005 \001(\0162(" +
+      ".yandex.cloud.mdb.sqlserver.v1.Host.Role" +
+      "\022:\n\006health\030\006 \001(\0162*.yandex.cloud.mdb.sqls" +
+      "erver.v1.Host.Health\0228\n\010services\030\007 \003(\0132&" +
+      ".yandex.cloud.mdb.sqlserver.v1.Service\022\021" +
+      "\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t " +
+      "\001(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020" +
+      "\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNO" +
+      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"" +
+      "\343\001\n\007Service\0229\n\004type\030\001 \001(\0162+.yandex.cloud" +
+      ".mdb.sqlserver.v1.Service.Type\022=\n\006health" +
+      "\030\002 \001(\0162-.yandex.cloud.mdb.sqlserver.v1.S" +
+      "ervice.Health\"+\n\004Type\022\024\n\020TYPE_UNSPECIFIE" +
+      "D\020\000\022\r\n\tSQLSERVER\020\001\"1\n\006Health\022\022\n\016HEALTH_U" +
+      "NKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResourc" +
+      "es\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_s" +
+      "ize\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\033\n\006Acces" +
+      "s\022\021\n\tdata_lens\030\001 \001(\010Bu\n!yandex.cloud.api" +
+      ".mdb.sqlserver.v1B\003PSCZKgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/mdb/sql" +
+      "server/v1;sqlserverb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11612,7 +11697,7 @@ public final class PSC {
     internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "SecurityGroupIds", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "SecurityGroupIds", "DeletionProtection", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_sqlserver_v1_Cluster_LabelsEntry_fieldAccessorTable = new

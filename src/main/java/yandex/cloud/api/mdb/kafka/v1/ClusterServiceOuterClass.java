@@ -3107,6 +3107,15 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getHostGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 14;</code>
+     */
+    boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.CreateClusterRequest}
@@ -3131,6 +3140,7 @@ public final class ClusterServiceOuterClass {
       subnetId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      deletionProtection_ = false;
     }
 
     @java.lang.Override
@@ -3256,6 +3266,11 @@ public final class ClusterServiceOuterClass {
                 mutable_bitField0_ |= 0x00000800;
               }
               hostGroupIds_.add(s);
+              break;
+            }
+            case 112: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -3887,6 +3902,19 @@ public final class ClusterServiceOuterClass {
       return hostGroupIds_.getByteString(index);
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 14;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 14;</code>
+     */
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3939,6 +3967,9 @@ public final class ClusterServiceOuterClass {
       }
       for (int i = 0; i < hostGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, hostGroupIds_.getRaw(i));
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(14, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -4011,6 +4042,10 @@ public final class ClusterServiceOuterClass {
         size += dataSize;
         size += 1 * getHostGroupIdsList().size();
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(14, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4053,6 +4088,8 @@ public final class ClusterServiceOuterClass {
           .equals(other.getSecurityGroupIdsList());
       result = result && getHostGroupIdsList()
           .equals(other.getHostGroupIdsList());
+      result = result && (getDeletionProtection()
+          == other.getDeletionProtection());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -4102,6 +4139,9 @@ public final class ClusterServiceOuterClass {
         hash = (37 * hash) + HOST_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getHostGroupIdsList().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4294,6 +4334,8 @@ public final class ClusterServiceOuterClass {
         bitField0_ = (bitField0_ & ~0x00000400);
         hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000800);
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -4367,6 +4409,7 @@ public final class ClusterServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000800);
         }
         result.hostGroupIds_ = hostGroupIds_;
+        result.deletionProtection_ = deletionProtection_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4521,6 +4564,9 @@ public final class ClusterServiceOuterClass {
             hostGroupIds_.addAll(other.hostGroupIds_);
           }
           onChanged();
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6302,6 +6348,44 @@ public final class ClusterServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 14;</code>
+       */
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 14;</code>
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 14;</code>
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7145,6 +7229,15 @@ public final class ClusterServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getSecurityGroupIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 8;</code>
+     */
+    boolean getDeletionProtection();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.UpdateClusterRequest}
@@ -7163,6 +7256,7 @@ public final class ClusterServiceOuterClass {
       description_ = "";
       name_ = "";
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      deletionProtection_ = false;
     }
 
     @java.lang.Override
@@ -7253,6 +7347,11 @@ public final class ClusterServiceOuterClass {
                 mutable_bitField0_ |= 0x00000040;
               }
               securityGroupIds_.add(s);
+              break;
+            }
+            case 64: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -7637,6 +7736,19 @@ public final class ClusterServiceOuterClass {
       return securityGroupIds_.getByteString(index);
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 8;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 8;</code>
+     */
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7674,6 +7786,9 @@ public final class ClusterServiceOuterClass {
       }
       for (int i = 0; i < securityGroupIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, securityGroupIds_.getRaw(i));
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(8, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -7719,6 +7834,10 @@ public final class ClusterServiceOuterClass {
         size += dataSize;
         size += 1 * getSecurityGroupIdsList().size();
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7755,6 +7874,8 @@ public final class ClusterServiceOuterClass {
           .equals(other.getName());
       result = result && getSecurityGroupIdsList()
           .equals(other.getSecurityGroupIdsList());
+      result = result && (getDeletionProtection()
+          == other.getDeletionProtection());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7788,6 +7909,9 @@ public final class ClusterServiceOuterClass {
         hash = (37 * hash) + SECURITY_GROUP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getSecurityGroupIdsList().hashCode();
       }
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7964,6 +8088,8 @@ public final class ClusterServiceOuterClass {
 
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000040);
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -8012,6 +8138,7 @@ public final class ClusterServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.securityGroupIds_ = securityGroupIds_;
+        result.deletionProtection_ = deletionProtection_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8090,6 +8217,9 @@ public final class ClusterServiceOuterClass {
             securityGroupIds_.addAll(other.securityGroupIds_);
           }
           onChanged();
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8970,6 +9100,44 @@ public final class ClusterServiceOuterClass {
   checkByteStringIsUtf8(value);
         ensureSecurityGroupIdsIsMutable();
         securityGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 8;</code>
+       */
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 8;</code>
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 8;</code>
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
         onChanged();
         return this;
       }
@@ -25693,7 +25861,7 @@ public final class ClusterServiceOuterClass {
       "\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"e" +
       "\n\024ListClustersResponse\0224\n\010clusters\030\001 \003(\013" +
       "2\".yandex.cloud.mdb.kafka.v1.Cluster\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"\266\005\n\024CreateClusterR" +
+      "next_page_token\030\002 \001(\t\"\323\005\n\024CreateClusterR" +
       "equest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
       "=\n\004name\030\002 \001(\tB/\350\3071\001\212\3101\0041-63\362\3071\037[a-z]([-a" +
       "-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 " +
@@ -25709,125 +25877,126 @@ public final class ClusterServiceOuterClass {
       "r_specs\030\010 \003(\0132#.yandex.cloud.mdb.kafka.v" +
       "1.UserSpec\022\034\n\nnetwork_id\030\n \001(\tB\010\212\3101\004<=50" +
       "\022\021\n\tsubnet_id\030\013 \003(\t\022\032\n\022security_group_id" +
-      "s\030\014 \003(\t\022\026\n\016host_group_ids\030\r \003(\t\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+" +
-      "\n\025CreateClusterMetadata\022\022\n\ncluster_id\030\001 " +
-      "\001(\t\"\311\003\n\024UpdateClusterRequest\022 \n\ncluster_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 " +
-      "\001(\0132\032.google.protobuf.FieldMask\022\036\n\013descr" +
-      "iption\030\003 \001(\tB\t\212\3101\005<=256\022\214\001\n\006labels\030\004 \003(\013" +
-      "2;.yandex.cloud.mdb.kafka.v1.UpdateClust" +
-      "erRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362" +
-      "\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-" +
-      "9a-z]*\022:\n\013config_spec\030\005 \001(\0132%.yandex.clo" +
-      "ud.mdb.kafka.v1.ConfigSpec\022(\n\004name\030\006 \001(\t" +
-      "B\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\032\n\022security" +
-      "_group_ids\030\007 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateCluster" +
-      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\"8\n\024DeleteCl" +
-      "usterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\"+\n\025DeleteClusterMetadata\022\022\n\nclust" +
-      "er_id\030\001 \001(\t\"\247\002\n\026ListClusterLogsRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolu" +
-      "mn_filter\030\002 \003(\t\022-\n\tfrom_time\030\003 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022+\n\007to_time\030\004 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022\035\n\tpage_size" +
-      "\030\005 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\006 \001(\tB\t" +
-      "\212\3101\005<=100\022\036\n\026always_next_page_token\030\007 \001(" +
-      "\010\022\032\n\006filter\030\010 \001(\tB\n\212\3101\006<=1000\"\256\001\n\tLogRec" +
-      "ord\022-\n\ttimestamp\030\001 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022B\n\007message\030\002 \003(\01321.yandex.clo" +
-      "ud.mdb.kafka.v1.LogRecord.MessageEntry\032." +
-      "\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\t:\0028\001\"f\n\027ListClusterLogsResponse\0222\n\004log" +
-      "s\030\001 \003(\0132$.yandex.cloud.mdb.kafka.v1.LogR" +
-      "ecord\022\027\n\017next_page_token\030\002 \001(\t\"b\n\017Stream" +
-      "LogRecord\0224\n\006record\030\001 \001(\0132$.yandex.cloud" +
-      ".mdb.kafka.v1.LogRecord\022\031\n\021next_record_t" +
-      "oken\030\002 \001(\t\"\354\001\n\030StreamClusterLogsRequest\022" +
-      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcol" +
-      "umn_filter\030\002 \003(\t\022-\n\tfrom_time\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022+\n\007to_time\030\004 \001(\013" +
-      "2\032.google.protobuf.Timestamp\022\037\n\014record_t" +
-      "oken\030\005 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\006 \001(\tB\n\212" +
-      "\3101\006<=1000\"~\n\034ListClusterOperationsReques" +
-      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
-      "age_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token" +
-      "\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperatio" +
-      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
-      "cloud.operation.Operation\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t\"y\n\027ListClusterHostsRequest\022 \n" +
-      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_" +
-      "size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001" +
-      "(\tB\t\212\3101\005<=100\"c\n\030ListClusterHostsRespons" +
-      "e\022.\n\005hosts\030\001 \003(\0132\037.yandex.cloud.mdb.kafk" +
-      "a.v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"c\n\022Mo" +
-      "veClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022+\n\025destination_folder_id\030\002 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"b\n\023MoveClusterMetadata\022\022" +
-      "\n\ncluster_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002" +
-      " \001(\t\022\035\n\025destination_folder_id\030\003 \001(\t\"7\n\023S" +
-      "tartClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022\022\n\n" +
-      "cluster_id\030\001 \001(\t\"6\n\022StopClusterRequest\022 " +
-      "\n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023Stop" +
-      "ClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t2\265\020\n\016" +
-      "ClusterService\022\210\001\n\003Get\022,.yandex.cloud.md" +
-      "b.kafka.v1.GetClusterRequest\032\".yandex.cl" +
-      "oud.mdb.kafka.v1.Cluster\"/\202\323\344\223\002)\022\'/manag" +
-      "ed-kafka/v1/clusters/{cluster_id}\022\213\001\n\004Li" +
-      "st\022..yandex.cloud.mdb.kafka.v1.ListClust" +
-      "ersRequest\032/.yandex.cloud.mdb.kafka.v1.L" +
-      "istClustersResponse\"\"\202\323\344\223\002\034\022\032/managed-ka" +
-      "fka/v1/clusters\022\247\001\n\006Create\022/.yandex.clou" +
-      "d.mdb.kafka.v1.CreateClusterRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"I\202\323\344\223\002\037\"\032" +
-      "/managed-kafka/v1/clusters:\001*\262\322* \n\025Creat" +
-      "eClusterMetadata\022\007Cluster\022\264\001\n\006Update\022/.y" +
-      "andex.cloud.mdb.kafka.v1.UpdateClusterRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"V\202\323\344\223\002,2\'/managed-kafka/v1/clusters/{cl" +
-      "uster_id}:\001*\262\322* \n\025UpdateClusterMetadata\022" +
-      "\007Cluster\022\277\001\n\006Delete\022/.yandex.cloud.mdb.k" +
-      "afka.v1.DeleteClusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"a\202\323\344\223\002)*\'/manage" +
-      "d-kafka/v1/clusters/{cluster_id}\262\322*.\n\025De" +
-      "leteClusterMetadata\022\025google.protobuf.Emp" +
-      "ty\022\263\001\n\004Move\022-.yandex.cloud.mdb.kafka.v1." +
-      "MoveClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"Y\202\323\344\223\0021\",/managed-kafka/v1" +
-      "/clusters/{cluster_id}:move:\001*\262\322*\036\n\023Move" +
-      "ClusterMetadata\022\007Cluster\022\264\001\n\005Start\022..yan" +
-      "dex.cloud.mdb.kafka.v1.StartClusterReque" +
-      "st\032!.yandex.cloud.operation.Operation\"X\202" +
-      "\323\344\223\002/\"-/managed-kafka/v1/clusters/{clust" +
-      "er_id}:start\262\322*\037\n\024StartClusterMetadata\022\007" +
-      "Cluster\022\260\001\n\004Stop\022-.yandex.cloud.mdb.kafk" +
-      "a.v1.StopClusterRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"V\202\323\344\223\002.\",/managed-kaf" +
-      "ka/v1/clusters/{cluster_id}:stop\262\322*\036\n\023St" +
-      "opClusterMetadata\022\007Cluster\022\247\001\n\010ListLogs\022" +
-      "1.yandex.cloud.mdb.kafka.v1.ListClusterL" +
-      "ogsRequest\0322.yandex.cloud.mdb.kafka.v1.L" +
-      "istClusterLogsResponse\"4\202\323\344\223\002.\022,/managed" +
-      "-kafka/v1/clusters/{cluster_id}:logs\022\254\001\n" +
-      "\nStreamLogs\0223.yandex.cloud.mdb.kafka.v1." +
-      "StreamClusterLogsRequest\032*.yandex.cloud." +
-      "mdb.kafka.v1.StreamLogRecord\";\202\323\344\223\0025\0223/m" +
-      "anaged-kafka/v1/clusters/{cluster_id}:st" +
-      "ream_logs0\001\022\277\001\n\016ListOperations\0227.yandex." +
-      "cloud.mdb.kafka.v1.ListClusterOperations" +
-      "Request\0328.yandex.cloud.mdb.kafka.v1.List" +
-      "ClusterOperationsResponse\":\202\323\344\223\0024\0222/mana" +
-      "ged-kafka/v1/clusters/{cluster_id}/opera" +
-      "tions\022\253\001\n\tListHosts\0222.yandex.cloud.mdb.k" +
-      "afka.v1.ListClusterHostsRequest\0323.yandex" +
-      ".cloud.mdb.kafka.v1.ListClusterHostsResp" +
-      "onse\"5\202\323\344\223\002/\022-/managed-kafka/v1/clusters" +
-      "/{cluster_id}/hostsBd\n\035yandex.cloud.api." +
-      "mdb.kafka.v1ZCgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/mdb/kafka/v1;kafk" +
-      "ab\006proto3"
+      "s\030\014 \003(\t\022\026\n\016host_group_ids\030\r \003(\t\022\033\n\023delet" +
+      "ion_protection\030\016 \001(\010\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateClu" +
+      "sterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\346\003\n\024Upd" +
+      "ateClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.googl" +
+      "e.protobuf.FieldMask\022\036\n\013description\030\003 \001(" +
+      "\tB\t\212\3101\005<=256\022\214\001\n\006labels\030\004 \003(\0132;.yandex.c" +
+      "loud.mdb.kafka.v1.UpdateClusterRequest.L" +
+      "abelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-" +
+      "z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022:\n\013c" +
+      "onfig_spec\030\005 \001(\0132%.yandex.cloud.mdb.kafk" +
+      "a.v1.ConfigSpec\022(\n\004name\030\006 \001(\tB\032\212\3101\004<=63\362" +
+      "\3071\016[a-zA-Z0-9_-]*\022\032\n\022security_group_ids\030" +
+      "\007 \003(\t\022\033\n\023deletion_protection\030\010 \001(\010\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"+\n\025UpdateClusterMetadata\022\022\n\ncluster_id" +
+      "\030\001 \001(\t\"8\n\024DeleteClusterRequest\022 \n\ncluste" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteCluste" +
+      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\247\002\n\026ListCl" +
+      "usterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n\tfro" +
+      "m_time\030\003 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022+\n\007to_time\030\004 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022\035\n\tpage_size\030\005 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
+      "page_token\030\006 \001(\tB\t\212\3101\005<=100\022\036\n\026always_ne" +
+      "xt_page_token\030\007 \001(\010\022\032\n\006filter\030\010 \001(\tB\n\212\3101" +
+      "\006<=1000\"\256\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\013" +
+      "2\032.google.protobuf.Timestamp\022B\n\007message\030" +
+      "\002 \003(\01321.yandex.cloud.mdb.kafka.v1.LogRec" +
+      "ord.MessageEntry\032.\n\014MessageEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"f\n\027ListClusterL" +
+      "ogsResponse\0222\n\004logs\030\001 \003(\0132$.yandex.cloud" +
+      ".mdb.kafka.v1.LogRecord\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"b\n\017StreamLogRecord\0224\n\006record\030\001 " +
+      "\001(\0132$.yandex.cloud.mdb.kafka.v1.LogRecor" +
+      "d\022\031\n\021next_record_token\030\002 \001(\t\"\354\001\n\030StreamC" +
+      "lusterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n\tfr" +
+      "om_time\030\003 \001(\0132\032.google.protobuf.Timestam" +
+      "p\022+\n\007to_time\030\004 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022\037\n\014record_token\030\005 \001(\tB\t\212\3101\005<=100\022" +
+      "\032\n\006filter\030\006 \001(\tB\n\212\3101\006<=1000\"~\n\034ListClust" +
+      "erOperationsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=" +
+      "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035L" +
+      "istClusterOperationsResponse\0225\n\noperatio" +
+      "ns\030\001 \003(\0132!.yandex.cloud.operation.Operat" +
+      "ion\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027ListClus" +
+      "terHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000" +
+      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\030ListC" +
+      "lusterHostsResponse\022.\n\005hosts\030\001 \003(\0132\037.yan" +
+      "dex.cloud.mdb.kafka.v1.Host\022\027\n\017next_page" +
+      "_token\030\002 \001(\t\"c\n\022MoveClusterRequest\022 \n\ncl" +
+      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destinat" +
+      "ion_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"b\n\023Mov" +
+      "eClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\030\n\020" +
+      "source_folder_id\030\002 \001(\t\022\035\n\025destination_fo" +
+      "lder_id\030\003 \001(\t\"7\n\023StartClusterRequest\022 \n\n" +
+      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartC" +
+      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022St" +
+      "opClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\")\n\023StopClusterMetadata\022\022\n\nclu" +
+      "ster_id\030\001 \001(\t2\265\020\n\016ClusterService\022\210\001\n\003Get" +
+      "\022,.yandex.cloud.mdb.kafka.v1.GetClusterR" +
+      "equest\032\".yandex.cloud.mdb.kafka.v1.Clust" +
+      "er\"/\202\323\344\223\002)\022\'/managed-kafka/v1/clusters/{" +
+      "cluster_id}\022\213\001\n\004List\022..yandex.cloud.mdb." +
+      "kafka.v1.ListClustersRequest\032/.yandex.cl" +
+      "oud.mdb.kafka.v1.ListClustersResponse\"\"\202" +
+      "\323\344\223\002\034\022\032/managed-kafka/v1/clusters\022\247\001\n\006Cr" +
+      "eate\022/.yandex.cloud.mdb.kafka.v1.CreateC" +
+      "lusterRequest\032!.yandex.cloud.operation.O" +
+      "peration\"I\202\323\344\223\002\037\"\032/managed-kafka/v1/clus" +
+      "ters:\001*\262\322* \n\025CreateClusterMetadata\022\007Clus" +
+      "ter\022\264\001\n\006Update\022/.yandex.cloud.mdb.kafka." +
+      "v1.UpdateClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"V\202\323\344\223\002,2\'/managed-kaf" +
+      "ka/v1/clusters/{cluster_id}:\001*\262\322* \n\025Upda" +
+      "teClusterMetadata\022\007Cluster\022\277\001\n\006Delete\022/." +
+      "yandex.cloud.mdb.kafka.v1.DeleteClusterR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"a\202\323\344\223\002)*\'/managed-kafka/v1/clusters/{c" +
+      "luster_id}\262\322*.\n\025DeleteClusterMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\263\001\n\004Move\022-.yandex.c" +
+      "loud.mdb.kafka.v1.MoveClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"Y\202\323\344\223\0021\"" +
+      ",/managed-kafka/v1/clusters/{cluster_id}" +
+      ":move:\001*\262\322*\036\n\023MoveClusterMetadata\022\007Clust" +
+      "er\022\264\001\n\005Start\022..yandex.cloud.mdb.kafka.v1" +
+      ".StartClusterRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"X\202\323\344\223\002/\"-/managed-kafka/" +
+      "v1/clusters/{cluster_id}:start\262\322*\037\n\024Star" +
+      "tClusterMetadata\022\007Cluster\022\260\001\n\004Stop\022-.yan" +
+      "dex.cloud.mdb.kafka.v1.StopClusterReques" +
+      "t\032!.yandex.cloud.operation.Operation\"V\202\323" +
+      "\344\223\002.\",/managed-kafka/v1/clusters/{cluste" +
+      "r_id}:stop\262\322*\036\n\023StopClusterMetadata\022\007Clu" +
+      "ster\022\247\001\n\010ListLogs\0221.yandex.cloud.mdb.kaf" +
+      "ka.v1.ListClusterLogsRequest\0322.yandex.cl" +
+      "oud.mdb.kafka.v1.ListClusterLogsResponse" +
+      "\"4\202\323\344\223\002.\022,/managed-kafka/v1/clusters/{cl" +
+      "uster_id}:logs\022\254\001\n\nStreamLogs\0223.yandex.c" +
+      "loud.mdb.kafka.v1.StreamClusterLogsReque" +
+      "st\032*.yandex.cloud.mdb.kafka.v1.StreamLog" +
+      "Record\";\202\323\344\223\0025\0223/managed-kafka/v1/cluste" +
+      "rs/{cluster_id}:stream_logs0\001\022\277\001\n\016ListOp" +
+      "erations\0227.yandex.cloud.mdb.kafka.v1.Lis" +
+      "tClusterOperationsRequest\0328.yandex.cloud" +
+      ".mdb.kafka.v1.ListClusterOperationsRespo" +
+      "nse\":\202\323\344\223\0024\0222/managed-kafka/v1/clusters/" +
+      "{cluster_id}/operations\022\253\001\n\tListHosts\0222." +
+      "yandex.cloud.mdb.kafka.v1.ListClusterHos" +
+      "tsRequest\0323.yandex.cloud.mdb.kafka.v1.Li" +
+      "stClusterHostsResponse\"5\202\323\344\223\002/\022-/managed" +
+      "-kafka/v1/clusters/{cluster_id}/hostsBd\n" +
+      "\035yandex.cloud.api.mdb.kafka.v1ZCgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/mdb/kafka/v1;kafkab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -25873,7 +26042,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_CreateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_CreateClusterRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "TopicSpecs", "UserSpecs", "NetworkId", "SubnetId", "SecurityGroupIds", "HostGroupIds", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Environment", "ConfigSpec", "TopicSpecs", "UserSpecs", "NetworkId", "SubnetId", "SecurityGroupIds", "HostGroupIds", "DeletionProtection", });
     internal_static_yandex_cloud_mdb_kafka_v1_CreateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_CreateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_CreateClusterRequest_LabelsEntry_fieldAccessorTable = new
@@ -25891,7 +26060,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "SecurityGroupIds", });
+        new java.lang.String[] { "ClusterId", "UpdateMask", "Description", "Labels", "ConfigSpec", "Name", "SecurityGroupIds", "DeletionProtection", });
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_UpdateClusterRequest_LabelsEntry_fieldAccessorTable = new

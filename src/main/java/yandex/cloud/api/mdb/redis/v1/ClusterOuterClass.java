@@ -410,6 +410,15 @@ public final class ClusterOuterClass {
      * <code>bool tls_enabled = 17;</code>
      */
     boolean getTlsEnabled();
+
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 18;</code>
+     */
+    boolean getDeletionProtection();
   }
   /**
    * <pre>
@@ -441,6 +450,7 @@ public final class ClusterOuterClass {
       sharded_ = false;
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       tlsEnabled_ = false;
+      deletionProtection_ = false;
     }
 
     @java.lang.Override
@@ -606,6 +616,11 @@ public final class ClusterOuterClass {
             case 136: {
 
               tlsEnabled_ = input.readBool();
+              break;
+            }
+            case 144: {
+
+              deletionProtection_ = input.readBool();
               break;
             }
             default: {
@@ -1785,6 +1800,19 @@ public final class ClusterOuterClass {
       return tlsEnabled_;
     }
 
+    public static final int DELETION_PROTECTION_FIELD_NUMBER = 18;
+    private boolean deletionProtection_;
+    /**
+     * <pre>
+     * Deletion Protection inhibits deletion of the cluster
+     * </pre>
+     *
+     * <code>bool deletion_protection = 18;</code>
+     */
+    public boolean getDeletionProtection() {
+      return deletionProtection_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1852,6 +1880,9 @@ public final class ClusterOuterClass {
       }
       if (tlsEnabled_ != false) {
         output.writeBool(17, tlsEnabled_);
+      }
+      if (deletionProtection_ != false) {
+        output.writeBool(18, deletionProtection_);
       }
       unknownFields.writeTo(output);
     }
@@ -1935,6 +1966,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(17, tlsEnabled_);
       }
+      if (deletionProtection_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(18, deletionProtection_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1994,6 +2029,8 @@ public final class ClusterOuterClass {
           .equals(other.getSecurityGroupIdsList());
       result = result && (getTlsEnabled()
           == other.getTlsEnabled());
+      result = result && (getDeletionProtection()
+          == other.getDeletionProtection());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2055,6 +2092,9 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + TLS_ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getTlsEnabled());
+      hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDeletionProtection());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2269,6 +2309,8 @@ public final class ClusterOuterClass {
         bitField0_ = (bitField0_ & ~0x00008000);
         tlsEnabled_ = false;
 
+        deletionProtection_ = false;
+
         return this;
       }
 
@@ -2343,6 +2385,7 @@ public final class ClusterOuterClass {
         }
         result.securityGroupIds_ = securityGroupIds_;
         result.tlsEnabled_ = tlsEnabled_;
+        result.deletionProtection_ = deletionProtection_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2476,6 +2519,9 @@ public final class ClusterOuterClass {
         }
         if (other.getTlsEnabled() != false) {
           setTlsEnabled(other.getTlsEnabled());
+        }
+        if (other.getDeletionProtection() != false) {
+          setDeletionProtection(other.getDeletionProtection());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4421,6 +4467,44 @@ public final class ClusterOuterClass {
       public Builder clearTlsEnabled() {
         
         tlsEnabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean deletionProtection_ ;
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 18;</code>
+       */
+      public boolean getDeletionProtection() {
+        return deletionProtection_;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 18;</code>
+       */
+      public Builder setDeletionProtection(boolean value) {
+        
+        deletionProtection_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Deletion Protection inhibits deletion of the cluster
+       * </pre>
+       *
+       * <code>bool deletion_protection = 18;</code>
+       */
+      public Builder clearDeletionProtection() {
+        
+        deletionProtection_ = false;
         onChanged();
         return this;
       }
@@ -13345,7 +13429,7 @@ public final class ClusterOuterClass {
       "dis/v1/config/redis6_0.proto\032/yandex/clo" +
       "ud/mdb/redis/v1/config/redis6_2.proto\032+y" +
       "andex/cloud/mdb/redis/v1/maintenance.pro" +
-      "to\"\215\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030" +
+      "to\"\252\010\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030" +
       "\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.proto" +
       "buf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descripti" +
       "on\030\005 \001(\t\022>\n\006labels\030\006 \003(\0132..yandex.cloud." +
@@ -13363,52 +13447,53 @@ public final class ClusterOuterClass {
       "eWindow\022J\n\021planned_operation\030\017 \001(\0132/.yan" +
       "dex.cloud.mdb.redis.v1.MaintenanceOperat" +
       "ion\022\032\n\022security_group_ids\030\020 \003(\t\022\023\n\013tls_e" +
-      "nabled\030\021 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027EN" +
-      "VIRONMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022" +
-      "\r\n\tPRESTABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNO" +
-      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"" +
-      "y\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATIN" +
-      "G\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020" +
-      "\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING" +
-      "\020\007\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descri" +
-      "ption\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\367\003\n\rClusterCon" +
-      "fig\022\017\n\007version\030\001 \001(\t\022`\n\020redis_config_5_0" +
-      "\030\002 \001(\01323.yandex.cloud.mdb.redis.v1.confi" +
-      "g.RedisConfigSet5_0H\000R\017redisConfig_5_0\022`" +
-      "\n\020redis_config_6_0\030\006 \001(\01323.yandex.cloud." +
-      "mdb.redis.v1.config.RedisConfigSet6_0H\000R" +
-      "\017redisConfig_6_0\022`\n\020redis_config_6_2\030\007 \001" +
-      "(\01323.yandex.cloud.mdb.redis.v1.config.Re" +
-      "disConfigSet6_2H\000R\017redisConfig_6_2\0227\n\tre" +
-      "sources\030\003 \001(\0132$.yandex.cloud.mdb.redis.v" +
-      "1.Resources\0223\n\023backup_window_start\030\004 \001(\013" +
-      "2\026.google.type.TimeOfDay\0221\n\006access\030\005 \001(\013" +
-      "2!.yandex.cloud.mdb.redis.v1.AccessB\016\n\014r" +
-      "edis_config\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncl" +
-      "uster_id\030\002 \001(\t\"\257\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n" +
-      "\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022\021\n\tsu" +
-      "bnet_id\030\004 \001(\t\0227\n\tresources\030\005 \001(\0132$.yande" +
-      "x.cloud.mdb.redis.v1.Resources\0222\n\004role\030\006" +
-      " \001(\0162$.yandex.cloud.mdb.redis.v1.Host.Ro" +
-      "le\0226\n\006health\030\007 \001(\0162&.yandex.cloud.mdb.re" +
-      "dis.v1.Host.Health\0224\n\010services\030\010 \003(\0132\".y" +
-      "andex.cloud.mdb.redis.v1.Service\022\022\n\nshar" +
-      "d_name\030\t \001(\t\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n" +
-      "\n\006MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEA" +
-      "LTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DE" +
-      "GRADED\020\003\"\367\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.yan" +
-      "dex.cloud.mdb.redis.v1.Service.Type\0229\n\006h" +
-      "ealth\030\002 \001(\0162).yandex.cloud.mdb.redis.v1." +
-      "Service.Health\"G\n\004Type\022\024\n\020TYPE_UNSPECIFI" +
-      "ED\020\000\022\t\n\005REDIS\020\001\022\013\n\007ARBITER\020\002\022\021\n\rREDIS_CL" +
-      "USTER\020\003\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n" +
-      "\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resou" +
-      "rce_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024" +
-      "\n\014disk_type_id\030\003 \001(\t\"\033\n\006Access\022\021\n\tdata_l" +
-      "ens\030\001 \001(\010Bd\n\035yandex.cloud.api.mdb.redis." +
-      "v1ZCgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/mdb/redis/v1;redisb\006proto3"
+      "nabled\030\021 \001(\010\022\033\n\023deletion_protection\030\022 \001(" +
+      "\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRONMENT_U" +
+      "NSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABL" +
+      "E\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALI" +
+      "VE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022" +
+      "\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNN" +
+      "ING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPI" +
+      "NG\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonit" +
+      "oring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t" +
+      "\022\014\n\004link\030\003 \001(\t\"\367\003\n\rClusterConfig\022\017\n\007vers" +
+      "ion\030\001 \001(\t\022`\n\020redis_config_5_0\030\002 \001(\01323.ya" +
+      "ndex.cloud.mdb.redis.v1.config.RedisConf" +
+      "igSet5_0H\000R\017redisConfig_5_0\022`\n\020redis_con" +
+      "fig_6_0\030\006 \001(\01323.yandex.cloud.mdb.redis.v" +
+      "1.config.RedisConfigSet6_0H\000R\017redisConfi" +
+      "g_6_0\022`\n\020redis_config_6_2\030\007 \001(\01323.yandex" +
+      ".cloud.mdb.redis.v1.config.RedisConfigSe" +
+      "t6_2H\000R\017redisConfig_6_2\0227\n\tresources\030\003 \001" +
+      "(\0132$.yandex.cloud.mdb.redis.v1.Resources" +
+      "\0223\n\023backup_window_start\030\004 \001(\0132\026.google.t" +
+      "ype.TimeOfDay\0221\n\006access\030\005 \001(\0132!.yandex.c" +
+      "loud.mdb.redis.v1.AccessB\016\n\014redis_config" +
+      "\")\n\005Shard\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 " +
+      "\001(\t\"\257\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id" +
+      "\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022\021\n\tsubnet_id\030\004 \001" +
+      "(\t\0227\n\tresources\030\005 \001(\0132$.yandex.cloud.mdb" +
+      ".redis.v1.Resources\0222\n\004role\030\006 \001(\0162$.yand" +
+      "ex.cloud.mdb.redis.v1.Host.Role\0226\n\006healt" +
+      "h\030\007 \001(\0162&.yandex.cloud.mdb.redis.v1.Host" +
+      ".Health\0224\n\010services\030\010 \003(\0132\".yandex.cloud" +
+      ".mdb.redis.v1.Service\022\022\n\nshard_name\030\t \001(" +
+      "\t\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022" +
+      "\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN" +
+      "\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\367\001" +
+      "\n\007Service\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.m" +
+      "db.redis.v1.Service.Type\0229\n\006health\030\002 \001(\016" +
+      "2).yandex.cloud.mdb.redis.v1.Service.Hea" +
+      "lth\"G\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005RED" +
+      "IS\020\001\022\013\n\007ARBITER\020\002\022\021\n\rREDIS_CLUSTER\020\003\"1\n\006" +
+      "Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
+      "\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_preset_" +
+      "id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type" +
+      "_id\030\003 \001(\t\"\033\n\006Access\022\021\n\tdata_lens\030\001 \001(\010Bd" +
+      "\n\035yandex.cloud.api.mdb.redis.v1ZCgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/mdb/redis/v1;redisb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13433,7 +13518,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "TlsEnabled", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Environment", "Monitoring", "Config", "NetworkId", "Health", "Status", "Sharded", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "TlsEnabled", "DeletionProtection", });
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_redis_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_redis_v1_Cluster_LabelsEntry_fieldAccessorTable = new
