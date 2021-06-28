@@ -20367,7 +20367,7 @@ public final class InstanceGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [InstanceGroup.name] field.
+     * Currently you can use filtering only on the [ManagedInstance.name] field.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -20376,7 +20376,7 @@ public final class InstanceGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [InstanceGroup.name] field.
+     * Currently you can use filtering only on the [ManagedInstance.name] field.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -20593,7 +20593,7 @@ public final class InstanceGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [InstanceGroup.name] field.
+     * Currently you can use filtering only on the [ManagedInstance.name] field.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -20613,7 +20613,7 @@ public final class InstanceGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [InstanceGroup.name] field.
+     * Currently you can use filtering only on the [ManagedInstance.name] field.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -21231,7 +21231,7 @@ public final class InstanceGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [InstanceGroup.name] field.
+       * Currently you can use filtering only on the [ManagedInstance.name] field.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -21251,7 +21251,7 @@ public final class InstanceGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [InstanceGroup.name] field.
+       * Currently you can use filtering only on the [ManagedInstance.name] field.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -21272,7 +21272,7 @@ public final class InstanceGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [InstanceGroup.name] field.
+       * Currently you can use filtering only on the [ManagedInstance.name] field.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -21290,7 +21290,7 @@ public final class InstanceGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [InstanceGroup.name] field.
+       * Currently you can use filtering only on the [ManagedInstance.name] field.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -21304,7 +21304,7 @@ public final class InstanceGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [InstanceGroup.name] field.
+       * Currently you can use filtering only on the [ManagedInstance.name] field.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
