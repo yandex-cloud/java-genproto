@@ -53189,6 +53189,1702 @@ public final class ClusterServiceOuterClass {
 
   }
 
+  public interface StepdownHostsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.StepdownHostsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Required. Name of the hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    java.util.List<java.lang.String>
+        getHostNamesList();
+    /**
+     * <pre>
+     * Required. Name of the hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    int getHostNamesCount();
+    /**
+     * <pre>
+     * Required. Name of the hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    java.lang.String getHostNames(int index);
+    /**
+     * <pre>
+     * Required. Name of the hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    com.google.protobuf.ByteString
+        getHostNamesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.StepdownHostsRequest}
+   */
+  public  static final class StepdownHostsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.StepdownHostsRequest)
+      StepdownHostsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StepdownHostsRequest.newBuilder() to construct.
+    private StepdownHostsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StepdownHostsRequest() {
+      clusterId_ = "";
+      hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StepdownHostsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                hostNames_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              hostNames_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = hostNames_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest.class, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOST_NAMES_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList hostNames_;
+    /**
+     * <pre>
+     * Required. Name of the hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHostNamesList() {
+      return hostNames_;
+    }
+    /**
+     * <pre>
+     * Required. Name of the hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    public int getHostNamesCount() {
+      return hostNames_.size();
+    }
+    /**
+     * <pre>
+     * Required. Name of the hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    public java.lang.String getHostNames(int index) {
+      return hostNames_.get(index);
+    }
+    /**
+     * <pre>
+     * Required. Name of the hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostNamesBytes(int index) {
+      return hostNames_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      for (int i = 0; i < hostNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, hostNames_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hostNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(hostNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getHostNamesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest other = (yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getHostNamesList()
+          .equals(other.getHostNamesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (getHostNamesCount() > 0) {
+        hash = (37 * hash) + HOST_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getHostNamesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.StepdownHostsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.StepdownHostsRequest)
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest.class, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest build() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest buildPartial() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest result = new yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.clusterId_ = clusterId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = hostNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.hostNames_ = hostNames_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest other) {
+        if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.hostNames_.isEmpty()) {
+          if (hostNames_.isEmpty()) {
+            hostNames_ = other.hostNames_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureHostNamesIsMutable();
+            hostNames_.addAll(other.hostNames_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureHostNamesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = new com.google.protobuf.LazyStringArrayList(hostNames_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * Required. Name of the hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHostNamesList() {
+        return hostNames_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Required. Name of the hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public int getHostNamesCount() {
+        return hostNames_.size();
+      }
+      /**
+       * <pre>
+       * Required. Name of the hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public java.lang.String getHostNames(int index) {
+        return hostNames_.get(index);
+      }
+      /**
+       * <pre>
+       * Required. Name of the hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostNamesBytes(int index) {
+        return hostNames_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Required. Name of the hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public Builder setHostNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostNamesIsMutable();
+        hostNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Name of the hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public Builder addHostNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostNamesIsMutable();
+        hostNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Name of the hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public Builder addAllHostNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureHostNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, hostNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Name of the hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public Builder clearHostNames() {
+        hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Name of the hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2 [(.yandex.cloud.size) = "&gt;0", (.yandex.cloud.length) = "&lt;=253"];</code>
+       */
+      public Builder addHostNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureHostNamesIsMutable();
+        hostNames_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.StepdownHostsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.StepdownHostsRequest)
+    private static final yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest();
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StepdownHostsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<StepdownHostsRequest>() {
+      @java.lang.Override
+      public StepdownHostsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StepdownHostsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StepdownHostsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StepdownHostsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StepdownHostsMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.StepdownHostsMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Required. The name of hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getHostNamesList();
+    /**
+     * <pre>
+     * Required. The name of hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    int getHostNamesCount();
+    /**
+     * <pre>
+     * Required. The name of hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    java.lang.String getHostNames(int index);
+    /**
+     * <pre>
+     * Required. The name of hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getHostNamesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.StepdownHostsMetadata}
+   */
+  public  static final class StepdownHostsMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.mongodb.v1.StepdownHostsMetadata)
+      StepdownHostsMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StepdownHostsMetadata.newBuilder() to construct.
+    private StepdownHostsMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StepdownHostsMetadata() {
+      clusterId_ = "";
+      hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StepdownHostsMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                hostNames_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              hostNames_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = hostNames_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata.class, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. ID of the MongoDB cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOST_NAMES_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList hostNames_;
+    /**
+     * <pre>
+     * Required. The name of hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHostNamesList() {
+      return hostNames_;
+    }
+    /**
+     * <pre>
+     * Required. The name of hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    public int getHostNamesCount() {
+      return hostNames_.size();
+    }
+    /**
+     * <pre>
+     * Required. The name of hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    public java.lang.String getHostNames(int index) {
+      return hostNames_.get(index);
+    }
+    /**
+     * <pre>
+     * Required. The name of hosts to resetup.
+     * </pre>
+     *
+     * <code>repeated string host_names = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostNamesBytes(int index) {
+      return hostNames_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      for (int i = 0; i < hostNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, hostNames_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hostNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(hostNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getHostNamesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata other = (yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getHostNamesList()
+          .equals(other.getHostNamesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (getHostNamesCount() > 0) {
+        hash = (37 * hash) + HOST_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getHostNamesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.mongodb.v1.StepdownHostsMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.mongodb.v1.StepdownHostsMetadata)
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata.class, yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata build() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata buildPartial() {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata result = new yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.clusterId_ = clusterId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = hostNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.hostNames_ = hostNames_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata other) {
+        if (other == yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.hostNames_.isEmpty()) {
+          if (hostNames_.isEmpty()) {
+            hostNames_ = other.hostNames_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureHostNamesIsMutable();
+            hostNames_.addAll(other.hostNames_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. ID of the MongoDB cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 1;</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureHostNamesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          hostNames_ = new com.google.protobuf.LazyStringArrayList(hostNames_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * Required. The name of hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHostNamesList() {
+        return hostNames_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Required. The name of hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public int getHostNamesCount() {
+        return hostNames_.size();
+      }
+      /**
+       * <pre>
+       * Required. The name of hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public java.lang.String getHostNames(int index) {
+        return hostNames_.get(index);
+      }
+      /**
+       * <pre>
+       * Required. The name of hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostNamesBytes(int index) {
+        return hostNames_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Required. The name of hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder setHostNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostNamesIsMutable();
+        hostNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. The name of hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder addHostNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostNamesIsMutable();
+        hostNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. The name of hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder addAllHostNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureHostNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, hostNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. The name of hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder clearHostNames() {
+        hostNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. The name of hosts to resetup.
+       * </pre>
+       *
+       * <code>repeated string host_names = 2;</code>
+       */
+      public Builder addHostNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureHostNamesIsMutable();
+        hostNames_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.mongodb.v1.StepdownHostsMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.mongodb.v1.StepdownHostsMetadata)
+    private static final yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StepdownHostsMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<StepdownHostsMetadata>() {
+      @java.lang.Override
+      public StepdownHostsMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StepdownHostsMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StepdownHostsMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StepdownHostsMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface HostSpecOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.mongodb.v1.HostSpec)
       com.google.protobuf.MessageOrBuilder {
@@ -78645,6 +80341,16 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_mongodb_v1_RestartHostsMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_mongodb_v1_HostSpec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -78973,6 +80679,10 @@ public final class ClusterServiceOuterClass {
       "startHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
       "\3071\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212" +
       "\3101\005<=253\">\n\024RestartHostsMetadata\022\022\n\nclus" +
+      "ter_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"]\n\024Step" +
+      "downHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\310" +
+      "1\005<=253\"?\n\025StepdownHostsMetadata\022\022\n\nclus" +
       "ter_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"\302\001\n\010Hos" +
       "tSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022\033\n\tsubn" +
       "et_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_i" +
@@ -79089,7 +80799,7 @@ public final class ClusterServiceOuterClass {
       "TimeOfDay\022H\n\031backup_retain_period_days\030\t" +
       " \001(\0132\033.google.protobuf.Int64ValueB\010\372\3071\0047" +
       "-35\0223\n\006access\030\006 \001(\0132#.yandex.cloud.mdb.m" +
-      "ongodb.v1.AccessB\016\n\014mongodb_spec2\230&\n\016Clu" +
+      "ongodb.v1.AccessB\016\n\014mongodb_spec2\366\'\n\016Clu" +
       "sterService\022\216\001\n\003Get\022..yandex.cloud.mdb.m" +
       "ongodb.v1.GetClusterRequest\032$.yandex.clo" +
       "ud.mdb.mongodb.v1.Cluster\"1\202\323\344\223\002+\022)/mana" +
@@ -79158,11 +80868,11 @@ public final class ClusterServiceOuterClass {
       "tBackups\0226.yandex.cloud.mdb.mongodb.v1.L" +
       "istClusterBackupsRequest\0327.yandex.cloud." +
       "mdb.mongodb.v1.ListClusterBackupsRespons" +
-      "e\"9\202\323\344\223\0023\0221/managed-mongodb/v1/clusters/" +
+      "e\"9\202\323\344\223\0023\0221/managed-mongodb/v1/clusters/",
       "{cluster_id}/backups\022\261\001\n\tListHosts\0224.yan" +
       "dex.cloud.mdb.mongodb.v1.ListClusterHost" +
       "sRequest\0325.yandex.cloud.mdb.mongodb.v1.L" +
-      "istClusterHostsResponse\"7\202\323\344\223\0021\022//manage",
+      "istClusterHostsResponse\"7\202\323\344\223\0021\022//manage" +
       "d-mongodb/v1/clusters/{cluster_id}/hosts" +
       "\022\336\001\n\010AddHosts\0223.yandex.cloud.mdb.mongodb" +
       ".v1.AddClusterHostsRequest\032!.yandex.clou" +
@@ -79212,9 +80922,15 @@ public final class ClusterServiceOuterClass {
       "eration\"r\202\323\344\223\002;\"6/managed-mongodb/v1/clu" +
       "sters/{cluster_id}:restartHosts:\001*\262\322*-\n\024" +
       "RestartHostsMetadata\022\025google.protobuf.Em" +
-      "ptyBj\n\037yandex.cloud.api.mdb.mongodb.v1ZG" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/mdb/mongodb/v1;mongodbb\006proto3"
+      "pty\022\333\001\n\rStepdownHosts\0221.yandex.cloud.mdb" +
+      ".mongodb.v1.StepdownHostsRequest\032!.yande" +
+      "x.cloud.operation.Operation\"t\202\323\344\223\002<\"7/ma" +
+      "naged-mongodb/v1/clusters/{cluster_id}:s" +
+      "tepdownHosts:\001*\262\322*.\n\025StepdownHostsMetada" +
+      "ta\022\025google.protobuf.EmptyBj\n\037yandex.clou" +
+      "d.api.mdb.mongodb.v1ZGgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/mdb/mongo" +
+      "db/v1;mongodbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -79587,14 +81303,26 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_RestartHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
-    internal_static_yandex_cloud_mdb_mongodb_v1_HostSpec_descriptor =
+    internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsRequest_descriptor =
       getDescriptor().getMessageTypes().get(49);
+    internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "HostNames", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(50);
+    internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_mongodb_v1_StepdownHostsMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "HostNames", });
+    internal_static_yandex_cloud_mdb_mongodb_v1_HostSpec_descriptor =
+      getDescriptor().getMessageTypes().get(51);
     internal_static_yandex_cloud_mdb_mongodb_v1_HostSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_HostSpec_descriptor,
         new java.lang.String[] { "ZoneId", "SubnetId", "AssignPublicIp", "Type", "ShardName", });
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec3_6_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec3_6_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec3_6_descriptor,
@@ -79624,7 +81352,7 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec3_6_MongoInfra_descriptor,
         new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_0_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_0_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_0_descriptor,
@@ -79654,7 +81382,7 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_0_MongoInfra_descriptor,
         new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_2_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_2_descriptor,
@@ -79684,7 +81412,7 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_2_MongoInfra_descriptor,
         new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_4_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_4_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_4_descriptor,
@@ -79714,7 +81442,7 @@ public final class ClusterServiceOuterClass {
         internal_static_yandex_cloud_mdb_mongodb_v1_MongodbSpec4_4_MongoInfra_descriptor,
         new java.lang.String[] { "ConfigMongos", "ConfigMongocfg", "Resources", });
     internal_static_yandex_cloud_mdb_mongodb_v1_ConfigSpec_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_yandex_cloud_mdb_mongodb_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mongodb_v1_ConfigSpec_descriptor,

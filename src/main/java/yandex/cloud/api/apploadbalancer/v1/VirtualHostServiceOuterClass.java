@@ -20,7 +20,8 @@ public final class VirtualHostServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router that the virtual host belongs to.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -28,7 +29,8 @@ public final class VirtualHostServiceOuterClass {
     java.lang.String getHttpRouterId();
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router that the virtual host belongs to.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -38,18 +40,20 @@ public final class VirtualHostServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the VirtualHost resource to return.
+     * Name of the virtual host to return.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
      * </pre>
      *
-     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     java.lang.String getVirtualHostName();
     /**
      * <pre>
-     * Name of the VirtualHost resource to return.
+     * Name of the virtual host to return.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
      * </pre>
      *
-     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
@@ -143,7 +147,8 @@ public final class VirtualHostServiceOuterClass {
     private volatile java.lang.Object httpRouterId_;
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router that the virtual host belongs to.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -162,7 +167,8 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router that the virtual host belongs to.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -185,10 +191,11 @@ public final class VirtualHostServiceOuterClass {
     private volatile java.lang.Object virtualHostName_;
     /**
      * <pre>
-     * Name of the VirtualHost resource to return.
+     * Name of the virtual host to return.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
      * </pre>
      *
-     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public java.lang.String getVirtualHostName() {
       java.lang.Object ref = virtualHostName_;
@@ -204,10 +211,11 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the VirtualHost resource to return.
+     * Name of the virtual host to return.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
      * </pre>
      *
-     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public com.google.protobuf.ByteString
         getVirtualHostNameBytes() {
@@ -546,7 +554,8 @@ public final class VirtualHostServiceOuterClass {
       private java.lang.Object httpRouterId_ = "";
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router that the virtual host belongs to.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -565,7 +574,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router that the virtual host belongs to.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -585,7 +595,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router that the virtual host belongs to.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -602,7 +613,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router that the virtual host belongs to.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -615,7 +627,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router that the virtual host belongs to.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -635,10 +648,11 @@ public final class VirtualHostServiceOuterClass {
       private java.lang.Object virtualHostName_ = "";
       /**
        * <pre>
-       * Name of the VirtualHost resource to return.
+       * Name of the virtual host to return.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
        * </pre>
        *
-       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public java.lang.String getVirtualHostName() {
         java.lang.Object ref = virtualHostName_;
@@ -654,10 +668,11 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the VirtualHost resource to return.
+       * Name of the virtual host to return.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
        * </pre>
        *
-       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public com.google.protobuf.ByteString
           getVirtualHostNameBytes() {
@@ -674,10 +689,11 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the VirtualHost resource to return.
+       * Name of the virtual host to return.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
        * </pre>
        *
-       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setVirtualHostName(
           java.lang.String value) {
@@ -691,10 +707,11 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the VirtualHost resource to return.
+       * Name of the virtual host to return.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
        * </pre>
        *
-       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder clearVirtualHostName() {
         
@@ -704,10 +721,11 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the VirtualHost resource to return.
+       * Name of the virtual host to return.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
        * </pre>
        *
-       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setVirtualHostNameBytes(
           com.google.protobuf.ByteString value) {
@@ -779,7 +797,8 @@ public final class VirtualHostServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router to list virtual hosts in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -787,7 +806,8 @@ public final class VirtualHostServiceOuterClass {
     java.lang.String getHttpRouterId();
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router to list virtual hosts in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -796,15 +816,32 @@ public final class VirtualHostServiceOuterClass {
         getHttpRouterIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListVirtualHostsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListVirtualHostsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListVirtualHostsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
@@ -905,7 +942,8 @@ public final class VirtualHostServiceOuterClass {
     private volatile java.lang.Object httpRouterId_;
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router to list virtual hosts in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -924,7 +962,8 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router to list virtual hosts in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -946,6 +985,13 @@ public final class VirtualHostServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListVirtualHostsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      */
     public long getPageSize() {
@@ -955,6 +1001,11 @@ public final class VirtualHostServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListVirtualHostsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -970,6 +1021,11 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListVirtualHostsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1327,7 +1383,8 @@ public final class VirtualHostServiceOuterClass {
       private java.lang.Object httpRouterId_ = "";
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to list virtual hosts in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1346,7 +1403,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to list virtual hosts in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1366,7 +1424,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to list virtual hosts in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1383,7 +1442,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to list virtual hosts in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1396,7 +1456,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to list virtual hosts in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1415,12 +1476,26 @@ public final class VirtualHostServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListVirtualHostsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListVirtualHostsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -1430,6 +1505,13 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListVirtualHostsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        */
       public Builder clearPageSize() {
@@ -1441,6 +1523,11 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListVirtualHostsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -1456,6 +1543,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListVirtualHostsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1472,6 +1564,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListVirtualHostsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -1485,6 +1582,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListVirtualHostsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -1494,6 +1596,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListVirtualHostsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -1566,7 +1673,7 @@ public final class VirtualHostServiceOuterClass {
 
     /**
      * <pre>
-     * List of virtual hosts.
+     * List of virtual hosts of the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -1575,7 +1682,7 @@ public final class VirtualHostServiceOuterClass {
         getVirtualHostsList();
     /**
      * <pre>
-     * List of virtual hosts.
+     * List of virtual hosts of the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -1583,7 +1690,7 @@ public final class VirtualHostServiceOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost getVirtualHosts(int index);
     /**
      * <pre>
-     * List of virtual hosts.
+     * List of virtual hosts of the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -1591,7 +1698,7 @@ public final class VirtualHostServiceOuterClass {
     int getVirtualHostsCount();
     /**
      * <pre>
-     * List of virtual hosts.
+     * List of virtual hosts of the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -1600,7 +1707,7 @@ public final class VirtualHostServiceOuterClass {
         getVirtualHostsOrBuilderList();
     /**
      * <pre>
-     * List of virtual hosts.
+     * List of virtual hosts of the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -1609,10 +1716,24 @@ public final class VirtualHostServiceOuterClass {
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListVirtualHostsRequest.page_size], use `next_page_token` as the value
+     * for the [ListVirtualHostsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListVirtualHostsRequest.page_size], use `next_page_token` as the value
+     * for the [ListVirtualHostsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -1714,7 +1835,7 @@ public final class VirtualHostServiceOuterClass {
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> virtualHosts_;
     /**
      * <pre>
-     * List of virtual hosts.
+     * List of virtual hosts of the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -1724,7 +1845,7 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * List of virtual hosts.
+     * List of virtual hosts of the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -1735,7 +1856,7 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * List of virtual hosts.
+     * List of virtual hosts of the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -1745,7 +1866,7 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * List of virtual hosts.
+     * List of virtual hosts of the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -1755,7 +1876,7 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * List of virtual hosts.
+     * List of virtual hosts of the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -1768,6 +1889,13 @@ public final class VirtualHostServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListVirtualHostsRequest.page_size], use `next_page_token` as the value
+     * for the [ListVirtualHostsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -1783,6 +1911,13 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListVirtualHostsRequest.page_size], use `next_page_token` as the value
+     * for the [ListVirtualHostsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -2175,7 +2310,7 @@ public final class VirtualHostServiceOuterClass {
 
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2189,7 +2324,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2203,7 +2338,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2217,7 +2352,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2238,7 +2373,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2256,7 +2391,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2276,7 +2411,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2297,7 +2432,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2315,7 +2450,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2333,7 +2468,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2352,7 +2487,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2369,7 +2504,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2386,7 +2521,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2397,7 +2532,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2411,7 +2546,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2426,7 +2561,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2437,7 +2572,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2449,7 +2584,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * List of virtual hosts.
+       * List of virtual hosts of the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 1;</code>
@@ -2475,6 +2610,13 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListVirtualHostsRequest.page_size], use `next_page_token` as the value
+       * for the [ListVirtualHostsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -2490,6 +2632,13 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListVirtualHostsRequest.page_size], use `next_page_token` as the value
+       * for the [ListVirtualHostsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2506,6 +2655,13 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListVirtualHostsRequest.page_size], use `next_page_token` as the value
+       * for the [ListVirtualHostsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -2519,6 +2675,13 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListVirtualHostsRequest.page_size], use `next_page_token` as the value
+       * for the [ListVirtualHostsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -2528,6 +2691,13 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListVirtualHostsRequest.page_size], use `next_page_token` as the value
+       * for the [ListVirtualHostsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -2600,7 +2770,8 @@ public final class VirtualHostServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router to create a virtual host in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -2608,7 +2779,8 @@ public final class VirtualHostServiceOuterClass {
     java.lang.String getHttpRouterId();
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router to create a virtual host in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -2618,108 +2790,248 @@ public final class VirtualHostServiceOuterClass {
 
     /**
      * <pre>
-     * Configuration of the virtual host to create.
+     * Name of the virtual host. The name must be unique within the HTTP router and cannot be changed after creation.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     java.lang.String getName();
     /**
      * <pre>
-     * Configuration of the virtual host to create.
+     * Name of the virtual host. The name must be unique within the HTTP router and cannot be changed after creation.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+     * </pre>
+     *
      * <code>repeated string authority = 3;</code>
      */
     java.util.List<java.lang.String>
         getAuthorityList();
     /**
+     * <pre>
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+     * </pre>
+     *
      * <code>repeated string authority = 3;</code>
      */
     int getAuthorityCount();
     /**
+     * <pre>
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+     * </pre>
+     *
      * <code>repeated string authority = 3;</code>
      */
     java.lang.String getAuthority(int index);
     /**
+     * <pre>
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+     * </pre>
+     *
      * <code>repeated string authority = 3;</code>
      */
     com.google.protobuf.ByteString
         getAuthorityBytes(int index);
 
     /**
+     * <pre>
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route> 
         getRoutesList();
     /**
+     * <pre>
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route getRoutes(int index);
     /**
+     * <pre>
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
     int getRoutesCount();
     /**
+     * <pre>
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder> 
         getRoutesOrBuilderList();
     /**
+     * <pre>
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder getRoutesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> 
         getModifyRequestHeadersList();
     /**
+     * <pre>
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyRequestHeaders(int index);
     /**
+     * <pre>
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
     int getModifyRequestHeadersCount();
     /**
+     * <pre>
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
         getModifyRequestHeadersOrBuilderList();
     /**
+     * <pre>
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyRequestHeadersOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> 
         getModifyResponseHeadersList();
     /**
+     * <pre>
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyResponseHeaders(int index);
     /**
+     * <pre>
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
     int getModifyResponseHeadersCount();
     /**
+     * <pre>
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
         getModifyResponseHeadersOrBuilderList();
     /**
+     * <pre>
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
@@ -2867,7 +3179,8 @@ public final class VirtualHostServiceOuterClass {
     private volatile java.lang.Object httpRouterId_;
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router to create a virtual host in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -2886,7 +3199,8 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router to create a virtual host in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -2909,10 +3223,10 @@ public final class VirtualHostServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Configuration of the virtual host to create.
+     * Name of the virtual host. The name must be unique within the HTTP router and cannot be changed after creation.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -2928,10 +3242,10 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * Configuration of the virtual host to create.
+     * Name of the virtual host. The name must be unique within the HTTP router and cannot be changed after creation.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -2950,6 +3264,16 @@ public final class VirtualHostServiceOuterClass {
     public static final int AUTHORITY_FIELD_NUMBER = 3;
     private com.google.protobuf.LazyStringList authority_;
     /**
+     * <pre>
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+     * </pre>
+     *
      * <code>repeated string authority = 3;</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -2957,18 +3281,48 @@ public final class VirtualHostServiceOuterClass {
       return authority_;
     }
     /**
+     * <pre>
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+     * </pre>
+     *
      * <code>repeated string authority = 3;</code>
      */
     public int getAuthorityCount() {
       return authority_.size();
     }
     /**
+     * <pre>
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+     * </pre>
+     *
      * <code>repeated string authority = 3;</code>
      */
     public java.lang.String getAuthority(int index) {
       return authority_.get(index);
     }
     /**
+     * <pre>
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+     * </pre>
+     *
      * <code>repeated string authority = 3;</code>
      */
     public com.google.protobuf.ByteString
@@ -2979,12 +3333,34 @@ public final class VirtualHostServiceOuterClass {
     public static final int ROUTES_FIELD_NUMBER = 5;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route> routes_;
     /**
+     * <pre>
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route> getRoutesList() {
       return routes_;
     }
     /**
+     * <pre>
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder> 
@@ -2992,18 +3368,51 @@ public final class VirtualHostServiceOuterClass {
       return routes_;
     }
     /**
+     * <pre>
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
     public int getRoutesCount() {
       return routes_.size();
     }
     /**
+     * <pre>
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route getRoutes(int index) {
       return routes_.get(index);
     }
     /**
+     * <pre>
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder getRoutesOrBuilder(
@@ -3014,12 +3423,20 @@ public final class VirtualHostServiceOuterClass {
     public static final int MODIFY_REQUEST_HEADERS_FIELD_NUMBER = 6;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyRequestHeaders_;
     /**
+     * <pre>
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyRequestHeadersList() {
       return modifyRequestHeaders_;
     }
     /**
+     * <pre>
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
@@ -3027,18 +3444,30 @@ public final class VirtualHostServiceOuterClass {
       return modifyRequestHeaders_;
     }
     /**
+     * <pre>
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
     public int getModifyRequestHeadersCount() {
       return modifyRequestHeaders_.size();
     }
     /**
+     * <pre>
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyRequestHeaders(int index) {
       return modifyRequestHeaders_.get(index);
     }
     /**
+     * <pre>
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyRequestHeadersOrBuilder(
@@ -3049,12 +3478,22 @@ public final class VirtualHostServiceOuterClass {
     public static final int MODIFY_RESPONSE_HEADERS_FIELD_NUMBER = 7;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyResponseHeaders_;
     /**
+     * <pre>
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyResponseHeadersList() {
       return modifyResponseHeaders_;
     }
     /**
+     * <pre>
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
@@ -3062,18 +3501,33 @@ public final class VirtualHostServiceOuterClass {
       return modifyResponseHeaders_;
     }
     /**
+     * <pre>
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
     public int getModifyResponseHeadersCount() {
       return modifyResponseHeaders_.size();
     }
     /**
+     * <pre>
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyResponseHeaders(int index) {
       return modifyResponseHeaders_.get(index);
     }
     /**
+     * <pre>
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
@@ -3607,7 +4061,8 @@ public final class VirtualHostServiceOuterClass {
       private java.lang.Object httpRouterId_ = "";
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to create a virtual host in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -3626,7 +4081,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to create a virtual host in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -3646,7 +4102,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to create a virtual host in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -3663,7 +4120,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to create a virtual host in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -3676,7 +4134,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to create a virtual host in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -3696,10 +4155,10 @@ public final class VirtualHostServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Configuration of the virtual host to create.
+       * Name of the virtual host. The name must be unique within the HTTP router and cannot be changed after creation.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3715,10 +4174,10 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the virtual host to create.
+       * Name of the virtual host. The name must be unique within the HTTP router and cannot be changed after creation.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3735,10 +4194,10 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the virtual host to create.
+       * Name of the virtual host. The name must be unique within the HTTP router and cannot be changed after creation.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -3752,10 +4211,10 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the virtual host to create.
+       * Name of the virtual host. The name must be unique within the HTTP router and cannot be changed after creation.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder clearName() {
         
@@ -3765,10 +4224,10 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Configuration of the virtual host to create.
+       * Name of the virtual host. The name must be unique within the HTTP router and cannot be changed after creation.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3790,6 +4249,16 @@ public final class VirtualHostServiceOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+       * </pre>
+       *
        * <code>repeated string authority = 3;</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -3797,18 +4266,48 @@ public final class VirtualHostServiceOuterClass {
         return authority_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+       * </pre>
+       *
        * <code>repeated string authority = 3;</code>
        */
       public int getAuthorityCount() {
         return authority_.size();
       }
       /**
+       * <pre>
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+       * </pre>
+       *
        * <code>repeated string authority = 3;</code>
        */
       public java.lang.String getAuthority(int index) {
         return authority_.get(index);
       }
       /**
+       * <pre>
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+       * </pre>
+       *
        * <code>repeated string authority = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -3816,6 +4315,16 @@ public final class VirtualHostServiceOuterClass {
         return authority_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+       * </pre>
+       *
        * <code>repeated string authority = 3;</code>
        */
       public Builder setAuthority(
@@ -3829,6 +4338,16 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+       * </pre>
+       *
        * <code>repeated string authority = 3;</code>
        */
       public Builder addAuthority(
@@ -3842,6 +4361,16 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+       * </pre>
+       *
        * <code>repeated string authority = 3;</code>
        */
       public Builder addAllAuthority(
@@ -3853,6 +4382,16 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+       * </pre>
+       *
        * <code>repeated string authority = 3;</code>
        */
       public Builder clearAuthority() {
@@ -3862,6 +4401,16 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
+       * </pre>
+       *
        * <code>repeated string authority = 3;</code>
        */
       public Builder addAuthorityBytes(
@@ -3889,6 +4438,17 @@ public final class VirtualHostServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder> routesBuilder_;
 
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route> getRoutesList() {
@@ -3899,6 +4459,17 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public int getRoutesCount() {
@@ -3909,6 +4480,17 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route getRoutes(int index) {
@@ -3919,6 +4501,17 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public Builder setRoutes(
@@ -3936,6 +4529,17 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public Builder setRoutes(
@@ -3950,6 +4554,17 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public Builder addRoutes(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route value) {
@@ -3966,6 +4581,17 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public Builder addRoutes(
@@ -3983,6 +4609,17 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public Builder addRoutes(
@@ -3997,6 +4634,17 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public Builder addRoutes(
@@ -4011,6 +4659,17 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public Builder addAllRoutes(
@@ -4026,6 +4685,17 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public Builder clearRoutes() {
@@ -4039,6 +4709,17 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public Builder removeRoutes(int index) {
@@ -4052,6 +4733,17 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.Builder getRoutesBuilder(
@@ -4059,6 +4751,17 @@ public final class VirtualHostServiceOuterClass {
         return getRoutesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder getRoutesOrBuilder(
@@ -4069,6 +4772,17 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder> 
@@ -4080,6 +4794,17 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.Builder addRoutesBuilder() {
@@ -4087,6 +4812,17 @@ public final class VirtualHostServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.Builder addRoutesBuilder(
@@ -4095,6 +4831,17 @@ public final class VirtualHostServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 5;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.Builder> 
@@ -4129,6 +4876,10 @@ public final class VirtualHostServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> modifyRequestHeadersBuilder_;
 
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyRequestHeadersList() {
@@ -4139,6 +4890,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public int getModifyRequestHeadersCount() {
@@ -4149,6 +4904,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyRequestHeaders(int index) {
@@ -4159,6 +4918,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public Builder setModifyRequestHeaders(
@@ -4176,6 +4939,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public Builder setModifyRequestHeaders(
@@ -4190,6 +4957,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public Builder addModifyRequestHeaders(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification value) {
@@ -4206,6 +4977,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public Builder addModifyRequestHeaders(
@@ -4223,6 +4998,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public Builder addModifyRequestHeaders(
@@ -4237,6 +5016,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public Builder addModifyRequestHeaders(
@@ -4251,6 +5034,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public Builder addAllModifyRequestHeaders(
@@ -4266,6 +5053,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public Builder clearModifyRequestHeaders() {
@@ -4279,6 +5070,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public Builder removeModifyRequestHeaders(int index) {
@@ -4292,6 +5087,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder getModifyRequestHeadersBuilder(
@@ -4299,6 +5098,10 @@ public final class VirtualHostServiceOuterClass {
         return getModifyRequestHeadersFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyRequestHeadersOrBuilder(
@@ -4309,6 +5112,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
@@ -4320,6 +5127,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder addModifyRequestHeadersBuilder() {
@@ -4327,6 +5138,10 @@ public final class VirtualHostServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder addModifyRequestHeadersBuilder(
@@ -4335,6 +5150,10 @@ public final class VirtualHostServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 6;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder> 
@@ -4369,6 +5188,11 @@ public final class VirtualHostServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> modifyResponseHeadersBuilder_;
 
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyResponseHeadersList() {
@@ -4379,6 +5203,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public int getModifyResponseHeadersCount() {
@@ -4389,6 +5218,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyResponseHeaders(int index) {
@@ -4399,6 +5233,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public Builder setModifyResponseHeaders(
@@ -4416,6 +5255,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public Builder setModifyResponseHeaders(
@@ -4430,6 +5274,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public Builder addModifyResponseHeaders(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification value) {
@@ -4446,6 +5295,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public Builder addModifyResponseHeaders(
@@ -4463,6 +5317,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public Builder addModifyResponseHeaders(
@@ -4477,6 +5336,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public Builder addModifyResponseHeaders(
@@ -4491,6 +5355,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public Builder addAllModifyResponseHeaders(
@@ -4506,6 +5375,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public Builder clearModifyResponseHeaders() {
@@ -4519,6 +5393,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public Builder removeModifyResponseHeaders(int index) {
@@ -4532,6 +5411,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder getModifyResponseHeadersBuilder(
@@ -4539,6 +5423,11 @@ public final class VirtualHostServiceOuterClass {
         return getModifyResponseHeadersFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
@@ -4549,6 +5438,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
@@ -4560,6 +5454,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder addModifyResponseHeadersBuilder() {
@@ -4567,6 +5466,11 @@ public final class VirtualHostServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder addModifyResponseHeadersBuilder(
@@ -4575,6 +5479,11 @@ public final class VirtualHostServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 7;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder> 
@@ -4654,7 +5563,7 @@ public final class VirtualHostServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host is being created.
+     * ID of the HTTP router that the virtual host is being created in.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4662,7 +5571,7 @@ public final class VirtualHostServiceOuterClass {
     java.lang.String getHttpRouterId();
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host is being created.
+     * ID of the HTTP router that the virtual host is being created in.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4777,7 +5686,7 @@ public final class VirtualHostServiceOuterClass {
     private volatile java.lang.Object httpRouterId_;
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host is being created.
+     * ID of the HTTP router that the virtual host is being created in.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4796,7 +5705,7 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host is being created.
+     * ID of the HTTP router that the virtual host is being created in.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -5180,7 +6089,7 @@ public final class VirtualHostServiceOuterClass {
       private java.lang.Object httpRouterId_ = "";
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host is being created.
+       * ID of the HTTP router that the virtual host is being created in.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -5199,7 +6108,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host is being created.
+       * ID of the HTTP router that the virtual host is being created in.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -5219,7 +6128,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host is being created.
+       * ID of the HTTP router that the virtual host is being created in.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -5236,7 +6145,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host is being created.
+       * ID of the HTTP router that the virtual host is being created in.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -5249,7 +6158,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host is being created.
+       * ID of the HTTP router that the virtual host is being created in.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -5413,7 +6322,8 @@ public final class VirtualHostServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router to update a virtual host in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -5421,7 +6331,8 @@ public final class VirtualHostServiceOuterClass {
     java.lang.String getHttpRouterId();
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router to update a virtual host in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -5430,33 +6341,62 @@ public final class VirtualHostServiceOuterClass {
         getHttpRouterIdBytes();
 
     /**
+     * <pre>
+     * Name of the virtual host.
+     * Used only to refer to the virtual host. The name of a host cannot be changed.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getVirtualHostName();
     /**
+     * <pre>
+     * Name of the virtual host.
+     * Used only to refer to the virtual host. The name of a host cannot be changed.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the virtual host should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the virtual host should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the virtual host should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
      * <pre>
-     * Fields of the virtual host to update.
-     * Except name, that field used to address virtual host within the http router
-     * and cannot be changed after creation.
+     * New list of domains to attribute to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * Existing list of domains is completely replaced by the specified list.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
@@ -5465,9 +6405,14 @@ public final class VirtualHostServiceOuterClass {
         getAuthorityList();
     /**
      * <pre>
-     * Fields of the virtual host to update.
-     * Except name, that field used to address virtual host within the http router
-     * and cannot be changed after creation.
+     * New list of domains to attribute to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * Existing list of domains is completely replaced by the specified list.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
@@ -5475,9 +6420,14 @@ public final class VirtualHostServiceOuterClass {
     int getAuthorityCount();
     /**
      * <pre>
-     * Fields of the virtual host to update.
-     * Except name, that field used to address virtual host within the http router
-     * and cannot be changed after creation.
+     * New list of domains to attribute to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * Existing list of domains is completely replaced by the specified list.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
@@ -5485,9 +6435,14 @@ public final class VirtualHostServiceOuterClass {
     java.lang.String getAuthority(int index);
     /**
      * <pre>
-     * Fields of the virtual host to update.
-     * Except name, that field used to address virtual host within the http router
-     * and cannot be changed after creation.
+     * New list of domains to attribute to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * Existing list of domains is completely replaced by the specified list.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
@@ -5496,72 +6451,197 @@ public final class VirtualHostServiceOuterClass {
         getAuthorityBytes(int index);
 
     /**
+     * <pre>
+     * New list of routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+     * make a [VirtualHostService.RemoveRoute] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route> 
         getRoutesList();
     /**
+     * <pre>
+     * New list of routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+     * make a [VirtualHostService.RemoveRoute] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route getRoutes(int index);
     /**
+     * <pre>
+     * New list of routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+     * make a [VirtualHostService.RemoveRoute] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
     int getRoutesCount();
     /**
+     * <pre>
+     * New list of routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+     * make a [VirtualHostService.RemoveRoute] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder> 
         getRoutesOrBuilderList();
     /**
+     * <pre>
+     * New list of routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+     * make a [VirtualHostService.RemoveRoute] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder getRoutesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of incoming HTTP requests
+     * before they are forwarded to backends.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> 
         getModifyRequestHeadersList();
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of incoming HTTP requests
+     * before they are forwarded to backends.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyRequestHeaders(int index);
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of incoming HTTP requests
+     * before they are forwarded to backends.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
     int getModifyRequestHeadersCount();
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of incoming HTTP requests
+     * before they are forwarded to backends.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
         getModifyRequestHeadersOrBuilderList();
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of incoming HTTP requests
+     * before they are forwarded to backends.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyRequestHeadersOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> 
         getModifyResponseHeadersList();
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyResponseHeaders(int index);
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
     int getModifyResponseHeadersCount();
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
         getModifyResponseHeadersOrBuilderList();
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
@@ -5722,7 +6802,8 @@ public final class VirtualHostServiceOuterClass {
     private volatile java.lang.Object httpRouterId_;
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router to update a virtual host in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -5741,7 +6822,8 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the HTTP Router that the virtual host belongs to.
+     * ID of the HTTP router to update a virtual host in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -5763,6 +6845,12 @@ public final class VirtualHostServiceOuterClass {
     public static final int VIRTUAL_HOST_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object virtualHostName_;
     /**
+     * <pre>
+     * Name of the virtual host.
+     * Used only to refer to the virtual host. The name of a host cannot be changed.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getVirtualHostName() {
@@ -5778,6 +6866,12 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the virtual host.
+     * Used only to refer to the virtual host. The name of a host cannot be changed.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -5797,18 +6891,30 @@ public final class VirtualHostServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 3;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the virtual host should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the virtual host should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the virtual host should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 3;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -5819,9 +6925,14 @@ public final class VirtualHostServiceOuterClass {
     private com.google.protobuf.LazyStringList authority_;
     /**
      * <pre>
-     * Fields of the virtual host to update.
-     * Except name, that field used to address virtual host within the http router
-     * and cannot be changed after creation.
+     * New list of domains to attribute to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * Existing list of domains is completely replaced by the specified list.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
@@ -5832,9 +6943,14 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * Fields of the virtual host to update.
-     * Except name, that field used to address virtual host within the http router
-     * and cannot be changed after creation.
+     * New list of domains to attribute to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * Existing list of domains is completely replaced by the specified list.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
@@ -5844,9 +6960,14 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * Fields of the virtual host to update.
-     * Except name, that field used to address virtual host within the http router
-     * and cannot be changed after creation.
+     * New list of domains to attribute to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * Existing list of domains is completely replaced by the specified list.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
@@ -5856,9 +6977,14 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * Fields of the virtual host to update.
-     * Except name, that field used to address virtual host within the http router
-     * and cannot be changed after creation.
+     * New list of domains to attribute to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * Existing list of domains is completely replaced by the specified list.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 4;</code>
@@ -5871,12 +6997,38 @@ public final class VirtualHostServiceOuterClass {
     public static final int ROUTES_FIELD_NUMBER = 6;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route> routes_;
     /**
+     * <pre>
+     * New list of routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+     * make a [VirtualHostService.RemoveRoute] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route> getRoutesList() {
       return routes_;
     }
     /**
+     * <pre>
+     * New list of routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+     * make a [VirtualHostService.RemoveRoute] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder> 
@@ -5884,18 +7036,57 @@ public final class VirtualHostServiceOuterClass {
       return routes_;
     }
     /**
+     * <pre>
+     * New list of routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+     * make a [VirtualHostService.RemoveRoute] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
     public int getRoutesCount() {
       return routes_.size();
     }
     /**
+     * <pre>
+     * New list of routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+     * make a [VirtualHostService.RemoveRoute] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route getRoutes(int index) {
       return routes_.get(index);
     }
     /**
+     * <pre>
+     * New list of routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
+     * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+     * make a [VirtualHostService.RemoveRoute] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder getRoutesOrBuilder(
@@ -5906,12 +7097,24 @@ public final class VirtualHostServiceOuterClass {
     public static final int MODIFY_REQUEST_HEADERS_FIELD_NUMBER = 7;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyRequestHeaders_;
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of incoming HTTP requests
+     * before they are forwarded to backends.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyRequestHeadersList() {
       return modifyRequestHeaders_;
     }
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of incoming HTTP requests
+     * before they are forwarded to backends.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
@@ -5919,18 +7122,36 @@ public final class VirtualHostServiceOuterClass {
       return modifyRequestHeaders_;
     }
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of incoming HTTP requests
+     * before they are forwarded to backends.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
     public int getModifyRequestHeadersCount() {
       return modifyRequestHeaders_.size();
     }
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of incoming HTTP requests
+     * before they are forwarded to backends.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyRequestHeaders(int index) {
       return modifyRequestHeaders_.get(index);
     }
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of incoming HTTP requests
+     * before they are forwarded to backends.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyRequestHeadersOrBuilder(
@@ -5941,12 +7162,24 @@ public final class VirtualHostServiceOuterClass {
     public static final int MODIFY_RESPONSE_HEADERS_FIELD_NUMBER = 8;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyResponseHeaders_;
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyResponseHeadersList() {
       return modifyResponseHeaders_;
     }
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
@@ -5954,18 +7187,36 @@ public final class VirtualHostServiceOuterClass {
       return modifyResponseHeaders_;
     }
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
     public int getModifyResponseHeadersCount() {
       return modifyResponseHeaders_.size();
     }
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyResponseHeaders(int index) {
       return modifyResponseHeaders_.get(index);
     }
     /**
+     * <pre>
+     * New list of modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
+     * Existing list of modifications is completely replaced by the specified list.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
@@ -6529,7 +7780,8 @@ public final class VirtualHostServiceOuterClass {
       private java.lang.Object httpRouterId_ = "";
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to update a virtual host in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -6548,7 +7800,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to update a virtual host in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -6568,7 +7821,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to update a virtual host in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -6585,7 +7839,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to update a virtual host in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -6598,7 +7853,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router that the virtual host belongs to.
+       * ID of the HTTP router to update a virtual host in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -6617,6 +7873,12 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object virtualHostName_ = "";
       /**
+       * <pre>
+       * Name of the virtual host.
+       * Used only to refer to the virtual host. The name of a host cannot be changed.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getVirtualHostName() {
@@ -6632,6 +7894,12 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the virtual host.
+       * Used only to refer to the virtual host. The name of a host cannot be changed.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -6648,6 +7916,12 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the virtual host.
+       * Used only to refer to the virtual host. The name of a host cannot be changed.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setVirtualHostName(
@@ -6661,6 +7935,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the virtual host.
+       * Used only to refer to the virtual host. The name of a host cannot be changed.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearVirtualHostName() {
@@ -6670,6 +7950,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the virtual host.
+       * Used only to refer to the virtual host. The name of a host cannot be changed.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setVirtualHostNameBytes(
@@ -6688,12 +7974,20 @@ public final class VirtualHostServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the virtual host should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the virtual host should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -6704,6 +7998,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the virtual host should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -6720,6 +8018,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the virtual host should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder setUpdateMask(
@@ -6734,6 +8036,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the virtual host should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -6752,6 +8058,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the virtual host should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public Builder clearUpdateMask() {
@@ -6766,6 +8076,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the virtual host should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -6774,6 +8088,10 @@ public final class VirtualHostServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the virtual host should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -6785,6 +8103,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the virtual host should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6810,9 +8132,14 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Fields of the virtual host to update.
-       * Except name, that field used to address virtual host within the http router
-       * and cannot be changed after creation.
+       * New list of domains to attribute to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * Existing list of domains is completely replaced by the specified list.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
@@ -6823,9 +8150,14 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Fields of the virtual host to update.
-       * Except name, that field used to address virtual host within the http router
-       * and cannot be changed after creation.
+       * New list of domains to attribute to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * Existing list of domains is completely replaced by the specified list.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
@@ -6835,9 +8167,14 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Fields of the virtual host to update.
-       * Except name, that field used to address virtual host within the http router
-       * and cannot be changed after creation.
+       * New list of domains to attribute to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * Existing list of domains is completely replaced by the specified list.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
@@ -6847,9 +8184,14 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Fields of the virtual host to update.
-       * Except name, that field used to address virtual host within the http router
-       * and cannot be changed after creation.
+       * New list of domains to attribute to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * Existing list of domains is completely replaced by the specified list.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
@@ -6860,9 +8202,14 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Fields of the virtual host to update.
-       * Except name, that field used to address virtual host within the http router
-       * and cannot be changed after creation.
+       * New list of domains to attribute to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * Existing list of domains is completely replaced by the specified list.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
@@ -6879,9 +8226,14 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Fields of the virtual host to update.
-       * Except name, that field used to address virtual host within the http router
-       * and cannot be changed after creation.
+       * New list of domains to attribute to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * Existing list of domains is completely replaced by the specified list.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
@@ -6898,9 +8250,14 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Fields of the virtual host to update.
-       * Except name, that field used to address virtual host within the http router
-       * and cannot be changed after creation.
+       * New list of domains to attribute to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * Existing list of domains is completely replaced by the specified list.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
@@ -6915,9 +8272,14 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Fields of the virtual host to update.
-       * Except name, that field used to address virtual host within the http router
-       * and cannot be changed after creation.
+       * New list of domains to attribute to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * Existing list of domains is completely replaced by the specified list.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
@@ -6930,9 +8292,14 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Fields of the virtual host to update.
-       * Except name, that field used to address virtual host within the http router
-       * and cannot be changed after creation.
+       * New list of domains to attribute to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * Existing list of domains is completely replaced by the specified list.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 4;</code>
@@ -6962,6 +8329,19 @@ public final class VirtualHostServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder> routesBuilder_;
 
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route> getRoutesList() {
@@ -6972,6 +8352,19 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public int getRoutesCount() {
@@ -6982,6 +8375,19 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route getRoutes(int index) {
@@ -6992,6 +8398,19 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public Builder setRoutes(
@@ -7009,6 +8428,19 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public Builder setRoutes(
@@ -7023,6 +8455,19 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public Builder addRoutes(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route value) {
@@ -7039,6 +8484,19 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public Builder addRoutes(
@@ -7056,6 +8514,19 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public Builder addRoutes(
@@ -7070,6 +8541,19 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public Builder addRoutes(
@@ -7084,6 +8568,19 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public Builder addAllRoutes(
@@ -7099,6 +8596,19 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public Builder clearRoutes() {
@@ -7112,6 +8622,19 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public Builder removeRoutes(int index) {
@@ -7125,6 +8648,19 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.Builder getRoutesBuilder(
@@ -7132,6 +8668,19 @@ public final class VirtualHostServiceOuterClass {
         return getRoutesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder getRoutesOrBuilder(
@@ -7142,6 +8691,19 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOrBuilder> 
@@ -7153,6 +8715,19 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.Builder addRoutesBuilder() {
@@ -7160,6 +8735,19 @@ public final class VirtualHostServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.getDefaultInstance());
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.Builder addRoutesBuilder(
@@ -7168,6 +8756,19 @@ public final class VirtualHostServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.getDefaultInstance());
       }
       /**
+       * <pre>
+       * New list of routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
+       * Existing list of routes is completely replaced by the specified list, so if you just want to remove a route,
+       * make a [VirtualHostService.RemoveRoute] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 6;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.Builder> 
@@ -7202,6 +8803,12 @@ public final class VirtualHostServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> modifyRequestHeadersBuilder_;
 
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyRequestHeadersList() {
@@ -7212,6 +8819,12 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public int getModifyRequestHeadersCount() {
@@ -7222,6 +8835,12 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyRequestHeaders(int index) {
@@ -7232,6 +8851,12 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public Builder setModifyRequestHeaders(
@@ -7249,6 +8874,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public Builder setModifyRequestHeaders(
@@ -7263,6 +8894,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public Builder addModifyRequestHeaders(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification value) {
@@ -7279,6 +8916,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public Builder addModifyRequestHeaders(
@@ -7296,6 +8939,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public Builder addModifyRequestHeaders(
@@ -7310,6 +8959,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public Builder addModifyRequestHeaders(
@@ -7324,6 +8979,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public Builder addAllModifyRequestHeaders(
@@ -7339,6 +9000,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public Builder clearModifyRequestHeaders() {
@@ -7352,6 +9019,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public Builder removeModifyRequestHeaders(int index) {
@@ -7365,6 +9038,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder getModifyRequestHeadersBuilder(
@@ -7372,6 +9051,12 @@ public final class VirtualHostServiceOuterClass {
         return getModifyRequestHeadersFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyRequestHeadersOrBuilder(
@@ -7382,6 +9067,12 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
@@ -7393,6 +9084,12 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder addModifyRequestHeadersBuilder() {
@@ -7400,6 +9097,12 @@ public final class VirtualHostServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.getDefaultInstance());
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder addModifyRequestHeadersBuilder(
@@ -7408,6 +9111,12 @@ public final class VirtualHostServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.getDefaultInstance());
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of incoming HTTP requests
+       * before they are forwarded to backends.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 7;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder> 
@@ -7442,6 +9151,12 @@ public final class VirtualHostServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> modifyResponseHeadersBuilder_;
 
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyResponseHeadersList() {
@@ -7452,6 +9167,12 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public int getModifyResponseHeadersCount() {
@@ -7462,6 +9183,12 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyResponseHeaders(int index) {
@@ -7472,6 +9199,12 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public Builder setModifyResponseHeaders(
@@ -7489,6 +9222,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public Builder setModifyResponseHeaders(
@@ -7503,6 +9242,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public Builder addModifyResponseHeaders(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification value) {
@@ -7519,6 +9264,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public Builder addModifyResponseHeaders(
@@ -7536,6 +9287,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public Builder addModifyResponseHeaders(
@@ -7550,6 +9307,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public Builder addModifyResponseHeaders(
@@ -7564,6 +9327,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public Builder addAllModifyResponseHeaders(
@@ -7579,6 +9348,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public Builder clearModifyResponseHeaders() {
@@ -7592,6 +9367,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public Builder removeModifyResponseHeaders(int index) {
@@ -7605,6 +9386,12 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder getModifyResponseHeadersBuilder(
@@ -7612,6 +9399,12 @@ public final class VirtualHostServiceOuterClass {
         return getModifyResponseHeadersFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
@@ -7622,6 +9415,12 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
@@ -7633,6 +9432,12 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder addModifyResponseHeadersBuilder() {
@@ -7640,6 +9445,12 @@ public final class VirtualHostServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.getDefaultInstance());
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder addModifyResponseHeadersBuilder(
@@ -7648,6 +9459,12 @@ public final class VirtualHostServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.getDefaultInstance());
       }
       /**
+       * <pre>
+       * New list of modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
+       * Existing list of modifications is completely replaced by the specified list.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 8;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder> 
@@ -7727,7 +9544,7 @@ public final class VirtualHostServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the HTTP Router where a virtual host is being updated.
+     * ID of the HTTP router that the virtual host is being updated in.
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
@@ -7735,7 +9552,7 @@ public final class VirtualHostServiceOuterClass {
     java.lang.String getHttpRouterId();
     /**
      * <pre>
-     * ID of the HTTP Router where a virtual host is being updated.
+     * ID of the HTTP router that the virtual host is being updated in.
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
@@ -7745,7 +9562,7 @@ public final class VirtualHostServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the updated virtual host.
+     * Name of the virtual host that is being updated.
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
@@ -7753,7 +9570,7 @@ public final class VirtualHostServiceOuterClass {
     java.lang.String getVirtualHostName();
     /**
      * <pre>
-     * Name of the updated virtual host.
+     * Name of the virtual host that is being updated.
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
@@ -7850,7 +9667,7 @@ public final class VirtualHostServiceOuterClass {
     private volatile java.lang.Object httpRouterId_;
     /**
      * <pre>
-     * ID of the HTTP Router where a virtual host is being updated.
+     * ID of the HTTP router that the virtual host is being updated in.
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
@@ -7869,7 +9686,7 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the HTTP Router where a virtual host is being updated.
+     * ID of the HTTP router that the virtual host is being updated in.
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
@@ -7892,7 +9709,7 @@ public final class VirtualHostServiceOuterClass {
     private volatile java.lang.Object virtualHostName_;
     /**
      * <pre>
-     * Name of the updated virtual host.
+     * Name of the virtual host that is being updated.
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
@@ -7911,7 +9728,7 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the updated virtual host.
+     * Name of the virtual host that is being updated.
      * </pre>
      *
      * <code>string virtual_host_name = 2;</code>
@@ -8253,7 +10070,7 @@ public final class VirtualHostServiceOuterClass {
       private java.lang.Object httpRouterId_ = "";
       /**
        * <pre>
-       * ID of the HTTP Router where a virtual host is being updated.
+       * ID of the HTTP router that the virtual host is being updated in.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -8272,7 +10089,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router where a virtual host is being updated.
+       * ID of the HTTP router that the virtual host is being updated in.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -8292,7 +10109,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router where a virtual host is being updated.
+       * ID of the HTTP router that the virtual host is being updated in.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -8309,7 +10126,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router where a virtual host is being updated.
+       * ID of the HTTP router that the virtual host is being updated in.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -8322,7 +10139,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router where a virtual host is being updated.
+       * ID of the HTTP router that the virtual host is being updated in.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -8342,7 +10159,7 @@ public final class VirtualHostServiceOuterClass {
       private java.lang.Object virtualHostName_ = "";
       /**
        * <pre>
-       * Name of the updated virtual host.
+       * Name of the virtual host that is being updated.
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
@@ -8361,7 +10178,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the updated virtual host.
+       * Name of the virtual host that is being updated.
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
@@ -8381,7 +10198,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the updated virtual host.
+       * Name of the virtual host that is being updated.
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
@@ -8398,7 +10215,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the updated virtual host.
+       * Name of the virtual host that is being updated.
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
@@ -8411,7 +10228,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the updated virtual host.
+       * Name of the virtual host that is being updated.
        * </pre>
        *
        * <code>string virtual_host_name = 2;</code>
@@ -8486,7 +10303,8 @@ public final class VirtualHostServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the HTTP Router to delete a virtual host in.
+     * ID of the HTTP router to delete a virtual host from.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8494,7 +10312,8 @@ public final class VirtualHostServiceOuterClass {
     java.lang.String getHttpRouterId();
     /**
      * <pre>
-     * ID of the HTTP Router to delete a virtual host in.
+     * ID of the HTTP router to delete a virtual host from.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8505,17 +10324,19 @@ public final class VirtualHostServiceOuterClass {
     /**
      * <pre>
      * Name of the virtual host to delete.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
      * </pre>
      *
-     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     java.lang.String getVirtualHostName();
     /**
      * <pre>
      * Name of the virtual host to delete.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
      * </pre>
      *
-     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
@@ -8609,7 +10430,8 @@ public final class VirtualHostServiceOuterClass {
     private volatile java.lang.Object httpRouterId_;
     /**
      * <pre>
-     * ID of the HTTP Router to delete a virtual host in.
+     * ID of the HTTP router to delete a virtual host from.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8628,7 +10450,8 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the HTTP Router to delete a virtual host in.
+     * ID of the HTTP router to delete a virtual host from.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -8652,9 +10475,10 @@ public final class VirtualHostServiceOuterClass {
     /**
      * <pre>
      * Name of the virtual host to delete.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
      * </pre>
      *
-     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public java.lang.String getVirtualHostName() {
       java.lang.Object ref = virtualHostName_;
@@ -8671,9 +10495,10 @@ public final class VirtualHostServiceOuterClass {
     /**
      * <pre>
      * Name of the virtual host to delete.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
      * </pre>
      *
-     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public com.google.protobuf.ByteString
         getVirtualHostNameBytes() {
@@ -9012,7 +10837,8 @@ public final class VirtualHostServiceOuterClass {
       private java.lang.Object httpRouterId_ = "";
       /**
        * <pre>
-       * ID of the HTTP Router to delete a virtual host in.
+       * ID of the HTTP router to delete a virtual host from.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -9031,7 +10857,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router to delete a virtual host in.
+       * ID of the HTTP router to delete a virtual host from.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -9051,7 +10878,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router to delete a virtual host in.
+       * ID of the HTTP router to delete a virtual host from.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -9068,7 +10896,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router to delete a virtual host in.
+       * ID of the HTTP router to delete a virtual host from.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -9081,7 +10910,8 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router to delete a virtual host in.
+       * ID of the HTTP router to delete a virtual host from.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -9102,9 +10932,10 @@ public final class VirtualHostServiceOuterClass {
       /**
        * <pre>
        * Name of the virtual host to delete.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
        * </pre>
        *
-       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public java.lang.String getVirtualHostName() {
         java.lang.Object ref = virtualHostName_;
@@ -9121,9 +10952,10 @@ public final class VirtualHostServiceOuterClass {
       /**
        * <pre>
        * Name of the virtual host to delete.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
        * </pre>
        *
-       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public com.google.protobuf.ByteString
           getVirtualHostNameBytes() {
@@ -9141,9 +10973,10 @@ public final class VirtualHostServiceOuterClass {
       /**
        * <pre>
        * Name of the virtual host to delete.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
        * </pre>
        *
-       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setVirtualHostName(
           java.lang.String value) {
@@ -9158,9 +10991,10 @@ public final class VirtualHostServiceOuterClass {
       /**
        * <pre>
        * Name of the virtual host to delete.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
        * </pre>
        *
-       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder clearVirtualHostName() {
         
@@ -9171,9 +11005,10 @@ public final class VirtualHostServiceOuterClass {
       /**
        * <pre>
        * Name of the virtual host to delete.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
        * </pre>
        *
-       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setVirtualHostNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9245,7 +11080,7 @@ public final class VirtualHostServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the HTTP Router where a virtual host is being deleted.
+     * ID of the HTTP router that the virtual host is being deleted from.
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
@@ -9253,7 +11088,7 @@ public final class VirtualHostServiceOuterClass {
     java.lang.String getHttpRouterId();
     /**
      * <pre>
-     * ID of the HTTP Router where a virtual host is being deleted.
+     * ID of the HTTP router that the virtual host is being deleted from.
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
@@ -9368,7 +11203,7 @@ public final class VirtualHostServiceOuterClass {
     private volatile java.lang.Object httpRouterId_;
     /**
      * <pre>
-     * ID of the HTTP Router where a virtual host is being deleted.
+     * ID of the HTTP router that the virtual host is being deleted from.
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
@@ -9387,7 +11222,7 @@ public final class VirtualHostServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the HTTP Router where a virtual host is being deleted.
+     * ID of the HTTP router that the virtual host is being deleted from.
      * </pre>
      *
      * <code>string http_router_id = 1;</code>
@@ -9771,7 +11606,7 @@ public final class VirtualHostServiceOuterClass {
       private java.lang.Object httpRouterId_ = "";
       /**
        * <pre>
-       * ID of the HTTP Router where a virtual host is being deleted.
+       * ID of the HTTP router that the virtual host is being deleted from.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -9790,7 +11625,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router where a virtual host is being deleted.
+       * ID of the HTTP router that the virtual host is being deleted from.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -9810,7 +11645,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router where a virtual host is being deleted.
+       * ID of the HTTP router that the virtual host is being deleted from.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -9827,7 +11662,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router where a virtual host is being deleted.
+       * ID of the HTTP router that the virtual host is being deleted from.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -9840,7 +11675,7 @@ public final class VirtualHostServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the HTTP Router where a virtual host is being deleted.
+       * ID of the HTTP router that the virtual host is being deleted from.
        * </pre>
        *
        * <code>string http_router_id = 1;</code>
@@ -10003,30 +11838,60 @@ public final class VirtualHostServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the HTTP router to delete a route from.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getHttpRouterId();
     /**
+     * <pre>
+     * ID of the HTTP router to delete a route from.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
 
     /**
+     * <pre>
+     * Name of the virtual host to delete a route from.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getVirtualHostName();
     /**
+     * <pre>
+     * Name of the virtual host to delete a route from.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
 
     /**
+     * <pre>
+     * Name of the route to delete.
+     * To get the route name, make a [VirtualHostService.Get] request.
+     * </pre>
+     *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getRouteName();
     /**
+     * <pre>
+     * Name of the route to delete.
+     * To get the route name, make a [VirtualHostService.Get] request.
+     * </pre>
+     *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -10127,6 +11992,11 @@ public final class VirtualHostServiceOuterClass {
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
+     * <pre>
+     * ID of the HTTP router to delete a route from.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getHttpRouterId() {
@@ -10142,6 +12012,11 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the HTTP router to delete a route from.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -10161,6 +12036,11 @@ public final class VirtualHostServiceOuterClass {
     public static final int VIRTUAL_HOST_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object virtualHostName_;
     /**
+     * <pre>
+     * Name of the virtual host to delete a route from.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getVirtualHostName() {
@@ -10176,6 +12056,11 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the virtual host to delete a route from.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -10195,6 +12080,11 @@ public final class VirtualHostServiceOuterClass {
     public static final int ROUTE_NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object routeName_;
     /**
+     * <pre>
+     * Name of the route to delete.
+     * To get the route name, make a [VirtualHostService.Get] request.
+     * </pre>
+     *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getRouteName() {
@@ -10210,6 +12100,11 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the route to delete.
+     * To get the route name, make a [VirtualHostService.Get] request.
+     * </pre>
+     *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -10565,6 +12460,11 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object httpRouterId_ = "";
       /**
+       * <pre>
+       * ID of the HTTP router to delete a route from.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getHttpRouterId() {
@@ -10580,6 +12480,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router to delete a route from.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -10596,6 +12501,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router to delete a route from.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHttpRouterId(
@@ -10609,6 +12519,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router to delete a route from.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearHttpRouterId() {
@@ -10618,6 +12533,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router to delete a route from.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHttpRouterIdBytes(
@@ -10634,6 +12554,11 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object virtualHostName_ = "";
       /**
+       * <pre>
+       * Name of the virtual host to delete a route from.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getVirtualHostName() {
@@ -10649,6 +12574,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the virtual host to delete a route from.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -10665,6 +12595,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the virtual host to delete a route from.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setVirtualHostName(
@@ -10678,6 +12613,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the virtual host to delete a route from.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearVirtualHostName() {
@@ -10687,6 +12627,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the virtual host to delete a route from.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setVirtualHostNameBytes(
@@ -10703,6 +12648,11 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object routeName_ = "";
       /**
+       * <pre>
+       * Name of the route to delete.
+       * To get the route name, make a [VirtualHostService.Get] request.
+       * </pre>
+       *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getRouteName() {
@@ -10718,6 +12668,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the route to delete.
+       * To get the route name, make a [VirtualHostService.Get] request.
+       * </pre>
+       *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -10734,6 +12689,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the route to delete.
+       * To get the route name, make a [VirtualHostService.Get] request.
+       * </pre>
+       *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setRouteName(
@@ -10747,6 +12707,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the route to delete.
+       * To get the route name, make a [VirtualHostService.Get] request.
+       * </pre>
+       *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearRouteName() {
@@ -10756,6 +12721,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the route to delete.
+       * To get the route name, make a [VirtualHostService.Get] request.
+       * </pre>
+       *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setRouteNameBytes(
@@ -10827,30 +12797,54 @@ public final class VirtualHostServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the HTTP router that the route is being deleted from.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     java.lang.String getHttpRouterId();
     /**
+     * <pre>
+     * ID of the HTTP router that the route is being deleted from.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
 
     /**
+     * <pre>
+     * Name of the virtual host that the route is being deleted from.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2;</code>
      */
     java.lang.String getVirtualHostName();
     /**
+     * <pre>
+     * Name of the virtual host that the route is being deleted from.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2;</code>
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
 
     /**
+     * <pre>
+     * Name of the route that is being deleted.
+     * </pre>
+     *
      * <code>string route_name = 3;</code>
      */
     java.lang.String getRouteName();
     /**
+     * <pre>
+     * Name of the route that is being deleted.
+     * </pre>
+     *
      * <code>string route_name = 3;</code>
      */
     com.google.protobuf.ByteString
@@ -10951,6 +12945,10 @@ public final class VirtualHostServiceOuterClass {
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
+     * <pre>
+     * ID of the HTTP router that the route is being deleted from.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     public java.lang.String getHttpRouterId() {
@@ -10966,6 +12964,10 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the HTTP router that the route is being deleted from.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -10985,6 +12987,10 @@ public final class VirtualHostServiceOuterClass {
     public static final int VIRTUAL_HOST_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object virtualHostName_;
     /**
+     * <pre>
+     * Name of the virtual host that the route is being deleted from.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2;</code>
      */
     public java.lang.String getVirtualHostName() {
@@ -11000,6 +13006,10 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the virtual host that the route is being deleted from.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -11019,6 +13029,10 @@ public final class VirtualHostServiceOuterClass {
     public static final int ROUTE_NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object routeName_;
     /**
+     * <pre>
+     * Name of the route that is being deleted.
+     * </pre>
+     *
      * <code>string route_name = 3;</code>
      */
     public java.lang.String getRouteName() {
@@ -11034,6 +13048,10 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the route that is being deleted.
+     * </pre>
+     *
      * <code>string route_name = 3;</code>
      */
     public com.google.protobuf.ByteString
@@ -11389,6 +13407,10 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object httpRouterId_ = "";
       /**
+       * <pre>
+       * ID of the HTTP router that the route is being deleted from.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public java.lang.String getHttpRouterId() {
@@ -11404,6 +13426,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router that the route is being deleted from.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -11420,6 +13446,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router that the route is being deleted from.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder setHttpRouterId(
@@ -11433,6 +13463,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router that the route is being deleted from.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder clearHttpRouterId() {
@@ -11442,6 +13476,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router that the route is being deleted from.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder setHttpRouterIdBytes(
@@ -11458,6 +13496,10 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object virtualHostName_ = "";
       /**
+       * <pre>
+       * Name of the virtual host that the route is being deleted from.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2;</code>
        */
       public java.lang.String getVirtualHostName() {
@@ -11473,6 +13515,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the virtual host that the route is being deleted from.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -11489,6 +13535,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the virtual host that the route is being deleted from.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2;</code>
        */
       public Builder setVirtualHostName(
@@ -11502,6 +13552,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the virtual host that the route is being deleted from.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2;</code>
        */
       public Builder clearVirtualHostName() {
@@ -11511,6 +13565,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the virtual host that the route is being deleted from.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2;</code>
        */
       public Builder setVirtualHostNameBytes(
@@ -11527,6 +13585,10 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object routeName_ = "";
       /**
+       * <pre>
+       * Name of the route that is being deleted.
+       * </pre>
+       *
        * <code>string route_name = 3;</code>
        */
       public java.lang.String getRouteName() {
@@ -11542,6 +13604,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the route that is being deleted.
+       * </pre>
+       *
        * <code>string route_name = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -11558,6 +13624,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the route that is being deleted.
+       * </pre>
+       *
        * <code>string route_name = 3;</code>
        */
       public Builder setRouteName(
@@ -11571,6 +13641,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the route that is being deleted.
+       * </pre>
+       *
        * <code>string route_name = 3;</code>
        */
       public Builder clearRouteName() {
@@ -11580,6 +13654,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the route that is being deleted.
+       * </pre>
+       *
        * <code>string route_name = 3;</code>
        */
       public Builder setRouteNameBytes(
@@ -11651,70 +13729,136 @@ public final class VirtualHostServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the HTTP router to update a route in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getHttpRouterId();
     /**
+     * <pre>
+     * ID of the HTTP router to update a route in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
 
     /**
+     * <pre>
+     * Name of the virtual host to update a route in.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getVirtualHostName();
     /**
+     * <pre>
+     * Name of the virtual host to update a route in.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
 
     /**
+     * <pre>
+     * Name of the route to update.
+     * To get the route name, make a [VirtualHostService.Get] request.
+     * </pre>
+     *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getRouteName();
     /**
+     * <pre>
+     * Name of the route to update.
+     * To get the route name, make a [VirtualHostService.Get] request.
+     * </pre>
+     *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getRouteNameBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the route should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the route should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the route should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New settings of the HTTP route.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
      */
     boolean hasHttp();
     /**
+     * <pre>
+     * New settings of the HTTP route.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute getHttp();
     /**
+     * <pre>
+     * New settings of the HTTP route.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteOrBuilder getHttpOrBuilder();
 
     /**
+     * <pre>
+     * New settings of the gRPC route.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
      */
     boolean hasGrpc();
     /**
+     * <pre>
+     * New settings of the gRPC route.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute getGrpc();
     /**
+     * <pre>
+     * New settings of the gRPC route.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteOrBuilder getGrpcOrBuilder();
@@ -11895,6 +14039,11 @@ public final class VirtualHostServiceOuterClass {
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
+     * <pre>
+     * ID of the HTTP router to update a route in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getHttpRouterId() {
@@ -11910,6 +14059,11 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the HTTP router to update a route in.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -11929,6 +14083,11 @@ public final class VirtualHostServiceOuterClass {
     public static final int VIRTUAL_HOST_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object virtualHostName_;
     /**
+     * <pre>
+     * Name of the virtual host to update a route in.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getVirtualHostName() {
@@ -11944,6 +14103,11 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the virtual host to update a route in.
+     * To get the virtual host name, make a [VirtualHostService.List] request.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -11963,6 +14127,11 @@ public final class VirtualHostServiceOuterClass {
     public static final int ROUTE_NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object routeName_;
     /**
+     * <pre>
+     * Name of the route to update.
+     * To get the route name, make a [VirtualHostService.Get] request.
+     * </pre>
+     *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getRouteName() {
@@ -11978,6 +14147,11 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the route to update.
+     * To get the route name, make a [VirtualHostService.Get] request.
+     * </pre>
+     *
      * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -11997,18 +14171,30 @@ public final class VirtualHostServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 4;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the route should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the route should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the route should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -12017,12 +14203,20 @@ public final class VirtualHostServiceOuterClass {
 
     public static final int HTTP_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * New settings of the HTTP route.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
      */
     public boolean hasHttp() {
       return routeCase_ == 5;
     }
     /**
+     * <pre>
+     * New settings of the HTTP route.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute getHttp() {
@@ -12032,6 +14226,10 @@ public final class VirtualHostServiceOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute.getDefaultInstance();
     }
     /**
+     * <pre>
+     * New settings of the HTTP route.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteOrBuilder getHttpOrBuilder() {
@@ -12043,12 +14241,20 @@ public final class VirtualHostServiceOuterClass {
 
     public static final int GRPC_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * New settings of the gRPC route.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
      */
     public boolean hasGrpc() {
       return routeCase_ == 6;
     }
     /**
+     * <pre>
+     * New settings of the gRPC route.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute getGrpc() {
@@ -12058,6 +14264,10 @@ public final class VirtualHostServiceOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute.getDefaultInstance();
     }
     /**
+     * <pre>
+     * New settings of the gRPC route.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteOrBuilder getGrpcOrBuilder() {
@@ -12522,6 +14732,11 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object httpRouterId_ = "";
       /**
+       * <pre>
+       * ID of the HTTP router to update a route in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getHttpRouterId() {
@@ -12537,6 +14752,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router to update a route in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -12553,6 +14773,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router to update a route in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHttpRouterId(
@@ -12566,6 +14791,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router to update a route in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearHttpRouterId() {
@@ -12575,6 +14805,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router to update a route in.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHttpRouterIdBytes(
@@ -12591,6 +14826,11 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object virtualHostName_ = "";
       /**
+       * <pre>
+       * Name of the virtual host to update a route in.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getVirtualHostName() {
@@ -12606,6 +14846,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the virtual host to update a route in.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -12622,6 +14867,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the virtual host to update a route in.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setVirtualHostName(
@@ -12635,6 +14885,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the virtual host to update a route in.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearVirtualHostName() {
@@ -12644,6 +14899,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the virtual host to update a route in.
+       * To get the virtual host name, make a [VirtualHostService.List] request.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setVirtualHostNameBytes(
@@ -12660,6 +14920,11 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object routeName_ = "";
       /**
+       * <pre>
+       * Name of the route to update.
+       * To get the route name, make a [VirtualHostService.Get] request.
+       * </pre>
+       *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getRouteName() {
@@ -12675,6 +14940,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the route to update.
+       * To get the route name, make a [VirtualHostService.Get] request.
+       * </pre>
+       *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -12691,6 +14961,11 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the route to update.
+       * To get the route name, make a [VirtualHostService.Get] request.
+       * </pre>
+       *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setRouteName(
@@ -12704,6 +14979,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the route to update.
+       * To get the route name, make a [VirtualHostService.Get] request.
+       * </pre>
+       *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearRouteName() {
@@ -12713,6 +14993,11 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the route to update.
+       * To get the route name, make a [VirtualHostService.Get] request.
+       * </pre>
+       *
        * <code>string route_name = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setRouteNameBytes(
@@ -12731,12 +15016,20 @@ public final class VirtualHostServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the route should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 4;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the route should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 4;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -12747,6 +15040,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the route should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 4;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -12763,6 +15060,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the route should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 4;</code>
        */
       public Builder setUpdateMask(
@@ -12777,6 +15078,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the route should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 4;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -12795,6 +15100,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the route should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 4;</code>
        */
       public Builder clearUpdateMask() {
@@ -12809,6 +15118,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the route should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 4;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -12817,6 +15130,10 @@ public final class VirtualHostServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the route should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 4;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -12828,6 +15145,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the route should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -12847,12 +15168,20 @@ public final class VirtualHostServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteOrBuilder> httpBuilder_;
       /**
+       * <pre>
+       * New settings of the HTTP route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
        */
       public boolean hasHttp() {
         return routeCase_ == 5;
       }
       /**
+       * <pre>
+       * New settings of the HTTP route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute getHttp() {
@@ -12869,6 +15198,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New settings of the HTTP route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
        */
       public Builder setHttp(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute value) {
@@ -12885,6 +15218,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings of the HTTP route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
        */
       public Builder setHttp(
@@ -12899,6 +15236,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings of the HTTP route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
        */
       public Builder mergeHttp(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute value) {
@@ -12921,6 +15262,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings of the HTTP route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
        */
       public Builder clearHttp() {
@@ -12940,12 +15285,20 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings of the HTTP route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute.Builder getHttpBuilder() {
         return getHttpFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New settings of the HTTP route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteOrBuilder getHttpOrBuilder() {
@@ -12959,6 +15312,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New settings of the HTTP route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -12983,12 +15340,20 @@ public final class VirtualHostServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteOrBuilder> grpcBuilder_;
       /**
+       * <pre>
+       * New settings of the gRPC route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
        */
       public boolean hasGrpc() {
         return routeCase_ == 6;
       }
       /**
+       * <pre>
+       * New settings of the gRPC route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute getGrpc() {
@@ -13005,6 +15370,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New settings of the gRPC route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
        */
       public Builder setGrpc(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute value) {
@@ -13021,6 +15390,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings of the gRPC route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
        */
       public Builder setGrpc(
@@ -13035,6 +15408,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings of the gRPC route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
        */
       public Builder mergeGrpc(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute value) {
@@ -13057,6 +15434,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings of the gRPC route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
        */
       public Builder clearGrpc() {
@@ -13076,12 +15457,20 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings of the gRPC route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute.Builder getGrpcBuilder() {
         return getGrpcFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New settings of the gRPC route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteOrBuilder getGrpcOrBuilder() {
@@ -13095,6 +15484,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New settings of the gRPC route.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -13173,30 +15566,54 @@ public final class VirtualHostServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the HTTP router that the route is being updated in.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     java.lang.String getHttpRouterId();
     /**
+     * <pre>
+     * ID of the HTTP router that the route is being updated in.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
 
     /**
+     * <pre>
+     * Name of the virtual host that the route is being updated in.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2;</code>
      */
     java.lang.String getVirtualHostName();
     /**
+     * <pre>
+     * Name of the virtual host that the route is being updated in.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2;</code>
      */
     com.google.protobuf.ByteString
         getVirtualHostNameBytes();
 
     /**
+     * <pre>
+     * Name of the route that is being updated.
+     * </pre>
+     *
      * <code>string route_name = 3;</code>
      */
     java.lang.String getRouteName();
     /**
+     * <pre>
+     * Name of the route that is being updated.
+     * </pre>
+     *
      * <code>string route_name = 3;</code>
      */
     com.google.protobuf.ByteString
@@ -13297,6 +15714,10 @@ public final class VirtualHostServiceOuterClass {
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
+     * <pre>
+     * ID of the HTTP router that the route is being updated in.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     public java.lang.String getHttpRouterId() {
@@ -13312,6 +15733,10 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the HTTP router that the route is being updated in.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -13331,6 +15756,10 @@ public final class VirtualHostServiceOuterClass {
     public static final int VIRTUAL_HOST_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object virtualHostName_;
     /**
+     * <pre>
+     * Name of the virtual host that the route is being updated in.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2;</code>
      */
     public java.lang.String getVirtualHostName() {
@@ -13346,6 +15775,10 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the virtual host that the route is being updated in.
+     * </pre>
+     *
      * <code>string virtual_host_name = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -13365,6 +15798,10 @@ public final class VirtualHostServiceOuterClass {
     public static final int ROUTE_NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object routeName_;
     /**
+     * <pre>
+     * Name of the route that is being updated.
+     * </pre>
+     *
      * <code>string route_name = 3;</code>
      */
     public java.lang.String getRouteName() {
@@ -13380,6 +15817,10 @@ public final class VirtualHostServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the route that is being updated.
+     * </pre>
+     *
      * <code>string route_name = 3;</code>
      */
     public com.google.protobuf.ByteString
@@ -13735,6 +16176,10 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object httpRouterId_ = "";
       /**
+       * <pre>
+       * ID of the HTTP router that the route is being updated in.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public java.lang.String getHttpRouterId() {
@@ -13750,6 +16195,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router that the route is being updated in.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -13766,6 +16215,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router that the route is being updated in.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder setHttpRouterId(
@@ -13779,6 +16232,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router that the route is being updated in.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder clearHttpRouterId() {
@@ -13788,6 +16245,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router that the route is being updated in.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder setHttpRouterIdBytes(
@@ -13804,6 +16265,10 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object virtualHostName_ = "";
       /**
+       * <pre>
+       * Name of the virtual host that the route is being updated in.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2;</code>
        */
       public java.lang.String getVirtualHostName() {
@@ -13819,6 +16284,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the virtual host that the route is being updated in.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -13835,6 +16304,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the virtual host that the route is being updated in.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2;</code>
        */
       public Builder setVirtualHostName(
@@ -13848,6 +16321,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the virtual host that the route is being updated in.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2;</code>
        */
       public Builder clearVirtualHostName() {
@@ -13857,6 +16334,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the virtual host that the route is being updated in.
+       * </pre>
+       *
        * <code>string virtual_host_name = 2;</code>
        */
       public Builder setVirtualHostNameBytes(
@@ -13873,6 +16354,10 @@ public final class VirtualHostServiceOuterClass {
 
       private java.lang.Object routeName_ = "";
       /**
+       * <pre>
+       * Name of the route that is being updated.
+       * </pre>
+       *
        * <code>string route_name = 3;</code>
        */
       public java.lang.String getRouteName() {
@@ -13888,6 +16373,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the route that is being updated.
+       * </pre>
+       *
        * <code>string route_name = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -13904,6 +16393,10 @@ public final class VirtualHostServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the route that is being updated.
+       * </pre>
+       *
        * <code>string route_name = 3;</code>
        */
       public Builder setRouteName(
@@ -13917,6 +16410,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the route that is being updated.
+       * </pre>
+       *
        * <code>string route_name = 3;</code>
        */
       public Builder clearRouteName() {
@@ -13926,6 +16423,10 @@ public final class VirtualHostServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the route that is being updated.
+       * </pre>
+       *
        * <code>string route_name = 3;</code>
        */
       public Builder setRouteNameBytes(
@@ -14073,103 +16574,104 @@ public final class VirtualHostServiceOuterClass {
       "andex/cloud/api/operation.proto\032&yandex/" +
       "cloud/operation/operation.proto\0322yandex/" +
       "cloud/apploadbalancer/v1/virtual_host.pr" +
-      "oto\032\035yandex/cloud/validation.proto\"z\n\025Ge" +
+      "oto\032\035yandex/cloud/validation.proto\"|\n\025Ge" +
       "tVirtualHostRequest\022\034\n\016http_router_id\030\001 " +
-      "\001(\tB\004\350\3071\001\022C\n\021virtual_host_name\030\002 \001(\tB(\350\307" +
-      "1\001\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\"u" +
-      "\n\027ListVirtualHostsRequest\022\034\n\016http_router" +
-      "_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
-      "<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"x\n" +
-      "\030ListVirtualHostsResponse\022C\n\rvirtual_hos" +
-      "ts\030\001 \003(\0132,.yandex.cloud.apploadbalancer." +
-      "v1.VirtualHost\022\027\n\017next_page_token\030\002 \001(\t\"" +
-      "\342\002\n\030CreateVirtualHostRequest\022\034\n\016http_rou" +
-      "ter_id\030\001 \001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[" +
-      "a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\021\n\tauthor" +
-      "ity\030\003 \003(\t\0226\n\006routes\030\005 \003(\0132&.yandex.cloud" +
-      ".apploadbalancer.v1.Route\022S\n\026modify_requ" +
-      "est_headers\030\006 \003(\01323.yandex.cloud.appload" +
-      "balancer.v1.HeaderModification\022T\n\027modify" +
-      "_response_headers\030\007 \003(\01323.yandex.cloud.a" +
-      "pploadbalancer.v1.HeaderModification\"T\n\031" +
-      "CreateVirtualHostMetadata\022\034\n\016http_router" +
-      "_id\030\001 \001(\tB\004\350\3071\001\022\031\n\021virtual_host_name\030\002 \001" +
-      "(\t\"\200\003\n\030UpdateVirtualHostRequest\022\034\n\016http_" +
-      "router_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_host_na" +
-      "me\030\002 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMask\022\021\n\tauthority\030\004 \003" +
-      "(\t\0226\n\006routes\030\006 \003(\0132&.yandex.cloud.apploa" +
-      "dbalancer.v1.Route\022S\n\026modify_request_hea" +
-      "ders\030\007 \003(\01323.yandex.cloud.apploadbalance" +
-      "r.v1.HeaderModification\022T\n\027modify_respon" +
-      "se_headers\030\010 \003(\01323.yandex.cloud.apploadb" +
-      "alancer.v1.HeaderModification\"N\n\031UpdateV" +
-      "irtualHostMetadata\022\026\n\016http_router_id\030\001 \001" +
-      "(\t\022\031\n\021virtual_host_name\030\002 \001(\t\"}\n\030DeleteV" +
-      "irtualHostRequest\022\034\n\016http_router_id\030\001 \001(" +
-      "\tB\004\350\3071\001\022C\n\021virtual_host_name\030\002 \001(\tB(\350\3071\001" +
-      "\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\"N\n\031" +
-      "DeleteVirtualHostMetadata\022\026\n\016http_router" +
-      "_id\030\001 \001(\t\022\031\n\021virtual_host_name\030\002 \001(\t\"m\n\022" +
-      "RemoveRouteRequest\022\034\n\016http_router_id\030\001 \001" +
-      "(\tB\004\350\3071\001\022\037\n\021virtual_host_name\030\002 \001(\tB\004\350\3071" +
-      "\001\022\030\n\nroute_name\030\003 \001(\tB\004\350\3071\001\"\\\n\023RemoveRou" +
-      "teMetadata\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021vi" +
-      "rtual_host_name\030\002 \001(\t\022\022\n\nroute_name\030\003 \001(" +
-      "\t\"\245\002\n\022UpdateRouteRequest\022\034\n\016http_router_" +
+      "\001(\tB\004\350\3071\001\022E\n\021virtual_host_name\030\002 \001(\tB*\350\307" +
+      "1\001\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?" +
+      "\"u\n\027ListVirtualHostsRequest\022\034\n\016http_rout" +
+      "er_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
+      "1\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"" +
+      "x\n\030ListVirtualHostsResponse\022C\n\rvirtual_h" +
+      "osts\030\001 \003(\0132,.yandex.cloud.apploadbalance" +
+      "r.v1.VirtualHost\022\027\n\017next_page_token\030\002 \001(" +
+      "\t\"\344\002\n\030CreateVirtualHostRequest\022\034\n\016http_r" +
+      "outer_id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030\002 \001(\tB&\362\3071\"" +
+      "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?\022\021\n\tau" +
+      "thority\030\003 \003(\t\0226\n\006routes\030\005 \003(\0132&.yandex.c" +
+      "loud.apploadbalancer.v1.Route\022S\n\026modify_" +
+      "request_headers\030\006 \003(\01323.yandex.cloud.app" +
+      "loadbalancer.v1.HeaderModification\022T\n\027mo" +
+      "dify_response_headers\030\007 \003(\01323.yandex.clo" +
+      "ud.apploadbalancer.v1.HeaderModification" +
+      "\"T\n\031CreateVirtualHostMetadata\022\034\n\016http_ro" +
+      "uter_id\030\001 \001(\tB\004\350\3071\001\022\031\n\021virtual_host_name" +
+      "\030\002 \001(\t\"\200\003\n\030UpdateVirtualHostRequest\022\034\n\016h" +
+      "ttp_router_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_hos" +
+      "t_name\030\002 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132" +
+      "\032.google.protobuf.FieldMask\022\021\n\tauthority" +
+      "\030\004 \003(\t\0226\n\006routes\030\006 \003(\0132&.yandex.cloud.ap" +
+      "ploadbalancer.v1.Route\022S\n\026modify_request" +
+      "_headers\030\007 \003(\01323.yandex.cloud.apploadbal" +
+      "ancer.v1.HeaderModification\022T\n\027modify_re" +
+      "sponse_headers\030\010 \003(\01323.yandex.cloud.appl" +
+      "oadbalancer.v1.HeaderModification\"N\n\031Upd" +
+      "ateVirtualHostMetadata\022\026\n\016http_router_id" +
+      "\030\001 \001(\t\022\031\n\021virtual_host_name\030\002 \001(\t\"\177\n\030Del" +
+      "eteVirtualHostRequest\022\034\n\016http_router_id\030" +
+      "\001 \001(\tB\004\350\3071\001\022E\n\021virtual_host_name\030\002 \001(\tB*" +
+      "\350\3071\001\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9])?" +
+      ")?\"N\n\031DeleteVirtualHostMetadata\022\026\n\016http_" +
+      "router_id\030\001 \001(\t\022\031\n\021virtual_host_name\030\002 \001" +
+      "(\t\"m\n\022RemoveRouteRequest\022\034\n\016http_router_" +
       "id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_host_name\030\002 \001(" +
-      "\tB\004\350\3071\001\022\030\n\nroute_name\030\003 \001(\tB\004\350\3071\001\022/\n\013upd" +
-      "ate_mask\030\004 \001(\0132\032.google.protobuf.FieldMa" +
-      "sk\022:\n\004http\030\005 \001(\0132*.yandex.cloud.apploadb" +
-      "alancer.v1.HttpRouteH\000\022:\n\004grpc\030\006 \001(\0132*.y" +
-      "andex.cloud.apploadbalancer.v1.GrpcRoute" +
-      "H\000B\r\n\005route\022\004\300\3011\001\"\\\n\023UpdateRouteMetadata" +
-      "\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021virtual_host" +
-      "_name\030\002 \001(\t\022\022\n\nroute_name\030\003 \001(\t2\342\014\n\022Virt" +
-      "ualHostService\022\306\001\n\003Get\0226.yandex.cloud.ap" +
-      "ploadbalancer.v1.GetVirtualHostRequest\032," +
-      ".yandex.cloud.apploadbalancer.v1.Virtual" +
-      "Host\"Y\202\323\344\223\002S\022Q/apploadbalancer/v1/httpRo" +
-      "uters/{http_router_id}/virtualHosts/{vir" +
-      "tual_host_name}\022\302\001\n\004List\0228.yandex.cloud." +
-      "apploadbalancer.v1.ListVirtualHostsReque" +
-      "st\0329.yandex.cloud.apploadbalancer.v1.Lis" +
-      "tVirtualHostsResponse\"E\202\323\344\223\002?\022=/apploadb" +
-      "alancer/v1/httpRouters/{http_router_id}/" +
-      "virtualHosts\022\334\001\n\006Create\0229.yandex.cloud.a" +
-      "pploadbalancer.v1.CreateVirtualHostReque" +
-      "st\032!.yandex.cloud.operation.Operation\"t\202" +
-      "\323\344\223\002B\"=/apploadbalancer/v1/httpRouters/{" +
-      "http_router_id}/virtualHosts:\001*\262\322*(\n\031Cre" +
-      "ateVirtualHostMetadata\022\013VirtualHost\022\361\001\n\006" +
-      "Update\0229.yandex.cloud.apploadbalancer.v1" +
-      ".UpdateVirtualHostRequest\032!.yandex.cloud" +
-      ".operation.Operation\"\210\001\202\323\344\223\002V2Q/apploadb" +
-      "alancer/v1/httpRouters/{http_router_id}/" +
-      "virtualHosts/{virtual_host_name}:\001*\262\322*(\n" +
-      "\031UpdateVirtualHostMetadata\022\013VirtualHost\022" +
-      "\370\001\n\006Delete\0229.yandex.cloud.apploadbalance" +
-      "r.v1.DeleteVirtualHostRequest\032!.yandex.c" +
-      "loud.operation.Operation\"\217\001\202\323\344\223\002S*Q/appl" +
-      "oadbalancer/v1/httpRouters/{http_router_" +
-      "id}/virtualHosts/{virtual_host_name}\262\322*2" +
-      "\n\031DeleteVirtualHostMetadata\022\025google.prot" +
-      "obuf.Empty\022\366\001\n\013RemoveRoute\0223.yandex.clou" +
-      "d.apploadbalancer.v1.RemoveRouteRequest\032" +
-      "!.yandex.cloud.operation.Operation\"\216\001\202\323\344" +
-      "\223\002b\"]/apploadbalancer/v1/httpRouters/{ht" +
-      "tp_router_id}/virtualHosts/{virtual_host" +
-      "_name}:removeRoute:\001*\262\322*\"\n\023RemoveRouteMe" +
-      "tadata\022\013VirtualHost\022\366\001\n\013UpdateRoute\0223.ya" +
-      "ndex.cloud.apploadbalancer.v1.UpdateRout" +
-      "eRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1/httpRo" +
-      "uters/{http_router_id}/virtualHosts/{vir" +
-      "tual_host_name}:updateRoute:\001*\262\322*\"\n\023Upda" +
-      "teRouteMetadata\022\013VirtualHostBz\n#yandex.c" +
-      "loud.api.apploadbalancer.v1ZSgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/ap" +
-      "ploadbalancer/v1;apploadbalancerb\006proto3"
+      "\tB\004\350\3071\001\022\030\n\nroute_name\030\003 \001(\tB\004\350\3071\001\"\\\n\023Rem" +
+      "oveRouteMetadata\022\026\n\016http_router_id\030\001 \001(\t" +
+      "\022\031\n\021virtual_host_name\030\002 \001(\t\022\022\n\nroute_nam" +
+      "e\030\003 \001(\t\"\245\002\n\022UpdateRouteRequest\022\034\n\016http_r" +
+      "outer_id\030\001 \001(\tB\004\350\3071\001\022\037\n\021virtual_host_nam" +
+      "e\030\002 \001(\tB\004\350\3071\001\022\030\n\nroute_name\030\003 \001(\tB\004\350\3071\001\022" +
+      "/\n\013update_mask\030\004 \001(\0132\032.google.protobuf.F" +
+      "ieldMask\022:\n\004http\030\005 \001(\0132*.yandex.cloud.ap" +
+      "ploadbalancer.v1.HttpRouteH\000\022:\n\004grpc\030\006 \001" +
+      "(\0132*.yandex.cloud.apploadbalancer.v1.Grp" +
+      "cRouteH\000B\r\n\005route\022\004\300\3011\001\"\\\n\023UpdateRouteMe" +
+      "tadata\022\026\n\016http_router_id\030\001 \001(\t\022\031\n\021virtua" +
+      "l_host_name\030\002 \001(\t\022\022\n\nroute_name\030\003 \001(\t2\342\014" +
+      "\n\022VirtualHostService\022\306\001\n\003Get\0226.yandex.cl" +
+      "oud.apploadbalancer.v1.GetVirtualHostReq" +
+      "uest\032,.yandex.cloud.apploadbalancer.v1.V" +
+      "irtualHost\"Y\202\323\344\223\002S\022Q/apploadbalancer/v1/" +
+      "httpRouters/{http_router_id}/virtualHost" +
+      "s/{virtual_host_name}\022\302\001\n\004List\0228.yandex." +
+      "cloud.apploadbalancer.v1.ListVirtualHost" +
+      "sRequest\0329.yandex.cloud.apploadbalancer." +
+      "v1.ListVirtualHostsResponse\"E\202\323\344\223\002?\022=/ap" +
+      "ploadbalancer/v1/httpRouters/{http_route" +
+      "r_id}/virtualHosts\022\334\001\n\006Create\0229.yandex.c" +
+      "loud.apploadbalancer.v1.CreateVirtualHos" +
+      "tRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"t\202\323\344\223\002B\"=/apploadbalancer/v1/httpRou" +
+      "ters/{http_router_id}/virtualHosts:\001*\262\322*" +
+      "(\n\031CreateVirtualHostMetadata\022\013VirtualHos" +
+      "t\022\361\001\n\006Update\0229.yandex.cloud.apploadbalan" +
+      "cer.v1.UpdateVirtualHostRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\210\001\202\323\344\223\002V2Q/ap" +
+      "ploadbalancer/v1/httpRouters/{http_route" +
+      "r_id}/virtualHosts/{virtual_host_name}:\001" +
+      "*\262\322*(\n\031UpdateVirtualHostMetadata\022\013Virtua" +
+      "lHost\022\370\001\n\006Delete\0229.yandex.cloud.apploadb" +
+      "alancer.v1.DeleteVirtualHostRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\217\001\202\323\344\223\002S*" +
+      "Q/apploadbalancer/v1/httpRouters/{http_r" +
+      "outer_id}/virtualHosts/{virtual_host_nam" +
+      "e}\262\322*2\n\031DeleteVirtualHostMetadata\022\025googl" +
+      "e.protobuf.Empty\022\366\001\n\013RemoveRoute\0223.yande" +
+      "x.cloud.apploadbalancer.v1.RemoveRouteRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1/httpRoute" +
+      "rs/{http_router_id}/virtualHosts/{virtua" +
+      "l_host_name}:removeRoute:\001*\262\322*\"\n\023RemoveR" +
+      "outeMetadata\022\013VirtualHost\022\366\001\n\013UpdateRout" +
+      "e\0223.yandex.cloud.apploadbalancer.v1.Upda" +
+      "teRouteRequest\032!.yandex.cloud.operation." +
+      "Operation\"\216\001\202\323\344\223\002b\"]/apploadbalancer/v1/" +
+      "httpRouters/{http_router_id}/virtualHost" +
+      "s/{virtual_host_name}:updateRoute:\001*\262\322*\"" +
+      "\n\023UpdateRouteMetadata\022\013VirtualHostBz\n#ya" +
+      "ndex.cloud.api.apploadbalancer.v1ZSgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/apploadbalancer/v1;apploadbalancerb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

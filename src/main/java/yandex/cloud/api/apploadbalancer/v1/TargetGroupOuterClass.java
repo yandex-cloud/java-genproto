@@ -20,7 +20,7 @@ public final class TargetGroupOuterClass {
 
     /**
      * <pre>
-     * Output only. ID of the target group.
+     * ID of the target group. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -28,7 +28,7 @@ public final class TargetGroupOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * Output only. ID of the target group.
+     * ID of the target group. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -38,7 +38,7 @@ public final class TargetGroupOuterClass {
 
     /**
      * <pre>
-     * The name is unique within the folder. 3-63 characters long.
+     * Name of the target group. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -46,7 +46,7 @@ public final class TargetGroupOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * The name is unique within the folder. 3-63 characters long.
+     * Name of the target group. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -56,7 +56,7 @@ public final class TargetGroupOuterClass {
 
     /**
      * <pre>
-     * Description of the target group. 0-256 characters long.
+     * Description of the target group.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -64,7 +64,7 @@ public final class TargetGroupOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the target group. 0-256 characters long.
+     * Description of the target group.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -92,7 +92,8 @@ public final class TargetGroupOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -100,7 +101,8 @@ public final class TargetGroupOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -115,7 +117,8 @@ public final class TargetGroupOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -124,7 +127,8 @@ public final class TargetGroupOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -135,7 +139,8 @@ public final class TargetGroupOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -146,7 +151,7 @@ public final class TargetGroupOuterClass {
 
     /**
      * <pre>
-     * NOTE: all endpoints must use the same address_type - either ip or hostname.
+     * List of targets in the target group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -155,7 +160,7 @@ public final class TargetGroupOuterClass {
         getTargetsList();
     /**
      * <pre>
-     * NOTE: all endpoints must use the same address_type - either ip or hostname.
+     * List of targets in the target group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -163,7 +168,7 @@ public final class TargetGroupOuterClass {
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTargets(int index);
     /**
      * <pre>
-     * NOTE: all endpoints must use the same address_type - either ip or hostname.
+     * List of targets in the target group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -171,7 +176,7 @@ public final class TargetGroupOuterClass {
     int getTargetsCount();
     /**
      * <pre>
-     * NOTE: all endpoints must use the same address_type - either ip or hostname.
+     * List of targets in the target group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -180,7 +185,7 @@ public final class TargetGroupOuterClass {
         getTargetsOrBuilderList();
     /**
      * <pre>
-     * NOTE: all endpoints must use the same address_type - either ip or hostname.
+     * List of targets in the target group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -190,7 +195,7 @@ public final class TargetGroupOuterClass {
 
     /**
      * <pre>
-     * Creation timestamp for the target group.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -198,7 +203,7 @@ public final class TargetGroupOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Creation timestamp for the target group.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -206,7 +211,7 @@ public final class TargetGroupOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Creation timestamp for the target group.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -214,6 +219,11 @@ public final class TargetGroupOuterClass {
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
   }
   /**
+   * <pre>
+   * A target group resource.
+   * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/target-group).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TargetGroup}
    */
   public  static final class TargetGroup extends
@@ -368,7 +378,7 @@ public final class TargetGroupOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * Output only. ID of the target group.
+     * ID of the target group. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -387,7 +397,7 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * Output only. ID of the target group.
+     * ID of the target group. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -410,7 +420,7 @@ public final class TargetGroupOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * The name is unique within the folder. 3-63 characters long.
+     * Name of the target group. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -429,7 +439,7 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * The name is unique within the folder. 3-63 characters long.
+     * Name of the target group. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -452,7 +462,7 @@ public final class TargetGroupOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the target group. 0-256 characters long.
+     * Description of the target group.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -471,7 +481,7 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * Description of the target group. 0-256 characters long.
+     * Description of the target group.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -560,7 +570,8 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -580,7 +591,8 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -591,7 +603,8 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -607,7 +620,8 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -628,7 +642,7 @@ public final class TargetGroupOuterClass {
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> targets_;
     /**
      * <pre>
-     * NOTE: all endpoints must use the same address_type - either ip or hostname.
+     * List of targets in the target group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -638,7 +652,7 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * NOTE: all endpoints must use the same address_type - either ip or hostname.
+     * List of targets in the target group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -649,7 +663,7 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * NOTE: all endpoints must use the same address_type - either ip or hostname.
+     * List of targets in the target group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -659,7 +673,7 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * NOTE: all endpoints must use the same address_type - either ip or hostname.
+     * List of targets in the target group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -669,7 +683,7 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * NOTE: all endpoints must use the same address_type - either ip or hostname.
+     * List of targets in the target group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -683,7 +697,7 @@ public final class TargetGroupOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Creation timestamp for the target group.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -693,7 +707,7 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp for the target group.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -703,7 +717,7 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp for the target group.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -949,6 +963,11 @@ public final class TargetGroupOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A target group resource.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/target-group).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TargetGroup}
      */
     public static final class Builder extends
@@ -1207,7 +1226,7 @@ public final class TargetGroupOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * Output only. ID of the target group.
+       * ID of the target group. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1226,7 +1245,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Output only. ID of the target group.
+       * ID of the target group. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1246,7 +1265,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Output only. ID of the target group.
+       * ID of the target group. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1263,7 +1282,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Output only. ID of the target group.
+       * ID of the target group. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1276,7 +1295,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Output only. ID of the target group.
+       * ID of the target group. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1296,7 +1315,7 @@ public final class TargetGroupOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the target group. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -1315,7 +1334,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the target group. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -1335,7 +1354,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the target group. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -1352,7 +1371,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the target group. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -1365,7 +1384,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the target group. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -1385,7 +1404,7 @@ public final class TargetGroupOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the target group. 0-256 characters long.
+       * Description of the target group.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -1404,7 +1423,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Description of the target group. 0-256 characters long.
+       * Description of the target group.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -1424,7 +1443,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Description of the target group. 0-256 characters long.
+       * Description of the target group.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -1441,7 +1460,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Description of the target group. 0-256 characters long.
+       * Description of the target group.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -1454,7 +1473,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Description of the target group. 0-256 characters long.
+       * Description of the target group.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -1588,7 +1607,8 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1608,7 +1628,8 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1619,7 +1640,8 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1635,7 +1657,8 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1659,7 +1682,8 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1682,7 +1706,8 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1698,7 +1723,8 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1725,7 +1751,7 @@ public final class TargetGroupOuterClass {
 
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1739,7 +1765,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1753,7 +1779,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1767,7 +1793,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1788,7 +1814,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1806,7 +1832,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1826,7 +1852,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1847,7 +1873,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1865,7 +1891,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1883,7 +1909,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1902,7 +1928,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1919,7 +1945,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1936,7 +1962,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1947,7 +1973,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1961,7 +1987,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1976,7 +2002,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1987,7 +2013,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -1999,7 +2025,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * NOTE: all endpoints must use the same address_type - either ip or hostname.
+       * List of targets in the target group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
@@ -2028,7 +2054,7 @@ public final class TargetGroupOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Creation timestamp for the target group.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2038,7 +2064,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the target group.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2052,7 +2078,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the target group.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2072,7 +2098,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the target group.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2090,7 +2116,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the target group.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2112,7 +2138,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the target group.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2130,7 +2156,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the target group.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2142,7 +2168,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the target group.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2157,7 +2183,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the target group.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2233,10 +2259,18 @@ public final class TargetGroupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * IP address of the target.
+     * </pre>
+     *
      * <code>string ip_address = 1;</code>
      */
     java.lang.String getIpAddress();
     /**
+     * <pre>
+     * IP address of the target.
+     * </pre>
+     *
      * <code>string ip_address = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -2244,7 +2278,7 @@ public final class TargetGroupOuterClass {
 
     /**
      * <pre>
-     * ID of the subnet that target connected to.
+     * ID of the subnet that the target is connected to.
      * </pre>
      *
      * <code>string subnet_id = 3;</code>
@@ -2252,7 +2286,7 @@ public final class TargetGroupOuterClass {
     java.lang.String getSubnetId();
     /**
      * <pre>
-     * ID of the subnet that target connected to.
+     * ID of the subnet that the target is connected to.
      * </pre>
      *
      * <code>string subnet_id = 3;</code>
@@ -2263,6 +2297,11 @@ public final class TargetGroupOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.AddressTypeCase getAddressTypeCase();
   }
   /**
+   * <pre>
+   * A target resource.
+   * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/target-group).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Target}
    */
   public  static final class Target extends
@@ -2384,6 +2423,10 @@ public final class TargetGroupOuterClass {
 
     public static final int IP_ADDRESS_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * IP address of the target.
+     * </pre>
+     *
      * <code>string ip_address = 1;</code>
      */
     public java.lang.String getIpAddress() {
@@ -2404,6 +2447,10 @@ public final class TargetGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * IP address of the target.
+     * </pre>
+     *
      * <code>string ip_address = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -2429,7 +2476,7 @@ public final class TargetGroupOuterClass {
     private volatile java.lang.Object subnetId_;
     /**
      * <pre>
-     * ID of the subnet that target connected to.
+     * ID of the subnet that the target is connected to.
      * </pre>
      *
      * <code>string subnet_id = 3;</code>
@@ -2448,7 +2495,7 @@ public final class TargetGroupOuterClass {
     }
     /**
      * <pre>
-     * ID of the subnet that target connected to.
+     * ID of the subnet that the target is connected to.
      * </pre>
      *
      * <code>string subnet_id = 3;</code>
@@ -2648,6 +2695,11 @@ public final class TargetGroupOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A target resource.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/target-group).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Target}
      */
     public static final class Builder extends
@@ -2828,6 +2880,10 @@ public final class TargetGroupOuterClass {
 
 
       /**
+       * <pre>
+       * IP address of the target.
+       * </pre>
+       *
        * <code>string ip_address = 1;</code>
        */
       public java.lang.String getIpAddress() {
@@ -2848,6 +2904,10 @@ public final class TargetGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * IP address of the target.
+       * </pre>
+       *
        * <code>string ip_address = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -2869,6 +2929,10 @@ public final class TargetGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * IP address of the target.
+       * </pre>
+       *
        * <code>string ip_address = 1;</code>
        */
       public Builder setIpAddress(
@@ -2882,6 +2946,10 @@ public final class TargetGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * IP address of the target.
+       * </pre>
+       *
        * <code>string ip_address = 1;</code>
        */
       public Builder clearIpAddress() {
@@ -2893,6 +2961,10 @@ public final class TargetGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * IP address of the target.
+       * </pre>
+       *
        * <code>string ip_address = 1;</code>
        */
       public Builder setIpAddressBytes(
@@ -2910,7 +2982,7 @@ public final class TargetGroupOuterClass {
       private java.lang.Object subnetId_ = "";
       /**
        * <pre>
-       * ID of the subnet that target connected to.
+       * ID of the subnet that the target is connected to.
        * </pre>
        *
        * <code>string subnet_id = 3;</code>
@@ -2929,7 +3001,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that target connected to.
+       * ID of the subnet that the target is connected to.
        * </pre>
        *
        * <code>string subnet_id = 3;</code>
@@ -2949,7 +3021,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that target connected to.
+       * ID of the subnet that the target is connected to.
        * </pre>
        *
        * <code>string subnet_id = 3;</code>
@@ -2966,7 +3038,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that target connected to.
+       * ID of the subnet that the target is connected to.
        * </pre>
        *
        * <code>string subnet_id = 3;</code>
@@ -2979,7 +3051,7 @@ public final class TargetGroupOuterClass {
       }
       /**
        * <pre>
-       * ID of the subnet that target connected to.
+       * ID of the subnet that the target is connected to.
        * </pre>
        *
        * <code>string subnet_id = 3;</code>

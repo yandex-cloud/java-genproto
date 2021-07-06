@@ -20,7 +20,7 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Output only. ID of the load balancer.
+     * ID of the application load balancer. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -28,7 +28,7 @@ public final class LoadBalancerOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * Output only. ID of the load balancer.
+     * ID of the application load balancer. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -38,7 +38,7 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * The name is unique within the folder. 3-63 characters long.
+     * Name of the application load balancer. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -46,7 +46,7 @@ public final class LoadBalancerOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * The name is unique within the folder. 3-63 characters long.
+     * Name of the application load balancer. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -56,7 +56,7 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Description of the load balancer. 0-256 characters long.
+     * Description of the application load balancer.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -64,7 +64,7 @@ public final class LoadBalancerOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the load balancer. 0-256 characters long.
+     * Description of the application load balancer.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -74,7 +74,7 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * ID of the folder that the load balancer belongs to.
+     * ID of the folder that the application load balancer belongs to.
      * </pre>
      *
      * <code>string folder_id = 4;</code>
@@ -82,7 +82,7 @@ public final class LoadBalancerOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * ID of the folder that the load balancer belongs to.
+     * ID of the folder that the application load balancer belongs to.
      * </pre>
      *
      * <code>string folder_id = 4;</code>
@@ -92,7 +92,8 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Application load balancer labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -100,7 +101,8 @@ public final class LoadBalancerOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Application load balancer labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -115,7 +117,8 @@ public final class LoadBalancerOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Application load balancer labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -124,7 +127,8 @@ public final class LoadBalancerOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Application load balancer labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -135,7 +139,8 @@ public final class LoadBalancerOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Application load balancer labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -163,7 +168,8 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * ID of the region that the load balancer located at.
+     * ID of the region that the application load balancer is located at.
+     * Currently Yandex Cloud supports only `ru-central1` region.
      * </pre>
      *
      * <code>string region_id = 7;</code>
@@ -171,7 +177,8 @@ public final class LoadBalancerOuterClass {
     java.lang.String getRegionId();
     /**
      * <pre>
-     * ID of the region that the load balancer located at.
+     * ID of the region that the application load balancer is located at.
+     * Currently Yandex Cloud supports only `ru-central1` region.
      * </pre>
      *
      * <code>string region_id = 7;</code>
@@ -181,7 +188,7 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * ID of the network that the load balancer located at.
+     * ID of the network that the application load balancer belongs to.
      * </pre>
      *
      * <code>string network_id = 8;</code>
@@ -189,7 +196,7 @@ public final class LoadBalancerOuterClass {
     java.lang.String getNetworkId();
     /**
      * <pre>
-     * ID of the network that the load balancer located at.
+     * ID of the network that the application load balancer belongs to.
      * </pre>
      *
      * <code>string network_id = 8;</code>
@@ -199,7 +206,8 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * List of listeners for the application load balancer.
+     * Listeners that belong to the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -208,7 +216,8 @@ public final class LoadBalancerOuterClass {
         getListenersList();
     /**
      * <pre>
-     * List of listeners for the application load balancer.
+     * Listeners that belong to the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -216,7 +225,8 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Listener getListeners(int index);
     /**
      * <pre>
-     * List of listeners for the application load balancer.
+     * Listeners that belong to the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -224,7 +234,8 @@ public final class LoadBalancerOuterClass {
     int getListenersCount();
     /**
      * <pre>
-     * List of listeners for the application load balancer.
+     * Listeners that belong to the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -233,7 +244,8 @@ public final class LoadBalancerOuterClass {
         getListenersOrBuilderList();
     /**
      * <pre>
-     * List of listeners for the application load balancer.
+     * Listeners that belong to the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -243,7 +255,8 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Allocation sites for application load balancer instances.
+     * Locality settings of the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -251,7 +264,8 @@ public final class LoadBalancerOuterClass {
     boolean hasAllocationPolicy();
     /**
      * <pre>
-     * Allocation sites for application load balancer instances.
+     * Locality settings of the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -259,7 +273,8 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy getAllocationPolicy();
     /**
      * <pre>
-     * Allocation sites for application load balancer instances.
+     * Locality settings of the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -268,7 +283,8 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Cloud log group used by the load balancer to store access logs.
+     * ID of the log group that stores access logs of the application load balancer.
+     * The logs can be accessed using a Cloud Functions [trigger for Cloud Logs](/docs/functions/operations/trigger/cloudlogs-trigger-create).
      * </pre>
      *
      * <code>string log_group_id = 11;</code>
@@ -276,7 +292,8 @@ public final class LoadBalancerOuterClass {
     java.lang.String getLogGroupId();
     /**
      * <pre>
-     * Cloud log group used by the load balancer to store access logs.
+     * ID of the log group that stores access logs of the application load balancer.
+     * The logs can be accessed using a Cloud Functions [trigger for Cloud Logs](/docs/functions/operations/trigger/cloudlogs-trigger-create).
      * </pre>
      *
      * <code>string log_group_id = 11;</code>
@@ -286,7 +303,9 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * ID's of security groups attached to the load balancer.
+     * ID's of the security groups attributed to the application load balancer.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -295,7 +314,9 @@ public final class LoadBalancerOuterClass {
         getSecurityGroupIdsList();
     /**
      * <pre>
-     * ID's of security groups attached to the load balancer.
+     * ID's of the security groups attributed to the application load balancer.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -303,7 +324,9 @@ public final class LoadBalancerOuterClass {
     int getSecurityGroupIdsCount();
     /**
      * <pre>
-     * ID's of security groups attached to the load balancer.
+     * ID's of the security groups attributed to the application load balancer.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -311,7 +334,9 @@ public final class LoadBalancerOuterClass {
     java.lang.String getSecurityGroupIds(int index);
     /**
      * <pre>
-     * ID's of security groups attached to the load balancer.
+     * ID's of the security groups attributed to the application load balancer.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -321,7 +346,7 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Creation timestamp for the load balancer.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -329,7 +354,7 @@ public final class LoadBalancerOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Creation timestamp for the load balancer.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -337,7 +362,7 @@ public final class LoadBalancerOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Creation timestamp for the load balancer.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -346,7 +371,8 @@ public final class LoadBalancerOuterClass {
   }
   /**
    * <pre>
-   * A LoadBalancer resource.
+   * An application load balancer resource.
+   * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.LoadBalancer}
@@ -563,7 +589,7 @@ public final class LoadBalancerOuterClass {
       STATUS_UNSPECIFIED(0),
       /**
        * <pre>
-       * Application load balancer is being created.
+       * The application load balancer is being created.
        * </pre>
        *
        * <code>CREATING = 1;</code>
@@ -571,7 +597,7 @@ public final class LoadBalancerOuterClass {
       CREATING(1),
       /**
        * <pre>
-       * Application load balancer is being started.
+       * The application load balancer is being started.
        * </pre>
        *
        * <code>STARTING = 2;</code>
@@ -579,7 +605,7 @@ public final class LoadBalancerOuterClass {
       STARTING(2),
       /**
        * <pre>
-       * Application load balancer is active and sends traffic to the targets.
+       * The application load balancer is active and sends traffic to the targets.
        * </pre>
        *
        * <code>ACTIVE = 3;</code>
@@ -587,7 +613,7 @@ public final class LoadBalancerOuterClass {
       ACTIVE(3),
       /**
        * <pre>
-       * Application load balancer is being stopped.
+       * The application load balancer is being stopped.
        * </pre>
        *
        * <code>STOPPING = 4;</code>
@@ -595,7 +621,7 @@ public final class LoadBalancerOuterClass {
       STOPPING(4),
       /**
        * <pre>
-       * Application load balancer is stopped and doesn't send traffic to the targets.
+       * The application load balancer is stopped and doesn't send traffic to the targets.
        * </pre>
        *
        * <code>STOPPED = 5;</code>
@@ -603,7 +629,7 @@ public final class LoadBalancerOuterClass {
       STOPPED(5),
       /**
        * <pre>
-       * Application load balancer is being deleted.
+       * The application load balancer is being deleted.
        * </pre>
        *
        * <code>DELETING = 6;</code>
@@ -618,7 +644,7 @@ public final class LoadBalancerOuterClass {
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Application load balancer is being created.
+       * The application load balancer is being created.
        * </pre>
        *
        * <code>CREATING = 1;</code>
@@ -626,7 +652,7 @@ public final class LoadBalancerOuterClass {
       public static final int CREATING_VALUE = 1;
       /**
        * <pre>
-       * Application load balancer is being started.
+       * The application load balancer is being started.
        * </pre>
        *
        * <code>STARTING = 2;</code>
@@ -634,7 +660,7 @@ public final class LoadBalancerOuterClass {
       public static final int STARTING_VALUE = 2;
       /**
        * <pre>
-       * Application load balancer is active and sends traffic to the targets.
+       * The application load balancer is active and sends traffic to the targets.
        * </pre>
        *
        * <code>ACTIVE = 3;</code>
@@ -642,7 +668,7 @@ public final class LoadBalancerOuterClass {
       public static final int ACTIVE_VALUE = 3;
       /**
        * <pre>
-       * Application load balancer is being stopped.
+       * The application load balancer is being stopped.
        * </pre>
        *
        * <code>STOPPING = 4;</code>
@@ -650,7 +676,7 @@ public final class LoadBalancerOuterClass {
       public static final int STOPPING_VALUE = 4;
       /**
        * <pre>
-       * Application load balancer is stopped and doesn't send traffic to the targets.
+       * The application load balancer is stopped and doesn't send traffic to the targets.
        * </pre>
        *
        * <code>STOPPED = 5;</code>
@@ -658,7 +684,7 @@ public final class LoadBalancerOuterClass {
       public static final int STOPPED_VALUE = 5;
       /**
        * <pre>
-       * Application load balancer is being deleted.
+       * The application load balancer is being deleted.
        * </pre>
        *
        * <code>DELETING = 6;</code>
@@ -748,7 +774,7 @@ public final class LoadBalancerOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * Output only. ID of the load balancer.
+     * ID of the application load balancer. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -767,7 +793,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Output only. ID of the load balancer.
+     * ID of the application load balancer. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -790,7 +816,7 @@ public final class LoadBalancerOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * The name is unique within the folder. 3-63 characters long.
+     * Name of the application load balancer. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -809,7 +835,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * The name is unique within the folder. 3-63 characters long.
+     * Name of the application load balancer. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -832,7 +858,7 @@ public final class LoadBalancerOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the load balancer. 0-256 characters long.
+     * Description of the application load balancer.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -851,7 +877,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Description of the load balancer. 0-256 characters long.
+     * Description of the application load balancer.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -874,7 +900,7 @@ public final class LoadBalancerOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * ID of the folder that the load balancer belongs to.
+     * ID of the folder that the application load balancer belongs to.
      * </pre>
      *
      * <code>string folder_id = 4;</code>
@@ -893,7 +919,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * ID of the folder that the load balancer belongs to.
+     * ID of the folder that the application load balancer belongs to.
      * </pre>
      *
      * <code>string folder_id = 4;</code>
@@ -940,7 +966,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Application load balancer labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -960,7 +987,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Application load balancer labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -971,7 +999,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Application load balancer labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -987,7 +1016,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Application load balancer labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1033,7 +1063,8 @@ public final class LoadBalancerOuterClass {
     private volatile java.lang.Object regionId_;
     /**
      * <pre>
-     * ID of the region that the load balancer located at.
+     * ID of the region that the application load balancer is located at.
+     * Currently Yandex Cloud supports only `ru-central1` region.
      * </pre>
      *
      * <code>string region_id = 7;</code>
@@ -1052,7 +1083,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * ID of the region that the load balancer located at.
+     * ID of the region that the application load balancer is located at.
+     * Currently Yandex Cloud supports only `ru-central1` region.
      * </pre>
      *
      * <code>string region_id = 7;</code>
@@ -1075,7 +1107,7 @@ public final class LoadBalancerOuterClass {
     private volatile java.lang.Object networkId_;
     /**
      * <pre>
-     * ID of the network that the load balancer located at.
+     * ID of the network that the application load balancer belongs to.
      * </pre>
      *
      * <code>string network_id = 8;</code>
@@ -1094,7 +1126,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * ID of the network that the load balancer located at.
+     * ID of the network that the application load balancer belongs to.
      * </pre>
      *
      * <code>string network_id = 8;</code>
@@ -1117,7 +1149,8 @@ public final class LoadBalancerOuterClass {
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Listener> listeners_;
     /**
      * <pre>
-     * List of listeners for the application load balancer.
+     * Listeners that belong to the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -1127,7 +1160,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * List of listeners for the application load balancer.
+     * Listeners that belong to the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -1138,7 +1172,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * List of listeners for the application load balancer.
+     * Listeners that belong to the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -1148,7 +1183,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * List of listeners for the application load balancer.
+     * Listeners that belong to the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -1158,7 +1194,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * List of listeners for the application load balancer.
+     * Listeners that belong to the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -1172,7 +1209,8 @@ public final class LoadBalancerOuterClass {
     private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy allocationPolicy_;
     /**
      * <pre>
-     * Allocation sites for application load balancer instances.
+     * Locality settings of the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -1182,7 +1220,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Allocation sites for application load balancer instances.
+     * Locality settings of the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -1192,7 +1231,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Allocation sites for application load balancer instances.
+     * Locality settings of the application load balancer.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -1205,7 +1245,8 @@ public final class LoadBalancerOuterClass {
     private volatile java.lang.Object logGroupId_;
     /**
      * <pre>
-     * Cloud log group used by the load balancer to store access logs.
+     * ID of the log group that stores access logs of the application load balancer.
+     * The logs can be accessed using a Cloud Functions [trigger for Cloud Logs](/docs/functions/operations/trigger/cloudlogs-trigger-create).
      * </pre>
      *
      * <code>string log_group_id = 11;</code>
@@ -1224,7 +1265,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Cloud log group used by the load balancer to store access logs.
+     * ID of the log group that stores access logs of the application load balancer.
+     * The logs can be accessed using a Cloud Functions [trigger for Cloud Logs](/docs/functions/operations/trigger/cloudlogs-trigger-create).
      * </pre>
      *
      * <code>string log_group_id = 11;</code>
@@ -1247,7 +1289,9 @@ public final class LoadBalancerOuterClass {
     private com.google.protobuf.LazyStringList securityGroupIds_;
     /**
      * <pre>
-     * ID's of security groups attached to the load balancer.
+     * ID's of the security groups attributed to the application load balancer.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -1258,7 +1302,9 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * ID's of security groups attached to the load balancer.
+     * ID's of the security groups attributed to the application load balancer.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -1268,7 +1314,9 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * ID's of security groups attached to the load balancer.
+     * ID's of the security groups attributed to the application load balancer.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -1278,7 +1326,9 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * ID's of security groups attached to the load balancer.
+     * ID's of the security groups attributed to the application load balancer.
+     * For details about the concept,
+     * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
      * </pre>
      *
      * <code>repeated string security_group_ids = 12;</code>
@@ -1292,7 +1342,7 @@ public final class LoadBalancerOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Creation timestamp for the load balancer.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -1302,7 +1352,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp for the load balancer.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -1312,7 +1362,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp for the load balancer.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -1632,7 +1682,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * A LoadBalancer resource.
+     * An application load balancer resource.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.LoadBalancer}
@@ -1951,7 +2002,7 @@ public final class LoadBalancerOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * Output only. ID of the load balancer.
+       * ID of the application load balancer. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1970,7 +2021,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Output only. ID of the load balancer.
+       * ID of the application load balancer. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1990,7 +2041,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Output only. ID of the load balancer.
+       * ID of the application load balancer. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2007,7 +2058,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Output only. ID of the load balancer.
+       * ID of the application load balancer. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2020,7 +2071,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Output only. ID of the load balancer.
+       * ID of the application load balancer. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -2040,7 +2091,7 @@ public final class LoadBalancerOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the application load balancer. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -2059,7 +2110,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the application load balancer. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -2079,7 +2130,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the application load balancer. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -2096,7 +2147,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the application load balancer. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -2109,7 +2160,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the application load balancer. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -2129,7 +2180,7 @@ public final class LoadBalancerOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the load balancer. 0-256 characters long.
+       * Description of the application load balancer.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -2148,7 +2199,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Description of the load balancer. 0-256 characters long.
+       * Description of the application load balancer.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -2168,7 +2219,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Description of the load balancer. 0-256 characters long.
+       * Description of the application load balancer.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -2185,7 +2236,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Description of the load balancer. 0-256 characters long.
+       * Description of the application load balancer.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -2198,7 +2249,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Description of the load balancer. 0-256 characters long.
+       * Description of the application load balancer.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -2218,7 +2269,7 @@ public final class LoadBalancerOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * ID of the folder that the load balancer belongs to.
+       * ID of the folder that the application load balancer belongs to.
        * </pre>
        *
        * <code>string folder_id = 4;</code>
@@ -2237,7 +2288,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the load balancer belongs to.
+       * ID of the folder that the application load balancer belongs to.
        * </pre>
        *
        * <code>string folder_id = 4;</code>
@@ -2257,7 +2308,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the load balancer belongs to.
+       * ID of the folder that the application load balancer belongs to.
        * </pre>
        *
        * <code>string folder_id = 4;</code>
@@ -2274,7 +2325,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the load balancer belongs to.
+       * ID of the folder that the application load balancer belongs to.
        * </pre>
        *
        * <code>string folder_id = 4;</code>
@@ -2287,7 +2338,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the folder that the load balancer belongs to.
+       * ID of the folder that the application load balancer belongs to.
        * </pre>
        *
        * <code>string folder_id = 4;</code>
@@ -2332,7 +2383,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Application load balancer labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -2352,7 +2404,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Application load balancer labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -2363,7 +2416,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Application load balancer labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -2379,7 +2433,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Application load balancer labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -2403,7 +2458,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Application load balancer labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -2426,7 +2482,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Application load balancer labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -2442,7 +2499,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Application load balancer labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -2523,7 +2581,8 @@ public final class LoadBalancerOuterClass {
       private java.lang.Object regionId_ = "";
       /**
        * <pre>
-       * ID of the region that the load balancer located at.
+       * ID of the region that the application load balancer is located at.
+       * Currently Yandex Cloud supports only `ru-central1` region.
        * </pre>
        *
        * <code>string region_id = 7;</code>
@@ -2542,7 +2601,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the region that the load balancer located at.
+       * ID of the region that the application load balancer is located at.
+       * Currently Yandex Cloud supports only `ru-central1` region.
        * </pre>
        *
        * <code>string region_id = 7;</code>
@@ -2562,7 +2622,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the region that the load balancer located at.
+       * ID of the region that the application load balancer is located at.
+       * Currently Yandex Cloud supports only `ru-central1` region.
        * </pre>
        *
        * <code>string region_id = 7;</code>
@@ -2579,7 +2640,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the region that the load balancer located at.
+       * ID of the region that the application load balancer is located at.
+       * Currently Yandex Cloud supports only `ru-central1` region.
        * </pre>
        *
        * <code>string region_id = 7;</code>
@@ -2592,7 +2654,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the region that the load balancer located at.
+       * ID of the region that the application load balancer is located at.
+       * Currently Yandex Cloud supports only `ru-central1` region.
        * </pre>
        *
        * <code>string region_id = 7;</code>
@@ -2612,7 +2675,7 @@ public final class LoadBalancerOuterClass {
       private java.lang.Object networkId_ = "";
       /**
        * <pre>
-       * ID of the network that the load balancer located at.
+       * ID of the network that the application load balancer belongs to.
        * </pre>
        *
        * <code>string network_id = 8;</code>
@@ -2631,7 +2694,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the network that the load balancer located at.
+       * ID of the network that the application load balancer belongs to.
        * </pre>
        *
        * <code>string network_id = 8;</code>
@@ -2651,7 +2714,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the network that the load balancer located at.
+       * ID of the network that the application load balancer belongs to.
        * </pre>
        *
        * <code>string network_id = 8;</code>
@@ -2668,7 +2731,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the network that the load balancer located at.
+       * ID of the network that the application load balancer belongs to.
        * </pre>
        *
        * <code>string network_id = 8;</code>
@@ -2681,7 +2744,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID of the network that the load balancer located at.
+       * ID of the network that the application load balancer belongs to.
        * </pre>
        *
        * <code>string network_id = 8;</code>
@@ -2712,7 +2775,8 @@ public final class LoadBalancerOuterClass {
 
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2726,7 +2790,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2740,7 +2805,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2754,7 +2820,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2775,7 +2842,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2793,7 +2861,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2813,7 +2882,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2834,7 +2904,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2852,7 +2923,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2870,7 +2942,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2889,7 +2962,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2906,7 +2980,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2923,7 +2998,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2934,7 +3010,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2948,7 +3025,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2963,7 +3041,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2974,7 +3053,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -2986,7 +3066,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * List of listeners for the application load balancer.
+       * Listeners that belong to the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Listener listeners = 9;</code>
@@ -3015,7 +3096,8 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicy.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AllocationPolicyOrBuilder> allocationPolicyBuilder_;
       /**
        * <pre>
-       * Allocation sites for application load balancer instances.
+       * Locality settings of the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -3025,7 +3107,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Allocation sites for application load balancer instances.
+       * Locality settings of the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -3039,7 +3122,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Allocation sites for application load balancer instances.
+       * Locality settings of the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -3059,7 +3143,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Allocation sites for application load balancer instances.
+       * Locality settings of the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -3077,7 +3162,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Allocation sites for application load balancer instances.
+       * Locality settings of the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -3099,7 +3185,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Allocation sites for application load balancer instances.
+       * Locality settings of the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -3117,7 +3204,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Allocation sites for application load balancer instances.
+       * Locality settings of the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -3129,7 +3217,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Allocation sites for application load balancer instances.
+       * Locality settings of the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -3144,7 +3233,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Allocation sites for application load balancer instances.
+       * Locality settings of the application load balancer.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.AllocationPolicy allocation_policy = 10;</code>
@@ -3166,7 +3256,8 @@ public final class LoadBalancerOuterClass {
       private java.lang.Object logGroupId_ = "";
       /**
        * <pre>
-       * Cloud log group used by the load balancer to store access logs.
+       * ID of the log group that stores access logs of the application load balancer.
+       * The logs can be accessed using a Cloud Functions [trigger for Cloud Logs](/docs/functions/operations/trigger/cloudlogs-trigger-create).
        * </pre>
        *
        * <code>string log_group_id = 11;</code>
@@ -3185,7 +3276,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Cloud log group used by the load balancer to store access logs.
+       * ID of the log group that stores access logs of the application load balancer.
+       * The logs can be accessed using a Cloud Functions [trigger for Cloud Logs](/docs/functions/operations/trigger/cloudlogs-trigger-create).
        * </pre>
        *
        * <code>string log_group_id = 11;</code>
@@ -3205,7 +3297,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Cloud log group used by the load balancer to store access logs.
+       * ID of the log group that stores access logs of the application load balancer.
+       * The logs can be accessed using a Cloud Functions [trigger for Cloud Logs](/docs/functions/operations/trigger/cloudlogs-trigger-create).
        * </pre>
        *
        * <code>string log_group_id = 11;</code>
@@ -3222,7 +3315,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Cloud log group used by the load balancer to store access logs.
+       * ID of the log group that stores access logs of the application load balancer.
+       * The logs can be accessed using a Cloud Functions [trigger for Cloud Logs](/docs/functions/operations/trigger/cloudlogs-trigger-create).
        * </pre>
        *
        * <code>string log_group_id = 11;</code>
@@ -3235,7 +3329,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Cloud log group used by the load balancer to store access logs.
+       * ID of the log group that stores access logs of the application load balancer.
+       * The logs can be accessed using a Cloud Functions [trigger for Cloud Logs](/docs/functions/operations/trigger/cloudlogs-trigger-create).
        * </pre>
        *
        * <code>string log_group_id = 11;</code>
@@ -3261,7 +3356,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID's of security groups attached to the load balancer.
+       * ID's of the security groups attributed to the application load balancer.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -3272,7 +3369,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID's of security groups attached to the load balancer.
+       * ID's of the security groups attributed to the application load balancer.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -3282,7 +3381,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID's of security groups attached to the load balancer.
+       * ID's of the security groups attributed to the application load balancer.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -3292,7 +3393,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID's of security groups attached to the load balancer.
+       * ID's of the security groups attributed to the application load balancer.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -3303,7 +3406,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID's of security groups attached to the load balancer.
+       * ID's of the security groups attributed to the application load balancer.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -3320,7 +3425,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID's of security groups attached to the load balancer.
+       * ID's of the security groups attributed to the application load balancer.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -3337,7 +3444,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID's of security groups attached to the load balancer.
+       * ID's of the security groups attributed to the application load balancer.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -3352,7 +3461,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID's of security groups attached to the load balancer.
+       * ID's of the security groups attributed to the application load balancer.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -3365,7 +3476,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * ID's of security groups attached to the load balancer.
+       * ID's of the security groups attributed to the application load balancer.
+       * For details about the concept,
+       * see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#security-groups).
        * </pre>
        *
        * <code>repeated string security_group_ids = 12;</code>
@@ -3387,7 +3500,7 @@ public final class LoadBalancerOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Creation timestamp for the load balancer.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -3397,7 +3510,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the load balancer.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -3411,7 +3524,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the load balancer.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -3431,7 +3544,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the load balancer.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -3449,7 +3562,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the load balancer.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -3471,7 +3584,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the load balancer.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -3489,7 +3602,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the load balancer.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -3501,7 +3614,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the load balancer.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -3516,7 +3629,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the load balancer.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 13;</code>
@@ -3592,40 +3705,79 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Public IPv4 endpoint address.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
      */
     boolean hasExternalIpv4Address();
     /**
+     * <pre>
+     * Public IPv4 endpoint address.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv4Address getExternalIpv4Address();
     /**
+     * <pre>
+     * Public IPv4 endpoint address.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv4AddressOrBuilder getExternalIpv4AddressOrBuilder();
 
     /**
+     * <pre>
+     * Internal IPv4 endpoint address.
+     * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
      */
     boolean hasInternalIpv4Address();
     /**
+     * <pre>
+     * Internal IPv4 endpoint address.
+     * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.InternalIpv4Address getInternalIpv4Address();
     /**
+     * <pre>
+     * Internal IPv4 endpoint address.
+     * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.InternalIpv4AddressOrBuilder getInternalIpv4AddressOrBuilder();
 
     /**
+     * <pre>
+     * Public IPv6 endpoint address.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
      */
     boolean hasExternalIpv6Address();
     /**
+     * <pre>
+     * Public IPv6 endpoint address.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv6Address getExternalIpv6Address();
     /**
+     * <pre>
+     * Public IPv6 endpoint address.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv6AddressOrBuilder getExternalIpv6AddressOrBuilder();
@@ -3633,6 +3785,10 @@ public final class LoadBalancerOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address.AddressCase getAddressCase();
   }
   /**
+   * <pre>
+   * An endpoint address resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Address}
    */
   public  static final class Address extends
@@ -3787,12 +3943,20 @@ public final class LoadBalancerOuterClass {
 
     public static final int EXTERNAL_IPV4_ADDRESS_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Public IPv4 endpoint address.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
      */
     public boolean hasExternalIpv4Address() {
       return addressCase_ == 1;
     }
     /**
+     * <pre>
+     * Public IPv4 endpoint address.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv4Address getExternalIpv4Address() {
@@ -3802,6 +3966,10 @@ public final class LoadBalancerOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv4Address.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Public IPv4 endpoint address.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv4AddressOrBuilder getExternalIpv4AddressOrBuilder() {
@@ -3813,12 +3981,22 @@ public final class LoadBalancerOuterClass {
 
     public static final int INTERNAL_IPV4_ADDRESS_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Internal IPv4 endpoint address.
+     * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
      */
     public boolean hasInternalIpv4Address() {
       return addressCase_ == 2;
     }
     /**
+     * <pre>
+     * Internal IPv4 endpoint address.
+     * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.InternalIpv4Address getInternalIpv4Address() {
@@ -3828,6 +4006,11 @@ public final class LoadBalancerOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.InternalIpv4Address.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Internal IPv4 endpoint address.
+     * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.InternalIpv4AddressOrBuilder getInternalIpv4AddressOrBuilder() {
@@ -3839,12 +4022,20 @@ public final class LoadBalancerOuterClass {
 
     public static final int EXTERNAL_IPV6_ADDRESS_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Public IPv6 endpoint address.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
      */
     public boolean hasExternalIpv6Address() {
       return addressCase_ == 3;
     }
     /**
+     * <pre>
+     * Public IPv6 endpoint address.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv6Address getExternalIpv6Address() {
@@ -3854,6 +4045,10 @@ public final class LoadBalancerOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv6Address.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Public IPv6 endpoint address.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv6AddressOrBuilder getExternalIpv6AddressOrBuilder() {
@@ -4065,6 +4260,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An endpoint address resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Address}
      */
     public static final class Builder extends
@@ -4264,12 +4463,20 @@ public final class LoadBalancerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv4Address, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv4Address.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv4AddressOrBuilder> externalIpv4AddressBuilder_;
       /**
+       * <pre>
+       * Public IPv4 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
        */
       public boolean hasExternalIpv4Address() {
         return addressCase_ == 1;
       }
       /**
+       * <pre>
+       * Public IPv4 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv4Address getExternalIpv4Address() {
@@ -4286,6 +4493,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public IPv4 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
        */
       public Builder setExternalIpv4Address(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv4Address value) {
@@ -4302,6 +4513,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public IPv4 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
        */
       public Builder setExternalIpv4Address(
@@ -4316,6 +4531,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public IPv4 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
        */
       public Builder mergeExternalIpv4Address(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv4Address value) {
@@ -4338,6 +4557,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public IPv4 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
        */
       public Builder clearExternalIpv4Address() {
@@ -4357,12 +4580,20 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public IPv4 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv4Address.Builder getExternalIpv4AddressBuilder() {
         return getExternalIpv4AddressFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Public IPv4 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv4AddressOrBuilder getExternalIpv4AddressOrBuilder() {
@@ -4376,6 +4607,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public IPv4 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv4Address external_ipv4_address = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4400,12 +4635,22 @@ public final class LoadBalancerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.InternalIpv4Address, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.InternalIpv4Address.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.InternalIpv4AddressOrBuilder> internalIpv4AddressBuilder_;
       /**
+       * <pre>
+       * Internal IPv4 endpoint address.
+       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
        */
       public boolean hasInternalIpv4Address() {
         return addressCase_ == 2;
       }
       /**
+       * <pre>
+       * Internal IPv4 endpoint address.
+       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.InternalIpv4Address getInternalIpv4Address() {
@@ -4422,6 +4667,11 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Internal IPv4 endpoint address.
+       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
        */
       public Builder setInternalIpv4Address(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.InternalIpv4Address value) {
@@ -4438,6 +4688,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Internal IPv4 endpoint address.
+       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
        */
       public Builder setInternalIpv4Address(
@@ -4452,6 +4707,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Internal IPv4 endpoint address.
+       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
        */
       public Builder mergeInternalIpv4Address(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.InternalIpv4Address value) {
@@ -4474,6 +4734,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Internal IPv4 endpoint address.
+       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
        */
       public Builder clearInternalIpv4Address() {
@@ -4493,12 +4758,22 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Internal IPv4 endpoint address.
+       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.InternalIpv4Address.Builder getInternalIpv4AddressBuilder() {
         return getInternalIpv4AddressFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Internal IPv4 endpoint address.
+       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.InternalIpv4AddressOrBuilder getInternalIpv4AddressOrBuilder() {
@@ -4512,6 +4787,11 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Internal IPv4 endpoint address.
+       * To enable the use of listeners with internal addresses, [contact support](https://console.cloud.yandex.ru/support).
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.InternalIpv4Address internal_ipv4_address = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4536,12 +4816,20 @@ public final class LoadBalancerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv6Address, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv6Address.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv6AddressOrBuilder> externalIpv6AddressBuilder_;
       /**
+       * <pre>
+       * Public IPv6 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
        */
       public boolean hasExternalIpv6Address() {
         return addressCase_ == 3;
       }
       /**
+       * <pre>
+       * Public IPv6 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv6Address getExternalIpv6Address() {
@@ -4558,6 +4846,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public IPv6 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
        */
       public Builder setExternalIpv6Address(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv6Address value) {
@@ -4574,6 +4866,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public IPv6 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
        */
       public Builder setExternalIpv6Address(
@@ -4588,6 +4884,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public IPv6 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
        */
       public Builder mergeExternalIpv6Address(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv6Address value) {
@@ -4610,6 +4910,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public IPv6 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
        */
       public Builder clearExternalIpv6Address() {
@@ -4629,12 +4933,20 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Public IPv6 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv6Address.Builder getExternalIpv6AddressBuilder() {
         return getExternalIpv6AddressFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Public IPv6 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.ExternalIpv6AddressOrBuilder getExternalIpv6AddressOrBuilder() {
@@ -4648,6 +4960,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Public IPv6 endpoint address.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.ExternalIpv6Address external_ipv6_address = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4726,16 +5042,28 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * IPv4 address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     java.lang.String getAddress();
     /**
+     * <pre>
+     * IPv4 address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     com.google.protobuf.ByteString
         getAddressBytes();
   }
   /**
+   * <pre>
+   * A public (external) IPv4 endpoint address resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ExternalIpv4Address}
    */
   public  static final class ExternalIpv4Address extends
@@ -4816,6 +5144,10 @@ public final class LoadBalancerOuterClass {
     public static final int ADDRESS_FIELD_NUMBER = 1;
     private volatile java.lang.Object address_;
     /**
+     * <pre>
+     * IPv4 address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     public java.lang.String getAddress() {
@@ -4831,6 +5163,10 @@ public final class LoadBalancerOuterClass {
       }
     }
     /**
+     * <pre>
+     * IPv4 address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -5003,6 +5339,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A public (external) IPv4 endpoint address resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ExternalIpv4Address}
      */
     public static final class Builder extends
@@ -5152,6 +5492,10 @@ public final class LoadBalancerOuterClass {
 
       private java.lang.Object address_ = "";
       /**
+       * <pre>
+       * IPv4 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public java.lang.String getAddress() {
@@ -5167,6 +5511,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * IPv4 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -5183,6 +5531,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * IPv4 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public Builder setAddress(
@@ -5196,6 +5548,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * IPv4 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public Builder clearAddress() {
@@ -5205,6 +5561,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * IPv4 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public Builder setAddressBytes(
@@ -5276,26 +5636,46 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * IPv4 address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     java.lang.String getAddress();
     /**
+     * <pre>
+     * IPv4 address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     com.google.protobuf.ByteString
         getAddressBytes();
 
     /**
+     * <pre>
+     * ID of the subnet that the address belongs to.
+     * </pre>
+     *
      * <code>string subnet_id = 2;</code>
      */
     java.lang.String getSubnetId();
     /**
+     * <pre>
+     * ID of the subnet that the address belongs to.
+     * </pre>
+     *
      * <code>string subnet_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getSubnetIdBytes();
   }
   /**
+   * <pre>
+   * An internal IPv4 endpoint address resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.InternalIpv4Address}
    */
   public  static final class InternalIpv4Address extends
@@ -5383,6 +5763,10 @@ public final class LoadBalancerOuterClass {
     public static final int ADDRESS_FIELD_NUMBER = 1;
     private volatile java.lang.Object address_;
     /**
+     * <pre>
+     * IPv4 address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     public java.lang.String getAddress() {
@@ -5398,6 +5782,10 @@ public final class LoadBalancerOuterClass {
       }
     }
     /**
+     * <pre>
+     * IPv4 address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -5417,6 +5805,10 @@ public final class LoadBalancerOuterClass {
     public static final int SUBNET_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object subnetId_;
     /**
+     * <pre>
+     * ID of the subnet that the address belongs to.
+     * </pre>
+     *
      * <code>string subnet_id = 2;</code>
      */
     public java.lang.String getSubnetId() {
@@ -5432,6 +5824,10 @@ public final class LoadBalancerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subnet that the address belongs to.
+     * </pre>
+     *
      * <code>string subnet_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -5614,6 +6010,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An internal IPv4 endpoint address resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.InternalIpv4Address}
      */
     public static final class Builder extends
@@ -5770,6 +6170,10 @@ public final class LoadBalancerOuterClass {
 
       private java.lang.Object address_ = "";
       /**
+       * <pre>
+       * IPv4 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public java.lang.String getAddress() {
@@ -5785,6 +6189,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * IPv4 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -5801,6 +6209,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * IPv4 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public Builder setAddress(
@@ -5814,6 +6226,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * IPv4 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public Builder clearAddress() {
@@ -5823,6 +6239,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * IPv4 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public Builder setAddressBytes(
@@ -5839,6 +6259,10 @@ public final class LoadBalancerOuterClass {
 
       private java.lang.Object subnetId_ = "";
       /**
+       * <pre>
+       * ID of the subnet that the address belongs to.
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        */
       public java.lang.String getSubnetId() {
@@ -5854,6 +6278,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subnet that the address belongs to.
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -5870,6 +6298,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subnet that the address belongs to.
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        */
       public Builder setSubnetId(
@@ -5883,6 +6315,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subnet that the address belongs to.
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        */
       public Builder clearSubnetId() {
@@ -5892,6 +6328,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subnet that the address belongs to.
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        */
       public Builder setSubnetIdBytes(
@@ -5963,16 +6403,28 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * IPv6 address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     java.lang.String getAddress();
     /**
+     * <pre>
+     * IPv6 address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     com.google.protobuf.ByteString
         getAddressBytes();
   }
   /**
+   * <pre>
+   * A public (external) IPv4 endpoint address resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ExternalIpv6Address}
    */
   public  static final class ExternalIpv6Address extends
@@ -6053,6 +6505,10 @@ public final class LoadBalancerOuterClass {
     public static final int ADDRESS_FIELD_NUMBER = 1;
     private volatile java.lang.Object address_;
     /**
+     * <pre>
+     * IPv6 address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     public java.lang.String getAddress() {
@@ -6068,6 +6524,10 @@ public final class LoadBalancerOuterClass {
       }
     }
     /**
+     * <pre>
+     * IPv6 address.
+     * </pre>
+     *
      * <code>string address = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -6240,6 +6700,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A public (external) IPv4 endpoint address resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ExternalIpv6Address}
      */
     public static final class Builder extends
@@ -6389,6 +6853,10 @@ public final class LoadBalancerOuterClass {
 
       private java.lang.Object address_ = "";
       /**
+       * <pre>
+       * IPv6 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public java.lang.String getAddress() {
@@ -6404,6 +6872,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * IPv6 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -6420,6 +6892,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * IPv6 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public Builder setAddress(
@@ -6433,6 +6909,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * IPv6 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public Builder clearAddress() {
@@ -6442,6 +6922,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * IPv6 address.
+       * </pre>
+       *
        * <code>string address = 1;</code>
        */
       public Builder setAddressBytes(
@@ -6513,20 +6997,38 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the availability zone where the application load balancer resides.
+     * Each Yandex Cloud availability zone can only be specified once.
+     * </pre>
+     *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getZoneId();
     /**
+     * <pre>
+     * ID of the availability zone where the application load balancer resides.
+     * Each Yandex Cloud availability zone can only be specified once.
+     * </pre>
+     *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getZoneIdBytes();
 
     /**
+     * <pre>
+     * ID of the subnet that the application load balancer belongs to.
+     * </pre>
+     *
      * <code>string subnet_id = 2;</code>
      */
     java.lang.String getSubnetId();
     /**
+     * <pre>
+     * ID of the subnet that the application load balancer belongs to.
+     * </pre>
+     *
      * <code>string subnet_id = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -6534,7 +7036,10 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * If set, will disable all L7 instances in the zone for request handling.
+     * Disables the load balancer node in the specified availability zone.
+     * Backends in the availability zone are not directly affected by this setting.
+     * They still may receive traffic from the load balancer nodes in other availability zones,
+     * subject to [LoadBalancingConfig.locality_aware_routing_percent] and [LoadBalancingConfig.strict_locality] settings.
      * </pre>
      *
      * <code>bool disable_traffic = 3;</code>
@@ -6542,6 +7047,11 @@ public final class LoadBalancerOuterClass {
     boolean getDisableTraffic();
   }
   /**
+   * <pre>
+   * An application load balancer location resource.
+   * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Location}
    */
   public  static final class Location extends
@@ -6635,6 +7145,11 @@ public final class LoadBalancerOuterClass {
     public static final int ZONE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object zoneId_;
     /**
+     * <pre>
+     * ID of the availability zone where the application load balancer resides.
+     * Each Yandex Cloud availability zone can only be specified once.
+     * </pre>
+     *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getZoneId() {
@@ -6650,6 +7165,11 @@ public final class LoadBalancerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the availability zone where the application load balancer resides.
+     * Each Yandex Cloud availability zone can only be specified once.
+     * </pre>
+     *
      * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -6669,6 +7189,10 @@ public final class LoadBalancerOuterClass {
     public static final int SUBNET_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object subnetId_;
     /**
+     * <pre>
+     * ID of the subnet that the application load balancer belongs to.
+     * </pre>
+     *
      * <code>string subnet_id = 2;</code>
      */
     public java.lang.String getSubnetId() {
@@ -6684,6 +7208,10 @@ public final class LoadBalancerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subnet that the application load balancer belongs to.
+     * </pre>
+     *
      * <code>string subnet_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -6704,7 +7232,10 @@ public final class LoadBalancerOuterClass {
     private boolean disableTraffic_;
     /**
      * <pre>
-     * If set, will disable all L7 instances in the zone for request handling.
+     * Disables the load balancer node in the specified availability zone.
+     * Backends in the availability zone are not directly affected by this setting.
+     * They still may receive traffic from the load balancer nodes in other availability zones,
+     * subject to [LoadBalancingConfig.locality_aware_routing_percent] and [LoadBalancingConfig.strict_locality] settings.
      * </pre>
      *
      * <code>bool disable_traffic = 3;</code>
@@ -6891,6 +7422,11 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An application load balancer location resource.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#lb-location).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Location}
      */
     public static final class Builder extends
@@ -7053,6 +7589,11 @@ public final class LoadBalancerOuterClass {
 
       private java.lang.Object zoneId_ = "";
       /**
+       * <pre>
+       * ID of the availability zone where the application load balancer resides.
+       * Each Yandex Cloud availability zone can only be specified once.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getZoneId() {
@@ -7068,6 +7609,11 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the availability zone where the application load balancer resides.
+       * Each Yandex Cloud availability zone can only be specified once.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -7084,6 +7630,11 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the availability zone where the application load balancer resides.
+       * Each Yandex Cloud availability zone can only be specified once.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setZoneId(
@@ -7097,6 +7648,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the availability zone where the application load balancer resides.
+       * Each Yandex Cloud availability zone can only be specified once.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearZoneId() {
@@ -7106,6 +7662,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the availability zone where the application load balancer resides.
+       * Each Yandex Cloud availability zone can only be specified once.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setZoneIdBytes(
@@ -7122,6 +7683,10 @@ public final class LoadBalancerOuterClass {
 
       private java.lang.Object subnetId_ = "";
       /**
+       * <pre>
+       * ID of the subnet that the application load balancer belongs to.
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        */
       public java.lang.String getSubnetId() {
@@ -7137,6 +7702,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subnet that the application load balancer belongs to.
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -7153,6 +7722,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subnet that the application load balancer belongs to.
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        */
       public Builder setSubnetId(
@@ -7166,6 +7739,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subnet that the application load balancer belongs to.
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        */
       public Builder clearSubnetId() {
@@ -7175,6 +7752,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subnet that the application load balancer belongs to.
+       * </pre>
+       *
        * <code>string subnet_id = 2;</code>
        */
       public Builder setSubnetIdBytes(
@@ -7192,7 +7773,10 @@ public final class LoadBalancerOuterClass {
       private boolean disableTraffic_ ;
       /**
        * <pre>
-       * If set, will disable all L7 instances in the zone for request handling.
+       * Disables the load balancer node in the specified availability zone.
+       * Backends in the availability zone are not directly affected by this setting.
+       * They still may receive traffic from the load balancer nodes in other availability zones,
+       * subject to [LoadBalancingConfig.locality_aware_routing_percent] and [LoadBalancingConfig.strict_locality] settings.
        * </pre>
        *
        * <code>bool disable_traffic = 3;</code>
@@ -7202,7 +7786,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * If set, will disable all L7 instances in the zone for request handling.
+       * Disables the load balancer node in the specified availability zone.
+       * Backends in the availability zone are not directly affected by this setting.
+       * They still may receive traffic from the load balancer nodes in other availability zones,
+       * subject to [LoadBalancingConfig.locality_aware_routing_percent] and [LoadBalancingConfig.strict_locality] settings.
        * </pre>
        *
        * <code>bool disable_traffic = 3;</code>
@@ -7215,7 +7802,10 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * If set, will disable all L7 instances in the zone for request handling.
+       * Disables the load balancer node in the specified availability zone.
+       * Backends in the availability zone are not directly affected by this setting.
+       * They still may receive traffic from the load balancer nodes in other availability zones,
+       * subject to [LoadBalancingConfig.locality_aware_routing_percent] and [LoadBalancingConfig.strict_locality] settings.
        * </pre>
        *
        * <code>bool disable_traffic = 3;</code>
@@ -7284,30 +7874,54 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Availability zones and subnets that the application load balancer resides.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location> 
         getLocationsList();
     /**
+     * <pre>
+     * Availability zones and subnets that the application load balancer resides.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location getLocations(int index);
     /**
+     * <pre>
+     * Availability zones and subnets that the application load balancer resides.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
      */
     int getLocationsCount();
     /**
+     * <pre>
+     * Availability zones and subnets that the application load balancer resides.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LocationOrBuilder> 
         getLocationsOrBuilderList();
     /**
+     * <pre>
+     * Availability zones and subnets that the application load balancer resides.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LocationOrBuilder getLocationsOrBuilder(
         int index);
   }
   /**
+   * <pre>
+   * A locality settings (allocation policy) resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.AllocationPolicy}
    */
   public  static final class AllocationPolicy extends
@@ -7394,12 +8008,20 @@ public final class LoadBalancerOuterClass {
     public static final int LOCATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location> locations_;
     /**
+     * <pre>
+     * Availability zones and subnets that the application load balancer resides.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location> getLocationsList() {
       return locations_;
     }
     /**
+     * <pre>
+     * Availability zones and subnets that the application load balancer resides.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LocationOrBuilder> 
@@ -7407,18 +8029,30 @@ public final class LoadBalancerOuterClass {
       return locations_;
     }
     /**
+     * <pre>
+     * Availability zones and subnets that the application load balancer resides.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
      */
     public int getLocationsCount() {
       return locations_.size();
     }
     /**
+     * <pre>
+     * Availability zones and subnets that the application load balancer resides.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location getLocations(int index) {
       return locations_.get(index);
     }
     /**
+     * <pre>
+     * Availability zones and subnets that the application load balancer resides.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LocationOrBuilder getLocationsOrBuilder(
@@ -7585,6 +8219,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A locality settings (allocation policy) resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.AllocationPolicy}
      */
     public static final class Builder extends
@@ -7782,6 +8420,10 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LocationOrBuilder> locationsBuilder_;
 
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location> getLocationsList() {
@@ -7792,6 +8434,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public int getLocationsCount() {
@@ -7802,6 +8448,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location getLocations(int index) {
@@ -7812,6 +8462,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public Builder setLocations(
@@ -7829,6 +8483,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public Builder setLocations(
@@ -7843,6 +8501,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public Builder addLocations(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location value) {
@@ -7859,6 +8521,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public Builder addLocations(
@@ -7876,6 +8542,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public Builder addLocations(
@@ -7890,6 +8560,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public Builder addLocations(
@@ -7904,6 +8578,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public Builder addAllLocations(
@@ -7919,6 +8597,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public Builder clearLocations() {
@@ -7932,6 +8614,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public Builder removeLocations(int index) {
@@ -7945,6 +8631,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location.Builder getLocationsBuilder(
@@ -7952,6 +8642,10 @@ public final class LoadBalancerOuterClass {
         return getLocationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LocationOrBuilder getLocationsOrBuilder(
@@ -7962,6 +8656,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LocationOrBuilder> 
@@ -7973,6 +8671,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location.Builder addLocationsBuilder() {
@@ -7980,6 +8682,10 @@ public final class LoadBalancerOuterClass {
             yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location.Builder addLocationsBuilder(
@@ -7988,6 +8694,10 @@ public final class LoadBalancerOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Availability zones and subnets that the application load balancer resides.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Location locations = 1 [(.yandex.cloud.size) = "&gt;=1", (.yandex.cloud.unique) = true];</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Location.Builder> 
@@ -8067,7 +8777,8 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Name of the listener. The name must be unique for each listener on a single load balancer. 3-63 characters long.
+     * Name of the listener. The name is unique within the application load balancer.
+     * The string length in characters is 3-63.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
@@ -8075,7 +8786,8 @@ public final class LoadBalancerOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the listener. The name must be unique for each listener on a single load balancer. 3-63 characters long.
+     * Name of the listener. The name is unique within the application load balancer.
+     * The string length in characters is 3-63.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
@@ -8085,7 +8797,8 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Network endpoints (addresses and ports) of the listener.
+     * Endpoints of the listener.
+     * Endpoints are defined by their IP addresses and ports.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -8094,7 +8807,8 @@ public final class LoadBalancerOuterClass {
         getEndpointsList();
     /**
      * <pre>
-     * Network endpoints (addresses and ports) of the listener.
+     * Endpoints of the listener.
+     * Endpoints are defined by their IP addresses and ports.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -8102,7 +8816,8 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Endpoint getEndpoints(int index);
     /**
      * <pre>
-     * Network endpoints (addresses and ports) of the listener.
+     * Endpoints of the listener.
+     * Endpoints are defined by their IP addresses and ports.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -8110,7 +8825,8 @@ public final class LoadBalancerOuterClass {
     int getEndpointsCount();
     /**
      * <pre>
-     * Network endpoints (addresses and ports) of the listener.
+     * Endpoints of the listener.
+     * Endpoints are defined by their IP addresses and ports.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -8119,7 +8835,8 @@ public final class LoadBalancerOuterClass {
         getEndpointsOrBuilderList();
     /**
      * <pre>
-     * Network endpoints (addresses and ports) of the listener.
+     * Endpoints of the listener.
+     * Endpoints are defined by their IP addresses and ports.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -8128,27 +8845,51 @@ public final class LoadBalancerOuterClass {
         int index);
 
     /**
+     * <pre>
+     * HTTP listener settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
      */
     boolean hasHttp();
     /**
+     * <pre>
+     * HTTP listener settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener getHttp();
     /**
+     * <pre>
+     * HTTP listener settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListenerOrBuilder getHttpOrBuilder();
 
     /**
+     * <pre>
+     * HTTPS (HTTP over TLS) listener settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
      */
     boolean hasTls();
     /**
+     * <pre>
+     * HTTPS (HTTP over TLS) listener settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener getTls();
     /**
+     * <pre>
+     * HTTPS (HTTP over TLS) listener settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListenerOrBuilder getTlsOrBuilder();
@@ -8157,7 +8898,8 @@ public final class LoadBalancerOuterClass {
   }
   /**
    * <pre>
-   * A Listener resource.
+   * A listener resource.
+   * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Listener}
@@ -8321,7 +9063,8 @@ public final class LoadBalancerOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the listener. The name must be unique for each listener on a single load balancer. 3-63 characters long.
+     * Name of the listener. The name is unique within the application load balancer.
+     * The string length in characters is 3-63.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
@@ -8340,7 +9083,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Name of the listener. The name must be unique for each listener on a single load balancer. 3-63 characters long.
+     * Name of the listener. The name is unique within the application load balancer.
+     * The string length in characters is 3-63.
      * </pre>
      *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
@@ -8363,7 +9107,8 @@ public final class LoadBalancerOuterClass {
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Endpoint> endpoints_;
     /**
      * <pre>
-     * Network endpoints (addresses and ports) of the listener.
+     * Endpoints of the listener.
+     * Endpoints are defined by their IP addresses and ports.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -8373,7 +9118,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Network endpoints (addresses and ports) of the listener.
+     * Endpoints of the listener.
+     * Endpoints are defined by their IP addresses and ports.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -8384,7 +9130,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Network endpoints (addresses and ports) of the listener.
+     * Endpoints of the listener.
+     * Endpoints are defined by their IP addresses and ports.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -8394,7 +9141,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Network endpoints (addresses and ports) of the listener.
+     * Endpoints of the listener.
+     * Endpoints are defined by their IP addresses and ports.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -8404,7 +9152,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Network endpoints (addresses and ports) of the listener.
+     * Endpoints of the listener.
+     * Endpoints are defined by their IP addresses and ports.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -8416,12 +9165,20 @@ public final class LoadBalancerOuterClass {
 
     public static final int HTTP_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * HTTP listener settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
      */
     public boolean hasHttp() {
       return listenerCase_ == 3;
     }
     /**
+     * <pre>
+     * HTTP listener settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener getHttp() {
@@ -8431,6 +9188,10 @@ public final class LoadBalancerOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener.getDefaultInstance();
     }
     /**
+     * <pre>
+     * HTTP listener settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListenerOrBuilder getHttpOrBuilder() {
@@ -8442,12 +9203,20 @@ public final class LoadBalancerOuterClass {
 
     public static final int TLS_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * HTTPS (HTTP over TLS) listener settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
      */
     public boolean hasTls() {
       return listenerCase_ == 4;
     }
     /**
+     * <pre>
+     * HTTPS (HTTP over TLS) listener settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener getTls() {
@@ -8457,6 +9226,10 @@ public final class LoadBalancerOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener.getDefaultInstance();
     }
     /**
+     * <pre>
+     * HTTPS (HTTP over TLS) listener settings.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListenerOrBuilder getTlsOrBuilder() {
@@ -8677,7 +9450,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * A Listener resource.
+     * A listener resource.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/application-load-balancer#listener).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Listener}
@@ -8921,7 +9695,8 @@ public final class LoadBalancerOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the listener. The name must be unique for each listener on a single load balancer. 3-63 characters long.
+       * Name of the listener. The name is unique within the application load balancer.
+       * The string length in characters is 3-63.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
@@ -8940,7 +9715,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Name of the listener. The name must be unique for each listener on a single load balancer. 3-63 characters long.
+       * Name of the listener. The name is unique within the application load balancer.
+       * The string length in characters is 3-63.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
@@ -8960,7 +9736,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Name of the listener. The name must be unique for each listener on a single load balancer. 3-63 characters long.
+       * Name of the listener. The name is unique within the application load balancer.
+       * The string length in characters is 3-63.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
@@ -8977,7 +9754,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Name of the listener. The name must be unique for each listener on a single load balancer. 3-63 characters long.
+       * Name of the listener. The name is unique within the application load balancer.
+       * The string length in characters is 3-63.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
@@ -8990,7 +9768,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Name of the listener. The name must be unique for each listener on a single load balancer. 3-63 characters long.
+       * Name of the listener. The name is unique within the application load balancer.
+       * The string length in characters is 3-63.
        * </pre>
        *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
@@ -9021,7 +9800,8 @@ public final class LoadBalancerOuterClass {
 
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9035,7 +9815,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9049,7 +9830,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9063,7 +9845,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9084,7 +9867,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9102,7 +9886,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9122,7 +9907,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9143,7 +9929,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9161,7 +9948,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9179,7 +9967,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9198,7 +9987,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9215,7 +10005,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9232,7 +10023,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9243,7 +10035,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9257,7 +10050,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9272,7 +10066,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9283,7 +10078,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9295,7 +10091,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Network endpoints (addresses and ports) of the listener.
+       * Endpoints of the listener.
+       * Endpoints are defined by their IP addresses and ports.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Endpoint endpoints = 2;</code>
@@ -9322,12 +10119,20 @@ public final class LoadBalancerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListenerOrBuilder> httpBuilder_;
       /**
+       * <pre>
+       * HTTP listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
        */
       public boolean hasHttp() {
         return listenerCase_ == 3;
       }
       /**
+       * <pre>
+       * HTTP listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener getHttp() {
@@ -9344,6 +10149,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTP listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
        */
       public Builder setHttp(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener value) {
@@ -9360,6 +10169,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
        */
       public Builder setHttp(
@@ -9374,6 +10187,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
        */
       public Builder mergeHttp(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener value) {
@@ -9396,6 +10213,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
        */
       public Builder clearHttp() {
@@ -9415,12 +10236,20 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListener.Builder getHttpBuilder() {
         return getHttpFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * HTTP listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpListenerOrBuilder getHttpOrBuilder() {
@@ -9434,6 +10263,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTP listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpListener http = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9458,12 +10291,20 @@ public final class LoadBalancerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListenerOrBuilder> tlsBuilder_;
       /**
+       * <pre>
+       * HTTPS (HTTP over TLS) listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
        */
       public boolean hasTls() {
         return listenerCase_ == 4;
       }
       /**
+       * <pre>
+       * HTTPS (HTTP over TLS) listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener getTls() {
@@ -9480,6 +10321,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTPS (HTTP over TLS) listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
        */
       public Builder setTls(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener value) {
@@ -9496,6 +10341,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTPS (HTTP over TLS) listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
        */
       public Builder setTls(
@@ -9510,6 +10359,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTPS (HTTP over TLS) listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
        */
       public Builder mergeTls(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener value) {
@@ -9532,6 +10385,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTPS (HTTP over TLS) listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
        */
       public Builder clearTls() {
@@ -9551,12 +10408,20 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTPS (HTTP over TLS) listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListener.Builder getTlsBuilder() {
         return getTlsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * HTTPS (HTTP over TLS) listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsListenerOrBuilder getTlsOrBuilder() {
@@ -9570,6 +10435,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTPS (HTTP over TLS) listener settings.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsListener tls = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9648,43 +10517,79 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Endpoint public (external) and internal addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address> 
         getAddressesList();
     /**
+     * <pre>
+     * Endpoint public (external) and internal addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address getAddresses(int index);
     /**
+     * <pre>
+     * Endpoint public (external) and internal addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     int getAddressesCount();
     /**
+     * <pre>
+     * Endpoint public (external) and internal addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AddressOrBuilder> 
         getAddressesOrBuilderList();
     /**
+     * <pre>
+     * Endpoint public (external) and internal addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AddressOrBuilder getAddressesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Endpoint ports.
+     * </pre>
+     *
      * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
      */
     java.util.List<java.lang.Long> getPortsList();
     /**
+     * <pre>
+     * Endpoint ports.
+     * </pre>
+     *
      * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
      */
     int getPortsCount();
     /**
+     * <pre>
+     * Endpoint ports.
+     * </pre>
+     *
      * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
      */
     long getPorts(int index);
   }
   /**
+   * <pre>
+   * An endpoint resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Endpoint}
    */
   public  static final class Endpoint extends
@@ -9796,12 +10701,20 @@ public final class LoadBalancerOuterClass {
     public static final int ADDRESSES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address> addresses_;
     /**
+     * <pre>
+     * Endpoint public (external) and internal addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address> getAddressesList() {
       return addresses_;
     }
     /**
+     * <pre>
+     * Endpoint public (external) and internal addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AddressOrBuilder> 
@@ -9809,18 +10722,30 @@ public final class LoadBalancerOuterClass {
       return addresses_;
     }
     /**
+     * <pre>
+     * Endpoint public (external) and internal addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public int getAddressesCount() {
       return addresses_.size();
     }
     /**
+     * <pre>
+     * Endpoint public (external) and internal addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address getAddresses(int index) {
       return addresses_.get(index);
     }
     /**
+     * <pre>
+     * Endpoint public (external) and internal addresses.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AddressOrBuilder getAddressesOrBuilder(
@@ -9831,6 +10756,10 @@ public final class LoadBalancerOuterClass {
     public static final int PORTS_FIELD_NUMBER = 2;
     private java.util.List<java.lang.Long> ports_;
     /**
+     * <pre>
+     * Endpoint ports.
+     * </pre>
+     *
      * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
      */
     public java.util.List<java.lang.Long>
@@ -9838,12 +10767,20 @@ public final class LoadBalancerOuterClass {
       return ports_;
     }
     /**
+     * <pre>
+     * Endpoint ports.
+     * </pre>
+     *
      * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
      */
     public int getPortsCount() {
       return ports_.size();
     }
     /**
+     * <pre>
+     * Endpoint ports.
+     * </pre>
+     *
      * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
      */
     public long getPorts(int index) {
@@ -10038,6 +10975,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An endpoint resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Endpoint}
      */
     public static final class Builder extends
@@ -10252,6 +11193,10 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AddressOrBuilder> addressesBuilder_;
 
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address> getAddressesList() {
@@ -10262,6 +11207,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public int getAddressesCount() {
@@ -10272,6 +11221,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address getAddresses(int index) {
@@ -10282,6 +11235,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder setAddresses(
@@ -10299,6 +11256,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder setAddresses(
@@ -10313,6 +11274,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAddresses(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address value) {
@@ -10329,6 +11294,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAddresses(
@@ -10346,6 +11315,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAddresses(
@@ -10360,6 +11333,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAddresses(
@@ -10374,6 +11351,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAllAddresses(
@@ -10389,6 +11370,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder clearAddresses() {
@@ -10402,6 +11387,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder removeAddresses(int index) {
@@ -10415,6 +11404,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address.Builder getAddressesBuilder(
@@ -10422,6 +11415,10 @@ public final class LoadBalancerOuterClass {
         return getAddressesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AddressOrBuilder getAddressesOrBuilder(
@@ -10432,6 +11429,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.AddressOrBuilder> 
@@ -10443,6 +11444,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address.Builder addAddressesBuilder() {
@@ -10450,6 +11455,10 @@ public final class LoadBalancerOuterClass {
             yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address.Builder addAddressesBuilder(
@@ -10458,6 +11467,10 @@ public final class LoadBalancerOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Endpoint public (external) and internal addresses.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Address addresses = 1 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Address.Builder> 
@@ -10487,6 +11500,10 @@ public final class LoadBalancerOuterClass {
          }
       }
       /**
+       * <pre>
+       * Endpoint ports.
+       * </pre>
+       *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.util.List<java.lang.Long>
@@ -10494,18 +11511,30 @@ public final class LoadBalancerOuterClass {
         return java.util.Collections.unmodifiableList(ports_);
       }
       /**
+       * <pre>
+       * Endpoint ports.
+       * </pre>
+       *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public int getPortsCount() {
         return ports_.size();
       }
       /**
+       * <pre>
+       * Endpoint ports.
+       * </pre>
+       *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public long getPorts(int index) {
         return ports_.get(index);
       }
       /**
+       * <pre>
+       * Endpoint ports.
+       * </pre>
+       *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder setPorts(
@@ -10516,6 +11545,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint ports.
+       * </pre>
+       *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addPorts(long value) {
@@ -10525,6 +11558,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint ports.
+       * </pre>
+       *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAllPorts(
@@ -10536,6 +11573,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Endpoint ports.
+       * </pre>
+       *
        * <code>repeated int64 ports = 2 [(.yandex.cloud.value) = "1-65535", (.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder clearPorts() {
@@ -10603,7 +11644,8 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Sets plaintext HTTP router, optional.
+     * Settings for handling HTTP requests.
+     * Only one of `handler` and [redirects] can be specified.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -10611,7 +11653,8 @@ public final class LoadBalancerOuterClass {
     boolean hasHandler();
     /**
      * <pre>
-     * Sets plaintext HTTP router, optional.
+     * Settings for handling HTTP requests.
+     * Only one of `handler` and [redirects] can be specified.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -10619,7 +11662,8 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler getHandler();
     /**
      * <pre>
-     * Sets plaintext HTTP router, optional.
+     * Settings for handling HTTP requests.
+     * Only one of `handler` and [redirects] can be specified.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -10628,8 +11672,8 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Shortcut for adding http -&gt; https redirects,
-     * can be used instead of the HttpHandler above.
+     * Redirects settings.
+     * Only one of `redirects` and [handler] can be specified.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -10637,8 +11681,8 @@ public final class LoadBalancerOuterClass {
     boolean hasRedirects();
     /**
      * <pre>
-     * Shortcut for adding http -&gt; https redirects,
-     * can be used instead of the HttpHandler above.
+     * Redirects settings.
+     * Only one of `redirects` and [handler] can be specified.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -10646,8 +11690,8 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Redirects getRedirects();
     /**
      * <pre>
-     * Shortcut for adding http -&gt; https redirects,
-     * can be used instead of the HttpHandler above.
+     * Redirects settings.
+     * Only one of `redirects` and [handler] can be specified.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -10655,6 +11699,10 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.RedirectsOrBuilder getRedirectsOrBuilder();
   }
   /**
+   * <pre>
+   * An HTTP listener resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpListener}
    */
   public  static final class HttpListener extends
@@ -10755,7 +11803,8 @@ public final class LoadBalancerOuterClass {
     private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler handler_;
     /**
      * <pre>
-     * Sets plaintext HTTP router, optional.
+     * Settings for handling HTTP requests.
+     * Only one of `handler` and [redirects] can be specified.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -10765,7 +11814,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Sets plaintext HTTP router, optional.
+     * Settings for handling HTTP requests.
+     * Only one of `handler` and [redirects] can be specified.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -10775,7 +11825,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Sets plaintext HTTP router, optional.
+     * Settings for handling HTTP requests.
+     * Only one of `handler` and [redirects] can be specified.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -10788,8 +11839,8 @@ public final class LoadBalancerOuterClass {
     private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Redirects redirects_;
     /**
      * <pre>
-     * Shortcut for adding http -&gt; https redirects,
-     * can be used instead of the HttpHandler above.
+     * Redirects settings.
+     * Only one of `redirects` and [handler] can be specified.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -10799,8 +11850,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Shortcut for adding http -&gt; https redirects,
-     * can be used instead of the HttpHandler above.
+     * Redirects settings.
+     * Only one of `redirects` and [handler] can be specified.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -10810,8 +11861,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Shortcut for adding http -&gt; https redirects,
-     * can be used instead of the HttpHandler above.
+     * Redirects settings.
+     * Only one of `redirects` and [handler] can be specified.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -10998,6 +12049,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An HTTP listener resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpListener}
      */
     public static final class Builder extends
@@ -11171,7 +12226,8 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandlerOrBuilder> handlerBuilder_;
       /**
        * <pre>
-       * Sets plaintext HTTP router, optional.
+       * Settings for handling HTTP requests.
+       * Only one of `handler` and [redirects] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -11181,7 +12237,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Sets plaintext HTTP router, optional.
+       * Settings for handling HTTP requests.
+       * Only one of `handler` and [redirects] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -11195,7 +12252,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Sets plaintext HTTP router, optional.
+       * Settings for handling HTTP requests.
+       * Only one of `handler` and [redirects] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -11215,7 +12273,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Sets plaintext HTTP router, optional.
+       * Settings for handling HTTP requests.
+       * Only one of `handler` and [redirects] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -11233,7 +12292,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Sets plaintext HTTP router, optional.
+       * Settings for handling HTTP requests.
+       * Only one of `handler` and [redirects] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -11255,7 +12315,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Sets plaintext HTTP router, optional.
+       * Settings for handling HTTP requests.
+       * Only one of `handler` and [redirects] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -11273,7 +12334,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Sets plaintext HTTP router, optional.
+       * Settings for handling HTTP requests.
+       * Only one of `handler` and [redirects] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -11285,7 +12347,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Sets plaintext HTTP router, optional.
+       * Settings for handling HTTP requests.
+       * Only one of `handler` and [redirects] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -11300,7 +12363,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Sets plaintext HTTP router, optional.
+       * Settings for handling HTTP requests.
+       * Only one of `handler` and [redirects] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler handler = 1;</code>
@@ -11324,8 +12388,8 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Redirects, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Redirects.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.RedirectsOrBuilder> redirectsBuilder_;
       /**
        * <pre>
-       * Shortcut for adding http -&gt; https redirects,
-       * can be used instead of the HttpHandler above.
+       * Redirects settings.
+       * Only one of `redirects` and [handler] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -11335,8 +12399,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Shortcut for adding http -&gt; https redirects,
-       * can be used instead of the HttpHandler above.
+       * Redirects settings.
+       * Only one of `redirects` and [handler] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -11350,8 +12414,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Shortcut for adding http -&gt; https redirects,
-       * can be used instead of the HttpHandler above.
+       * Redirects settings.
+       * Only one of `redirects` and [handler] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -11371,8 +12435,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Shortcut for adding http -&gt; https redirects,
-       * can be used instead of the HttpHandler above.
+       * Redirects settings.
+       * Only one of `redirects` and [handler] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -11390,8 +12454,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Shortcut for adding http -&gt; https redirects,
-       * can be used instead of the HttpHandler above.
+       * Redirects settings.
+       * Only one of `redirects` and [handler] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -11413,8 +12477,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Shortcut for adding http -&gt; https redirects,
-       * can be used instead of the HttpHandler above.
+       * Redirects settings.
+       * Only one of `redirects` and [handler] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -11432,8 +12496,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Shortcut for adding http -&gt; https redirects,
-       * can be used instead of the HttpHandler above.
+       * Redirects settings.
+       * Only one of `redirects` and [handler] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -11445,8 +12509,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Shortcut for adding http -&gt; https redirects,
-       * can be used instead of the HttpHandler above.
+       * Redirects settings.
+       * Only one of `redirects` and [handler] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -11461,8 +12525,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Shortcut for adding http -&gt; https redirects,
-       * can be used instead of the HttpHandler above.
+       * Redirects settings.
+       * Only one of `redirects` and [handler] can be specified.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Redirects redirects = 2;</code>
@@ -11538,43 +12602,87 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Settings for handling HTTPS requests by default,
+     * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     boolean hasDefaultHandler();
     /**
+     * <pre>
+     * Settings for handling HTTPS requests by default,
+     * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler getDefaultHandler();
     /**
+     * <pre>
+     * Settings for handling HTTPS requests by default,
+     * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandlerOrBuilder getDefaultHandlerOrBuilder();
 
     /**
+     * <pre>
+     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * matching one of [SniMatch.server_names] values.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch> 
         getSniHandlersList();
     /**
+     * <pre>
+     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * matching one of [SniMatch.server_names] values.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch getSniHandlers(int index);
     /**
+     * <pre>
+     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * matching one of [SniMatch.server_names] values.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
      */
     int getSniHandlersCount();
     /**
+     * <pre>
+     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * matching one of [SniMatch.server_names] values.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatchOrBuilder> 
         getSniHandlersOrBuilderList();
     /**
+     * <pre>
+     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * matching one of [SniMatch.server_names] values.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatchOrBuilder getSniHandlersOrBuilder(
         int index);
   }
   /**
+   * <pre>
+   * An HTTPS (HTTP over TLS) listener resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TlsListener}
    */
   public  static final class TlsListener extends
@@ -11675,18 +12783,33 @@ public final class LoadBalancerOuterClass {
     public static final int DEFAULT_HANDLER_FIELD_NUMBER = 1;
     private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler defaultHandler_;
     /**
+     * <pre>
+     * Settings for handling HTTPS requests by default,
+     * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     public boolean hasDefaultHandler() {
       return defaultHandler_ != null;
     }
     /**
+     * <pre>
+     * Settings for handling HTTPS requests by default,
+     * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler getDefaultHandler() {
       return defaultHandler_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler.getDefaultInstance() : defaultHandler_;
     }
     /**
+     * <pre>
+     * Settings for handling HTTPS requests by default,
+     * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandlerOrBuilder getDefaultHandlerOrBuilder() {
@@ -11696,12 +12819,22 @@ public final class LoadBalancerOuterClass {
     public static final int SNI_HANDLERS_FIELD_NUMBER = 2;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch> sniHandlers_;
     /**
+     * <pre>
+     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * matching one of [SniMatch.server_names] values.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch> getSniHandlersList() {
       return sniHandlers_;
     }
     /**
+     * <pre>
+     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * matching one of [SniMatch.server_names] values.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatchOrBuilder> 
@@ -11709,18 +12842,33 @@ public final class LoadBalancerOuterClass {
       return sniHandlers_;
     }
     /**
+     * <pre>
+     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * matching one of [SniMatch.server_names] values.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
      */
     public int getSniHandlersCount() {
       return sniHandlers_.size();
     }
     /**
+     * <pre>
+     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * matching one of [SniMatch.server_names] values.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch getSniHandlers(int index) {
       return sniHandlers_.get(index);
     }
     /**
+     * <pre>
+     * Settings for handling HTTPS requests with Server Name Indication (SNI)
+     * matching one of [SniMatch.server_names] values.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatchOrBuilder getSniHandlersOrBuilder(
@@ -11903,6 +13051,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An HTTPS (HTTP over TLS) listener resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TlsListener}
      */
     public static final class Builder extends
@@ -12107,12 +13259,22 @@ public final class LoadBalancerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandlerOrBuilder> defaultHandlerBuilder_;
       /**
+       * <pre>
+       * Settings for handling HTTPS requests by default,
+       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public boolean hasDefaultHandler() {
         return defaultHandlerBuilder_ != null || defaultHandler_ != null;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests by default,
+       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler getDefaultHandler() {
@@ -12123,6 +13285,11 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests by default,
+       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setDefaultHandler(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler value) {
@@ -12139,6 +13306,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests by default,
+       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setDefaultHandler(
@@ -12153,6 +13325,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests by default,
+       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeDefaultHandler(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler value) {
@@ -12171,6 +13348,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests by default,
+       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearDefaultHandler() {
@@ -12185,6 +13367,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests by default,
+       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler.Builder getDefaultHandlerBuilder() {
@@ -12193,6 +13380,11 @@ public final class LoadBalancerOuterClass {
         return getDefaultHandlerFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests by default,
+       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandlerOrBuilder getDefaultHandlerOrBuilder() {
@@ -12204,6 +13396,11 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests by default,
+       * with Server Name Indication (SNI) not matching any of the [sni_handlers].
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler default_handler = 1 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -12233,6 +13430,11 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatchOrBuilder> sniHandlersBuilder_;
 
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch> getSniHandlersList() {
@@ -12243,6 +13445,11 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public int getSniHandlersCount() {
@@ -12253,6 +13460,11 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch getSniHandlers(int index) {
@@ -12263,6 +13475,11 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public Builder setSniHandlers(
@@ -12280,6 +13497,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public Builder setSniHandlers(
@@ -12294,6 +13516,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public Builder addSniHandlers(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch value) {
@@ -12310,6 +13537,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public Builder addSniHandlers(
@@ -12327,6 +13559,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public Builder addSniHandlers(
@@ -12341,6 +13578,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public Builder addSniHandlers(
@@ -12355,6 +13597,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public Builder addAllSniHandlers(
@@ -12370,6 +13617,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public Builder clearSniHandlers() {
@@ -12383,6 +13635,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public Builder removeSniHandlers(int index) {
@@ -12396,6 +13653,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch.Builder getSniHandlersBuilder(
@@ -12403,6 +13665,11 @@ public final class LoadBalancerOuterClass {
         return getSniHandlersFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatchOrBuilder getSniHandlersOrBuilder(
@@ -12413,6 +13680,11 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatchOrBuilder> 
@@ -12424,6 +13696,11 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch.Builder addSniHandlersBuilder() {
@@ -12431,6 +13708,11 @@ public final class LoadBalancerOuterClass {
             yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch.Builder addSniHandlersBuilder(
@@ -12439,6 +13721,11 @@ public final class LoadBalancerOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Settings for handling HTTPS requests with Server Name Indication (SNI)
+       * matching one of [SniMatch.server_names] values.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.SniMatch sni_handlers = 2;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.SniMatch.Builder> 
@@ -12517,11 +13804,19 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Maximum number of concurrent HTTP/2 streams in a connection.
+     * </pre>
+     *
      * <code>int64 max_concurrent_streams = 1;</code>
      */
     long getMaxConcurrentStreams();
   }
   /**
+   * <pre>
+   * An HTTP/2 options resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Http2Options}
    */
   public  static final class Http2Options extends
@@ -12601,6 +13896,10 @@ public final class LoadBalancerOuterClass {
     public static final int MAX_CONCURRENT_STREAMS_FIELD_NUMBER = 1;
     private long maxConcurrentStreams_;
     /**
+     * <pre>
+     * Maximum number of concurrent HTTP/2 streams in a connection.
+     * </pre>
+     *
      * <code>int64 max_concurrent_streams = 1;</code>
      */
     public long getMaxConcurrentStreams() {
@@ -12765,6 +14064,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An HTTP/2 options resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Http2Options}
      */
     public static final class Builder extends
@@ -12913,12 +14216,20 @@ public final class LoadBalancerOuterClass {
 
       private long maxConcurrentStreams_ ;
       /**
+       * <pre>
+       * Maximum number of concurrent HTTP/2 streams in a connection.
+       * </pre>
+       *
        * <code>int64 max_concurrent_streams = 1;</code>
        */
       public long getMaxConcurrentStreams() {
         return maxConcurrentStreams_;
       }
       /**
+       * <pre>
+       * Maximum number of concurrent HTTP/2 streams in a connection.
+       * </pre>
+       *
        * <code>int64 max_concurrent_streams = 1;</code>
        */
       public Builder setMaxConcurrentStreams(long value) {
@@ -12928,6 +14239,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Maximum number of concurrent HTTP/2 streams in a connection.
+       * </pre>
+       *
        * <code>int64 max_concurrent_streams = 1;</code>
        */
       public Builder clearMaxConcurrentStreams() {
@@ -12994,10 +14309,20 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the HTTP router processing requests.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     java.lang.String getHttpRouterId();
     /**
+     * <pre>
+     * ID of the HTTP router processing requests.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -13005,7 +14330,8 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * If set, will enable HTTP2 protocol for the handler.
+     * HTTP/2 settings.
+     * If specified, incoming HTTP/2 requests are supported by the listener.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13013,7 +14339,8 @@ public final class LoadBalancerOuterClass {
     boolean hasHttp2Options();
     /**
      * <pre>
-     * If set, will enable HTTP2 protocol for the handler.
+     * HTTP/2 settings.
+     * If specified, incoming HTTP/2 requests are supported by the listener.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13021,7 +14348,8 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Http2Options getHttp2Options();
     /**
      * <pre>
-     * If set, will enable HTTP2 protocol for the handler.
+     * HTTP/2 settings.
+     * If specified, incoming HTTP/2 requests are supported by the listener.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13030,7 +14358,7 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * If set, will enable only HTTP1 protocol with HTTP1.0 support.
+     * Enables support for incoming HTTP/1.0 and HTTP/1.1 requests and disables it for HTTP/2 requests.
      * </pre>
      *
      * <code>bool allow_http10 = 3;</code>
@@ -13040,6 +14368,10 @@ public final class LoadBalancerOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler.ProtocolSettingsCase getProtocolSettingsCase();
   }
   /**
+   * <pre>
+   * An HTTP handler resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpHandler}
    */
   public  static final class HttpHandler extends
@@ -13177,6 +14509,11 @@ public final class LoadBalancerOuterClass {
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
+     * <pre>
+     * ID of the HTTP router processing requests.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     public java.lang.String getHttpRouterId() {
@@ -13192,6 +14529,11 @@ public final class LoadBalancerOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the HTTP router processing requests.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -13211,7 +14553,8 @@ public final class LoadBalancerOuterClass {
     public static final int HTTP2_OPTIONS_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * If set, will enable HTTP2 protocol for the handler.
+     * HTTP/2 settings.
+     * If specified, incoming HTTP/2 requests are supported by the listener.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13221,7 +14564,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * If set, will enable HTTP2 protocol for the handler.
+     * HTTP/2 settings.
+     * If specified, incoming HTTP/2 requests are supported by the listener.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13234,7 +14578,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * If set, will enable HTTP2 protocol for the handler.
+     * HTTP/2 settings.
+     * If specified, incoming HTTP/2 requests are supported by the listener.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13249,7 +14594,7 @@ public final class LoadBalancerOuterClass {
     public static final int ALLOW_HTTP10_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * If set, will enable only HTTP1 protocol with HTTP1.0 support.
+     * Enables support for incoming HTTP/1.0 and HTTP/1.1 requests and disables it for HTTP/2 requests.
      * </pre>
      *
      * <code>bool allow_http10 = 3;</code>
@@ -13461,6 +14806,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An HTTP handler resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpHandler}
      */
     public static final class Builder extends
@@ -13651,6 +15000,11 @@ public final class LoadBalancerOuterClass {
 
       private java.lang.Object httpRouterId_ = "";
       /**
+       * <pre>
+       * ID of the HTTP router processing requests.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public java.lang.String getHttpRouterId() {
@@ -13666,6 +15020,11 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router processing requests.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -13682,6 +15041,11 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router processing requests.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder setHttpRouterId(
@@ -13695,6 +15059,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router processing requests.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder clearHttpRouterId() {
@@ -13704,6 +15073,11 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router processing requests.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder setHttpRouterIdBytes(
@@ -13722,7 +15096,8 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Http2Options, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Http2Options.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.Http2OptionsOrBuilder> http2OptionsBuilder_;
       /**
        * <pre>
-       * If set, will enable HTTP2 protocol for the handler.
+       * HTTP/2 settings.
+       * If specified, incoming HTTP/2 requests are supported by the listener.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13732,7 +15107,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * If set, will enable HTTP2 protocol for the handler.
+       * HTTP/2 settings.
+       * If specified, incoming HTTP/2 requests are supported by the listener.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13752,7 +15128,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * If set, will enable HTTP2 protocol for the handler.
+       * HTTP/2 settings.
+       * If specified, incoming HTTP/2 requests are supported by the listener.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13772,7 +15149,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * If set, will enable HTTP2 protocol for the handler.
+       * HTTP/2 settings.
+       * If specified, incoming HTTP/2 requests are supported by the listener.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13790,7 +15168,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * If set, will enable HTTP2 protocol for the handler.
+       * HTTP/2 settings.
+       * If specified, incoming HTTP/2 requests are supported by the listener.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13816,7 +15195,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * If set, will enable HTTP2 protocol for the handler.
+       * HTTP/2 settings.
+       * If specified, incoming HTTP/2 requests are supported by the listener.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13839,7 +15219,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * If set, will enable HTTP2 protocol for the handler.
+       * HTTP/2 settings.
+       * If specified, incoming HTTP/2 requests are supported by the listener.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13849,7 +15230,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * If set, will enable HTTP2 protocol for the handler.
+       * HTTP/2 settings.
+       * If specified, incoming HTTP/2 requests are supported by the listener.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13866,7 +15248,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * If set, will enable HTTP2 protocol for the handler.
+       * HTTP/2 settings.
+       * If specified, incoming HTTP/2 requests are supported by the listener.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Http2Options http2_options = 2;</code>
@@ -13892,7 +15275,7 @@ public final class LoadBalancerOuterClass {
 
       /**
        * <pre>
-       * If set, will enable only HTTP1 protocol with HTTP1.0 support.
+       * Enables support for incoming HTTP/1.0 and HTTP/1.1 requests and disables it for HTTP/2 requests.
        * </pre>
        *
        * <code>bool allow_http10 = 3;</code>
@@ -13905,7 +15288,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * If set, will enable only HTTP1 protocol with HTTP1.0 support.
+       * Enables support for incoming HTTP/1.0 and HTTP/1.1 requests and disables it for HTTP/2 requests.
        * </pre>
        *
        * <code>bool allow_http10 = 3;</code>
@@ -13918,7 +15301,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * If set, will enable only HTTP1 protocol with HTTP1.0 support.
+       * Enables support for incoming HTTP/1.0 and HTTP/1.1 requests and disables it for HTTP/2 requests.
        * </pre>
        *
        * <code>bool allow_http10 = 3;</code>
@@ -13990,7 +15373,9 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Adds "*" VirtualHost with a http -&gt; https redirect.
+     * Redirects all unencrypted HTTP requests to the same URI with scheme changed to `https`.
+     * The setting has the same effect as a single, catch-all [HttpRoute]
+     * with [RedirectAction.replace_scheme] set to `https`.
      * </pre>
      *
      * <code>bool http_to_https = 1;</code>
@@ -13998,6 +15383,10 @@ public final class LoadBalancerOuterClass {
     boolean getHttpToHttps();
   }
   /**
+   * <pre>
+   * A listener redirects resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Redirects}
    */
   public  static final class Redirects extends
@@ -14078,7 +15467,9 @@ public final class LoadBalancerOuterClass {
     private boolean httpToHttps_;
     /**
      * <pre>
-     * Adds "*" VirtualHost with a http -&gt; https redirect.
+     * Redirects all unencrypted HTTP requests to the same URI with scheme changed to `https`.
+     * The setting has the same effect as a single, catch-all [HttpRoute]
+     * with [RedirectAction.replace_scheme] set to `https`.
      * </pre>
      *
      * <code>bool http_to_https = 1;</code>
@@ -14245,6 +15636,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A listener redirects resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Redirects}
      */
     public static final class Builder extends
@@ -14394,7 +15789,9 @@ public final class LoadBalancerOuterClass {
       private boolean httpToHttps_ ;
       /**
        * <pre>
-       * Adds "*" VirtualHost with a http -&gt; https redirect.
+       * Redirects all unencrypted HTTP requests to the same URI with scheme changed to `https`.
+       * The setting has the same effect as a single, catch-all [HttpRoute]
+       * with [RedirectAction.replace_scheme] set to `https`.
        * </pre>
        *
        * <code>bool http_to_https = 1;</code>
@@ -14404,7 +15801,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Adds "*" VirtualHost with a http -&gt; https redirect.
+       * Redirects all unencrypted HTTP requests to the same URI with scheme changed to `https`.
+       * The setting has the same effect as a single, catch-all [HttpRoute]
+       * with [RedirectAction.replace_scheme] set to `https`.
        * </pre>
        *
        * <code>bool http_to_https = 1;</code>
@@ -14417,7 +15816,9 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Adds "*" VirtualHost with a http -&gt; https redirect.
+       * Redirects all unencrypted HTTP requests to the same URI with scheme changed to `https`.
+       * The setting has the same effect as a single, catch-all [HttpRoute]
+       * with [RedirectAction.replace_scheme] set to `https`.
        * </pre>
        *
        * <code>bool http_to_https = 1;</code>
@@ -14486,48 +15887,88 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the SNI handler.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the SNI handler.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Server names that are matched by the SNI handler.
+     * </pre>
+     *
      * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     java.util.List<java.lang.String>
         getServerNamesList();
     /**
+     * <pre>
+     * Server names that are matched by the SNI handler.
+     * </pre>
+     *
      * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     int getServerNamesCount();
     /**
+     * <pre>
+     * Server names that are matched by the SNI handler.
+     * </pre>
+     *
      * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     java.lang.String getServerNames(int index);
     /**
+     * <pre>
+     * Server names that are matched by the SNI handler.
+     * </pre>
+     *
      * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     com.google.protobuf.ByteString
         getServerNamesBytes(int index);
 
     /**
+     * <pre>
+     * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
      */
     boolean hasHandler();
     /**
+     * <pre>
+     * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler getHandler();
     /**
+     * <pre>
+     * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandlerOrBuilder getHandlerOrBuilder();
   }
   /**
+   * <pre>
+   * A SNI handler resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.SniMatch}
    */
   public  static final class SniMatch extends
@@ -14635,6 +16076,10 @@ public final class LoadBalancerOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the SNI handler.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getName() {
@@ -14650,6 +16095,10 @@ public final class LoadBalancerOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the SNI handler.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -14669,6 +16118,10 @@ public final class LoadBalancerOuterClass {
     public static final int SERVER_NAMES_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList serverNames_;
     /**
+     * <pre>
+     * Server names that are matched by the SNI handler.
+     * </pre>
+     *
      * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -14676,18 +16129,30 @@ public final class LoadBalancerOuterClass {
       return serverNames_;
     }
     /**
+     * <pre>
+     * Server names that are matched by the SNI handler.
+     * </pre>
+     *
      * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public int getServerNamesCount() {
       return serverNames_.size();
     }
     /**
+     * <pre>
+     * Server names that are matched by the SNI handler.
+     * </pre>
+     *
      * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public java.lang.String getServerNames(int index) {
       return serverNames_.get(index);
     }
     /**
+     * <pre>
+     * Server names that are matched by the SNI handler.
+     * </pre>
+     *
      * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public com.google.protobuf.ByteString
@@ -14698,18 +16163,30 @@ public final class LoadBalancerOuterClass {
     public static final int HANDLER_FIELD_NUMBER = 3;
     private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler handler_;
     /**
+     * <pre>
+     * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
      */
     public boolean hasHandler() {
       return handler_ != null;
     }
     /**
+     * <pre>
+     * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler getHandler() {
       return handler_ == null ? yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler.getDefaultInstance() : handler_;
     }
     /**
+     * <pre>
+     * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandlerOrBuilder getHandlerOrBuilder() {
@@ -14905,6 +16382,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A SNI handler resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.SniMatch}
      */
     public static final class Builder extends
@@ -15089,6 +16570,10 @@ public final class LoadBalancerOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the SNI handler.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getName() {
@@ -15104,6 +16589,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the SNI handler.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -15120,6 +16609,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the SNI handler.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setName(
@@ -15133,6 +16626,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the SNI handler.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearName() {
@@ -15142,6 +16639,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the SNI handler.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setNameBytes(
@@ -15164,6 +16665,10 @@ public final class LoadBalancerOuterClass {
          }
       }
       /**
+       * <pre>
+       * Server names that are matched by the SNI handler.
+       * </pre>
+       *
        * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -15171,18 +16676,30 @@ public final class LoadBalancerOuterClass {
         return serverNames_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Server names that are matched by the SNI handler.
+       * </pre>
+       *
        * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public int getServerNamesCount() {
         return serverNames_.size();
       }
       /**
+       * <pre>
+       * Server names that are matched by the SNI handler.
+       * </pre>
+       *
        * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.lang.String getServerNames(int index) {
         return serverNames_.get(index);
       }
       /**
+       * <pre>
+       * Server names that are matched by the SNI handler.
+       * </pre>
+       *
        * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public com.google.protobuf.ByteString
@@ -15190,6 +16707,10 @@ public final class LoadBalancerOuterClass {
         return serverNames_.getByteString(index);
       }
       /**
+       * <pre>
+       * Server names that are matched by the SNI handler.
+       * </pre>
+       *
        * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder setServerNames(
@@ -15203,6 +16724,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Server names that are matched by the SNI handler.
+       * </pre>
+       *
        * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addServerNames(
@@ -15216,6 +16741,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Server names that are matched by the SNI handler.
+       * </pre>
+       *
        * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAllServerNames(
@@ -15227,6 +16756,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Server names that are matched by the SNI handler.
+       * </pre>
+       *
        * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder clearServerNames() {
@@ -15236,6 +16769,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Server names that are matched by the SNI handler.
+       * </pre>
+       *
        * <code>repeated string server_names = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addServerNamesBytes(
@@ -15254,12 +16791,20 @@ public final class LoadBalancerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandlerOrBuilder> handlerBuilder_;
       /**
+       * <pre>
+       * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
        */
       public boolean hasHandler() {
         return handlerBuilder_ != null || handler_ != null;
       }
       /**
+       * <pre>
+       * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler getHandler() {
@@ -15270,6 +16815,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHandler(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler value) {
@@ -15286,6 +16835,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHandler(
@@ -15300,6 +16853,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeHandler(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler value) {
@@ -15318,6 +16875,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearHandler() {
@@ -15332,6 +16893,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler.Builder getHandlerBuilder() {
@@ -15340,6 +16905,10 @@ public final class LoadBalancerOuterClass {
         return getHandlerFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandlerOrBuilder getHandlerOrBuilder() {
@@ -15351,6 +16920,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Settings for handling requests with Server Name Indication (SNI) matching one of [server_names] values.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.TlsHandler handler = 3 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -15424,24 +16997,34 @@ public final class LoadBalancerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * HTTP handler.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
      */
     boolean hasHttpHandler();
     /**
+     * <pre>
+     * HTTP handler.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler getHttpHandler();
     /**
+     * <pre>
+     * HTTP handler.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandlerOrBuilder getHttpHandlerOrBuilder();
 
     /**
      * <pre>
-     * Certificate IDs in the Certificate Manager.
-     * Multiple TLS certificates can be associated with the same context to allow
-     * both RSA and ECDSA certificates.
-     * Only the first certificate of each type will be used.
+     * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+     * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
      * </pre>
      *
      * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -15450,10 +17033,8 @@ public final class LoadBalancerOuterClass {
         getCertificateIdsList();
     /**
      * <pre>
-     * Certificate IDs in the Certificate Manager.
-     * Multiple TLS certificates can be associated with the same context to allow
-     * both RSA and ECDSA certificates.
-     * Only the first certificate of each type will be used.
+     * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+     * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
      * </pre>
      *
      * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -15461,10 +17042,8 @@ public final class LoadBalancerOuterClass {
     int getCertificateIdsCount();
     /**
      * <pre>
-     * Certificate IDs in the Certificate Manager.
-     * Multiple TLS certificates can be associated with the same context to allow
-     * both RSA and ECDSA certificates.
-     * Only the first certificate of each type will be used.
+     * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+     * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
      * </pre>
      *
      * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -15472,10 +17051,8 @@ public final class LoadBalancerOuterClass {
     java.lang.String getCertificateIds(int index);
     /**
      * <pre>
-     * Certificate IDs in the Certificate Manager.
-     * Multiple TLS certificates can be associated with the same context to allow
-     * both RSA and ECDSA certificates.
-     * Only the first certificate of each type will be used.
+     * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+     * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
      * </pre>
      *
      * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -15486,6 +17063,10 @@ public final class LoadBalancerOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TlsHandler.HandlerCase getHandlerCase();
   }
   /**
+   * <pre>
+   * An HTTPS (HTTP over TLS) handler resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TlsHandler}
    */
   public  static final class TlsHandler extends
@@ -15622,12 +17203,20 @@ public final class LoadBalancerOuterClass {
 
     public static final int HTTP_HANDLER_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * HTTP handler.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
      */
     public boolean hasHttpHandler() {
       return handlerCase_ == 2;
     }
     /**
+     * <pre>
+     * HTTP handler.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler getHttpHandler() {
@@ -15637,6 +17226,10 @@ public final class LoadBalancerOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler.getDefaultInstance();
     }
     /**
+     * <pre>
+     * HTTP handler.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandlerOrBuilder getHttpHandlerOrBuilder() {
@@ -15650,10 +17243,8 @@ public final class LoadBalancerOuterClass {
     private com.google.protobuf.LazyStringList certificateIds_;
     /**
      * <pre>
-     * Certificate IDs in the Certificate Manager.
-     * Multiple TLS certificates can be associated with the same context to allow
-     * both RSA and ECDSA certificates.
-     * Only the first certificate of each type will be used.
+     * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+     * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
      * </pre>
      *
      * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -15664,10 +17255,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Certificate IDs in the Certificate Manager.
-     * Multiple TLS certificates can be associated with the same context to allow
-     * both RSA and ECDSA certificates.
-     * Only the first certificate of each type will be used.
+     * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+     * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
      * </pre>
      *
      * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -15677,10 +17266,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Certificate IDs in the Certificate Manager.
-     * Multiple TLS certificates can be associated with the same context to allow
-     * both RSA and ECDSA certificates.
-     * Only the first certificate of each type will be used.
+     * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+     * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
      * </pre>
      *
      * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -15690,10 +17277,8 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Certificate IDs in the Certificate Manager.
-     * Multiple TLS certificates can be associated with the same context to allow
-     * both RSA and ECDSA certificates.
-     * Only the first certificate of each type will be used.
+     * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+     * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
      * </pre>
      *
      * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -15892,6 +17477,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An HTTPS (HTTP over TLS) handler resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TlsHandler}
      */
     public static final class Builder extends
@@ -16090,12 +17679,20 @@ public final class LoadBalancerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandlerOrBuilder> httpHandlerBuilder_;
       /**
+       * <pre>
+       * HTTP handler.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
        */
       public boolean hasHttpHandler() {
         return handlerCase_ == 2;
       }
       /**
+       * <pre>
+       * HTTP handler.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler getHttpHandler() {
@@ -16112,6 +17709,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTP handler.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
        */
       public Builder setHttpHandler(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler value) {
@@ -16128,6 +17729,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP handler.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
        */
       public Builder setHttpHandler(
@@ -16142,6 +17747,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP handler.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
        */
       public Builder mergeHttpHandler(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler value) {
@@ -16164,6 +17773,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP handler.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
        */
       public Builder clearHttpHandler() {
@@ -16183,12 +17796,20 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP handler.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandler.Builder getHttpHandlerBuilder() {
         return getHttpHandlerFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * HTTP handler.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.HttpHandlerOrBuilder getHttpHandlerOrBuilder() {
@@ -16202,6 +17823,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTP handler.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpHandler http_handler = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -16232,10 +17857,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Certificate IDs in the Certificate Manager.
-       * Multiple TLS certificates can be associated with the same context to allow
-       * both RSA and ECDSA certificates.
-       * Only the first certificate of each type will be used.
+       * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+       * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
        * </pre>
        *
        * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -16246,10 +17869,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Certificate IDs in the Certificate Manager.
-       * Multiple TLS certificates can be associated with the same context to allow
-       * both RSA and ECDSA certificates.
-       * Only the first certificate of each type will be used.
+       * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+       * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
        * </pre>
        *
        * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -16259,10 +17880,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Certificate IDs in the Certificate Manager.
-       * Multiple TLS certificates can be associated with the same context to allow
-       * both RSA and ECDSA certificates.
-       * Only the first certificate of each type will be used.
+       * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+       * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
        * </pre>
        *
        * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -16272,10 +17891,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Certificate IDs in the Certificate Manager.
-       * Multiple TLS certificates can be associated with the same context to allow
-       * both RSA and ECDSA certificates.
-       * Only the first certificate of each type will be used.
+       * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+       * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
        * </pre>
        *
        * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -16286,10 +17903,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Certificate IDs in the Certificate Manager.
-       * Multiple TLS certificates can be associated with the same context to allow
-       * both RSA and ECDSA certificates.
-       * Only the first certificate of each type will be used.
+       * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+       * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
        * </pre>
        *
        * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -16306,10 +17921,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Certificate IDs in the Certificate Manager.
-       * Multiple TLS certificates can be associated with the same context to allow
-       * both RSA and ECDSA certificates.
-       * Only the first certificate of each type will be used.
+       * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+       * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
        * </pre>
        *
        * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -16326,10 +17939,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Certificate IDs in the Certificate Manager.
-       * Multiple TLS certificates can be associated with the same context to allow
-       * both RSA and ECDSA certificates.
-       * Only the first certificate of each type will be used.
+       * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+       * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
        * </pre>
        *
        * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -16344,10 +17955,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Certificate IDs in the Certificate Manager.
-       * Multiple TLS certificates can be associated with the same context to allow
-       * both RSA and ECDSA certificates.
-       * Only the first certificate of each type will be used.
+       * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+       * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
        * </pre>
        *
        * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -16360,10 +17969,8 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Certificate IDs in the Certificate Manager.
-       * Multiple TLS certificates can be associated with the same context to allow
-       * both RSA and ECDSA certificates.
-       * Only the first certificate of each type will be used.
+       * ID's of the TLS server certificates from [Certificate Manager](/docs/certificate-manager/).
+       * RSA and ECDSA certificates are supported, and only the first certificate of each type is used.
        * </pre>
        *
        * <code>repeated string certificate_ids = 3 [(.yandex.cloud.size) = "&gt;0"];</code>
@@ -16438,7 +18045,7 @@ public final class LoadBalancerOuterClass {
 
     /**
      * <pre>
-     * Statuses of the target for all known zones.
+     * Health of the target, i.e. its statuses in all availability zones.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -16446,7 +18053,7 @@ public final class LoadBalancerOuterClass {
     boolean hasStatus();
     /**
      * <pre>
-     * Statuses of the target for all known zones.
+     * Health of the target, i.e. its statuses in all availability zones.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -16454,7 +18061,7 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.HealthcheckStatus getStatus();
     /**
      * <pre>
-     * Statuses of the target for all known zones.
+     * Health of the target, i.e. its statuses in all availability zones.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -16462,19 +18069,35 @@ public final class LoadBalancerOuterClass {
     yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.HealthcheckStatusOrBuilder getStatusOrBuilder();
 
     /**
+     * <pre>
+     * Target.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
      */
     boolean hasTarget();
     /**
+     * <pre>
+     * Target.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTarget();
     /**
+     * <pre>
+     * Target.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetOrBuilder();
   }
   /**
+   * <pre>
+   * A target state resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TargetState}
    */
   public  static final class TargetState extends
@@ -16572,6 +18195,10 @@ public final class LoadBalancerOuterClass {
     }
 
     /**
+     * <pre>
+     * Supported target statuses.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.apploadbalancer.v1.TargetState.Status}
      */
     public enum Status
@@ -16581,18 +18208,39 @@ public final class LoadBalancerOuterClass {
        */
       STATUS_UNSPECIFIED(0),
       /**
+       * <pre>
+       * All of the health checks specified in [HttpBackend.healthchecks] or [GrpcBackend.healthchecks] are passed
+       * (the number depends on the [HealthCheck.healthy_threshold] setting) and the target is ready to receive traffic.
+       * </pre>
+       *
        * <code>HEALTHY = 1;</code>
        */
       HEALTHY(1),
       /**
+       * <pre>
+       * Some of the health checks specified in [HttpBackend.healthchecks] or [GrpcBackend.healthchecks] failed
+       * (the number depends on the [HealthCheck.unhealthy_threshold] setting).
+       * The target is ready to receive traffic from the load balancer nodes which, based on their health checks,
+       * consider the target healthy.
+       * </pre>
+       *
        * <code>PARTIALLY_HEALTHY = 2;</code>
        */
       PARTIALLY_HEALTHY(2),
       /**
+       * <pre>
+       * All of the health checks specified in [HttpBackend.healthchecks] or [GrpcBackend.healthchecks] failed
+       * (the number depends on the [HealthCheck.unhealthy_threshold] setting) and the target is not receiving traffic.
+       * </pre>
+       *
        * <code>UNHEALTHY = 3;</code>
        */
       UNHEALTHY(3),
       /**
+       * <pre>
+       * Target is being deleted and the application load balancer is no longer sending traffic to this target.
+       * </pre>
+       *
        * <code>DRAINING = 4;</code>
        */
       DRAINING(4),
@@ -16608,18 +18256,39 @@ public final class LoadBalancerOuterClass {
        */
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * All of the health checks specified in [HttpBackend.healthchecks] or [GrpcBackend.healthchecks] are passed
+       * (the number depends on the [HealthCheck.healthy_threshold] setting) and the target is ready to receive traffic.
+       * </pre>
+       *
        * <code>HEALTHY = 1;</code>
        */
       public static final int HEALTHY_VALUE = 1;
       /**
+       * <pre>
+       * Some of the health checks specified in [HttpBackend.healthchecks] or [GrpcBackend.healthchecks] failed
+       * (the number depends on the [HealthCheck.unhealthy_threshold] setting).
+       * The target is ready to receive traffic from the load balancer nodes which, based on their health checks,
+       * consider the target healthy.
+       * </pre>
+       *
        * <code>PARTIALLY_HEALTHY = 2;</code>
        */
       public static final int PARTIALLY_HEALTHY_VALUE = 2;
       /**
+       * <pre>
+       * All of the health checks specified in [HttpBackend.healthchecks] or [GrpcBackend.healthchecks] failed
+       * (the number depends on the [HealthCheck.unhealthy_threshold] setting) and the target is not receiving traffic.
+       * </pre>
+       *
        * <code>UNHEALTHY = 3;</code>
        */
       public static final int UNHEALTHY_VALUE = 3;
       /**
+       * <pre>
+       * Target is being deleted and the application load balancer is no longer sending traffic to this target.
+       * </pre>
+       *
        * <code>DRAINING = 4;</code>
        */
       public static final int DRAINING_VALUE = 4;
@@ -16710,30 +18379,54 @@ public final class LoadBalancerOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Statuses of the target in its availability zones.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
        */
       java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus> 
           getZoneStatusesList();
       /**
+       * <pre>
+       * Statuses of the target in its availability zones.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
        */
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus getZoneStatuses(int index);
       /**
+       * <pre>
+       * Statuses of the target in its availability zones.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
        */
       int getZoneStatusesCount();
       /**
+       * <pre>
+       * Statuses of the target in its availability zones.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
        */
       java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatusOrBuilder> 
           getZoneStatusesOrBuilderList();
       /**
+       * <pre>
+       * Statuses of the target in its availability zones.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
        */
       yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatusOrBuilder getZoneStatusesOrBuilder(
           int index);
     }
     /**
+     * <pre>
+     * Health of the target.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus}
      */
     public  static final class HealthcheckStatus extends
@@ -16820,12 +18513,20 @@ public final class LoadBalancerOuterClass {
       public static final int ZONE_STATUSES_FIELD_NUMBER = 1;
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus> zoneStatuses_;
       /**
+       * <pre>
+       * Statuses of the target in its availability zones.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus> getZoneStatusesList() {
         return zoneStatuses_;
       }
       /**
+       * <pre>
+       * Statuses of the target in its availability zones.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatusOrBuilder> 
@@ -16833,18 +18534,30 @@ public final class LoadBalancerOuterClass {
         return zoneStatuses_;
       }
       /**
+       * <pre>
+       * Statuses of the target in its availability zones.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
        */
       public int getZoneStatusesCount() {
         return zoneStatuses_.size();
       }
       /**
+       * <pre>
+       * Statuses of the target in its availability zones.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus getZoneStatuses(int index) {
         return zoneStatuses_.get(index);
       }
       /**
+       * <pre>
+       * Statuses of the target in its availability zones.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatusOrBuilder getZoneStatusesOrBuilder(
@@ -17011,6 +18724,10 @@ public final class LoadBalancerOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Health of the target.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus}
        */
       public static final class Builder extends
@@ -17208,6 +18925,10 @@ public final class LoadBalancerOuterClass {
             yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatusOrBuilder> zoneStatusesBuilder_;
 
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus> getZoneStatusesList() {
@@ -17218,6 +18939,10 @@ public final class LoadBalancerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public int getZoneStatusesCount() {
@@ -17228,6 +18953,10 @@ public final class LoadBalancerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus getZoneStatuses(int index) {
@@ -17238,6 +18967,10 @@ public final class LoadBalancerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public Builder setZoneStatuses(
@@ -17255,6 +18988,10 @@ public final class LoadBalancerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public Builder setZoneStatuses(
@@ -17269,6 +19006,10 @@ public final class LoadBalancerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public Builder addZoneStatuses(yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus value) {
@@ -17285,6 +19026,10 @@ public final class LoadBalancerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public Builder addZoneStatuses(
@@ -17302,6 +19047,10 @@ public final class LoadBalancerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public Builder addZoneStatuses(
@@ -17316,6 +19065,10 @@ public final class LoadBalancerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public Builder addZoneStatuses(
@@ -17330,6 +19083,10 @@ public final class LoadBalancerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public Builder addAllZoneStatuses(
@@ -17345,6 +19102,10 @@ public final class LoadBalancerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public Builder clearZoneStatuses() {
@@ -17358,6 +19119,10 @@ public final class LoadBalancerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public Builder removeZoneStatuses(int index) {
@@ -17371,6 +19136,10 @@ public final class LoadBalancerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus.Builder getZoneStatusesBuilder(
@@ -17378,6 +19147,10 @@ public final class LoadBalancerOuterClass {
           return getZoneStatusesFieldBuilder().getBuilder(index);
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatusOrBuilder getZoneStatusesOrBuilder(
@@ -17388,6 +19161,10 @@ public final class LoadBalancerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatusOrBuilder> 
@@ -17399,6 +19176,10 @@ public final class LoadBalancerOuterClass {
           }
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus.Builder addZoneStatusesBuilder() {
@@ -17406,6 +19187,10 @@ public final class LoadBalancerOuterClass {
               yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus.getDefaultInstance());
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus.Builder addZoneStatusesBuilder(
@@ -17414,6 +19199,10 @@ public final class LoadBalancerOuterClass {
               index, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus.getDefaultInstance());
         }
         /**
+         * <pre>
+         * Statuses of the target in its availability zones.
+         * </pre>
+         *
          * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus zone_statuses = 1;</code>
          */
         public java.util.List<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.ZoneHealthcheckStatus.Builder> 
@@ -17492,10 +19281,18 @@ public final class LoadBalancerOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * ID of the availability zone.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       java.lang.String getZoneId();
       /**
+       * <pre>
+       * ID of the availability zone.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       com.google.protobuf.ByteString
@@ -17503,7 +19300,7 @@ public final class LoadBalancerOuterClass {
 
       /**
        * <pre>
-       * Healthcheck status of target for the specific zone.
+       * Status of the target in the availability zone.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetState.Status status = 2;</code>
@@ -17511,7 +19308,7 @@ public final class LoadBalancerOuterClass {
       int getStatusValue();
       /**
        * <pre>
-       * Healthcheck status of target for the specific zone.
+       * Status of the target in the availability zone.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetState.Status status = 2;</code>
@@ -17520,7 +19317,11 @@ public final class LoadBalancerOuterClass {
 
       /**
        * <pre>
-       * Whether UNHEALTHY status was set due to failed active checks or not.
+       * Indicates whether the target has been marked `UNHEALTHY` due to failing active health checks,
+       * which determine target statuses as configured in [HttpBackend.healthchecks] or [GrpcBackend.healthchecks].
+       * Currently the only type of health checks is active, as described above.
+       * Passive health checks, which determine the health of a target based on its responses to production requests
+       * (HTTP 5xx status codes, connection errors etc.), are not implemented yet.
        * </pre>
        *
        * <code>bool failed_active_hc = 3;</code>
@@ -17528,6 +19329,10 @@ public final class LoadBalancerOuterClass {
       boolean getFailedActiveHc();
     }
     /**
+     * <pre>
+     * Health of the target in the availability zone.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus}
      */
     public  static final class ZoneHealthcheckStatus extends
@@ -17621,6 +19426,10 @@ public final class LoadBalancerOuterClass {
       public static final int ZONE_ID_FIELD_NUMBER = 1;
       private volatile java.lang.Object zoneId_;
       /**
+       * <pre>
+       * ID of the availability zone.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getZoneId() {
@@ -17636,6 +19445,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the availability zone.
+       * </pre>
+       *
        * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -17656,7 +19469,7 @@ public final class LoadBalancerOuterClass {
       private int status_;
       /**
        * <pre>
-       * Healthcheck status of target for the specific zone.
+       * Status of the target in the availability zone.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetState.Status status = 2;</code>
@@ -17666,7 +19479,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Healthcheck status of target for the specific zone.
+       * Status of the target in the availability zone.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetState.Status status = 2;</code>
@@ -17681,7 +19494,11 @@ public final class LoadBalancerOuterClass {
       private boolean failedActiveHc_;
       /**
        * <pre>
-       * Whether UNHEALTHY status was set due to failed active checks or not.
+       * Indicates whether the target has been marked `UNHEALTHY` due to failing active health checks,
+       * which determine target statuses as configured in [HttpBackend.healthchecks] or [GrpcBackend.healthchecks].
+       * Currently the only type of health checks is active, as described above.
+       * Passive health checks, which determine the health of a target based on its responses to production requests
+       * (HTTP 5xx status codes, connection errors etc.), are not implemented yet.
        * </pre>
        *
        * <code>bool failed_active_hc = 3;</code>
@@ -17868,6 +19685,10 @@ public final class LoadBalancerOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Health of the target in the availability zone.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TargetState.ZoneHealthcheckStatus}
        */
       public static final class Builder extends
@@ -18029,6 +19850,10 @@ public final class LoadBalancerOuterClass {
 
         private java.lang.Object zoneId_ = "";
         /**
+         * <pre>
+         * ID of the availability zone.
+         * </pre>
+         *
          * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
          */
         public java.lang.String getZoneId() {
@@ -18044,6 +19869,10 @@ public final class LoadBalancerOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the availability zone.
+         * </pre>
+         *
          * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
          */
         public com.google.protobuf.ByteString
@@ -18060,6 +19889,10 @@ public final class LoadBalancerOuterClass {
           }
         }
         /**
+         * <pre>
+         * ID of the availability zone.
+         * </pre>
+         *
          * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setZoneId(
@@ -18073,6 +19906,10 @@ public final class LoadBalancerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the availability zone.
+         * </pre>
+         *
          * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
          */
         public Builder clearZoneId() {
@@ -18082,6 +19919,10 @@ public final class LoadBalancerOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * ID of the availability zone.
+         * </pre>
+         *
          * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
          */
         public Builder setZoneIdBytes(
@@ -18099,7 +19940,7 @@ public final class LoadBalancerOuterClass {
         private int status_ = 0;
         /**
          * <pre>
-         * Healthcheck status of target for the specific zone.
+         * Status of the target in the availability zone.
          * </pre>
          *
          * <code>.yandex.cloud.apploadbalancer.v1.TargetState.Status status = 2;</code>
@@ -18109,7 +19950,7 @@ public final class LoadBalancerOuterClass {
         }
         /**
          * <pre>
-         * Healthcheck status of target for the specific zone.
+         * Status of the target in the availability zone.
          * </pre>
          *
          * <code>.yandex.cloud.apploadbalancer.v1.TargetState.Status status = 2;</code>
@@ -18121,7 +19962,7 @@ public final class LoadBalancerOuterClass {
         }
         /**
          * <pre>
-         * Healthcheck status of target for the specific zone.
+         * Status of the target in the availability zone.
          * </pre>
          *
          * <code>.yandex.cloud.apploadbalancer.v1.TargetState.Status status = 2;</code>
@@ -18133,7 +19974,7 @@ public final class LoadBalancerOuterClass {
         }
         /**
          * <pre>
-         * Healthcheck status of target for the specific zone.
+         * Status of the target in the availability zone.
          * </pre>
          *
          * <code>.yandex.cloud.apploadbalancer.v1.TargetState.Status status = 2;</code>
@@ -18149,7 +19990,7 @@ public final class LoadBalancerOuterClass {
         }
         /**
          * <pre>
-         * Healthcheck status of target for the specific zone.
+         * Status of the target in the availability zone.
          * </pre>
          *
          * <code>.yandex.cloud.apploadbalancer.v1.TargetState.Status status = 2;</code>
@@ -18164,7 +20005,11 @@ public final class LoadBalancerOuterClass {
         private boolean failedActiveHc_ ;
         /**
          * <pre>
-         * Whether UNHEALTHY status was set due to failed active checks or not.
+         * Indicates whether the target has been marked `UNHEALTHY` due to failing active health checks,
+         * which determine target statuses as configured in [HttpBackend.healthchecks] or [GrpcBackend.healthchecks].
+         * Currently the only type of health checks is active, as described above.
+         * Passive health checks, which determine the health of a target based on its responses to production requests
+         * (HTTP 5xx status codes, connection errors etc.), are not implemented yet.
          * </pre>
          *
          * <code>bool failed_active_hc = 3;</code>
@@ -18174,7 +20019,11 @@ public final class LoadBalancerOuterClass {
         }
         /**
          * <pre>
-         * Whether UNHEALTHY status was set due to failed active checks or not.
+         * Indicates whether the target has been marked `UNHEALTHY` due to failing active health checks,
+         * which determine target statuses as configured in [HttpBackend.healthchecks] or [GrpcBackend.healthchecks].
+         * Currently the only type of health checks is active, as described above.
+         * Passive health checks, which determine the health of a target based on its responses to production requests
+         * (HTTP 5xx status codes, connection errors etc.), are not implemented yet.
          * </pre>
          *
          * <code>bool failed_active_hc = 3;</code>
@@ -18187,7 +20036,11 @@ public final class LoadBalancerOuterClass {
         }
         /**
          * <pre>
-         * Whether UNHEALTHY status was set due to failed active checks or not.
+         * Indicates whether the target has been marked `UNHEALTHY` due to failing active health checks,
+         * which determine target statuses as configured in [HttpBackend.healthchecks] or [GrpcBackend.healthchecks].
+         * Currently the only type of health checks is active, as described above.
+         * Passive health checks, which determine the health of a target based on its responses to production requests
+         * (HTTP 5xx status codes, connection errors etc.), are not implemented yet.
          * </pre>
          *
          * <code>bool failed_active_hc = 3;</code>
@@ -18255,7 +20108,7 @@ public final class LoadBalancerOuterClass {
     private yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.HealthcheckStatus status_;
     /**
      * <pre>
-     * Statuses of the target for all known zones.
+     * Health of the target, i.e. its statuses in all availability zones.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -18265,7 +20118,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Statuses of the target for all known zones.
+     * Health of the target, i.e. its statuses in all availability zones.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -18275,7 +20128,7 @@ public final class LoadBalancerOuterClass {
     }
     /**
      * <pre>
-     * Statuses of the target for all known zones.
+     * Health of the target, i.e. its statuses in all availability zones.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -18287,18 +20140,30 @@ public final class LoadBalancerOuterClass {
     public static final int TARGET_FIELD_NUMBER = 2;
     private yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target target_;
     /**
+     * <pre>
+     * Target.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
      */
     public boolean hasTarget() {
       return target_ != null;
     }
     /**
+     * <pre>
+     * Target.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTarget() {
       return target_ == null ? yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.getDefaultInstance() : target_;
     }
     /**
+     * <pre>
+     * Target.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetOrBuilder() {
@@ -18483,6 +20348,10 @@ public final class LoadBalancerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A target state resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.TargetState}
      */
     public static final class Builder extends
@@ -18656,7 +20525,7 @@ public final class LoadBalancerOuterClass {
           yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.HealthcheckStatus, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.HealthcheckStatus.Builder, yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.TargetState.HealthcheckStatusOrBuilder> statusBuilder_;
       /**
        * <pre>
-       * Statuses of the target for all known zones.
+       * Health of the target, i.e. its statuses in all availability zones.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -18666,7 +20535,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Statuses of the target for all known zones.
+       * Health of the target, i.e. its statuses in all availability zones.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -18680,7 +20549,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Statuses of the target for all known zones.
+       * Health of the target, i.e. its statuses in all availability zones.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -18700,7 +20569,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Statuses of the target for all known zones.
+       * Health of the target, i.e. its statuses in all availability zones.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -18718,7 +20587,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Statuses of the target for all known zones.
+       * Health of the target, i.e. its statuses in all availability zones.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -18740,7 +20609,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Statuses of the target for all known zones.
+       * Health of the target, i.e. its statuses in all availability zones.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -18758,7 +20627,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Statuses of the target for all known zones.
+       * Health of the target, i.e. its statuses in all availability zones.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -18770,7 +20639,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Statuses of the target for all known zones.
+       * Health of the target, i.e. its statuses in all availability zones.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -18785,7 +20654,7 @@ public final class LoadBalancerOuterClass {
       }
       /**
        * <pre>
-       * Statuses of the target for all known zones.
+       * Health of the target, i.e. its statuses in all availability zones.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetState.HealthcheckStatus status = 1;</code>
@@ -18808,12 +20677,20 @@ public final class LoadBalancerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> targetBuilder_;
       /**
+       * <pre>
+       * Target.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
        */
       public boolean hasTarget() {
         return targetBuilder_ != null || target_ != null;
       }
       /**
+       * <pre>
+       * Target.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTarget() {
@@ -18824,6 +20701,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Target.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTarget(yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target value) {
@@ -18840,6 +20721,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Target.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTarget(
@@ -18854,6 +20739,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Target.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeTarget(yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target value) {
@@ -18872,6 +20761,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Target.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearTarget() {
@@ -18886,6 +20779,10 @@ public final class LoadBalancerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Target.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder getTargetBuilder() {
@@ -18894,6 +20791,10 @@ public final class LoadBalancerOuterClass {
         return getTargetFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Target.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetOrBuilder() {
@@ -18905,6 +20806,10 @@ public final class LoadBalancerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Target.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.Target target = 2 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

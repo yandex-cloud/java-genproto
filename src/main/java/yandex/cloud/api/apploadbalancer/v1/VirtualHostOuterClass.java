@@ -19,10 +19,18 @@ public final class VirtualHostOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the virtual host. The name is unique within the HTTP router.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the virtual host. The name is unique within the HTTP router.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -30,10 +38,13 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * A list of domains (host/authority header) that will be matched to this
-     * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-     * '*-bar.foo.com'.
-     * If not specified, all domains will be matched.
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 2;</code>
@@ -42,10 +53,13 @@ public final class VirtualHostOuterClass {
         getAuthorityList();
     /**
      * <pre>
-     * A list of domains (host/authority header) that will be matched to this
-     * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-     * '*-bar.foo.com'.
-     * If not specified, all domains will be matched.
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 2;</code>
@@ -53,10 +67,13 @@ public final class VirtualHostOuterClass {
     int getAuthorityCount();
     /**
      * <pre>
-     * A list of domains (host/authority header) that will be matched to this
-     * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-     * '*-bar.foo.com'.
-     * If not specified, all domains will be matched.
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 2;</code>
@@ -64,10 +81,13 @@ public final class VirtualHostOuterClass {
     java.lang.String getAuthority(int index);
     /**
      * <pre>
-     * A list of domains (host/authority header) that will be matched to this
-     * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-     * '*-bar.foo.com'.
-     * If not specified, all domains will be matched.
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 2;</code>
@@ -77,8 +97,14 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Routes are matched *in-order*. Be careful when adding them to the end.
-     * For instance, having http '/' match first makes all other routes unused.
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -87,8 +113,14 @@ public final class VirtualHostOuterClass {
         getRoutesList();
     /**
      * <pre>
-     * Routes are matched *in-order*. Be careful when adding them to the end.
-     * For instance, having http '/' match first makes all other routes unused.
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -96,8 +128,14 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route getRoutes(int index);
     /**
      * <pre>
-     * Routes are matched *in-order*. Be careful when adding them to the end.
-     * For instance, having http '/' match first makes all other routes unused.
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -105,8 +143,14 @@ public final class VirtualHostOuterClass {
     int getRoutesCount();
     /**
      * <pre>
-     * Routes are matched *in-order*. Be careful when adding them to the end.
-     * For instance, having http '/' match first makes all other routes unused.
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -115,8 +159,14 @@ public final class VirtualHostOuterClass {
         getRoutesOrBuilderList();
     /**
      * <pre>
-     * Routes are matched *in-order*. Be careful when adding them to the end.
-     * For instance, having http '/' match first makes all other routes unused.
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -126,7 +176,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Apply the following modifications to the request headers.
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -135,7 +185,7 @@ public final class VirtualHostOuterClass {
         getModifyRequestHeadersList();
     /**
      * <pre>
-     * Apply the following modifications to the request headers.
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -143,7 +193,7 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyRequestHeaders(int index);
     /**
      * <pre>
-     * Apply the following modifications to the request headers.
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -151,7 +201,7 @@ public final class VirtualHostOuterClass {
     int getModifyRequestHeadersCount();
     /**
      * <pre>
-     * Apply the following modifications to the request headers.
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -160,7 +210,7 @@ public final class VirtualHostOuterClass {
         getModifyRequestHeadersOrBuilderList();
     /**
      * <pre>
-     * Apply the following modifications to the request headers.
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -170,7 +220,8 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Apply the following modifications to the response headers.
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -179,7 +230,8 @@ public final class VirtualHostOuterClass {
         getModifyResponseHeadersList();
     /**
      * <pre>
-     * Apply the following modifications to the response headers.
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -187,7 +239,8 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyResponseHeaders(int index);
     /**
      * <pre>
-     * Apply the following modifications to the response headers.
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -195,7 +248,8 @@ public final class VirtualHostOuterClass {
     int getModifyResponseHeadersCount();
     /**
      * <pre>
-     * Apply the following modifications to the response headers.
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -204,7 +258,8 @@ public final class VirtualHostOuterClass {
         getModifyResponseHeadersOrBuilderList();
     /**
      * <pre>
-     * Apply the following modifications to the response headers.
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -213,6 +268,11 @@ public final class VirtualHostOuterClass {
         int index);
   }
   /**
+   * <pre>
+   * A virtual host resource.
+   * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.VirtualHost}
    */
   public  static final class VirtualHost extends
@@ -346,6 +406,10 @@ public final class VirtualHostOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the virtual host. The name is unique within the HTTP router.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getName() {
@@ -361,6 +425,10 @@ public final class VirtualHostOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the virtual host. The name is unique within the HTTP router.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -381,10 +449,13 @@ public final class VirtualHostOuterClass {
     private com.google.protobuf.LazyStringList authority_;
     /**
      * <pre>
-     * A list of domains (host/authority header) that will be matched to this
-     * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-     * '*-bar.foo.com'.
-     * If not specified, all domains will be matched.
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 2;</code>
@@ -395,10 +466,13 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * A list of domains (host/authority header) that will be matched to this
-     * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-     * '*-bar.foo.com'.
-     * If not specified, all domains will be matched.
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 2;</code>
@@ -408,10 +482,13 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * A list of domains (host/authority header) that will be matched to this
-     * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-     * '*-bar.foo.com'.
-     * If not specified, all domains will be matched.
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 2;</code>
@@ -421,10 +498,13 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * A list of domains (host/authority header) that will be matched to this
-     * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-     * '*-bar.foo.com'.
-     * If not specified, all domains will be matched.
+     * List of domains that are attributed to the virtual host.
+     * The host is selected to process the request received by the load balancer
+     * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+     * specified in the host.
+     * A wildcard asterisk character (`*`) matches 0 or more characters.
+     * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+     * An HTTP router must not contain more than one virtual host to which all domains are attributed.
      * </pre>
      *
      * <code>repeated string authority = 2;</code>
@@ -438,8 +518,14 @@ public final class VirtualHostOuterClass {
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route> routes_;
     /**
      * <pre>
-     * Routes are matched *in-order*. Be careful when adding them to the end.
-     * For instance, having http '/' match first makes all other routes unused.
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -449,8 +535,14 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Routes are matched *in-order*. Be careful when adding them to the end.
-     * For instance, having http '/' match first makes all other routes unused.
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -461,8 +553,14 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Routes are matched *in-order*. Be careful when adding them to the end.
-     * For instance, having http '/' match first makes all other routes unused.
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -472,8 +570,14 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Routes are matched *in-order*. Be careful when adding them to the end.
-     * For instance, having http '/' match first makes all other routes unused.
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -483,8 +587,14 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Routes are matched *in-order*. Be careful when adding them to the end.
-     * For instance, having http '/' match first makes all other routes unused.
+     * Routes of the virtual host.
+     * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+     * for the request and an action on the request.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * The order of routes matters: the first route whose predicate matches the request is selected.
+     * The most specific routes should be at the top of the list, so that they are not overridden.
+     * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+     * other routes are never matched.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -498,7 +608,7 @@ public final class VirtualHostOuterClass {
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyRequestHeaders_;
     /**
      * <pre>
-     * Apply the following modifications to the request headers.
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -508,7 +618,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Apply the following modifications to the request headers.
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -519,7 +629,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Apply the following modifications to the request headers.
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -529,7 +639,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Apply the following modifications to the request headers.
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -539,7 +649,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Apply the following modifications to the request headers.
+     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -553,7 +663,8 @@ public final class VirtualHostOuterClass {
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyResponseHeaders_;
     /**
      * <pre>
-     * Apply the following modifications to the response headers.
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -563,7 +674,8 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Apply the following modifications to the response headers.
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -574,7 +686,8 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Apply the following modifications to the response headers.
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -584,7 +697,8 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Apply the following modifications to the response headers.
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -594,7 +708,8 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Apply the following modifications to the response headers.
+     * Modifications that are made to the headers of HTTP responses received from backends
+     * before responses are forwarded to clients.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -816,6 +931,11 @@ public final class VirtualHostOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A virtual host resource.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.VirtualHost}
      */
     public static final class Builder extends
@@ -1112,6 +1232,10 @@ public final class VirtualHostOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the virtual host. The name is unique within the HTTP router.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getName() {
@@ -1127,6 +1251,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the virtual host. The name is unique within the HTTP router.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -1143,6 +1271,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the virtual host. The name is unique within the HTTP router.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setName(
@@ -1156,6 +1288,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the virtual host. The name is unique within the HTTP router.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearName() {
@@ -1165,6 +1301,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the virtual host. The name is unique within the HTTP router.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setNameBytes(
@@ -1188,10 +1328,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * A list of domains (host/authority header) that will be matched to this
-       * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-       * '*-bar.foo.com'.
-       * If not specified, all domains will be matched.
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 2;</code>
@@ -1202,10 +1345,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * A list of domains (host/authority header) that will be matched to this
-       * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-       * '*-bar.foo.com'.
-       * If not specified, all domains will be matched.
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 2;</code>
@@ -1215,10 +1361,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * A list of domains (host/authority header) that will be matched to this
-       * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-       * '*-bar.foo.com'.
-       * If not specified, all domains will be matched.
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 2;</code>
@@ -1228,10 +1377,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * A list of domains (host/authority header) that will be matched to this
-       * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-       * '*-bar.foo.com'.
-       * If not specified, all domains will be matched.
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 2;</code>
@@ -1242,10 +1394,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * A list of domains (host/authority header) that will be matched to this
-       * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-       * '*-bar.foo.com'.
-       * If not specified, all domains will be matched.
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 2;</code>
@@ -1262,10 +1417,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * A list of domains (host/authority header) that will be matched to this
-       * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-       * '*-bar.foo.com'.
-       * If not specified, all domains will be matched.
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 2;</code>
@@ -1282,10 +1440,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * A list of domains (host/authority header) that will be matched to this
-       * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-       * '*-bar.foo.com'.
-       * If not specified, all domains will be matched.
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 2;</code>
@@ -1300,10 +1461,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * A list of domains (host/authority header) that will be matched to this
-       * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-       * '*-bar.foo.com'.
-       * If not specified, all domains will be matched.
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 2;</code>
@@ -1316,10 +1480,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * A list of domains (host/authority header) that will be matched to this
-       * virtual host. Wildcard hosts are supported in the form of '*.foo.com' or
-       * '*-bar.foo.com'.
-       * If not specified, all domains will be matched.
+       * List of domains that are attributed to the virtual host.
+       * The host is selected to process the request received by the load balancer
+       * if the domain specified in the HTTP/1.1 `Host` header or the HTTP/2 `:authority` pseudo-header matches a domain
+       * specified in the host.
+       * A wildcard asterisk character (`*`) matches 0 or more characters.
+       * If not specified, all domains are attributed to the host, which is the same as specifying a `*` value.
+       * An HTTP router must not contain more than one virtual host to which all domains are attributed.
        * </pre>
        *
        * <code>repeated string authority = 2;</code>
@@ -1350,8 +1517,14 @@ public final class VirtualHostOuterClass {
 
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1365,8 +1538,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1380,8 +1559,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1395,8 +1580,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1417,8 +1608,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1436,8 +1633,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1457,8 +1660,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1479,8 +1688,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1498,8 +1713,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1517,8 +1738,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1537,8 +1764,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1555,8 +1788,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1573,8 +1812,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1585,8 +1830,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1600,8 +1851,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1616,8 +1873,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1628,8 +1891,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1641,8 +1910,14 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Routes are matched *in-order*. Be careful when adding them to the end.
-       * For instance, having http '/' match first makes all other routes unused.
+       * Routes of the virtual host.
+       * A route contains a set of conditions (predicates) that are used by the load balancer to select the route
+       * for the request and an action on the request.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+       * The order of routes matters: the first route whose predicate matches the request is selected.
+       * The most specific routes should be at the top of the list, so that they are not overridden.
+       * For example, if the first HTTP route is configured, via [HttpRoute.match], to match paths prefixed with just `/`,
+       * other routes are never matched.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Route routes = 3;</code>
@@ -1680,7 +1955,7 @@ public final class VirtualHostOuterClass {
 
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1694,7 +1969,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1708,7 +1983,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1722,7 +1997,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1743,7 +2018,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1761,7 +2036,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1781,7 +2056,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1802,7 +2077,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1820,7 +2095,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1838,7 +2113,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1857,7 +2132,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1874,7 +2149,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1891,7 +2166,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1902,7 +2177,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1916,7 +2191,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1931,7 +2206,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1942,7 +2217,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1954,7 +2229,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the request headers.
+       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1992,7 +2267,8 @@ public final class VirtualHostOuterClass {
 
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2006,7 +2282,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2020,7 +2297,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2034,7 +2312,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2055,7 +2334,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2073,7 +2353,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2093,7 +2374,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2114,7 +2396,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2132,7 +2415,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2150,7 +2434,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2169,7 +2454,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2186,7 +2472,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2203,7 +2490,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2214,7 +2502,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2228,7 +2517,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2243,7 +2533,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2254,7 +2545,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2266,7 +2558,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Apply the following modifications to the response headers.
+       * Modifications that are made to the headers of HTTP responses received from backends
+       * before responses are forwarded to clients.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2366,7 +2659,9 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Append string to the header value.
+     * Appends the specified string to the header value.
+     * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+     * are supported.
      * </pre>
      *
      * <code>string append = 2;</code>
@@ -2374,7 +2669,9 @@ public final class VirtualHostOuterClass {
     java.lang.String getAppend();
     /**
      * <pre>
-     * Append string to the header value.
+     * Appends the specified string to the header value.
+     * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+     * are supported.
      * </pre>
      *
      * <code>string append = 2;</code>
@@ -2384,7 +2681,9 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * New value for a header.
+     * Replaces the value of the header with the specified string.
+     * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+     * are supported.
      * </pre>
      *
      * <code>string replace = 3;</code>
@@ -2392,7 +2691,9 @@ public final class VirtualHostOuterClass {
     java.lang.String getReplace();
     /**
      * <pre>
-     * New value for a header.
+     * Replaces the value of the header with the specified string.
+     * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+     * are supported.
      * </pre>
      *
      * <code>string replace = 3;</code>
@@ -2402,7 +2703,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Remove the header.
+     * Removes the header.
      * </pre>
      *
      * <code>bool remove = 4;</code>
@@ -2411,7 +2712,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * New name for a header.
+     * Replaces the name of the header with the specified string.
      * </pre>
      *
      * <code>string rename = 5;</code>
@@ -2419,7 +2720,7 @@ public final class VirtualHostOuterClass {
     java.lang.String getRename();
     /**
      * <pre>
-     * New name for a header.
+     * Replaces the name of the header with the specified string.
      * </pre>
      *
      * <code>string rename = 5;</code>
@@ -2430,6 +2731,10 @@ public final class VirtualHostOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.OperationCase getOperationCase();
   }
   /**
+   * <pre>
+   * A header modification resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HeaderModification}
    */
   public  static final class HeaderModification extends
@@ -2617,7 +2922,9 @@ public final class VirtualHostOuterClass {
     public static final int APPEND_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * Append string to the header value.
+     * Appends the specified string to the header value.
+     * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+     * are supported.
      * </pre>
      *
      * <code>string append = 2;</code>
@@ -2641,7 +2948,9 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Append string to the header value.
+     * Appends the specified string to the header value.
+     * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+     * are supported.
      * </pre>
      *
      * <code>string append = 2;</code>
@@ -2668,7 +2977,9 @@ public final class VirtualHostOuterClass {
     public static final int REPLACE_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * New value for a header.
+     * Replaces the value of the header with the specified string.
+     * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+     * are supported.
      * </pre>
      *
      * <code>string replace = 3;</code>
@@ -2692,7 +3003,9 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * New value for a header.
+     * Replaces the value of the header with the specified string.
+     * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+     * are supported.
      * </pre>
      *
      * <code>string replace = 3;</code>
@@ -2719,7 +3032,7 @@ public final class VirtualHostOuterClass {
     public static final int REMOVE_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * Remove the header.
+     * Removes the header.
      * </pre>
      *
      * <code>bool remove = 4;</code>
@@ -2734,7 +3047,7 @@ public final class VirtualHostOuterClass {
     public static final int RENAME_FIELD_NUMBER = 5;
     /**
      * <pre>
-     * New name for a header.
+     * Replaces the name of the header with the specified string.
      * </pre>
      *
      * <code>string rename = 5;</code>
@@ -2758,7 +3071,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * New name for a header.
+     * Replaces the name of the header with the specified string.
      * </pre>
      *
      * <code>string rename = 5;</code>
@@ -3009,6 +3322,10 @@ public final class VirtualHostOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A header modification resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HeaderModification}
      */
     public static final class Builder extends
@@ -3304,7 +3621,9 @@ public final class VirtualHostOuterClass {
 
       /**
        * <pre>
-       * Append string to the header value.
+       * Appends the specified string to the header value.
+       * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+       * are supported.
        * </pre>
        *
        * <code>string append = 2;</code>
@@ -3328,7 +3647,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Append string to the header value.
+       * Appends the specified string to the header value.
+       * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+       * are supported.
        * </pre>
        *
        * <code>string append = 2;</code>
@@ -3353,7 +3674,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Append string to the header value.
+       * Appends the specified string to the header value.
+       * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+       * are supported.
        * </pre>
        *
        * <code>string append = 2;</code>
@@ -3370,7 +3693,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Append string to the header value.
+       * Appends the specified string to the header value.
+       * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+       * are supported.
        * </pre>
        *
        * <code>string append = 2;</code>
@@ -3385,7 +3710,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Append string to the header value.
+       * Appends the specified string to the header value.
+       * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+       * are supported.
        * </pre>
        *
        * <code>string append = 2;</code>
@@ -3404,7 +3731,9 @@ public final class VirtualHostOuterClass {
 
       /**
        * <pre>
-       * New value for a header.
+       * Replaces the value of the header with the specified string.
+       * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+       * are supported.
        * </pre>
        *
        * <code>string replace = 3;</code>
@@ -3428,7 +3757,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * New value for a header.
+       * Replaces the value of the header with the specified string.
+       * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+       * are supported.
        * </pre>
        *
        * <code>string replace = 3;</code>
@@ -3453,7 +3784,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * New value for a header.
+       * Replaces the value of the header with the specified string.
+       * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+       * are supported.
        * </pre>
        *
        * <code>string replace = 3;</code>
@@ -3470,7 +3803,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * New value for a header.
+       * Replaces the value of the header with the specified string.
+       * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+       * are supported.
        * </pre>
        *
        * <code>string replace = 3;</code>
@@ -3485,7 +3820,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * New value for a header.
+       * Replaces the value of the header with the specified string.
+       * Variables [defined for Envoy proxy](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#custom-request-response-headers)
+       * are supported.
        * </pre>
        *
        * <code>string replace = 3;</code>
@@ -3504,7 +3841,7 @@ public final class VirtualHostOuterClass {
 
       /**
        * <pre>
-       * Remove the header.
+       * Removes the header.
        * </pre>
        *
        * <code>bool remove = 4;</code>
@@ -3517,7 +3854,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Remove the header.
+       * Removes the header.
        * </pre>
        *
        * <code>bool remove = 4;</code>
@@ -3530,7 +3867,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Remove the header.
+       * Removes the header.
        * </pre>
        *
        * <code>bool remove = 4;</code>
@@ -3546,7 +3883,7 @@ public final class VirtualHostOuterClass {
 
       /**
        * <pre>
-       * New name for a header.
+       * Replaces the name of the header with the specified string.
        * </pre>
        *
        * <code>string rename = 5;</code>
@@ -3570,7 +3907,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * New name for a header.
+       * Replaces the name of the header with the specified string.
        * </pre>
        *
        * <code>string rename = 5;</code>
@@ -3595,7 +3932,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * New name for a header.
+       * Replaces the name of the header with the specified string.
        * </pre>
        *
        * <code>string rename = 5;</code>
@@ -3612,7 +3949,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * New name for a header.
+       * Replaces the name of the header with the specified string.
        * </pre>
        *
        * <code>string rename = 5;</code>
@@ -3627,7 +3964,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * New name for a header.
+       * Replaces the name of the header with the specified string.
        * </pre>
        *
        * <code>string rename = 5;</code>
@@ -3701,37 +4038,69 @@ public final class VirtualHostOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the route.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the route.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * HTTP route configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
      */
     boolean hasHttp();
     /**
+     * <pre>
+     * HTTP route configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute getHttp();
     /**
+     * <pre>
+     * HTTP route configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteOrBuilder getHttpOrBuilder();
 
     /**
+     * <pre>
+     * gRPC route configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
      */
     boolean hasGrpc();
     /**
+     * <pre>
+     * gRPC route configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute getGrpc();
     /**
+     * <pre>
+     * gRPC route configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteOrBuilder getGrpcOrBuilder();
@@ -3739,6 +4108,11 @@ public final class VirtualHostOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.RouteCase getRouteCase();
   }
   /**
+   * <pre>
+   * A route resource.
+   * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Route}
    */
   public  static final class Route extends
@@ -3885,6 +4259,10 @@ public final class VirtualHostOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the route.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getName() {
@@ -3900,6 +4278,10 @@ public final class VirtualHostOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the route.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -3918,12 +4300,20 @@ public final class VirtualHostOuterClass {
 
     public static final int HTTP_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * HTTP route configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
      */
     public boolean hasHttp() {
       return routeCase_ == 2;
     }
     /**
+     * <pre>
+     * HTTP route configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute getHttp() {
@@ -3933,6 +4323,10 @@ public final class VirtualHostOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute.getDefaultInstance();
     }
     /**
+     * <pre>
+     * HTTP route configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteOrBuilder getHttpOrBuilder() {
@@ -3944,12 +4338,20 @@ public final class VirtualHostOuterClass {
 
     public static final int GRPC_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * gRPC route configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
      */
     public boolean hasGrpc() {
       return routeCase_ == 3;
     }
     /**
+     * <pre>
+     * gRPC route configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute getGrpc() {
@@ -3959,6 +4361,10 @@ public final class VirtualHostOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute.getDefaultInstance();
     }
     /**
+     * <pre>
+     * gRPC route configuration.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteOrBuilder getGrpcOrBuilder() {
@@ -4165,6 +4571,11 @@ public final class VirtualHostOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A route resource.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#routes).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Route}
      */
     public static final class Builder extends
@@ -4359,6 +4770,10 @@ public final class VirtualHostOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the route.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getName() {
@@ -4374,6 +4789,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the route.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -4390,6 +4809,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the route.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setName(
@@ -4403,6 +4826,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the route.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearName() {
@@ -4412,6 +4839,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the route.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setNameBytes(
@@ -4429,12 +4860,20 @@ public final class VirtualHostOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteOrBuilder> httpBuilder_;
       /**
+       * <pre>
+       * HTTP route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
        */
       public boolean hasHttp() {
         return routeCase_ == 2;
       }
       /**
+       * <pre>
+       * HTTP route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute getHttp() {
@@ -4451,6 +4890,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTP route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
        */
       public Builder setHttp(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute value) {
@@ -4467,6 +4910,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
        */
       public Builder setHttp(
@@ -4481,6 +4928,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
        */
       public Builder mergeHttp(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute value) {
@@ -4503,6 +4954,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
        */
       public Builder clearHttp() {
@@ -4522,12 +4977,20 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute.Builder getHttpBuilder() {
         return getHttpFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * HTTP route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteOrBuilder getHttpOrBuilder() {
@@ -4541,6 +5004,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTP route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRoute http = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4565,12 +5032,20 @@ public final class VirtualHostOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteOrBuilder> grpcBuilder_;
       /**
+       * <pre>
+       * gRPC route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
        */
       public boolean hasGrpc() {
         return routeCase_ == 3;
       }
       /**
+       * <pre>
+       * gRPC route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute getGrpc() {
@@ -4587,6 +5062,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * gRPC route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
        */
       public Builder setGrpc(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute value) {
@@ -4603,6 +5082,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * gRPC route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
        */
       public Builder setGrpc(
@@ -4617,6 +5100,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * gRPC route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
        */
       public Builder mergeGrpc(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute value) {
@@ -4639,6 +5126,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * gRPC route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
        */
       public Builder clearGrpc() {
@@ -4658,12 +5149,20 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * gRPC route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute.Builder getGrpcBuilder() {
         return getGrpcFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * gRPC route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteOrBuilder getGrpcOrBuilder() {
@@ -4677,6 +5176,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * gRPC route configuration.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRoute grpc = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4756,7 +5259,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Checks "/" prefix by default.
+     * Condition (predicate) used to select the route.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -4764,7 +5267,7 @@ public final class VirtualHostOuterClass {
     boolean hasMatch();
     /**
      * <pre>
-     * Checks "/" prefix by default.
+     * Condition (predicate) used to select the route.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -4772,7 +5275,7 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteMatch getMatch();
     /**
      * <pre>
-     * Checks "/" prefix by default.
+     * Condition (predicate) used to select the route.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -4780,40 +5283,76 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteMatchOrBuilder getMatchOrBuilder();
 
     /**
+     * <pre>
+     * Forwards the request to a backend group for processing as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
      */
     boolean hasRoute();
     /**
+     * <pre>
+     * Forwards the request to a backend group for processing as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteAction getRoute();
     /**
+     * <pre>
+     * Forwards the request to a backend group for processing as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteActionOrBuilder getRouteOrBuilder();
 
     /**
+     * <pre>
+     * Redirects the request as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
      */
     boolean hasRedirect();
     /**
+     * <pre>
+     * Redirects the request as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectAction getRedirect();
     /**
+     * <pre>
+     * Redirects the request as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectActionOrBuilder getRedirectOrBuilder();
 
     /**
+     * <pre>
+     * Instructs the load balancer to respond directly as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
      */
     boolean hasDirectResponse();
     /**
+     * <pre>
+     * Instructs the load balancer to respond directly as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.DirectResponseAction getDirectResponse();
     /**
+     * <pre>
+     * Instructs the load balancer to respond directly as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.DirectResponseActionOrBuilder getDirectResponseOrBuilder();
@@ -4821,6 +5360,10 @@ public final class VirtualHostOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRoute.ActionCase getActionCase();
   }
   /**
+   * <pre>
+   * An HTTP route configuration resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpRoute}
    */
   public  static final class HttpRoute extends
@@ -4990,7 +5533,7 @@ public final class VirtualHostOuterClass {
     private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteMatch match_;
     /**
      * <pre>
-     * Checks "/" prefix by default.
+     * Condition (predicate) used to select the route.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -5000,7 +5543,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Checks "/" prefix by default.
+     * Condition (predicate) used to select the route.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -5010,7 +5553,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Checks "/" prefix by default.
+     * Condition (predicate) used to select the route.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -5021,12 +5564,20 @@ public final class VirtualHostOuterClass {
 
     public static final int ROUTE_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Forwards the request to a backend group for processing as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
      */
     public boolean hasRoute() {
       return actionCase_ == 2;
     }
     /**
+     * <pre>
+     * Forwards the request to a backend group for processing as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteAction getRoute() {
@@ -5036,6 +5587,10 @@ public final class VirtualHostOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteAction.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Forwards the request to a backend group for processing as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteActionOrBuilder getRouteOrBuilder() {
@@ -5047,12 +5602,20 @@ public final class VirtualHostOuterClass {
 
     public static final int REDIRECT_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Redirects the request as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
      */
     public boolean hasRedirect() {
       return actionCase_ == 3;
     }
     /**
+     * <pre>
+     * Redirects the request as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectAction getRedirect() {
@@ -5062,6 +5625,10 @@ public final class VirtualHostOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectAction.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Redirects the request as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectActionOrBuilder getRedirectOrBuilder() {
@@ -5073,12 +5640,20 @@ public final class VirtualHostOuterClass {
 
     public static final int DIRECT_RESPONSE_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Instructs the load balancer to respond directly as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
      */
     public boolean hasDirectResponse() {
       return actionCase_ == 4;
     }
     /**
+     * <pre>
+     * Instructs the load balancer to respond directly as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.DirectResponseAction getDirectResponse() {
@@ -5088,6 +5663,10 @@ public final class VirtualHostOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.DirectResponseAction.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Instructs the load balancer to respond directly as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.DirectResponseActionOrBuilder getDirectResponseOrBuilder() {
@@ -5315,6 +5894,10 @@ public final class VirtualHostOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An HTTP route configuration resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpRoute}
      */
     public static final class Builder extends
@@ -5530,7 +6113,7 @@ public final class VirtualHostOuterClass {
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteMatchOrBuilder> matchBuilder_;
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -5540,7 +6123,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -5554,7 +6137,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -5574,7 +6157,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -5592,7 +6175,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -5614,7 +6197,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -5632,7 +6215,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -5644,7 +6227,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -5659,7 +6242,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteMatch match = 1;</code>
@@ -5681,12 +6264,20 @@ public final class VirtualHostOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteAction, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteAction.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteActionOrBuilder> routeBuilder_;
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
        */
       public boolean hasRoute() {
         return actionCase_ == 2;
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteAction getRoute() {
@@ -5703,6 +6294,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
        */
       public Builder setRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteAction value) {
@@ -5719,6 +6314,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
        */
       public Builder setRoute(
@@ -5733,6 +6332,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
        */
       public Builder mergeRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteAction value) {
@@ -5755,6 +6358,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
        */
       public Builder clearRoute() {
@@ -5774,12 +6381,20 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteAction.Builder getRouteBuilder() {
         return getRouteFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteActionOrBuilder getRouteOrBuilder() {
@@ -5793,6 +6408,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpRouteAction route = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5817,12 +6436,20 @@ public final class VirtualHostOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectAction, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectAction.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectActionOrBuilder> redirectBuilder_;
       /**
+       * <pre>
+       * Redirects the request as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
        */
       public boolean hasRedirect() {
         return actionCase_ == 3;
       }
       /**
+       * <pre>
+       * Redirects the request as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectAction getRedirect() {
@@ -5839,6 +6466,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Redirects the request as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
        */
       public Builder setRedirect(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectAction value) {
@@ -5855,6 +6486,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Redirects the request as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
        */
       public Builder setRedirect(
@@ -5869,6 +6504,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Redirects the request as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
        */
       public Builder mergeRedirect(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectAction value) {
@@ -5891,6 +6530,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Redirects the request as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
        */
       public Builder clearRedirect() {
@@ -5910,12 +6553,20 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Redirects the request as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectAction.Builder getRedirectBuilder() {
         return getRedirectFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Redirects the request as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectActionOrBuilder getRedirectOrBuilder() {
@@ -5929,6 +6580,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Redirects the request as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction redirect = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5953,12 +6608,20 @@ public final class VirtualHostOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.DirectResponseAction, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.DirectResponseAction.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.DirectResponseActionOrBuilder> directResponseBuilder_;
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
        */
       public boolean hasDirectResponse() {
         return actionCase_ == 4;
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.DirectResponseAction getDirectResponse() {
@@ -5975,6 +6638,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
        */
       public Builder setDirectResponse(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.DirectResponseAction value) {
@@ -5991,6 +6658,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
        */
       public Builder setDirectResponse(
@@ -6005,6 +6676,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
        */
       public Builder mergeDirectResponse(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.DirectResponseAction value) {
@@ -6027,6 +6702,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
        */
       public Builder clearDirectResponse() {
@@ -6046,12 +6725,20 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.DirectResponseAction.Builder getDirectResponseBuilder() {
         return getDirectResponseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.DirectResponseActionOrBuilder getDirectResponseOrBuilder() {
@@ -6065,6 +6752,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.DirectResponseAction direct_response = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6144,7 +6835,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Checks "/" prefix by default.
+     * Condition (predicate) used to select the route.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6152,7 +6843,7 @@ public final class VirtualHostOuterClass {
     boolean hasMatch();
     /**
      * <pre>
-     * Checks "/" prefix by default.
+     * Condition (predicate) used to select the route.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6160,7 +6851,7 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteMatch getMatch();
     /**
      * <pre>
-     * Checks "/" prefix by default.
+     * Condition (predicate) used to select the route.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6168,27 +6859,51 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteMatchOrBuilder getMatchOrBuilder();
 
     /**
+     * <pre>
+     * Forwards the request to a backend group for processing as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
      */
     boolean hasRoute();
     /**
+     * <pre>
+     * Forwards the request to a backend group for processing as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteAction getRoute();
     /**
+     * <pre>
+     * Forwards the request to a backend group for processing as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteActionOrBuilder getRouteOrBuilder();
 
     /**
+     * <pre>
+     * Instructs the load balancer to respond directly with a specified status.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
      */
     boolean hasStatusResponse();
     /**
+     * <pre>
+     * Instructs the load balancer to respond directly with a specified status.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction getStatusResponse();
     /**
+     * <pre>
+     * Instructs the load balancer to respond directly with a specified status.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseActionOrBuilder getStatusResponseOrBuilder();
@@ -6196,6 +6911,10 @@ public final class VirtualHostOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute.ActionCase getActionCase();
   }
   /**
+   * <pre>
+   * A gRPC route configuration resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GrpcRoute}
    */
   public  static final class GrpcRoute extends
@@ -6349,7 +7068,7 @@ public final class VirtualHostOuterClass {
     private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteMatch match_;
     /**
      * <pre>
-     * Checks "/" prefix by default.
+     * Condition (predicate) used to select the route.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6359,7 +7078,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Checks "/" prefix by default.
+     * Condition (predicate) used to select the route.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6369,7 +7088,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Checks "/" prefix by default.
+     * Condition (predicate) used to select the route.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6380,12 +7099,20 @@ public final class VirtualHostOuterClass {
 
     public static final int ROUTE_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Forwards the request to a backend group for processing as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
      */
     public boolean hasRoute() {
       return actionCase_ == 2;
     }
     /**
+     * <pre>
+     * Forwards the request to a backend group for processing as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteAction getRoute() {
@@ -6395,6 +7122,10 @@ public final class VirtualHostOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteAction.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Forwards the request to a backend group for processing as configured.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteActionOrBuilder getRouteOrBuilder() {
@@ -6406,12 +7137,20 @@ public final class VirtualHostOuterClass {
 
     public static final int STATUS_RESPONSE_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Instructs the load balancer to respond directly with a specified status.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
      */
     public boolean hasStatusResponse() {
       return actionCase_ == 3;
     }
     /**
+     * <pre>
+     * Instructs the load balancer to respond directly with a specified status.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction getStatusResponse() {
@@ -6421,6 +7160,10 @@ public final class VirtualHostOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Instructs the load balancer to respond directly with a specified status.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseActionOrBuilder getStatusResponseOrBuilder() {
@@ -6633,6 +7376,10 @@ public final class VirtualHostOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A gRPC route configuration resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GrpcRoute}
      */
     public static final class Builder extends
@@ -6837,7 +7584,7 @@ public final class VirtualHostOuterClass {
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteMatchOrBuilder> matchBuilder_;
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6847,7 +7594,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6861,7 +7608,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6881,7 +7628,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6899,7 +7646,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6921,7 +7668,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6939,7 +7686,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6951,7 +7698,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6966,7 +7713,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Checks "/" prefix by default.
+       * Condition (predicate) used to select the route.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteMatch match = 1;</code>
@@ -6988,12 +7735,20 @@ public final class VirtualHostOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteAction, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteAction.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteActionOrBuilder> routeBuilder_;
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
        */
       public boolean hasRoute() {
         return actionCase_ == 2;
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteAction getRoute() {
@@ -7010,6 +7765,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
        */
       public Builder setRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteAction value) {
@@ -7026,6 +7785,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
        */
       public Builder setRoute(
@@ -7040,6 +7803,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
        */
       public Builder mergeRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteAction value) {
@@ -7062,6 +7829,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
        */
       public Builder clearRoute() {
@@ -7081,12 +7852,20 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteAction.Builder getRouteBuilder() {
         return getRouteFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteActionOrBuilder getRouteOrBuilder() {
@@ -7100,6 +7879,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Forwards the request to a backend group for processing as configured.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcRouteAction route = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7124,12 +7907,20 @@ public final class VirtualHostOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseActionOrBuilder> statusResponseBuilder_;
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly with a specified status.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
        */
       public boolean hasStatusResponse() {
         return actionCase_ == 3;
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly with a specified status.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction getStatusResponse() {
@@ -7146,6 +7937,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly with a specified status.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
        */
       public Builder setStatusResponse(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction value) {
@@ -7162,6 +7957,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly with a specified status.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
        */
       public Builder setStatusResponse(
@@ -7176,6 +7975,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly with a specified status.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
        */
       public Builder mergeStatusResponse(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction value) {
@@ -7198,6 +8001,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly with a specified status.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
        */
       public Builder clearStatusResponse() {
@@ -7217,12 +8024,20 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly with a specified status.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction.Builder getStatusResponseBuilder() {
         return getStatusResponseFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly with a specified status.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseActionOrBuilder getStatusResponseOrBuilder() {
@@ -7236,6 +8051,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Instructs the load balancer to respond directly with a specified status.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction status_response = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7314,19 +8133,35 @@ public final class VirtualHostOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * HTTP method specified in the request.
+     * </pre>
+     *
      * <code>repeated string http_method = 1;</code>
      */
     java.util.List<java.lang.String>
         getHttpMethodList();
     /**
+     * <pre>
+     * HTTP method specified in the request.
+     * </pre>
+     *
      * <code>repeated string http_method = 1;</code>
      */
     int getHttpMethodCount();
     /**
+     * <pre>
+     * HTTP method specified in the request.
+     * </pre>
+     *
      * <code>repeated string http_method = 1;</code>
      */
     java.lang.String getHttpMethod(int index);
     /**
+     * <pre>
+     * HTTP method specified in the request.
+     * </pre>
+     *
      * <code>repeated string http_method = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -7334,7 +8169,8 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * If not set, '/' is assumed.
+     * Match settings for the path specified in the request.
+     * If not specified, the route matches all paths.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -7342,7 +8178,8 @@ public final class VirtualHostOuterClass {
     boolean hasPath();
     /**
      * <pre>
-     * If not set, '/' is assumed.
+     * Match settings for the path specified in the request.
+     * If not specified, the route matches all paths.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -7350,7 +8187,8 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch getPath();
     /**
      * <pre>
-     * If not set, '/' is assumed.
+     * Match settings for the path specified in the request.
+     * If not specified, the route matches all paths.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -7358,6 +8196,10 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder getPathOrBuilder();
   }
   /**
+   * <pre>
+   * An HTTP route condition (predicate) resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpRouteMatch}
    */
   public  static final class HttpRouteMatch extends
@@ -7458,6 +8300,10 @@ public final class VirtualHostOuterClass {
     public static final int HTTP_METHOD_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList httpMethod_;
     /**
+     * <pre>
+     * HTTP method specified in the request.
+     * </pre>
+     *
      * <code>repeated string http_method = 1;</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -7465,18 +8311,30 @@ public final class VirtualHostOuterClass {
       return httpMethod_;
     }
     /**
+     * <pre>
+     * HTTP method specified in the request.
+     * </pre>
+     *
      * <code>repeated string http_method = 1;</code>
      */
     public int getHttpMethodCount() {
       return httpMethod_.size();
     }
     /**
+     * <pre>
+     * HTTP method specified in the request.
+     * </pre>
+     *
      * <code>repeated string http_method = 1;</code>
      */
     public java.lang.String getHttpMethod(int index) {
       return httpMethod_.get(index);
     }
     /**
+     * <pre>
+     * HTTP method specified in the request.
+     * </pre>
+     *
      * <code>repeated string http_method = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -7488,7 +8346,8 @@ public final class VirtualHostOuterClass {
     private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch path_;
     /**
      * <pre>
-     * If not set, '/' is assumed.
+     * Match settings for the path specified in the request.
+     * If not specified, the route matches all paths.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -7498,7 +8357,8 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * If not set, '/' is assumed.
+     * Match settings for the path specified in the request.
+     * If not specified, the route matches all paths.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -7508,7 +8368,8 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * If not set, '/' is assumed.
+     * Match settings for the path specified in the request.
+     * If not specified, the route matches all paths.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -7696,6 +8557,10 @@ public final class VirtualHostOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An HTTP route condition (predicate) resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpRouteMatch}
      */
     public static final class Builder extends
@@ -7879,6 +8744,10 @@ public final class VirtualHostOuterClass {
          }
       }
       /**
+       * <pre>
+       * HTTP method specified in the request.
+       * </pre>
+       *
        * <code>repeated string http_method = 1;</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -7886,18 +8755,30 @@ public final class VirtualHostOuterClass {
         return httpMethod_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * HTTP method specified in the request.
+       * </pre>
+       *
        * <code>repeated string http_method = 1;</code>
        */
       public int getHttpMethodCount() {
         return httpMethod_.size();
       }
       /**
+       * <pre>
+       * HTTP method specified in the request.
+       * </pre>
+       *
        * <code>repeated string http_method = 1;</code>
        */
       public java.lang.String getHttpMethod(int index) {
         return httpMethod_.get(index);
       }
       /**
+       * <pre>
+       * HTTP method specified in the request.
+       * </pre>
+       *
        * <code>repeated string http_method = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -7905,6 +8786,10 @@ public final class VirtualHostOuterClass {
         return httpMethod_.getByteString(index);
       }
       /**
+       * <pre>
+       * HTTP method specified in the request.
+       * </pre>
+       *
        * <code>repeated string http_method = 1;</code>
        */
       public Builder setHttpMethod(
@@ -7918,6 +8803,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP method specified in the request.
+       * </pre>
+       *
        * <code>repeated string http_method = 1;</code>
        */
       public Builder addHttpMethod(
@@ -7931,6 +8820,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP method specified in the request.
+       * </pre>
+       *
        * <code>repeated string http_method = 1;</code>
        */
       public Builder addAllHttpMethod(
@@ -7942,6 +8835,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP method specified in the request.
+       * </pre>
+       *
        * <code>repeated string http_method = 1;</code>
        */
       public Builder clearHttpMethod() {
@@ -7951,6 +8848,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP method specified in the request.
+       * </pre>
+       *
        * <code>repeated string http_method = 1;</code>
        */
       public Builder addHttpMethodBytes(
@@ -7970,7 +8871,8 @@ public final class VirtualHostOuterClass {
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder> pathBuilder_;
       /**
        * <pre>
-       * If not set, '/' is assumed.
+       * Match settings for the path specified in the request.
+       * If not specified, the route matches all paths.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -7980,7 +8882,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, '/' is assumed.
+       * Match settings for the path specified in the request.
+       * If not specified, the route matches all paths.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -7994,7 +8897,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, '/' is assumed.
+       * Match settings for the path specified in the request.
+       * If not specified, the route matches all paths.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -8014,7 +8918,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, '/' is assumed.
+       * Match settings for the path specified in the request.
+       * If not specified, the route matches all paths.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -8032,7 +8937,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, '/' is assumed.
+       * Match settings for the path specified in the request.
+       * If not specified, the route matches all paths.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -8054,7 +8960,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, '/' is assumed.
+       * Match settings for the path specified in the request.
+       * If not specified, the route matches all paths.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -8072,7 +8979,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, '/' is assumed.
+       * Match settings for the path specified in the request.
+       * If not specified, the route matches all paths.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -8084,7 +8992,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, '/' is assumed.
+       * Match settings for the path specified in the request.
+       * If not specified, the route matches all paths.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -8099,7 +9008,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, '/' is assumed.
+       * Match settings for the path specified in the request.
+       * If not specified, the route matches all paths.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch path = 2;</code>
@@ -8176,7 +9086,9 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * If not set, all services/methods are assumed.
+     * Match settings for gRPC service method called in the request.
+     * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+     * If not specified, the route matches all methods.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8184,7 +9096,9 @@ public final class VirtualHostOuterClass {
     boolean hasFqmn();
     /**
      * <pre>
-     * If not set, all services/methods are assumed.
+     * Match settings for gRPC service method called in the request.
+     * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+     * If not specified, the route matches all methods.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8192,7 +9106,9 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch getFqmn();
     /**
      * <pre>
-     * If not set, all services/methods are assumed.
+     * Match settings for gRPC service method called in the request.
+     * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+     * If not specified, the route matches all methods.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8200,6 +9116,10 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder getFqmnOrBuilder();
   }
   /**
+   * <pre>
+   * A gRPC route condition (predicate) resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GrpcRouteMatch}
    */
   public  static final class GrpcRouteMatch extends
@@ -8287,7 +9207,9 @@ public final class VirtualHostOuterClass {
     private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch fqmn_;
     /**
      * <pre>
-     * If not set, all services/methods are assumed.
+     * Match settings for gRPC service method called in the request.
+     * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+     * If not specified, the route matches all methods.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8297,7 +9219,9 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * If not set, all services/methods are assumed.
+     * Match settings for gRPC service method called in the request.
+     * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+     * If not specified, the route matches all methods.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8307,7 +9231,9 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * If not set, all services/methods are assumed.
+     * Match settings for gRPC service method called in the request.
+     * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+     * If not specified, the route matches all methods.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8478,6 +9404,10 @@ public final class VirtualHostOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A gRPC route condition (predicate) resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GrpcRouteMatch}
      */
     public static final class Builder extends
@@ -8637,7 +9567,9 @@ public final class VirtualHostOuterClass {
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatchOrBuilder> fqmnBuilder_;
       /**
        * <pre>
-       * If not set, all services/methods are assumed.
+       * Match settings for gRPC service method called in the request.
+       * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+       * If not specified, the route matches all methods.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8647,7 +9579,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, all services/methods are assumed.
+       * Match settings for gRPC service method called in the request.
+       * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+       * If not specified, the route matches all methods.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8661,7 +9595,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, all services/methods are assumed.
+       * Match settings for gRPC service method called in the request.
+       * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+       * If not specified, the route matches all methods.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8681,7 +9617,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, all services/methods are assumed.
+       * Match settings for gRPC service method called in the request.
+       * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+       * If not specified, the route matches all methods.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8699,7 +9637,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, all services/methods are assumed.
+       * Match settings for gRPC service method called in the request.
+       * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+       * If not specified, the route matches all methods.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8721,7 +9661,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, all services/methods are assumed.
+       * Match settings for gRPC service method called in the request.
+       * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+       * If not specified, the route matches all methods.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8739,7 +9681,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, all services/methods are assumed.
+       * Match settings for gRPC service method called in the request.
+       * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+       * If not specified, the route matches all methods.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8751,7 +9695,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, all services/methods are assumed.
+       * Match settings for gRPC service method called in the request.
+       * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+       * If not specified, the route matches all methods.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8766,7 +9712,9 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not set, all services/methods are assumed.
+       * Match settings for gRPC service method called in the request.
+       * A match string must be a fully qualified method name, e.g. `foo.bar.v1.BazService/Get`, or a prefix of such.
+       * If not specified, the route matches all methods.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StringMatch fqmn = 1;</code>
@@ -8842,20 +9790,36 @@ public final class VirtualHostOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Exact match string.
+     * </pre>
+     *
      * <code>string exact_match = 1;</code>
      */
     java.lang.String getExactMatch();
     /**
+     * <pre>
+     * Exact match string.
+     * </pre>
+     *
      * <code>string exact_match = 1;</code>
      */
     com.google.protobuf.ByteString
         getExactMatchBytes();
 
     /**
+     * <pre>
+     * Prefix match string.
+     * </pre>
+     *
      * <code>string prefix_match = 2;</code>
      */
     java.lang.String getPrefixMatch();
     /**
+     * <pre>
+     * Prefix match string.
+     * </pre>
+     *
      * <code>string prefix_match = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -8864,6 +9828,10 @@ public final class VirtualHostOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.StringMatch.MatchCase getMatchCase();
   }
   /**
+   * <pre>
+   * A string matcher resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StringMatch}
    */
   public  static final class StringMatch extends
@@ -8986,6 +9954,10 @@ public final class VirtualHostOuterClass {
 
     public static final int EXACT_MATCH_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Exact match string.
+     * </pre>
+     *
      * <code>string exact_match = 1;</code>
      */
     public java.lang.String getExactMatch() {
@@ -9006,6 +9978,10 @@ public final class VirtualHostOuterClass {
       }
     }
     /**
+     * <pre>
+     * Exact match string.
+     * </pre>
+     *
      * <code>string exact_match = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -9029,6 +10005,10 @@ public final class VirtualHostOuterClass {
 
     public static final int PREFIX_MATCH_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Prefix match string.
+     * </pre>
+     *
      * <code>string prefix_match = 2;</code>
      */
     public java.lang.String getPrefixMatch() {
@@ -9049,6 +10029,10 @@ public final class VirtualHostOuterClass {
       }
     }
     /**
+     * <pre>
+     * Prefix match string.
+     * </pre>
+     *
      * <code>string prefix_match = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -9255,6 +10239,10 @@ public final class VirtualHostOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A string matcher resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StringMatch}
      */
     public static final class Builder extends
@@ -9437,6 +10425,10 @@ public final class VirtualHostOuterClass {
 
 
       /**
+       * <pre>
+       * Exact match string.
+       * </pre>
+       *
        * <code>string exact_match = 1;</code>
        */
       public java.lang.String getExactMatch() {
@@ -9457,6 +10449,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Exact match string.
+       * </pre>
+       *
        * <code>string exact_match = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -9478,6 +10474,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Exact match string.
+       * </pre>
+       *
        * <code>string exact_match = 1;</code>
        */
       public Builder setExactMatch(
@@ -9491,6 +10491,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Exact match string.
+       * </pre>
+       *
        * <code>string exact_match = 1;</code>
        */
       public Builder clearExactMatch() {
@@ -9502,6 +10506,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Exact match string.
+       * </pre>
+       *
        * <code>string exact_match = 1;</code>
        */
       public Builder setExactMatchBytes(
@@ -9517,6 +10525,10 @@ public final class VirtualHostOuterClass {
       }
 
       /**
+       * <pre>
+       * Prefix match string.
+       * </pre>
+       *
        * <code>string prefix_match = 2;</code>
        */
       public java.lang.String getPrefixMatch() {
@@ -9537,6 +10549,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Prefix match string.
+       * </pre>
+       *
        * <code>string prefix_match = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -9558,6 +10574,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Prefix match string.
+       * </pre>
+       *
        * <code>string prefix_match = 2;</code>
        */
       public Builder setPrefixMatch(
@@ -9571,6 +10591,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Prefix match string.
+       * </pre>
+       *
        * <code>string prefix_match = 2;</code>
        */
       public Builder clearPrefixMatch() {
@@ -9582,6 +10606,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Prefix match string.
+       * </pre>
+       *
        * <code>string prefix_match = 2;</code>
        */
       public Builder setPrefixMatchBytes(
@@ -9654,9 +10682,10 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Replaces scheme.
-     * If the original scheme is `http` or `https`,
-     * will also remove the 80 or 443 port, if present.
+     * URI scheme replacement.
+     * If `http` or `https` scheme is to be replaced and `80` or `443` port is specified in the original URI,
+     * the port is also removed.
+     * If not specified, the original scheme and port are used.
      * </pre>
      *
      * <code>string replace_scheme = 1;</code>
@@ -9664,9 +10693,10 @@ public final class VirtualHostOuterClass {
     java.lang.String getReplaceScheme();
     /**
      * <pre>
-     * Replaces scheme.
-     * If the original scheme is `http` or `https`,
-     * will also remove the 80 or 443 port, if present.
+     * URI scheme replacement.
+     * If `http` or `https` scheme is to be replaced and `80` or `443` port is specified in the original URI,
+     * the port is also removed.
+     * If not specified, the original scheme and port are used.
      * </pre>
      *
      * <code>string replace_scheme = 1;</code>
@@ -9676,7 +10706,8 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Replaces hostname.
+     * URI host replacement.
+     * If not specified, the original host is used.
      * </pre>
      *
      * <code>string replace_host = 2;</code>
@@ -9684,7 +10715,8 @@ public final class VirtualHostOuterClass {
     java.lang.String getReplaceHost();
     /**
      * <pre>
-     * Replaces hostname.
+     * URI host replacement.
+     * If not specified, the original host is used.
      * </pre>
      *
      * <code>string replace_host = 2;</code>
@@ -9694,7 +10726,8 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Replaces port.
+     * URI host replacement.
+     * If not specified, the original host is used.
      * </pre>
      *
      * <code>int64 replace_port = 3;</code>
@@ -9703,7 +10736,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Replace path.
+     * Replacement for the whole path.
      * </pre>
      *
      * <code>string replace_path = 4;</code>
@@ -9711,7 +10744,7 @@ public final class VirtualHostOuterClass {
     java.lang.String getReplacePath();
     /**
      * <pre>
-     * Replace path.
+     * Replacement for the whole path.
      * </pre>
      *
      * <code>string replace_path = 4;</code>
@@ -9721,11 +10754,10 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Replace only matched prefix.
-     * Example:
-     *    match:    { prefix_match: "/some" }
-     *    redirect: { replace_prefix: "/other" }
-     * will redirect "/something" to "/otherthing"
+     * Replacement for the path prefix matched by [StringMatch.match].
+     * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+     * a request with `https://example.com/foobaz` URI is redirected to `https://example.com/barbaz`.
+     * For [StringMatch.exact_match], the whole path is replaced.
      * </pre>
      *
      * <code>string replace_prefix = 5;</code>
@@ -9733,11 +10765,10 @@ public final class VirtualHostOuterClass {
     java.lang.String getReplacePrefix();
     /**
      * <pre>
-     * Replace only matched prefix.
-     * Example:
-     *    match:    { prefix_match: "/some" }
-     *    redirect: { replace_prefix: "/other" }
-     * will redirect "/something" to "/otherthing"
+     * Replacement for the path prefix matched by [StringMatch.match].
+     * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+     * a request with `https://example.com/foobaz` URI is redirected to `https://example.com/barbaz`.
+     * For [StringMatch.exact_match], the whole path is replaced.
      * </pre>
      *
      * <code>string replace_prefix = 5;</code>
@@ -9747,7 +10778,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Remove query part.
+     * Removes URI query.
      * </pre>
      *
      * <code>bool remove_query = 6;</code>
@@ -9756,7 +10787,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * The HTTP status code to use in the redirect response.
+     * HTTP status code to use in redirect responses.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction.RedirectResponseCode response_code = 7;</code>
@@ -9764,7 +10795,7 @@ public final class VirtualHostOuterClass {
     int getResponseCodeValue();
     /**
      * <pre>
-     * The HTTP status code to use in the redirect response.
+     * HTTP status code to use in redirect responses.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction.RedirectResponseCode response_code = 7;</code>
@@ -9774,6 +10805,10 @@ public final class VirtualHostOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RedirectAction.PathCase getPathCase();
   }
   /**
+   * <pre>
+   * A redirect action resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RedirectAction}
    */
   public  static final class RedirectAction extends
@@ -9890,13 +10925,17 @@ public final class VirtualHostOuterClass {
     }
 
     /**
+     * <pre>
+     * HTTP status codes supported for use in redirect responses.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.apploadbalancer.v1.RedirectAction.RedirectResponseCode}
      */
     public enum RedirectResponseCode
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <pre>
-       * Moved Permanently HTTP Status Code - 301.
+       * `301 Moved Permanently` status code.
        * </pre>
        *
        * <code>MOVED_PERMANENTLY = 0;</code>
@@ -9904,7 +10943,7 @@ public final class VirtualHostOuterClass {
       MOVED_PERMANENTLY(0),
       /**
        * <pre>
-       * Found HTTP Status Code - 302.
+       * `302 Found` status code.
        * </pre>
        *
        * <code>FOUND = 1;</code>
@@ -9912,7 +10951,7 @@ public final class VirtualHostOuterClass {
       FOUND(1),
       /**
        * <pre>
-       * See Other HTTP Status Code - 303.
+       * `303 See Other` status code.
        * </pre>
        *
        * <code>SEE_OTHER = 2;</code>
@@ -9920,7 +10959,7 @@ public final class VirtualHostOuterClass {
       SEE_OTHER(2),
       /**
        * <pre>
-       * Temporary Redirect HTTP Status Code - 307.
+       * `307 Temporary Redirect` status code.
        * </pre>
        *
        * <code>TEMPORARY_REDIRECT = 3;</code>
@@ -9928,7 +10967,7 @@ public final class VirtualHostOuterClass {
       TEMPORARY_REDIRECT(3),
       /**
        * <pre>
-       * Permanent Redirect HTTP Status Code - 308.
+       * `308 Permanent Redirect` status code.
        * </pre>
        *
        * <code>PERMANENT_REDIRECT = 4;</code>
@@ -9939,7 +10978,7 @@ public final class VirtualHostOuterClass {
 
       /**
        * <pre>
-       * Moved Permanently HTTP Status Code - 301.
+       * `301 Moved Permanently` status code.
        * </pre>
        *
        * <code>MOVED_PERMANENTLY = 0;</code>
@@ -9947,7 +10986,7 @@ public final class VirtualHostOuterClass {
       public static final int MOVED_PERMANENTLY_VALUE = 0;
       /**
        * <pre>
-       * Found HTTP Status Code - 302.
+       * `302 Found` status code.
        * </pre>
        *
        * <code>FOUND = 1;</code>
@@ -9955,7 +10994,7 @@ public final class VirtualHostOuterClass {
       public static final int FOUND_VALUE = 1;
       /**
        * <pre>
-       * See Other HTTP Status Code - 303.
+       * `303 See Other` status code.
        * </pre>
        *
        * <code>SEE_OTHER = 2;</code>
@@ -9963,7 +11002,7 @@ public final class VirtualHostOuterClass {
       public static final int SEE_OTHER_VALUE = 2;
       /**
        * <pre>
-       * Temporary Redirect HTTP Status Code - 307.
+       * `307 Temporary Redirect` status code.
        * </pre>
        *
        * <code>TEMPORARY_REDIRECT = 3;</code>
@@ -9971,7 +11010,7 @@ public final class VirtualHostOuterClass {
       public static final int TEMPORARY_REDIRECT_VALUE = 3;
       /**
        * <pre>
-       * Permanent Redirect HTTP Status Code - 308.
+       * `308 Permanent Redirect` status code.
        * </pre>
        *
        * <code>PERMANENT_REDIRECT = 4;</code>
@@ -10096,9 +11135,10 @@ public final class VirtualHostOuterClass {
     private volatile java.lang.Object replaceScheme_;
     /**
      * <pre>
-     * Replaces scheme.
-     * If the original scheme is `http` or `https`,
-     * will also remove the 80 or 443 port, if present.
+     * URI scheme replacement.
+     * If `http` or `https` scheme is to be replaced and `80` or `443` port is specified in the original URI,
+     * the port is also removed.
+     * If not specified, the original scheme and port are used.
      * </pre>
      *
      * <code>string replace_scheme = 1;</code>
@@ -10117,9 +11157,10 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Replaces scheme.
-     * If the original scheme is `http` or `https`,
-     * will also remove the 80 or 443 port, if present.
+     * URI scheme replacement.
+     * If `http` or `https` scheme is to be replaced and `80` or `443` port is specified in the original URI,
+     * the port is also removed.
+     * If not specified, the original scheme and port are used.
      * </pre>
      *
      * <code>string replace_scheme = 1;</code>
@@ -10142,7 +11183,8 @@ public final class VirtualHostOuterClass {
     private volatile java.lang.Object replaceHost_;
     /**
      * <pre>
-     * Replaces hostname.
+     * URI host replacement.
+     * If not specified, the original host is used.
      * </pre>
      *
      * <code>string replace_host = 2;</code>
@@ -10161,7 +11203,8 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Replaces hostname.
+     * URI host replacement.
+     * If not specified, the original host is used.
      * </pre>
      *
      * <code>string replace_host = 2;</code>
@@ -10184,7 +11227,8 @@ public final class VirtualHostOuterClass {
     private long replacePort_;
     /**
      * <pre>
-     * Replaces port.
+     * URI host replacement.
+     * If not specified, the original host is used.
      * </pre>
      *
      * <code>int64 replace_port = 3;</code>
@@ -10196,7 +11240,7 @@ public final class VirtualHostOuterClass {
     public static final int REPLACE_PATH_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * Replace path.
+     * Replacement for the whole path.
      * </pre>
      *
      * <code>string replace_path = 4;</code>
@@ -10220,7 +11264,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Replace path.
+     * Replacement for the whole path.
      * </pre>
      *
      * <code>string replace_path = 4;</code>
@@ -10247,11 +11291,10 @@ public final class VirtualHostOuterClass {
     public static final int REPLACE_PREFIX_FIELD_NUMBER = 5;
     /**
      * <pre>
-     * Replace only matched prefix.
-     * Example:
-     *    match:    { prefix_match: "/some" }
-     *    redirect: { replace_prefix: "/other" }
-     * will redirect "/something" to "/otherthing"
+     * Replacement for the path prefix matched by [StringMatch.match].
+     * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+     * a request with `https://example.com/foobaz` URI is redirected to `https://example.com/barbaz`.
+     * For [StringMatch.exact_match], the whole path is replaced.
      * </pre>
      *
      * <code>string replace_prefix = 5;</code>
@@ -10275,11 +11318,10 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Replace only matched prefix.
-     * Example:
-     *    match:    { prefix_match: "/some" }
-     *    redirect: { replace_prefix: "/other" }
-     * will redirect "/something" to "/otherthing"
+     * Replacement for the path prefix matched by [StringMatch.match].
+     * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+     * a request with `https://example.com/foobaz` URI is redirected to `https://example.com/barbaz`.
+     * For [StringMatch.exact_match], the whole path is replaced.
      * </pre>
      *
      * <code>string replace_prefix = 5;</code>
@@ -10307,7 +11349,7 @@ public final class VirtualHostOuterClass {
     private boolean removeQuery_;
     /**
      * <pre>
-     * Remove query part.
+     * Removes URI query.
      * </pre>
      *
      * <code>bool remove_query = 6;</code>
@@ -10320,7 +11362,7 @@ public final class VirtualHostOuterClass {
     private int responseCode_;
     /**
      * <pre>
-     * The HTTP status code to use in the redirect response.
+     * HTTP status code to use in redirect responses.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction.RedirectResponseCode response_code = 7;</code>
@@ -10330,7 +11372,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * The HTTP status code to use in the redirect response.
+     * HTTP status code to use in redirect responses.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction.RedirectResponseCode response_code = 7;</code>
@@ -10580,6 +11622,10 @@ public final class VirtualHostOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A redirect action resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RedirectAction}
      */
     public static final class Builder extends
@@ -10796,9 +11842,10 @@ public final class VirtualHostOuterClass {
       private java.lang.Object replaceScheme_ = "";
       /**
        * <pre>
-       * Replaces scheme.
-       * If the original scheme is `http` or `https`,
-       * will also remove the 80 or 443 port, if present.
+       * URI scheme replacement.
+       * If `http` or `https` scheme is to be replaced and `80` or `443` port is specified in the original URI,
+       * the port is also removed.
+       * If not specified, the original scheme and port are used.
        * </pre>
        *
        * <code>string replace_scheme = 1;</code>
@@ -10817,9 +11864,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replaces scheme.
-       * If the original scheme is `http` or `https`,
-       * will also remove the 80 or 443 port, if present.
+       * URI scheme replacement.
+       * If `http` or `https` scheme is to be replaced and `80` or `443` port is specified in the original URI,
+       * the port is also removed.
+       * If not specified, the original scheme and port are used.
        * </pre>
        *
        * <code>string replace_scheme = 1;</code>
@@ -10839,9 +11887,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replaces scheme.
-       * If the original scheme is `http` or `https`,
-       * will also remove the 80 or 443 port, if present.
+       * URI scheme replacement.
+       * If `http` or `https` scheme is to be replaced and `80` or `443` port is specified in the original URI,
+       * the port is also removed.
+       * If not specified, the original scheme and port are used.
        * </pre>
        *
        * <code>string replace_scheme = 1;</code>
@@ -10858,9 +11907,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replaces scheme.
-       * If the original scheme is `http` or `https`,
-       * will also remove the 80 or 443 port, if present.
+       * URI scheme replacement.
+       * If `http` or `https` scheme is to be replaced and `80` or `443` port is specified in the original URI,
+       * the port is also removed.
+       * If not specified, the original scheme and port are used.
        * </pre>
        *
        * <code>string replace_scheme = 1;</code>
@@ -10873,9 +11923,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replaces scheme.
-       * If the original scheme is `http` or `https`,
-       * will also remove the 80 or 443 port, if present.
+       * URI scheme replacement.
+       * If `http` or `https` scheme is to be replaced and `80` or `443` port is specified in the original URI,
+       * the port is also removed.
+       * If not specified, the original scheme and port are used.
        * </pre>
        *
        * <code>string replace_scheme = 1;</code>
@@ -10895,7 +11946,8 @@ public final class VirtualHostOuterClass {
       private java.lang.Object replaceHost_ = "";
       /**
        * <pre>
-       * Replaces hostname.
+       * URI host replacement.
+       * If not specified, the original host is used.
        * </pre>
        *
        * <code>string replace_host = 2;</code>
@@ -10914,7 +11966,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replaces hostname.
+       * URI host replacement.
+       * If not specified, the original host is used.
        * </pre>
        *
        * <code>string replace_host = 2;</code>
@@ -10934,7 +11987,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replaces hostname.
+       * URI host replacement.
+       * If not specified, the original host is used.
        * </pre>
        *
        * <code>string replace_host = 2;</code>
@@ -10951,7 +12005,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replaces hostname.
+       * URI host replacement.
+       * If not specified, the original host is used.
        * </pre>
        *
        * <code>string replace_host = 2;</code>
@@ -10964,7 +12019,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replaces hostname.
+       * URI host replacement.
+       * If not specified, the original host is used.
        * </pre>
        *
        * <code>string replace_host = 2;</code>
@@ -10984,7 +12040,8 @@ public final class VirtualHostOuterClass {
       private long replacePort_ ;
       /**
        * <pre>
-       * Replaces port.
+       * URI host replacement.
+       * If not specified, the original host is used.
        * </pre>
        *
        * <code>int64 replace_port = 3;</code>
@@ -10994,7 +12051,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replaces port.
+       * URI host replacement.
+       * If not specified, the original host is used.
        * </pre>
        *
        * <code>int64 replace_port = 3;</code>
@@ -11007,7 +12065,8 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replaces port.
+       * URI host replacement.
+       * If not specified, the original host is used.
        * </pre>
        *
        * <code>int64 replace_port = 3;</code>
@@ -11021,7 +12080,7 @@ public final class VirtualHostOuterClass {
 
       /**
        * <pre>
-       * Replace path.
+       * Replacement for the whole path.
        * </pre>
        *
        * <code>string replace_path = 4;</code>
@@ -11045,7 +12104,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replace path.
+       * Replacement for the whole path.
        * </pre>
        *
        * <code>string replace_path = 4;</code>
@@ -11070,7 +12129,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replace path.
+       * Replacement for the whole path.
        * </pre>
        *
        * <code>string replace_path = 4;</code>
@@ -11087,7 +12146,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replace path.
+       * Replacement for the whole path.
        * </pre>
        *
        * <code>string replace_path = 4;</code>
@@ -11102,7 +12161,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replace path.
+       * Replacement for the whole path.
        * </pre>
        *
        * <code>string replace_path = 4;</code>
@@ -11121,11 +12180,10 @@ public final class VirtualHostOuterClass {
 
       /**
        * <pre>
-       * Replace only matched prefix.
-       * Example:
-       *    match:    { prefix_match: "/some" }
-       *    redirect: { replace_prefix: "/other" }
-       * will redirect "/something" to "/otherthing"
+       * Replacement for the path prefix matched by [StringMatch.match].
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * a request with `https://example.com/foobaz` URI is redirected to `https://example.com/barbaz`.
+       * For [StringMatch.exact_match], the whole path is replaced.
        * </pre>
        *
        * <code>string replace_prefix = 5;</code>
@@ -11149,11 +12207,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replace only matched prefix.
-       * Example:
-       *    match:    { prefix_match: "/some" }
-       *    redirect: { replace_prefix: "/other" }
-       * will redirect "/something" to "/otherthing"
+       * Replacement for the path prefix matched by [StringMatch.match].
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * a request with `https://example.com/foobaz` URI is redirected to `https://example.com/barbaz`.
+       * For [StringMatch.exact_match], the whole path is replaced.
        * </pre>
        *
        * <code>string replace_prefix = 5;</code>
@@ -11178,11 +12235,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replace only matched prefix.
-       * Example:
-       *    match:    { prefix_match: "/some" }
-       *    redirect: { replace_prefix: "/other" }
-       * will redirect "/something" to "/otherthing"
+       * Replacement for the path prefix matched by [StringMatch.match].
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * a request with `https://example.com/foobaz` URI is redirected to `https://example.com/barbaz`.
+       * For [StringMatch.exact_match], the whole path is replaced.
        * </pre>
        *
        * <code>string replace_prefix = 5;</code>
@@ -11199,11 +12255,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replace only matched prefix.
-       * Example:
-       *    match:    { prefix_match: "/some" }
-       *    redirect: { replace_prefix: "/other" }
-       * will redirect "/something" to "/otherthing"
+       * Replacement for the path prefix matched by [StringMatch.match].
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * a request with `https://example.com/foobaz` URI is redirected to `https://example.com/barbaz`.
+       * For [StringMatch.exact_match], the whole path is replaced.
        * </pre>
        *
        * <code>string replace_prefix = 5;</code>
@@ -11218,11 +12273,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Replace only matched prefix.
-       * Example:
-       *    match:    { prefix_match: "/some" }
-       *    redirect: { replace_prefix: "/other" }
-       * will redirect "/something" to "/otherthing"
+       * Replacement for the path prefix matched by [StringMatch.match].
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * a request with `https://example.com/foobaz` URI is redirected to `https://example.com/barbaz`.
+       * For [StringMatch.exact_match], the whole path is replaced.
        * </pre>
        *
        * <code>string replace_prefix = 5;</code>
@@ -11242,7 +12296,7 @@ public final class VirtualHostOuterClass {
       private boolean removeQuery_ ;
       /**
        * <pre>
-       * Remove query part.
+       * Removes URI query.
        * </pre>
        *
        * <code>bool remove_query = 6;</code>
@@ -11252,7 +12306,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Remove query part.
+       * Removes URI query.
        * </pre>
        *
        * <code>bool remove_query = 6;</code>
@@ -11265,7 +12319,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Remove query part.
+       * Removes URI query.
        * </pre>
        *
        * <code>bool remove_query = 6;</code>
@@ -11280,7 +12334,7 @@ public final class VirtualHostOuterClass {
       private int responseCode_ = 0;
       /**
        * <pre>
-       * The HTTP status code to use in the redirect response.
+       * HTTP status code to use in redirect responses.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction.RedirectResponseCode response_code = 7;</code>
@@ -11290,7 +12344,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * The HTTP status code to use in the redirect response.
+       * HTTP status code to use in redirect responses.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction.RedirectResponseCode response_code = 7;</code>
@@ -11302,7 +12356,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * The HTTP status code to use in the redirect response.
+       * HTTP status code to use in redirect responses.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction.RedirectResponseCode response_code = 7;</code>
@@ -11314,7 +12368,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * The HTTP status code to use in the redirect response.
+       * HTTP status code to use in redirect responses.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction.RedirectResponseCode response_code = 7;</code>
@@ -11330,7 +12384,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * The HTTP status code to use in the redirect response.
+       * HTTP status code to use in redirect responses.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.RedirectAction.RedirectResponseCode response_code = 7;</code>
@@ -11400,7 +12454,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * HTTP response status.
+     * HTTP status code to use in responses.
      * </pre>
      *
      * <code>int64 status = 1 [(.yandex.cloud.value) = "100-599"];</code>
@@ -11409,7 +12463,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Optional response body.
+     * Response body.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -11417,7 +12471,7 @@ public final class VirtualHostOuterClass {
     boolean hasBody();
     /**
      * <pre>
-     * Optional response body.
+     * Response body.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -11425,7 +12479,7 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload getBody();
     /**
      * <pre>
-     * Optional response body.
+     * Response body.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -11433,6 +12487,10 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.PayloadOrBuilder getBodyOrBuilder();
   }
   /**
+   * <pre>
+   * A direct response action resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.DirectResponseAction}
    */
   public  static final class DirectResponseAction extends
@@ -11526,7 +12584,7 @@ public final class VirtualHostOuterClass {
     private long status_;
     /**
      * <pre>
-     * HTTP response status.
+     * HTTP status code to use in responses.
      * </pre>
      *
      * <code>int64 status = 1 [(.yandex.cloud.value) = "100-599"];</code>
@@ -11539,7 +12597,7 @@ public final class VirtualHostOuterClass {
     private yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload body_;
     /**
      * <pre>
-     * Optional response body.
+     * Response body.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -11549,7 +12607,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Optional response body.
+     * Response body.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -11559,7 +12617,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Optional response body.
+     * Response body.
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -11742,6 +12800,10 @@ public final class VirtualHostOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A direct response action resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.DirectResponseAction}
      */
     public static final class Builder extends
@@ -11905,7 +12967,7 @@ public final class VirtualHostOuterClass {
       private long status_ ;
       /**
        * <pre>
-       * HTTP response status.
+       * HTTP status code to use in responses.
        * </pre>
        *
        * <code>int64 status = 1 [(.yandex.cloud.value) = "100-599"];</code>
@@ -11915,7 +12977,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * HTTP response status.
+       * HTTP status code to use in responses.
        * </pre>
        *
        * <code>int64 status = 1 [(.yandex.cloud.value) = "100-599"];</code>
@@ -11928,7 +12990,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * HTTP response status.
+       * HTTP status code to use in responses.
        * </pre>
        *
        * <code>int64 status = 1 [(.yandex.cloud.value) = "100-599"];</code>
@@ -11945,7 +13007,7 @@ public final class VirtualHostOuterClass {
           yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload, yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload.Builder, yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.PayloadOrBuilder> bodyBuilder_;
       /**
        * <pre>
-       * Optional response body.
+       * Response body.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -11955,7 +13017,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Optional response body.
+       * Response body.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -11969,7 +13031,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Optional response body.
+       * Response body.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -11989,7 +13051,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Optional response body.
+       * Response body.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -12007,7 +13069,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Optional response body.
+       * Response body.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -12029,7 +13091,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Optional response body.
+       * Response body.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -12047,7 +13109,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Optional response body.
+       * Response body.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -12059,7 +13121,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Optional response body.
+       * Response body.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -12074,7 +13136,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Optional response body.
+       * Response body.
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.Payload body = 2;</code>
@@ -12150,15 +13212,27 @@ public final class VirtualHostOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * gRPC [status code](https://grpc.github.io/grpc/core/md_doc_statuscodes.html) to use in responses.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction.Status status = 1;</code>
      */
     int getStatusValue();
     /**
+     * <pre>
+     * gRPC [status code](https://grpc.github.io/grpc/core/md_doc_statuscodes.html) to use in responses.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction.Status status = 1;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction.Status getStatus();
   }
   /**
+   * <pre>
+   * A gRPC status response action resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction}
    */
   public  static final class GrpcStatusResponseAction extends
@@ -12237,39 +13311,75 @@ public final class VirtualHostOuterClass {
     }
 
     /**
+     * <pre>
+     * gRPC status code supported for use in responses.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction.Status}
      */
     public enum Status
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * `OK` (0) status code.
+       * </pre>
+       *
        * <code>OK = 0;</code>
        */
       OK(0),
       /**
+       * <pre>
+       * `INVALID_ARGUMENT` (3) status code.
+       * </pre>
+       *
        * <code>INVALID_ARGUMENT = 1;</code>
        */
       INVALID_ARGUMENT(1),
       /**
+       * <pre>
+       * `NOT_FOUND` (5) status code.
+       * </pre>
+       *
        * <code>NOT_FOUND = 2;</code>
        */
       NOT_FOUND(2),
       /**
+       * <pre>
+       * `PERMISSION_DENIED` (7) status code.
+       * </pre>
+       *
        * <code>PERMISSION_DENIED = 3;</code>
        */
       PERMISSION_DENIED(3),
       /**
+       * <pre>
+       * `UNAUTHENTICATED` (16) status code.
+       * </pre>
+       *
        * <code>UNAUTHENTICATED = 4;</code>
        */
       UNAUTHENTICATED(4),
       /**
+       * <pre>
+       * `UNIMPLEMENTED` (12) status code.
+       * </pre>
+       *
        * <code>UNIMPLEMENTED = 5;</code>
        */
       UNIMPLEMENTED(5),
       /**
+       * <pre>
+       * `INTERNAL` (13) status code.
+       * </pre>
+       *
        * <code>INTERNAL = 6;</code>
        */
       INTERNAL(6),
       /**
+       * <pre>
+       * `UNAVAILABLE` (14) status code.
+       * </pre>
+       *
        * <code>UNAVAILABLE = 7;</code>
        */
       UNAVAILABLE(7),
@@ -12277,34 +13387,66 @@ public final class VirtualHostOuterClass {
       ;
 
       /**
+       * <pre>
+       * `OK` (0) status code.
+       * </pre>
+       *
        * <code>OK = 0;</code>
        */
       public static final int OK_VALUE = 0;
       /**
+       * <pre>
+       * `INVALID_ARGUMENT` (3) status code.
+       * </pre>
+       *
        * <code>INVALID_ARGUMENT = 1;</code>
        */
       public static final int INVALID_ARGUMENT_VALUE = 1;
       /**
+       * <pre>
+       * `NOT_FOUND` (5) status code.
+       * </pre>
+       *
        * <code>NOT_FOUND = 2;</code>
        */
       public static final int NOT_FOUND_VALUE = 2;
       /**
+       * <pre>
+       * `PERMISSION_DENIED` (7) status code.
+       * </pre>
+       *
        * <code>PERMISSION_DENIED = 3;</code>
        */
       public static final int PERMISSION_DENIED_VALUE = 3;
       /**
+       * <pre>
+       * `UNAUTHENTICATED` (16) status code.
+       * </pre>
+       *
        * <code>UNAUTHENTICATED = 4;</code>
        */
       public static final int UNAUTHENTICATED_VALUE = 4;
       /**
+       * <pre>
+       * `UNIMPLEMENTED` (12) status code.
+       * </pre>
+       *
        * <code>UNIMPLEMENTED = 5;</code>
        */
       public static final int UNIMPLEMENTED_VALUE = 5;
       /**
+       * <pre>
+       * `INTERNAL` (13) status code.
+       * </pre>
+       *
        * <code>INTERNAL = 6;</code>
        */
       public static final int INTERNAL_VALUE = 6;
       /**
+       * <pre>
+       * `UNAVAILABLE` (14) status code.
+       * </pre>
+       *
        * <code>UNAVAILABLE = 7;</code>
        */
       public static final int UNAVAILABLE_VALUE = 7;
@@ -12391,12 +13533,20 @@ public final class VirtualHostOuterClass {
     public static final int STATUS_FIELD_NUMBER = 1;
     private int status_;
     /**
+     * <pre>
+     * gRPC [status code](https://grpc.github.io/grpc/core/md_doc_statuscodes.html) to use in responses.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction.Status status = 1;</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
+     * <pre>
+     * gRPC [status code](https://grpc.github.io/grpc/core/md_doc_statuscodes.html) to use in responses.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction.Status status = 1;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction.Status getStatus() {
@@ -12561,6 +13711,10 @@ public final class VirtualHostOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A gRPC status response action resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction}
      */
     public static final class Builder extends
@@ -12709,12 +13863,20 @@ public final class VirtualHostOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * gRPC [status code](https://grpc.github.io/grpc/core/md_doc_statuscodes.html) to use in responses.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction.Status status = 1;</code>
        */
       public int getStatusValue() {
         return status_;
       }
       /**
+       * <pre>
+       * gRPC [status code](https://grpc.github.io/grpc/core/md_doc_statuscodes.html) to use in responses.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction.Status status = 1;</code>
        */
       public Builder setStatusValue(int value) {
@@ -12723,6 +13885,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * gRPC [status code](https://grpc.github.io/grpc/core/md_doc_statuscodes.html) to use in responses.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction.Status status = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction.Status getStatus() {
@@ -12731,6 +13897,10 @@ public final class VirtualHostOuterClass {
         return result == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * gRPC [status code](https://grpc.github.io/grpc/core/md_doc_statuscodes.html) to use in responses.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction.Status status = 1;</code>
        */
       public Builder setStatus(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcStatusResponseAction.Status value) {
@@ -12743,6 +13913,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * gRPC [status code](https://grpc.github.io/grpc/core/md_doc_statuscodes.html) to use in responses.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcStatusResponseAction.Status status = 1;</code>
        */
       public Builder clearStatus() {
@@ -12810,7 +13984,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Backend group to route requests.
+     * Backend group to forward requests to.
      * </pre>
      *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12818,7 +13992,7 @@ public final class VirtualHostOuterClass {
     java.lang.String getBackendGroupId();
     /**
      * <pre>
-     * Backend group to route requests.
+     * Backend group to forward requests to.
      * </pre>
      *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12828,8 +14002,10 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-     * If not set, default is 60 seconds.
+     * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+     * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+     * Default value: `60`.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -12837,8 +14013,10 @@ public final class VirtualHostOuterClass {
     boolean hasTimeout();
     /**
      * <pre>
-     * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-     * If not set, default is 60 seconds.
+     * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+     * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+     * Default value: `60`.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -12846,8 +14024,10 @@ public final class VirtualHostOuterClass {
     com.google.protobuf.Duration getTimeout();
     /**
      * <pre>
-     * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-     * If not set, default is 60 seconds.
+     * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+     * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+     * Default value: `60`.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -12856,10 +14036,12 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-     * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-     * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-     * If not specified, there is no per-route idle timeout.
+     * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+     * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+     * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+     * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+     * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
      * </pre>
      *
      * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -12867,10 +14049,12 @@ public final class VirtualHostOuterClass {
     boolean hasIdleTimeout();
     /**
      * <pre>
-     * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-     * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-     * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-     * If not specified, there is no per-route idle timeout.
+     * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+     * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+     * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+     * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+     * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
      * </pre>
      *
      * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -12878,10 +14062,12 @@ public final class VirtualHostOuterClass {
     com.google.protobuf.Duration getIdleTimeout();
     /**
      * <pre>
-     * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-     * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-     * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-     * If not specified, there is no per-route idle timeout.
+     * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+     * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+     * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+     * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+     * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
      * </pre>
      *
      * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -12889,23 +14075,39 @@ public final class VirtualHostOuterClass {
     com.google.protobuf.DurationOrBuilder getIdleTimeoutOrBuilder();
 
     /**
+     * <pre>
+     * Host replacement.
+     * </pre>
+     *
      * <code>string host_rewrite = 4;</code>
      */
     java.lang.String getHostRewrite();
     /**
+     * <pre>
+     * Host replacement.
+     * </pre>
+     *
      * <code>string host_rewrite = 4;</code>
      */
     com.google.protobuf.ByteString
         getHostRewriteBytes();
 
     /**
+     * <pre>
+     * Automatically replaces the host with that of the target.
+     * </pre>
+     *
      * <code>bool auto_host_rewrite = 5;</code>
      */
     boolean getAutoHostRewrite();
 
     /**
      * <pre>
-     * If not empty, matched path prefix will be replaced by this value.
+     * Replacement for the path prefix matched by [StringMatch.match].
+     * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+     * a request with `/foobaz` path is forwarded with `/barbaz` path.
+     * For [StringMatch.exact_match], the whole path is replaced.
+     * If not specified, the path is not changed.
      * </pre>
      *
      * <code>string prefix_rewrite = 6;</code>
@@ -12913,7 +14115,11 @@ public final class VirtualHostOuterClass {
     java.lang.String getPrefixRewrite();
     /**
      * <pre>
-     * If not empty, matched path prefix will be replaced by this value.
+     * Replacement for the path prefix matched by [StringMatch.match].
+     * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+     * a request with `/foobaz` path is forwarded with `/barbaz` path.
+     * For [StringMatch.exact_match], the whole path is replaced.
+     * If not specified, the path is not changed.
      * </pre>
      *
      * <code>string prefix_rewrite = 6;</code>
@@ -12923,7 +14129,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Only specified upgrade types will be allowed. For example, "websocket".
+     * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
      * </pre>
      *
      * <code>repeated string upgrade_types = 7;</code>
@@ -12932,7 +14138,7 @@ public final class VirtualHostOuterClass {
         getUpgradeTypesList();
     /**
      * <pre>
-     * Only specified upgrade types will be allowed. For example, "websocket".
+     * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
      * </pre>
      *
      * <code>repeated string upgrade_types = 7;</code>
@@ -12940,7 +14146,7 @@ public final class VirtualHostOuterClass {
     int getUpgradeTypesCount();
     /**
      * <pre>
-     * Only specified upgrade types will be allowed. For example, "websocket".
+     * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
      * </pre>
      *
      * <code>repeated string upgrade_types = 7;</code>
@@ -12948,7 +14154,7 @@ public final class VirtualHostOuterClass {
     java.lang.String getUpgradeTypes(int index);
     /**
      * <pre>
-     * Only specified upgrade types will be allowed. For example, "websocket".
+     * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
      * </pre>
      *
      * <code>repeated string upgrade_types = 7;</code>
@@ -12959,6 +14165,10 @@ public final class VirtualHostOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HttpRouteAction.HostRewriteSpecifierCase getHostRewriteSpecifierCase();
   }
   /**
+   * <pre>
+   * An HTTP route action resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpRouteAction}
    */
   public  static final class HttpRouteAction extends
@@ -13136,7 +14346,7 @@ public final class VirtualHostOuterClass {
     private volatile java.lang.Object backendGroupId_;
     /**
      * <pre>
-     * Backend group to route requests.
+     * Backend group to forward requests to.
      * </pre>
      *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13155,7 +14365,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Backend group to route requests.
+     * Backend group to forward requests to.
      * </pre>
      *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13178,8 +14388,10 @@ public final class VirtualHostOuterClass {
     private com.google.protobuf.Duration timeout_;
     /**
      * <pre>
-     * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-     * If not set, default is 60 seconds.
+     * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+     * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+     * Default value: `60`.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -13189,8 +14401,10 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-     * If not set, default is 60 seconds.
+     * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+     * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+     * Default value: `60`.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -13200,8 +14414,10 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-     * If not set, default is 60 seconds.
+     * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+     * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+     * Default value: `60`.
      * </pre>
      *
      * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -13214,10 +14430,12 @@ public final class VirtualHostOuterClass {
     private com.google.protobuf.Duration idleTimeout_;
     /**
      * <pre>
-     * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-     * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-     * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-     * If not specified, there is no per-route idle timeout.
+     * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+     * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+     * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+     * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+     * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
      * </pre>
      *
      * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -13227,10 +14445,12 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-     * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-     * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-     * If not specified, there is no per-route idle timeout.
+     * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+     * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+     * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+     * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+     * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
      * </pre>
      *
      * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -13240,10 +14460,12 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-     * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-     * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-     * If not specified, there is no per-route idle timeout.
+     * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+     * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+     * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+     * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+     * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
      * </pre>
      *
      * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -13254,6 +14476,10 @@ public final class VirtualHostOuterClass {
 
     public static final int HOST_REWRITE_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Host replacement.
+     * </pre>
+     *
      * <code>string host_rewrite = 4;</code>
      */
     public java.lang.String getHostRewrite() {
@@ -13274,6 +14500,10 @@ public final class VirtualHostOuterClass {
       }
     }
     /**
+     * <pre>
+     * Host replacement.
+     * </pre>
+     *
      * <code>string host_rewrite = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -13297,6 +14527,10 @@ public final class VirtualHostOuterClass {
 
     public static final int AUTO_HOST_REWRITE_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * Automatically replaces the host with that of the target.
+     * </pre>
+     *
      * <code>bool auto_host_rewrite = 5;</code>
      */
     public boolean getAutoHostRewrite() {
@@ -13310,7 +14544,11 @@ public final class VirtualHostOuterClass {
     private volatile java.lang.Object prefixRewrite_;
     /**
      * <pre>
-     * If not empty, matched path prefix will be replaced by this value.
+     * Replacement for the path prefix matched by [StringMatch.match].
+     * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+     * a request with `/foobaz` path is forwarded with `/barbaz` path.
+     * For [StringMatch.exact_match], the whole path is replaced.
+     * If not specified, the path is not changed.
      * </pre>
      *
      * <code>string prefix_rewrite = 6;</code>
@@ -13329,7 +14567,11 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * If not empty, matched path prefix will be replaced by this value.
+     * Replacement for the path prefix matched by [StringMatch.match].
+     * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+     * a request with `/foobaz` path is forwarded with `/barbaz` path.
+     * For [StringMatch.exact_match], the whole path is replaced.
+     * If not specified, the path is not changed.
      * </pre>
      *
      * <code>string prefix_rewrite = 6;</code>
@@ -13352,7 +14594,7 @@ public final class VirtualHostOuterClass {
     private com.google.protobuf.LazyStringList upgradeTypes_;
     /**
      * <pre>
-     * Only specified upgrade types will be allowed. For example, "websocket".
+     * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
      * </pre>
      *
      * <code>repeated string upgrade_types = 7;</code>
@@ -13363,7 +14605,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Only specified upgrade types will be allowed. For example, "websocket".
+     * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
      * </pre>
      *
      * <code>repeated string upgrade_types = 7;</code>
@@ -13373,7 +14615,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Only specified upgrade types will be allowed. For example, "websocket".
+     * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
      * </pre>
      *
      * <code>repeated string upgrade_types = 7;</code>
@@ -13383,7 +14625,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Only specified upgrade types will be allowed. For example, "websocket".
+     * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
      * </pre>
      *
      * <code>repeated string upgrade_types = 7;</code>
@@ -13651,6 +14893,10 @@ public final class VirtualHostOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An HTTP route action resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpRouteAction}
      */
     public static final class Builder extends
@@ -13896,7 +15142,7 @@ public final class VirtualHostOuterClass {
       private java.lang.Object backendGroupId_ = "";
       /**
        * <pre>
-       * Backend group to route requests.
+       * Backend group to forward requests to.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13915,7 +15161,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Backend group to route requests.
+       * Backend group to forward requests to.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13935,7 +15181,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Backend group to route requests.
+       * Backend group to forward requests to.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13952,7 +15198,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Backend group to route requests.
+       * Backend group to forward requests to.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13965,7 +15211,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Backend group to route requests.
+       * Backend group to forward requests to.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13987,8 +15233,10 @@ public final class VirtualHostOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> timeoutBuilder_;
       /**
        * <pre>
-       * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-       * If not set, default is 60 seconds.
+       * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -13998,8 +15246,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-       * If not set, default is 60 seconds.
+       * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -14013,8 +15263,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-       * If not set, default is 60 seconds.
+       * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -14034,8 +15286,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-       * If not set, default is 60 seconds.
+       * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -14053,8 +15307,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-       * If not set, default is 60 seconds.
+       * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -14076,8 +15332,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-       * If not set, default is 60 seconds.
+       * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -14095,8 +15353,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-       * If not set, default is 60 seconds.
+       * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -14108,8 +15368,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-       * If not set, default is 60 seconds.
+       * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -14124,8 +15386,10 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the request timeout (overall time request processing is allowed to take) for the route.
-       * If not set, default is 60 seconds.
+       * Overall timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration timeout = 2;</code>
@@ -14149,10 +15413,12 @@ public final class VirtualHostOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> idleTimeoutBuilder_;
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-       * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -14162,10 +15428,12 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-       * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -14179,10 +15447,12 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-       * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -14202,10 +15472,12 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-       * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -14223,10 +15495,12 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-       * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -14248,10 +15522,12 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-       * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -14269,10 +15545,12 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-       * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -14284,10 +15562,12 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-       * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -14302,10 +15582,12 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios (i.e. long-polling, server-sent events) - one should set
-       * idle_timeout to something meaningful and timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events (`EventSource` interface) etc.
+       * If a connection times out, the load balancer responds to the client with a `504 Gateway Timeout` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration (see [timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -14325,6 +15607,10 @@ public final class VirtualHostOuterClass {
       }
 
       /**
+       * <pre>
+       * Host replacement.
+       * </pre>
+       *
        * <code>string host_rewrite = 4;</code>
        */
       public java.lang.String getHostRewrite() {
@@ -14345,6 +15631,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Host replacement.
+       * </pre>
+       *
        * <code>string host_rewrite = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -14366,6 +15656,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Host replacement.
+       * </pre>
+       *
        * <code>string host_rewrite = 4;</code>
        */
       public Builder setHostRewrite(
@@ -14379,6 +15673,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Host replacement.
+       * </pre>
+       *
        * <code>string host_rewrite = 4;</code>
        */
       public Builder clearHostRewrite() {
@@ -14390,6 +15688,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Host replacement.
+       * </pre>
+       *
        * <code>string host_rewrite = 4;</code>
        */
       public Builder setHostRewriteBytes(
@@ -14405,6 +15707,10 @@ public final class VirtualHostOuterClass {
       }
 
       /**
+       * <pre>
+       * Automatically replaces the host with that of the target.
+       * </pre>
+       *
        * <code>bool auto_host_rewrite = 5;</code>
        */
       public boolean getAutoHostRewrite() {
@@ -14414,6 +15720,10 @@ public final class VirtualHostOuterClass {
         return false;
       }
       /**
+       * <pre>
+       * Automatically replaces the host with that of the target.
+       * </pre>
+       *
        * <code>bool auto_host_rewrite = 5;</code>
        */
       public Builder setAutoHostRewrite(boolean value) {
@@ -14423,6 +15733,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Automatically replaces the host with that of the target.
+       * </pre>
+       *
        * <code>bool auto_host_rewrite = 5;</code>
        */
       public Builder clearAutoHostRewrite() {
@@ -14437,7 +15751,11 @@ public final class VirtualHostOuterClass {
       private java.lang.Object prefixRewrite_ = "";
       /**
        * <pre>
-       * If not empty, matched path prefix will be replaced by this value.
+       * Replacement for the path prefix matched by [StringMatch.match].
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * a request with `/foobaz` path is forwarded with `/barbaz` path.
+       * For [StringMatch.exact_match], the whole path is replaced.
+       * If not specified, the path is not changed.
        * </pre>
        *
        * <code>string prefix_rewrite = 6;</code>
@@ -14456,7 +15774,11 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not empty, matched path prefix will be replaced by this value.
+       * Replacement for the path prefix matched by [StringMatch.match].
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * a request with `/foobaz` path is forwarded with `/barbaz` path.
+       * For [StringMatch.exact_match], the whole path is replaced.
+       * If not specified, the path is not changed.
        * </pre>
        *
        * <code>string prefix_rewrite = 6;</code>
@@ -14476,7 +15798,11 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not empty, matched path prefix will be replaced by this value.
+       * Replacement for the path prefix matched by [StringMatch.match].
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * a request with `/foobaz` path is forwarded with `/barbaz` path.
+       * For [StringMatch.exact_match], the whole path is replaced.
+       * If not specified, the path is not changed.
        * </pre>
        *
        * <code>string prefix_rewrite = 6;</code>
@@ -14493,7 +15819,11 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not empty, matched path prefix will be replaced by this value.
+       * Replacement for the path prefix matched by [StringMatch.match].
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * a request with `/foobaz` path is forwarded with `/barbaz` path.
+       * For [StringMatch.exact_match], the whole path is replaced.
+       * If not specified, the path is not changed.
        * </pre>
        *
        * <code>string prefix_rewrite = 6;</code>
@@ -14506,7 +15836,11 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * If not empty, matched path prefix will be replaced by this value.
+       * Replacement for the path prefix matched by [StringMatch.match].
+       * For instance, if [StringMatch.prefix_match] value is `/foo` and `replace_prefix` value is `/bar`,
+       * a request with `/foobaz` path is forwarded with `/barbaz` path.
+       * For [StringMatch.exact_match], the whole path is replaced.
+       * If not specified, the path is not changed.
        * </pre>
        *
        * <code>string prefix_rewrite = 6;</code>
@@ -14532,7 +15866,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Only specified upgrade types will be allowed. For example, "websocket".
+       * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
        * </pre>
        *
        * <code>repeated string upgrade_types = 7;</code>
@@ -14543,7 +15877,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Only specified upgrade types will be allowed. For example, "websocket".
+       * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
        * </pre>
        *
        * <code>repeated string upgrade_types = 7;</code>
@@ -14553,7 +15887,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Only specified upgrade types will be allowed. For example, "websocket".
+       * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
        * </pre>
        *
        * <code>repeated string upgrade_types = 7;</code>
@@ -14563,7 +15897,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Only specified upgrade types will be allowed. For example, "websocket".
+       * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
        * </pre>
        *
        * <code>repeated string upgrade_types = 7;</code>
@@ -14574,7 +15908,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Only specified upgrade types will be allowed. For example, "websocket".
+       * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
        * </pre>
        *
        * <code>repeated string upgrade_types = 7;</code>
@@ -14591,7 +15925,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Only specified upgrade types will be allowed. For example, "websocket".
+       * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
        * </pre>
        *
        * <code>repeated string upgrade_types = 7;</code>
@@ -14608,7 +15942,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Only specified upgrade types will be allowed. For example, "websocket".
+       * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
        * </pre>
        *
        * <code>repeated string upgrade_types = 7;</code>
@@ -14623,7 +15957,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Only specified upgrade types will be allowed. For example, "websocket".
+       * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
        * </pre>
        *
        * <code>repeated string upgrade_types = 7;</code>
@@ -14636,7 +15970,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Only specified upgrade types will be allowed. For example, "websocket".
+       * Supported values for HTTP `Upgrade` header. E.g. `websocket`.
        * </pre>
        *
        * <code>repeated string upgrade_types = 7;</code>
@@ -14711,7 +16045,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Backend group to route requests.
+     * Backend group to forward requests to.
      * </pre>
      *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -14719,7 +16053,7 @@ public final class VirtualHostOuterClass {
     java.lang.String getBackendGroupId();
     /**
      * <pre>
-     * Backend group to route requests.
+     * Backend group to forward requests to.
      * </pre>
      *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -14729,8 +16063,11 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Lower timeout may be specified by the client (using grpc-timeout header).
-     * If not set, default is 60 seconds.
+     * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+     * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+     * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+     * Default value: `60`.
      * </pre>
      *
      * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -14738,8 +16075,11 @@ public final class VirtualHostOuterClass {
     boolean hasMaxTimeout();
     /**
      * <pre>
-     * Lower timeout may be specified by the client (using grpc-timeout header).
-     * If not set, default is 60 seconds.
+     * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+     * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+     * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+     * Default value: `60`.
      * </pre>
      *
      * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -14747,8 +16087,11 @@ public final class VirtualHostOuterClass {
     com.google.protobuf.Duration getMaxTimeout();
     /**
      * <pre>
-     * Lower timeout may be specified by the client (using grpc-timeout header).
-     * If not set, default is 60 seconds.
+     * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+     * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+     * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+     * Default value: `60`.
      * </pre>
      *
      * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -14757,10 +16100,13 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-     * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-     * and max_timeout to the maximum time the stream is allowed to be alive.
-     * If not specified, there is no per-route idle timeout.
+     * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+     * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+     * server-push mechanisms such as long polling, server-sent events etc.
+     * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+     * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+     * (see [max_timeout]).
      * </pre>
      *
      * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -14768,10 +16114,13 @@ public final class VirtualHostOuterClass {
     boolean hasIdleTimeout();
     /**
      * <pre>
-     * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-     * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-     * and max_timeout to the maximum time the stream is allowed to be alive.
-     * If not specified, there is no per-route idle timeout.
+     * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+     * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+     * server-push mechanisms such as long polling, server-sent events etc.
+     * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+     * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+     * (see [max_timeout]).
      * </pre>
      *
      * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -14779,10 +16128,13 @@ public final class VirtualHostOuterClass {
     com.google.protobuf.Duration getIdleTimeout();
     /**
      * <pre>
-     * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-     * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-     * and max_timeout to the maximum time the stream is allowed to be alive.
-     * If not specified, there is no per-route idle timeout.
+     * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+     * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+     * server-push mechanisms such as long polling, server-sent events etc.
+     * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+     * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+     * (see [max_timeout]).
      * </pre>
      *
      * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -14790,16 +16142,28 @@ public final class VirtualHostOuterClass {
     com.google.protobuf.DurationOrBuilder getIdleTimeoutOrBuilder();
 
     /**
+     * <pre>
+     * Host replacement.
+     * </pre>
+     *
      * <code>string host_rewrite = 4;</code>
      */
     java.lang.String getHostRewrite();
     /**
+     * <pre>
+     * Host replacement.
+     * </pre>
+     *
      * <code>string host_rewrite = 4;</code>
      */
     com.google.protobuf.ByteString
         getHostRewriteBytes();
 
     /**
+     * <pre>
+     * Automatically replaces the host with that of the target.
+     * </pre>
+     *
      * <code>bool auto_host_rewrite = 5;</code>
      */
     boolean getAutoHostRewrite();
@@ -14807,6 +16171,10 @@ public final class VirtualHostOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteAction.HostRewriteSpecifierCase getHostRewriteSpecifierCase();
   }
   /**
+   * <pre>
+   * A gRPC route action resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GrpcRouteAction}
    */
   public  static final class GrpcRouteAction extends
@@ -14963,7 +16331,7 @@ public final class VirtualHostOuterClass {
     private volatile java.lang.Object backendGroupId_;
     /**
      * <pre>
-     * Backend group to route requests.
+     * Backend group to forward requests to.
      * </pre>
      *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -14982,7 +16350,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Backend group to route requests.
+     * Backend group to forward requests to.
      * </pre>
      *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -15005,8 +16373,11 @@ public final class VirtualHostOuterClass {
     private com.google.protobuf.Duration maxTimeout_;
     /**
      * <pre>
-     * Lower timeout may be specified by the client (using grpc-timeout header).
-     * If not set, default is 60 seconds.
+     * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+     * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+     * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+     * Default value: `60`.
      * </pre>
      *
      * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -15016,8 +16387,11 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Lower timeout may be specified by the client (using grpc-timeout header).
-     * If not set, default is 60 seconds.
+     * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+     * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+     * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+     * Default value: `60`.
      * </pre>
      *
      * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -15027,8 +16401,11 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Lower timeout may be specified by the client (using grpc-timeout header).
-     * If not set, default is 60 seconds.
+     * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+     * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+     * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+     * Default value: `60`.
      * </pre>
      *
      * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -15041,10 +16418,13 @@ public final class VirtualHostOuterClass {
     private com.google.protobuf.Duration idleTimeout_;
     /**
      * <pre>
-     * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-     * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-     * and max_timeout to the maximum time the stream is allowed to be alive.
-     * If not specified, there is no per-route idle timeout.
+     * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+     * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+     * server-push mechanisms such as long polling, server-sent events etc.
+     * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+     * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+     * (see [max_timeout]).
      * </pre>
      *
      * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -15054,10 +16434,13 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-     * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-     * and max_timeout to the maximum time the stream is allowed to be alive.
-     * If not specified, there is no per-route idle timeout.
+     * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+     * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+     * server-push mechanisms such as long polling, server-sent events etc.
+     * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+     * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+     * (see [max_timeout]).
      * </pre>
      *
      * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -15067,10 +16450,13 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-     * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-     * and max_timeout to the maximum time the stream is allowed to be alive.
-     * If not specified, there is no per-route idle timeout.
+     * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+     * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+     * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+     * server-push mechanisms such as long polling, server-sent events etc.
+     * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+     * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+     * (see [max_timeout]).
      * </pre>
      *
      * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -15081,6 +16467,10 @@ public final class VirtualHostOuterClass {
 
     public static final int HOST_REWRITE_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * Host replacement.
+     * </pre>
+     *
      * <code>string host_rewrite = 4;</code>
      */
     public java.lang.String getHostRewrite() {
@@ -15101,6 +16491,10 @@ public final class VirtualHostOuterClass {
       }
     }
     /**
+     * <pre>
+     * Host replacement.
+     * </pre>
+     *
      * <code>string host_rewrite = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -15124,6 +16518,10 @@ public final class VirtualHostOuterClass {
 
     public static final int AUTO_HOST_REWRITE_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * Automatically replaces the host with that of the target.
+     * </pre>
+     *
      * <code>bool auto_host_rewrite = 5;</code>
      */
     public boolean getAutoHostRewrite() {
@@ -15364,6 +16762,10 @@ public final class VirtualHostOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A gRPC route action resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.GrpcRouteAction}
      */
     public static final class Builder extends
@@ -15581,7 +16983,7 @@ public final class VirtualHostOuterClass {
       private java.lang.Object backendGroupId_ = "";
       /**
        * <pre>
-       * Backend group to route requests.
+       * Backend group to forward requests to.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -15600,7 +17002,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Backend group to route requests.
+       * Backend group to forward requests to.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -15620,7 +17022,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Backend group to route requests.
+       * Backend group to forward requests to.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -15637,7 +17039,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Backend group to route requests.
+       * Backend group to forward requests to.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -15650,7 +17052,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Backend group to route requests.
+       * Backend group to forward requests to.
        * </pre>
        *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -15672,8 +17074,11 @@ public final class VirtualHostOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> maxTimeoutBuilder_;
       /**
        * <pre>
-       * Lower timeout may be specified by the client (using grpc-timeout header).
-       * If not set, default is 60 seconds.
+       * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -15683,8 +17088,11 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Lower timeout may be specified by the client (using grpc-timeout header).
-       * If not set, default is 60 seconds.
+       * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -15698,8 +17106,11 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Lower timeout may be specified by the client (using grpc-timeout header).
-       * If not set, default is 60 seconds.
+       * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -15719,8 +17130,11 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Lower timeout may be specified by the client (using grpc-timeout header).
-       * If not set, default is 60 seconds.
+       * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -15738,8 +17152,11 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Lower timeout may be specified by the client (using grpc-timeout header).
-       * If not set, default is 60 seconds.
+       * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -15761,8 +17178,11 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Lower timeout may be specified by the client (using grpc-timeout header).
-       * If not set, default is 60 seconds.
+       * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -15780,8 +17200,11 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Lower timeout may be specified by the client (using grpc-timeout header).
-       * If not set, default is 60 seconds.
+       * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -15793,8 +17216,11 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Lower timeout may be specified by the client (using grpc-timeout header).
-       * If not set, default is 60 seconds.
+       * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -15809,8 +17235,11 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Lower timeout may be specified by the client (using grpc-timeout header).
-       * If not set, default is 60 seconds.
+       * Overall timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is kept alive for, regardless of whether data is transferred over it.
+       * If a client specifies a lower timeout in HTTP `grpc-timeout` header, the `max_timeout` value is ignored.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * Default value: `60`.
        * </pre>
        *
        * <code>.google.protobuf.Duration max_timeout = 2;</code>
@@ -15834,10 +17263,13 @@ public final class VirtualHostOuterClass {
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> idleTimeoutBuilder_;
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-       * and max_timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events etc.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+       * (see [max_timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -15847,10 +17279,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-       * and max_timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events etc.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+       * (see [max_timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -15864,10 +17299,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-       * and max_timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events etc.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+       * (see [max_timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -15887,10 +17325,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-       * and max_timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events etc.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+       * (see [max_timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -15908,10 +17349,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-       * and max_timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events etc.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+       * (see [max_timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -15933,10 +17377,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-       * and max_timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events etc.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+       * (see [max_timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -15954,10 +17401,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-       * and max_timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events etc.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+       * (see [max_timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -15969,10 +17419,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-       * and max_timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events etc.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+       * (see [max_timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -15987,10 +17440,13 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Specifies the idle timeout (time without any data transfer for the active request) for the route.
-       * It is useful for streaming scenarios - one should set idle_timeout to something meaningful
-       * and max_timeout to the maximum time the stream is allowed to be alive.
-       * If not specified, there is no per-route idle timeout.
+       * Idle timeout for an underlying HTTP connection between a load balancer node an a backend from the backend group:
+       * the maximum time the connection is allowed to be idle, i.e. without any data transferred over it.
+       * Specifying meaningful values for both [max_timeout] and `idle_timeout` is useful for implementing
+       * server-push mechanisms such as long polling, server-sent events etc.
+       * If a connection times out, the load balancer responds to the client with an `UNAVAILABLE` status code.
+       * If not specified, no idle timeout is used, and an alive connection may be idle for any duration
+       * (see [max_timeout]).
        * </pre>
        *
        * <code>.google.protobuf.Duration idle_timeout = 3;</code>
@@ -16010,6 +17466,10 @@ public final class VirtualHostOuterClass {
       }
 
       /**
+       * <pre>
+       * Host replacement.
+       * </pre>
+       *
        * <code>string host_rewrite = 4;</code>
        */
       public java.lang.String getHostRewrite() {
@@ -16030,6 +17490,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Host replacement.
+       * </pre>
+       *
        * <code>string host_rewrite = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -16051,6 +17515,10 @@ public final class VirtualHostOuterClass {
         }
       }
       /**
+       * <pre>
+       * Host replacement.
+       * </pre>
+       *
        * <code>string host_rewrite = 4;</code>
        */
       public Builder setHostRewrite(
@@ -16064,6 +17532,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Host replacement.
+       * </pre>
+       *
        * <code>string host_rewrite = 4;</code>
        */
       public Builder clearHostRewrite() {
@@ -16075,6 +17547,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Host replacement.
+       * </pre>
+       *
        * <code>string host_rewrite = 4;</code>
        */
       public Builder setHostRewriteBytes(
@@ -16090,6 +17566,10 @@ public final class VirtualHostOuterClass {
       }
 
       /**
+       * <pre>
+       * Automatically replaces the host with that of the target.
+       * </pre>
+       *
        * <code>bool auto_host_rewrite = 5;</code>
        */
       public boolean getAutoHostRewrite() {
@@ -16099,6 +17579,10 @@ public final class VirtualHostOuterClass {
         return false;
       }
       /**
+       * <pre>
+       * Automatically replaces the host with that of the target.
+       * </pre>
+       *
        * <code>bool auto_host_rewrite = 5;</code>
        */
       public Builder setAutoHostRewrite(boolean value) {
@@ -16108,6 +17592,10 @@ public final class VirtualHostOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Automatically replaces the host with that of the target.
+       * </pre>
+       *
        * <code>bool auto_host_rewrite = 5;</code>
        */
       public Builder clearAutoHostRewrite() {

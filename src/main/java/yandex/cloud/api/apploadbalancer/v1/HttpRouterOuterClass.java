@@ -20,7 +20,7 @@ public final class HttpRouterOuterClass {
 
     /**
      * <pre>
-     * Output only. ID of the router.
+     * ID of the router. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -28,7 +28,7 @@ public final class HttpRouterOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * Output only. ID of the router.
+     * ID of the router. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -38,7 +38,7 @@ public final class HttpRouterOuterClass {
 
     /**
      * <pre>
-     * The name is unique within the folder. 3-63 characters long.
+     * Name of the router. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -46,7 +46,7 @@ public final class HttpRouterOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * The name is unique within the folder. 3-63 characters long.
+     * Name of the router. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -56,7 +56,7 @@ public final class HttpRouterOuterClass {
 
     /**
      * <pre>
-     * Description of the router. 0-256 characters long.
+     * Description of the router.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -64,7 +64,7 @@ public final class HttpRouterOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the router. 0-256 characters long.
+     * Description of the router.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -92,7 +92,8 @@ public final class HttpRouterOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -100,7 +101,8 @@ public final class HttpRouterOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -115,7 +117,8 @@ public final class HttpRouterOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -124,7 +127,8 @@ public final class HttpRouterOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -135,7 +139,8 @@ public final class HttpRouterOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -146,6 +151,8 @@ public final class HttpRouterOuterClass {
 
     /**
      * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
      * Only one virtual host with no authority (default match) can be specified.
      * </pre>
      *
@@ -155,6 +162,8 @@ public final class HttpRouterOuterClass {
         getVirtualHostsList();
     /**
      * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
      * Only one virtual host with no authority (default match) can be specified.
      * </pre>
      *
@@ -163,6 +172,8 @@ public final class HttpRouterOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost getVirtualHosts(int index);
     /**
      * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
      * Only one virtual host with no authority (default match) can be specified.
      * </pre>
      *
@@ -171,6 +182,8 @@ public final class HttpRouterOuterClass {
     int getVirtualHostsCount();
     /**
      * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
      * Only one virtual host with no authority (default match) can be specified.
      * </pre>
      *
@@ -180,6 +193,8 @@ public final class HttpRouterOuterClass {
         getVirtualHostsOrBuilderList();
     /**
      * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
      * Only one virtual host with no authority (default match) can be specified.
      * </pre>
      *
@@ -190,7 +205,7 @@ public final class HttpRouterOuterClass {
 
     /**
      * <pre>
-     * Creation timestamp for the http router.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -198,7 +213,7 @@ public final class HttpRouterOuterClass {
     boolean hasCreatedAt();
     /**
      * <pre>
-     * Creation timestamp for the http router.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -206,7 +221,7 @@ public final class HttpRouterOuterClass {
     com.google.protobuf.Timestamp getCreatedAt();
     /**
      * <pre>
-     * Creation timestamp for the http router.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -214,6 +229,11 @@ public final class HttpRouterOuterClass {
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
   }
   /**
+   * <pre>
+   * An HTTP router resource.
+   * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpRouter}
    */
   public  static final class HttpRouter extends
@@ -368,7 +388,7 @@ public final class HttpRouterOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * Output only. ID of the router.
+     * ID of the router. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -387,7 +407,7 @@ public final class HttpRouterOuterClass {
     }
     /**
      * <pre>
-     * Output only. ID of the router.
+     * ID of the router. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -410,7 +430,7 @@ public final class HttpRouterOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * The name is unique within the folder. 3-63 characters long.
+     * Name of the router. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -429,7 +449,7 @@ public final class HttpRouterOuterClass {
     }
     /**
      * <pre>
-     * The name is unique within the folder. 3-63 characters long.
+     * Name of the router. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -452,7 +472,7 @@ public final class HttpRouterOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the router. 0-256 characters long.
+     * Description of the router.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -471,7 +491,7 @@ public final class HttpRouterOuterClass {
     }
     /**
      * <pre>
-     * Description of the router. 0-256 characters long.
+     * Description of the router.
      * </pre>
      *
      * <code>string description = 3;</code>
@@ -560,7 +580,8 @@ public final class HttpRouterOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -580,7 +601,8 @@ public final class HttpRouterOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -591,7 +613,8 @@ public final class HttpRouterOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -607,7 +630,8 @@ public final class HttpRouterOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -628,6 +652,8 @@ public final class HttpRouterOuterClass {
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> virtualHosts_;
     /**
      * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
      * Only one virtual host with no authority (default match) can be specified.
      * </pre>
      *
@@ -638,6 +664,8 @@ public final class HttpRouterOuterClass {
     }
     /**
      * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
      * Only one virtual host with no authority (default match) can be specified.
      * </pre>
      *
@@ -649,6 +677,8 @@ public final class HttpRouterOuterClass {
     }
     /**
      * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
      * Only one virtual host with no authority (default match) can be specified.
      * </pre>
      *
@@ -659,6 +689,8 @@ public final class HttpRouterOuterClass {
     }
     /**
      * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
      * Only one virtual host with no authority (default match) can be specified.
      * </pre>
      *
@@ -669,6 +701,8 @@ public final class HttpRouterOuterClass {
     }
     /**
      * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
      * Only one virtual host with no authority (default match) can be specified.
      * </pre>
      *
@@ -683,7 +717,7 @@ public final class HttpRouterOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <pre>
-     * Creation timestamp for the http router.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -693,7 +727,7 @@ public final class HttpRouterOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp for the http router.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -703,7 +737,7 @@ public final class HttpRouterOuterClass {
     }
     /**
      * <pre>
-     * Creation timestamp for the http router.
+     * Creation timestamp.
      * </pre>
      *
      * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -949,6 +983,11 @@ public final class HttpRouterOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * An HTTP router resource.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.HttpRouter}
      */
     public static final class Builder extends
@@ -1207,7 +1246,7 @@ public final class HttpRouterOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * Output only. ID of the router.
+       * ID of the router. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1226,7 +1265,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Output only. ID of the router.
+       * ID of the router. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1246,7 +1285,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Output only. ID of the router.
+       * ID of the router. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1263,7 +1302,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Output only. ID of the router.
+       * ID of the router. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1276,7 +1315,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Output only. ID of the router.
+       * ID of the router. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1296,7 +1335,7 @@ public final class HttpRouterOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the router. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -1315,7 +1354,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the router. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -1335,7 +1374,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the router. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -1352,7 +1391,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the router. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -1365,7 +1404,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * The name is unique within the folder. 3-63 characters long.
+       * Name of the router. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -1385,7 +1424,7 @@ public final class HttpRouterOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the router. 0-256 characters long.
+       * Description of the router.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -1404,7 +1443,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Description of the router. 0-256 characters long.
+       * Description of the router.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -1424,7 +1463,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Description of the router. 0-256 characters long.
+       * Description of the router.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -1441,7 +1480,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Description of the router. 0-256 characters long.
+       * Description of the router.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -1454,7 +1493,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Description of the router. 0-256 characters long.
+       * Description of the router.
        * </pre>
        *
        * <code>string description = 3;</code>
@@ -1588,7 +1627,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1608,7 +1648,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1619,7 +1660,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1635,7 +1677,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1659,7 +1702,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1682,7 +1726,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1698,7 +1743,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5;</code>
@@ -1725,6 +1771,8 @@ public final class HttpRouterOuterClass {
 
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1739,6 +1787,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1753,6 +1803,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1767,6 +1819,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1788,6 +1842,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1806,6 +1862,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1826,6 +1884,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1847,6 +1907,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1865,6 +1927,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1883,6 +1947,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1902,6 +1968,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1919,6 +1987,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1936,6 +2006,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1947,6 +2019,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1961,6 +2035,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1976,6 +2052,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1987,6 +2065,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -1999,6 +2079,8 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
        * Only one virtual host with no authority (default match) can be specified.
        * </pre>
        *
@@ -2028,7 +2110,7 @@ public final class HttpRouterOuterClass {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <pre>
-       * Creation timestamp for the http router.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2038,7 +2120,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the http router.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2052,7 +2134,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the http router.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2072,7 +2154,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the http router.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2090,7 +2172,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the http router.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2112,7 +2194,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the http router.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2130,7 +2212,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the http router.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2142,7 +2224,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the http router.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>
@@ -2157,7 +2239,7 @@ public final class HttpRouterOuterClass {
       }
       /**
        * <pre>
-       * Creation timestamp for the http router.
+       * Creation timestamp.
        * </pre>
        *
        * <code>.google.protobuf.Timestamp created_at = 7;</code>

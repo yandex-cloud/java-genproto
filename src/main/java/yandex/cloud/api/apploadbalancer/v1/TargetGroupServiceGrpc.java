@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing target groups.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -307,10 +310,17 @@ public final class TargetGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing target groups.
+   * </pre>
    */
   public static abstract class TargetGroupServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified target group.
+     * To get the list of all available target groups, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.GetTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup> responseObserver) {
@@ -318,6 +328,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists target groups in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsResponse> responseObserver) {
@@ -325,6 +338,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a target group in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.CreateTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -332,6 +348,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified target group.
+     * </pre>
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.UpdateTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -339,6 +358,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified target group.
+     * </pre>
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.DeleteTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -346,6 +368,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds targets to the specified target group.
+     * </pre>
      */
     public void addTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.AddTargetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -353,6 +378,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Removes targets from the specified target group.
+     * </pre>
      */
     public void removeTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.RemoveTargetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -432,6 +460,9 @@ public final class TargetGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing target groups.
+   * </pre>
    */
   public static final class TargetGroupServiceStub extends io.grpc.stub.AbstractStub<TargetGroupServiceStub> {
     private TargetGroupServiceStub(io.grpc.Channel channel) {
@@ -450,6 +481,10 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified target group.
+     * To get the list of all available target groups, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.GetTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup> responseObserver) {
@@ -458,6 +493,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists target groups in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsResponse> responseObserver) {
@@ -466,6 +504,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a target group in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.CreateTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -474,6 +515,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified target group.
+     * </pre>
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.UpdateTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -482,6 +526,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified target group.
+     * </pre>
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.DeleteTargetGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -490,6 +537,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds targets to the specified target group.
+     * </pre>
      */
     public void addTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.AddTargetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -498,6 +548,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Removes targets from the specified target group.
+     * </pre>
      */
     public void removeTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.RemoveTargetsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -518,6 +571,9 @@ public final class TargetGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing target groups.
+   * </pre>
    */
   public static final class TargetGroupServiceBlockingStub extends io.grpc.stub.AbstractStub<TargetGroupServiceBlockingStub> {
     private TargetGroupServiceBlockingStub(io.grpc.Channel channel) {
@@ -536,6 +592,10 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified target group.
+     * To get the list of all available target groups, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup get(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.GetTargetGroupRequest request) {
       return blockingUnaryCall(
@@ -543,6 +603,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists target groups in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsResponse list(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsRequest request) {
       return blockingUnaryCall(
@@ -550,6 +613,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a target group in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.CreateTargetGroupRequest request) {
       return blockingUnaryCall(
@@ -557,6 +623,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified target group.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.UpdateTargetGroupRequest request) {
       return blockingUnaryCall(
@@ -564,6 +633,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified target group.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.DeleteTargetGroupRequest request) {
       return blockingUnaryCall(
@@ -571,6 +643,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds targets to the specified target group.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.AddTargetsRequest request) {
       return blockingUnaryCall(
@@ -578,6 +653,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Removes targets from the specified target group.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.RemoveTargetsRequest request) {
       return blockingUnaryCall(
@@ -596,6 +674,9 @@ public final class TargetGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing target groups.
+   * </pre>
    */
   public static final class TargetGroupServiceFutureStub extends io.grpc.stub.AbstractStub<TargetGroupServiceFutureStub> {
     private TargetGroupServiceFutureStub(io.grpc.Channel channel) {
@@ -614,6 +695,10 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified target group.
+     * To get the list of all available target groups, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup> get(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.GetTargetGroupRequest request) {
@@ -622,6 +707,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists target groups in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsResponse> list(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.ListTargetGroupsRequest request) {
@@ -630,6 +718,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a target group in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.CreateTargetGroupRequest request) {
@@ -638,6 +729,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified target group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.UpdateTargetGroupRequest request) {
@@ -646,6 +740,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified target group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.DeleteTargetGroupRequest request) {
@@ -654,6 +751,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds targets to the specified target group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addTargets(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.AddTargetsRequest request) {
@@ -662,6 +762,9 @@ public final class TargetGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Removes targets from the specified target group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeTargets(
         yandex.cloud.api.apploadbalancer.v1.TargetGroupServiceOuterClass.RemoveTargetsRequest request) {

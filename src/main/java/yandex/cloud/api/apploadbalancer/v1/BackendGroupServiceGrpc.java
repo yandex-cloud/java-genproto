@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing backend groups.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -339,10 +342,17 @@ public final class BackendGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing backend groups.
+   * </pre>
    */
   public static abstract class BackendGroupServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified backend group.
+     * To get the list of all available backend groups, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.GetBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup> responseObserver) {
@@ -350,6 +360,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists backend groups in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsResponse> responseObserver) {
@@ -357,6 +370,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a backend group in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.CreateBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -364,6 +380,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified backend group.
+     * </pre>
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -371,6 +390,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified backend group.
+     * </pre>
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.DeleteBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -379,7 +401,7 @@ public final class BackendGroupServiceGrpc {
 
     /**
      * <pre>
-     * AddBackend/RemoveBackend technically do the same, but have different semantics.
+     * Adds backends to the specified backend group.
      * </pre>
      */
     public void addBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.AddBackendRequest request,
@@ -388,6 +410,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Removes backends from the specified backend group.
+     * </pre>
      */
     public void removeBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.RemoveBackendRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -395,6 +420,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified backend.
+     * </pre>
      */
     public void updateBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -481,6 +509,9 @@ public final class BackendGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing backend groups.
+   * </pre>
    */
   public static final class BackendGroupServiceStub extends io.grpc.stub.AbstractStub<BackendGroupServiceStub> {
     private BackendGroupServiceStub(io.grpc.Channel channel) {
@@ -499,6 +530,10 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified backend group.
+     * To get the list of all available backend groups, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.GetBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup> responseObserver) {
@@ -507,6 +542,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists backend groups in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsResponse> responseObserver) {
@@ -515,6 +553,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a backend group in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.CreateBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -523,6 +564,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified backend group.
+     * </pre>
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -531,6 +575,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified backend group.
+     * </pre>
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.DeleteBackendGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -540,7 +587,7 @@ public final class BackendGroupServiceGrpc {
 
     /**
      * <pre>
-     * AddBackend/RemoveBackend technically do the same, but have different semantics.
+     * Adds backends to the specified backend group.
      * </pre>
      */
     public void addBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.AddBackendRequest request,
@@ -550,6 +597,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Removes backends from the specified backend group.
+     * </pre>
      */
     public void removeBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.RemoveBackendRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -558,6 +608,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified backend.
+     * </pre>
      */
     public void updateBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -578,6 +631,9 @@ public final class BackendGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing backend groups.
+   * </pre>
    */
   public static final class BackendGroupServiceBlockingStub extends io.grpc.stub.AbstractStub<BackendGroupServiceBlockingStub> {
     private BackendGroupServiceBlockingStub(io.grpc.Channel channel) {
@@ -596,6 +652,10 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified backend group.
+     * To get the list of all available backend groups, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup get(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.GetBackendGroupRequest request) {
       return blockingUnaryCall(
@@ -603,6 +663,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists backend groups in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsResponse list(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsRequest request) {
       return blockingUnaryCall(
@@ -610,6 +673,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a backend group in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.CreateBackendGroupRequest request) {
       return blockingUnaryCall(
@@ -617,6 +683,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified backend group.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendGroupRequest request) {
       return blockingUnaryCall(
@@ -624,6 +693,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified backend group.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.DeleteBackendGroupRequest request) {
       return blockingUnaryCall(
@@ -632,7 +704,7 @@ public final class BackendGroupServiceGrpc {
 
     /**
      * <pre>
-     * AddBackend/RemoveBackend technically do the same, but have different semantics.
+     * Adds backends to the specified backend group.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.AddBackendRequest request) {
@@ -641,6 +713,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Removes backends from the specified backend group.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.RemoveBackendRequest request) {
       return blockingUnaryCall(
@@ -648,6 +723,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified backend.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateBackend(yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendRequest request) {
       return blockingUnaryCall(
@@ -666,6 +744,9 @@ public final class BackendGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing backend groups.
+   * </pre>
    */
   public static final class BackendGroupServiceFutureStub extends io.grpc.stub.AbstractStub<BackendGroupServiceFutureStub> {
     private BackendGroupServiceFutureStub(io.grpc.Channel channel) {
@@ -684,6 +765,10 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified backend group.
+     * To get the list of all available backend groups, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup> get(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.GetBackendGroupRequest request) {
@@ -692,6 +777,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists backend groups in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsResponse> list(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.ListBackendGroupsRequest request) {
@@ -700,6 +788,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a backend group in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.CreateBackendGroupRequest request) {
@@ -708,6 +799,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified backend group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendGroupRequest request) {
@@ -716,6 +810,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified backend group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.DeleteBackendGroupRequest request) {
@@ -725,7 +822,7 @@ public final class BackendGroupServiceGrpc {
 
     /**
      * <pre>
-     * AddBackend/RemoveBackend technically do the same, but have different semantics.
+     * Adds backends to the specified backend group.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addBackend(
@@ -735,6 +832,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Removes backends from the specified backend group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeBackend(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.RemoveBackendRequest request) {
@@ -743,6 +843,9 @@ public final class BackendGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified backend.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateBackend(
         yandex.cloud.api.apploadbalancer.v1.BackendGroupServiceOuterClass.UpdateBackendRequest request) {

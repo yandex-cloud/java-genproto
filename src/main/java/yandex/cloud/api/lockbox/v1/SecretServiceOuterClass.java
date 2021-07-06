@@ -23,7 +23,7 @@ public final class SecretServiceOuterClass {
      * Non-confidential key of the entry.
      * </pre>
      *
-     * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.-_0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getKey();
     /**
@@ -31,7 +31,7 @@ public final class SecretServiceOuterClass {
      * Non-confidential key of the entry.
      * </pre>
      *
-     * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.-_0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getKeyBytes();
@@ -199,7 +199,7 @@ public final class SecretServiceOuterClass {
      * Non-confidential key of the entry.
      * </pre>
      *
-     * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.-_0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getKey() {
       java.lang.Object ref = key_;
@@ -218,7 +218,7 @@ public final class SecretServiceOuterClass {
      * Non-confidential key of the entry.
      * </pre>
      *
-     * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.-_0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
         getKeyBytes() {
@@ -690,7 +690,7 @@ public final class SecretServiceOuterClass {
        * Non-confidential key of the entry.
        * </pre>
        *
-       * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.-_0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getKey() {
         java.lang.Object ref = key_;
@@ -709,7 +709,7 @@ public final class SecretServiceOuterClass {
        * Non-confidential key of the entry.
        * </pre>
        *
-       * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.-_0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
           getKeyBytes() {
@@ -729,7 +729,7 @@ public final class SecretServiceOuterClass {
        * Non-confidential key of the entry.
        * </pre>
        *
-       * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.-_0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setKey(
           java.lang.String value) {
@@ -746,7 +746,7 @@ public final class SecretServiceOuterClass {
        * Non-confidential key of the entry.
        * </pre>
        *
-       * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.-_0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearKey() {
         
@@ -759,7 +759,7 @@ public final class SecretServiceOuterClass {
        * Non-confidential key of the entry.
        * </pre>
        *
-       * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[.-_0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * <code>string key = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_./&#92;&#92;&#92;&#92;&#64;0-9a-zA-Z]+", (.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setKeyBytes(
           com.google.protobuf.ByteString value) {
@@ -22097,152 +22097,152 @@ public final class SecretServiceOuterClass {
       "ex/cloud/api/operation.proto\032$yandex/clo" +
       "ud/lockbox/v1/secret.proto\032&yandex/cloud" +
       "/operation/operation.proto\032\035yandex/cloud" +
-      "/validation.proto\"\224\001\n\022PayloadEntryChange" +
-      "\022-\n\003key\030\001 \001(\tB \350\3071\001\212\3101\005<=256\362\3071\017[.-_0-9a" +
-      "-zA-Z]+\022!\n\ntext_value\030\002 \001(\tB\013\212\3101\007<=65536" +
-      "H\000\022#\n\014binary_value\030\003 \001(\014B\013\212\3101\007<=65536H\000B" +
-      "\007\n\005value\"3\n\020GetSecretRequest\022\037\n\tsecret_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"s\n\022ListSecretsRequ" +
-      "est\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
-      "n\030\003 \001(\tB\t\212\3101\005<=100\"`\n\023ListSecretsRespons" +
-      "e\0220\n\007secrets\030\001 \003(\0132\037.yandex.cloud.lockbo" +
-      "x.v1.Secret\022\027\n\017next_page_token\030\002 \001(\t\"\346\003\n" +
-      "\023CreateSecretRequest\022\037\n\tfolder_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\027\n\004name\030\002 \001(\tB\t\212\3101\005<=100\022\037" +
-      "\n\013description\030\003 \001(\tB\n\212\3101\006<=1024\022\211\001\n\006labe" +
-      "ls\030\004 \003(\01328.yandex.cloud.lockbox.v1.Creat" +
-      "eSecretRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004" +
-      "<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z]" +
-      "[-_0-9a-z]*\022\034\n\nkms_key_id\030\005 \001(\tB\010\212\3101\004<=5" +
-      "0\022&\n\023version_description\030\006 \001(\tB\t\212\3101\005<=25" +
-      "6\022V\n\027version_payload_entries\030\007 \003(\0132+.yan" +
-      "dex.cloud.lockbox.v1.PayloadEntryChangeB" +
-      "\010\202\3101\004<=32\022\033\n\023deletion_protection\030\010 \001(\010\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001\"=\n\024CreateSecretMetadata\022\021\n\tsecret_" +
-      "id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\"\377\002\n\023UpdateS" +
-      "ecretRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\0225\n\013update_mask\030\002 \001(\0132\032.google.prot" +
-      "obuf.FieldMaskB\004\350\3071\001\022\027\n\004name\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=1024\022\211" +
-      "\001\n\006labels\030\005 \003(\01328.yandex.cloud.lockbox.v" +
-      "1.UpdateSecretRequest.LabelsEntryB?\202\3101\004<" +
-      "=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022" +
-      "\022\020[a-z][-_0-9a-z]*\022\033\n\023deletion_protectio" +
-      "n\030\006 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"7\n\024UpdateSecretMetadata\022\037" +
-      "\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"6\n\023Delet" +
-      "eSecretRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\")\n\024DeleteSecretMetadata\022\021\n\tsecre" +
-      "t_id\030\001 \001(\t\"8\n\025ActivateSecretRequest\022\037\n\ts" +
-      "ecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\026Activate" +
-      "SecretMetadata\022\021\n\tsecret_id\030\001 \001(\t\":\n\027Dea" +
-      "ctivateSecretRequest\022\037\n\tsecret_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"-\n\030DeactivateSecretMetadat" +
-      "a\022\021\n\tsecret_id\030\001 \001(\t\"\310\001\n\021AddVersionReque" +
-      "st\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\037\n\013d" +
-      "escription\030\002 \001(\tB\n\212\3101\006<=1024\022N\n\017payload_" +
-      "entries\030\003 \003(\0132+.yandex.cloud.lockbox.v1." +
-      "PayloadEntryChangeB\010\202\3101\004<=32\022!\n\017base_ver" +
-      "sion_id\030\004 \001(\tB\010\212\3101\004<=50\";\n\022AddVersionMet" +
-      "adata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nversion_id\030\002" +
-      " \001(\t\"t\n\023ListVersionsRequest\022\037\n\tsecret_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
-      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
-      "00\"c\n\024ListVersionsResponse\0222\n\010versions\030\001" +
-      " \003(\0132 .yandex.cloud.lockbox.v1.Version\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"\231\001\n!ScheduleVers" +
-      "ionDestructionRequest\022\037\n\tsecret_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\0221\n\016pending_period\030\003 \001(\0132\031.googl" +
-      "e.protobuf.Duration\"{\n\"ScheduleVersionDe" +
-      "structionMetadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\n" +
-      "version_id\030\002 \001(\t\022.\n\ndestroy_at\030\003 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\"d\n\037CancelVersio" +
-      "nDestructionRequest\022\037\n\tsecret_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\"I\n CancelVersionDestructionMetada" +
-      "ta\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(" +
-      "\t\"|\n\033ListSecretOperationsRequest\022\037\n\tsecr" +
-      "et_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
-      " \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\310" +
-      "1\005<=100\"n\n\034ListSecretOperationsResponse\022" +
-      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
-      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t2" +
-      "\351\025\n\rSecretService\022z\n\003Get\022).yandex.cloud." +
-      "lockbox.v1.GetSecretRequest\032\037.yandex.clo" +
-      "ud.lockbox.v1.Secret\"\'\202\323\344\223\002!\022\037/lockbox/v" +
-      "1/secrets/{secret_id}\022~\n\004List\022+.yandex.c" +
-      "loud.lockbox.v1.ListSecretsRequest\032,.yan" +
-      "dex.cloud.lockbox.v1.ListSecretsResponse" +
-      "\"\033\202\323\344\223\002\025\022\023/lockbox/v1/secrets\022\233\001\n\006Create" +
-      "\022,.yandex.cloud.lockbox.v1.CreateSecretR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"@\202\323\344\223\002\030\"\023/lockbox/v1/secrets:\001*\262\322*\036\n\024C" +
-      "reateSecretMetadata\022\006Secret\022\247\001\n\006Update\022," +
-      ".yandex.cloud.lockbox.v1.UpdateSecretReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "L\202\323\344\223\002$2\037/lockbox/v1/secrets/{secret_id}" +
-      ":\001*\262\322*\036\n\024UpdateSecretMetadata\022\006Secret\022\244\001" +
-      "\n\006Delete\022,.yandex.cloud.lockbox.v1.Delet" +
-      "eSecretRequest\032!.yandex.cloud.operation." +
-      "Operation\"I\202\323\344\223\002!*\037/lockbox/v1/secrets/{" +
-      "secret_id}\262\322*\036\n\024DeleteSecretMetadata\022\006Se" +
-      "cret\022\263\001\n\010Activate\022..yandex.cloud.lockbox" +
-      ".v1.ActivateSecretRequest\032!.yandex.cloud" +
-      ".operation.Operation\"T\202\323\344\223\002*\"(/lockbox/v" +
-      "1/secrets/{secret_id}:activate\262\322* \n\026Acti" +
-      "vateSecretMetadata\022\006Secret\022\273\001\n\nDeactivat" +
-      "e\0220.yandex.cloud.lockbox.v1.DeactivateSe" +
-      "cretRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"X\202\323\344\223\002,\"*/lockbox/v1/secrets/{sec" +
-      "ret_id}:deactivate\262\322*\"\n\030DeactivateSecret" +
-      "Metadata\022\006Secret\022\235\001\n\014ListVersions\022,.yand" +
-      "ex.cloud.lockbox.v1.ListVersionsRequest\032" +
-      "-.yandex.cloud.lockbox.v1.ListVersionsRe" +
-      "sponse\"0\202\323\344\223\002*\022(/lockbox/v1/secrets/{sec" +
-      "ret_id}/versions\022\263\001\n\nAddVersion\022*.yandex" +
-      ".cloud.lockbox.v1.AddVersionRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"V\202\323\344\223\002/\"*" +
-      "/lockbox/v1/secrets/{secret_id}:addVersi" +
-      "on:\001*\262\322*\035\n\022AddVersionMetadata\022\007Version\022\363" +
-      "\001\n\032ScheduleVersionDestruction\022:.yandex.c" +
-      "loud.lockbox.v1.ScheduleVersionDestructi" +
-      "onRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"v\202\323\344\223\002?\":/lockbox/v1/secrets/{secre" +
-      "t_id}:scheduleVersionDestruction:\001*\262\322*-\n" +
-      "\"ScheduleVersionDestructionMetadata\022\007Ver" +
-      "sion\022\353\001\n\030CancelVersionDestruction\0228.yand" +
-      "ex.cloud.lockbox.v1.CancelVersionDestruc" +
-      "tionRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"r\202\323\344\223\002=\"8/lockbox/v1/secrets/{sec" +
-      "ret_id}:cancelVersionDestruction:\001*\262\322*+\n" +
-      " CancelVersionDestructionMetadata\022\007Versi" +
-      "on\022\261\001\n\016ListOperations\0224.yandex.cloud.loc" +
-      "kbox.v1.ListSecretOperationsRequest\0325.ya" +
-      "ndex.cloud.lockbox.v1.ListSecretOperatio" +
-      "nsResponse\"2\202\323\344\223\002,\022*/lockbox/v1/secrets/" +
-      "{secret_id}/operations\022\263\001\n\022ListAccessBin" +
-      "dings\022..yandex.cloud.access.ListAccessBi" +
-      "ndingsRequest\032/.yandex.cloud.access.List" +
-      "AccessBindingsResponse\"<\202\323\344\223\0026\0224/lockbox" +
-      "/v1/secrets/{resource_id}:listAccessBind" +
-      "ings\022\342\001\n\021SetAccessBindings\022-.yandex.clou" +
-      "d.access.SetAccessBindingsRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"{\202\323\344\223\0028\"3/l" +
-      "ockbox/v1/secrets/{resource_id}:setAcces" +
-      "sBindings:\001*\262\322*9\n access.SetAccessBindin" +
-      "gsMetadata\022\025google.protobuf.Empty\022\357\001\n\024Up" +
-      "dateAccessBindings\0220.yandex.cloud.access" +
-      ".UpdateAccessBindingsRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"\201\001\202\323\344\223\002;\"6/lockb" +
-      "ox/v1/secrets/{resource_id}:updateAccess" +
-      "Bindings:\001*\262\322*<\n#access.UpdateAccessBind" +
-      "ingsMetadata\022\025google.protobuf.EmptyBb\n\033y" +
-      "andex.cloud.api.lockbox.v1ZCgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/loc" +
-      "kbox/v1;lockboxb\006proto3"
+      "/validation.proto\"\230\001\n\022PayloadEntryChange" +
+      "\0221\n\003key\030\001 \001(\tB$\350\3071\001\212\3101\005<=256\362\3071\023[-_./\\\\@" +
+      "0-9a-zA-Z]+\022!\n\ntext_value\030\002 \001(\tB\013\212\3101\007<=6" +
+      "5536H\000\022#\n\014binary_value\030\003 \001(\014B\013\212\3101\007<=6553" +
+      "6H\000B\007\n\005value\"3\n\020GetSecretRequest\022\037\n\tsecr" +
+      "et_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"s\n\022ListSecrets" +
+      "Request\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
+      "token\030\003 \001(\tB\t\212\3101\005<=100\"`\n\023ListSecretsRes" +
+      "ponse\0220\n\007secrets\030\001 \003(\0132\037.yandex.cloud.lo" +
+      "ckbox.v1.Secret\022\027\n\017next_page_token\030\002 \001(\t" +
+      "\"\346\003\n\023CreateSecretRequest\022\037\n\tfolder_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\027\n\004name\030\002 \001(\tB\t\212\3101\005<=1" +
+      "00\022\037\n\013description\030\003 \001(\tB\n\212\3101\006<=1024\022\211\001\n\006" +
+      "labels\030\004 \003(\01328.yandex.cloud.lockbox.v1.C" +
+      "reateSecretRequest.LabelsEntryB?\202\3101\004<=64" +
+      "\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[" +
+      "a-z][-_0-9a-z]*\022\034\n\nkms_key_id\030\005 \001(\tB\010\212\3101" +
+      "\004<=50\022&\n\023version_description\030\006 \001(\tB\t\212\3101\005" +
+      "<=256\022V\n\027version_payload_entries\030\007 \003(\0132+" +
+      ".yandex.cloud.lockbox.v1.PayloadEntryCha" +
+      "ngeB\010\202\3101\004<=32\022\033\n\023deletion_protection\030\010 \001" +
+      "(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"=\n\024CreateSecretMetadata\022\021\n\tsec" +
+      "ret_id\030\001 \001(\t\022\022\n\nversion_id\030\002 \001(\t\"\377\002\n\023Upd" +
+      "ateSecretRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\0225\n\013update_mask\030\002 \001(\0132\032.google." +
+      "protobuf.FieldMaskB\004\350\3071\001\022\027\n\004name\030\003 \001(\tB\t" +
+      "\212\3101\005<=100\022\037\n\013description\030\004 \001(\tB\n\212\3101\006<=10" +
+      "24\022\211\001\n\006labels\030\005 \003(\01328.yandex.cloud.lockb" +
+      "ox.v1.UpdateSecretRequest.LabelsEntryB?\202" +
+      "\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63" +
+      "\262\3101\022\022\020[a-z][-_0-9a-z]*\022\033\n\023deletion_prote" +
+      "ction\030\006 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001\"7\n\024UpdateSecretMetada" +
+      "ta\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"6\n\023D" +
+      "eleteSecretRequest\022\037\n\tsecret_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\")\n\024DeleteSecretMetadata\022\021\n\ts" +
+      "ecret_id\030\001 \001(\t\"8\n\025ActivateSecretRequest\022" +
+      "\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\026Acti" +
+      "vateSecretMetadata\022\021\n\tsecret_id\030\001 \001(\t\":\n" +
+      "\027DeactivateSecretRequest\022\037\n\tsecret_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\030DeactivateSecretMet" +
+      "adata\022\021\n\tsecret_id\030\001 \001(\t\"\310\001\n\021AddVersionR" +
+      "equest\022\037\n\tsecret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "\037\n\013description\030\002 \001(\tB\n\212\3101\006<=1024\022N\n\017payl" +
+      "oad_entries\030\003 \003(\0132+.yandex.cloud.lockbox" +
+      ".v1.PayloadEntryChangeB\010\202\3101\004<=32\022!\n\017base" +
+      "_version_id\030\004 \001(\tB\010\212\3101\004<=50\";\n\022AddVersio" +
+      "nMetadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nversion_" +
+      "id\030\002 \001(\t\"t\n\023ListVersionsRequest\022\037\n\tsecre" +
+      "t_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
+      "\005<=100\"c\n\024ListVersionsResponse\0222\n\010versio" +
+      "ns\030\001 \003(\0132 .yandex.cloud.lockbox.v1.Versi" +
+      "on\022\027\n\017next_page_token\030\002 \001(\t\"\231\001\n!Schedule" +
+      "VersionDestructionRequest\022\037\n\tsecret_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\0221\n\016pending_period\030\003 \001(\0132\031.g" +
+      "oogle.protobuf.Duration\"{\n\"ScheduleVersi" +
+      "onDestructionMetadata\022\021\n\tsecret_id\030\001 \001(\t" +
+      "\022\022\n\nversion_id\030\002 \001(\t\022.\n\ndestroy_at\030\003 \001(\013" +
+      "2\032.google.protobuf.Timestamp\"d\n\037CancelVe" +
+      "rsionDestructionRequest\022\037\n\tsecret_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022 \n\nversion_id\030\002 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\"I\n CancelVersionDestructionMe" +
+      "tadata\022\021\n\tsecret_id\030\001 \001(\t\022\022\n\nversion_id\030" +
+      "\002 \001(\t\"|\n\033ListSecretOperationsRequest\022\037\n\t" +
+      "secret_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_si" +
+      "ze\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\t" +
+      "B\t\212\3101\005<=100\"n\n\034ListSecretOperationsRespo" +
+      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
+      "peration.Operation\022\027\n\017next_page_token\030\002 " +
+      "\001(\t2\351\025\n\rSecretService\022z\n\003Get\022).yandex.cl" +
+      "oud.lockbox.v1.GetSecretRequest\032\037.yandex" +
+      ".cloud.lockbox.v1.Secret\"\'\202\323\344\223\002!\022\037/lockb" +
+      "ox/v1/secrets/{secret_id}\022~\n\004List\022+.yand" +
+      "ex.cloud.lockbox.v1.ListSecretsRequest\032," +
+      ".yandex.cloud.lockbox.v1.ListSecretsResp" +
+      "onse\"\033\202\323\344\223\002\025\022\023/lockbox/v1/secrets\022\233\001\n\006Cr" +
+      "eate\022,.yandex.cloud.lockbox.v1.CreateSec" +
+      "retRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"@\202\323\344\223\002\030\"\023/lockbox/v1/secrets:\001*\262\322*" +
+      "\036\n\024CreateSecretMetadata\022\006Secret\022\247\001\n\006Upda" +
+      "te\022,.yandex.cloud.lockbox.v1.UpdateSecre" +
+      "tRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"L\202\323\344\223\002$2\037/lockbox/v1/secrets/{secret" +
+      "_id}:\001*\262\322*\036\n\024UpdateSecretMetadata\022\006Secre" +
+      "t\022\244\001\n\006Delete\022,.yandex.cloud.lockbox.v1.D" +
+      "eleteSecretRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"I\202\323\344\223\002!*\037/lockbox/v1/secre" +
+      "ts/{secret_id}\262\322*\036\n\024DeleteSecretMetadata" +
+      "\022\006Secret\022\263\001\n\010Activate\022..yandex.cloud.loc" +
+      "kbox.v1.ActivateSecretRequest\032!.yandex.c" +
+      "loud.operation.Operation\"T\202\323\344\223\002*\"(/lockb" +
+      "ox/v1/secrets/{secret_id}:activate\262\322* \n\026" +
+      "ActivateSecretMetadata\022\006Secret\022\273\001\n\nDeact" +
+      "ivate\0220.yandex.cloud.lockbox.v1.Deactiva" +
+      "teSecretRequest\032!.yandex.cloud.operation" +
+      ".Operation\"X\202\323\344\223\002,\"*/lockbox/v1/secrets/" +
+      "{secret_id}:deactivate\262\322*\"\n\030DeactivateSe" +
+      "cretMetadata\022\006Secret\022\235\001\n\014ListVersions\022,." +
+      "yandex.cloud.lockbox.v1.ListVersionsRequ" +
+      "est\032-.yandex.cloud.lockbox.v1.ListVersio" +
+      "nsResponse\"0\202\323\344\223\002*\022(/lockbox/v1/secrets/" +
+      "{secret_id}/versions\022\263\001\n\nAddVersion\022*.ya" +
+      "ndex.cloud.lockbox.v1.AddVersionRequest\032" +
+      "!.yandex.cloud.operation.Operation\"V\202\323\344\223" +
+      "\002/\"*/lockbox/v1/secrets/{secret_id}:addV" +
+      "ersion:\001*\262\322*\035\n\022AddVersionMetadata\022\007Versi" +
+      "on\022\363\001\n\032ScheduleVersionDestruction\022:.yand" +
+      "ex.cloud.lockbox.v1.ScheduleVersionDestr" +
+      "uctionRequest\032!.yandex.cloud.operation.O" +
+      "peration\"v\202\323\344\223\002?\":/lockbox/v1/secrets/{s" +
+      "ecret_id}:scheduleVersionDestruction:\001*\262" +
+      "\322*-\n\"ScheduleVersionDestructionMetadata\022" +
+      "\007Version\022\353\001\n\030CancelVersionDestruction\0228." +
+      "yandex.cloud.lockbox.v1.CancelVersionDes" +
+      "tructionRequest\032!.yandex.cloud.operation" +
+      ".Operation\"r\202\323\344\223\002=\"8/lockbox/v1/secrets/" +
+      "{secret_id}:cancelVersionDestruction:\001*\262" +
+      "\322*+\n CancelVersionDestructionMetadata\022\007V" +
+      "ersion\022\261\001\n\016ListOperations\0224.yandex.cloud" +
+      ".lockbox.v1.ListSecretOperationsRequest\032" +
+      "5.yandex.cloud.lockbox.v1.ListSecretOper" +
+      "ationsResponse\"2\202\323\344\223\002,\022*/lockbox/v1/secr" +
+      "ets/{secret_id}/operations\022\263\001\n\022ListAcces" +
+      "sBindings\022..yandex.cloud.access.ListAcce" +
+      "ssBindingsRequest\032/.yandex.cloud.access." +
+      "ListAccessBindingsResponse\"<\202\323\344\223\0026\0224/loc" +
+      "kbox/v1/secrets/{resource_id}:listAccess" +
+      "Bindings\022\342\001\n\021SetAccessBindings\022-.yandex." +
+      "cloud.access.SetAccessBindingsRequest\032!." +
+      "yandex.cloud.operation.Operation\"{\202\323\344\223\0028" +
+      "\"3/lockbox/v1/secrets/{resource_id}:setA" +
+      "ccessBindings:\001*\262\322*9\n access.SetAccessBi" +
+      "ndingsMetadata\022\025google.protobuf.Empty\022\357\001" +
+      "\n\024UpdateAccessBindings\0220.yandex.cloud.ac" +
+      "cess.UpdateAccessBindingsRequest\032!.yande" +
+      "x.cloud.operation.Operation\"\201\001\202\323\344\223\002;\"6/l" +
+      "ockbox/v1/secrets/{resource_id}:updateAc" +
+      "cessBindings:\001*\262\322*<\n#access.UpdateAccess" +
+      "BindingsMetadata\022\025google.protobuf.EmptyB" +
+      "b\n\033yandex.cloud.api.lockbox.v1ZCgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/lockbox/v1;lockboxb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

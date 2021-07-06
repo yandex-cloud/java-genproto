@@ -19,18 +19,10 @@ public final class Tls {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     * Trusted CA certificate ID in the Certificate Manager.
-     * </pre>
-     *
      * <code>string trusted_ca_id = 1;</code>
      */
     java.lang.String getTrustedCaId();
     /**
-     * <pre>
-     * Trusted CA certificate ID in the Certificate Manager.
-     * </pre>
-     *
      * <code>string trusted_ca_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -38,7 +30,7 @@ public final class Tls {
 
     /**
      * <pre>
-     * Trusted CA blob.
+     * X.509 certificate contents in PEM format.
      * </pre>
      *
      * <code>string trusted_ca_bytes = 2;</code>
@@ -46,7 +38,7 @@ public final class Tls {
     java.lang.String getTrustedCaBytes();
     /**
      * <pre>
-     * Trusted CA blob.
+     * X.509 certificate contents in PEM format.
      * </pre>
      *
      * <code>string trusted_ca_bytes = 2;</code>
@@ -57,6 +49,10 @@ public final class Tls {
     public yandex.cloud.api.apploadbalancer.v1.Tls.ValidationContext.TrustedCaCase getTrustedCaCase();
   }
   /**
+   * <pre>
+   * A TLS validation context resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ValidationContext}
    */
   public  static final class ValidationContext extends
@@ -179,10 +175,6 @@ public final class Tls {
 
     public static final int TRUSTED_CA_ID_FIELD_NUMBER = 1;
     /**
-     * <pre>
-     * Trusted CA certificate ID in the Certificate Manager.
-     * </pre>
-     *
      * <code>string trusted_ca_id = 1;</code>
      */
     public java.lang.String getTrustedCaId() {
@@ -203,10 +195,6 @@ public final class Tls {
       }
     }
     /**
-     * <pre>
-     * Trusted CA certificate ID in the Certificate Manager.
-     * </pre>
-     *
      * <code>string trusted_ca_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -231,7 +219,7 @@ public final class Tls {
     public static final int TRUSTED_CA_BYTES_FIELD_NUMBER = 2;
     /**
      * <pre>
-     * Trusted CA blob.
+     * X.509 certificate contents in PEM format.
      * </pre>
      *
      * <code>string trusted_ca_bytes = 2;</code>
@@ -255,7 +243,7 @@ public final class Tls {
     }
     /**
      * <pre>
-     * Trusted CA blob.
+     * X.509 certificate contents in PEM format.
      * </pre>
      *
      * <code>string trusted_ca_bytes = 2;</code>
@@ -464,6 +452,10 @@ public final class Tls {
       return builder;
     }
     /**
+     * <pre>
+     * A TLS validation context resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.ValidationContext}
      */
     public static final class Builder extends
@@ -646,10 +638,6 @@ public final class Tls {
 
 
       /**
-       * <pre>
-       * Trusted CA certificate ID in the Certificate Manager.
-       * </pre>
-       *
        * <code>string trusted_ca_id = 1;</code>
        */
       public java.lang.String getTrustedCaId() {
@@ -670,10 +658,6 @@ public final class Tls {
         }
       }
       /**
-       * <pre>
-       * Trusted CA certificate ID in the Certificate Manager.
-       * </pre>
-       *
        * <code>string trusted_ca_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -695,10 +679,6 @@ public final class Tls {
         }
       }
       /**
-       * <pre>
-       * Trusted CA certificate ID in the Certificate Manager.
-       * </pre>
-       *
        * <code>string trusted_ca_id = 1;</code>
        */
       public Builder setTrustedCaId(
@@ -712,10 +692,6 @@ public final class Tls {
         return this;
       }
       /**
-       * <pre>
-       * Trusted CA certificate ID in the Certificate Manager.
-       * </pre>
-       *
        * <code>string trusted_ca_id = 1;</code>
        */
       public Builder clearTrustedCaId() {
@@ -727,10 +703,6 @@ public final class Tls {
         return this;
       }
       /**
-       * <pre>
-       * Trusted CA certificate ID in the Certificate Manager.
-       * </pre>
-       *
        * <code>string trusted_ca_id = 1;</code>
        */
       public Builder setTrustedCaIdBytes(
@@ -747,7 +719,7 @@ public final class Tls {
 
       /**
        * <pre>
-       * Trusted CA blob.
+       * X.509 certificate contents in PEM format.
        * </pre>
        *
        * <code>string trusted_ca_bytes = 2;</code>
@@ -771,7 +743,7 @@ public final class Tls {
       }
       /**
        * <pre>
-       * Trusted CA blob.
+       * X.509 certificate contents in PEM format.
        * </pre>
        *
        * <code>string trusted_ca_bytes = 2;</code>
@@ -796,7 +768,7 @@ public final class Tls {
       }
       /**
        * <pre>
-       * Trusted CA blob.
+       * X.509 certificate contents in PEM format.
        * </pre>
        *
        * <code>string trusted_ca_bytes = 2;</code>
@@ -813,7 +785,7 @@ public final class Tls {
       }
       /**
        * <pre>
-       * Trusted CA blob.
+       * X.509 certificate contents in PEM format.
        * </pre>
        *
        * <code>string trusted_ca_bytes = 2;</code>
@@ -828,7 +800,7 @@ public final class Tls {
       }
       /**
        * <pre>
-       * Trusted CA blob.
+       * X.509 certificate contents in PEM format.
        * </pre>
        *
        * <code>string trusted_ca_bytes = 2;</code>

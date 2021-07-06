@@ -830,6 +830,38 @@ public final class ClusterServiceGrpc {
      return getRestartHostsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getStepdownHostsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StepdownHosts",
+      requestType = yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getStepdownHostsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getStepdownHostsMethod;
+    if ((getStepdownHostsMethod = ClusterServiceGrpc.getStepdownHostsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getStepdownHostsMethod = ClusterServiceGrpc.getStepdownHostsMethod) == null) {
+          ClusterServiceGrpc.getStepdownHostsMethod = getStepdownHostsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.mongodb.v1.ClusterService", "StepdownHosts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("StepdownHosts"))
+                  .build();
+          }
+        }
+     }
+     return getStepdownHostsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1113,6 +1145,16 @@ public final class ClusterServiceGrpc {
       asyncUnimplementedUnaryCall(getRestartHostsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Stepdown hosts.
+     * </pre>
+     */
+    public void stepdownHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getStepdownHostsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -1290,6 +1332,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_RESTART_HOSTS)))
+          .addMethod(
+            getStepdownHostsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_STEPDOWN_HOSTS)))
           .build();
     }
   }
@@ -1592,6 +1641,17 @@ public final class ClusterServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getRestartHostsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Stepdown hosts.
+     * </pre>
+     */
+    public void stepdownHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getStepdownHostsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1867,6 +1927,16 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation restartHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest request) {
       return blockingUnaryCall(
           getChannel(), getRestartHostsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Stepdown hosts.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation stepdownHosts(yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getStepdownHostsMethod(), getCallOptions(), request);
     }
   }
 
@@ -2157,6 +2227,17 @@ public final class ClusterServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getRestartHostsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Stepdown hosts.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stepdownHosts(
+        yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getStepdownHostsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -2184,6 +2265,7 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_DELETE_SHARD = 22;
   private static final int METHODID_RESETUP_HOSTS = 23;
   private static final int METHODID_RESTART_HOSTS = 24;
+  private static final int METHODID_STEPDOWN_HOSTS = 25;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2302,6 +2384,10 @@ public final class ClusterServiceGrpc {
           serviceImpl.restartHosts((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.RestartHostsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_STEPDOWN_HOSTS:
+          serviceImpl.stepdownHosts((yandex.cloud.api.mdb.mongodb.v1.ClusterServiceOuterClass.StepdownHostsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -2388,6 +2474,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getDeleteShardMethod())
               .addMethod(getResetupHostsMethod())
               .addMethod(getRestartHostsMethod())
+              .addMethod(getStepdownHostsMethod())
               .build();
         }
       }

@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing application load balancers.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -531,10 +534,17 @@ public final class LoadBalancerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing application load balancers.
+   * </pre>
    */
   public static abstract class LoadBalancerServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified application load balancer.
+     * To get the list of all available application load balancers, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer> responseObserver) {
@@ -542,6 +552,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists application load balancers in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse> responseObserver) {
@@ -549,6 +562,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an application load balancer in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -556,6 +572,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified application load balancer.
+     * </pre>
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -563,6 +582,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified application load balancer.
+     * </pre>
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -570,6 +592,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Starts the specified application load balancer.
+     * </pre>
      */
     public void start(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -577,6 +602,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Stops the specified application load balancer.
+     * </pre>
      */
     public void stop(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -585,7 +613,7 @@ public final class LoadBalancerServiceGrpc {
 
     /**
      * <pre>
-     * AddListener/UpdateListener technically do the same, but have different semantics.
+     * Adds a listener to the specified application load balancer.
      * </pre>
      */
     public void addListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerRequest request,
@@ -594,6 +622,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified listener.
+     * </pre>
      */
     public void removeListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -601,6 +632,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified listener of the specified application load balancer.
+     * </pre>
      */
     public void updateListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -608,6 +642,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a SNI handler to the specified listener.
+     * This request does not allow to add [TlsListener.default_handler]. Make an [UpdateListener] request instead.
+     * </pre>
      */
     public void addSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -615,6 +653,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified SNI handler of the specified listener.
+     * This request does not allow to update [TlsListener.default_handler]. Make an [UpdateListener] request instead.
+     * </pre>
      */
     public void updateSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -622,6 +664,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified SNI handler.
+     * This request does not allow to delete [TlsListener.default_handler].
+     * </pre>
      */
     public void removeSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -630,8 +676,7 @@ public final class LoadBalancerServiceGrpc {
 
     /**
      * <pre>
-     * Returns zonal state of each target within target group
-     * for a given backend group and load balancer.
+     * Returns the statuses of all targets of the specified backend group in all their availability zones.
      * </pre>
      */
     public void getTargetStates(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesRequest request,
@@ -641,7 +686,7 @@ public final class LoadBalancerServiceGrpc {
 
     /**
      * <pre>
-     * Lists operations for the specified load balancer.
+     * Lists operations for the specified application load balancer.
      * </pre>
      */
     public void listOperations(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest request,
@@ -761,6 +806,9 @@ public final class LoadBalancerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing application load balancers.
+   * </pre>
    */
   public static final class LoadBalancerServiceStub extends io.grpc.stub.AbstractStub<LoadBalancerServiceStub> {
     private LoadBalancerServiceStub(io.grpc.Channel channel) {
@@ -779,6 +827,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified application load balancer.
+     * To get the list of all available application load balancers, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer> responseObserver) {
@@ -787,6 +839,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists application load balancers in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse> responseObserver) {
@@ -795,6 +850,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an application load balancer in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -803,6 +861,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified application load balancer.
+     * </pre>
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -811,6 +872,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified application load balancer.
+     * </pre>
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -819,6 +883,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Starts the specified application load balancer.
+     * </pre>
      */
     public void start(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -827,6 +894,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Stops the specified application load balancer.
+     * </pre>
      */
     public void stop(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -836,7 +906,7 @@ public final class LoadBalancerServiceGrpc {
 
     /**
      * <pre>
-     * AddListener/UpdateListener technically do the same, but have different semantics.
+     * Adds a listener to the specified application load balancer.
      * </pre>
      */
     public void addListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerRequest request,
@@ -846,6 +916,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified listener.
+     * </pre>
      */
     public void removeListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -854,6 +927,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified listener of the specified application load balancer.
+     * </pre>
      */
     public void updateListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -862,6 +938,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a SNI handler to the specified listener.
+     * This request does not allow to add [TlsListener.default_handler]. Make an [UpdateListener] request instead.
+     * </pre>
      */
     public void addSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -870,6 +950,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified SNI handler of the specified listener.
+     * This request does not allow to update [TlsListener.default_handler]. Make an [UpdateListener] request instead.
+     * </pre>
      */
     public void updateSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -878,6 +962,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified SNI handler.
+     * This request does not allow to delete [TlsListener.default_handler].
+     * </pre>
      */
     public void removeSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -887,8 +975,7 @@ public final class LoadBalancerServiceGrpc {
 
     /**
      * <pre>
-     * Returns zonal state of each target within target group
-     * for a given backend group and load balancer.
+     * Returns the statuses of all targets of the specified backend group in all their availability zones.
      * </pre>
      */
     public void getTargetStates(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesRequest request,
@@ -899,7 +986,7 @@ public final class LoadBalancerServiceGrpc {
 
     /**
      * <pre>
-     * Lists operations for the specified load balancer.
+     * Lists operations for the specified application load balancer.
      * </pre>
      */
     public void listOperations(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest request,
@@ -910,6 +997,9 @@ public final class LoadBalancerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing application load balancers.
+   * </pre>
    */
   public static final class LoadBalancerServiceBlockingStub extends io.grpc.stub.AbstractStub<LoadBalancerServiceBlockingStub> {
     private LoadBalancerServiceBlockingStub(io.grpc.Channel channel) {
@@ -928,6 +1018,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified application load balancer.
+     * To get the list of all available application load balancers, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer get(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetLoadBalancerRequest request) {
       return blockingUnaryCall(
@@ -935,6 +1029,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists application load balancers in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse list(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest request) {
       return blockingUnaryCall(
@@ -942,6 +1039,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an application load balancer in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest request) {
       return blockingUnaryCall(
@@ -949,6 +1049,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified application load balancer.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest request) {
       return blockingUnaryCall(
@@ -956,6 +1059,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified application load balancer.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest request) {
       return blockingUnaryCall(
@@ -963,6 +1069,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Starts the specified application load balancer.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation start(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest request) {
       return blockingUnaryCall(
@@ -970,6 +1079,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Stops the specified application load balancer.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest request) {
       return blockingUnaryCall(
@@ -978,7 +1090,7 @@ public final class LoadBalancerServiceGrpc {
 
     /**
      * <pre>
-     * AddListener/UpdateListener technically do the same, but have different semantics.
+     * Adds a listener to the specified application load balancer.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddListenerRequest request) {
@@ -987,6 +1099,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified listener.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest request) {
       return blockingUnaryCall(
@@ -994,6 +1109,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified listener of the specified application load balancer.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateListener(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest request) {
       return blockingUnaryCall(
@@ -1001,6 +1119,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a SNI handler to the specified listener.
+     * This request does not allow to add [TlsListener.default_handler]. Make an [UpdateListener] request instead.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation addSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest request) {
       return blockingUnaryCall(
@@ -1008,6 +1130,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified SNI handler of the specified listener.
+     * This request does not allow to update [TlsListener.default_handler]. Make an [UpdateListener] request instead.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest request) {
       return blockingUnaryCall(
@@ -1015,6 +1141,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified SNI handler.
+     * This request does not allow to delete [TlsListener.default_handler].
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeSniMatch(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest request) {
       return blockingUnaryCall(
@@ -1023,8 +1153,7 @@ public final class LoadBalancerServiceGrpc {
 
     /**
      * <pre>
-     * Returns zonal state of each target within target group
-     * for a given backend group and load balancer.
+     * Returns the statuses of all targets of the specified backend group in all their availability zones.
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesResponse getTargetStates(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesRequest request) {
@@ -1034,7 +1163,7 @@ public final class LoadBalancerServiceGrpc {
 
     /**
      * <pre>
-     * Lists operations for the specified load balancer.
+     * Lists operations for the specified application load balancer.
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse listOperations(yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsRequest request) {
@@ -1044,6 +1173,9 @@ public final class LoadBalancerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing application load balancers.
+   * </pre>
    */
   public static final class LoadBalancerServiceFutureStub extends io.grpc.stub.AbstractStub<LoadBalancerServiceFutureStub> {
     private LoadBalancerServiceFutureStub(io.grpc.Channel channel) {
@@ -1062,6 +1194,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified application load balancer.
+     * To get the list of all available application load balancers, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.LoadBalancerOuterClass.LoadBalancer> get(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetLoadBalancerRequest request) {
@@ -1070,6 +1206,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists application load balancers in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersResponse> list(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancersRequest request) {
@@ -1078,6 +1217,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an application load balancer in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.CreateLoadBalancerRequest request) {
@@ -1086,6 +1228,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified application load balancer.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateLoadBalancerRequest request) {
@@ -1094,6 +1239,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified application load balancer.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.DeleteLoadBalancerRequest request) {
@@ -1102,6 +1250,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Starts the specified application load balancer.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> start(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StartLoadBalancerRequest request) {
@@ -1110,6 +1261,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Stops the specified application load balancer.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stop(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.StopLoadBalancerRequest request) {
@@ -1119,7 +1273,7 @@ public final class LoadBalancerServiceGrpc {
 
     /**
      * <pre>
-     * AddListener/UpdateListener technically do the same, but have different semantics.
+     * Adds a listener to the specified application load balancer.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addListener(
@@ -1129,6 +1283,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified listener.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeListener(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveListenerRequest request) {
@@ -1137,6 +1294,9 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified listener of the specified application load balancer.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateListener(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateListenerRequest request) {
@@ -1145,6 +1305,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a SNI handler to the specified listener.
+     * This request does not allow to add [TlsListener.default_handler]. Make an [UpdateListener] request instead.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addSniMatch(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.AddSniMatchRequest request) {
@@ -1153,6 +1317,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified SNI handler of the specified listener.
+     * This request does not allow to update [TlsListener.default_handler]. Make an [UpdateListener] request instead.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateSniMatch(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.UpdateSniMatchRequest request) {
@@ -1161,6 +1329,10 @@ public final class LoadBalancerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified SNI handler.
+     * This request does not allow to delete [TlsListener.default_handler].
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeSniMatch(
         yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.RemoveSniMatchRequest request) {
@@ -1170,8 +1342,7 @@ public final class LoadBalancerServiceGrpc {
 
     /**
      * <pre>
-     * Returns zonal state of each target within target group
-     * for a given backend group and load balancer.
+     * Returns the statuses of all targets of the specified backend group in all their availability zones.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.GetTargetStatesResponse> getTargetStates(
@@ -1182,7 +1353,7 @@ public final class LoadBalancerServiceGrpc {
 
     /**
      * <pre>
-     * Lists operations for the specified load balancer.
+     * Lists operations for the specified application load balancer.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.LoadBalancerServiceOuterClass.ListLoadBalancerOperationsResponse> listOperations(

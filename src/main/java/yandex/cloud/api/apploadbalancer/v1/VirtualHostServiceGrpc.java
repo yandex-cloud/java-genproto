@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * A set of methods for managing virtual hosts of HTTP Router resource.
+ * A set of methods for managing virtual hosts of HTTP routers.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -279,14 +279,15 @@ public final class VirtualHostServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing virtual hosts of HTTP Router resource.
+   * A set of methods for managing virtual hosts of HTTP routers.
    * </pre>
    */
   public static abstract class VirtualHostServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the specified VirtualHost resource.
+     * Returns the specified virtual host.
+     * To get the list of all virtual hosts of an HTTP router, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.GetVirtualHostRequest request,
@@ -296,7 +297,7 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of virtual hosts in the specified HTTP Router.
+     * Lists virtual hosts of the specified HTTP router.
      * </pre>
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsRequest request,
@@ -306,7 +307,7 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new virtual host in the specified HTTP Router.
+     * Creates a virtual host in the specified HTTP router.
      * </pre>
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest request,
@@ -316,7 +317,7 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Updates an existing VirtualHost in the specified HTTP Router.
+     * Updates the specified virtual host of the specified HTTP router.
      * </pre>
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest request,
@@ -335,6 +336,9 @@ public final class VirtualHostServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified route from the specified virtual host.
+     * </pre>
      */
     public void removeRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -342,6 +346,9 @@ public final class VirtualHostServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified route of the specified virtual host.
+     * </pre>
      */
     public void updateRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -405,7 +412,7 @@ public final class VirtualHostServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing virtual hosts of HTTP Router resource.
+   * A set of methods for managing virtual hosts of HTTP routers.
    * </pre>
    */
   public static final class VirtualHostServiceStub extends io.grpc.stub.AbstractStub<VirtualHostServiceStub> {
@@ -426,7 +433,8 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified VirtualHost resource.
+     * Returns the specified virtual host.
+     * To get the list of all virtual hosts of an HTTP router, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.GetVirtualHostRequest request,
@@ -437,7 +445,7 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of virtual hosts in the specified HTTP Router.
+     * Lists virtual hosts of the specified HTTP router.
      * </pre>
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsRequest request,
@@ -448,7 +456,7 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new virtual host in the specified HTTP Router.
+     * Creates a virtual host in the specified HTTP router.
      * </pre>
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest request,
@@ -459,7 +467,7 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Updates an existing VirtualHost in the specified HTTP Router.
+     * Updates the specified virtual host of the specified HTTP router.
      * </pre>
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest request,
@@ -480,6 +488,9 @@ public final class VirtualHostServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified route from the specified virtual host.
+     * </pre>
      */
     public void removeRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -488,6 +499,9 @@ public final class VirtualHostServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified route of the specified virtual host.
+     * </pre>
      */
     public void updateRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -498,7 +512,7 @@ public final class VirtualHostServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing virtual hosts of HTTP Router resource.
+   * A set of methods for managing virtual hosts of HTTP routers.
    * </pre>
    */
   public static final class VirtualHostServiceBlockingStub extends io.grpc.stub.AbstractStub<VirtualHostServiceBlockingStub> {
@@ -519,7 +533,8 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified VirtualHost resource.
+     * Returns the specified virtual host.
+     * To get the list of all virtual hosts of an HTTP router, make a [List] request.
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost get(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.GetVirtualHostRequest request) {
@@ -529,7 +544,7 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of virtual hosts in the specified HTTP Router.
+     * Lists virtual hosts of the specified HTTP router.
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse list(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsRequest request) {
@@ -539,7 +554,7 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new virtual host in the specified HTTP Router.
+     * Creates a virtual host in the specified HTTP router.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.CreateVirtualHostRequest request) {
@@ -549,7 +564,7 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Updates an existing VirtualHost in the specified HTTP Router.
+     * Updates the specified virtual host of the specified HTTP router.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateVirtualHostRequest request) {
@@ -568,6 +583,9 @@ public final class VirtualHostServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified route from the specified virtual host.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation removeRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest request) {
       return blockingUnaryCall(
@@ -575,6 +593,9 @@ public final class VirtualHostServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified route of the specified virtual host.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateRoute(yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest request) {
       return blockingUnaryCall(
@@ -584,7 +605,7 @@ public final class VirtualHostServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing virtual hosts of HTTP Router resource.
+   * A set of methods for managing virtual hosts of HTTP routers.
    * </pre>
    */
   public static final class VirtualHostServiceFutureStub extends io.grpc.stub.AbstractStub<VirtualHostServiceFutureStub> {
@@ -605,7 +626,8 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified VirtualHost resource.
+     * Returns the specified virtual host.
+     * To get the list of all virtual hosts of an HTTP router, make a [List] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> get(
@@ -616,7 +638,7 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of virtual hosts in the specified HTTP Router.
+     * Lists virtual hosts of the specified HTTP router.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.ListVirtualHostsResponse> list(
@@ -627,7 +649,7 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Creates a new virtual host in the specified HTTP Router.
+     * Creates a virtual host in the specified HTTP router.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
@@ -638,7 +660,7 @@ public final class VirtualHostServiceGrpc {
 
     /**
      * <pre>
-     * Updates an existing VirtualHost in the specified HTTP Router.
+     * Updates the specified virtual host of the specified HTTP router.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
@@ -659,6 +681,9 @@ public final class VirtualHostServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified route from the specified virtual host.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeRoute(
         yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.RemoveRouteRequest request) {
@@ -667,6 +692,9 @@ public final class VirtualHostServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified route of the specified virtual host.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateRoute(
         yandex.cloud.api.apploadbalancer.v1.VirtualHostServiceOuterClass.UpdateRouteRequest request) {

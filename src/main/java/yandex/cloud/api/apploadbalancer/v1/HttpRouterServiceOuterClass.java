@@ -19,10 +19,20 @@ public final class HttpRouterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the HTTP router to return.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getHttpRouterId();
     /**
+     * <pre>
+     * ID of the HTTP router to return.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -109,6 +119,11 @@ public final class HttpRouterServiceOuterClass {
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
+     * <pre>
+     * ID of the HTTP router to return.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getHttpRouterId() {
@@ -124,6 +139,11 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the HTTP router to return.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -445,6 +465,11 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object httpRouterId_ = "";
       /**
+       * <pre>
+       * ID of the HTTP router to return.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getHttpRouterId() {
@@ -460,6 +485,11 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router to return.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -476,6 +506,11 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router to return.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHttpRouterId(
@@ -489,6 +524,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router to return.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearHttpRouterId() {
@@ -498,6 +538,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router to return.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHttpRouterIdBytes(
@@ -569,35 +614,80 @@ public final class HttpRouterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list HTTP routers in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list HTTP routers in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListHttpRoutersResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListHttpRoutersResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListHttpRoutersResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters HTTP routers listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [HttpRouter.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-http-router`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters HTTP routers listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [HttpRouter.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-http-router`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
@@ -704,6 +794,11 @@ public final class HttpRouterServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to list HTTP routers in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFolderId() {
@@ -719,6 +814,11 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list HTTP routers in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -738,6 +838,13 @@ public final class HttpRouterServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListHttpRoutersResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -747,6 +854,11 @@ public final class HttpRouterServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListHttpRoutersResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -762,6 +874,11 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListHttpRoutersResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -781,6 +898,15 @@ public final class HttpRouterServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters HTTP routers listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [HttpRouter.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-http-router`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -796,6 +922,15 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters HTTP routers listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [HttpRouter.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-http-router`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1169,6 +1304,11 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to list HTTP routers in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFolderId() {
@@ -1184,6 +1324,11 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list HTTP routers in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -1200,6 +1345,11 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list HTTP routers in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderId(
@@ -1213,6 +1363,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list HTTP routers in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFolderId() {
@@ -1222,6 +1377,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list HTTP routers in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderIdBytes(
@@ -1238,12 +1398,26 @@ public final class HttpRouterServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListHttpRoutersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListHttpRoutersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -1253,6 +1427,13 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListHttpRoutersResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -1264,6 +1445,11 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListHttpRoutersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -1279,6 +1465,11 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListHttpRoutersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1295,6 +1486,11 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListHttpRoutersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -1308,6 +1504,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListHttpRoutersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -1317,6 +1518,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListHttpRoutersResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -1333,6 +1539,15 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters HTTP routers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [HttpRouter.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-http-router`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -1348,6 +1563,15 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters HTTP routers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [HttpRouter.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-http-router`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1364,6 +1588,15 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters HTTP routers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [HttpRouter.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-http-router`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -1377,6 +1610,15 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters HTTP routers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [HttpRouter.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-http-router`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -1386,6 +1628,15 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters HTTP routers listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [HttpRouter.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-http-router`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -1457,34 +1708,68 @@ public final class HttpRouterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of HTTP routers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter> 
         getHttpRoutersList();
     /**
+     * <pre>
+     * List of HTTP routers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter getHttpRouters(int index);
     /**
+     * <pre>
+     * List of HTTP routers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
     int getHttpRoutersCount();
     /**
+     * <pre>
+     * List of HTTP routers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouterOrBuilder> 
         getHttpRoutersOrBuilderList();
     /**
+     * <pre>
+     * List of HTTP routers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouterOrBuilder getHttpRoutersOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListHttpRoutersRequest.page_size], use `next_page_token` as the value
+     * for the [ListHttpRoutersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListHttpRoutersRequest.page_size], use `next_page_token` as the value
+     * for the [ListHttpRoutersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -1585,12 +1870,20 @@ public final class HttpRouterServiceOuterClass {
     public static final int HTTP_ROUTERS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter> httpRouters_;
     /**
+     * <pre>
+     * List of HTTP routers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter> getHttpRoutersList() {
       return httpRouters_;
     }
     /**
+     * <pre>
+     * List of HTTP routers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouterOrBuilder> 
@@ -1598,18 +1891,30 @@ public final class HttpRouterServiceOuterClass {
       return httpRouters_;
     }
     /**
+     * <pre>
+     * List of HTTP routers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
     public int getHttpRoutersCount() {
       return httpRouters_.size();
     }
     /**
+     * <pre>
+     * List of HTTP routers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter getHttpRouters(int index) {
       return httpRouters_.get(index);
     }
     /**
+     * <pre>
+     * List of HTTP routers in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouterOrBuilder getHttpRoutersOrBuilder(
@@ -1620,6 +1925,13 @@ public final class HttpRouterServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListHttpRoutersRequest.page_size], use `next_page_token` as the value
+     * for the [ListHttpRoutersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -1635,6 +1947,13 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListHttpRoutersRequest.page_size], use `next_page_token` as the value
+     * for the [ListHttpRoutersRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -2026,6 +2345,10 @@ public final class HttpRouterServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter, yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter.Builder, yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouterOrBuilder> httpRoutersBuilder_;
 
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter> getHttpRoutersList() {
@@ -2036,6 +2359,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public int getHttpRoutersCount() {
@@ -2046,6 +2373,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter getHttpRouters(int index) {
@@ -2056,6 +2387,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public Builder setHttpRouters(
@@ -2073,6 +2408,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public Builder setHttpRouters(
@@ -2087,6 +2426,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public Builder addHttpRouters(yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter value) {
@@ -2103,6 +2446,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public Builder addHttpRouters(
@@ -2120,6 +2467,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public Builder addHttpRouters(
@@ -2134,6 +2485,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public Builder addHttpRouters(
@@ -2148,6 +2503,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public Builder addAllHttpRouters(
@@ -2163,6 +2522,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public Builder clearHttpRouters() {
@@ -2176,6 +2539,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public Builder removeHttpRouters(int index) {
@@ -2189,6 +2556,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter.Builder getHttpRoutersBuilder(
@@ -2196,6 +2567,10 @@ public final class HttpRouterServiceOuterClass {
         return getHttpRoutersFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouterOrBuilder getHttpRoutersOrBuilder(
@@ -2206,6 +2581,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouterOrBuilder> 
@@ -2217,6 +2596,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter.Builder addHttpRoutersBuilder() {
@@ -2224,6 +2607,10 @@ public final class HttpRouterServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter.Builder addHttpRoutersBuilder(
@@ -2232,6 +2619,10 @@ public final class HttpRouterServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of HTTP routers in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HttpRouter http_routers = 1;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter.Builder> 
@@ -2255,6 +2646,13 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListHttpRoutersRequest.page_size], use `next_page_token` as the value
+       * for the [ListHttpRoutersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -2270,6 +2668,13 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListHttpRoutersRequest.page_size], use `next_page_token` as the value
+       * for the [ListHttpRoutersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2286,6 +2691,13 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListHttpRoutersRequest.page_size], use `next_page_token` as the value
+       * for the [ListHttpRoutersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -2299,6 +2711,13 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListHttpRoutersRequest.page_size], use `next_page_token` as the value
+       * for the [ListHttpRoutersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -2308,6 +2727,13 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListHttpRoutersRequest.page_size], use `next_page_token` as the value
+       * for the [ListHttpRoutersRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -2379,10 +2805,20 @@ public final class HttpRouterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the HTTP router to delete.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getHttpRouterId();
     /**
+     * <pre>
+     * ID of the HTTP router to delete.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -2469,6 +2905,11 @@ public final class HttpRouterServiceOuterClass {
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
+     * <pre>
+     * ID of the HTTP router to delete.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getHttpRouterId() {
@@ -2484,6 +2925,11 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the HTTP router to delete.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -2805,6 +3251,11 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object httpRouterId_ = "";
       /**
+       * <pre>
+       * ID of the HTTP router to delete.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getHttpRouterId() {
@@ -2820,6 +3271,11 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router to delete.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -2836,6 +3292,11 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router to delete.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHttpRouterId(
@@ -2849,6 +3310,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router to delete.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearHttpRouterId() {
@@ -2858,6 +3324,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router to delete.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHttpRouterIdBytes(
@@ -2929,10 +3400,18 @@ public final class HttpRouterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the HTTP router that is being deleted.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     java.lang.String getHttpRouterId();
     /**
+     * <pre>
+     * ID of the HTTP router that is being deleted.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -3019,6 +3498,10 @@ public final class HttpRouterServiceOuterClass {
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
+     * <pre>
+     * ID of the HTTP router that is being deleted.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     public java.lang.String getHttpRouterId() {
@@ -3034,6 +3517,10 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the HTTP router that is being deleted.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -3355,6 +3842,10 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object httpRouterId_ = "";
       /**
+       * <pre>
+       * ID of the HTTP router that is being deleted.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public java.lang.String getHttpRouterId() {
@@ -3370,6 +3861,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router that is being deleted.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -3386,6 +3881,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router that is being deleted.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder setHttpRouterId(
@@ -3399,6 +3898,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router that is being deleted.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder clearHttpRouterId() {
@@ -3408,6 +3911,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router that is being deleted.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder setHttpRouterIdBytes(
@@ -3479,53 +3986,113 @@ public final class HttpRouterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the HTTP router to update.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getHttpRouterId();
     /**
+     * <pre>
+     * ID of the HTTP router to update.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getHttpRouterIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the HTTP router should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the HTTP router should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the HTTP router should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * New name for the HTTP router.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * New name for the HTTP router.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * New description of the HTTP router.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description of the HTTP router.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -3537,11 +4104,31 @@ public final class HttpRouterServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3549,6 +4136,16 @@ public final class HttpRouterServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3556,24 +4153,64 @@ public final class HttpRouterServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * New virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+     * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> 
         getVirtualHostsList();
     /**
+     * <pre>
+     * New virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+     * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost getVirtualHosts(int index);
     /**
+     * <pre>
+     * New virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+     * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
     int getVirtualHostsCount();
     /**
+     * <pre>
+     * New virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+     * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder> 
         getVirtualHostsOrBuilderList();
     /**
+     * <pre>
+     * New virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+     * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder getVirtualHostsOrBuilder(
@@ -3737,6 +4374,11 @@ public final class HttpRouterServiceOuterClass {
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
+     * <pre>
+     * ID of the HTTP router to update.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getHttpRouterId() {
@@ -3752,6 +4394,11 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the HTTP router to update.
+     * To get the HTTP router ID, make a [HttpRouterService.List] request.
+     * </pre>
+     *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -3771,18 +4418,30 @@ public final class HttpRouterServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the HTTP router should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the HTTP router should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the HTTP router should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -3792,7 +4451,12 @@ public final class HttpRouterServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * New name for the HTTP router.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -3807,7 +4471,12 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * New name for the HTTP router.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -3826,6 +4495,10 @@ public final class HttpRouterServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description of the HTTP router.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -3841,6 +4514,10 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description of the HTTP router.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3884,6 +4561,16 @@ public final class HttpRouterServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3900,6 +4587,16 @@ public final class HttpRouterServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3907,6 +4604,16 @@ public final class HttpRouterServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3919,6 +4626,16 @@ public final class HttpRouterServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3936,12 +4653,28 @@ public final class HttpRouterServiceOuterClass {
     public static final int VIRTUAL_HOSTS_FIELD_NUMBER = 6;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> virtualHosts_;
     /**
+     * <pre>
+     * New virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+     * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> getVirtualHostsList() {
       return virtualHosts_;
     }
     /**
+     * <pre>
+     * New virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+     * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder> 
@@ -3949,18 +4682,42 @@ public final class HttpRouterServiceOuterClass {
       return virtualHosts_;
     }
     /**
+     * <pre>
+     * New virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+     * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
     public int getVirtualHostsCount() {
       return virtualHosts_.size();
     }
     /**
+     * <pre>
+     * New virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+     * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost getVirtualHosts(int index) {
       return virtualHosts_.get(index);
     }
     /**
+     * <pre>
+     * New virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+     * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder getVirtualHostsOrBuilder(
@@ -4472,6 +5229,11 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object httpRouterId_ = "";
       /**
+       * <pre>
+       * ID of the HTTP router to update.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getHttpRouterId() {
@@ -4487,6 +5249,11 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router to update.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -4503,6 +5270,11 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router to update.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHttpRouterId(
@@ -4516,6 +5288,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router to update.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearHttpRouterId() {
@@ -4525,6 +5302,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router to update.
+       * To get the HTTP router ID, make a [HttpRouterService.List] request.
+       * </pre>
+       *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setHttpRouterIdBytes(
@@ -4543,12 +5325,20 @@ public final class HttpRouterServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the HTTP router should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the HTTP router should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -4559,6 +5349,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the HTTP router should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -4575,6 +5369,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the HTTP router should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -4589,6 +5387,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the HTTP router should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -4607,6 +5409,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the HTTP router should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -4621,6 +5427,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the HTTP router should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -4629,6 +5439,10 @@ public final class HttpRouterServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the HTTP router should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -4640,6 +5454,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the HTTP router should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4658,7 +5476,12 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the HTTP router.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4673,7 +5496,12 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the HTTP router.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4689,7 +5517,12 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the HTTP router.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -4702,7 +5535,12 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the HTTP router.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder clearName() {
         
@@ -4711,7 +5549,12 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the HTTP router.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4727,6 +5570,10 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description of the HTTP router.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -4742,6 +5589,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the HTTP router.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4758,6 +5609,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the HTTP router.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -4771,6 +5626,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the HTTP router.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -4780,6 +5639,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the HTTP router.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -4821,6 +5684,16 @@ public final class HttpRouterServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4837,6 +5710,16 @@ public final class HttpRouterServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4844,6 +5727,16 @@ public final class HttpRouterServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4856,6 +5749,16 @@ public final class HttpRouterServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4876,6 +5779,16 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4895,6 +5808,16 @@ public final class HttpRouterServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -4907,6 +5830,16 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [HttpRouterService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4930,6 +5863,14 @@ public final class HttpRouterServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder> virtualHostsBuilder_;
 
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> getVirtualHostsList() {
@@ -4940,6 +5881,14 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public int getVirtualHostsCount() {
@@ -4950,6 +5899,14 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost getVirtualHosts(int index) {
@@ -4960,6 +5917,14 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public Builder setVirtualHosts(
@@ -4977,6 +5942,14 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public Builder setVirtualHosts(
@@ -4991,6 +5964,14 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public Builder addVirtualHosts(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost value) {
@@ -5007,6 +5988,14 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public Builder addVirtualHosts(
@@ -5024,6 +6013,14 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public Builder addVirtualHosts(
@@ -5038,6 +6035,14 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public Builder addVirtualHosts(
@@ -5052,6 +6057,14 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public Builder addAllVirtualHosts(
@@ -5067,6 +6080,14 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public Builder clearVirtualHosts() {
@@ -5080,6 +6101,14 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public Builder removeVirtualHosts(int index) {
@@ -5093,6 +6122,14 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.Builder getVirtualHostsBuilder(
@@ -5100,6 +6137,14 @@ public final class HttpRouterServiceOuterClass {
         return getVirtualHostsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder getVirtualHostsOrBuilder(
@@ -5110,6 +6155,14 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder> 
@@ -5121,6 +6174,14 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.Builder addVirtualHostsBuilder() {
@@ -5128,6 +6189,14 @@ public final class HttpRouterServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.getDefaultInstance());
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.Builder addVirtualHostsBuilder(
@@ -5136,6 +6205,14 @@ public final class HttpRouterServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.getDefaultInstance());
       }
       /**
+       * <pre>
+       * New virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * Existing list of virtual hosts is completely replaced by the specified list, so if you just want to add or remove
+       * a virtual host, make a [VirtualHostService.Create] request or a [VirtualHostService.Delete] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 6;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.Builder> 
@@ -5240,10 +6317,18 @@ public final class HttpRouterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the HTTP router that is being updated.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     java.lang.String getHttpRouterId();
     /**
+     * <pre>
+     * ID of the HTTP router that is being updated.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -5330,6 +6415,10 @@ public final class HttpRouterServiceOuterClass {
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
+     * <pre>
+     * ID of the HTTP router that is being updated.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     public java.lang.String getHttpRouterId() {
@@ -5345,6 +6434,10 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the HTTP router that is being updated.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -5666,6 +6759,10 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object httpRouterId_ = "";
       /**
+       * <pre>
+       * ID of the HTTP router that is being updated.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public java.lang.String getHttpRouterId() {
@@ -5681,6 +6778,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router that is being updated.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -5697,6 +6798,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router that is being updated.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder setHttpRouterId(
@@ -5710,6 +6815,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router that is being updated.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder clearHttpRouterId() {
@@ -5719,6 +6828,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router that is being updated.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder setHttpRouterIdBytes(
@@ -5790,40 +6903,78 @@ public final class HttpRouterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create an HTTP router in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create an HTTP router in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * Name of the HTTP router.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * Name of the HTTP router.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the HTTP router.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the HTTP router.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -5835,11 +6986,21 @@ public final class HttpRouterServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5847,6 +7008,11 @@ public final class HttpRouterServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5854,24 +7020,54 @@ public final class HttpRouterServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> 
         getVirtualHostsList();
     /**
+     * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost getVirtualHosts(int index);
     /**
+     * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
     int getVirtualHostsCount();
     /**
+     * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder> 
         getVirtualHostsOrBuilderList();
     /**
+     * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder getVirtualHostsOrBuilder(
@@ -6022,6 +7218,11 @@ public final class HttpRouterServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create an HTTP router in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFolderId() {
@@ -6037,6 +7238,11 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create an HTTP router in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -6056,7 +7262,12 @@ public final class HttpRouterServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * Name of the HTTP router.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -6071,7 +7282,12 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * Name of the HTTP router.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -6090,6 +7306,10 @@ public final class HttpRouterServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the HTTP router.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -6105,6 +7325,10 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the HTTP router.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -6148,6 +7372,11 @@ public final class HttpRouterServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -6164,6 +7393,11 @@ public final class HttpRouterServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -6171,6 +7405,11 @@ public final class HttpRouterServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -6183,6 +7422,11 @@ public final class HttpRouterServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * HTTP router labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -6200,12 +7444,24 @@ public final class HttpRouterServiceOuterClass {
     public static final int VIRTUAL_HOSTS_FIELD_NUMBER = 5;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> virtualHosts_;
     /**
+     * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> getVirtualHostsList() {
       return virtualHosts_;
     }
     /**
+     * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder> 
@@ -6213,18 +7469,36 @@ public final class HttpRouterServiceOuterClass {
       return virtualHosts_;
     }
     /**
+     * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
     public int getVirtualHostsCount() {
       return virtualHosts_.size();
     }
     /**
+     * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost getVirtualHosts(int index) {
       return virtualHosts_.get(index);
     }
     /**
+     * <pre>
+     * Virtual hosts that combine routes inside the router.
+     * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+     * Only one virtual host with no authority (default match) can be specified.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder getVirtualHostsOrBuilder(
@@ -6706,6 +7980,11 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create an HTTP router in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFolderId() {
@@ -6721,6 +8000,11 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create an HTTP router in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -6737,6 +8021,11 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create an HTTP router in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderId(
@@ -6750,6 +8039,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create an HTTP router in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFolderId() {
@@ -6759,6 +8053,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create an HTTP router in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderIdBytes(
@@ -6775,7 +8074,12 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the HTTP router.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6790,7 +8094,12 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the HTTP router.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6806,7 +8115,12 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the HTTP router.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -6819,7 +8133,12 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the HTTP router.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder clearName() {
         
@@ -6828,7 +8147,12 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the HTTP router.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6844,6 +8168,10 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the HTTP router.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -6859,6 +8187,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the HTTP router.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6875,6 +8207,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the HTTP router.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -6888,6 +8224,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the HTTP router.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -6897,6 +8237,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the HTTP router.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -6938,6 +8282,11 @@ public final class HttpRouterServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6954,6 +8303,11 @@ public final class HttpRouterServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6961,6 +8315,11 @@ public final class HttpRouterServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6973,6 +8332,11 @@ public final class HttpRouterServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6993,6 +8357,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -7012,6 +8381,11 @@ public final class HttpRouterServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -7024,6 +8398,11 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP router labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -7047,6 +8426,12 @@ public final class HttpRouterServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder> virtualHostsBuilder_;
 
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost> getVirtualHostsList() {
@@ -7057,6 +8442,12 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public int getVirtualHostsCount() {
@@ -7067,6 +8458,12 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost getVirtualHosts(int index) {
@@ -7077,6 +8474,12 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public Builder setVirtualHosts(
@@ -7094,6 +8497,12 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public Builder setVirtualHosts(
@@ -7108,6 +8517,12 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public Builder addVirtualHosts(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost value) {
@@ -7124,6 +8539,12 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public Builder addVirtualHosts(
@@ -7141,6 +8562,12 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public Builder addVirtualHosts(
@@ -7155,6 +8582,12 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public Builder addVirtualHosts(
@@ -7169,6 +8602,12 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public Builder addAllVirtualHosts(
@@ -7184,6 +8623,12 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public Builder clearVirtualHosts() {
@@ -7197,6 +8642,12 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public Builder removeVirtualHosts(int index) {
@@ -7210,6 +8661,12 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.Builder getVirtualHostsBuilder(
@@ -7217,6 +8674,12 @@ public final class HttpRouterServiceOuterClass {
         return getVirtualHostsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder getVirtualHostsOrBuilder(
@@ -7227,6 +8690,12 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHostOrBuilder> 
@@ -7238,6 +8707,12 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.Builder addVirtualHostsBuilder() {
@@ -7245,6 +8720,12 @@ public final class HttpRouterServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.Builder addVirtualHostsBuilder(
@@ -7253,6 +8734,12 @@ public final class HttpRouterServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Virtual hosts that combine routes inside the router.
+       * For details about the concept, see [documentation](/docs/application-load-balancer/concepts/http-router#virtual-host).
+       * Only one virtual host with no authority (default match) can be specified.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.VirtualHost virtual_hosts = 5;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost.Builder> 
@@ -7357,10 +8844,18 @@ public final class HttpRouterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the HTTP router that is being created.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     java.lang.String getHttpRouterId();
     /**
+     * <pre>
+     * ID of the HTTP router that is being created.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -7447,6 +8942,10 @@ public final class HttpRouterServiceOuterClass {
     public static final int HTTP_ROUTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object httpRouterId_;
     /**
+     * <pre>
+     * ID of the HTTP router that is being created.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     public java.lang.String getHttpRouterId() {
@@ -7462,6 +8961,10 @@ public final class HttpRouterServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the HTTP router that is being created.
+     * </pre>
+     *
      * <code>string http_router_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -7783,6 +9286,10 @@ public final class HttpRouterServiceOuterClass {
 
       private java.lang.Object httpRouterId_ = "";
       /**
+       * <pre>
+       * ID of the HTTP router that is being created.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public java.lang.String getHttpRouterId() {
@@ -7798,6 +9305,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router that is being created.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -7814,6 +9325,10 @@ public final class HttpRouterServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the HTTP router that is being created.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder setHttpRouterId(
@@ -7827,6 +9342,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router that is being created.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder clearHttpRouterId() {
@@ -7836,6 +9355,10 @@ public final class HttpRouterServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the HTTP router that is being created.
+       * </pre>
+       *
        * <code>string http_router_id = 1;</code>
        */
       public Builder setHttpRouterIdBytes(
@@ -7908,8 +9431,8 @@ public final class HttpRouterServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the http router to get operations for.
-     * To get the http router ID, use a [HttpRouterService.List] request.
+     * ID of the HTTP router to get operations for.
+     * To get the HTTP router ID, use a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7917,8 +9440,8 @@ public final class HttpRouterServiceOuterClass {
     java.lang.String getHttpRouterId();
     /**
      * <pre>
-     * ID of the http router to get operations for.
-     * To get the http router ID, use a [HttpRouterService.List] request.
+     * ID of the HTTP router to get operations for.
+     * To get the HTTP router ID, use a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8053,8 +9576,8 @@ public final class HttpRouterServiceOuterClass {
     private volatile java.lang.Object httpRouterId_;
     /**
      * <pre>
-     * ID of the http router to get operations for.
-     * To get the http router ID, use a [HttpRouterService.List] request.
+     * ID of the HTTP router to get operations for.
+     * To get the HTTP router ID, use a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8073,8 +9596,8 @@ public final class HttpRouterServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the http router to get operations for.
-     * To get the http router ID, use a [HttpRouterService.List] request.
+     * ID of the HTTP router to get operations for.
+     * To get the HTTP router ID, use a [HttpRouterService.List] request.
      * </pre>
      *
      * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8494,8 +10017,8 @@ public final class HttpRouterServiceOuterClass {
       private java.lang.Object httpRouterId_ = "";
       /**
        * <pre>
-       * ID of the http router to get operations for.
-       * To get the http router ID, use a [HttpRouterService.List] request.
+       * ID of the HTTP router to get operations for.
+       * To get the HTTP router ID, use a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8514,8 +10037,8 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the http router to get operations for.
-       * To get the http router ID, use a [HttpRouterService.List] request.
+       * ID of the HTTP router to get operations for.
+       * To get the HTTP router ID, use a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8535,8 +10058,8 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the http router to get operations for.
-       * To get the http router ID, use a [HttpRouterService.List] request.
+       * ID of the HTTP router to get operations for.
+       * To get the HTTP router ID, use a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8553,8 +10076,8 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the http router to get operations for.
-       * To get the http router ID, use a [HttpRouterService.List] request.
+       * ID of the HTTP router to get operations for.
+       * To get the HTTP router ID, use a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8567,8 +10090,8 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the http router to get operations for.
-       * To get the http router ID, use a [HttpRouterService.List] request.
+       * ID of the HTTP router to get operations for.
+       * To get the HTTP router ID, use a [HttpRouterService.List] request.
        * </pre>
        *
        * <code>string http_router_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8784,7 +10307,7 @@ public final class HttpRouterServiceOuterClass {
 
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -8793,7 +10316,7 @@ public final class HttpRouterServiceOuterClass {
         getOperationsList();
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -8801,7 +10324,7 @@ public final class HttpRouterServiceOuterClass {
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -8809,7 +10332,7 @@ public final class HttpRouterServiceOuterClass {
     int getOperationsCount();
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -8818,7 +10341,7 @@ public final class HttpRouterServiceOuterClass {
         getOperationsOrBuilderList();
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -8828,10 +10351,10 @@ public final class HttpRouterServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListHttpRouterOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListHttpRouterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListHttpRouterOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListHttpRouterOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -8839,10 +10362,10 @@ public final class HttpRouterServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListHttpRouterOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListHttpRouterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListHttpRouterOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListHttpRouterOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -8946,7 +10469,7 @@ public final class HttpRouterServiceOuterClass {
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -8956,7 +10479,7 @@ public final class HttpRouterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -8967,7 +10490,7 @@ public final class HttpRouterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -8977,7 +10500,7 @@ public final class HttpRouterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -8987,7 +10510,7 @@ public final class HttpRouterServiceOuterClass {
     }
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified HTTP router.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9001,10 +10524,10 @@ public final class HttpRouterServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListHttpRouterOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListHttpRouterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListHttpRouterOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListHttpRouterOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -9023,10 +10546,10 @@ public final class HttpRouterServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListHttpRouterOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListHttpRouterOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListHttpRouterOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListHttpRouterOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -9421,7 +10944,7 @@ public final class HttpRouterServiceOuterClass {
 
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9435,7 +10958,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9449,7 +10972,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9463,7 +10986,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9484,7 +11007,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9502,7 +11025,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9522,7 +11045,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9543,7 +11066,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9561,7 +11084,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9579,7 +11102,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9598,7 +11121,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9615,7 +11138,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9632,7 +11155,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9643,7 +11166,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9657,7 +11180,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9672,7 +11195,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9683,7 +11206,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9695,7 +11218,7 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified HTTP router.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -9722,10 +11245,10 @@ public final class HttpRouterServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListHttpRouterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListHttpRouterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListHttpRouterOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListHttpRouterOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -9744,10 +11267,10 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListHttpRouterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListHttpRouterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListHttpRouterOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListHttpRouterOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -9767,10 +11290,10 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListHttpRouterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListHttpRouterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListHttpRouterOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListHttpRouterOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -9787,10 +11310,10 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListHttpRouterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListHttpRouterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListHttpRouterOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListHttpRouterOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -9803,10 +11326,10 @@ public final class HttpRouterServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListHttpRouterOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListHttpRouterOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListHttpRouterOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListHttpRouterOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -9968,72 +11491,72 @@ public final class HttpRouterServiceOuterClass {
       ".v1.HttpRouter\022\027\n\017next_page_token\030\002 \001(\t\"" +
       "7\n\027DeleteHttpRouterRequest\022\034\n\016http_route" +
       "r_id\030\001 \001(\tB\004\350\3071\001\"2\n\030DeleteHttpRouterMeta" +
-      "data\022\026\n\016http_router_id\030\001 \001(\t\"\350\003\n\027UpdateH" +
+      "data\022\026\n\016http_router_id\030\001 \001(\t\"\352\003\n\027UpdateH" +
       "ttpRouterRequest\022\034\n\016http_router_id\030\001 \001(\t" +
       "B\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.pro" +
-      "tobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z" +
-      "]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descripti" +
-      "on\030\004 \001(\tB\t\212\3101\005<=256\022\235\001\n\006labels\030\005 \003(\0132D.y" +
-      "andex.cloud.apploadbalancer.v1.UpdateHtt" +
-      "pRouterRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004" +
-      "<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[" +
-      "a-z][-_./\\@0-9a-z]*\022C\n\rvirtual_hosts\030\006 \003" +
-      "(\0132,.yandex.cloud.apploadbalancer.v1.Vir" +
-      "tualHost\022\026\n\016https_redirect\030\007 \001(\010\032-\n\013Labe" +
-      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
-      "2\n\030UpdateHttpRouterMetadata\022\026\n\016http_rout" +
-      "er_id\030\001 \001(\t\"\262\003\n\027CreateHttpRouterRequest\022" +
-      "\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$" +
-      "\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013" +
-      "description\030\003 \001(\tB\t\212\3101\005<=256\022\235\001\n\006labels\030" +
-      "\004 \003(\0132D.yandex.cloud.apploadbalancer.v1." +
-      "CreateHttpRouterRequest.LabelsEntryBG\202\3101" +
-      "\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-" +
-      "63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022C\n\rvirtual_" +
-      "hosts\030\005 \003(\0132,.yandex.cloud.apploadbalanc" +
-      "er.v1.VirtualHost\022\026\n\016https_redirect\030\006 \001(" +
-      "\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"2\n\030CreateHttpRouterMetadata\022\026\n\016" +
-      "http_router_id\030\001 \001(\t\"\205\001\n\037ListHttpRouterO" +
-      "perationsRequest\022$\n\016http_router_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
-      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"r\n " +
-      "ListHttpRouterOperationsResponse\0225\n\noper" +
-      "ations\030\001 \003(\0132!.yandex.cloud.operation.Op" +
-      "eration\022\027\n\017next_page_token\030\002 \001(\t2\237\t\n\021Htt" +
-      "pRouterService\022\243\001\n\003Get\0225.yandex.cloud.ap" +
-      "ploadbalancer.v1.GetHttpRouterRequest\032+." +
-      "yandex.cloud.apploadbalancer.v1.HttpRout" +
-      "er\"8\202\323\344\223\0022\0220/apploadbalancer/v1/httpRout" +
-      "ers/{http_router_id}\022\242\001\n\004List\0227.yandex.c" +
-      "loud.apploadbalancer.v1.ListHttpRoutersR" +
-      "equest\0328.yandex.cloud.apploadbalancer.v1" +
-      ".ListHttpRoutersResponse\"\'\202\323\344\223\002!\022\037/applo" +
-      "adbalancer/v1/httpRouters\022\273\001\n\006Create\0228.y" +
-      "andex.cloud.apploadbalancer.v1.CreateHtt" +
-      "pRouterRequest\032!.yandex.cloud.operation." +
-      "Operation\"T\202\323\344\223\002$\"\037/apploadbalancer/v1/h" +
-      "ttpRouters:\001*\262\322*&\n\030CreateHttpRouterMetad" +
-      "ata\022\nHttpRouter\022\314\001\n\006Update\0228.yandex.clou" +
-      "d.apploadbalancer.v1.UpdateHttpRouterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "e\202\323\344\223\002520/apploadbalancer/v1/httpRouters" +
-      "/{http_router_id}:\001*\262\322*&\n\030UpdateHttpRout" +
-      "erMetadata\022\nHttpRouter\022\324\001\n\006Delete\0228.yand" +
-      "ex.cloud.apploadbalancer.v1.DeleteHttpRo" +
-      "uterRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"m\202\323\344\223\0022*0/apploadbalancer/v1/http" +
-      "Routers/{http_router_id}\262\322*1\n\030DeleteHttp" +
-      "RouterMetadata\022\025google.protobuf.Empty\022\332\001" +
-      "\n\016ListOperations\022@.yandex.cloud.apploadb" +
-      "alancer.v1.ListHttpRouterOperationsReque" +
-      "st\032A.yandex.cloud.apploadbalancer.v1.Lis" +
-      "tHttpRouterOperationsResponse\"C\202\323\344\223\002=\022;/" +
-      "apploadbalancer/v1/httpRouters/{http_rou" +
-      "ter_id}/operationsBz\n#yandex.cloud.api.a" +
-      "pploadbalancer.v1ZSgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/apploadbalan" +
-      "cer/v1;apploadbalancerb\006proto3"
+      "tobuf.FieldMask\0224\n\004name\030\003 \001(\tB&\362\3071\"([a-z" +
+      "]([-a-z0-9]{0,61}[a-z0-9])?)?\022\036\n\013descrip" +
+      "tion\030\004 \001(\tB\t\212\3101\005<=256\022\235\001\n\006labels\030\005 \003(\0132D" +
+      ".yandex.cloud.apploadbalancer.v1.UpdateH" +
+      "ttpRouterRequest.LabelsEntryBG\202\3101\004<=64\212\310" +
+      "1\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022" +
+      "\024[a-z][-_./\\@0-9a-z]*\022C\n\rvirtual_hosts\030\006" +
+      " \003(\0132,.yandex.cloud.apploadbalancer.v1.V" +
+      "irtualHost\022\026\n\016https_redirect\030\007 \001(\010\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"2\n\030UpdateHttpRouterMetadata\022\026\n\016http_ro" +
+      "uter_id\030\001 \001(\t\"\264\003\n\027CreateHttpRouterReques" +
+      "t\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030\002 \001(\t" +
+      "B&\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?" +
+      "\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\235\001\n\006lab" +
+      "els\030\004 \003(\0132D.yandex.cloud.apploadbalancer" +
+      ".v1.CreateHttpRouterRequest.LabelsEntryB" +
+      "G\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006" +
+      "\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022C\n\rvirt" +
+      "ual_hosts\030\005 \003(\0132,.yandex.cloud.apploadba" +
+      "lancer.v1.VirtualHost\022\026\n\016https_redirect\030" +
+      "\006 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"2\n\030CreateHttpRouterMetadata" +
+      "\022\026\n\016http_router_id\030\001 \001(\t\"\205\001\n\037ListHttpRou" +
+      "terOperationsRequest\022$\n\016http_router_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\"r\n ListHttpRouterOperationsResponse\0225\n\n" +
+      "operations\030\001 \003(\0132!.yandex.cloud.operatio" +
+      "n.Operation\022\027\n\017next_page_token\030\002 \001(\t2\237\t\n" +
+      "\021HttpRouterService\022\243\001\n\003Get\0225.yandex.clou" +
+      "d.apploadbalancer.v1.GetHttpRouterReques" +
+      "t\032+.yandex.cloud.apploadbalancer.v1.Http" +
+      "Router\"8\202\323\344\223\0022\0220/apploadbalancer/v1/http" +
+      "Routers/{http_router_id}\022\242\001\n\004List\0227.yand" +
+      "ex.cloud.apploadbalancer.v1.ListHttpRout" +
+      "ersRequest\0328.yandex.cloud.apploadbalance" +
+      "r.v1.ListHttpRoutersResponse\"\'\202\323\344\223\002!\022\037/a" +
+      "pploadbalancer/v1/httpRouters\022\273\001\n\006Create" +
+      "\0228.yandex.cloud.apploadbalancer.v1.Creat" +
+      "eHttpRouterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"T\202\323\344\223\002$\"\037/apploadbalancer/" +
+      "v1/httpRouters:\001*\262\322*&\n\030CreateHttpRouterM" +
+      "etadata\022\nHttpRouter\022\314\001\n\006Update\0228.yandex." +
+      "cloud.apploadbalancer.v1.UpdateHttpRoute" +
+      "rRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"e\202\323\344\223\002520/apploadbalancer/v1/httpRou" +
+      "ters/{http_router_id}:\001*\262\322*&\n\030UpdateHttp" +
+      "RouterMetadata\022\nHttpRouter\022\324\001\n\006Delete\0228." +
+      "yandex.cloud.apploadbalancer.v1.DeleteHt" +
+      "tpRouterRequest\032!.yandex.cloud.operation" +
+      ".Operation\"m\202\323\344\223\0022*0/apploadbalancer/v1/" +
+      "httpRouters/{http_router_id}\262\322*1\n\030Delete" +
+      "HttpRouterMetadata\022\025google.protobuf.Empt" +
+      "y\022\332\001\n\016ListOperations\022@.yandex.cloud.appl" +
+      "oadbalancer.v1.ListHttpRouterOperationsR" +
+      "equest\032A.yandex.cloud.apploadbalancer.v1" +
+      ".ListHttpRouterOperationsResponse\"C\202\323\344\223\002" +
+      "=\022;/apploadbalancer/v1/httpRouters/{http" +
+      "_router_id}/operationsBz\n#yandex.cloud.a" +
+      "pi.apploadbalancer.v1ZSgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/apploadb" +
+      "alancer/v1;apploadbalancerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

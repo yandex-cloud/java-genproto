@@ -20,7 +20,7 @@ public final class PayloadOuterClass {
 
     /**
      * <pre>
-     * Text message.
+     * Payload text.
      * </pre>
      *
      * <code>string text = 1 [(.yandex.cloud.length) = "&gt;0"];</code>
@@ -28,7 +28,7 @@ public final class PayloadOuterClass {
     java.lang.String getText();
     /**
      * <pre>
-     * Text message.
+     * Payload text.
      * </pre>
      *
      * <code>string text = 1 [(.yandex.cloud.length) = "&gt;0"];</code>
@@ -39,6 +39,10 @@ public final class PayloadOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.PayloadOuterClass.Payload.PayloadCase getPayloadCase();
   }
   /**
+   * <pre>
+   * A health check payload resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Payload}
    */
   public  static final class Payload extends
@@ -154,7 +158,7 @@ public final class PayloadOuterClass {
     public static final int TEXT_FIELD_NUMBER = 1;
     /**
      * <pre>
-     * Text message.
+     * Payload text.
      * </pre>
      *
      * <code>string text = 1 [(.yandex.cloud.length) = "&gt;0"];</code>
@@ -178,7 +182,7 @@ public final class PayloadOuterClass {
     }
     /**
      * <pre>
-     * Text message.
+     * Payload text.
      * </pre>
      *
      * <code>string text = 1 [(.yandex.cloud.length) = "&gt;0"];</code>
@@ -373,6 +377,10 @@ public final class PayloadOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A health check payload resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.Payload}
      */
     public static final class Builder extends
@@ -547,7 +555,7 @@ public final class PayloadOuterClass {
 
       /**
        * <pre>
-       * Text message.
+       * Payload text.
        * </pre>
        *
        * <code>string text = 1 [(.yandex.cloud.length) = "&gt;0"];</code>
@@ -571,7 +579,7 @@ public final class PayloadOuterClass {
       }
       /**
        * <pre>
-       * Text message.
+       * Payload text.
        * </pre>
        *
        * <code>string text = 1 [(.yandex.cloud.length) = "&gt;0"];</code>
@@ -596,7 +604,7 @@ public final class PayloadOuterClass {
       }
       /**
        * <pre>
-       * Text message.
+       * Payload text.
        * </pre>
        *
        * <code>string text = 1 [(.yandex.cloud.length) = "&gt;0"];</code>
@@ -613,7 +621,7 @@ public final class PayloadOuterClass {
       }
       /**
        * <pre>
-       * Text message.
+       * Payload text.
        * </pre>
        *
        * <code>string text = 1 [(.yandex.cloud.length) = "&gt;0"];</code>
@@ -628,7 +636,7 @@ public final class PayloadOuterClass {
       }
       /**
        * <pre>
-       * Text message.
+       * Payload text.
        * </pre>
        *
        * <code>string text = 1 [(.yandex.cloud.length) = "&gt;0"];</code>

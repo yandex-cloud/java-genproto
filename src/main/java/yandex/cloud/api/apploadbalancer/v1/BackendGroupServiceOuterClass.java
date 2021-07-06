@@ -19,10 +19,20 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backend group to return.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getBackendGroupId();
     /**
+     * <pre>
+     * ID of the backend group to return.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -109,6 +119,11 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
+     * <pre>
+     * ID of the backend group to return.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getBackendGroupId() {
@@ -124,6 +139,11 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backend group to return.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -445,6 +465,11 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
+       * <pre>
+       * ID of the backend group to return.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getBackendGroupId() {
@@ -460,6 +485,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group to return.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -476,6 +506,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group to return.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupId(
@@ -489,6 +524,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group to return.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearBackendGroupId() {
@@ -498,6 +538,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group to return.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupIdBytes(
@@ -569,35 +614,80 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list backend groups in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list backend groups in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListBackendGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListBackendGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListBackendGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters backend groups listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [BackendGroup.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-backend-group`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters backend groups listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [BackendGroup.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-backend-group`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
@@ -704,6 +794,11 @@ public final class BackendGroupServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to list backend groups in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFolderId() {
@@ -719,6 +814,11 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list backend groups in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -738,6 +838,13 @@ public final class BackendGroupServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListBackendGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -747,6 +854,11 @@ public final class BackendGroupServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListBackendGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -762,6 +874,11 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListBackendGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -781,6 +898,15 @@ public final class BackendGroupServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters backend groups listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [BackendGroup.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-backend-group`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -796,6 +922,15 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters backend groups listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [BackendGroup.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-backend-group`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1169,6 +1304,11 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to list backend groups in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFolderId() {
@@ -1184,6 +1324,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list backend groups in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -1200,6 +1345,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list backend groups in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderId(
@@ -1213,6 +1363,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list backend groups in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFolderId() {
@@ -1222,6 +1377,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list backend groups in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderIdBytes(
@@ -1238,12 +1398,26 @@ public final class BackendGroupServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListBackendGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListBackendGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -1253,6 +1427,13 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListBackendGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -1264,6 +1445,11 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListBackendGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -1279,6 +1465,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListBackendGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1295,6 +1486,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListBackendGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -1308,6 +1504,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListBackendGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -1317,6 +1518,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListBackendGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -1333,6 +1539,15 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters backend groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [BackendGroup.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-backend-group`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -1348,6 +1563,15 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters backend groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [BackendGroup.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-backend-group`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1364,6 +1588,15 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters backend groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [BackendGroup.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-backend-group`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -1377,6 +1610,15 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters backend groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [BackendGroup.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-backend-group`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -1386,6 +1628,15 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters backend groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [BackendGroup.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-backend-group`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -1457,34 +1708,68 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of backend groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup> 
         getBackendGroupsList();
     /**
+     * <pre>
+     * List of backend groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup getBackendGroups(int index);
     /**
+     * <pre>
+     * List of backend groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
      */
     int getBackendGroupsCount();
     /**
+     * <pre>
+     * List of backend groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroupOrBuilder> 
         getBackendGroupsOrBuilderList();
     /**
+     * <pre>
+     * List of backend groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroupOrBuilder getBackendGroupsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListBackendGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListBackendGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListBackendGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListBackendGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -1585,12 +1870,20 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_GROUPS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup> backendGroups_;
     /**
+     * <pre>
+     * List of backend groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup> getBackendGroupsList() {
       return backendGroups_;
     }
     /**
+     * <pre>
+     * List of backend groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroupOrBuilder> 
@@ -1598,18 +1891,30 @@ public final class BackendGroupServiceOuterClass {
       return backendGroups_;
     }
     /**
+     * <pre>
+     * List of backend groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
      */
     public int getBackendGroupsCount() {
       return backendGroups_.size();
     }
     /**
+     * <pre>
+     * List of backend groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup getBackendGroups(int index) {
       return backendGroups_.get(index);
     }
     /**
+     * <pre>
+     * List of backend groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroupOrBuilder getBackendGroupsOrBuilder(
@@ -1620,6 +1925,13 @@ public final class BackendGroupServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListBackendGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListBackendGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -1635,6 +1947,13 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListBackendGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListBackendGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -2026,6 +2345,10 @@ public final class BackendGroupServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroupOrBuilder> backendGroupsBuilder_;
 
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup> getBackendGroupsList() {
@@ -2036,6 +2359,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public int getBackendGroupsCount() {
@@ -2046,6 +2373,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup getBackendGroups(int index) {
@@ -2056,6 +2387,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public Builder setBackendGroups(
@@ -2073,6 +2408,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public Builder setBackendGroups(
@@ -2087,6 +2426,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public Builder addBackendGroups(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup value) {
@@ -2103,6 +2446,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public Builder addBackendGroups(
@@ -2120,6 +2467,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public Builder addBackendGroups(
@@ -2134,6 +2485,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public Builder addBackendGroups(
@@ -2148,6 +2503,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public Builder addAllBackendGroups(
@@ -2163,6 +2522,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public Builder clearBackendGroups() {
@@ -2176,6 +2539,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public Builder removeBackendGroups(int index) {
@@ -2189,6 +2556,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup.Builder getBackendGroupsBuilder(
@@ -2196,6 +2567,10 @@ public final class BackendGroupServiceOuterClass {
         return getBackendGroupsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroupOrBuilder getBackendGroupsOrBuilder(
@@ -2206,6 +2581,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroupOrBuilder> 
@@ -2217,6 +2596,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup.Builder addBackendGroupsBuilder() {
@@ -2224,6 +2607,10 @@ public final class BackendGroupServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup.Builder addBackendGroupsBuilder(
@@ -2232,6 +2619,10 @@ public final class BackendGroupServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of backend groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.BackendGroup backend_groups = 1;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendGroup.Builder> 
@@ -2255,6 +2646,13 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListBackendGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListBackendGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -2270,6 +2668,13 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListBackendGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListBackendGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2286,6 +2691,13 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListBackendGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListBackendGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -2299,6 +2711,13 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListBackendGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListBackendGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -2308,6 +2727,13 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListBackendGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListBackendGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -2379,10 +2805,20 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backend group to delete.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getBackendGroupId();
     /**
+     * <pre>
+     * ID of the backend group to delete.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -2469,6 +2905,11 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
+     * <pre>
+     * ID of the backend group to delete.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getBackendGroupId() {
@@ -2484,6 +2925,11 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backend group to delete.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -2805,6 +3251,11 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
+       * <pre>
+       * ID of the backend group to delete.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getBackendGroupId() {
@@ -2820,6 +3271,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group to delete.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -2836,6 +3292,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group to delete.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupId(
@@ -2849,6 +3310,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group to delete.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearBackendGroupId() {
@@ -2858,6 +3324,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group to delete.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupIdBytes(
@@ -2929,10 +3400,18 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backend group that is being deleted.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     java.lang.String getBackendGroupId();
     /**
+     * <pre>
+     * ID of the backend group that is being deleted.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -3019,6 +3498,10 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
+     * <pre>
+     * ID of the backend group that is being deleted.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     public java.lang.String getBackendGroupId() {
@@ -3034,6 +3517,10 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backend group that is being deleted.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -3355,6 +3842,10 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
+       * <pre>
+       * ID of the backend group that is being deleted.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public java.lang.String getBackendGroupId() {
@@ -3370,6 +3861,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group that is being deleted.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -3386,6 +3881,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group that is being deleted.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder setBackendGroupId(
@@ -3399,6 +3898,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group that is being deleted.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder clearBackendGroupId() {
@@ -3408,6 +3911,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group that is being deleted.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder setBackendGroupIdBytes(
@@ -3479,53 +3986,113 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backend group to update.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getBackendGroupId();
     /**
+     * <pre>
+     * ID of the backend group to update.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getBackendGroupIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the backend group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the backend group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the backend group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * New name for the backend group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * New name for the backend group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * New description of the backend group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description of the backend group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -3537,11 +4104,31 @@ public final class BackendGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3549,6 +4136,16 @@ public final class BackendGroupServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3556,27 +4153,51 @@ public final class BackendGroupServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * New list of HTTP backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
      */
     boolean hasHttp();
     /**
+     * <pre>
+     * New list of HTTP backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup getHttp();
     /**
+     * <pre>
+     * New list of HTTP backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroupOrBuilder getHttpOrBuilder();
 
     /**
+     * <pre>
+     * New list of gRPC backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
      */
     boolean hasGrpc();
     /**
+     * <pre>
+     * New list of gRPC backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup getGrpc();
     /**
+     * <pre>
+     * New list of gRPC backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroupOrBuilder getGrpcOrBuilder();
@@ -3783,6 +4404,11 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
+     * <pre>
+     * ID of the backend group to update.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getBackendGroupId() {
@@ -3798,6 +4424,11 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backend group to update.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -3817,18 +4448,30 @@ public final class BackendGroupServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the backend group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the backend group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the backend group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -3838,7 +4481,12 @@ public final class BackendGroupServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * New name for the backend group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -3853,7 +4501,12 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * New name for the backend group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -3872,6 +4525,10 @@ public final class BackendGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description of the backend group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -3887,6 +4544,10 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description of the backend group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3930,6 +4591,16 @@ public final class BackendGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3946,6 +4617,16 @@ public final class BackendGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3953,6 +4634,16 @@ public final class BackendGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3965,6 +4656,16 @@ public final class BackendGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3981,12 +4682,20 @@ public final class BackendGroupServiceOuterClass {
 
     public static final int HTTP_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * New list of HTTP backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
      */
     public boolean hasHttp() {
       return backendCase_ == 6;
     }
     /**
+     * <pre>
+     * New list of HTTP backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup getHttp() {
@@ -3996,6 +4705,10 @@ public final class BackendGroupServiceOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup.getDefaultInstance();
     }
     /**
+     * <pre>
+     * New list of HTTP backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroupOrBuilder getHttpOrBuilder() {
@@ -4007,12 +4720,20 @@ public final class BackendGroupServiceOuterClass {
 
     public static final int GRPC_FIELD_NUMBER = 7;
     /**
+     * <pre>
+     * New list of gRPC backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
      */
     public boolean hasGrpc() {
       return backendCase_ == 7;
     }
     /**
+     * <pre>
+     * New list of gRPC backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup getGrpc() {
@@ -4022,6 +4743,10 @@ public final class BackendGroupServiceOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup.getDefaultInstance();
     }
     /**
+     * <pre>
+     * New list of gRPC backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroupOrBuilder getGrpcOrBuilder() {
@@ -4539,6 +5264,11 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
+       * <pre>
+       * ID of the backend group to update.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getBackendGroupId() {
@@ -4554,6 +5284,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group to update.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -4570,6 +5305,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group to update.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupId(
@@ -4583,6 +5323,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group to update.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearBackendGroupId() {
@@ -4592,6 +5337,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group to update.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupIdBytes(
@@ -4610,12 +5360,20 @@ public final class BackendGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -4626,6 +5384,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -4642,6 +5404,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -4656,6 +5422,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -4674,6 +5444,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -4688,6 +5462,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -4696,6 +5474,10 @@ public final class BackendGroupServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -4707,6 +5489,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4725,7 +5511,12 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the backend group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4740,7 +5531,12 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the backend group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4756,7 +5552,12 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the backend group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -4769,7 +5570,12 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the backend group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder clearName() {
         
@@ -4778,7 +5584,12 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the backend group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4794,6 +5605,10 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description of the backend group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -4809,6 +5624,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the backend group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4825,6 +5644,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the backend group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -4838,6 +5661,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the backend group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -4847,6 +5674,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the backend group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -4888,6 +5719,16 @@ public final class BackendGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4904,6 +5745,16 @@ public final class BackendGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4911,6 +5762,16 @@ public final class BackendGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4923,6 +5784,16 @@ public final class BackendGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4943,6 +5814,16 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4962,6 +5843,16 @@ public final class BackendGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -4974,6 +5865,16 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [BackendGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4987,12 +5888,20 @@ public final class BackendGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroupOrBuilder> httpBuilder_;
       /**
+       * <pre>
+       * New list of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
        */
       public boolean hasHttp() {
         return backendCase_ == 6;
       }
       /**
+       * <pre>
+       * New list of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup getHttp() {
@@ -5009,6 +5918,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
        */
       public Builder setHttp(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup value) {
@@ -5025,6 +5938,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
        */
       public Builder setHttp(
@@ -5039,6 +5956,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
        */
       public Builder mergeHttp(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup value) {
@@ -5061,6 +5982,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
        */
       public Builder clearHttp() {
@@ -5080,12 +6005,20 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup.Builder getHttpBuilder() {
         return getHttpFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New list of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroupOrBuilder getHttpOrBuilder() {
@@ -5099,6 +6032,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5123,12 +6060,20 @@ public final class BackendGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroupOrBuilder> grpcBuilder_;
       /**
+       * <pre>
+       * New list of gRPC backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
        */
       public boolean hasGrpc() {
         return backendCase_ == 7;
       }
       /**
+       * <pre>
+       * New list of gRPC backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup getGrpc() {
@@ -5145,6 +6090,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of gRPC backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
        */
       public Builder setGrpc(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup value) {
@@ -5161,6 +6110,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of gRPC backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
        */
       public Builder setGrpc(
@@ -5175,6 +6128,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of gRPC backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
        */
       public Builder mergeGrpc(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup value) {
@@ -5197,6 +6154,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of gRPC backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
        */
       public Builder clearGrpc() {
@@ -5216,12 +6177,20 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of gRPC backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup.Builder getGrpcBuilder() {
         return getGrpcFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New list of gRPC backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroupOrBuilder getGrpcOrBuilder() {
@@ -5235,6 +6204,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of gRPC backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5313,10 +6286,18 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backend group that is being updated.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     java.lang.String getBackendGroupId();
     /**
+     * <pre>
+     * ID of the backend group that is being updated.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -5403,6 +6384,10 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
+     * <pre>
+     * ID of the backend group that is being updated.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     public java.lang.String getBackendGroupId() {
@@ -5418,6 +6403,10 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backend group that is being updated.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -5739,6 +6728,10 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
+       * <pre>
+       * ID of the backend group that is being updated.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public java.lang.String getBackendGroupId() {
@@ -5754,6 +6747,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group that is being updated.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -5770,6 +6767,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group that is being updated.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder setBackendGroupId(
@@ -5783,6 +6784,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group that is being updated.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder clearBackendGroupId() {
@@ -5792,6 +6797,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group that is being updated.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder setBackendGroupIdBytes(
@@ -5863,40 +6872,78 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create a backend group in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create a backend group in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * Name of the backend group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * Name of the backend group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the backend group.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the backend group.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -5908,11 +6955,21 @@ public final class BackendGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5920,6 +6977,11 @@ public final class BackendGroupServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5927,27 +6989,51 @@ public final class BackendGroupServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * List of HTTP backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
      */
     boolean hasHttp();
     /**
+     * <pre>
+     * List of HTTP backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup getHttp();
     /**
+     * <pre>
+     * List of HTTP backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroupOrBuilder getHttpOrBuilder();
 
     /**
+     * <pre>
+     * List of gRPC backends that the backend group consists of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
      */
     boolean hasGrpc();
     /**
+     * <pre>
+     * List of gRPC backends that the backend group consists of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup getGrpc();
     /**
+     * <pre>
+     * List of gRPC backends that the backend group consists of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroupOrBuilder getGrpcOrBuilder();
@@ -6141,6 +7227,11 @@ public final class BackendGroupServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create a backend group in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFolderId() {
@@ -6156,6 +7247,11 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create a backend group in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -6175,7 +7271,12 @@ public final class BackendGroupServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * Name of the backend group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -6190,7 +7291,12 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * Name of the backend group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -6209,6 +7315,10 @@ public final class BackendGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the backend group.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -6224,6 +7334,10 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the backend group.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -6267,6 +7381,11 @@ public final class BackendGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -6283,6 +7402,11 @@ public final class BackendGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -6290,6 +7414,11 @@ public final class BackendGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -6302,6 +7431,11 @@ public final class BackendGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Backend group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -6318,12 +7452,20 @@ public final class BackendGroupServiceOuterClass {
 
     public static final int HTTP_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * List of HTTP backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
      */
     public boolean hasHttp() {
       return backendCase_ == 5;
     }
     /**
+     * <pre>
+     * List of HTTP backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup getHttp() {
@@ -6333,6 +7475,10 @@ public final class BackendGroupServiceOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup.getDefaultInstance();
     }
     /**
+     * <pre>
+     * List of HTTP backends that the backend group will consist of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroupOrBuilder getHttpOrBuilder() {
@@ -6344,12 +7490,20 @@ public final class BackendGroupServiceOuterClass {
 
     public static final int GRPC_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * List of gRPC backends that the backend group consists of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
      */
     public boolean hasGrpc() {
       return backendCase_ == 6;
     }
     /**
+     * <pre>
+     * List of gRPC backends that the backend group consists of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup getGrpc() {
@@ -6359,6 +7513,10 @@ public final class BackendGroupServiceOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup.getDefaultInstance();
     }
     /**
+     * <pre>
+     * List of gRPC backends that the backend group consists of.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroupOrBuilder getGrpcOrBuilder() {
@@ -6846,6 +8004,11 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create a backend group in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFolderId() {
@@ -6861,6 +8024,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a backend group in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -6877,6 +8045,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a backend group in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderId(
@@ -6890,6 +8063,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a backend group in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFolderId() {
@@ -6899,6 +8077,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a backend group in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderIdBytes(
@@ -6915,7 +8098,12 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the backend group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6930,7 +8118,12 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the backend group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6946,7 +8139,12 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the backend group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -6959,7 +8157,12 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the backend group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder clearName() {
         
@@ -6968,7 +8171,12 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the backend group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6984,6 +8192,10 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the backend group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -6999,6 +8211,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the backend group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -7015,6 +8231,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the backend group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -7028,6 +8248,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the backend group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -7037,6 +8261,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the backend group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -7078,6 +8306,11 @@ public final class BackendGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -7094,6 +8327,11 @@ public final class BackendGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -7101,6 +8339,11 @@ public final class BackendGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -7113,6 +8356,11 @@ public final class BackendGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -7133,6 +8381,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -7152,6 +8405,11 @@ public final class BackendGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -7164,6 +8422,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backend group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -7177,12 +8440,20 @@ public final class BackendGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroupOrBuilder> httpBuilder_;
       /**
+       * <pre>
+       * List of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
        */
       public boolean hasHttp() {
         return backendCase_ == 5;
       }
       /**
+       * <pre>
+       * List of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup getHttp() {
@@ -7199,6 +8470,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
        */
       public Builder setHttp(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup value) {
@@ -7215,6 +8490,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
        */
       public Builder setHttp(
@@ -7229,6 +8508,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
        */
       public Builder mergeHttp(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup value) {
@@ -7251,6 +8534,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
        */
       public Builder clearHttp() {
@@ -7270,12 +8557,20 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup.Builder getHttpBuilder() {
         return getHttpFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * List of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroupOrBuilder getHttpOrBuilder() {
@@ -7289,6 +8584,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of HTTP backends that the backend group will consist of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackendGroup http = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7313,12 +8612,20 @@ public final class BackendGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroupOrBuilder> grpcBuilder_;
       /**
+       * <pre>
+       * List of gRPC backends that the backend group consists of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
        */
       public boolean hasGrpc() {
         return backendCase_ == 6;
       }
       /**
+       * <pre>
+       * List of gRPC backends that the backend group consists of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup getGrpc() {
@@ -7335,6 +8642,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of gRPC backends that the backend group consists of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
        */
       public Builder setGrpc(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup value) {
@@ -7351,6 +8662,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of gRPC backends that the backend group consists of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
        */
       public Builder setGrpc(
@@ -7365,6 +8680,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of gRPC backends that the backend group consists of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
        */
       public Builder mergeGrpc(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup value) {
@@ -7387,6 +8706,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of gRPC backends that the backend group consists of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
        */
       public Builder clearGrpc() {
@@ -7406,12 +8729,20 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of gRPC backends that the backend group consists of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup.Builder getGrpcBuilder() {
         return getGrpcFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * List of gRPC backends that the backend group consists of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroupOrBuilder getGrpcOrBuilder() {
@@ -7425,6 +8756,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of gRPC backends that the backend group consists of.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackendGroup grpc = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7503,10 +8838,18 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backend group that is being created.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     java.lang.String getBackendGroupId();
     /**
+     * <pre>
+     * ID of the backend group that is being created.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -7593,6 +8936,10 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
+     * <pre>
+     * ID of the backend group that is being created.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     public java.lang.String getBackendGroupId() {
@@ -7608,6 +8955,10 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backend group that is being created.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -7929,6 +9280,10 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
+       * <pre>
+       * ID of the backend group that is being created.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public java.lang.String getBackendGroupId() {
@@ -7944,6 +9299,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group that is being created.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -7960,6 +9319,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group that is being created.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder setBackendGroupId(
@@ -7973,6 +9336,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group that is being created.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder clearBackendGroupId() {
@@ -7982,6 +9349,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group that is being created.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder setBackendGroupIdBytes(
@@ -8053,37 +9424,71 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backend group to add a backend to.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getBackendGroupId();
     /**
+     * <pre>
+     * ID of the backend group to add a backend to.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getBackendGroupIdBytes();
 
     /**
+     * <pre>
+     * HTTP backend to add to the backend group.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
      */
     boolean hasHttp();
     /**
+     * <pre>
+     * HTTP backend to add to the backend group.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend getHttp();
     /**
+     * <pre>
+     * HTTP backend to add to the backend group.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendOrBuilder getHttpOrBuilder();
 
     /**
+     * <pre>
+     * gRPC backend to add to the backend group.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
      */
     boolean hasGrpc();
     /**
+     * <pre>
+     * gRPC backend to add to the backend group.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend getGrpc();
     /**
+     * <pre>
+     * gRPC backend to add to the backend group.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendOrBuilder getGrpcOrBuilder();
@@ -8237,6 +9642,11 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
+     * <pre>
+     * ID of the backend group to add a backend to.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getBackendGroupId() {
@@ -8252,6 +9662,11 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backend group to add a backend to.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -8270,12 +9685,20 @@ public final class BackendGroupServiceOuterClass {
 
     public static final int HTTP_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * HTTP backend to add to the backend group.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
      */
     public boolean hasHttp() {
       return backendCase_ == 2;
     }
     /**
+     * <pre>
+     * HTTP backend to add to the backend group.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend getHttp() {
@@ -8285,6 +9708,10 @@ public final class BackendGroupServiceOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend.getDefaultInstance();
     }
     /**
+     * <pre>
+     * HTTP backend to add to the backend group.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendOrBuilder getHttpOrBuilder() {
@@ -8296,12 +9723,20 @@ public final class BackendGroupServiceOuterClass {
 
     public static final int GRPC_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * gRPC backend to add to the backend group.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
      */
     public boolean hasGrpc() {
       return backendCase_ == 3;
     }
     /**
+     * <pre>
+     * gRPC backend to add to the backend group.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend getGrpc() {
@@ -8311,6 +9746,10 @@ public final class BackendGroupServiceOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend.getDefaultInstance();
     }
     /**
+     * <pre>
+     * gRPC backend to add to the backend group.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendOrBuilder getGrpcOrBuilder() {
@@ -8711,6 +10150,11 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
+       * <pre>
+       * ID of the backend group to add a backend to.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getBackendGroupId() {
@@ -8726,6 +10170,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group to add a backend to.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -8742,6 +10191,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group to add a backend to.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupId(
@@ -8755,6 +10209,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group to add a backend to.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearBackendGroupId() {
@@ -8764,6 +10223,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group to add a backend to.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupIdBytes(
@@ -8781,12 +10245,20 @@ public final class BackendGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendOrBuilder> httpBuilder_;
       /**
+       * <pre>
+       * HTTP backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
        */
       public boolean hasHttp() {
         return backendCase_ == 2;
       }
       /**
+       * <pre>
+       * HTTP backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend getHttp() {
@@ -8803,6 +10275,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTP backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
        */
       public Builder setHttp(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend value) {
@@ -8819,6 +10295,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
        */
       public Builder setHttp(
@@ -8833,6 +10313,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
        */
       public Builder mergeHttp(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend value) {
@@ -8855,6 +10339,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
        */
       public Builder clearHttp() {
@@ -8874,12 +10362,20 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * HTTP backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend.Builder getHttpBuilder() {
         return getHttpFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * HTTP backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendOrBuilder getHttpOrBuilder() {
@@ -8893,6 +10389,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * HTTP backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8917,12 +10417,20 @@ public final class BackendGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendOrBuilder> grpcBuilder_;
       /**
+       * <pre>
+       * gRPC backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
        */
       public boolean hasGrpc() {
         return backendCase_ == 3;
       }
       /**
+       * <pre>
+       * gRPC backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend getGrpc() {
@@ -8939,6 +10447,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * gRPC backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
        */
       public Builder setGrpc(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend value) {
@@ -8955,6 +10467,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * gRPC backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
        */
       public Builder setGrpc(
@@ -8969,6 +10485,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * gRPC backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
        */
       public Builder mergeGrpc(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend value) {
@@ -8991,6 +10511,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * gRPC backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
        */
       public Builder clearGrpc() {
@@ -9010,12 +10534,20 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * gRPC backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend.Builder getGrpcBuilder() {
         return getGrpcFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * gRPC backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendOrBuilder getGrpcOrBuilder() {
@@ -9029,6 +10561,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * gRPC backend to add to the backend group.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9107,20 +10643,36 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backend group that the backend is being added to.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     java.lang.String getBackendGroupId();
     /**
+     * <pre>
+     * ID of the backend group that the backend is being added to.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getBackendGroupIdBytes();
 
     /**
+     * <pre>
+     * Name of the backend that is being added to the backend group.
+     * </pre>
+     *
      * <code>string backend_name = 2;</code>
      */
     java.lang.String getBackendName();
     /**
+     * <pre>
+     * Name of the backend that is being added to the backend group.
+     * </pre>
+     *
      * <code>string backend_name = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -9214,6 +10766,10 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
+     * <pre>
+     * ID of the backend group that the backend is being added to.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     public java.lang.String getBackendGroupId() {
@@ -9229,6 +10785,10 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backend group that the backend is being added to.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -9248,6 +10808,10 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object backendName_;
     /**
+     * <pre>
+     * Name of the backend that is being added to the backend group.
+     * </pre>
+     *
      * <code>string backend_name = 2;</code>
      */
     public java.lang.String getBackendName() {
@@ -9263,6 +10827,10 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the backend that is being added to the backend group.
+     * </pre>
+     *
      * <code>string backend_name = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -9601,6 +11169,10 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
+       * <pre>
+       * ID of the backend group that the backend is being added to.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public java.lang.String getBackendGroupId() {
@@ -9616,6 +11188,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group that the backend is being added to.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -9632,6 +11208,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group that the backend is being added to.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder setBackendGroupId(
@@ -9645,6 +11225,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group that the backend is being added to.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder clearBackendGroupId() {
@@ -9654,6 +11238,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group that the backend is being added to.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder setBackendGroupIdBytes(
@@ -9670,6 +11258,10 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendName_ = "";
       /**
+       * <pre>
+       * Name of the backend that is being added to the backend group.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public java.lang.String getBackendName() {
@@ -9685,6 +11277,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the backend that is being added to the backend group.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -9701,6 +11297,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the backend that is being added to the backend group.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public Builder setBackendName(
@@ -9714,6 +11314,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backend that is being added to the backend group.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public Builder clearBackendName() {
@@ -9723,6 +11327,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backend that is being added to the backend group.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public Builder setBackendNameBytes(
@@ -9794,50 +11402,94 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backend group to update the backend in.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getBackendGroupId();
     /**
+     * <pre>
+     * ID of the backend group to update the backend in.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getBackendGroupIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the backend should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the backend should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the backend should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New settings for the HTTP backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
      */
     boolean hasHttp();
     /**
+     * <pre>
+     * New settings for the HTTP backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend getHttp();
     /**
+     * <pre>
+     * New settings for the HTTP backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendOrBuilder getHttpOrBuilder();
 
     /**
+     * <pre>
+     * New settings for the gRPC backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
      */
     boolean hasGrpc();
     /**
+     * <pre>
+     * New settings for the gRPC backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend getGrpc();
     /**
+     * <pre>
+     * New settings for the gRPC backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendOrBuilder getGrpcOrBuilder();
@@ -10004,6 +11656,10 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
+     * <pre>
+     * ID of the backend group to update the backend in.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getBackendGroupId() {
@@ -10019,6 +11675,10 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backend group to update the backend in.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -10038,18 +11698,30 @@ public final class BackendGroupServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the backend should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the backend should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the backend should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -10058,12 +11730,20 @@ public final class BackendGroupServiceOuterClass {
 
     public static final int HTTP_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * New settings for the HTTP backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
      */
     public boolean hasHttp() {
       return backendCase_ == 3;
     }
     /**
+     * <pre>
+     * New settings for the HTTP backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend getHttp() {
@@ -10073,6 +11753,10 @@ public final class BackendGroupServiceOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend.getDefaultInstance();
     }
     /**
+     * <pre>
+     * New settings for the HTTP backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendOrBuilder getHttpOrBuilder() {
@@ -10084,12 +11768,20 @@ public final class BackendGroupServiceOuterClass {
 
     public static final int GRPC_FIELD_NUMBER = 4;
     /**
+     * <pre>
+     * New settings for the gRPC backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
      */
     public boolean hasGrpc() {
       return backendCase_ == 4;
     }
     /**
+     * <pre>
+     * New settings for the gRPC backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend getGrpc() {
@@ -10099,6 +11791,10 @@ public final class BackendGroupServiceOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend.getDefaultInstance();
     }
     /**
+     * <pre>
+     * New settings for the gRPC backend.
+     * </pre>
+     *
      * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendOrBuilder getGrpcOrBuilder() {
@@ -10529,6 +12225,10 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
+       * <pre>
+       * ID of the backend group to update the backend in.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getBackendGroupId() {
@@ -10544,6 +12244,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group to update the backend in.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -10560,6 +12264,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group to update the backend in.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupId(
@@ -10573,6 +12281,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group to update the backend in.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearBackendGroupId() {
@@ -10582,6 +12294,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group to update the backend in.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupIdBytes(
@@ -10600,12 +12316,20 @@ public final class BackendGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -10616,6 +12340,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -10632,6 +12360,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -10646,6 +12378,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -10664,6 +12400,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -10678,6 +12418,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -10686,6 +12430,10 @@ public final class BackendGroupServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -10697,6 +12445,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the backend should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -10716,12 +12468,20 @@ public final class BackendGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendOrBuilder> httpBuilder_;
       /**
+       * <pre>
+       * New settings for the HTTP backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
        */
       public boolean hasHttp() {
         return backendCase_ == 3;
       }
       /**
+       * <pre>
+       * New settings for the HTTP backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend getHttp() {
@@ -10738,6 +12498,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New settings for the HTTP backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
        */
       public Builder setHttp(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend value) {
@@ -10754,6 +12518,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings for the HTTP backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
        */
       public Builder setHttp(
@@ -10768,6 +12536,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings for the HTTP backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
        */
       public Builder mergeHttp(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend value) {
@@ -10790,6 +12562,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings for the HTTP backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
        */
       public Builder clearHttp() {
@@ -10809,12 +12585,20 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings for the HTTP backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend.Builder getHttpBuilder() {
         return getHttpFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New settings for the HTTP backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendOrBuilder getHttpOrBuilder() {
@@ -10828,6 +12612,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New settings for the HTTP backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.HttpBackend http = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -10852,12 +12640,20 @@ public final class BackendGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendOrBuilder> grpcBuilder_;
       /**
+       * <pre>
+       * New settings for the gRPC backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
        */
       public boolean hasGrpc() {
         return backendCase_ == 4;
       }
       /**
+       * <pre>
+       * New settings for the gRPC backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend getGrpc() {
@@ -10874,6 +12670,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New settings for the gRPC backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
        */
       public Builder setGrpc(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend value) {
@@ -10890,6 +12690,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings for the gRPC backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
        */
       public Builder setGrpc(
@@ -10904,6 +12708,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings for the gRPC backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
        */
       public Builder mergeGrpc(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend value) {
@@ -10926,6 +12734,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings for the gRPC backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
        */
       public Builder clearGrpc() {
@@ -10945,12 +12757,20 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New settings for the gRPC backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend.Builder getGrpcBuilder() {
         return getGrpcFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New settings for the gRPC backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendOrBuilder getGrpcOrBuilder() {
@@ -10964,6 +12784,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New settings for the gRPC backend.
+       * </pre>
+       *
        * <code>.yandex.cloud.apploadbalancer.v1.GrpcBackend grpc = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -11042,20 +12866,36 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backend group that the backend is being updated it.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     java.lang.String getBackendGroupId();
     /**
+     * <pre>
+     * ID of the backend group that the backend is being updated it.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getBackendGroupIdBytes();
 
     /**
+     * <pre>
+     * Name of the backend that is being updated.
+     * </pre>
+     *
      * <code>string backend_name = 2;</code>
      */
     java.lang.String getBackendName();
     /**
+     * <pre>
+     * Name of the backend that is being updated.
+     * </pre>
+     *
      * <code>string backend_name = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -11149,6 +12989,10 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
+     * <pre>
+     * ID of the backend group that the backend is being updated it.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     public java.lang.String getBackendGroupId() {
@@ -11164,6 +13008,10 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backend group that the backend is being updated it.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -11183,6 +13031,10 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object backendName_;
     /**
+     * <pre>
+     * Name of the backend that is being updated.
+     * </pre>
+     *
      * <code>string backend_name = 2;</code>
      */
     public java.lang.String getBackendName() {
@@ -11198,6 +13050,10 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the backend that is being updated.
+     * </pre>
+     *
      * <code>string backend_name = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -11536,6 +13392,10 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
+       * <pre>
+       * ID of the backend group that the backend is being updated it.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public java.lang.String getBackendGroupId() {
@@ -11551,6 +13411,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group that the backend is being updated it.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -11567,6 +13431,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group that the backend is being updated it.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder setBackendGroupId(
@@ -11580,6 +13448,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group that the backend is being updated it.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder clearBackendGroupId() {
@@ -11589,6 +13461,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group that the backend is being updated it.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder setBackendGroupIdBytes(
@@ -11605,6 +13481,10 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendName_ = "";
       /**
+       * <pre>
+       * Name of the backend that is being updated.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public java.lang.String getBackendName() {
@@ -11620,6 +13500,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the backend that is being updated.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -11636,6 +13520,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the backend that is being updated.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public Builder setBackendName(
@@ -11649,6 +13537,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backend that is being updated.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public Builder clearBackendName() {
@@ -11658,6 +13550,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backend that is being updated.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public Builder setBackendNameBytes(
@@ -11729,20 +13625,40 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backend group to remove a backend from.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getBackendGroupId();
     /**
+     * <pre>
+     * ID of the backend group to remove a backend from.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getBackendGroupIdBytes();
 
     /**
+     * <pre>
+     * Name of the backend to remove.
+     * To get the backend name, make a [BackendGroupService.Get] request.
+     * </pre>
+     *
      * <code>string backend_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getBackendName();
     /**
+     * <pre>
+     * Name of the backend to remove.
+     * To get the backend name, make a [BackendGroupService.Get] request.
+     * </pre>
+     *
      * <code>string backend_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -11836,6 +13752,11 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
+     * <pre>
+     * ID of the backend group to remove a backend from.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getBackendGroupId() {
@@ -11851,6 +13772,11 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backend group to remove a backend from.
+     * To get the backend group ID, make a [BackendGroupService.List] request.
+     * </pre>
+     *
      * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -11870,6 +13796,11 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object backendName_;
     /**
+     * <pre>
+     * Name of the backend to remove.
+     * To get the backend name, make a [BackendGroupService.Get] request.
+     * </pre>
+     *
      * <code>string backend_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getBackendName() {
@@ -11885,6 +13816,11 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the backend to remove.
+     * To get the backend name, make a [BackendGroupService.Get] request.
+     * </pre>
+     *
      * <code>string backend_name = 2 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -12223,6 +14159,11 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
+       * <pre>
+       * ID of the backend group to remove a backend from.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getBackendGroupId() {
@@ -12238,6 +14179,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group to remove a backend from.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -12254,6 +14200,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group to remove a backend from.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupId(
@@ -12267,6 +14218,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group to remove a backend from.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearBackendGroupId() {
@@ -12276,6 +14232,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group to remove a backend from.
+       * To get the backend group ID, make a [BackendGroupService.List] request.
+       * </pre>
+       *
        * <code>string backend_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendGroupIdBytes(
@@ -12292,6 +14253,11 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendName_ = "";
       /**
+       * <pre>
+       * Name of the backend to remove.
+       * To get the backend name, make a [BackendGroupService.Get] request.
+       * </pre>
+       *
        * <code>string backend_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getBackendName() {
@@ -12307,6 +14273,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the backend to remove.
+       * To get the backend name, make a [BackendGroupService.Get] request.
+       * </pre>
+       *
        * <code>string backend_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -12323,6 +14294,11 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the backend to remove.
+       * To get the backend name, make a [BackendGroupService.Get] request.
+       * </pre>
+       *
        * <code>string backend_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendName(
@@ -12336,6 +14312,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backend to remove.
+       * To get the backend name, make a [BackendGroupService.Get] request.
+       * </pre>
+       *
        * <code>string backend_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearBackendName() {
@@ -12345,6 +14326,11 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backend to remove.
+       * To get the backend name, make a [BackendGroupService.Get] request.
+       * </pre>
+       *
        * <code>string backend_name = 2 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setBackendNameBytes(
@@ -12416,20 +14402,36 @@ public final class BackendGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backend group that the backend is being removed from.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     java.lang.String getBackendGroupId();
     /**
+     * <pre>
+     * ID of the backend group that the backend is being removed from.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getBackendGroupIdBytes();
 
     /**
+     * <pre>
+     * Name of the backend that is being removed.
+     * </pre>
+     *
      * <code>string backend_name = 2;</code>
      */
     java.lang.String getBackendName();
     /**
+     * <pre>
+     * Name of the backend that is being removed.
+     * </pre>
+     *
      * <code>string backend_name = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -12523,6 +14525,10 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backendGroupId_;
     /**
+     * <pre>
+     * ID of the backend group that the backend is being removed from.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     public java.lang.String getBackendGroupId() {
@@ -12538,6 +14544,10 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backend group that the backend is being removed from.
+     * </pre>
+     *
      * <code>string backend_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -12557,6 +14567,10 @@ public final class BackendGroupServiceOuterClass {
     public static final int BACKEND_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object backendName_;
     /**
+     * <pre>
+     * Name of the backend that is being removed.
+     * </pre>
+     *
      * <code>string backend_name = 2;</code>
      */
     public java.lang.String getBackendName() {
@@ -12572,6 +14586,10 @@ public final class BackendGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the backend that is being removed.
+     * </pre>
+     *
      * <code>string backend_name = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -12910,6 +14928,10 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendGroupId_ = "";
       /**
+       * <pre>
+       * ID of the backend group that the backend is being removed from.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public java.lang.String getBackendGroupId() {
@@ -12925,6 +14947,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group that the backend is being removed from.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -12941,6 +14967,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backend group that the backend is being removed from.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder setBackendGroupId(
@@ -12954,6 +14984,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group that the backend is being removed from.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder clearBackendGroupId() {
@@ -12963,6 +14997,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backend group that the backend is being removed from.
+       * </pre>
+       *
        * <code>string backend_group_id = 1;</code>
        */
       public Builder setBackendGroupIdBytes(
@@ -12979,6 +15017,10 @@ public final class BackendGroupServiceOuterClass {
 
       private java.lang.Object backendName_ = "";
       /**
+       * <pre>
+       * Name of the backend that is being removed.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public java.lang.String getBackendName() {
@@ -12994,6 +15036,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the backend that is being removed.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -13010,6 +15056,10 @@ public final class BackendGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the backend that is being removed.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public Builder setBackendName(
@@ -13023,6 +15073,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backend that is being removed.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public Builder clearBackendName() {
@@ -13032,6 +15086,10 @@ public final class BackendGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backend that is being removed.
+       * </pre>
+       *
        * <code>string backend_name = 2;</code>
        */
       public Builder setBackendNameBytes(
@@ -13980,7 +16038,7 @@ public final class BackendGroupServiceOuterClass {
 
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified backend group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -13989,7 +16047,7 @@ public final class BackendGroupServiceOuterClass {
         getOperationsList();
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified backend group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -13997,7 +16055,7 @@ public final class BackendGroupServiceOuterClass {
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified backend group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14005,7 +16063,7 @@ public final class BackendGroupServiceOuterClass {
     int getOperationsCount();
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified backend group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14014,7 +16072,7 @@ public final class BackendGroupServiceOuterClass {
         getOperationsOrBuilderList();
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified backend group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14024,10 +16082,10 @@ public final class BackendGroupServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListBackendGroupOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListBackendGroupOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListBackendGroupOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListBackendGroupOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -14035,10 +16093,10 @@ public final class BackendGroupServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListBackendGroupOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListBackendGroupOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListBackendGroupOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListBackendGroupOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -14142,7 +16200,7 @@ public final class BackendGroupServiceOuterClass {
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified backend group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14152,7 +16210,7 @@ public final class BackendGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified backend group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14163,7 +16221,7 @@ public final class BackendGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified backend group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14173,7 +16231,7 @@ public final class BackendGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified backend group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14183,7 +16241,7 @@ public final class BackendGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * List of operations for the specified target group.
+     * List of operations for the specified backend group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14197,10 +16255,10 @@ public final class BackendGroupServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListBackendGroupOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListBackendGroupOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListBackendGroupOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListBackendGroupOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -14219,10 +16277,10 @@ public final class BackendGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListBackendGroupOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListBackendGroupOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListBackendGroupOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListBackendGroupOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -14617,7 +16675,7 @@ public final class BackendGroupServiceOuterClass {
 
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14631,7 +16689,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14645,7 +16703,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14659,7 +16717,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14680,7 +16738,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14698,7 +16756,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14718,7 +16776,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14739,7 +16797,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14757,7 +16815,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14775,7 +16833,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14794,7 +16852,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14811,7 +16869,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14828,7 +16886,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14839,7 +16897,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14853,7 +16911,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14868,7 +16926,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14879,7 +16937,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14891,7 +16949,7 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * List of operations for the specified target group.
+       * List of operations for the specified backend group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
@@ -14918,10 +16976,10 @@ public final class BackendGroupServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListBackendGroupOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListBackendGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListBackendGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListBackendGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -14940,10 +16998,10 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListBackendGroupOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListBackendGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListBackendGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListBackendGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -14963,10 +17021,10 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListBackendGroupOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListBackendGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListBackendGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListBackendGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -14983,10 +17041,10 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListBackendGroupOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListBackendGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListBackendGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListBackendGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -14999,10 +17057,10 @@ public final class BackendGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListBackendGroupOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListBackendGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListBackendGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListBackendGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -15194,111 +17252,112 @@ public final class BackendGroupServiceOuterClass {
       "\001(\t\";\n\031DeleteBackendGroupRequest\022\036\n\020back" +
       "end_group_id\030\001 \001(\tB\004\350\3071\001\"6\n\032DeleteBacken" +
       "dGroupMetadata\022\030\n\020backend_group_id\030\001 \001(\t" +
-      "\"\250\004\n\031UpdateBackendGroupRequest\022\036\n\020backen" +
+      "\"\252\004\n\031UpdateBackendGroupRequest\022\036\n\020backen" +
       "d_group_id\030\001 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\002 " +
-      "\001(\0132\032.google.protobuf.FieldMask\0222\n\004name\030" +
-      "\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9" +
-      "])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\237\001\n\006" +
-      "labels\030\005 \003(\0132F.yandex.cloud.apploadbalan" +
-      "cer.v1.UpdateBackendGroupRequest.LabelsE" +
-      "ntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]" +
-      "*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022A\n" +
-      "\004http\030\006 \001(\01321.yandex.cloud.apploadbalanc" +
-      "er.v1.HttpBackendGroupH\000\022A\n\004grpc\030\007 \001(\01321" +
-      ".yandex.cloud.apploadbalancer.v1.GrpcBac" +
-      "kendGroupH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001B\017\n\007backend\022\004\300\3011\001\"6\n\032U" +
-      "pdateBackendGroupMetadata\022\030\n\020backend_gro" +
-      "up_id\030\001 \001(\t\"\352\003\n\031CreateBackendGroupReques" +
-      "t\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\t" +
-      "B$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036" +
-      "\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\237\001\n\006label" +
-      "s\030\004 \003(\0132F.yandex.cloud.apploadbalancer.v" +
-      "1.CreateBackendGroupRequest.LabelsEntryB" +
-      "G\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006" +
-      "\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022A\n\004http" +
-      "\030\005 \001(\01321.yandex.cloud.apploadbalancer.v1" +
-      ".HttpBackendGroupH\000\022A\n\004grpc\030\006 \001(\01321.yand" +
-      "ex.cloud.apploadbalancer.v1.GrpcBackendG" +
-      "roupH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001B\t\n\007backend\"6\n\032CreateBacken" +
-      "dGroupMetadata\022\030\n\020backend_group_id\030\001 \001(\t" +
-      "\"\300\001\n\021AddBackendRequest\022\036\n\020backend_group_" +
-      "id\030\001 \001(\tB\004\350\3071\001\022<\n\004http\030\002 \001(\0132,.yandex.cl" +
-      "oud.apploadbalancer.v1.HttpBackendH\000\022<\n\004" +
-      "grpc\030\003 \001(\0132,.yandex.cloud.apploadbalance" +
-      "r.v1.GrpcBackendH\000B\017\n\007backend\022\004\300\3011\001\"D\n\022A" +
-      "ddBackendMetadata\022\030\n\020backend_group_id\030\001 " +
-      "\001(\t\022\024\n\014backend_name\030\002 \001(\t\"\364\001\n\024UpdateBack" +
-      "endRequest\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\307" +
-      "1\001\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
-      "f.FieldMask\022<\n\004http\030\003 \001(\0132,.yandex.cloud" +
-      ".apploadbalancer.v1.HttpBackendH\000\022<\n\004grp" +
-      "c\030\004 \001(\0132,.yandex.cloud.apploadbalancer.v" +
-      "1.GrpcBackendH\000B\017\n\007backend\022\004\300\3011\001\"G\n\025Upda" +
-      "teBackendMetadata\022\030\n\020backend_group_id\030\001 " +
-      "\001(\t\022\024\n\014backend_name\030\002 \001(\t\"R\n\024RemoveBacke" +
-      "ndRequest\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\3071" +
-      "\001\022\032\n\014backend_name\030\002 \001(\tB\004\350\3071\001\"G\n\025RemoveB" +
-      "ackendMetadata\022\030\n\020backend_group_id\030\001 \001(\t" +
-      "\022\024\n\014backend_name\030\002 \001(\t\"\211\001\n!ListBackendGr" +
-      "oupOperationsRequest\022&\n\020backend_group_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
-      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
-      "00\"t\n\"ListBackendGroupOperationsResponse" +
-      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
-      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
-      "2\361\016\n\023BackendGroupService\022\253\001\n\003Get\0227.yande" +
-      "x.cloud.apploadbalancer.v1.GetBackendGro" +
-      "upRequest\032-.yandex.cloud.apploadbalancer" +
-      ".v1.BackendGroup\"<\202\323\344\223\0026\0224/apploadbalanc" +
-      "er/v1/backendGroups/{backend_group_id}\022\250" +
-      "\001\n\004List\0229.yandex.cloud.apploadbalancer.v" +
-      "1.ListBackendGroupsRequest\032:.yandex.clou" +
-      "d.apploadbalancer.v1.ListBackendGroupsRe" +
-      "sponse\")\202\323\344\223\002#\022!/apploadbalancer/v1/back" +
-      "endGroups\022\303\001\n\006Create\022:.yandex.cloud.appl" +
-      "oadbalancer.v1.CreateBackendGroupRequest" +
-      "\032!.yandex.cloud.operation.Operation\"Z\202\323\344" +
-      "\223\002&\"!/apploadbalancer/v1/backendGroups:\001" +
-      "*\262\322**\n\032CreateBackendGroupMetadata\022\014Backe" +
-      "ndGroup\022\326\001\n\006Update\022:.yandex.cloud.apploa" +
-      "dbalancer.v1.UpdateBackendGroupRequest\032!" +
-      ".yandex.cloud.operation.Operation\"m\202\323\344\223\002" +
-      "924/apploadbalancer/v1/backendGroups/{ba" +
-      "ckend_group_id}:\001*\262\322**\n\032UpdateBackendGro" +
-      "upMetadata\022\014BackendGroup\022\334\001\n\006Delete\022:.ya" +
-      "ndex.cloud.apploadbalancer.v1.DeleteBack" +
-      "endGroupRequest\032!.yandex.cloud.operation" +
-      ".Operation\"s\202\323\344\223\0026*4/apploadbalancer/v1/" +
-      "backendGroups/{backend_group_id}\262\322*3\n\032De" +
-      "leteBackendGroupMetadata\022\025google.protobu" +
-      "f.Empty\022\325\001\n\nAddBackend\0222.yandex.cloud.ap" +
-      "ploadbalancer.v1.AddBackendRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"p\202\323\344\223\002D\"?/" +
-      "apploadbalancer/v1/backendGroups/{backen" +
-      "d_group_id}:addBackend:\001*\262\322*\"\n\022AddBacken" +
-      "dMetadata\022\014BackendGroup\022\341\001\n\rRemoveBacken" +
-      "d\0225.yandex.cloud.apploadbalancer.v1.Remo" +
-      "veBackendRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"v\202\323\344\223\002G\"B/apploadbalancer/v1" +
-      "/backendGroups/{backend_group_id}:remove" +
-      "Backend:\001*\262\322*%\n\025RemoveBackendMetadata\022\014B" +
-      "ackendGroup\022\341\001\n\rUpdateBackend\0225.yandex.c" +
-      "loud.apploadbalancer.v1.UpdateBackendReq" +
+      "\001(\0132\032.google.protobuf.FieldMask\0224\n\004name\030" +
+      "\003 \001(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9" +
+      "])?)?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\237\001" +
+      "\n\006labels\030\005 \003(\0132F.yandex.cloud.apploadbal" +
+      "ancer.v1.UpdateBackendGroupRequest.Label" +
+      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
+      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
+      "A\n\004http\030\006 \001(\01321.yandex.cloud.apploadbala" +
+      "ncer.v1.HttpBackendGroupH\000\022A\n\004grpc\030\007 \001(\013" +
+      "21.yandex.cloud.apploadbalancer.v1.GrpcB" +
+      "ackendGroupH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001B\017\n\007backend\022\004\300\3011\001\"6\n" +
+      "\032UpdateBackendGroupMetadata\022\030\n\020backend_g" +
+      "roup_id\030\001 \001(\t\"\354\003\n\031CreateBackendGroupRequ" +
+      "est\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0224\n\004name\030\002 \001" +
+      "(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0-9])?" +
+      ")?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\237\001\n\006l" +
+      "abels\030\004 \003(\0132F.yandex.cloud.apploadbalanc" +
+      "er.v1.CreateBackendGroupRequest.LabelsEn" +
+      "tryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*" +
+      "\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022A\n\004" +
+      "http\030\005 \001(\01321.yandex.cloud.apploadbalance" +
+      "r.v1.HttpBackendGroupH\000\022A\n\004grpc\030\006 \001(\01321." +
+      "yandex.cloud.apploadbalancer.v1.GrpcBack" +
+      "endGroupH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001B\t\n\007backend\"6\n\032CreateBa" +
+      "ckendGroupMetadata\022\030\n\020backend_group_id\030\001" +
+      " \001(\t\"\300\001\n\021AddBackendRequest\022\036\n\020backend_gr" +
+      "oup_id\030\001 \001(\tB\004\350\3071\001\022<\n\004http\030\002 \001(\0132,.yande" +
+      "x.cloud.apploadbalancer.v1.HttpBackendH\000" +
+      "\022<\n\004grpc\030\003 \001(\0132,.yandex.cloud.apploadbal" +
+      "ancer.v1.GrpcBackendH\000B\017\n\007backend\022\004\300\3011\001\"" +
+      "D\n\022AddBackendMetadata\022\030\n\020backend_group_i" +
+      "d\030\001 \001(\t\022\024\n\014backend_name\030\002 \001(\t\"\364\001\n\024Update" +
+      "BackendRequest\022\036\n\020backend_group_id\030\001 \001(\t" +
+      "B\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.pro" +
+      "tobuf.FieldMask\022<\n\004http\030\003 \001(\0132,.yandex.c" +
+      "loud.apploadbalancer.v1.HttpBackendH\000\022<\n" +
+      "\004grpc\030\004 \001(\0132,.yandex.cloud.apploadbalanc" +
+      "er.v1.GrpcBackendH\000B\017\n\007backend\022\004\300\3011\001\"G\n\025" +
+      "UpdateBackendMetadata\022\030\n\020backend_group_i" +
+      "d\030\001 \001(\t\022\024\n\014backend_name\030\002 \001(\t\"R\n\024RemoveB" +
+      "ackendRequest\022\036\n\020backend_group_id\030\001 \001(\tB" +
+      "\004\350\3071\001\022\032\n\014backend_name\030\002 \001(\tB\004\350\3071\001\"G\n\025Rem" +
+      "oveBackendMetadata\022\030\n\020backend_group_id\030\001" +
+      " \001(\t\022\024\n\014backend_name\030\002 \001(\t\"\211\001\n!ListBacke" +
+      "ndGroupOperationsRequest\022&\n\020backend_grou" +
+      "p_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
+      "\005<=100\"t\n\"ListBackendGroupOperationsResp" +
+      "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
+      "operation.Operation\022\027\n\017next_page_token\030\002" +
+      " \001(\t2\361\016\n\023BackendGroupService\022\253\001\n\003Get\0227.y" +
+      "andex.cloud.apploadbalancer.v1.GetBacken" +
+      "dGroupRequest\032-.yandex.cloud.apploadbala" +
+      "ncer.v1.BackendGroup\"<\202\323\344\223\0026\0224/apploadba" +
+      "lancer/v1/backendGroups/{backend_group_i" +
+      "d}\022\250\001\n\004List\0229.yandex.cloud.apploadbalanc" +
+      "er.v1.ListBackendGroupsRequest\032:.yandex." +
+      "cloud.apploadbalancer.v1.ListBackendGrou" +
+      "psResponse\")\202\323\344\223\002#\022!/apploadbalancer/v1/" +
+      "backendGroups\022\303\001\n\006Create\022:.yandex.cloud." +
+      "apploadbalancer.v1.CreateBackendGroupReq" +
       "uest\032!.yandex.cloud.operation.Operation\"" +
-      "v\202\323\344\223\002G\"B/apploadbalancer/v1/backendGrou" +
-      "ps/{backend_group_id}:updateBackend:\001*\262\322" +
-      "*%\n\025UpdateBackendMetadata\022\014BackendGroup\022" +
-      "\342\001\n\016ListOperations\022B.yandex.cloud.apploa" +
-      "dbalancer.v1.ListBackendGroupOperationsR" +
-      "equest\032C.yandex.cloud.apploadbalancer.v1" +
-      ".ListBackendGroupOperationsResponse\"G\202\323\344" +
-      "\223\002A\022?/apploadbalancer/v1/backendGroups/{" +
-      "backend_group_id}/operationsBz\n#yandex.c" +
-      "loud.api.apploadbalancer.v1ZSgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/ap" +
-      "ploadbalancer/v1;apploadbalancerb\006proto3"
+      "Z\202\323\344\223\002&\"!/apploadbalancer/v1/backendGrou" +
+      "ps:\001*\262\322**\n\032CreateBackendGroupMetadata\022\014B" +
+      "ackendGroup\022\326\001\n\006Update\022:.yandex.cloud.ap" +
+      "ploadbalancer.v1.UpdateBackendGroupReque" +
+      "st\032!.yandex.cloud.operation.Operation\"m\202" +
+      "\323\344\223\002924/apploadbalancer/v1/backendGroups" +
+      "/{backend_group_id}:\001*\262\322**\n\032UpdateBacken" +
+      "dGroupMetadata\022\014BackendGroup\022\334\001\n\006Delete\022" +
+      ":.yandex.cloud.apploadbalancer.v1.Delete" +
+      "BackendGroupRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"s\202\323\344\223\0026*4/apploadbalancer" +
+      "/v1/backendGroups/{backend_group_id}\262\322*3" +
+      "\n\032DeleteBackendGroupMetadata\022\025google.pro" +
+      "tobuf.Empty\022\325\001\n\nAddBackend\0222.yandex.clou" +
+      "d.apploadbalancer.v1.AddBackendRequest\032!" +
+      ".yandex.cloud.operation.Operation\"p\202\323\344\223\002" +
+      "D\"?/apploadbalancer/v1/backendGroups/{ba" +
+      "ckend_group_id}:addBackend:\001*\262\322*\"\n\022AddBa" +
+      "ckendMetadata\022\014BackendGroup\022\341\001\n\rRemoveBa" +
+      "ckend\0225.yandex.cloud.apploadbalancer.v1." +
+      "RemoveBackendRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"v\202\323\344\223\002G\"B/apploadbalance" +
+      "r/v1/backendGroups/{backend_group_id}:re" +
+      "moveBackend:\001*\262\322*%\n\025RemoveBackendMetadat" +
+      "a\022\014BackendGroup\022\341\001\n\rUpdateBackend\0225.yand" +
+      "ex.cloud.apploadbalancer.v1.UpdateBacken" +
+      "dRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"v\202\323\344\223\002G\"B/apploadbalancer/v1/backend" +
+      "Groups/{backend_group_id}:updateBackend:" +
+      "\001*\262\322*%\n\025UpdateBackendMetadata\022\014BackendGr" +
+      "oup\022\342\001\n\016ListOperations\022B.yandex.cloud.ap" +
+      "ploadbalancer.v1.ListBackendGroupOperati" +
+      "onsRequest\032C.yandex.cloud.apploadbalance" +
+      "r.v1.ListBackendGroupOperationsResponse\"" +
+      "G\202\323\344\223\002A\022?/apploadbalancer/v1/backendGrou" +
+      "ps/{backend_group_id}/operationsBz\n#yand" +
+      "ex.cloud.api.apploadbalancer.v1ZSgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/apploadbalancer/v1;apploadbalancerb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

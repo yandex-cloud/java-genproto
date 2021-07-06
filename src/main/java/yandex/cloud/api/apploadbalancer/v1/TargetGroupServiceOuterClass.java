@@ -19,10 +19,20 @@ public final class TargetGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the target group to return.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getTargetGroupId();
     /**
+     * <pre>
+     * ID of the target group to return.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -109,6 +119,11 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGET_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object targetGroupId_;
     /**
+     * <pre>
+     * ID of the target group to return.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getTargetGroupId() {
@@ -124,6 +139,11 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the target group to return.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -445,6 +465,11 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object targetGroupId_ = "";
       /**
+       * <pre>
+       * ID of the target group to return.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getTargetGroupId() {
@@ -460,6 +485,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group to return.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -476,6 +506,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group to return.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTargetGroupId(
@@ -489,6 +524,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group to return.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearTargetGroupId() {
@@ -498,6 +538,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group to return.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTargetGroupIdBytes(
@@ -569,35 +614,80 @@ public final class TargetGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list target groups in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list target groups in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListTargetGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListTargetGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListTargetGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters target groups listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [TargetGroup.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-target-group`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters target groups listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [TargetGroup.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-target-group`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
@@ -704,6 +794,11 @@ public final class TargetGroupServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to list target groups in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFolderId() {
@@ -719,6 +814,11 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list target groups in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -738,6 +838,13 @@ public final class TargetGroupServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListTargetGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -747,6 +854,11 @@ public final class TargetGroupServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListTargetGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -762,6 +874,11 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListTargetGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -781,6 +898,15 @@ public final class TargetGroupServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters target groups listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [TargetGroup.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-target-group`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -796,6 +922,15 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters target groups listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [TargetGroup.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-target-group`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1169,6 +1304,11 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to list target groups in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFolderId() {
@@ -1184,6 +1324,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list target groups in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -1200,6 +1345,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list target groups in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderId(
@@ -1213,6 +1363,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list target groups in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFolderId() {
@@ -1222,6 +1377,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list target groups in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderIdBytes(
@@ -1238,12 +1398,26 @@ public final class TargetGroupServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListTargetGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListTargetGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -1253,6 +1427,13 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListTargetGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -1264,6 +1445,11 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListTargetGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -1279,6 +1465,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListTargetGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1295,6 +1486,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListTargetGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -1308,6 +1504,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListTargetGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -1317,6 +1518,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListTargetGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -1333,6 +1539,15 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters target groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [TargetGroup.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-target-group`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -1348,6 +1563,15 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters target groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [TargetGroup.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-target-group`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1364,6 +1588,15 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters target groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [TargetGroup.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-target-group`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -1377,6 +1610,15 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters target groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [TargetGroup.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-target-group`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -1386,6 +1628,15 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters target groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [TargetGroup.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-target-group`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -1457,34 +1708,68 @@ public final class TargetGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of target groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup> 
         getTargetGroupsList();
     /**
+     * <pre>
+     * List of target groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup getTargetGroups(int index);
     /**
+     * <pre>
+     * List of target groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
      */
     int getTargetGroupsCount();
     /**
+     * <pre>
+     * List of target groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroupOrBuilder> 
         getTargetGroupsOrBuilderList();
     /**
+     * <pre>
+     * List of target groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroupOrBuilder getTargetGroupsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTargetGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListTargetGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTargetGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListTargetGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -1585,12 +1870,20 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGET_GROUPS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup> targetGroups_;
     /**
+     * <pre>
+     * List of target groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup> getTargetGroupsList() {
       return targetGroups_;
     }
     /**
+     * <pre>
+     * List of target groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroupOrBuilder> 
@@ -1598,18 +1891,30 @@ public final class TargetGroupServiceOuterClass {
       return targetGroups_;
     }
     /**
+     * <pre>
+     * List of target groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
      */
     public int getTargetGroupsCount() {
       return targetGroups_.size();
     }
     /**
+     * <pre>
+     * List of target groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup getTargetGroups(int index) {
       return targetGroups_.get(index);
     }
     /**
+     * <pre>
+     * List of target groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroupOrBuilder getTargetGroupsOrBuilder(
@@ -1620,6 +1925,13 @@ public final class TargetGroupServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTargetGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListTargetGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -1635,6 +1947,13 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTargetGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListTargetGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -2026,6 +2345,10 @@ public final class TargetGroupServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup.Builder, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroupOrBuilder> targetGroupsBuilder_;
 
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup> getTargetGroupsList() {
@@ -2036,6 +2359,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public int getTargetGroupsCount() {
@@ -2046,6 +2373,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup getTargetGroups(int index) {
@@ -2056,6 +2387,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public Builder setTargetGroups(
@@ -2073,6 +2408,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public Builder setTargetGroups(
@@ -2087,6 +2426,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public Builder addTargetGroups(yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup value) {
@@ -2103,6 +2446,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public Builder addTargetGroups(
@@ -2120,6 +2467,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public Builder addTargetGroups(
@@ -2134,6 +2485,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public Builder addTargetGroups(
@@ -2148,6 +2503,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public Builder addAllTargetGroups(
@@ -2163,6 +2522,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public Builder clearTargetGroups() {
@@ -2176,6 +2539,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public Builder removeTargetGroups(int index) {
@@ -2189,6 +2556,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup.Builder getTargetGroupsBuilder(
@@ -2196,6 +2567,10 @@ public final class TargetGroupServiceOuterClass {
         return getTargetGroupsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroupOrBuilder getTargetGroupsOrBuilder(
@@ -2206,6 +2581,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroupOrBuilder> 
@@ -2217,6 +2596,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup.Builder addTargetGroupsBuilder() {
@@ -2224,6 +2607,10 @@ public final class TargetGroupServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup.Builder addTargetGroupsBuilder(
@@ -2232,6 +2619,10 @@ public final class TargetGroupServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of target groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.TargetGroup target_groups = 1;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetGroup.Builder> 
@@ -2255,6 +2646,13 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTargetGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTargetGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -2270,6 +2668,13 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTargetGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTargetGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2286,6 +2691,13 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTargetGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTargetGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -2299,6 +2711,13 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTargetGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTargetGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -2308,6 +2727,13 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTargetGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTargetGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -2379,10 +2805,20 @@ public final class TargetGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the target group to delete.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getTargetGroupId();
     /**
+     * <pre>
+     * ID of the target group to delete.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
@@ -2469,6 +2905,11 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGET_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object targetGroupId_;
     /**
+     * <pre>
+     * ID of the target group to delete.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getTargetGroupId() {
@@ -2484,6 +2925,11 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the target group to delete.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -2805,6 +3251,11 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object targetGroupId_ = "";
       /**
+       * <pre>
+       * ID of the target group to delete.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getTargetGroupId() {
@@ -2820,6 +3271,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group to delete.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -2836,6 +3292,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group to delete.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTargetGroupId(
@@ -2849,6 +3310,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group to delete.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearTargetGroupId() {
@@ -2858,6 +3324,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group to delete.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTargetGroupIdBytes(
@@ -2929,10 +3400,18 @@ public final class TargetGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the target group that is being deleted.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     java.lang.String getTargetGroupId();
     /**
+     * <pre>
+     * ID of the target group that is being deleted.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -3019,6 +3498,10 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGET_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object targetGroupId_;
     /**
+     * <pre>
+     * ID of the target group that is being deleted.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     public java.lang.String getTargetGroupId() {
@@ -3034,6 +3517,10 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the target group that is being deleted.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -3355,6 +3842,10 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object targetGroupId_ = "";
       /**
+       * <pre>
+       * ID of the target group that is being deleted.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public java.lang.String getTargetGroupId() {
@@ -3370,6 +3861,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group that is being deleted.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -3386,6 +3881,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group that is being deleted.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder setTargetGroupId(
@@ -3399,6 +3898,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group that is being deleted.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder clearTargetGroupId() {
@@ -3408,6 +3911,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group that is being deleted.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder setTargetGroupIdBytes(
@@ -3479,53 +3986,113 @@ public final class TargetGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the target group to update.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getTargetGroupId();
     /**
+     * <pre>
+     * ID of the target group to update.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getTargetGroupIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the target group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the target group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the target group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * New name for the target group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * New name for the target group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * New description of the target group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New description of the target group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -3537,11 +4104,31 @@ public final class TargetGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3549,6 +4136,16 @@ public final class TargetGroupServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3556,24 +4153,54 @@ public final class TargetGroupServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * New list of targets in the target group.
+     * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+     * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> 
         getTargetsList();
     /**
+     * <pre>
+     * New list of targets in the target group.
+     * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+     * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTargets(int index);
     /**
+     * <pre>
+     * New list of targets in the target group.
+     * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+     * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
      */
     int getTargetsCount();
     /**
+     * <pre>
+     * New list of targets in the target group.
+     * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+     * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> 
         getTargetsOrBuilderList();
     /**
+     * <pre>
+     * New list of targets in the target group.
+     * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+     * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetsOrBuilder(
@@ -3726,6 +4353,11 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGET_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object targetGroupId_;
     /**
+     * <pre>
+     * ID of the target group to update.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getTargetGroupId() {
@@ -3741,6 +4373,11 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the target group to update.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -3760,18 +4397,30 @@ public final class TargetGroupServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the target group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the target group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the target group should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -3781,7 +4430,12 @@ public final class TargetGroupServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * New name for the target group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -3796,7 +4450,12 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * New name for the target group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -3815,6 +4474,10 @@ public final class TargetGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New description of the target group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -3830,6 +4493,10 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New description of the target group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3873,6 +4540,16 @@ public final class TargetGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3889,6 +4566,16 @@ public final class TargetGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3896,6 +4583,16 @@ public final class TargetGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3908,6 +4605,16 @@ public final class TargetGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3925,12 +4632,24 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGETS_FIELD_NUMBER = 6;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> targets_;
     /**
+     * <pre>
+     * New list of targets in the target group.
+     * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+     * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> getTargetsList() {
       return targets_;
     }
     /**
+     * <pre>
+     * New list of targets in the target group.
+     * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+     * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> 
@@ -3938,18 +4657,36 @@ public final class TargetGroupServiceOuterClass {
       return targets_;
     }
     /**
+     * <pre>
+     * New list of targets in the target group.
+     * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+     * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
      */
     public int getTargetsCount() {
       return targets_.size();
     }
     /**
+     * <pre>
+     * New list of targets in the target group.
+     * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+     * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTargets(int index) {
       return targets_.get(index);
     }
     /**
+     * <pre>
+     * New list of targets in the target group.
+     * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+     * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetsOrBuilder(
@@ -4434,6 +5171,11 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object targetGroupId_ = "";
       /**
+       * <pre>
+       * ID of the target group to update.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getTargetGroupId() {
@@ -4449,6 +5191,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group to update.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -4465,6 +5212,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group to update.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTargetGroupId(
@@ -4478,6 +5230,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group to update.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearTargetGroupId() {
@@ -4487,6 +5244,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group to update.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTargetGroupIdBytes(
@@ -4505,12 +5267,20 @@ public final class TargetGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the target group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the target group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -4521,6 +5291,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the target group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -4537,6 +5311,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the target group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -4551,6 +5329,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the target group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -4569,6 +5351,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the target group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -4583,6 +5369,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the target group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -4591,6 +5381,10 @@ public final class TargetGroupServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the target group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -4602,6 +5396,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the target group should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4620,7 +5418,12 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the target group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4635,7 +5438,12 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the target group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4651,7 +5459,12 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the target group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -4664,7 +5477,12 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the target group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder clearName() {
         
@@ -4673,7 +5491,12 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * New name for the target group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4689,6 +5512,10 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New description of the target group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -4704,6 +5531,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the target group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4720,6 +5551,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New description of the target group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -4733,6 +5568,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the target group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -4742,6 +5581,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New description of the target group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -4783,6 +5626,16 @@ public final class TargetGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4799,6 +5652,16 @@ public final class TargetGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4806,6 +5669,16 @@ public final class TargetGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4818,6 +5691,16 @@ public final class TargetGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4838,6 +5721,16 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4857,6 +5750,16 @@ public final class TargetGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -4869,6 +5772,16 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [TargetGroupService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4892,6 +5805,12 @@ public final class TargetGroupServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> targetsBuilder_;
 
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> getTargetsList() {
@@ -4902,6 +5821,12 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public int getTargetsCount() {
@@ -4912,6 +5837,12 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTargets(int index) {
@@ -4922,6 +5853,12 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public Builder setTargets(
@@ -4939,6 +5876,12 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public Builder setTargets(
@@ -4953,6 +5896,12 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public Builder addTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target value) {
@@ -4969,6 +5918,12 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public Builder addTargets(
@@ -4986,6 +5941,12 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public Builder addTargets(
@@ -5000,6 +5961,12 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public Builder addTargets(
@@ -5014,6 +5981,12 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public Builder addAllTargets(
@@ -5029,6 +6002,12 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public Builder clearTargets() {
@@ -5042,6 +6021,12 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public Builder removeTargets(int index) {
@@ -5055,6 +6040,12 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder getTargetsBuilder(
@@ -5062,6 +6053,12 @@ public final class TargetGroupServiceOuterClass {
         return getTargetsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetsOrBuilder(
@@ -5072,6 +6069,12 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> 
@@ -5083,6 +6086,12 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder addTargetsBuilder() {
@@ -5090,6 +6099,12 @@ public final class TargetGroupServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.getDefaultInstance());
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder addTargetsBuilder(
@@ -5098,6 +6113,12 @@ public final class TargetGroupServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.getDefaultInstance());
       }
       /**
+       * <pre>
+       * New list of targets in the target group.
+       * Existing list of targets is completely replaced by the specified list, so if you just want to add or remove
+       * a target, make a [TargetGroupService.AddTargets] request or a [TargetGroupService.RemoveTargets] request.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 6;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder> 
@@ -5176,10 +6197,18 @@ public final class TargetGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the target group that is being updated.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     java.lang.String getTargetGroupId();
     /**
+     * <pre>
+     * ID of the target group that is being updated.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -5266,6 +6295,10 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGET_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object targetGroupId_;
     /**
+     * <pre>
+     * ID of the target group that is being updated.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     public java.lang.String getTargetGroupId() {
@@ -5281,6 +6314,10 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the target group that is being updated.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -5602,6 +6639,10 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object targetGroupId_ = "";
       /**
+       * <pre>
+       * ID of the target group that is being updated.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public java.lang.String getTargetGroupId() {
@@ -5617,6 +6658,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group that is being updated.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -5633,6 +6678,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group that is being updated.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder setTargetGroupId(
@@ -5646,6 +6695,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group that is being updated.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder clearTargetGroupId() {
@@ -5655,6 +6708,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group that is being updated.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder setTargetGroupIdBytes(
@@ -5726,40 +6783,78 @@ public final class TargetGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create a target group in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create a target group in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * Name of the target group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * Name of the target group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the target group.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the target group.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -5771,11 +6866,21 @@ public final class TargetGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5783,6 +6888,11 @@ public final class TargetGroupServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5790,24 +6900,44 @@ public final class TargetGroupServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * List of targets in the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> 
         getTargetsList();
     /**
+     * <pre>
+     * List of targets in the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTargets(int index);
     /**
+     * <pre>
+     * List of targets in the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
      */
     int getTargetsCount();
     /**
+     * <pre>
+     * List of targets in the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> 
         getTargetsOrBuilderList();
     /**
+     * <pre>
+     * List of targets in the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetsOrBuilder(
@@ -5947,6 +7077,11 @@ public final class TargetGroupServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create a target group in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getFolderId() {
@@ -5962,6 +7097,11 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create a target group in.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -5981,7 +7121,12 @@ public final class TargetGroupServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * Name of the target group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -5996,7 +7141,12 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+     * <pre>
+     * Name of the target group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -6015,6 +7165,10 @@ public final class TargetGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the target group.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -6030,6 +7184,10 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the target group.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -6073,6 +7231,11 @@ public final class TargetGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -6089,6 +7252,11 @@ public final class TargetGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -6096,6 +7264,11 @@ public final class TargetGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -6108,6 +7281,11 @@ public final class TargetGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Target group labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -6125,12 +7303,20 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGETS_FIELD_NUMBER = 5;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> targets_;
     /**
+     * <pre>
+     * List of targets in the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> getTargetsList() {
       return targets_;
     }
     /**
+     * <pre>
+     * List of targets in the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> 
@@ -6138,18 +7324,30 @@ public final class TargetGroupServiceOuterClass {
       return targets_;
     }
     /**
+     * <pre>
+     * List of targets in the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
      */
     public int getTargetsCount() {
       return targets_.size();
     }
     /**
+     * <pre>
+     * List of targets in the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTargets(int index) {
       return targets_.get(index);
     }
     /**
+     * <pre>
+     * List of targets in the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetsOrBuilder(
@@ -6604,6 +7802,11 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create a target group in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getFolderId() {
@@ -6619,6 +7822,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a target group in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -6635,6 +7843,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a target group in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderId(
@@ -6648,6 +7861,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a target group in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearFolderId() {
@@ -6657,6 +7875,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a target group in.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setFolderIdBytes(
@@ -6673,7 +7896,12 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the target group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6688,7 +7916,12 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the target group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6704,7 +7937,12 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the target group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -6717,7 +7955,12 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the target group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder clearName() {
         
@@ -6726,7 +7969,12 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
+       * <pre>
+       * Name of the target group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6742,6 +7990,10 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the target group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -6757,6 +8009,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the target group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6773,6 +8029,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the target group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -6786,6 +8046,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the target group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -6795,6 +8059,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the target group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -6836,6 +8104,11 @@ public final class TargetGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6852,6 +8125,11 @@ public final class TargetGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6859,6 +8137,11 @@ public final class TargetGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6871,6 +8154,11 @@ public final class TargetGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6891,6 +8179,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6910,6 +8203,11 @@ public final class TargetGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -6922,6 +8220,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Target group labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6945,6 +8248,10 @@ public final class TargetGroupServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> targetsBuilder_;
 
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> getTargetsList() {
@@ -6955,6 +8262,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public int getTargetsCount() {
@@ -6965,6 +8276,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTargets(int index) {
@@ -6975,6 +8290,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public Builder setTargets(
@@ -6992,6 +8311,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public Builder setTargets(
@@ -7006,6 +8329,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public Builder addTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target value) {
@@ -7022,6 +8349,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public Builder addTargets(
@@ -7039,6 +8370,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public Builder addTargets(
@@ -7053,6 +8388,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public Builder addTargets(
@@ -7067,6 +8406,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public Builder addAllTargets(
@@ -7082,6 +8425,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public Builder clearTargets() {
@@ -7095,6 +8442,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public Builder removeTargets(int index) {
@@ -7108,6 +8459,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder getTargetsBuilder(
@@ -7115,6 +8470,10 @@ public final class TargetGroupServiceOuterClass {
         return getTargetsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetsOrBuilder(
@@ -7125,6 +8484,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> 
@@ -7136,6 +8499,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder addTargetsBuilder() {
@@ -7143,6 +8510,10 @@ public final class TargetGroupServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder addTargetsBuilder(
@@ -7151,6 +8522,10 @@ public final class TargetGroupServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of targets in the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 5;</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder> 
@@ -7229,10 +8604,18 @@ public final class TargetGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the target group that is being created.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     java.lang.String getTargetGroupId();
     /**
+     * <pre>
+     * ID of the target group that is being created.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -7319,6 +8702,10 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGET_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object targetGroupId_;
     /**
+     * <pre>
+     * ID of the target group that is being created.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     public java.lang.String getTargetGroupId() {
@@ -7334,6 +8721,10 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the target group that is being created.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -7655,6 +9046,10 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object targetGroupId_ = "";
       /**
+       * <pre>
+       * ID of the target group that is being created.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public java.lang.String getTargetGroupId() {
@@ -7670,6 +9065,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group that is being created.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -7686,6 +9085,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group that is being created.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder setTargetGroupId(
@@ -7699,6 +9102,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group that is being created.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder clearTargetGroupId() {
@@ -7708,6 +9115,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group that is being created.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder setTargetGroupIdBytes(
@@ -7779,34 +9190,64 @@ public final class TargetGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the target group to add targets to.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getTargetGroupId();
     /**
+     * <pre>
+     * ID of the target group to add targets to.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getTargetGroupIdBytes();
 
     /**
+     * <pre>
+     * List of targets to add to the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> 
         getTargetsList();
     /**
+     * <pre>
+     * List of targets to add to the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTargets(int index);
     /**
+     * <pre>
+     * List of targets to add to the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     int getTargetsCount();
     /**
+     * <pre>
+     * List of targets to add to the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> 
         getTargetsOrBuilderList();
     /**
+     * <pre>
+     * List of targets to add to the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetsOrBuilder(
@@ -7907,6 +9348,11 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGET_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object targetGroupId_;
     /**
+     * <pre>
+     * ID of the target group to add targets to.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getTargetGroupId() {
@@ -7922,6 +9368,11 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the target group to add targets to.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -7941,12 +9392,20 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGETS_FIELD_NUMBER = 2;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> targets_;
     /**
+     * <pre>
+     * List of targets to add to the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> getTargetsList() {
       return targets_;
     }
     /**
+     * <pre>
+     * List of targets to add to the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> 
@@ -7954,18 +9413,30 @@ public final class TargetGroupServiceOuterClass {
       return targets_;
     }
     /**
+     * <pre>
+     * List of targets to add to the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public int getTargetsCount() {
       return targets_.size();
     }
     /**
+     * <pre>
+     * List of targets to add to the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTargets(int index) {
       return targets_.get(index);
     }
     /**
+     * <pre>
+     * List of targets to add to the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetsOrBuilder(
@@ -8337,6 +9808,11 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object targetGroupId_ = "";
       /**
+       * <pre>
+       * ID of the target group to add targets to.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getTargetGroupId() {
@@ -8352,6 +9828,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group to add targets to.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -8368,6 +9849,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group to add targets to.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTargetGroupId(
@@ -8381,6 +9867,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group to add targets to.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearTargetGroupId() {
@@ -8390,6 +9881,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group to add targets to.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTargetGroupIdBytes(
@@ -8417,6 +9913,10 @@ public final class TargetGroupServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> targetsBuilder_;
 
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> getTargetsList() {
@@ -8427,6 +9927,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public int getTargetsCount() {
@@ -8437,6 +9941,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTargets(int index) {
@@ -8447,6 +9955,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder setTargets(
@@ -8464,6 +9976,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder setTargets(
@@ -8478,6 +9994,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target value) {
@@ -8494,6 +10014,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addTargets(
@@ -8511,6 +10035,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addTargets(
@@ -8525,6 +10053,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addTargets(
@@ -8539,6 +10071,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAllTargets(
@@ -8554,6 +10090,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder clearTargets() {
@@ -8567,6 +10107,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder removeTargets(int index) {
@@ -8580,6 +10124,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder getTargetsBuilder(
@@ -8587,6 +10135,10 @@ public final class TargetGroupServiceOuterClass {
         return getTargetsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetsOrBuilder(
@@ -8597,6 +10149,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> 
@@ -8608,6 +10164,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder addTargetsBuilder() {
@@ -8615,6 +10175,10 @@ public final class TargetGroupServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder addTargetsBuilder(
@@ -8623,6 +10187,10 @@ public final class TargetGroupServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of targets to add to the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder> 
@@ -8701,10 +10269,18 @@ public final class TargetGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the target group that the targets are being added to.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     java.lang.String getTargetGroupId();
     /**
+     * <pre>
+     * ID of the target group that the targets are being added to.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -8791,6 +10367,10 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGET_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object targetGroupId_;
     /**
+     * <pre>
+     * ID of the target group that the targets are being added to.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     public java.lang.String getTargetGroupId() {
@@ -8806,6 +10386,10 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the target group that the targets are being added to.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -9127,6 +10711,10 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object targetGroupId_ = "";
       /**
+       * <pre>
+       * ID of the target group that the targets are being added to.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public java.lang.String getTargetGroupId() {
@@ -9142,6 +10730,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group that the targets are being added to.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -9158,6 +10750,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group that the targets are being added to.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder setTargetGroupId(
@@ -9171,6 +10767,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group that the targets are being added to.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder clearTargetGroupId() {
@@ -9180,6 +10780,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group that the targets are being added to.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder setTargetGroupIdBytes(
@@ -9251,34 +10855,64 @@ public final class TargetGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the target group to remove targets from.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getTargetGroupId();
     /**
+     * <pre>
+     * ID of the target group to remove targets from.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getTargetGroupIdBytes();
 
     /**
+     * <pre>
+     * List of targets to remove from the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> 
         getTargetsList();
     /**
+     * <pre>
+     * List of targets to remove from the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTargets(int index);
     /**
+     * <pre>
+     * List of targets to remove from the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     int getTargetsCount();
     /**
+     * <pre>
+     * List of targets to remove from the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> 
         getTargetsOrBuilderList();
     /**
+     * <pre>
+     * List of targets to remove from the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetsOrBuilder(
@@ -9379,6 +11013,11 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGET_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object targetGroupId_;
     /**
+     * <pre>
+     * ID of the target group to remove targets from.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getTargetGroupId() {
@@ -9394,6 +11033,11 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the target group to remove targets from.
+     * To get the target group ID, make a [TargetGroupService.List] request.
+     * </pre>
+     *
      * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
@@ -9413,12 +11057,20 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGETS_FIELD_NUMBER = 2;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> targets_;
     /**
+     * <pre>
+     * List of targets to remove from the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> getTargetsList() {
       return targets_;
     }
     /**
+     * <pre>
+     * List of targets to remove from the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> 
@@ -9426,18 +11078,30 @@ public final class TargetGroupServiceOuterClass {
       return targets_;
     }
     /**
+     * <pre>
+     * List of targets to remove from the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public int getTargetsCount() {
       return targets_.size();
     }
     /**
+     * <pre>
+     * List of targets to remove from the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTargets(int index) {
       return targets_.get(index);
     }
     /**
+     * <pre>
+     * List of targets to remove from the target group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
      */
     public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetsOrBuilder(
@@ -9809,6 +11473,11 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object targetGroupId_ = "";
       /**
+       * <pre>
+       * ID of the target group to remove targets from.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public java.lang.String getTargetGroupId() {
@@ -9824,6 +11493,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group to remove targets from.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.ByteString
@@ -9840,6 +11514,11 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group to remove targets from.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTargetGroupId(
@@ -9853,6 +11532,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group to remove targets from.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearTargetGroupId() {
@@ -9862,6 +11546,11 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group to remove targets from.
+       * To get the target group ID, make a [TargetGroupService.List] request.
+       * </pre>
+       *
        * <code>string target_group_id = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTargetGroupIdBytes(
@@ -9889,6 +11578,10 @@ public final class TargetGroupServiceOuterClass {
           yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> targetsBuilder_;
 
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target> getTargetsList() {
@@ -9899,6 +11592,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public int getTargetsCount() {
@@ -9909,6 +11606,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target getTargets(int index) {
@@ -9919,6 +11620,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder setTargets(
@@ -9936,6 +11641,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder setTargets(
@@ -9950,6 +11659,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addTargets(yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target value) {
@@ -9966,6 +11679,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addTargets(
@@ -9983,6 +11700,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addTargets(
@@ -9997,6 +11718,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addTargets(
@@ -10011,6 +11736,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder addAllTargets(
@@ -10026,6 +11755,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder clearTargets() {
@@ -10039,6 +11772,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public Builder removeTargets(int index) {
@@ -10052,6 +11789,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder getTargetsBuilder(
@@ -10059,6 +11800,10 @@ public final class TargetGroupServiceOuterClass {
         return getTargetsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder getTargetsOrBuilder(
@@ -10069,6 +11814,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.TargetOrBuilder> 
@@ -10080,6 +11829,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder addTargetsBuilder() {
@@ -10087,6 +11840,10 @@ public final class TargetGroupServiceOuterClass {
             yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder addTargetsBuilder(
@@ -10095,6 +11852,10 @@ public final class TargetGroupServiceOuterClass {
             index, yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of targets to remove from the target group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.Target targets = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
        */
       public java.util.List<yandex.cloud.api.apploadbalancer.v1.TargetGroupOuterClass.Target.Builder> 
@@ -10173,10 +11934,18 @@ public final class TargetGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the target group that the targets are being removed from.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     java.lang.String getTargetGroupId();
     /**
+     * <pre>
+     * ID of the target group that the targets are being removed from.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -10263,6 +12032,10 @@ public final class TargetGroupServiceOuterClass {
     public static final int TARGET_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object targetGroupId_;
     /**
+     * <pre>
+     * ID of the target group that the targets are being removed from.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     public java.lang.String getTargetGroupId() {
@@ -10278,6 +12051,10 @@ public final class TargetGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the target group that the targets are being removed from.
+     * </pre>
+     *
      * <code>string target_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -10599,6 +12376,10 @@ public final class TargetGroupServiceOuterClass {
 
       private java.lang.Object targetGroupId_ = "";
       /**
+       * <pre>
+       * ID of the target group that the targets are being removed from.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public java.lang.String getTargetGroupId() {
@@ -10614,6 +12395,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group that the targets are being removed from.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -10630,6 +12415,10 @@ public final class TargetGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the target group that the targets are being removed from.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder setTargetGroupId(
@@ -10643,6 +12432,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group that the targets are being removed from.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder clearTargetGroupId() {
@@ -10652,6 +12445,10 @@ public final class TargetGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the target group that the targets are being removed from.
+       * </pre>
+       *
        * <code>string target_group_id = 1;</code>
        */
       public Builder setTargetGroupIdBytes(
@@ -11644,10 +13441,10 @@ public final class TargetGroupServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListTargetGroupOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListTargetGroupOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTargetGroupOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListTargetGroupOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -11655,10 +13452,10 @@ public final class TargetGroupServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListTargetGroupOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListTargetGroupOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTargetGroupOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListTargetGroupOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -11817,10 +13614,10 @@ public final class TargetGroupServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListTargetGroupOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListTargetGroupOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTargetGroupOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListTargetGroupOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -11839,10 +13636,10 @@ public final class TargetGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListTargetGroupOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListTargetGroupOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTargetGroupOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListTargetGroupOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -12538,10 +14335,10 @@ public final class TargetGroupServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListTargetGroupOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListTargetGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTargetGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTargetGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -12560,10 +14357,10 @@ public final class TargetGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListTargetGroupOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListTargetGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTargetGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTargetGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -12583,10 +14380,10 @@ public final class TargetGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListTargetGroupOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListTargetGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTargetGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTargetGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -12603,10 +14400,10 @@ public final class TargetGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListTargetGroupOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListTargetGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTargetGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTargetGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -12619,10 +14416,10 @@ public final class TargetGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListTargetGroupOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListTargetGroupOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTargetGroupOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTargetGroupOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -12803,91 +14600,91 @@ public final class TargetGroupServiceOuterClass {
       "argetGroup\022\027\n\017next_page_token\030\002 \001(\t\"9\n\030D" +
       "eleteTargetGroupRequest\022\035\n\017target_group_" +
       "id\030\001 \001(\tB\004\350\3071\001\"4\n\031DeleteTargetGroupMetad" +
-      "ata\022\027\n\017target_group_id\030\001 \001(\t\"\310\003\n\030UpdateT" +
+      "ata\022\027\n\017target_group_id\030\001 \001(\t\"\312\003\n\030UpdateT" +
       "argetGroupRequest\022\035\n\017target_group_id\030\001 \001" +
       "(\tB\004\350\3071\001\022/\n\013update_mask\030\002 \001(\0132\032.google.p" +
-      "rotobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a" +
-      "-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descrip" +
-      "tion\030\004 \001(\tB\t\212\3101\005<=256\022\236\001\n\006labels\030\005 \003(\0132E" +
-      ".yandex.cloud.apploadbalancer.v1.UpdateT" +
-      "argetGroupRequest.LabelsEntryBG\202\3101\004<=64\212" +
-      "\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026" +
-      "\022\024[a-z][-_./\\@0-9a-z]*\0228\n\007targets\030\006 \003(\0132" +
-      "\'.yandex.cloud.apploadbalancer.v1.Target" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"4\n\031UpdateTargetGroupMetadata\022\027\n\017" +
-      "target_group_id\030\001 \001(\t\"\221\003\n\030CreateTargetGr" +
-      "oupRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0222\n\004n" +
-      "ame\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-" +
-      "z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022" +
-      "\236\001\n\006labels\030\004 \003(\0132E.yandex.cloud.apploadb" +
-      "alancer.v1.CreateTargetGroupRequest.Labe" +
-      "lsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a" +
-      "-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*" +
-      "\0228\n\007targets\030\005 \003(\0132\'.yandex.cloud.appload" +
-      "balancer.v1.Target\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"4\n\031CreateTarge" +
-      "tGroupMetadata\022\027\n\017target_group_id\030\001 \001(\t\"" +
-      "t\n\021AddTargetsRequest\022\035\n\017target_group_id\030" +
-      "\001 \001(\tB\004\350\3071\001\022@\n\007targets\030\002 \003(\0132\'.yandex.cl" +
-      "oud.apploadbalancer.v1.TargetB\006\202\3101\002>0\"-\n" +
-      "\022AddTargetsMetadata\022\027\n\017target_group_id\030\001" +
-      " \001(\t\"w\n\024RemoveTargetsRequest\022\035\n\017target_g" +
-      "roup_id\030\001 \001(\tB\004\350\3071\001\022@\n\007targets\030\002 \003(\0132\'.y" +
-      "andex.cloud.apploadbalancer.v1.TargetB\006\202" +
-      "\3101\002>0\"0\n\025RemoveTargetsMetadata\022\027\n\017target" +
-      "_group_id\030\001 \001(\t\"\207\001\n ListTargetGroupOpera" +
-      "tionsRequest\022%\n\017target_group_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=10" +
-      "00\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"s\n!Lis" +
-      "tTargetGroupOperationsResponse\0225\n\noperat" +
-      "ions\030\001 \003(\0132!.yandex.cloud.operation.Oper" +
-      "ation\022\027\n\017next_page_token\030\002 \001(\t2\356\014\n\022Targe" +
-      "tGroupService\022\247\001\n\003Get\0226.yandex.cloud.app" +
-      "loadbalancer.v1.GetTargetGroupRequest\032,." +
-      "yandex.cloud.apploadbalancer.v1.TargetGr" +
-      "oup\":\202\323\344\223\0024\0222/apploadbalancer/v1/targetG" +
-      "roups/{target_group_id}\022\245\001\n\004List\0228.yande" +
-      "x.cloud.apploadbalancer.v1.ListTargetGro" +
-      "upsRequest\0329.yandex.cloud.apploadbalance" +
-      "r.v1.ListTargetGroupsResponse\"(\202\323\344\223\002\"\022 /" +
-      "apploadbalancer/v1/targetGroups\022\277\001\n\006Crea" +
-      "te\0229.yandex.cloud.apploadbalancer.v1.Cre" +
-      "ateTargetGroupRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"W\202\323\344\223\002%\" /apploadbalanc" +
-      "er/v1/targetGroups:\001*\262\322*(\n\031CreateTargetG" +
-      "roupMetadata\022\013TargetGroup\022\321\001\n\006Update\0229.y" +
-      "andex.cloud.apploadbalancer.v1.UpdateTar" +
-      "getGroupRequest\032!.yandex.cloud.operation" +
-      ".Operation\"i\202\323\344\223\002722/apploadbalancer/v1/" +
-      "targetGroups/{target_group_id}:\001*\262\322*(\n\031U" +
-      "pdateTargetGroupMetadata\022\013TargetGroup\022\330\001" +
-      "\n\006Delete\0229.yandex.cloud.apploadbalancer." +
-      "v1.DeleteTargetGroupRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"p\202\323\344\223\0024*2/appload" +
-      "balancer/v1/targetGroups/{target_group_i" +
-      "d}\262\322*2\n\031DeleteTargetGroupMetadata\022\025googl" +
-      "e.protobuf.Empty\022\322\001\n\nAddTargets\0222.yandex" +
-      ".cloud.apploadbalancer.v1.AddTargetsRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"m" +
-      "\202\323\344\223\002B\"=/apploadbalancer/v1/targetGroups" +
-      "/{target_group_id}:addTargets:\001*\262\322*!\n\022Ad" +
-      "dTargetsMetadata\022\013TargetGroup\022\336\001\n\rRemove" +
-      "Targets\0225.yandex.cloud.apploadbalancer.v" +
-      "1.RemoveTargetsRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"s\202\323\344\223\002E\"@/apploadbalan" +
-      "cer/v1/targetGroups/{target_group_id}:re" +
-      "moveTargets:\001*\262\322*$\n\025RemoveTargetsMetadat" +
-      "a\022\013TargetGroup\022\336\001\n\016ListOperations\022A.yand" +
-      "ex.cloud.apploadbalancer.v1.ListTargetGr" +
-      "oupOperationsRequest\032B.yandex.cloud.appl" +
-      "oadbalancer.v1.ListTargetGroupOperations" +
-      "Response\"E\202\323\344\223\002?\022=/apploadbalancer/v1/ta" +
-      "rgetGroups/{target_group_id}/operationsB" +
-      "z\n#yandex.cloud.api.apploadbalancer.v1ZS" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/apploadbalancer/v1;apploadbalan" +
-      "cerb\006proto3"
+      "rotobuf.FieldMask\0224\n\004name\030\003 \001(\tB&\362\3071\"([a" +
+      "-z]([-a-z0-9]{0,61}[a-z0-9])?)?\022\036\n\013descr" +
+      "iption\030\004 \001(\tB\t\212\3101\005<=256\022\236\001\n\006labels\030\005 \003(\013" +
+      "2E.yandex.cloud.apploadbalancer.v1.Updat" +
+      "eTargetGroupRequest.LabelsEntryBG\202\3101\004<=6" +
+      "4\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\310" +
+      "1\026\022\024[a-z][-_./\\@0-9a-z]*\0228\n\007targets\030\006 \003(" +
+      "\0132\'.yandex.cloud.apploadbalancer.v1.Targ" +
+      "et\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"4\n\031UpdateTargetGroupMetadata\022\027" +
+      "\n\017target_group_id\030\001 \001(\t\"\223\003\n\030CreateTarget" +
+      "GroupRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001\0224\n" +
+      "\004name\030\002 \001(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}[" +
+      "a-z0-9])?)?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=" +
+      "256\022\236\001\n\006labels\030\004 \003(\0132E.yandex.cloud.appl" +
+      "oadbalancer.v1.CreateTargetGroupRequest." +
+      "LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@" +
+      "0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a" +
+      "-z]*\0228\n\007targets\030\005 \003(\0132\'.yandex.cloud.app" +
+      "loadbalancer.v1.Target\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"4\n\031CreateT" +
+      "argetGroupMetadata\022\027\n\017target_group_id\030\001 " +
+      "\001(\t\"t\n\021AddTargetsRequest\022\035\n\017target_group" +
+      "_id\030\001 \001(\tB\004\350\3071\001\022@\n\007targets\030\002 \003(\0132\'.yande" +
+      "x.cloud.apploadbalancer.v1.TargetB\006\202\3101\002>" +
+      "0\"-\n\022AddTargetsMetadata\022\027\n\017target_group_" +
+      "id\030\001 \001(\t\"w\n\024RemoveTargetsRequest\022\035\n\017targ" +
+      "et_group_id\030\001 \001(\tB\004\350\3071\001\022@\n\007targets\030\002 \003(\013" +
+      "2\'.yandex.cloud.apploadbalancer.v1.Targe" +
+      "tB\006\202\3101\002>0\"0\n\025RemoveTargetsMetadata\022\027\n\017ta" +
+      "rget_group_id\030\001 \001(\t\"\207\001\n ListTargetGroupO" +
+      "perationsRequest\022%\n\017target_group_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
+      "<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"s\n" +
+      "!ListTargetGroupOperationsResponse\0225\n\nop" +
+      "erations\030\001 \003(\0132!.yandex.cloud.operation." +
+      "Operation\022\027\n\017next_page_token\030\002 \001(\t2\356\014\n\022T" +
+      "argetGroupService\022\247\001\n\003Get\0226.yandex.cloud" +
+      ".apploadbalancer.v1.GetTargetGroupReques" +
+      "t\032,.yandex.cloud.apploadbalancer.v1.Targ" +
+      "etGroup\":\202\323\344\223\0024\0222/apploadbalancer/v1/tar" +
+      "getGroups/{target_group_id}\022\245\001\n\004List\0228.y" +
+      "andex.cloud.apploadbalancer.v1.ListTarge" +
+      "tGroupsRequest\0329.yandex.cloud.apploadbal" +
+      "ancer.v1.ListTargetGroupsResponse\"(\202\323\344\223\002" +
+      "\"\022 /apploadbalancer/v1/targetGroups\022\277\001\n\006" +
+      "Create\0229.yandex.cloud.apploadbalancer.v1" +
+      ".CreateTargetGroupRequest\032!.yandex.cloud" +
+      ".operation.Operation\"W\202\323\344\223\002%\" /apploadba" +
+      "lancer/v1/targetGroups:\001*\262\322*(\n\031CreateTar" +
+      "getGroupMetadata\022\013TargetGroup\022\321\001\n\006Update" +
+      "\0229.yandex.cloud.apploadbalancer.v1.Updat" +
+      "eTargetGroupRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"i\202\323\344\223\002722/apploadbalancer" +
+      "/v1/targetGroups/{target_group_id}:\001*\262\322*" +
+      "(\n\031UpdateTargetGroupMetadata\022\013TargetGrou" +
+      "p\022\330\001\n\006Delete\0229.yandex.cloud.apploadbalan" +
+      "cer.v1.DeleteTargetGroupRequest\032!.yandex" +
+      ".cloud.operation.Operation\"p\202\323\344\223\0024*2/app" +
+      "loadbalancer/v1/targetGroups/{target_gro" +
+      "up_id}\262\322*2\n\031DeleteTargetGroupMetadata\022\025g" +
+      "oogle.protobuf.Empty\022\322\001\n\nAddTargets\0222.ya" +
+      "ndex.cloud.apploadbalancer.v1.AddTargets" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"m\202\323\344\223\002B\"=/apploadbalancer/v1/targetGr" +
+      "oups/{target_group_id}:addTargets:\001*\262\322*!" +
+      "\n\022AddTargetsMetadata\022\013TargetGroup\022\336\001\n\rRe" +
+      "moveTargets\0225.yandex.cloud.apploadbalanc" +
+      "er.v1.RemoveTargetsRequest\032!.yandex.clou" +
+      "d.operation.Operation\"s\202\323\344\223\002E\"@/apploadb" +
+      "alancer/v1/targetGroups/{target_group_id" +
+      "}:removeTargets:\001*\262\322*$\n\025RemoveTargetsMet" +
+      "adata\022\013TargetGroup\022\336\001\n\016ListOperations\022A." +
+      "yandex.cloud.apploadbalancer.v1.ListTarg" +
+      "etGroupOperationsRequest\032B.yandex.cloud." +
+      "apploadbalancer.v1.ListTargetGroupOperat" +
+      "ionsResponse\"E\202\323\344\223\002?\022=/apploadbalancer/v" +
+      "1/targetGroups/{target_group_id}/operati" +
+      "onsBz\n#yandex.cloud.api.apploadbalancer." +
+      "v1ZSgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/apploadbalancer/v1;apploadb" +
+      "alancerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

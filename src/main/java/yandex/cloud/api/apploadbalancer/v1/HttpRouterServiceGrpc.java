@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing HTTP routers.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -243,10 +246,17 @@ public final class HttpRouterServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing HTTP routers.
+   * </pre>
    */
   public static abstract class HttpRouterServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified HTTP router.
+     * To get the list of all available HTTP routers, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.GetHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter> responseObserver) {
@@ -254,6 +264,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists HTTP routers in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse> responseObserver) {
@@ -261,6 +274,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an HTTP router in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -268,6 +284,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified HTTP router.
+     * </pre>
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -275,6 +294,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified HTTP router.
+     * </pre>
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -283,7 +305,7 @@ public final class HttpRouterServiceGrpc {
 
     /**
      * <pre>
-     * Lists operations for the specified http router.
+     * Lists operations for the specified HTTP router.
      * </pre>
      */
     public void listOperations(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsRequest request,
@@ -340,6 +362,9 @@ public final class HttpRouterServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing HTTP routers.
+   * </pre>
    */
   public static final class HttpRouterServiceStub extends io.grpc.stub.AbstractStub<HttpRouterServiceStub> {
     private HttpRouterServiceStub(io.grpc.Channel channel) {
@@ -358,6 +383,10 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified HTTP router.
+     * To get the list of all available HTTP routers, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.GetHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter> responseObserver) {
@@ -366,6 +395,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists HTTP routers in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse> responseObserver) {
@@ -374,6 +406,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an HTTP router in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -382,6 +417,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified HTTP router.
+     * </pre>
      */
     public void update(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -390,6 +428,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified HTTP router.
+     * </pre>
      */
     public void delete(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -399,7 +440,7 @@ public final class HttpRouterServiceGrpc {
 
     /**
      * <pre>
-     * Lists operations for the specified http router.
+     * Lists operations for the specified HTTP router.
      * </pre>
      */
     public void listOperations(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsRequest request,
@@ -410,6 +451,9 @@ public final class HttpRouterServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing HTTP routers.
+   * </pre>
    */
   public static final class HttpRouterServiceBlockingStub extends io.grpc.stub.AbstractStub<HttpRouterServiceBlockingStub> {
     private HttpRouterServiceBlockingStub(io.grpc.Channel channel) {
@@ -428,6 +472,10 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified HTTP router.
+     * To get the list of all available HTTP routers, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter get(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.GetHttpRouterRequest request) {
       return blockingUnaryCall(
@@ -435,6 +483,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists HTTP routers in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse list(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest request) {
       return blockingUnaryCall(
@@ -442,6 +493,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an HTTP router in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest request) {
       return blockingUnaryCall(
@@ -449,6 +503,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified HTTP router.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest request) {
       return blockingUnaryCall(
@@ -456,6 +513,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified HTTP router.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest request) {
       return blockingUnaryCall(
@@ -464,7 +524,7 @@ public final class HttpRouterServiceGrpc {
 
     /**
      * <pre>
-     * Lists operations for the specified http router.
+     * Lists operations for the specified HTTP router.
      * </pre>
      */
     public yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse listOperations(yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsRequest request) {
@@ -474,6 +534,9 @@ public final class HttpRouterServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing HTTP routers.
+   * </pre>
    */
   public static final class HttpRouterServiceFutureStub extends io.grpc.stub.AbstractStub<HttpRouterServiceFutureStub> {
     private HttpRouterServiceFutureStub(io.grpc.Channel channel) {
@@ -492,6 +555,10 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified HTTP router.
+     * To get the list of all available HTTP routers, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.HttpRouterOuterClass.HttpRouter> get(
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.GetHttpRouterRequest request) {
@@ -500,6 +567,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists HTTP routers in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersResponse> list(
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRoutersRequest request) {
@@ -508,6 +578,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an HTTP router in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.CreateHttpRouterRequest request) {
@@ -516,6 +589,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified HTTP router.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.UpdateHttpRouterRequest request) {
@@ -524,6 +600,9 @@ public final class HttpRouterServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified HTTP router.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.DeleteHttpRouterRequest request) {
@@ -533,7 +612,7 @@ public final class HttpRouterServiceGrpc {
 
     /**
      * <pre>
-     * Lists operations for the specified http router.
+     * Lists operations for the specified HTTP router.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.apploadbalancer.v1.HttpRouterServiceOuterClass.ListHttpRouterOperationsResponse> listOperations(
