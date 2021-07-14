@@ -121,6 +121,41 @@ public final class PSB {
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder();
+
+    /**
+     * <pre>
+     * List databases included in the backup
+     * </pre>
+     *
+     * <code>repeated string databases = 6;</code>
+     */
+    java.util.List<java.lang.String>
+        getDatabasesList();
+    /**
+     * <pre>
+     * List databases included in the backup
+     * </pre>
+     *
+     * <code>repeated string databases = 6;</code>
+     */
+    int getDatabasesCount();
+    /**
+     * <pre>
+     * List databases included in the backup
+     * </pre>
+     *
+     * <code>repeated string databases = 6;</code>
+     */
+    java.lang.String getDatabases(int index);
+    /**
+     * <pre>
+     * List databases included in the backup
+     * </pre>
+     *
+     * <code>repeated string databases = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getDatabasesBytes(int index);
   }
   /**
    * <pre>
@@ -143,6 +178,7 @@ public final class PSB {
       id_ = "";
       folderId_ = "";
       sourceClusterId_ = "";
+      databases_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -213,6 +249,15 @@ public final class PSB {
 
               break;
             }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                databases_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              databases_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -228,6 +273,9 @@ public final class PSB {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          databases_ = databases_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -245,6 +293,7 @@ public final class PSB {
               yandex.cloud.api.mdb.sqlserver.v1.PSB.Backup.class, yandex.cloud.api.mdb.sqlserver.v1.PSB.Backup.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -437,6 +486,51 @@ public final class PSB {
       return getStartedAt();
     }
 
+    public static final int DATABASES_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList databases_;
+    /**
+     * <pre>
+     * List databases included in the backup
+     * </pre>
+     *
+     * <code>repeated string databases = 6;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDatabasesList() {
+      return databases_;
+    }
+    /**
+     * <pre>
+     * List databases included in the backup
+     * </pre>
+     *
+     * <code>repeated string databases = 6;</code>
+     */
+    public int getDatabasesCount() {
+      return databases_.size();
+    }
+    /**
+     * <pre>
+     * List databases included in the backup
+     * </pre>
+     *
+     * <code>repeated string databases = 6;</code>
+     */
+    public java.lang.String getDatabases(int index) {
+      return databases_.get(index);
+    }
+    /**
+     * <pre>
+     * List databases included in the backup
+     * </pre>
+     *
+     * <code>repeated string databases = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDatabasesBytes(int index) {
+      return databases_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -466,6 +560,9 @@ public final class PSB {
       if (startedAt_ != null) {
         output.writeMessage(5, getStartedAt());
       }
+      for (int i = 0; i < databases_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, databases_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -491,6 +588,14 @@ public final class PSB {
       if (startedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getStartedAt());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < databases_.size(); i++) {
+          dataSize += computeStringSizeNoTag(databases_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDatabasesList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -524,6 +629,8 @@ public final class PSB {
         result = result && getStartedAt()
             .equals(other.getStartedAt());
       }
+      result = result && getDatabasesList()
+          .equals(other.getDatabasesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -548,6 +655,10 @@ public final class PSB {
       if (hasStartedAt()) {
         hash = (37 * hash) + STARTED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getStartedAt().hashCode();
+      }
+      if (getDatabasesCount() > 0) {
+        hash = (37 * hash) + DATABASES_FIELD_NUMBER;
+        hash = (53 * hash) + getDatabasesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -705,6 +816,8 @@ public final class PSB {
           startedAt_ = null;
           startedAtBuilder_ = null;
         }
+        databases_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -731,6 +844,8 @@ public final class PSB {
       @java.lang.Override
       public yandex.cloud.api.mdb.sqlserver.v1.PSB.Backup buildPartial() {
         yandex.cloud.api.mdb.sqlserver.v1.PSB.Backup result = new yandex.cloud.api.mdb.sqlserver.v1.PSB.Backup(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.id_ = id_;
         result.folderId_ = folderId_;
         if (createdAtBuilder_ == null) {
@@ -744,6 +859,12 @@ public final class PSB {
         } else {
           result.startedAt_ = startedAtBuilder_.build();
         }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          databases_ = databases_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.databases_ = databases_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -810,6 +931,16 @@ public final class PSB {
         if (other.hasStartedAt()) {
           mergeStartedAt(other.getStartedAt());
         }
+        if (!other.databases_.isEmpty()) {
+          if (databases_.isEmpty()) {
+            databases_ = other.databases_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensureDatabasesIsMutable();
+            databases_.addAll(other.databases_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -838,6 +969,7 @@ public final class PSB {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -1411,6 +1543,136 @@ public final class PSB {
         }
         return startedAtBuilder_;
       }
+
+      private com.google.protobuf.LazyStringList databases_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureDatabasesIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          databases_ = new com.google.protobuf.LazyStringArrayList(databases_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+      /**
+       * <pre>
+       * List databases included in the backup
+       * </pre>
+       *
+       * <code>repeated string databases = 6;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDatabasesList() {
+        return databases_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List databases included in the backup
+       * </pre>
+       *
+       * <code>repeated string databases = 6;</code>
+       */
+      public int getDatabasesCount() {
+        return databases_.size();
+      }
+      /**
+       * <pre>
+       * List databases included in the backup
+       * </pre>
+       *
+       * <code>repeated string databases = 6;</code>
+       */
+      public java.lang.String getDatabases(int index) {
+        return databases_.get(index);
+      }
+      /**
+       * <pre>
+       * List databases included in the backup
+       * </pre>
+       *
+       * <code>repeated string databases = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDatabasesBytes(int index) {
+        return databases_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List databases included in the backup
+       * </pre>
+       *
+       * <code>repeated string databases = 6;</code>
+       */
+      public Builder setDatabases(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDatabasesIsMutable();
+        databases_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List databases included in the backup
+       * </pre>
+       *
+       * <code>repeated string databases = 6;</code>
+       */
+      public Builder addDatabases(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureDatabasesIsMutable();
+        databases_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List databases included in the backup
+       * </pre>
+       *
+       * <code>repeated string databases = 6;</code>
+       */
+      public Builder addAllDatabases(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDatabasesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, databases_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List databases included in the backup
+       * </pre>
+       *
+       * <code>repeated string databases = 6;</code>
+       */
+      public Builder clearDatabases() {
+        databases_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List databases included in the backup
+       * </pre>
+       *
+       * <code>repeated string databases = 6;</code>
+       */
+      public Builder addDatabasesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureDatabasesIsMutable();
+        databases_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1480,14 +1742,15 @@ public final class PSB {
     java.lang.String[] descriptorData = {
       "\n*yandex/cloud/mdb/sqlserver/v1/backup.p" +
       "roto\022\035yandex.cloud.mdb.sqlserver.v1\032\037goo" +
-      "gle/protobuf/timestamp.proto\"\242\001\n\006Backup\022" +
+      "gle/protobuf/timestamp.proto\"\265\001\n\006Backup\022" +
       "\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreate" +
       "d_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022\031" +
       "\n\021source_cluster_id\030\004 \001(\t\022.\n\nstarted_at\030" +
-      "\005 \001(\0132\032.google.protobuf.TimestampBu\n!yan" +
-      "dex.cloud.api.mdb.sqlserver.v1B\003PSBZKgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/mdb/sqlserver/v1;sqlserverb\006proto3"
+      "\005 \001(\0132\032.google.protobuf.Timestamp\022\021\n\tdat" +
+      "abases\030\006 \003(\tBu\n!yandex.cloud.api.mdb.sql" +
+      "server.v1B\003PSBZKgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/mdb/sqlserver/v" +
+      "1;sqlserverb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1507,7 +1770,7 @@ public final class PSB {
     internal_static_yandex_cloud_mdb_sqlserver_v1_Backup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_Backup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "Databases", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

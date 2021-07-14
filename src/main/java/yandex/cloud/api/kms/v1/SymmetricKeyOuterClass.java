@@ -51,6 +51,14 @@ public final class SymmetricKeyOuterClass {
      * <code>AES_256 = 3;</code>
      */
     AES_256(3),
+    /**
+     * <pre>
+     * AES algorithm with 256-bit keys hosted by HSM
+     * </pre>
+     *
+     * <code>AES_256_HSM = 4;</code>
+     */
+    AES_256_HSM(4),
     UNRECOGNIZED(-1),
     ;
 
@@ -82,6 +90,14 @@ public final class SymmetricKeyOuterClass {
      * <code>AES_256 = 3;</code>
      */
     public static final int AES_256_VALUE = 3;
+    /**
+     * <pre>
+     * AES algorithm with 256-bit keys hosted by HSM
+     * </pre>
+     *
+     * <code>AES_256_HSM = 4;</code>
+     */
+    public static final int AES_256_HSM_VALUE = 4;
 
 
     public final int getNumber() {
@@ -106,6 +122,7 @@ public final class SymmetricKeyOuterClass {
         case 1: return AES_128;
         case 2: return AES_192;
         case 3: return AES_256;
+        case 4: return AES_256_HSM;
         default: return null;
       }
     }
@@ -3317,6 +3334,15 @@ public final class SymmetricKeyOuterClass {
      * <code>.google.protobuf.Timestamp destroy_at = 7;</code>
      */
     com.google.protobuf.TimestampOrBuilder getDestroyAtOrBuilder();
+
+    /**
+     * <pre>
+     * Indication of the version that is hosted by HSM.
+     * </pre>
+     *
+     * <code>bool hosted_by_hsm = 8;</code>
+     */
+    boolean getHostedByHsm();
   }
   /**
    * <pre>
@@ -3340,6 +3366,7 @@ public final class SymmetricKeyOuterClass {
       status_ = 0;
       algorithm_ = 0;
       primary_ = false;
+      hostedByHsm_ = false;
     }
 
     @java.lang.Override
@@ -3419,6 +3446,11 @@ public final class SymmetricKeyOuterClass {
                 destroyAt_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 64: {
+
+              hostedByHsm_ = input.readBool();
               break;
             }
             default: {
@@ -3816,6 +3848,19 @@ public final class SymmetricKeyOuterClass {
       return getDestroyAt();
     }
 
+    public static final int HOSTED_BY_HSM_FIELD_NUMBER = 8;
+    private boolean hostedByHsm_;
+    /**
+     * <pre>
+     * Indication of the version that is hosted by HSM.
+     * </pre>
+     *
+     * <code>bool hosted_by_hsm = 8;</code>
+     */
+    public boolean getHostedByHsm() {
+      return hostedByHsm_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3850,6 +3895,9 @@ public final class SymmetricKeyOuterClass {
       }
       if (destroyAt_ != null) {
         output.writeMessage(7, getDestroyAt());
+      }
+      if (hostedByHsm_ != false) {
+        output.writeBool(8, hostedByHsm_);
       }
       unknownFields.writeTo(output);
     }
@@ -3886,6 +3934,10 @@ public final class SymmetricKeyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getDestroyAt());
       }
+      if (hostedByHsm_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, hostedByHsm_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3920,6 +3972,8 @@ public final class SymmetricKeyOuterClass {
         result = result && getDestroyAt()
             .equals(other.getDestroyAt());
       }
+      result = result && (getHostedByHsm()
+          == other.getHostedByHsm());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3950,6 +4004,9 @@ public final class SymmetricKeyOuterClass {
         hash = (37 * hash) + DESTROY_AT_FIELD_NUMBER;
         hash = (53 * hash) + getDestroyAt().hashCode();
       }
+      hash = (37 * hash) + HOSTED_BY_HSM_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHostedByHsm());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4109,6 +4166,8 @@ public final class SymmetricKeyOuterClass {
           destroyAt_ = null;
           destroyAtBuilder_ = null;
         }
+        hostedByHsm_ = false;
+
         return this;
       }
 
@@ -4150,6 +4209,7 @@ public final class SymmetricKeyOuterClass {
         } else {
           result.destroyAt_ = destroyAtBuilder_.build();
         }
+        result.hostedByHsm_ = hostedByHsm_;
         onBuilt();
         return result;
       }
@@ -4220,6 +4280,9 @@ public final class SymmetricKeyOuterClass {
         }
         if (other.hasDestroyAt()) {
           mergeDestroyAt(other.getDestroyAt());
+        }
+        if (other.getHostedByHsm() != false) {
+          setHostedByHsm(other.getHostedByHsm());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4913,6 +4976,44 @@ public final class SymmetricKeyOuterClass {
         }
         return destroyAtBuilder_;
       }
+
+      private boolean hostedByHsm_ ;
+      /**
+       * <pre>
+       * Indication of the version that is hosted by HSM.
+       * </pre>
+       *
+       * <code>bool hosted_by_hsm = 8;</code>
+       */
+      public boolean getHostedByHsm() {
+        return hostedByHsm_;
+      }
+      /**
+       * <pre>
+       * Indication of the version that is hosted by HSM.
+       * </pre>
+       *
+       * <code>bool hosted_by_hsm = 8;</code>
+       */
+      public Builder setHostedByHsm(boolean value) {
+        
+        hostedByHsm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indication of the version that is hosted by HSM.
+       * </pre>
+       *
+       * <code>bool hosted_by_hsm = 8;</code>
+       */
+      public Builder clearHostedByHsm() {
+        
+        hostedByHsm_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5009,19 +5110,20 @@ public final class SymmetricKeyOuterClass {
       "\001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
       "\030\002 \001(\t:\0028\001\"H\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
       "ED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010INACTI" +
-      "VE\020\003\"\373\002\n\023SymmetricKeyVersion\022\n\n\002id\030\001 \001(\t" +
+      "VE\020\003\"\222\003\n\023SymmetricKeyVersion\022\n\n\002id\030\001 \001(\t" +
       "\022\016\n\006key_id\030\002 \001(\t\022?\n\006status\030\003 \001(\0162/.yande" +
       "x.cloud.kms.v1.SymmetricKeyVersion.Statu" +
       "s\022:\n\talgorithm\030\004 \001(\0162\'.yandex.cloud.kms." +
       "v1.SymmetricAlgorithm\022.\n\ncreated_at\030\005 \001(" +
       "\0132\032.google.protobuf.Timestamp\022\017\n\007primary" +
       "\030\006 \001(\010\022.\n\ndestroy_at\030\007 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\"Z\n\006Status\022\026\n\022STATUS_UNSPE" +
-      "CIFIED\020\000\022\n\n\006ACTIVE\020\001\022\035\n\031SCHEDULED_FOR_DE" +
-      "STRUCTION\020\002\022\r\n\tDESTROYED\020\003*`\n\022SymmetricA" +
-      "lgorithm\022#\n\037SYMMETRIC_ALGORITHM_UNSPECIF" +
-      "IED\020\000\022\013\n\007AES_128\020\001\022\013\n\007AES_192\020\002\022\013\n\007AES_2" +
-      "56\020\003BV\n\027yandex.cloud.api.kms.v1Z;github." +
+      "obuf.Timestamp\022\025\n\rhosted_by_hsm\030\010 \001(\010\"Z\n" +
+      "\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\n\n\006ACTIV" +
+      "E\020\001\022\035\n\031SCHEDULED_FOR_DESTRUCTION\020\002\022\r\n\tDE" +
+      "STROYED\020\003*q\n\022SymmetricAlgorithm\022#\n\037SYMME" +
+      "TRIC_ALGORITHM_UNSPECIFIED\020\000\022\013\n\007AES_128\020" +
+      "\001\022\013\n\007AES_192\020\002\022\013\n\007AES_256\020\003\022\017\n\013AES_256_H" +
+      "SM\020\004BV\n\027yandex.cloud.api.kms.v1Z;github." +
       "com/yandex-cloud/go-genproto/yandex/clou" +
       "d/kms/v1;kmsb\006proto3"
     };
@@ -5056,7 +5158,7 @@ public final class SymmetricKeyOuterClass {
     internal_static_yandex_cloud_kms_v1_SymmetricKeyVersion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_kms_v1_SymmetricKeyVersion_descriptor,
-        new java.lang.String[] { "Id", "KeyId", "Status", "Algorithm", "CreatedAt", "Primary", "DestroyAt", });
+        new java.lang.String[] { "Id", "KeyId", "Status", "Algorithm", "CreatedAt", "Primary", "DestroyAt", "HostedByHsm", });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
   }

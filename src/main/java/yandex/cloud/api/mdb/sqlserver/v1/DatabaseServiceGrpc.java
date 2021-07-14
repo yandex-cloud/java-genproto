@@ -126,6 +126,38 @@ public final class DatabaseServiceGrpc {
      return getCreateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRestoreMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Restore",
+      requestType = yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRestoreMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRestoreMethod;
+    if ((getRestoreMethod = DatabaseServiceGrpc.getRestoreMethod) == null) {
+      synchronized (DatabaseServiceGrpc.class) {
+        if ((getRestoreMethod = DatabaseServiceGrpc.getRestoreMethod) == null) {
+          DatabaseServiceGrpc.getRestoreMethod = getRestoreMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.sqlserver.v1.DatabaseService", "Restore"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new DatabaseServiceMethodDescriptorSupplier("Restore"))
+                  .build();
+          }
+        }
+     }
+     return getRestoreMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.sqlserver.v1.PSDS.DeleteDatabaseRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
 
@@ -221,6 +253,16 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
+     *Creates a new SQL Server database in the specified cluster from a backup
+     * </pre>
+     */
+    public void restore(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getRestoreMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified SQL Server database.
      * </pre>
      */
@@ -252,6 +294,13 @@ public final class DatabaseServiceGrpc {
                 yandex.cloud.api.mdb.sqlserver.v1.PSDS.CreateDatabaseRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
+          .addMethod(
+            getRestoreMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RESTORE)))
           .addMethod(
             getDeleteMethod(),
             asyncUnaryCall(
@@ -320,6 +369,17 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
+     *Creates a new SQL Server database in the specified cluster from a backup
+     * </pre>
+     */
+    public void restore(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getRestoreMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified SQL Server database.
      * </pre>
      */
@@ -380,6 +440,16 @@ public final class DatabaseServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.sqlserver.v1.PSDS.CreateDatabaseRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *Creates a new SQL Server database in the specified cluster from a backup
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation restore(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getRestoreMethod(), getCallOptions(), request);
     }
 
     /**
@@ -450,6 +520,17 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
+     *Creates a new SQL Server database in the specified cluster from a backup
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> restore(
+        yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getRestoreMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified SQL Server database.
      * </pre>
      */
@@ -463,7 +544,8 @@ public final class DatabaseServiceGrpc {
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
   private static final int METHODID_CREATE = 2;
-  private static final int METHODID_DELETE = 3;
+  private static final int METHODID_RESTORE = 3;
+  private static final int METHODID_DELETE = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -492,6 +574,10 @@ public final class DatabaseServiceGrpc {
           break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.mdb.sqlserver.v1.PSDS.CreateDatabaseRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_RESTORE:
+          serviceImpl.restore((yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE:
@@ -562,6 +648,7 @@ public final class DatabaseServiceGrpc {
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
+              .addMethod(getRestoreMethod())
               .addMethod(getDeleteMethod())
               .build();
         }

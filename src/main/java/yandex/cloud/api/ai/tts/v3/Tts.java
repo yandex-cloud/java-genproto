@@ -2729,6 +2729,10 @@ public final class Tts {
        * <code>WAV = 1;</code>
        */
       WAV(1),
+      /**
+       * <code>OGG_OPUS = 2;</code>
+       */
+      OGG_OPUS(2),
       UNRECOGNIZED(-1),
       ;
 
@@ -2744,6 +2748,10 @@ public final class Tts {
        * <code>WAV = 1;</code>
        */
       public static final int WAV_VALUE = 1;
+      /**
+       * <code>OGG_OPUS = 2;</code>
+       */
+      public static final int OGG_OPUS_VALUE = 2;
 
 
       public final int getNumber() {
@@ -2766,6 +2774,7 @@ public final class Tts {
         switch (value) {
           case 0: return CONTAINER_AUDIO_TYPE_UNSPECIFIED;
           case 1: return WAV;
+          case 2: return OGG_OPUS;
           default: return null;
         }
       }
@@ -8472,6 +8481,24 @@ public final class Tts {
      */
     yandex.cloud.api.ai.tts.v3.Tts.AudioTemplateOrBuilder getAudioTemplateOrBuilder();
 
+    /**
+     * <pre>
+     * hint to change speed
+     * </pre>
+     *
+     * <code>double speed = 3;</code>
+     */
+    double getSpeed();
+
+    /**
+     * <pre>
+     * hint to regulate volume
+     * </pre>
+     *
+     * <code>double volume = 4;</code>
+     */
+    double getVolume();
+
     public yandex.cloud.api.ai.tts.v3.Tts.Hints.HintCase getHintCase();
   }
   /**
@@ -8533,6 +8560,16 @@ public final class Tts {
               hintCase_ = 2;
               break;
             }
+            case 25: {
+              hintCase_ = 3;
+              hint_ = input.readDouble();
+              break;
+            }
+            case 33: {
+              hintCase_ = 4;
+              hint_ = input.readDouble();
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -8571,6 +8608,8 @@ public final class Tts {
         implements com.google.protobuf.Internal.EnumLite {
       VOICE(1),
       AUDIO_TEMPLATE(2),
+      SPEED(3),
+      VOLUME(4),
       HINT_NOT_SET(0);
       private final int value;
       private HintCase(int value) {
@@ -8588,6 +8627,8 @@ public final class Tts {
         switch (value) {
           case 1: return VOICE;
           case 2: return AUDIO_TEMPLATE;
+          case 3: return SPEED;
+          case 4: return VOLUME;
           case 0: return HINT_NOT_SET;
           default: return null;
         }
@@ -8692,6 +8733,36 @@ public final class Tts {
       return yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate.getDefaultInstance();
     }
 
+    public static final int SPEED_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * hint to change speed
+     * </pre>
+     *
+     * <code>double speed = 3;</code>
+     */
+    public double getSpeed() {
+      if (hintCase_ == 3) {
+        return (java.lang.Double) hint_;
+      }
+      return 0D;
+    }
+
+    public static final int VOLUME_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * hint to regulate volume
+     * </pre>
+     *
+     * <code>double volume = 4;</code>
+     */
+    public double getVolume() {
+      if (hintCase_ == 4) {
+        return (java.lang.Double) hint_;
+      }
+      return 0D;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8712,6 +8783,14 @@ public final class Tts {
       if (hintCase_ == 2) {
         output.writeMessage(2, (yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate) hint_);
       }
+      if (hintCase_ == 3) {
+        output.writeDouble(
+            3, (double)((java.lang.Double) hint_));
+      }
+      if (hintCase_ == 4) {
+        output.writeDouble(
+            4, (double)((java.lang.Double) hint_));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8727,6 +8806,16 @@ public final class Tts {
       if (hintCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (yandex.cloud.api.ai.tts.v3.Tts.AudioTemplate) hint_);
+      }
+      if (hintCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(
+              3, (double)((java.lang.Double) hint_));
+      }
+      if (hintCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(
+              4, (double)((java.lang.Double) hint_));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8756,6 +8845,18 @@ public final class Tts {
           result = result && getAudioTemplate()
               .equals(other.getAudioTemplate());
           break;
+        case 3:
+          result = result && (
+              java.lang.Double.doubleToLongBits(getSpeed())
+              == java.lang.Double.doubleToLongBits(
+                  other.getSpeed()));
+          break;
+        case 4:
+          result = result && (
+              java.lang.Double.doubleToLongBits(getVolume())
+              == java.lang.Double.doubleToLongBits(
+                  other.getVolume()));
+          break;
         case 0:
         default:
       }
@@ -8778,6 +8879,16 @@ public final class Tts {
         case 2:
           hash = (37 * hash) + AUDIO_TEMPLATE_FIELD_NUMBER;
           hash = (53 * hash) + getAudioTemplate().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + SPEED_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getSpeed()));
+          break;
+        case 4:
+          hash = (37 * hash) + VOLUME_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getVolume()));
           break;
         case 0:
         default:
@@ -8953,6 +9064,12 @@ public final class Tts {
             result.hint_ = audioTemplateBuilder_.build();
           }
         }
+        if (hintCase_ == 3) {
+          result.hint_ = hint_;
+        }
+        if (hintCase_ == 4) {
+          result.hint_ = hint_;
+        }
         result.hintCase_ = hintCase_;
         onBuilt();
         return result;
@@ -9011,6 +9128,14 @@ public final class Tts {
           }
           case AUDIO_TEMPLATE: {
             mergeAudioTemplate(other.getAudioTemplate());
+            break;
+          }
+          case SPEED: {
+            setSpeed(other.getSpeed());
+            break;
+          }
+          case VOLUME: {
+            setVolume(other.getVolume());
             break;
           }
           case HINT_NOT_SET: {
@@ -9332,6 +9457,90 @@ public final class Tts {
         onChanged();;
         return audioTemplateBuilder_;
       }
+
+      /**
+       * <pre>
+       * hint to change speed
+       * </pre>
+       *
+       * <code>double speed = 3;</code>
+       */
+      public double getSpeed() {
+        if (hintCase_ == 3) {
+          return (java.lang.Double) hint_;
+        }
+        return 0D;
+      }
+      /**
+       * <pre>
+       * hint to change speed
+       * </pre>
+       *
+       * <code>double speed = 3;</code>
+       */
+      public Builder setSpeed(double value) {
+        hintCase_ = 3;
+        hint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hint to change speed
+       * </pre>
+       *
+       * <code>double speed = 3;</code>
+       */
+      public Builder clearSpeed() {
+        if (hintCase_ == 3) {
+          hintCase_ = 0;
+          hint_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <pre>
+       * hint to regulate volume
+       * </pre>
+       *
+       * <code>double volume = 4;</code>
+       */
+      public double getVolume() {
+        if (hintCase_ == 4) {
+          return (java.lang.Double) hint_;
+        }
+        return 0D;
+      }
+      /**
+       * <pre>
+       * hint to regulate volume
+       * </pre>
+       *
+       * <code>double volume = 4;</code>
+       */
+      public Builder setVolume(double value) {
+        hintCase_ = 4;
+        hint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hint to regulate volume
+       * </pre>
+       *
+       * <code>double volume = 4;</code>
+       */
+      public Builder clearVolume() {
+        if (hintCase_ == 4) {
+          hintCase_ = 0;
+          hint_ = null;
+          onChanged();
+        }
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9498,7 +9707,7 @@ public final class Tts {
 
     /**
      * <pre>
-     * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+     * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -9506,7 +9715,7 @@ public final class Tts {
     boolean hasOutputAudioSpec();
     /**
      * <pre>
-     * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+     * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -9514,7 +9723,7 @@ public final class Tts {
     yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions getOutputAudioSpec();
     /**
      * <pre>
-     * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+     * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -9878,7 +10087,7 @@ public final class Tts {
     private yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions outputAudioSpec_;
     /**
      * <pre>
-     * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+     * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -9888,7 +10097,7 @@ public final class Tts {
     }
     /**
      * <pre>
-     * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+     * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -9898,7 +10107,7 @@ public final class Tts {
     }
     /**
      * <pre>
-     * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+     * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
      * </pre>
      *
      * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -11065,7 +11274,7 @@ public final class Tts {
           yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions, yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptions.Builder, yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptionsOrBuilder> outputAudioSpecBuilder_;
       /**
        * <pre>
-       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -11075,7 +11284,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -11089,7 +11298,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -11109,7 +11318,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -11127,7 +11336,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -11149,7 +11358,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -11167,7 +11376,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -11179,7 +11388,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -11194,7 +11403,7 @@ public final class Tts {
       }
       /**
        * <pre>
-       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM.
+       * Optional. Default: 22050 Hz, linear 16-bit signed little-endian PCM, with WAV header
        * </pre>
        *
        * <code>.speechkit.tts.v3.AudioFormatOptions output_audio_spec = 5;</code>
@@ -11346,35 +11555,36 @@ public final class Tts {
       "s.v3.RawAudio.AudioEncoding\022\031\n\021sample_ra" +
       "te_hertz\030\002 \001(\003\"A\n\rAudioEncoding\022\036\n\032AUDIO" +
       "_ENCODING_UNSPECIFIED\020\000\022\020\n\014LINEAR16_PCM\020" +
-      "\001\"\250\001\n\016ContainerAudio\022Q\n\024container_audio_" +
+      "\001\"\266\001\n\016ContainerAudio\022Q\n\024container_audio_" +
       "type\030\001 \001(\01623.speechkit.tts.v3.ContainerA" +
-      "udio.ContainerAudioType\"C\n\022ContainerAudi" +
+      "udio.ContainerAudioType\"Q\n\022ContainerAudi" +
       "oType\022$\n CONTAINER_AUDIO_TYPE_UNSPECIFIE" +
-      "D\020\000\022\007\n\003WAV\020\001\"=\n\014TextVariable\022\025\n\rvariable" +
-      "_name\030\001 \001(\t\022\026\n\016variable_value\030\002 \001(\t\"]\n\rA" +
-      "udioVariable\022\025\n\rvariable_name\030\001 \001(\t\022\031\n\021v" +
-      "ariable_start_ms\030\002 \001(\003\022\032\n\022variable_lengt" +
-      "h_ms\030\003 \001(\003\"O\n\032UtteranceSynthesisResponse" +
-      "\0221\n\013audio_chunk\030\001 \001(\0132\034.speechkit.tts.v3" +
-      ".AudioChunk\"\251\001\n\rAudioTemplate\022-\n\005audio\030\001" +
-      " \001(\0132\036.speechkit.tts.v3.AudioContent\0225\n\r" +
-      "text_template\030\002 \001(\0132\036.speechkit.tts.v3.T" +
-      "extTemplate\0222\n\tvariables\030\003 \003(\0132\037.speechk" +
-      "it.tts.v3.AudioVariable\"\032\n\nAudioChunk\022\014\n" +
-      "\004data\030\001 \001(\014\"X\n\014TextTemplate\022\025\n\rtext_temp" +
-      "late\030\001 \001(\t\0221\n\tvariables\030\002 \003(\0132\036.speechki" +
-      "t.tts.v3.TextVariable\"[\n\005Hints\022\017\n\005voice\030" +
-      "\001 \001(\tH\000\0229\n\016audio_template\030\002 \001(\0132\037.speech" +
-      "kit.tts.v3.AudioTemplateH\000B\006\n\004Hint\"\351\001\n\031U" +
-      "tteranceSynthesisRequest\022\r\n\005model\030\001 \001(\t\022" +
-      "\016\n\004text\030\002 \001(\tH\000\0227\n\rtext_template\030\003 \001(\0132\036" +
-      ".speechkit.tts.v3.TextTemplateH\000\022&\n\005hint" +
-      "s\030\004 \003(\0132\027.speechkit.tts.v3.Hints\022?\n\021outp" +
-      "ut_audio_spec\030\005 \001(\0132$.speechkit.tts.v3.A" +
-      "udioFormatOptionsB\013\n\tUtteranceB\\\n\032yandex" +
-      ".cloud.api.ai.tts.v3Z>github.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/ai/tts/v3" +
-      ";ttsb\006proto3"
+      "D\020\000\022\007\n\003WAV\020\001\022\014\n\010OGG_OPUS\020\002\"=\n\014TextVariab" +
+      "le\022\025\n\rvariable_name\030\001 \001(\t\022\026\n\016variable_va" +
+      "lue\030\002 \001(\t\"]\n\rAudioVariable\022\025\n\rvariable_n" +
+      "ame\030\001 \001(\t\022\031\n\021variable_start_ms\030\002 \001(\003\022\032\n\022" +
+      "variable_length_ms\030\003 \001(\003\"O\n\032UtteranceSyn" +
+      "thesisResponse\0221\n\013audio_chunk\030\001 \001(\0132\034.sp" +
+      "eechkit.tts.v3.AudioChunk\"\251\001\n\rAudioTempl" +
+      "ate\022-\n\005audio\030\001 \001(\0132\036.speechkit.tts.v3.Au" +
+      "dioContent\0225\n\rtext_template\030\002 \001(\0132\036.spee" +
+      "chkit.tts.v3.TextTemplate\0222\n\tvariables\030\003" +
+      " \003(\0132\037.speechkit.tts.v3.AudioVariable\"\032\n" +
+      "\nAudioChunk\022\014\n\004data\030\001 \001(\014\"X\n\014TextTemplat" +
+      "e\022\025\n\rtext_template\030\001 \001(\t\0221\n\tvariables\030\002 " +
+      "\003(\0132\036.speechkit.tts.v3.TextVariable\"~\n\005H" +
+      "ints\022\017\n\005voice\030\001 \001(\tH\000\0229\n\016audio_template\030" +
+      "\002 \001(\0132\037.speechkit.tts.v3.AudioTemplateH\000" +
+      "\022\017\n\005speed\030\003 \001(\001H\000\022\020\n\006volume\030\004 \001(\001H\000B\006\n\004H" +
+      "int\"\351\001\n\031UtteranceSynthesisRequest\022\r\n\005mod" +
+      "el\030\001 \001(\t\022\016\n\004text\030\002 \001(\tH\000\0227\n\rtext_templat" +
+      "e\030\003 \001(\0132\036.speechkit.tts.v3.TextTemplateH" +
+      "\000\022&\n\005hints\030\004 \003(\0132\027.speechkit.tts.v3.Hint" +
+      "s\022?\n\021output_audio_spec\030\005 \001(\0132$.speechkit" +
+      ".tts.v3.AudioFormatOptionsB\013\n\tUtteranceB" +
+      "\\\n\032yandex.cloud.api.ai.tts.v3Z>github.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "ai/tts/v3;ttsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11453,7 +11663,7 @@ public final class Tts {
     internal_static_speechkit_tts_v3_Hints_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_Hints_descriptor,
-        new java.lang.String[] { "Voice", "AudioTemplate", "Hint", });
+        new java.lang.String[] { "Voice", "AudioTemplate", "Speed", "Volume", "Hint", });
     internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_fieldAccessorTable = new

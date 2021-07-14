@@ -4367,6 +4367,1111 @@ public final class PSDS {
 
   }
 
+  public interface RestoreDatabaseMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the SQLServer cluster where a database is being created.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * ID of the SQLServer cluster where a database is being created.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Name of the SQLServer database that is being created.
+     * </pre>
+     *
+     * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getDatabaseName();
+    /**
+     * <pre>
+     * Name of the SQLServer database that is being created.
+     * </pre>
+     *
+     * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getDatabaseNameBytes();
+
+    /**
+     * <pre>
+     *name of the database which backup will be used to restore the database
+     * </pre>
+     *
+     * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getFromDatabase();
+    /**
+     * <pre>
+     *name of the database which backup will be used to restore the database
+     * </pre>
+     *
+     * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getFromDatabaseBytes();
+
+    /**
+     * <pre>
+     *ID of a backup to be used
+     * </pre>
+     *
+     * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getBackupId();
+    /**
+     * <pre>
+     *ID of a backup to be used
+     * </pre>
+     *
+     * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getBackupIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseMetadata}
+   */
+  public  static final class RestoreDatabaseMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseMetadata)
+      RestoreDatabaseMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RestoreDatabaseMetadata.newBuilder() to construct.
+    private RestoreDatabaseMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RestoreDatabaseMetadata() {
+      clusterId_ = "";
+      databaseName_ = "";
+      fromDatabase_ = "";
+      backupId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RestoreDatabaseMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              databaseName_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fromDatabase_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              backupId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSDS.internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSDS.internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata.class, yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * ID of the SQLServer cluster where a database is being created.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the SQLServer cluster where a database is being created.
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATABASE_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object databaseName_;
+    /**
+     * <pre>
+     * Name of the SQLServer database that is being created.
+     * </pre>
+     *
+     * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getDatabaseName() {
+      java.lang.Object ref = databaseName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        databaseName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the SQLServer database that is being created.
+     * </pre>
+     *
+     * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDatabaseNameBytes() {
+      java.lang.Object ref = databaseName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        databaseName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FROM_DATABASE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object fromDatabase_;
+    /**
+     * <pre>
+     *name of the database which backup will be used to restore the database
+     * </pre>
+     *
+     * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getFromDatabase() {
+      java.lang.Object ref = fromDatabase_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fromDatabase_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *name of the database which backup will be used to restore the database
+     * </pre>
+     *
+     * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getFromDatabaseBytes() {
+      java.lang.Object ref = fromDatabase_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromDatabase_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BACKUP_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object backupId_;
+    /**
+     * <pre>
+     *ID of a backup to be used
+     * </pre>
+     *
+     * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getBackupId() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        backupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *ID of a backup to be used
+     * </pre>
+     *
+     * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getBackupIdBytes() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!getDatabaseNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, databaseName_);
+      }
+      if (!getFromDatabaseBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fromDatabase_);
+      }
+      if (!getBackupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, backupId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!getDatabaseNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, databaseName_);
+      }
+      if (!getFromDatabaseBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fromDatabase_);
+      }
+      if (!getBackupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, backupId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata other = (yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getDatabaseName()
+          .equals(other.getDatabaseName());
+      result = result && getFromDatabase()
+          .equals(other.getFromDatabase());
+      result = result && getBackupId()
+          .equals(other.getBackupId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + DATABASE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabaseName().hashCode();
+      hash = (37 * hash) + FROM_DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getFromDatabase().hashCode();
+      hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBackupId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseMetadata)
+        yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSDS.internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSDS.internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata.class, yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        databaseName_ = "";
+
+        fromDatabase_ = "";
+
+        backupId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSDS.internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata build() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata buildPartial() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata result = new yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata(this);
+        result.clusterId_ = clusterId_;
+        result.databaseName_ = databaseName_;
+        result.fromDatabase_ = fromDatabase_;
+        result.backupId_ = backupId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata) {
+          return mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata other) {
+        if (other == yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getDatabaseName().isEmpty()) {
+          databaseName_ = other.databaseName_;
+          onChanged();
+        }
+        if (!other.getFromDatabase().isEmpty()) {
+          fromDatabase_ = other.fromDatabase_;
+          onChanged();
+        }
+        if (!other.getBackupId().isEmpty()) {
+          backupId_ = other.backupId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * ID of the SQLServer cluster where a database is being created.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the SQLServer cluster where a database is being created.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the SQLServer cluster where a database is being created.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the SQLServer cluster where a database is being created.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the SQLServer cluster where a database is being created.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object databaseName_ = "";
+      /**
+       * <pre>
+       * Name of the SQLServer database that is being created.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getDatabaseName() {
+        java.lang.Object ref = databaseName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          databaseName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the SQLServer database that is being created.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDatabaseNameBytes() {
+        java.lang.Object ref = databaseName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          databaseName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the SQLServer database that is being created.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setDatabaseName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        databaseName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the SQLServer database that is being created.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearDatabaseName() {
+        
+        databaseName_ = getDefaultInstance().getDatabaseName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the SQLServer database that is being created.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setDatabaseNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        databaseName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fromDatabase_ = "";
+      /**
+       * <pre>
+       *name of the database which backup will be used to restore the database
+       * </pre>
+       *
+       * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getFromDatabase() {
+        java.lang.Object ref = fromDatabase_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fromDatabase_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *name of the database which backup will be used to restore the database
+       * </pre>
+       *
+       * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getFromDatabaseBytes() {
+        java.lang.Object ref = fromDatabase_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromDatabase_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *name of the database which backup will be used to restore the database
+       * </pre>
+       *
+       * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setFromDatabase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fromDatabase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *name of the database which backup will be used to restore the database
+       * </pre>
+       *
+       * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearFromDatabase() {
+        
+        fromDatabase_ = getDefaultInstance().getFromDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *name of the database which backup will be used to restore the database
+       * </pre>
+       *
+       * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setFromDatabaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fromDatabase_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object backupId_ = "";
+      /**
+       * <pre>
+       *ID of a backup to be used
+       * </pre>
+       *
+       * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getBackupId() {
+        java.lang.Object ref = backupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *ID of a backup to be used
+       * </pre>
+       *
+       * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getBackupIdBytes() {
+        java.lang.Object ref = backupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *ID of a backup to be used
+       * </pre>
+       *
+       * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setBackupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *ID of a backup to be used
+       * </pre>
+       *
+       * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearBackupId() {
+        
+        backupId_ = getDefaultInstance().getBackupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *ID of a backup to be used
+       * </pre>
+       *
+       * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setBackupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseMetadata)
+    private static final yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata();
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RestoreDatabaseMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RestoreDatabaseMetadata>() {
+      @java.lang.Override
+      public RestoreDatabaseMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RestoreDatabaseMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RestoreDatabaseMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RestoreDatabaseMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface DeleteDatabaseRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.sqlserver.v1.DeleteDatabaseRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -5903,6 +7008,1374 @@ public final class PSDS {
 
   }
 
+  public interface RestoreDatabaseRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     *Required. ID of the SQL Server cluster to restore a database in.
+     * To get the cluster ID, use a [ClusterService.List] request
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     *Required. ID of the SQL Server cluster to restore a database in.
+     * To get the cluster ID, use a [ClusterService.List] request
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * Name of the SQLServer database that is being restored.
+     * </pre>
+     *
+     * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getDatabaseName();
+    /**
+     * <pre>
+     * Name of the SQLServer database that is being restored.
+     * </pre>
+     *
+     * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getDatabaseNameBytes();
+
+    /**
+     * <pre>
+     *name of the database which backup will be used to restore the database
+     * </pre>
+     *
+     * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getFromDatabase();
+    /**
+     * <pre>
+     *name of the database which backup will be used to restore the database
+     * </pre>
+     *
+     * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getFromDatabaseBytes();
+
+    /**
+     * <pre>
+     *ID of a backup to be used
+     * </pre>
+     *
+     * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getBackupId();
+    /**
+     * <pre>
+     *ID of a backup to be used
+     * </pre>
+     *
+     * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getBackupIdBytes();
+
+    /**
+     * <pre>
+     *Timestamp which is used for Point-in-Time recovery
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+     */
+    boolean hasTime();
+    /**
+     * <pre>
+     *Timestamp which is used for Point-in-Time recovery
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.Timestamp getTime();
+    /**
+     * <pre>
+     *Timestamp which is used for Point-in-Time recovery
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getTimeOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseRequest}
+   */
+  public  static final class RestoreDatabaseRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseRequest)
+      RestoreDatabaseRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RestoreDatabaseRequest.newBuilder() to construct.
+    private RestoreDatabaseRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RestoreDatabaseRequest() {
+      clusterId_ = "";
+      databaseName_ = "";
+      fromDatabase_ = "";
+      backupId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RestoreDatabaseRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              databaseName_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fromDatabase_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              backupId_ = s;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (time_ != null) {
+                subBuilder = time_.toBuilder();
+              }
+              time_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(time_);
+                time_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSDS.internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.sqlserver.v1.PSDS.internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest.class, yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest.Builder.class);
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     *Required. ID of the SQL Server cluster to restore a database in.
+     * To get the cluster ID, use a [ClusterService.List] request
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *Required. ID of the SQL Server cluster to restore a database in.
+     * To get the cluster ID, use a [ClusterService.List] request
+     * </pre>
+     *
+     * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATABASE_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object databaseName_;
+    /**
+     * <pre>
+     * Name of the SQLServer database that is being restored.
+     * </pre>
+     *
+     * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getDatabaseName() {
+      java.lang.Object ref = databaseName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        databaseName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the SQLServer database that is being restored.
+     * </pre>
+     *
+     * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDatabaseNameBytes() {
+      java.lang.Object ref = databaseName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        databaseName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FROM_DATABASE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object fromDatabase_;
+    /**
+     * <pre>
+     *name of the database which backup will be used to restore the database
+     * </pre>
+     *
+     * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getFromDatabase() {
+      java.lang.Object ref = fromDatabase_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fromDatabase_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *name of the database which backup will be used to restore the database
+     * </pre>
+     *
+     * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getFromDatabaseBytes() {
+      java.lang.Object ref = fromDatabase_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromDatabase_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BACKUP_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object backupId_;
+    /**
+     * <pre>
+     *ID of a backup to be used
+     * </pre>
+     *
+     * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getBackupId() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        backupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *ID of a backup to be used
+     * </pre>
+     *
+     * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getBackupIdBytes() {
+      java.lang.Object ref = backupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIME_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp time_;
+    /**
+     * <pre>
+     *Timestamp which is used for Point-in-Time recovery
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+     */
+    public boolean hasTime() {
+      return time_ != null;
+    }
+    /**
+     * <pre>
+     *Timestamp which is used for Point-in-Time recovery
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.Timestamp getTime() {
+      return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+    }
+    /**
+     * <pre>
+     *Timestamp which is used for Point-in-Time recovery
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getTimeOrBuilder() {
+      return getTime();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClusterIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+      }
+      if (!getDatabaseNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, databaseName_);
+      }
+      if (!getFromDatabaseBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fromDatabase_);
+      }
+      if (!getBackupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, backupId_);
+      }
+      if (time_ != null) {
+        output.writeMessage(6, getTime());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClusterIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+      }
+      if (!getDatabaseNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, databaseName_);
+      }
+      if (!getFromDatabaseBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fromDatabase_);
+      }
+      if (!getBackupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, backupId_);
+      }
+      if (time_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getTime());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest other = (yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest) obj;
+
+      boolean result = true;
+      result = result && getClusterId()
+          .equals(other.getClusterId());
+      result = result && getDatabaseName()
+          .equals(other.getDatabaseName());
+      result = result && getFromDatabase()
+          .equals(other.getFromDatabase());
+      result = result && getBackupId()
+          .equals(other.getBackupId());
+      result = result && (hasTime() == other.hasTime());
+      if (hasTime()) {
+        result = result && getTime()
+            .equals(other.getTime());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      hash = (37 * hash) + DATABASE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabaseName().hashCode();
+      hash = (37 * hash) + FROM_DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getFromDatabase().hashCode();
+      hash = (37 * hash) + BACKUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBackupId().hashCode();
+      if (hasTime()) {
+        hash = (37 * hash) + TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getTime().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseRequest)
+        yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSDS.internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSDS.internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest.class, yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        clusterId_ = "";
+
+        databaseName_ = "";
+
+        fromDatabase_ = "";
+
+        backupId_ = "";
+
+        if (timeBuilder_ == null) {
+          time_ = null;
+        } else {
+          time_ = null;
+          timeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSDS.internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest build() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest buildPartial() {
+        yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest result = new yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest(this);
+        result.clusterId_ = clusterId_;
+        result.databaseName_ = databaseName_;
+        result.fromDatabase_ = fromDatabase_;
+        result.backupId_ = backupId_;
+        if (timeBuilder_ == null) {
+          result.time_ = time_;
+        } else {
+          result.time_ = timeBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest) {
+          return mergeFrom((yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest other) {
+        if (other == yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest.getDefaultInstance()) return this;
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (!other.getDatabaseName().isEmpty()) {
+          databaseName_ = other.databaseName_;
+          onChanged();
+        }
+        if (!other.getFromDatabase().isEmpty()) {
+          fromDatabase_ = other.fromDatabase_;
+          onChanged();
+        }
+        if (!other.getBackupId().isEmpty()) {
+          backupId_ = other.backupId_;
+          onChanged();
+        }
+        if (other.hasTime()) {
+          mergeTime(other.getTime());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       *Required. ID of the SQL Server cluster to restore a database in.
+       * To get the cluster ID, use a [ClusterService.List] request
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *Required. ID of the SQL Server cluster to restore a database in.
+       * To get the cluster ID, use a [ClusterService.List] request
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *Required. ID of the SQL Server cluster to restore a database in.
+       * To get the cluster ID, use a [ClusterService.List] request
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Required. ID of the SQL Server cluster to restore a database in.
+       * To get the cluster ID, use a [ClusterService.List] request
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *Required. ID of the SQL Server cluster to restore a database in.
+       * To get the cluster ID, use a [ClusterService.List] request
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object databaseName_ = "";
+      /**
+       * <pre>
+       * Name of the SQLServer database that is being restored.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getDatabaseName() {
+        java.lang.Object ref = databaseName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          databaseName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the SQLServer database that is being restored.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDatabaseNameBytes() {
+        java.lang.Object ref = databaseName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          databaseName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the SQLServer database that is being restored.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setDatabaseName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        databaseName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the SQLServer database that is being restored.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearDatabaseName() {
+        
+        databaseName_ = getDefaultInstance().getDatabaseName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the SQLServer database that is being restored.
+       * </pre>
+       *
+       * <code>string database_name = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setDatabaseNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        databaseName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fromDatabase_ = "";
+      /**
+       * <pre>
+       *name of the database which backup will be used to restore the database
+       * </pre>
+       *
+       * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getFromDatabase() {
+        java.lang.Object ref = fromDatabase_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fromDatabase_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *name of the database which backup will be used to restore the database
+       * </pre>
+       *
+       * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getFromDatabaseBytes() {
+        java.lang.Object ref = fromDatabase_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromDatabase_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *name of the database which backup will be used to restore the database
+       * </pre>
+       *
+       * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setFromDatabase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fromDatabase_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *name of the database which backup will be used to restore the database
+       * </pre>
+       *
+       * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearFromDatabase() {
+        
+        fromDatabase_ = getDefaultInstance().getFromDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *name of the database which backup will be used to restore the database
+       * </pre>
+       *
+       * <code>string from_database = 3 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setFromDatabaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fromDatabase_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object backupId_ = "";
+      /**
+       * <pre>
+       *ID of a backup to be used
+       * </pre>
+       *
+       * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getBackupId() {
+        java.lang.Object ref = backupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *ID of a backup to be used
+       * </pre>
+       *
+       * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getBackupIdBytes() {
+        java.lang.Object ref = backupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *ID of a backup to be used
+       * </pre>
+       *
+       * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setBackupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *ID of a backup to be used
+       * </pre>
+       *
+       * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearBackupId() {
+        
+        backupId_ = getDefaultInstance().getBackupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *ID of a backup to be used
+       * </pre>
+       *
+       * <code>string backup_id = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setBackupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        backupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp time_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeBuilder_;
+      /**
+       * <pre>
+       *Timestamp which is used for Point-in-Time recovery
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public boolean hasTime() {
+        return timeBuilder_ != null || time_ != null;
+      }
+      /**
+       * <pre>
+       *Timestamp which is used for Point-in-Time recovery
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.Timestamp getTime() {
+        if (timeBuilder_ == null) {
+          return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+        } else {
+          return timeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       *Timestamp which is used for Point-in-Time recovery
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTime(com.google.protobuf.Timestamp value) {
+        if (timeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          time_ = value;
+          onChanged();
+        } else {
+          timeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       *Timestamp which is used for Point-in-Time recovery
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (timeBuilder_ == null) {
+          time_ = builderForValue.build();
+          onChanged();
+        } else {
+          timeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       *Timestamp which is used for Point-in-Time recovery
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeTime(com.google.protobuf.Timestamp value) {
+        if (timeBuilder_ == null) {
+          if (time_ != null) {
+            time_ =
+              com.google.protobuf.Timestamp.newBuilder(time_).mergeFrom(value).buildPartial();
+          } else {
+            time_ = value;
+          }
+          onChanged();
+        } else {
+          timeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       *Timestamp which is used for Point-in-Time recovery
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearTime() {
+        if (timeBuilder_ == null) {
+          time_ = null;
+          onChanged();
+        } else {
+          time_ = null;
+          timeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       *Timestamp which is used for Point-in-Time recovery
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTimeBuilder() {
+        
+        onChanged();
+        return getTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       *Timestamp which is used for Point-in-Time recovery
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimeOrBuilder() {
+        if (timeBuilder_ != null) {
+          return timeBuilder_.getMessageOrBuilder();
+        } else {
+          return time_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+        }
+      }
+      /**
+       * <pre>
+       *Timestamp which is used for Point-in-Time recovery
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp time = 6 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTimeFieldBuilder() {
+        if (timeBuilder_ == null) {
+          timeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTime(),
+                  getParentForChildren(),
+                  isClean());
+          time_ = null;
+        }
+        return timeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.sqlserver.v1.RestoreDatabaseRequest)
+    private static final yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest();
+    }
+
+    public static yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RestoreDatabaseRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RestoreDatabaseRequest>() {
+      @java.lang.Override
+      public RestoreDatabaseRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RestoreDatabaseRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RestoreDatabaseRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RestoreDatabaseRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_sqlserver_v1_GetDatabaseRequest_descriptor;
   private static final 
@@ -5929,6 +8402,11 @@ public final class PSDS {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_sqlserver_v1_CreateDatabaseMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_sqlserver_v1_DeleteDatabaseRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5938,6 +8416,11 @@ public final class PSDS {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_sqlserver_v1_DeleteDatabaseMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5949,52 +8432,67 @@ public final class PSDS {
     java.lang.String[] descriptorData = {
       "\n4yandex/cloud/mdb/sqlserver/v1/database" +
       "_service.proto\022\035yandex.cloud.mdb.sqlserv" +
-      "er.v1\032\034google/api/annotations.proto\032 yan" +
-      "dex/cloud/api/operation.proto\032&yandex/cl" +
-      "oud/operation/operation.proto\032\035yandex/cl" +
-      "oud/validation.proto\032,yandex/cloud/mdb/s" +
-      "qlserver/v1/database.proto\"m\n\022GetDatabas" +
-      "eRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\0225\n\rdatabase_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362" +
-      "\3071\016[a-zA-Z0-9_-]*\"v\n\024ListDatabasesReques" +
-      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
-      "age_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token" +
-      "\030\003 \001(\tB\t\212\3101\005<=100\"l\n\025ListDatabasesRespon" +
-      "se\022:\n\tdatabases\030\001 \003(\0132\'.yandex.cloud.mdb" +
-      ".sqlserver.v1.Database\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t\"\203\001\n\025CreateDatabaseRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022H\n\rdatabase_" +
-      "spec\030\002 \001(\0132+.yandex.cloud.mdb.sqlserver." +
-      "v1.DatabaseSpecB\004\350\3071\001\"C\n\026CreateDatabaseM" +
-      "etadata\022\022\n\ncluster_id\030\001 \001(\t\022\025\n\rdatabase_" +
-      "name\030\002 \001(\t\"p\n\025DeleteDatabaseRequest\022 \n\nc" +
-      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\rdatabas" +
-      "e_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
-      "_-]*\"C\n\026DeleteDatabaseMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\022\025\n\rdatabase_name\030\002 \001(\t2\231\006\n\017Da" +
-      "tabaseService\022\254\001\n\003Get\0221.yandex.cloud.mdb" +
-      ".sqlserver.v1.GetDatabaseRequest\032\'.yande" +
-      "x.cloud.mdb.sqlserver.v1.Database\"I\202\323\344\223\002" +
-      "C\022A/mdb/sqlserver/v1/clusters/{cluster_i" +
-      "d}/databases/{database_name}\022\254\001\n\004List\0223." +
-      "yandex.cloud.mdb.sqlserver.v1.ListDataba" +
-      "sesRequest\0324.yandex.cloud.mdb.sqlserver." +
-      "v1.ListDatabasesResponse\"9\202\323\344\223\0023\0221/mdb/s" +
-      "qlserver/v1/clusters/{cluster_id}/databa" +
-      "ses\022\305\001\n\006Create\0224.yandex.cloud.mdb.sqlser" +
-      "ver.v1.CreateDatabaseRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"b\202\323\344\223\0026\"1/mdb/sq" +
-      "lserver/v1/clusters/{cluster_id}/databas" +
-      "es:\001*\262\322*\"\n\026CreateDatabaseMetadata\022\010Datab" +
-      "ase\022\337\001\n\006Delete\0224.yandex.cloud.mdb.sqlser" +
-      "ver.v1.DeleteDatabaseRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"|\202\323\344\223\002C*A/mdb/sq" +
-      "lserver/v1/clusters/{cluster_id}/databas" +
-      "es/{database_name}\262\322*/\n\026DeleteDatabaseMe" +
-      "tadata\022\025google.protobuf.EmptyBv\n!yandex." +
-      "cloud.api.mdb.sqlserver.v1B\004PSDSZKgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/mdb/sqlserver/v1;sqlserverb\006proto3"
+      "er.v1\032\034google/api/annotations.proto\032\037goo" +
+      "gle/protobuf/timestamp.proto\032 yandex/clo" +
+      "ud/api/operation.proto\032&yandex/cloud/ope" +
+      "ration/operation.proto\032\035yandex/cloud/val" +
+      "idation.proto\032,yandex/cloud/mdb/sqlserve" +
+      "r/v1/database.proto\"m\n\022GetDatabaseReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0225\n\rd" +
+      "atabase_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-z" +
+      "A-Z0-9_-]*\"v\n\024ListDatabasesRequest\022 \n\ncl" +
+      "uster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\"l\n\025ListDatabasesResponse\022:\n\td" +
+      "atabases\030\001 \003(\0132\'.yandex.cloud.mdb.sqlser" +
+      "ver.v1.Database\022\027\n\017next_page_token\030\002 \001(\t" +
+      "\"\203\001\n\025CreateDatabaseRequest\022 \n\ncluster_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022H\n\rdatabase_spec\030\002 " +
+      "\001(\0132+.yandex.cloud.mdb.sqlserver.v1.Data" +
+      "baseSpecB\004\350\3071\001\"C\n\026CreateDatabaseMetadata" +
+      "\022\022\n\ncluster_id\030\001 \001(\t\022\025\n\rdatabase_name\030\002 " +
+      "\001(\t\"\206\001\n\027RestoreDatabaseMetadata\022\030\n\nclust" +
+      "er_id\030\001 \001(\tB\004\350\3071\001\022\033\n\rdatabase_name\030\002 \001(\t" +
+      "B\004\350\3071\001\022\033\n\rfrom_database\030\003 \001(\tB\004\350\3071\001\022\027\n\tb" +
+      "ackup_id\030\004 \001(\tB\004\350\3071\001\"p\n\025DeleteDatabaseRe" +
+      "quest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "5\n\rdatabase_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016" +
+      "[a-zA-Z0-9_-]*\"C\n\026DeleteDatabaseMetadata" +
+      "\022\022\n\ncluster_id\030\001 \001(\t\022\025\n\rdatabase_name\030\002 " +
+      "\001(\t\"\275\001\n\026RestoreDatabaseRequest\022 \n\ncluste" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\rdatabase_nam" +
+      "e\030\002 \001(\tB\004\350\3071\001\022\033\n\rfrom_database\030\003 \001(\tB\004\350\307" +
+      "1\001\022\027\n\tbackup_id\030\004 \001(\tB\004\350\3071\001\022.\n\004time\030\006 \001(" +
+      "\0132\032.google.protobuf.TimestampB\004\350\3071\0012\344\007\n\017" +
+      "DatabaseService\022\254\001\n\003Get\0221.yandex.cloud.m" +
+      "db.sqlserver.v1.GetDatabaseRequest\032\'.yan" +
+      "dex.cloud.mdb.sqlserver.v1.Database\"I\202\323\344" +
+      "\223\002C\022A/mdb/sqlserver/v1/clusters/{cluster" +
+      "_id}/databases/{database_name}\022\254\001\n\004List\022" +
+      "3.yandex.cloud.mdb.sqlserver.v1.ListData" +
+      "basesRequest\0324.yandex.cloud.mdb.sqlserve" +
+      "r.v1.ListDatabasesResponse\"9\202\323\344\223\0023\0221/mdb" +
+      "/sqlserver/v1/clusters/{cluster_id}/data" +
+      "bases\022\305\001\n\006Create\0224.yandex.cloud.mdb.sqls" +
+      "erver.v1.CreateDatabaseRequest\032!.yandex." +
+      "cloud.operation.Operation\"b\202\323\344\223\0026\"1/mdb/" +
+      "sqlserver/v1/clusters/{cluster_id}/datab" +
+      "ases:\001*\262\322*\"\n\026CreateDatabaseMetadata\022\010Dat" +
+      "abase\022\310\001\n\007Restore\0225.yandex.cloud.mdb.sql" +
+      "server.v1.RestoreDatabaseRequest\032!.yande" +
+      "x.cloud.operation.Operation\"c\202\323\344\223\0026\"1/md" +
+      "b/sqlserver/v1/clusters/{cluster_id}/dat" +
+      "abases:\001*\262\322*#\n\027RestoreDatabaseMetadata\022\010" +
+      "Database\022\337\001\n\006Delete\0224.yandex.cloud.mdb.s" +
+      "qlserver.v1.DeleteDatabaseRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"|\202\323\344\223\002C*A/m" +
+      "db/sqlserver/v1/clusters/{cluster_id}/da" +
+      "tabases/{database_name}\262\322*/\n\026DeleteDatab" +
+      "aseMetadata\022\025google.protobuf.EmptyBv\n!ya" +
+      "ndex.cloud.api.mdb.sqlserver.v1B\004PSDSZKg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/mdb/sqlserver/v1;sqlserverb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6008,6 +8506,7 @@ public final class PSDS {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
@@ -6043,18 +8542,30 @@ public final class PSDS {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_CreateDatabaseMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "DatabaseName", });
-    internal_static_yandex_cloud_mdb_sqlserver_v1_DeleteDatabaseRequest_descriptor =
+    internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseMetadata_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseMetadata_descriptor,
+        new java.lang.String[] { "ClusterId", "DatabaseName", "FromDatabase", "BackupId", });
+    internal_static_yandex_cloud_mdb_sqlserver_v1_DeleteDatabaseRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_sqlserver_v1_DeleteDatabaseRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_DeleteDatabaseRequest_descriptor,
         new java.lang.String[] { "ClusterId", "DatabaseName", });
     internal_static_yandex_cloud_mdb_sqlserver_v1_DeleteDatabaseMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_sqlserver_v1_DeleteDatabaseMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_sqlserver_v1_DeleteDatabaseMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "DatabaseName", });
+    internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_sqlserver_v1_RestoreDatabaseRequest_descriptor,
+        new java.lang.String[] { "ClusterId", "DatabaseName", "FromDatabase", "BackupId", "Time", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -6066,6 +8577,7 @@ public final class PSDS {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
