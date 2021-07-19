@@ -19,73 +19,133 @@ public final class LogGroupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Log group ID.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * Log group ID.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
+     * <pre>
+     * Log group folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Log group folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Log group cloud ID.
+     * </pre>
+     *
      * <code>string cloud_id = 3;</code>
      */
     java.lang.String getCloudId();
     /**
+     * <pre>
+     * Log group cloud ID.
+     * </pre>
+     *
      * <code>string cloud_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getCloudIdBytes();
 
     /**
+     * <pre>
+     * Log group creation time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Log group creation time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Log group creation time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Log group name.
+     * </pre>
+     *
      * <code>string name = 5;</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Log group name.
+     * </pre>
+     *
      * <code>string name = 5;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Log group description.
+     * </pre>
+     *
      * <code>string description = 6;</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Log group description.
+     * </pre>
+     *
      * <code>string description = 6;</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Log group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Log group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     boolean containsLabels(
@@ -97,11 +157,19 @@ public final class LogGroupOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Log group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Log group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -109,6 +177,10 @@ public final class LogGroupOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Log group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -116,23 +188,48 @@ public final class LogGroupOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Log group status.
+     * See [Status] for possible values.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Log group status.
+     * See [Status] for possible values.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
      */
     yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status getStatus();
 
     /**
+     * <pre>
+     * Log group entry retention period.
+     * Entries will be present in group during this period.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      */
     boolean hasRetentionPeriod();
     /**
+     * <pre>
+     * Log group entry retention period.
+     * Entries will be present in group during this period.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      */
     com.google.protobuf.Duration getRetentionPeriod();
     /**
+     * <pre>
+     * Log group entry retention period.
+     * Entries will be present in group during this period.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      */
     com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder();
@@ -302,27 +399,53 @@ public final class LogGroupOuterClass {
     }
 
     /**
+     * <pre>
+     * Possible log group statuses.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.logging.v1.LogGroup.Status}
      */
     public enum Status
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Unknown status.
+       * Should never occur.
+       * </pre>
+       *
        * <code>STATUS_UNSPECIFIED = 0;</code>
        */
       STATUS_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Log group is creating.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       CREATING(1),
       /**
+       * <pre>
+       * Log group is ready to accept messages,
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       ACTIVE(2),
       /**
+       * <pre>
+       * Log group is being deleted.
+       * No messages will be accepted.
+       * </pre>
+       *
        * <code>DELETING = 3;</code>
        */
       DELETING(3),
       /**
+       * <pre>
+       * Log group is in failed state.
+       * </pre>
+       *
        * <code>ERROR = 4;</code>
        */
       ERROR(4),
@@ -330,22 +453,44 @@ public final class LogGroupOuterClass {
       ;
 
       /**
+       * <pre>
+       * Unknown status.
+       * Should never occur.
+       * </pre>
+       *
        * <code>STATUS_UNSPECIFIED = 0;</code>
        */
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Log group is creating.
+       * </pre>
+       *
        * <code>CREATING = 1;</code>
        */
       public static final int CREATING_VALUE = 1;
       /**
+       * <pre>
+       * Log group is ready to accept messages,
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       public static final int ACTIVE_VALUE = 2;
       /**
+       * <pre>
+       * Log group is being deleted.
+       * No messages will be accepted.
+       * </pre>
+       *
        * <code>DELETING = 3;</code>
        */
       public static final int DELETING_VALUE = 3;
       /**
+       * <pre>
+       * Log group is in failed state.
+       * </pre>
+       *
        * <code>ERROR = 4;</code>
        */
       public static final int ERROR_VALUE = 4;
@@ -430,6 +575,10 @@ public final class LogGroupOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * Log group ID.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public java.lang.String getId() {
@@ -445,6 +594,10 @@ public final class LogGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Log group ID.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -464,6 +617,10 @@ public final class LogGroupOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Log group folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     public java.lang.String getFolderId() {
@@ -479,6 +636,10 @@ public final class LogGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Log group folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -498,6 +659,10 @@ public final class LogGroupOuterClass {
     public static final int CLOUD_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object cloudId_;
     /**
+     * <pre>
+     * Log group cloud ID.
+     * </pre>
+     *
      * <code>string cloud_id = 3;</code>
      */
     public java.lang.String getCloudId() {
@@ -513,6 +678,10 @@ public final class LogGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Log group cloud ID.
+     * </pre>
+     *
      * <code>string cloud_id = 3;</code>
      */
     public com.google.protobuf.ByteString
@@ -532,18 +701,30 @@ public final class LogGroupOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Log group creation time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Log group creation time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Log group creation time.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -553,6 +734,10 @@ public final class LogGroupOuterClass {
     public static final int NAME_FIELD_NUMBER = 5;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Log group name.
+     * </pre>
+     *
      * <code>string name = 5;</code>
      */
     public java.lang.String getName() {
@@ -568,6 +753,10 @@ public final class LogGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Log group name.
+     * </pre>
+     *
      * <code>string name = 5;</code>
      */
     public com.google.protobuf.ByteString
@@ -587,6 +776,10 @@ public final class LogGroupOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 6;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Log group description.
+     * </pre>
+     *
      * <code>string description = 6;</code>
      */
     public java.lang.String getDescription() {
@@ -602,6 +795,10 @@ public final class LogGroupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Log group description.
+     * </pre>
+     *
      * <code>string description = 6;</code>
      */
     public com.google.protobuf.ByteString
@@ -645,6 +842,10 @@ public final class LogGroupOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Log group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -661,6 +862,10 @@ public final class LogGroupOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Log group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -668,6 +873,10 @@ public final class LogGroupOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Log group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -680,6 +889,10 @@ public final class LogGroupOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Log group labels.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 7;</code>
      */
 
@@ -697,12 +910,22 @@ public final class LogGroupOuterClass {
     public static final int STATUS_FIELD_NUMBER = 8;
     private int status_;
     /**
+     * <pre>
+     * Log group status.
+     * See [Status] for possible values.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
+     * <pre>
+     * Log group status.
+     * See [Status] for possible values.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
      */
     public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status getStatus() {
@@ -714,18 +937,33 @@ public final class LogGroupOuterClass {
     public static final int RETENTION_PERIOD_FIELD_NUMBER = 9;
     private com.google.protobuf.Duration retentionPeriod_;
     /**
+     * <pre>
+     * Log group entry retention period.
+     * Entries will be present in group during this period.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      */
     public boolean hasRetentionPeriod() {
       return retentionPeriod_ != null;
     }
     /**
+     * <pre>
+     * Log group entry retention period.
+     * Entries will be present in group during this period.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      */
     public com.google.protobuf.Duration getRetentionPeriod() {
       return retentionPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : retentionPeriod_;
     }
     /**
+     * <pre>
+     * Log group entry retention period.
+     * Entries will be present in group during this period.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 9;</code>
      */
     public com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder() {
@@ -1234,6 +1472,10 @@ public final class LogGroupOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * Log group ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public java.lang.String getId() {
@@ -1249,6 +1491,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -1265,6 +1511,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setId(
@@ -1278,6 +1528,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder clearId() {
@@ -1287,6 +1541,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group ID.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setIdBytes(
@@ -1303,6 +1561,10 @@ public final class LogGroupOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Log group folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public java.lang.String getFolderId() {
@@ -1318,6 +1580,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -1334,6 +1600,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public Builder setFolderId(
@@ -1347,6 +1617,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public Builder clearFolderId() {
@@ -1356,6 +1630,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        */
       public Builder setFolderIdBytes(
@@ -1372,6 +1650,10 @@ public final class LogGroupOuterClass {
 
       private java.lang.Object cloudId_ = "";
       /**
+       * <pre>
+       * Log group cloud ID.
+       * </pre>
+       *
        * <code>string cloud_id = 3;</code>
        */
       public java.lang.String getCloudId() {
@@ -1387,6 +1669,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group cloud ID.
+       * </pre>
+       *
        * <code>string cloud_id = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -1403,6 +1689,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group cloud ID.
+       * </pre>
+       *
        * <code>string cloud_id = 3;</code>
        */
       public Builder setCloudId(
@@ -1416,6 +1706,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group cloud ID.
+       * </pre>
+       *
        * <code>string cloud_id = 3;</code>
        */
       public Builder clearCloudId() {
@@ -1425,6 +1719,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group cloud ID.
+       * </pre>
+       *
        * <code>string cloud_id = 3;</code>
        */
       public Builder setCloudIdBytes(
@@ -1443,12 +1741,20 @@ public final class LogGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Log group creation time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Log group creation time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -1459,6 +1765,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group creation time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1475,6 +1785,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group creation time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder setCreatedAt(
@@ -1489,6 +1803,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group creation time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1507,6 +1825,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group creation time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public Builder clearCreatedAt() {
@@ -1521,6 +1843,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group creation time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1529,6 +1855,10 @@ public final class LogGroupOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Log group creation time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1540,6 +1870,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group creation time.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1558,6 +1892,10 @@ public final class LogGroupOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Log group name.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        */
       public java.lang.String getName() {
@@ -1573,6 +1911,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group name.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        */
       public com.google.protobuf.ByteString
@@ -1589,6 +1931,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group name.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        */
       public Builder setName(
@@ -1602,6 +1948,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group name.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        */
       public Builder clearName() {
@@ -1611,6 +1961,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group name.
+       * </pre>
+       *
        * <code>string name = 5;</code>
        */
       public Builder setNameBytes(
@@ -1627,6 +1981,10 @@ public final class LogGroupOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Log group description.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        */
       public java.lang.String getDescription() {
@@ -1642,6 +2000,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group description.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        */
       public com.google.protobuf.ByteString
@@ -1658,6 +2020,10 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group description.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        */
       public Builder setDescription(
@@ -1671,6 +2037,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group description.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        */
       public Builder clearDescription() {
@@ -1680,6 +2050,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group description.
+       * </pre>
+       *
        * <code>string description = 6;</code>
        */
       public Builder setDescriptionBytes(
@@ -1721,6 +2095,10 @@ public final class LogGroupOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Log group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -1737,6 +2115,10 @@ public final class LogGroupOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Log group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -1744,6 +2126,10 @@ public final class LogGroupOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Log group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -1756,6 +2142,10 @@ public final class LogGroupOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Log group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -1776,6 +2166,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -1795,6 +2189,10 @@ public final class LogGroupOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Log group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
       public Builder putLabels(
@@ -1807,6 +2205,10 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group labels.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 7;</code>
        */
 
@@ -1819,12 +2221,22 @@ public final class LogGroupOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Log group status.
+       * See [Status] for possible values.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
        */
       public int getStatusValue() {
         return status_;
       }
       /**
+       * <pre>
+       * Log group status.
+       * See [Status] for possible values.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
        */
       public Builder setStatusValue(int value) {
@@ -1833,6 +2245,11 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group status.
+       * See [Status] for possible values.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
        */
       public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status getStatus() {
@@ -1841,6 +2258,11 @@ public final class LogGroupOuterClass {
         return result == null ? yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Log group status.
+       * See [Status] for possible values.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
        */
       public Builder setStatus(yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Status value) {
@@ -1853,6 +2275,11 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group status.
+       * See [Status] for possible values.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
        */
       public Builder clearStatus() {
@@ -1866,12 +2293,22 @@ public final class LogGroupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> retentionPeriodBuilder_;
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       public boolean hasRetentionPeriod() {
         return retentionPeriodBuilder_ != null || retentionPeriod_ != null;
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       public com.google.protobuf.Duration getRetentionPeriod() {
@@ -1882,6 +2319,11 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       public Builder setRetentionPeriod(com.google.protobuf.Duration value) {
@@ -1898,6 +2340,11 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       public Builder setRetentionPeriod(
@@ -1912,6 +2359,11 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       public Builder mergeRetentionPeriod(com.google.protobuf.Duration value) {
@@ -1930,6 +2382,11 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       public Builder clearRetentionPeriod() {
@@ -1944,6 +2401,11 @@ public final class LogGroupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       public com.google.protobuf.Duration.Builder getRetentionPeriodBuilder() {
@@ -1952,6 +2414,11 @@ public final class LogGroupOuterClass {
         return getRetentionPeriodFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       public com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder() {
@@ -1963,6 +2430,11 @@ public final class LogGroupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

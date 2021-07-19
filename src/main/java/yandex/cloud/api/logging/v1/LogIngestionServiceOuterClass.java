@@ -19,50 +19,97 @@ public final class LogIngestionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Log entries destination.
+     * See [Destination] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
      */
     boolean hasDestination();
     /**
+     * <pre>
+     * Log entries destination.
+     * See [Destination] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination getDestination();
     /**
+     * <pre>
+     * Log entries destination.
+     * See [Destination] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.DestinationOrBuilder getDestinationOrBuilder();
 
     /**
+     * <pre>
+     * Common resource (type, ID) specification for log entries.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
     boolean hasResource();
     /**
+     * <pre>
+     * Common resource (type, ID) specification for log entries.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
     yandex.cloud.api.logging.v1.LogResource.LogEntryResource getResource();
     /**
+     * <pre>
+     * Common resource (type, ID) specification for log entries.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
     yandex.cloud.api.logging.v1.LogResource.LogEntryResourceOrBuilder getResourceOrBuilder();
 
     /**
+     * <pre>
+     * List of log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
      */
     java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry> 
         getEntriesList();
     /**
+     * <pre>
+     * List of log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry getEntries(int index);
     /**
+     * <pre>
+     * List of log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
      */
     int getEntriesCount();
     /**
+     * <pre>
+     * List of log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
      */
     java.util.List<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder> 
         getEntriesOrBuilderList();
     /**
+     * <pre>
+     * List of log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder getEntriesOrBuilder(
@@ -182,18 +229,33 @@ public final class LogIngestionServiceOuterClass {
     public static final int DESTINATION_FIELD_NUMBER = 1;
     private yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination destination_;
     /**
+     * <pre>
+     * Log entries destination.
+     * See [Destination] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
      */
     public boolean hasDestination() {
       return destination_ != null;
     }
     /**
+     * <pre>
+     * Log entries destination.
+     * See [Destination] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination getDestination() {
       return destination_ == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination.getDefaultInstance() : destination_;
     }
     /**
+     * <pre>
+     * Log entries destination.
+     * See [Destination] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.DestinationOrBuilder getDestinationOrBuilder() {
@@ -203,18 +265,30 @@ public final class LogIngestionServiceOuterClass {
     public static final int RESOURCE_FIELD_NUMBER = 2;
     private yandex.cloud.api.logging.v1.LogResource.LogEntryResource resource_;
     /**
+     * <pre>
+     * Common resource (type, ID) specification for log entries.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
     public boolean hasResource() {
       return resource_ != null;
     }
     /**
+     * <pre>
+     * Common resource (type, ID) specification for log entries.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
     public yandex.cloud.api.logging.v1.LogResource.LogEntryResource getResource() {
       return resource_ == null ? yandex.cloud.api.logging.v1.LogResource.LogEntryResource.getDefaultInstance() : resource_;
     }
     /**
+     * <pre>
+     * Common resource (type, ID) specification for log entries.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
     public yandex.cloud.api.logging.v1.LogResource.LogEntryResourceOrBuilder getResourceOrBuilder() {
@@ -224,12 +298,20 @@ public final class LogIngestionServiceOuterClass {
     public static final int ENTRIES_FIELD_NUMBER = 3;
     private java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry> entries_;
     /**
+     * <pre>
+     * List of log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry> getEntriesList() {
       return entries_;
     }
     /**
+     * <pre>
+     * List of log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public java.util.List<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder> 
@@ -237,18 +319,30 @@ public final class LogIngestionServiceOuterClass {
       return entries_;
     }
     /**
+     * <pre>
+     * List of log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public int getEntriesCount() {
       return entries_.size();
     }
     /**
+     * <pre>
+     * List of log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry getEntries(int index) {
       return entries_.get(index);
     }
     /**
+     * <pre>
+     * List of log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder getEntriesOrBuilder(
@@ -665,12 +759,22 @@ public final class LogIngestionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination, yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination.Builder, yandex.cloud.api.logging.v1.LogEntryOuterClass.DestinationOrBuilder> destinationBuilder_;
       /**
+       * <pre>
+       * Log entries destination.
+       * See [Destination] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
        */
       public boolean hasDestination() {
         return destinationBuilder_ != null || destination_ != null;
       }
       /**
+       * <pre>
+       * Log entries destination.
+       * See [Destination] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination getDestination() {
@@ -681,6 +785,11 @@ public final class LogIngestionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log entries destination.
+       * See [Destination] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setDestination(yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination value) {
@@ -697,6 +806,11 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log entries destination.
+       * See [Destination] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setDestination(
@@ -711,6 +825,11 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log entries destination.
+       * See [Destination] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeDestination(yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination value) {
@@ -729,6 +848,11 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log entries destination.
+       * See [Destination] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearDestination() {
@@ -743,6 +867,11 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log entries destination.
+       * See [Destination] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.Destination.Builder getDestinationBuilder() {
@@ -751,6 +880,11 @@ public final class LogIngestionServiceOuterClass {
         return getDestinationFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Log entries destination.
+       * See [Destination] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.DestinationOrBuilder getDestinationOrBuilder() {
@@ -762,6 +896,11 @@ public final class LogIngestionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log entries destination.
+       * See [Destination] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Destination destination = 1 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -782,12 +921,20 @@ public final class LogIngestionServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.logging.v1.LogResource.LogEntryResource, yandex.cloud.api.logging.v1.LogResource.LogEntryResource.Builder, yandex.cloud.api.logging.v1.LogResource.LogEntryResourceOrBuilder> resourceBuilder_;
       /**
+       * <pre>
+       * Common resource (type, ID) specification for log entries.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public boolean hasResource() {
         return resourceBuilder_ != null || resource_ != null;
       }
       /**
+       * <pre>
+       * Common resource (type, ID) specification for log entries.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogResource.LogEntryResource getResource() {
@@ -798,6 +945,10 @@ public final class LogIngestionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Common resource (type, ID) specification for log entries.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public Builder setResource(yandex.cloud.api.logging.v1.LogResource.LogEntryResource value) {
@@ -814,6 +965,10 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Common resource (type, ID) specification for log entries.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public Builder setResource(
@@ -828,6 +983,10 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Common resource (type, ID) specification for log entries.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public Builder mergeResource(yandex.cloud.api.logging.v1.LogResource.LogEntryResource value) {
@@ -846,6 +1005,10 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Common resource (type, ID) specification for log entries.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public Builder clearResource() {
@@ -860,6 +1023,10 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Common resource (type, ID) specification for log entries.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogResource.LogEntryResource.Builder getResourceBuilder() {
@@ -868,6 +1035,10 @@ public final class LogIngestionServiceOuterClass {
         return getResourceFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Common resource (type, ID) specification for log entries.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogResource.LogEntryResourceOrBuilder getResourceOrBuilder() {
@@ -879,6 +1050,10 @@ public final class LogIngestionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Common resource (type, ID) specification for log entries.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -908,6 +1083,10 @@ public final class LogIngestionServiceOuterClass {
           yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry, yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.Builder, yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder> entriesBuilder_;
 
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry> getEntriesList() {
@@ -918,6 +1097,10 @@ public final class LogIngestionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public int getEntriesCount() {
@@ -928,6 +1111,10 @@ public final class LogIngestionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry getEntries(int index) {
@@ -938,6 +1125,10 @@ public final class LogIngestionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder setEntries(
@@ -955,6 +1146,10 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder setEntries(
@@ -969,6 +1164,10 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addEntries(yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry value) {
@@ -985,6 +1184,10 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addEntries(
@@ -1002,6 +1205,10 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addEntries(
@@ -1016,6 +1223,10 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addEntries(
@@ -1030,6 +1241,10 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addAllEntries(
@@ -1045,6 +1260,10 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder clearEntries() {
@@ -1058,6 +1277,10 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder removeEntries(int index) {
@@ -1071,6 +1294,10 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.Builder getEntriesBuilder(
@@ -1078,6 +1305,10 @@ public final class LogIngestionServiceOuterClass {
         return getEntriesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder getEntriesOrBuilder(
@@ -1088,6 +1319,10 @@ public final class LogIngestionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder> 
@@ -1099,6 +1334,10 @@ public final class LogIngestionServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.Builder addEntriesBuilder() {
@@ -1106,6 +1345,10 @@ public final class LogIngestionServiceOuterClass {
             yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.Builder addEntriesBuilder(
@@ -1114,6 +1357,10 @@ public final class LogIngestionServiceOuterClass {
             index, yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.Builder> 
@@ -1192,10 +1439,20 @@ public final class LogIngestionServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Map&lt;idx, status&gt; of ingest failures.
+     * If entry with idx N is absent, it was ingested successfully.
+     * </pre>
+     *
      * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
      */
     int getErrorsCount();
     /**
+     * <pre>
+     * Map&lt;idx, status&gt; of ingest failures.
+     * If entry with idx N is absent, it was ingested successfully.
+     * </pre>
+     *
      * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
      */
     boolean containsErrors(
@@ -1207,11 +1464,21 @@ public final class LogIngestionServiceOuterClass {
     java.util.Map<java.lang.Long, com.google.rpc.Status>
     getErrors();
     /**
+     * <pre>
+     * Map&lt;idx, status&gt; of ingest failures.
+     * If entry with idx N is absent, it was ingested successfully.
+     * </pre>
+     *
      * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
      */
     java.util.Map<java.lang.Long, com.google.rpc.Status>
     getErrorsMap();
     /**
+     * <pre>
+     * Map&lt;idx, status&gt; of ingest failures.
+     * If entry with idx N is absent, it was ingested successfully.
+     * </pre>
+     *
      * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
      */
 
@@ -1219,6 +1486,11 @@ public final class LogIngestionServiceOuterClass {
         long key,
         com.google.rpc.Status defaultValue);
     /**
+     * <pre>
+     * Map&lt;idx, status&gt; of ingest failures.
+     * If entry with idx N is absent, it was ingested successfully.
+     * </pre>
+     *
      * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
      */
 
@@ -1348,6 +1620,11 @@ public final class LogIngestionServiceOuterClass {
       return internalGetErrors().getMap().size();
     }
     /**
+     * <pre>
+     * Map&lt;idx, status&gt; of ingest failures.
+     * If entry with idx N is absent, it was ingested successfully.
+     * </pre>
+     *
      * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
      */
 
@@ -1364,6 +1641,11 @@ public final class LogIngestionServiceOuterClass {
       return getErrorsMap();
     }
     /**
+     * <pre>
+     * Map&lt;idx, status&gt; of ingest failures.
+     * If entry with idx N is absent, it was ingested successfully.
+     * </pre>
+     *
      * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
      */
 
@@ -1371,6 +1653,11 @@ public final class LogIngestionServiceOuterClass {
       return internalGetErrors().getMap();
     }
     /**
+     * <pre>
+     * Map&lt;idx, status&gt; of ingest failures.
+     * If entry with idx N is absent, it was ingested successfully.
+     * </pre>
+     *
      * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
      */
 
@@ -1383,6 +1670,11 @@ public final class LogIngestionServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Map&lt;idx, status&gt; of ingest failures.
+     * If entry with idx N is absent, it was ingested successfully.
+     * </pre>
+     *
      * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
      */
 
@@ -1761,6 +2053,11 @@ public final class LogIngestionServiceOuterClass {
         return internalGetErrors().getMap().size();
       }
       /**
+       * <pre>
+       * Map&lt;idx, status&gt; of ingest failures.
+       * If entry with idx N is absent, it was ingested successfully.
+       * </pre>
+       *
        * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
        */
 
@@ -1777,6 +2074,11 @@ public final class LogIngestionServiceOuterClass {
         return getErrorsMap();
       }
       /**
+       * <pre>
+       * Map&lt;idx, status&gt; of ingest failures.
+       * If entry with idx N is absent, it was ingested successfully.
+       * </pre>
+       *
        * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
        */
 
@@ -1784,6 +2086,11 @@ public final class LogIngestionServiceOuterClass {
         return internalGetErrors().getMap();
       }
       /**
+       * <pre>
+       * Map&lt;idx, status&gt; of ingest failures.
+       * If entry with idx N is absent, it was ingested successfully.
+       * </pre>
+       *
        * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
        */
 
@@ -1796,6 +2103,11 @@ public final class LogIngestionServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Map&lt;idx, status&gt; of ingest failures.
+       * If entry with idx N is absent, it was ingested successfully.
+       * </pre>
+       *
        * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
        */
 
@@ -1816,6 +2128,11 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Map&lt;idx, status&gt; of ingest failures.
+       * If entry with idx N is absent, it was ingested successfully.
+       * </pre>
+       *
        * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
        */
 
@@ -1835,6 +2152,11 @@ public final class LogIngestionServiceOuterClass {
         return internalGetMutableErrors().getMutableMap();
       }
       /**
+       * <pre>
+       * Map&lt;idx, status&gt; of ingest failures.
+       * If entry with idx N is absent, it was ingested successfully.
+       * </pre>
+       *
        * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
        */
       public Builder putErrors(
@@ -1847,6 +2169,11 @@ public final class LogIngestionServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Map&lt;idx, status&gt; of ingest failures.
+       * If entry with idx N is absent, it was ingested successfully.
+       * </pre>
+       *
        * <code>map&lt;int64, .google.rpc.Status&gt; errors = 1;</code>
        */
 

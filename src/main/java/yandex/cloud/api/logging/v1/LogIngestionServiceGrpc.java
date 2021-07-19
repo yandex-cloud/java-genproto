@@ -87,6 +87,9 @@ public final class LogIngestionServiceGrpc {
   public static abstract class LogIngestionServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Write log entries to specified destination.
+     * </pre>
      */
     public void write(yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteResponse> responseObserver) {
@@ -125,6 +128,9 @@ public final class LogIngestionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Write log entries to specified destination.
+     * </pre>
      */
     public void write(yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteResponse> responseObserver) {
@@ -152,6 +158,9 @@ public final class LogIngestionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Write log entries to specified destination.
+     * </pre>
      */
     public yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteResponse write(yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest request) {
       return blockingUnaryCall(
@@ -178,6 +187,9 @@ public final class LogIngestionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Write log entries to specified destination.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteResponse> write(
         yandex.cloud.api.logging.v1.LogIngestionServiceOuterClass.WriteRequest request) {

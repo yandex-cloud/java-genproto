@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing log groups.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -435,10 +438,17 @@ public final class LogGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing log groups.
+   * </pre>
    */
   public static abstract class LogGroupServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified log group.
+     * To get the list of all available log groups, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> responseObserver) {
@@ -446,6 +456,10 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns default log group for the folder.
+     * To get the list of all available log groups, make a [List] request.
+     * </pre>
      */
     public void getDefault(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> responseObserver) {
@@ -453,6 +467,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns stats for the specified log group.
+     * </pre>
      */
     public void stats(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse> responseObserver) {
@@ -460,6 +477,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of log groups in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse> responseObserver) {
@@ -467,6 +487,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a log group in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -474,6 +497,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified log group.
+     * </pre>
      */
     public void update(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -481,6 +507,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified log group.
+     * </pre>
      */
     public void delete(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -488,6 +517,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the resources (type and IDs) in the specified log group.
+     * </pre>
      */
     public void listResources(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse> responseObserver) {
@@ -495,6 +527,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified log group.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse> responseObserver) {
@@ -502,6 +537,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified log group.
+     * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
@@ -509,6 +547,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the specified log group.
+     * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -516,6 +557,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified log group.
+     * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -613,6 +657,9 @@ public final class LogGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing log groups.
+   * </pre>
    */
   public static final class LogGroupServiceStub extends io.grpc.stub.AbstractStub<LogGroupServiceStub> {
     private LogGroupServiceStub(io.grpc.Channel channel) {
@@ -631,6 +678,10 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified log group.
+     * To get the list of all available log groups, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> responseObserver) {
@@ -639,6 +690,10 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns default log group for the folder.
+     * To get the list of all available log groups, make a [List] request.
+     * </pre>
      */
     public void getDefault(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> responseObserver) {
@@ -647,6 +702,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns stats for the specified log group.
+     * </pre>
      */
     public void stats(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse> responseObserver) {
@@ -655,6 +713,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of log groups in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse> responseObserver) {
@@ -663,6 +724,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a log group in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -671,6 +735,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified log group.
+     * </pre>
      */
     public void update(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -679,6 +746,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified log group.
+     * </pre>
      */
     public void delete(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -687,6 +757,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the resources (type and IDs) in the specified log group.
+     * </pre>
      */
     public void listResources(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse> responseObserver) {
@@ -695,6 +768,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified log group.
+     * </pre>
      */
     public void listOperations(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse> responseObserver) {
@@ -703,6 +779,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified log group.
+     * </pre>
      */
     public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
@@ -711,6 +790,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the specified log group.
+     * </pre>
      */
     public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -719,6 +801,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified log group.
+     * </pre>
      */
     public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -728,6 +813,9 @@ public final class LogGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing log groups.
+   * </pre>
    */
   public static final class LogGroupServiceBlockingStub extends io.grpc.stub.AbstractStub<LogGroupServiceBlockingStub> {
     private LogGroupServiceBlockingStub(io.grpc.Channel channel) {
@@ -746,6 +834,10 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified log group.
+     * To get the list of all available log groups, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup get(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest request) {
       return blockingUnaryCall(
@@ -753,6 +845,10 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns default log group for the folder.
+     * To get the list of all available log groups, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup getDefault(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest request) {
       return blockingUnaryCall(
@@ -760,6 +856,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns stats for the specified log group.
+     * </pre>
      */
     public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse stats(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest request) {
       return blockingUnaryCall(
@@ -767,6 +866,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of log groups in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse list(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest request) {
       return blockingUnaryCall(
@@ -774,6 +876,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a log group in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest request) {
       return blockingUnaryCall(
@@ -781,6 +886,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified log group.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest request) {
       return blockingUnaryCall(
@@ -788,6 +896,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified log group.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest request) {
       return blockingUnaryCall(
@@ -795,6 +906,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the resources (type and IDs) in the specified log group.
+     * </pre>
      */
     public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse listResources(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest request) {
       return blockingUnaryCall(
@@ -802,6 +916,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified log group.
+     * </pre>
      */
     public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse listOperations(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest request) {
       return blockingUnaryCall(
@@ -809,6 +926,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified log group.
+     * </pre>
      */
     public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
       return blockingUnaryCall(
@@ -816,6 +936,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the specified log group.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
       return blockingUnaryCall(
@@ -823,6 +946,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified log group.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
       return blockingUnaryCall(
@@ -831,6 +957,9 @@ public final class LogGroupServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing log groups.
+   * </pre>
    */
   public static final class LogGroupServiceFutureStub extends io.grpc.stub.AbstractStub<LogGroupServiceFutureStub> {
     private LogGroupServiceFutureStub(io.grpc.Channel channel) {
@@ -849,6 +978,10 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified log group.
+     * To get the list of all available log groups, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> get(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest request) {
@@ -857,6 +990,10 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns default log group for the folder.
+     * To get the list of all available log groups, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> getDefault(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest request) {
@@ -865,6 +1002,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns stats for the specified log group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse> stats(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest request) {
@@ -873,6 +1013,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of log groups in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsResponse> list(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListLogGroupsRequest request) {
@@ -881,6 +1024,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a log group in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.CreateLogGroupRequest request) {
@@ -889,6 +1035,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified log group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.UpdateLogGroupRequest request) {
@@ -897,6 +1046,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified log group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.DeleteLogGroupRequest request) {
@@ -905,6 +1057,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the resources (type and IDs) in the specified log group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesResponse> listResources(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListResourcesRequest request) {
@@ -913,6 +1068,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists operations for the specified log group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsResponse> listOperations(
         yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.ListOperationsRequest request) {
@@ -921,6 +1079,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Lists existing access bindings for the specified log group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
         yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
@@ -929,6 +1090,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Sets access bindings for the specified log group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
         yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
@@ -937,6 +1101,9 @@ public final class LogGroupServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates access bindings for the specified log group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
         yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {

@@ -19,26 +19,47 @@ public final class LogResource {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Resource type, i.e., `serverless.function`
+     * </pre>
+     *
      * <code>string type = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
      */
     java.lang.String getType();
     /**
+     * <pre>
+     * Resource type, i.e., `serverless.function`
+     * </pre>
+     *
      * <code>string type = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
+     * <pre>
+     * Resource ID, i.e., ID of the function producing logs.
+     * </pre>
+     *
      * <code>string id = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * Resource ID, i.e., ID of the function producing logs.
+     * </pre>
+     *
      * <code>string id = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
   }
   /**
+   * <pre>
+   * Log entry resource specification.
+   * May be used either by services and by user.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.logging.v1.LogEntryResource}
    */
   public  static final class LogEntryResource extends
@@ -126,6 +147,10 @@ public final class LogResource {
     public static final int TYPE_FIELD_NUMBER = 1;
     private volatile java.lang.Object type_;
     /**
+     * <pre>
+     * Resource type, i.e., `serverless.function`
+     * </pre>
+     *
      * <code>string type = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
      */
     public java.lang.String getType() {
@@ -141,6 +166,10 @@ public final class LogResource {
       }
     }
     /**
+     * <pre>
+     * Resource type, i.e., `serverless.function`
+     * </pre>
+     *
      * <code>string type = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
      */
     public com.google.protobuf.ByteString
@@ -160,6 +189,10 @@ public final class LogResource {
     public static final int ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * Resource ID, i.e., ID of the function producing logs.
+     * </pre>
+     *
      * <code>string id = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
      */
     public java.lang.String getId() {
@@ -175,6 +208,10 @@ public final class LogResource {
       }
     }
     /**
+     * <pre>
+     * Resource ID, i.e., ID of the function producing logs.
+     * </pre>
+     *
      * <code>string id = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
      */
     public com.google.protobuf.ByteString
@@ -357,6 +394,11 @@ public final class LogResource {
       return builder;
     }
     /**
+     * <pre>
+     * Log entry resource specification.
+     * May be used either by services and by user.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.logging.v1.LogEntryResource}
      */
     public static final class Builder extends
@@ -513,6 +555,10 @@ public final class LogResource {
 
       private java.lang.Object type_ = "";
       /**
+       * <pre>
+       * Resource type, i.e., `serverless.function`
+       * </pre>
+       *
        * <code>string type = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
        */
       public java.lang.String getType() {
@@ -528,6 +574,10 @@ public final class LogResource {
         }
       }
       /**
+       * <pre>
+       * Resource type, i.e., `serverless.function`
+       * </pre>
+       *
        * <code>string type = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
        */
       public com.google.protobuf.ByteString
@@ -544,6 +594,10 @@ public final class LogResource {
         }
       }
       /**
+       * <pre>
+       * Resource type, i.e., `serverless.function`
+       * </pre>
+       *
        * <code>string type = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
        */
       public Builder setType(
@@ -557,6 +611,10 @@ public final class LogResource {
         return this;
       }
       /**
+       * <pre>
+       * Resource type, i.e., `serverless.function`
+       * </pre>
+       *
        * <code>string type = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
        */
       public Builder clearType() {
@@ -566,6 +624,10 @@ public final class LogResource {
         return this;
       }
       /**
+       * <pre>
+       * Resource type, i.e., `serverless.function`
+       * </pre>
+       *
        * <code>string type = 1 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
        */
       public Builder setTypeBytes(
@@ -582,6 +644,10 @@ public final class LogResource {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * Resource ID, i.e., ID of the function producing logs.
+       * </pre>
+       *
        * <code>string id = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
        */
       public java.lang.String getId() {
@@ -597,6 +663,10 @@ public final class LogResource {
         }
       }
       /**
+       * <pre>
+       * Resource ID, i.e., ID of the function producing logs.
+       * </pre>
+       *
        * <code>string id = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
        */
       public com.google.protobuf.ByteString
@@ -613,6 +683,10 @@ public final class LogResource {
         }
       }
       /**
+       * <pre>
+       * Resource ID, i.e., ID of the function producing logs.
+       * </pre>
+       *
        * <code>string id = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
        */
       public Builder setId(
@@ -626,6 +700,10 @@ public final class LogResource {
         return this;
       }
       /**
+       * <pre>
+       * Resource ID, i.e., ID of the function producing logs.
+       * </pre>
+       *
        * <code>string id = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
        */
       public Builder clearId() {
@@ -635,6 +713,10 @@ public final class LogResource {
         return this;
       }
       /**
+       * <pre>
+       * Resource ID, i.e., ID of the function producing logs.
+       * </pre>
+       *
        * <code>string id = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{1,62}"];</code>
        */
       public Builder setIdBytes(
@@ -706,35 +788,65 @@ public final class LogResource {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Resource type.
+     * Collected from log entries inside log group.
+     * </pre>
+     *
      * <code>string type = 1;</code>
      */
     java.lang.String getType();
     /**
+     * <pre>
+     * Resource type.
+     * Collected from log entries inside log group.
+     * </pre>
+     *
      * <code>string type = 1;</code>
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
+     * <pre>
+     * List of resource IDs with the same resource type.
+     * </pre>
+     *
      * <code>repeated string ids = 2;</code>
      */
     java.util.List<java.lang.String>
         getIdsList();
     /**
+     * <pre>
+     * List of resource IDs with the same resource type.
+     * </pre>
+     *
      * <code>repeated string ids = 2;</code>
      */
     int getIdsCount();
     /**
+     * <pre>
+     * List of resource IDs with the same resource type.
+     * </pre>
+     *
      * <code>repeated string ids = 2;</code>
      */
     java.lang.String getIds(int index);
     /**
+     * <pre>
+     * List of resource IDs with the same resource type.
+     * </pre>
+     *
      * <code>repeated string ids = 2;</code>
      */
     com.google.protobuf.ByteString
         getIdsBytes(int index);
   }
   /**
+   * <pre>
+   * Log group resource.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.logging.v1.LogGroupResource}
    */
   public  static final class LogGroupResource extends
@@ -829,6 +941,11 @@ public final class LogResource {
     public static final int TYPE_FIELD_NUMBER = 1;
     private volatile java.lang.Object type_;
     /**
+     * <pre>
+     * Resource type.
+     * Collected from log entries inside log group.
+     * </pre>
+     *
      * <code>string type = 1;</code>
      */
     public java.lang.String getType() {
@@ -844,6 +961,11 @@ public final class LogResource {
       }
     }
     /**
+     * <pre>
+     * Resource type.
+     * Collected from log entries inside log group.
+     * </pre>
+     *
      * <code>string type = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -863,6 +985,10 @@ public final class LogResource {
     public static final int IDS_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList ids_;
     /**
+     * <pre>
+     * List of resource IDs with the same resource type.
+     * </pre>
+     *
      * <code>repeated string ids = 2;</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -870,18 +996,30 @@ public final class LogResource {
       return ids_;
     }
     /**
+     * <pre>
+     * List of resource IDs with the same resource type.
+     * </pre>
+     *
      * <code>repeated string ids = 2;</code>
      */
     public int getIdsCount() {
       return ids_.size();
     }
     /**
+     * <pre>
+     * List of resource IDs with the same resource type.
+     * </pre>
+     *
      * <code>repeated string ids = 2;</code>
      */
     public java.lang.String getIds(int index) {
       return ids_.get(index);
     }
     /**
+     * <pre>
+     * List of resource IDs with the same resource type.
+     * </pre>
+     *
      * <code>repeated string ids = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -1062,6 +1200,10 @@ public final class LogResource {
       return builder;
     }
     /**
+     * <pre>
+     * Log group resource.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.logging.v1.LogGroupResource}
      */
     public static final class Builder extends
@@ -1232,6 +1374,11 @@ public final class LogResource {
 
       private java.lang.Object type_ = "";
       /**
+       * <pre>
+       * Resource type.
+       * Collected from log entries inside log group.
+       * </pre>
+       *
        * <code>string type = 1;</code>
        */
       public java.lang.String getType() {
@@ -1247,6 +1394,11 @@ public final class LogResource {
         }
       }
       /**
+       * <pre>
+       * Resource type.
+       * Collected from log entries inside log group.
+       * </pre>
+       *
        * <code>string type = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -1263,6 +1415,11 @@ public final class LogResource {
         }
       }
       /**
+       * <pre>
+       * Resource type.
+       * Collected from log entries inside log group.
+       * </pre>
+       *
        * <code>string type = 1;</code>
        */
       public Builder setType(
@@ -1276,6 +1433,11 @@ public final class LogResource {
         return this;
       }
       /**
+       * <pre>
+       * Resource type.
+       * Collected from log entries inside log group.
+       * </pre>
+       *
        * <code>string type = 1;</code>
        */
       public Builder clearType() {
@@ -1285,6 +1447,11 @@ public final class LogResource {
         return this;
       }
       /**
+       * <pre>
+       * Resource type.
+       * Collected from log entries inside log group.
+       * </pre>
+       *
        * <code>string type = 1;</code>
        */
       public Builder setTypeBytes(
@@ -1307,6 +1474,10 @@ public final class LogResource {
          }
       }
       /**
+       * <pre>
+       * List of resource IDs with the same resource type.
+       * </pre>
+       *
        * <code>repeated string ids = 2;</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -1314,18 +1485,30 @@ public final class LogResource {
         return ids_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of resource IDs with the same resource type.
+       * </pre>
+       *
        * <code>repeated string ids = 2;</code>
        */
       public int getIdsCount() {
         return ids_.size();
       }
       /**
+       * <pre>
+       * List of resource IDs with the same resource type.
+       * </pre>
+       *
        * <code>repeated string ids = 2;</code>
        */
       public java.lang.String getIds(int index) {
         return ids_.get(index);
       }
       /**
+       * <pre>
+       * List of resource IDs with the same resource type.
+       * </pre>
+       *
        * <code>repeated string ids = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -1333,6 +1516,10 @@ public final class LogResource {
         return ids_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of resource IDs with the same resource type.
+       * </pre>
+       *
        * <code>repeated string ids = 2;</code>
        */
       public Builder setIds(
@@ -1346,6 +1533,10 @@ public final class LogResource {
         return this;
       }
       /**
+       * <pre>
+       * List of resource IDs with the same resource type.
+       * </pre>
+       *
        * <code>repeated string ids = 2;</code>
        */
       public Builder addIds(
@@ -1359,6 +1550,10 @@ public final class LogResource {
         return this;
       }
       /**
+       * <pre>
+       * List of resource IDs with the same resource type.
+       * </pre>
+       *
        * <code>repeated string ids = 2;</code>
        */
       public Builder addAllIds(
@@ -1370,6 +1565,10 @@ public final class LogResource {
         return this;
       }
       /**
+       * <pre>
+       * List of resource IDs with the same resource type.
+       * </pre>
+       *
        * <code>repeated string ids = 2;</code>
        */
       public Builder clearIds() {
@@ -1379,6 +1578,10 @@ public final class LogResource {
         return this;
       }
       /**
+       * <pre>
+       * List of resource IDs with the same resource type.
+       * </pre>
+       *
        * <code>repeated string ids = 2;</code>
        */
       public Builder addIdsBytes(

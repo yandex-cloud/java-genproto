@@ -7477,6 +7477,24 @@ public final class ClusterOuterClass {
      * <code>bool assign_public_ip = 9;</code>
      */
     boolean getAssignPublicIp();
+
+    /**
+     * <pre>
+     * Name of the host to be used as the replication source for cascading replication.
+     * </pre>
+     *
+     * <code>string replication_source = 10;</code>
+     */
+    java.lang.String getReplicationSource();
+    /**
+     * <pre>
+     * Name of the host to be used as the replication source for cascading replication.
+     * </pre>
+     *
+     * <code>string replication_source = 10;</code>
+     */
+    com.google.protobuf.ByteString
+        getReplicationSourceBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.mysql.v1.Host}
@@ -7499,6 +7517,7 @@ public final class ClusterOuterClass {
       services_ = java.util.Collections.emptyList();
       subnetId_ = "";
       assignPublicIp_ = false;
+      replicationSource_ = "";
     }
 
     @java.lang.Override
@@ -7586,6 +7605,12 @@ public final class ClusterOuterClass {
             case 72: {
 
               assignPublicIp_ = input.readBool();
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              replicationSource_ = s;
               break;
             }
             default: {
@@ -8230,6 +8255,48 @@ public final class ClusterOuterClass {
       return assignPublicIp_;
     }
 
+    public static final int REPLICATION_SOURCE_FIELD_NUMBER = 10;
+    private volatile java.lang.Object replicationSource_;
+    /**
+     * <pre>
+     * Name of the host to be used as the replication source for cascading replication.
+     * </pre>
+     *
+     * <code>string replication_source = 10;</code>
+     */
+    public java.lang.String getReplicationSource() {
+      java.lang.Object ref = replicationSource_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        replicationSource_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the host to be used as the replication source for cascading replication.
+     * </pre>
+     *
+     * <code>string replication_source = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getReplicationSourceBytes() {
+      java.lang.Object ref = replicationSource_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        replicationSource_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8270,6 +8337,9 @@ public final class ClusterOuterClass {
       }
       if (assignPublicIp_ != false) {
         output.writeBool(9, assignPublicIp_);
+      }
+      if (!getReplicationSourceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, replicationSource_);
       }
       unknownFields.writeTo(output);
     }
@@ -8312,6 +8382,9 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(9, assignPublicIp_);
       }
+      if (!getReplicationSourceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, replicationSource_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8347,6 +8420,8 @@ public final class ClusterOuterClass {
           .equals(other.getSubnetId());
       result = result && (getAssignPublicIp()
           == other.getAssignPublicIp());
+      result = result && getReplicationSource()
+          .equals(other.getReplicationSource());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -8381,6 +8456,8 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + ASSIGN_PUBLIC_IP_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAssignPublicIp());
+      hash = (37 * hash) + REPLICATION_SOURCE_FIELD_NUMBER;
+      hash = (53 * hash) + getReplicationSource().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8541,6 +8618,8 @@ public final class ClusterOuterClass {
 
         assignPublicIp_ = false;
 
+        replicationSource_ = "";
+
         return this;
       }
 
@@ -8590,6 +8669,7 @@ public final class ClusterOuterClass {
         }
         result.subnetId_ = subnetId_;
         result.assignPublicIp_ = assignPublicIp_;
+        result.replicationSource_ = replicationSource_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8692,6 +8772,10 @@ public final class ClusterOuterClass {
         }
         if (other.getAssignPublicIp() != false) {
           setAssignPublicIp(other.getAssignPublicIp());
+        }
+        if (!other.getReplicationSource().isEmpty()) {
+          replicationSource_ = other.replicationSource_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9728,6 +9812,95 @@ public final class ClusterOuterClass {
       public Builder clearAssignPublicIp() {
         
         assignPublicIp_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object replicationSource_ = "";
+      /**
+       * <pre>
+       * Name of the host to be used as the replication source for cascading replication.
+       * </pre>
+       *
+       * <code>string replication_source = 10;</code>
+       */
+      public java.lang.String getReplicationSource() {
+        java.lang.Object ref = replicationSource_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          replicationSource_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the host to be used as the replication source for cascading replication.
+       * </pre>
+       *
+       * <code>string replication_source = 10;</code>
+       */
+      public com.google.protobuf.ByteString
+          getReplicationSourceBytes() {
+        java.lang.Object ref = replicationSource_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          replicationSource_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the host to be used as the replication source for cascading replication.
+       * </pre>
+       *
+       * <code>string replication_source = 10;</code>
+       */
+      public Builder setReplicationSource(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        replicationSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the host to be used as the replication source for cascading replication.
+       * </pre>
+       *
+       * <code>string replication_source = 10;</code>
+       */
+      public Builder clearReplicationSource() {
+        
+        replicationSource_ = getDefaultInstance().getReplicationSource();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the host to be used as the replication source for cascading replication.
+       * </pre>
+       *
+       * <code>string replication_source = 10;</code>
+       */
+      public Builder setReplicationSourceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        replicationSource_ = value;
         onChanged();
         return this;
       }
@@ -12923,7 +13096,7 @@ public final class ClusterOuterClass {
       "ources\0223\n\023backup_window_start\030\004 \001(\0132\026.go" +
       "ogle.type.TimeOfDay\0221\n\006access\030\005 \001(\0132!.ya" +
       "ndex.cloud.mdb.mysql.v1.AccessB\016\n\014mysql_" +
-      "config\"\265\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster" +
+      "config\"\321\003\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster" +
       "_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0227\n\tresources\030" +
       "\004 \001(\0132$.yandex.cloud.mdb.mysql.v1.Resour" +
       "ces\0222\n\004role\030\005 \001(\0162$.yandex.cloud.mdb.mys" +
@@ -12931,25 +13104,25 @@ public final class ClusterOuterClass {
       ".cloud.mdb.mysql.v1.Host.Health\0224\n\010servi" +
       "ces\030\007 \003(\0132\".yandex.cloud.mdb.mysql.v1.Se" +
       "rvice\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assign_publi" +
-      "c_ip\030\t \001(\010\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006" +
-      "MASTER\020\001\022\013\n\007REPLICA\020\002\"?\n\006Health\022\022\n\016HEALT" +
-      "H_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGR" +
-      "ADED\020\003\"\327\001\n\007Service\0225\n\004type\030\001 \001(\0162\'.yande" +
-      "x.cloud.mdb.mysql.v1.Service.Type\0229\n\006hea" +
-      "lth\030\002 \001(\0162).yandex.cloud.mdb.mysql.v1.Se" +
-      "rvice.Health\"\'\n\004Type\022\024\n\020TYPE_UNSPECIFIED" +
-      "\020\000\022\t\n\005MYSQL\020\001\"1\n\006Health\022\022\n\016HEALTH_UNKNOW" +
-      "N\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n" +
-      "\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002" +
-      " \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\",\n\006Access\022\021\n\t" +
-      "data_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\"\215\001\n\026Per" +
-      "formanceDiagnostics\022\017\n\007enabled\030\001 \001(\010\022/\n\032" +
-      "sessions_sampling_interval\030\002 \001(\003B\013\372\3071\0071-" +
-      "86400\0221\n\034statements_sampling_interval\030\003 " +
-      "\001(\003B\013\372\3071\0071-86400Bd\n\035yandex.cloud.api.mdb" +
-      ".mysql.v1ZCgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/mdb/mysql/v1;mysqlb\006" +
-      "proto3"
+      "c_ip\030\t \001(\010\022\032\n\022replication_source\030\n \001(\t\"1" +
+      "\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007" +
+      "REPLICA\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022" +
+      "\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\327\001\n\007S" +
+      "ervice\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.mdb." +
+      "mysql.v1.Service.Type\0229\n\006health\030\002 \001(\0162)." +
+      "yandex.cloud.mdb.mysql.v1.Service.Health" +
+      "\"\'\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005MYSQL\020" +
+      "\001\"1\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE" +
+      "\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032\n\022resource_pr" +
+      "eset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk" +
+      "_type_id\030\003 \001(\t\",\n\006Access\022\021\n\tdata_lens\030\001 " +
+      "\001(\010\022\017\n\007web_sql\030\002 \001(\010\"\215\001\n\026PerformanceDiag" +
+      "nostics\022\017\n\007enabled\030\001 \001(\010\022/\n\032sessions_sam" +
+      "pling_interval\030\002 \001(\003B\013\372\3071\0071-86400\0221\n\034sta" +
+      "tements_sampling_interval\030\003 \001(\003B\013\372\3071\0071-8" +
+      "6400Bd\n\035yandex.cloud.api.mdb.mysql.v1ZCg" +
+      "ithub.com/yandex-cloud/go-genproto/yande" +
+      "x/cloud/mdb/mysql/v1;mysqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12998,7 +13171,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_mysql_v1_Host_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_Host_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "ZoneId", "Resources", "Role", "Health", "Services", "SubnetId", "AssignPublicIp", });
+        new java.lang.String[] { "Name", "ClusterId", "ZoneId", "Resources", "Role", "Health", "Services", "SubnetId", "AssignPublicIp", "ReplicationSource", });
     internal_static_yandex_cloud_mdb_mysql_v1_Service_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_mysql_v1_Service_fieldAccessorTable = new

@@ -19,95 +19,192 @@ public final class LogEntryOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Unique entry ID.
+     * Useful for logs deduplication.
+     * </pre>
+     *
      * <code>string uid = 1;</code>
      */
     java.lang.String getUid();
     /**
+     * <pre>
+     * Unique entry ID.
+     * Useful for logs deduplication.
+     * </pre>
+     *
      * <code>string uid = 1;</code>
      */
     com.google.protobuf.ByteString
         getUidBytes();
 
     /**
+     * <pre>
+     * Entry resource specification.
+     * May contain information about source service and resource ID.
+     * Also may be provided by the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
     boolean hasResource();
     /**
+     * <pre>
+     * Entry resource specification.
+     * May contain information about source service and resource ID.
+     * Also may be provided by the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
     yandex.cloud.api.logging.v1.LogResource.LogEntryResource getResource();
     /**
+     * <pre>
+     * Entry resource specification.
+     * May contain information about source service and resource ID.
+     * Also may be provided by the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
     yandex.cloud.api.logging.v1.LogResource.LogEntryResourceOrBuilder getResourceOrBuilder();
 
     /**
+     * <pre>
+     * Timestamp of the entry.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     boolean hasTimestamp();
     /**
+     * <pre>
+     * Timestamp of the entry.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     com.google.protobuf.Timestamp getTimestamp();
     /**
+     * <pre>
+     * Timestamp of the entry.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
 
     /**
+     * <pre>
+     * Entry ingestion time observed by [LogIngestionService].
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
      */
     boolean hasIngestedAt();
     /**
+     * <pre>
+     * Entry ingestion time observed by [LogIngestionService].
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
      */
     com.google.protobuf.Timestamp getIngestedAt();
     /**
+     * <pre>
+     * Entry ingestion time observed by [LogIngestionService].
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getIngestedAtOrBuilder();
 
     /**
+     * <pre>
+     * Entry save time.
+     * Entry is ready to be read since this moment.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp saved_at = 5;</code>
      */
     boolean hasSavedAt();
     /**
+     * <pre>
+     * Entry save time.
+     * Entry is ready to be read since this moment.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp saved_at = 5;</code>
      */
     com.google.protobuf.Timestamp getSavedAt();
     /**
+     * <pre>
+     * Entry save time.
+     * Entry is ready to be read since this moment.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp saved_at = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getSavedAtOrBuilder();
 
     /**
+     * <pre>
+     * Entry severity.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
      */
     int getLevelValue();
     /**
+     * <pre>
+     * Entry severity.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel();
 
     /**
+     * <pre>
+     * Entry text message.
+     * </pre>
+     *
      * <code>string message = 7;</code>
      */
     java.lang.String getMessage();
     /**
+     * <pre>
+     * Entry text message.
+     * </pre>
+     *
      * <code>string message = 7;</code>
      */
     com.google.protobuf.ByteString
         getMessageBytes();
 
     /**
+     * <pre>
+     * Entry annotation.
+     * </pre>
+     *
      * <code>.google.protobuf.Struct json_payload = 8;</code>
      */
     boolean hasJsonPayload();
     /**
+     * <pre>
+     * Entry annotation.
+     * </pre>
+     *
      * <code>.google.protobuf.Struct json_payload = 8;</code>
      */
     com.google.protobuf.Struct getJsonPayload();
     /**
+     * <pre>
+     * Entry annotation.
+     * </pre>
+     *
      * <code>.google.protobuf.Struct json_payload = 8;</code>
      */
     com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder();
@@ -272,6 +369,11 @@ public final class LogEntryOuterClass {
     public static final int UID_FIELD_NUMBER = 1;
     private volatile java.lang.Object uid_;
     /**
+     * <pre>
+     * Unique entry ID.
+     * Useful for logs deduplication.
+     * </pre>
+     *
      * <code>string uid = 1;</code>
      */
     public java.lang.String getUid() {
@@ -287,6 +389,11 @@ public final class LogEntryOuterClass {
       }
     }
     /**
+     * <pre>
+     * Unique entry ID.
+     * Useful for logs deduplication.
+     * </pre>
+     *
      * <code>string uid = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -306,18 +413,36 @@ public final class LogEntryOuterClass {
     public static final int RESOURCE_FIELD_NUMBER = 2;
     private yandex.cloud.api.logging.v1.LogResource.LogEntryResource resource_;
     /**
+     * <pre>
+     * Entry resource specification.
+     * May contain information about source service and resource ID.
+     * Also may be provided by the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
     public boolean hasResource() {
       return resource_ != null;
     }
     /**
+     * <pre>
+     * Entry resource specification.
+     * May contain information about source service and resource ID.
+     * Also may be provided by the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
     public yandex.cloud.api.logging.v1.LogResource.LogEntryResource getResource() {
       return resource_ == null ? yandex.cloud.api.logging.v1.LogResource.LogEntryResource.getDefaultInstance() : resource_;
     }
     /**
+     * <pre>
+     * Entry resource specification.
+     * May contain information about source service and resource ID.
+     * Also may be provided by the user.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
      */
     public yandex.cloud.api.logging.v1.LogResource.LogEntryResourceOrBuilder getResourceOrBuilder() {
@@ -327,18 +452,30 @@ public final class LogEntryOuterClass {
     public static final int TIMESTAMP_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp timestamp_;
     /**
+     * <pre>
+     * Timestamp of the entry.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public boolean hasTimestamp() {
       return timestamp_ != null;
     }
     /**
+     * <pre>
+     * Timestamp of the entry.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public com.google.protobuf.Timestamp getTimestamp() {
       return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
     }
     /**
+     * <pre>
+     * Timestamp of the entry.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 3;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
@@ -348,18 +485,30 @@ public final class LogEntryOuterClass {
     public static final int INGESTED_AT_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp ingestedAt_;
     /**
+     * <pre>
+     * Entry ingestion time observed by [LogIngestionService].
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
      */
     public boolean hasIngestedAt() {
       return ingestedAt_ != null;
     }
     /**
+     * <pre>
+     * Entry ingestion time observed by [LogIngestionService].
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
      */
     public com.google.protobuf.Timestamp getIngestedAt() {
       return ingestedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : ingestedAt_;
     }
     /**
+     * <pre>
+     * Entry ingestion time observed by [LogIngestionService].
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getIngestedAtOrBuilder() {
@@ -369,18 +518,33 @@ public final class LogEntryOuterClass {
     public static final int SAVED_AT_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp savedAt_;
     /**
+     * <pre>
+     * Entry save time.
+     * Entry is ready to be read since this moment.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp saved_at = 5;</code>
      */
     public boolean hasSavedAt() {
       return savedAt_ != null;
     }
     /**
+     * <pre>
+     * Entry save time.
+     * Entry is ready to be read since this moment.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp saved_at = 5;</code>
      */
     public com.google.protobuf.Timestamp getSavedAt() {
       return savedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : savedAt_;
     }
     /**
+     * <pre>
+     * Entry save time.
+     * Entry is ready to be read since this moment.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp saved_at = 5;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getSavedAtOrBuilder() {
@@ -390,12 +554,22 @@ public final class LogEntryOuterClass {
     public static final int LEVEL_FIELD_NUMBER = 6;
     private int level_;
     /**
+     * <pre>
+     * Entry severity.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
      */
     public int getLevelValue() {
       return level_;
     }
     /**
+     * <pre>
+     * Entry severity.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
      */
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
@@ -407,6 +581,10 @@ public final class LogEntryOuterClass {
     public static final int MESSAGE_FIELD_NUMBER = 7;
     private volatile java.lang.Object message_;
     /**
+     * <pre>
+     * Entry text message.
+     * </pre>
+     *
      * <code>string message = 7;</code>
      */
     public java.lang.String getMessage() {
@@ -422,6 +600,10 @@ public final class LogEntryOuterClass {
       }
     }
     /**
+     * <pre>
+     * Entry text message.
+     * </pre>
+     *
      * <code>string message = 7;</code>
      */
     public com.google.protobuf.ByteString
@@ -441,18 +623,30 @@ public final class LogEntryOuterClass {
     public static final int JSON_PAYLOAD_FIELD_NUMBER = 8;
     private com.google.protobuf.Struct jsonPayload_;
     /**
+     * <pre>
+     * Entry annotation.
+     * </pre>
+     *
      * <code>.google.protobuf.Struct json_payload = 8;</code>
      */
     public boolean hasJsonPayload() {
       return jsonPayload_ != null;
     }
     /**
+     * <pre>
+     * Entry annotation.
+     * </pre>
+     *
      * <code>.google.protobuf.Struct json_payload = 8;</code>
      */
     public com.google.protobuf.Struct getJsonPayload() {
       return jsonPayload_ == null ? com.google.protobuf.Struct.getDefaultInstance() : jsonPayload_;
     }
     /**
+     * <pre>
+     * Entry annotation.
+     * </pre>
+     *
      * <code>.google.protobuf.Struct json_payload = 8;</code>
      */
     public com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder() {
@@ -947,6 +1141,11 @@ public final class LogEntryOuterClass {
 
       private java.lang.Object uid_ = "";
       /**
+       * <pre>
+       * Unique entry ID.
+       * Useful for logs deduplication.
+       * </pre>
+       *
        * <code>string uid = 1;</code>
        */
       public java.lang.String getUid() {
@@ -962,6 +1161,11 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique entry ID.
+       * Useful for logs deduplication.
+       * </pre>
+       *
        * <code>string uid = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -978,6 +1182,11 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Unique entry ID.
+       * Useful for logs deduplication.
+       * </pre>
+       *
        * <code>string uid = 1;</code>
        */
       public Builder setUid(
@@ -991,6 +1200,11 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique entry ID.
+       * Useful for logs deduplication.
+       * </pre>
+       *
        * <code>string uid = 1;</code>
        */
       public Builder clearUid() {
@@ -1000,6 +1214,11 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Unique entry ID.
+       * Useful for logs deduplication.
+       * </pre>
+       *
        * <code>string uid = 1;</code>
        */
       public Builder setUidBytes(
@@ -1018,12 +1237,24 @@ public final class LogEntryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.logging.v1.LogResource.LogEntryResource, yandex.cloud.api.logging.v1.LogResource.LogEntryResource.Builder, yandex.cloud.api.logging.v1.LogResource.LogEntryResourceOrBuilder> resourceBuilder_;
       /**
+       * <pre>
+       * Entry resource specification.
+       * May contain information about source service and resource ID.
+       * Also may be provided by the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public boolean hasResource() {
         return resourceBuilder_ != null || resource_ != null;
       }
       /**
+       * <pre>
+       * Entry resource specification.
+       * May contain information about source service and resource ID.
+       * Also may be provided by the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogResource.LogEntryResource getResource() {
@@ -1034,6 +1265,12 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry resource specification.
+       * May contain information about source service and resource ID.
+       * Also may be provided by the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public Builder setResource(yandex.cloud.api.logging.v1.LogResource.LogEntryResource value) {
@@ -1050,6 +1287,12 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry resource specification.
+       * May contain information about source service and resource ID.
+       * Also may be provided by the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public Builder setResource(
@@ -1064,6 +1307,12 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry resource specification.
+       * May contain information about source service and resource ID.
+       * Also may be provided by the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public Builder mergeResource(yandex.cloud.api.logging.v1.LogResource.LogEntryResource value) {
@@ -1082,6 +1331,12 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry resource specification.
+       * May contain information about source service and resource ID.
+       * Also may be provided by the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public Builder clearResource() {
@@ -1096,6 +1351,12 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry resource specification.
+       * May contain information about source service and resource ID.
+       * Also may be provided by the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogResource.LogEntryResource.Builder getResourceBuilder() {
@@ -1104,6 +1365,12 @@ public final class LogEntryOuterClass {
         return getResourceFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Entry resource specification.
+       * May contain information about source service and resource ID.
+       * Also may be provided by the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogResource.LogEntryResourceOrBuilder getResourceOrBuilder() {
@@ -1115,6 +1382,12 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry resource specification.
+       * May contain information about source service and resource ID.
+       * Also may be provided by the user.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogEntryResource resource = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1135,12 +1408,20 @@ public final class LogEntryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       public boolean hasTimestamp() {
         return timestampBuilder_ != null || timestamp_ != null;
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       public com.google.protobuf.Timestamp getTimestamp() {
@@ -1151,6 +1432,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       public Builder setTimestamp(com.google.protobuf.Timestamp value) {
@@ -1167,6 +1452,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       public Builder setTimestamp(
@@ -1181,6 +1470,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
@@ -1199,6 +1492,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       public Builder clearTimestamp() {
@@ -1213,6 +1510,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
@@ -1221,6 +1522,10 @@ public final class LogEntryOuterClass {
         return getTimestampFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
@@ -1232,6 +1537,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1252,12 +1561,20 @@ public final class LogEntryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> ingestedAtBuilder_;
       /**
+       * <pre>
+       * Entry ingestion time observed by [LogIngestionService].
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
        */
       public boolean hasIngestedAt() {
         return ingestedAtBuilder_ != null || ingestedAt_ != null;
       }
       /**
+       * <pre>
+       * Entry ingestion time observed by [LogIngestionService].
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
        */
       public com.google.protobuf.Timestamp getIngestedAt() {
@@ -1268,6 +1585,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry ingestion time observed by [LogIngestionService].
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
        */
       public Builder setIngestedAt(com.google.protobuf.Timestamp value) {
@@ -1284,6 +1605,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry ingestion time observed by [LogIngestionService].
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
        */
       public Builder setIngestedAt(
@@ -1298,6 +1623,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry ingestion time observed by [LogIngestionService].
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
        */
       public Builder mergeIngestedAt(com.google.protobuf.Timestamp value) {
@@ -1316,6 +1645,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry ingestion time observed by [LogIngestionService].
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
        */
       public Builder clearIngestedAt() {
@@ -1330,6 +1663,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry ingestion time observed by [LogIngestionService].
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getIngestedAtBuilder() {
@@ -1338,6 +1675,10 @@ public final class LogEntryOuterClass {
         return getIngestedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Entry ingestion time observed by [LogIngestionService].
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getIngestedAtOrBuilder() {
@@ -1349,6 +1690,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry ingestion time observed by [LogIngestionService].
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp ingested_at = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1369,12 +1714,22 @@ public final class LogEntryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> savedAtBuilder_;
       /**
+       * <pre>
+       * Entry save time.
+       * Entry is ready to be read since this moment.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp saved_at = 5;</code>
        */
       public boolean hasSavedAt() {
         return savedAtBuilder_ != null || savedAt_ != null;
       }
       /**
+       * <pre>
+       * Entry save time.
+       * Entry is ready to be read since this moment.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp saved_at = 5;</code>
        */
       public com.google.protobuf.Timestamp getSavedAt() {
@@ -1385,6 +1740,11 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry save time.
+       * Entry is ready to be read since this moment.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp saved_at = 5;</code>
        */
       public Builder setSavedAt(com.google.protobuf.Timestamp value) {
@@ -1401,6 +1761,11 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry save time.
+       * Entry is ready to be read since this moment.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp saved_at = 5;</code>
        */
       public Builder setSavedAt(
@@ -1415,6 +1780,11 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry save time.
+       * Entry is ready to be read since this moment.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp saved_at = 5;</code>
        */
       public Builder mergeSavedAt(com.google.protobuf.Timestamp value) {
@@ -1433,6 +1803,11 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry save time.
+       * Entry is ready to be read since this moment.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp saved_at = 5;</code>
        */
       public Builder clearSavedAt() {
@@ -1447,6 +1822,11 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry save time.
+       * Entry is ready to be read since this moment.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp saved_at = 5;</code>
        */
       public com.google.protobuf.Timestamp.Builder getSavedAtBuilder() {
@@ -1455,6 +1835,11 @@ public final class LogEntryOuterClass {
         return getSavedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Entry save time.
+       * Entry is ready to be read since this moment.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp saved_at = 5;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getSavedAtOrBuilder() {
@@ -1466,6 +1851,11 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry save time.
+       * Entry is ready to be read since this moment.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp saved_at = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1484,12 +1874,22 @@ public final class LogEntryOuterClass {
 
       private int level_ = 0;
       /**
+       * <pre>
+       * Entry severity.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
        */
       public int getLevelValue() {
         return level_;
       }
       /**
+       * <pre>
+       * Entry severity.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
        */
       public Builder setLevelValue(int value) {
@@ -1498,6 +1898,11 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry severity.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
@@ -1506,6 +1911,11 @@ public final class LogEntryOuterClass {
         return result == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Entry severity.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
        */
       public Builder setLevel(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
@@ -1518,6 +1928,11 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry severity.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 6;</code>
        */
       public Builder clearLevel() {
@@ -1529,6 +1944,10 @@ public final class LogEntryOuterClass {
 
       private java.lang.Object message_ = "";
       /**
+       * <pre>
+       * Entry text message.
+       * </pre>
+       *
        * <code>string message = 7;</code>
        */
       public java.lang.String getMessage() {
@@ -1544,6 +1963,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry text message.
+       * </pre>
+       *
        * <code>string message = 7;</code>
        */
       public com.google.protobuf.ByteString
@@ -1560,6 +1983,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry text message.
+       * </pre>
+       *
        * <code>string message = 7;</code>
        */
       public Builder setMessage(
@@ -1573,6 +2000,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry text message.
+       * </pre>
+       *
        * <code>string message = 7;</code>
        */
       public Builder clearMessage() {
@@ -1582,6 +2013,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry text message.
+       * </pre>
+       *
        * <code>string message = 7;</code>
        */
       public Builder setMessageBytes(
@@ -1600,12 +2035,20 @@ public final class LogEntryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> jsonPayloadBuilder_;
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 8;</code>
        */
       public boolean hasJsonPayload() {
         return jsonPayloadBuilder_ != null || jsonPayload_ != null;
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 8;</code>
        */
       public com.google.protobuf.Struct getJsonPayload() {
@@ -1616,6 +2059,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 8;</code>
        */
       public Builder setJsonPayload(com.google.protobuf.Struct value) {
@@ -1632,6 +2079,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 8;</code>
        */
       public Builder setJsonPayload(
@@ -1646,6 +2097,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 8;</code>
        */
       public Builder mergeJsonPayload(com.google.protobuf.Struct value) {
@@ -1664,6 +2119,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 8;</code>
        */
       public Builder clearJsonPayload() {
@@ -1678,6 +2137,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 8;</code>
        */
       public com.google.protobuf.Struct.Builder getJsonPayloadBuilder() {
@@ -1686,6 +2149,10 @@ public final class LogEntryOuterClass {
         return getJsonPayloadFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 8;</code>
        */
       public com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder() {
@@ -1697,6 +2164,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1770,46 +2241,88 @@ public final class LogEntryOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Timestamp of the entry.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
      */
     boolean hasTimestamp();
     /**
+     * <pre>
+     * Timestamp of the entry.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.Timestamp getTimestamp();
     /**
+     * <pre>
+     * Timestamp of the entry.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder();
 
     /**
+     * <pre>
+     * Entry severity.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
      */
     int getLevelValue();
     /**
+     * <pre>
+     * Entry severity.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel();
 
     /**
+     * <pre>
+     * Entry text message.
+     * </pre>
+     *
      * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
      */
     java.lang.String getMessage();
     /**
+     * <pre>
+     * Entry text message.
+     * </pre>
+     *
      * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
      */
     com.google.protobuf.ByteString
         getMessageBytes();
 
     /**
+     * <pre>
+     * Entry annotation.
+     * </pre>
+     *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
     boolean hasJsonPayload();
     /**
+     * <pre>
+     * Entry annotation.
+     * </pre>
+     *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
     com.google.protobuf.Struct getJsonPayload();
     /**
+     * <pre>
+     * Entry annotation.
+     * </pre>
+     *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
     com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder();
@@ -1928,18 +2441,30 @@ public final class LogEntryOuterClass {
     public static final int TIMESTAMP_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp timestamp_;
     /**
+     * <pre>
+     * Timestamp of the entry.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
      */
     public boolean hasTimestamp() {
       return timestamp_ != null;
     }
     /**
+     * <pre>
+     * Timestamp of the entry.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.Timestamp getTimestamp() {
       return timestamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timestamp_;
     }
     /**
+     * <pre>
+     * Timestamp of the entry.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
@@ -1949,12 +2474,22 @@ public final class LogEntryOuterClass {
     public static final int LEVEL_FIELD_NUMBER = 2;
     private int level_;
     /**
+     * <pre>
+     * Entry severity.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
      */
     public int getLevelValue() {
       return level_;
     }
     /**
+     * <pre>
+     * Entry severity.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
      */
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
@@ -1966,6 +2501,10 @@ public final class LogEntryOuterClass {
     public static final int MESSAGE_FIELD_NUMBER = 3;
     private volatile java.lang.Object message_;
     /**
+     * <pre>
+     * Entry text message.
+     * </pre>
+     *
      * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
      */
     public java.lang.String getMessage() {
@@ -1981,6 +2520,10 @@ public final class LogEntryOuterClass {
       }
     }
     /**
+     * <pre>
+     * Entry text message.
+     * </pre>
+     *
      * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2000,18 +2543,30 @@ public final class LogEntryOuterClass {
     public static final int JSON_PAYLOAD_FIELD_NUMBER = 4;
     private com.google.protobuf.Struct jsonPayload_;
     /**
+     * <pre>
+     * Entry annotation.
+     * </pre>
+     *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
     public boolean hasJsonPayload() {
       return jsonPayload_ != null;
     }
     /**
+     * <pre>
+     * Entry annotation.
+     * </pre>
+     *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
     public com.google.protobuf.Struct getJsonPayload() {
       return jsonPayload_ == null ? com.google.protobuf.Struct.getDefaultInstance() : jsonPayload_;
     }
     /**
+     * <pre>
+     * Entry annotation.
+     * </pre>
+     *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
     public com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder() {
@@ -2401,12 +2956,20 @@ public final class LogEntryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timestampBuilder_;
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
        */
       public boolean hasTimestamp() {
         return timestampBuilder_ != null || timestamp_ != null;
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.Timestamp getTimestamp() {
@@ -2417,6 +2980,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTimestamp(com.google.protobuf.Timestamp value) {
@@ -2433,6 +3000,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setTimestamp(
@@ -2447,6 +3018,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder mergeTimestamp(com.google.protobuf.Timestamp value) {
@@ -2465,6 +3040,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearTimestamp() {
@@ -2479,6 +3058,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.Timestamp.Builder getTimestampBuilder() {
@@ -2487,6 +3070,10 @@ public final class LogEntryOuterClass {
         return getTimestampFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
        */
       public com.google.protobuf.TimestampOrBuilder getTimestampOrBuilder() {
@@ -2498,6 +3085,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the entry.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp timestamp = 1 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2516,12 +3107,22 @@ public final class LogEntryOuterClass {
 
       private int level_ = 0;
       /**
+       * <pre>
+       * Entry severity.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
        */
       public int getLevelValue() {
         return level_;
       }
       /**
+       * <pre>
+       * Entry severity.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
        */
       public Builder setLevelValue(int value) {
@@ -2530,6 +3131,11 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry severity.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
@@ -2538,6 +3144,11 @@ public final class LogEntryOuterClass {
         return result == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Entry severity.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
        */
       public Builder setLevel(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
@@ -2550,6 +3161,11 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry severity.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
        */
       public Builder clearLevel() {
@@ -2561,6 +3177,10 @@ public final class LogEntryOuterClass {
 
       private java.lang.Object message_ = "";
       /**
+       * <pre>
+       * Entry text message.
+       * </pre>
+       *
        * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
        */
       public java.lang.String getMessage() {
@@ -2576,6 +3196,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry text message.
+       * </pre>
+       *
        * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
        */
       public com.google.protobuf.ByteString
@@ -2592,6 +3216,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry text message.
+       * </pre>
+       *
        * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
        */
       public Builder setMessage(
@@ -2605,6 +3233,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry text message.
+       * </pre>
+       *
        * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
        */
       public Builder clearMessage() {
@@ -2614,6 +3246,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry text message.
+       * </pre>
+       *
        * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
        */
       public Builder setMessageBytes(
@@ -2632,12 +3268,20 @@ public final class LogEntryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> jsonPayloadBuilder_;
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       public boolean hasJsonPayload() {
         return jsonPayloadBuilder_ != null || jsonPayload_ != null;
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       public com.google.protobuf.Struct getJsonPayload() {
@@ -2648,6 +3292,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       public Builder setJsonPayload(com.google.protobuf.Struct value) {
@@ -2664,6 +3312,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       public Builder setJsonPayload(
@@ -2678,6 +3330,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       public Builder mergeJsonPayload(com.google.protobuf.Struct value) {
@@ -2696,6 +3352,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       public Builder clearJsonPayload() {
@@ -2710,6 +3370,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       public com.google.protobuf.Struct.Builder getJsonPayloadBuilder() {
@@ -2718,6 +3382,10 @@ public final class LogEntryOuterClass {
         return getJsonPayloadFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       public com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder() {
@@ -2729,6 +3397,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry annotation.
+       * </pre>
+       *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2802,20 +3474,36 @@ public final class LogEntryOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Entry should be written to log group resolved by ID.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * Entry should be written to log group resolved by ID.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
 
     /**
+     * <pre>
+     * Entry should be written to default log group for the folder.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Entry should be written to default log group for the folder.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
      */
     com.google.protobuf.ByteString
@@ -2946,6 +3634,10 @@ public final class LogEntryOuterClass {
 
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Entry should be written to log group resolved by ID.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public java.lang.String getLogGroupId() {
@@ -2966,6 +3658,10 @@ public final class LogEntryOuterClass {
       }
     }
     /**
+     * <pre>
+     * Entry should be written to log group resolved by ID.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2989,6 +3685,10 @@ public final class LogEntryOuterClass {
 
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Entry should be written to default log group for the folder.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public java.lang.String getFolderId() {
@@ -3009,6 +3709,10 @@ public final class LogEntryOuterClass {
       }
     }
     /**
+     * <pre>
+     * Entry should be written to default log group for the folder.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3397,6 +4101,10 @@ public final class LogEntryOuterClass {
 
 
       /**
+       * <pre>
+       * Entry should be written to log group resolved by ID.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public java.lang.String getLogGroupId() {
@@ -3417,6 +4125,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry should be written to log group resolved by ID.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3438,6 +4150,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry should be written to log group resolved by ID.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupId(
@@ -3451,6 +4167,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry should be written to log group resolved by ID.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder clearLogGroupId() {
@@ -3462,6 +4182,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry should be written to log group resolved by ID.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupIdBytes(
@@ -3477,6 +4201,10 @@ public final class LogEntryOuterClass {
       }
 
       /**
+       * <pre>
+       * Entry should be written to default log group for the folder.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public java.lang.String getFolderId() {
@@ -3497,6 +4225,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry should be written to default log group for the folder.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3518,6 +4250,10 @@ public final class LogEntryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Entry should be written to default log group for the folder.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setFolderId(
@@ -3531,6 +4267,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry should be written to default log group for the folder.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder clearFolderId() {
@@ -3542,6 +4282,10 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry should be written to default log group for the folder.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setFolderIdBytes(
@@ -3613,10 +4357,20 @@ public final class LogEntryOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Entry level.
+     * See [Level] for possible values.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
      */
     int getLevelValue();
     /**
+     * <pre>
+     * Entry level.
+     * See [Level] for possible values.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel();
@@ -3700,35 +4454,74 @@ public final class LogEntryOuterClass {
     }
 
     /**
+     * <pre>
+     * Possible log levels for entries.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.logging.v1.LogLevel.Level}
      */
     public enum Level
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Default log level.
+       * Equivalent to not specifying log level at all.
+       * </pre>
+       *
        * <code>LEVEL_UNSPECIFIED = 0;</code>
        */
       LEVEL_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Trace log level.
+       * Possible use case: verbose logging of some business logic.
+       * </pre>
+       *
        * <code>TRACE = 1;</code>
        */
       TRACE(1),
       /**
+       * <pre>
+       * Debug log level.
+       * Possible use case: debugging special cases in application logic.
+       * </pre>
+       *
        * <code>DEBUG = 2;</code>
        */
       DEBUG(2),
       /**
+       * <pre>
+       * Info log level.
+       * Mostly used for information messages.
+       * </pre>
+       *
        * <code>INFO = 3;</code>
        */
       INFO(3),
       /**
+       * <pre>
+       * Warn log level.
+       * May be used to alert about significant events.
+       * </pre>
+       *
        * <code>WARN = 4;</code>
        */
       WARN(4),
       /**
+       * <pre>
+       * Error log level.
+       * May be used to alert about errors in infrastructure, logic, etc.
+       * </pre>
+       *
        * <code>ERROR = 5;</code>
        */
       ERROR(5),
       /**
+       * <pre>
+       * Fatal log level.
+       * May be used to alert about unrecoverable failures and events.
+       * </pre>
+       *
        * <code>FATAL = 6;</code>
        */
       FATAL(6),
@@ -3736,30 +4529,65 @@ public final class LogEntryOuterClass {
       ;
 
       /**
+       * <pre>
+       * Default log level.
+       * Equivalent to not specifying log level at all.
+       * </pre>
+       *
        * <code>LEVEL_UNSPECIFIED = 0;</code>
        */
       public static final int LEVEL_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Trace log level.
+       * Possible use case: verbose logging of some business logic.
+       * </pre>
+       *
        * <code>TRACE = 1;</code>
        */
       public static final int TRACE_VALUE = 1;
       /**
+       * <pre>
+       * Debug log level.
+       * Possible use case: debugging special cases in application logic.
+       * </pre>
+       *
        * <code>DEBUG = 2;</code>
        */
       public static final int DEBUG_VALUE = 2;
       /**
+       * <pre>
+       * Info log level.
+       * Mostly used for information messages.
+       * </pre>
+       *
        * <code>INFO = 3;</code>
        */
       public static final int INFO_VALUE = 3;
       /**
+       * <pre>
+       * Warn log level.
+       * May be used to alert about significant events.
+       * </pre>
+       *
        * <code>WARN = 4;</code>
        */
       public static final int WARN_VALUE = 4;
       /**
+       * <pre>
+       * Error log level.
+       * May be used to alert about errors in infrastructure, logic, etc.
+       * </pre>
+       *
        * <code>ERROR = 5;</code>
        */
       public static final int ERROR_VALUE = 5;
       /**
+       * <pre>
+       * Fatal log level.
+       * May be used to alert about unrecoverable failures and events.
+       * </pre>
+       *
        * <code>FATAL = 6;</code>
        */
       public static final int FATAL_VALUE = 6;
@@ -3845,12 +4673,22 @@ public final class LogEntryOuterClass {
     public static final int LEVEL_FIELD_NUMBER = 1;
     private int level_;
     /**
+     * <pre>
+     * Entry level.
+     * See [Level] for possible values.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
      */
     public int getLevelValue() {
       return level_;
     }
     /**
+     * <pre>
+     * Entry level.
+     * See [Level] for possible values.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
      */
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
@@ -4163,12 +5001,22 @@ public final class LogEntryOuterClass {
 
       private int level_ = 0;
       /**
+       * <pre>
+       * Entry level.
+       * See [Level] for possible values.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
        */
       public int getLevelValue() {
         return level_;
       }
       /**
+       * <pre>
+       * Entry level.
+       * See [Level] for possible values.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
        */
       public Builder setLevelValue(int value) {
@@ -4177,6 +5025,11 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry level.
+       * See [Level] for possible values.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
@@ -4185,6 +5038,11 @@ public final class LogEntryOuterClass {
         return result == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Entry level.
+       * See [Level] for possible values.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
        */
       public Builder setLevel(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
@@ -4197,6 +5055,11 @@ public final class LogEntryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Entry level.
+       * See [Level] for possible values.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 1;</code>
        */
       public Builder clearLevel() {

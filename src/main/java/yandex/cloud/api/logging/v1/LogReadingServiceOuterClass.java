@@ -19,24 +19,49 @@ public final class LogReadingServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ReadResponse.next_page_token] or [ReadResponse.previous_page_token] returned by a previous read request.
+     * </pre>
+     *
      * <code>string page_token = 1;</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ReadResponse.next_page_token] or [ReadResponse.previous_page_token] returned by a previous read request.
+     * </pre>
+     *
      * <code>string page_token = 1;</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * Read criteria.
+     * See [Criteria] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
      */
     boolean hasCriteria();
     /**
+     * <pre>
+     * Read criteria.
+     * See [Criteria] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
      */
     yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria getCriteria();
     /**
+     * <pre>
+     * Read criteria.
+     * See [Criteria] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
      */
     yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.CriteriaOrBuilder getCriteriaOrBuilder();
@@ -174,6 +199,11 @@ public final class LogReadingServiceOuterClass {
 
     public static final int PAGE_TOKEN_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ReadResponse.next_page_token] or [ReadResponse.previous_page_token] returned by a previous read request.
+     * </pre>
+     *
      * <code>string page_token = 1;</code>
      */
     public java.lang.String getPageToken() {
@@ -194,6 +224,11 @@ public final class LogReadingServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ReadResponse.next_page_token] or [ReadResponse.previous_page_token] returned by a previous read request.
+     * </pre>
+     *
      * <code>string page_token = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -217,12 +252,22 @@ public final class LogReadingServiceOuterClass {
 
     public static final int CRITERIA_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Read criteria.
+     * See [Criteria] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
      */
     public boolean hasCriteria() {
       return selectorCase_ == 2;
     }
     /**
+     * <pre>
+     * Read criteria.
+     * See [Criteria] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
      */
     public yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria getCriteria() {
@@ -232,6 +277,11 @@ public final class LogReadingServiceOuterClass {
       return yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Read criteria.
+     * See [Criteria] for details.
+     * </pre>
+     *
      * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
      */
     public yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.CriteriaOrBuilder getCriteriaOrBuilder() {
@@ -611,6 +661,11 @@ public final class LogReadingServiceOuterClass {
 
 
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ReadResponse.next_page_token] or [ReadResponse.previous_page_token] returned by a previous read request.
+       * </pre>
+       *
        * <code>string page_token = 1;</code>
        */
       public java.lang.String getPageToken() {
@@ -631,6 +686,11 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ReadResponse.next_page_token] or [ReadResponse.previous_page_token] returned by a previous read request.
+       * </pre>
+       *
        * <code>string page_token = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -652,6 +712,11 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ReadResponse.next_page_token] or [ReadResponse.previous_page_token] returned by a previous read request.
+       * </pre>
+       *
        * <code>string page_token = 1;</code>
        */
       public Builder setPageToken(
@@ -665,6 +730,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ReadResponse.next_page_token] or [ReadResponse.previous_page_token] returned by a previous read request.
+       * </pre>
+       *
        * <code>string page_token = 1;</code>
        */
       public Builder clearPageToken() {
@@ -676,6 +746,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ReadResponse.next_page_token] or [ReadResponse.previous_page_token] returned by a previous read request.
+       * </pre>
+       *
        * <code>string page_token = 1;</code>
        */
       public Builder setPageTokenBytes(
@@ -693,12 +768,22 @@ public final class LogReadingServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria, yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria.Builder, yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.CriteriaOrBuilder> criteriaBuilder_;
       /**
+       * <pre>
+       * Read criteria.
+       * See [Criteria] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
        */
       public boolean hasCriteria() {
         return selectorCase_ == 2;
       }
       /**
+       * <pre>
+       * Read criteria.
+       * See [Criteria] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria getCriteria() {
@@ -715,6 +800,11 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Read criteria.
+       * See [Criteria] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
        */
       public Builder setCriteria(yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria value) {
@@ -731,6 +821,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Read criteria.
+       * See [Criteria] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
        */
       public Builder setCriteria(
@@ -745,6 +840,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Read criteria.
+       * See [Criteria] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
        */
       public Builder mergeCriteria(yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria value) {
@@ -767,6 +867,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Read criteria.
+       * See [Criteria] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
        */
       public Builder clearCriteria() {
@@ -786,12 +891,22 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Read criteria.
+       * See [Criteria] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.Criteria.Builder getCriteriaBuilder() {
         return getCriteriaFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Read criteria.
+       * See [Criteria] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.CriteriaOrBuilder getCriteriaOrBuilder() {
@@ -805,6 +920,11 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Read criteria.
+       * See [Criteria] for details.
+       * </pre>
+       *
        * <code>.yandex.cloud.logging.v1.Criteria criteria = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -883,54 +1003,110 @@ public final class LogReadingServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Log group ID the read was performed from.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * Log group ID the read was performed from.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
 
     /**
+     * <pre>
+     * List of matching log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
     java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry> 
         getEntriesList();
     /**
+     * <pre>
+     * List of matching log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry getEntries(int index);
     /**
+     * <pre>
+     * List of matching log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
     int getEntriesCount();
     /**
+     * <pre>
+     * List of matching log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
     java.util.List<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryOrBuilder> 
         getEntriesOrBuilderList();
     /**
+     * <pre>
+     * List of matching log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryOrBuilder getEntriesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the log entries.
+     * After getting log entries initially with [Criteria], you can use `next_page_token` as the value
+     * for the [ReadRequest.page_token] parameter in the next read request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 3;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the log entries.
+     * After getting log entries initially with [Criteria], you can use `next_page_token` as the value
+     * for the [ReadRequest.page_token] parameter in the next read request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 3;</code>
      */
     com.google.protobuf.ByteString
         getNextPageTokenBytes();
 
     /**
+     * <pre>
+     * Token for getting the previous page of the log entries.
+     * After getting log entries initially with [Criteria], you can use `previous_page_token` as the value
+     * for the [ReadRequest.page_token] parameter in the next read request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string previous_page_token = 4;</code>
      */
     java.lang.String getPreviousPageToken();
     /**
+     * <pre>
+     * Token for getting the previous page of the log entries.
+     * After getting log entries initially with [Criteria], you can use `previous_page_token` as the value
+     * for the [ReadRequest.page_token] parameter in the next read request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string previous_page_token = 4;</code>
      */
     com.google.protobuf.ByteString
@@ -1045,6 +1221,10 @@ public final class LogReadingServiceOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * Log group ID the read was performed from.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     public java.lang.String getLogGroupId() {
@@ -1060,6 +1240,10 @@ public final class LogReadingServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Log group ID the read was performed from.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -1079,12 +1263,20 @@ public final class LogReadingServiceOuterClass {
     public static final int ENTRIES_FIELD_NUMBER = 2;
     private java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry> entries_;
     /**
+     * <pre>
+     * List of matching log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
     public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry> getEntriesList() {
       return entries_;
     }
     /**
+     * <pre>
+     * List of matching log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
     public java.util.List<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryOrBuilder> 
@@ -1092,18 +1284,30 @@ public final class LogReadingServiceOuterClass {
       return entries_;
     }
     /**
+     * <pre>
+     * List of matching log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
     public int getEntriesCount() {
       return entries_.size();
     }
     /**
+     * <pre>
+     * List of matching log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry getEntries(int index) {
       return entries_.get(index);
     }
     /**
+     * <pre>
+     * List of matching log entries.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
      */
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryOrBuilder getEntriesOrBuilder(
@@ -1114,6 +1318,13 @@ public final class LogReadingServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the log entries.
+     * After getting log entries initially with [Criteria], you can use `next_page_token` as the value
+     * for the [ReadRequest.page_token] parameter in the next read request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 3;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -1129,6 +1340,13 @@ public final class LogReadingServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the log entries.
+     * After getting log entries initially with [Criteria], you can use `next_page_token` as the value
+     * for the [ReadRequest.page_token] parameter in the next read request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 3;</code>
      */
     public com.google.protobuf.ByteString
@@ -1148,6 +1366,13 @@ public final class LogReadingServiceOuterClass {
     public static final int PREVIOUS_PAGE_TOKEN_FIELD_NUMBER = 4;
     private volatile java.lang.Object previousPageToken_;
     /**
+     * <pre>
+     * Token for getting the previous page of the log entries.
+     * After getting log entries initially with [Criteria], you can use `previous_page_token` as the value
+     * for the [ReadRequest.page_token] parameter in the next read request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string previous_page_token = 4;</code>
      */
     public java.lang.String getPreviousPageToken() {
@@ -1163,6 +1388,13 @@ public final class LogReadingServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the previous page of the log entries.
+     * After getting log entries initially with [Criteria], you can use `previous_page_token` as the value
+     * for the [ReadRequest.page_token] parameter in the next read request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string previous_page_token = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -1577,6 +1809,10 @@ public final class LogReadingServiceOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * Log group ID the read was performed from.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public java.lang.String getLogGroupId() {
@@ -1592,6 +1828,10 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group ID the read was performed from.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -1608,6 +1848,10 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group ID the read was performed from.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder setLogGroupId(
@@ -1621,6 +1865,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group ID the read was performed from.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder clearLogGroupId() {
@@ -1630,6 +1878,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group ID the read was performed from.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder setLogGroupIdBytes(
@@ -1657,6 +1909,10 @@ public final class LogReadingServiceOuterClass {
           yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry.Builder, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryOrBuilder> entriesBuilder_;
 
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry> getEntriesList() {
@@ -1667,6 +1923,10 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public int getEntriesCount() {
@@ -1677,6 +1937,10 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry getEntries(int index) {
@@ -1687,6 +1951,10 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public Builder setEntries(
@@ -1704,6 +1972,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public Builder setEntries(
@@ -1718,6 +1990,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public Builder addEntries(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry value) {
@@ -1734,6 +2010,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public Builder addEntries(
@@ -1751,6 +2031,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public Builder addEntries(
@@ -1765,6 +2049,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public Builder addEntries(
@@ -1779,6 +2067,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public Builder addAllEntries(
@@ -1794,6 +2086,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public Builder clearEntries() {
@@ -1807,6 +2103,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public Builder removeEntries(int index) {
@@ -1820,6 +2120,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry.Builder getEntriesBuilder(
@@ -1827,6 +2131,10 @@ public final class LogReadingServiceOuterClass {
         return getEntriesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryOrBuilder getEntriesOrBuilder(
@@ -1837,6 +2145,10 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public java.util.List<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryOrBuilder> 
@@ -1848,6 +2160,10 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry.Builder addEntriesBuilder() {
@@ -1855,6 +2171,10 @@ public final class LogReadingServiceOuterClass {
             yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry.Builder addEntriesBuilder(
@@ -1863,6 +2183,10 @@ public final class LogReadingServiceOuterClass {
             index, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of matching log entries.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogEntry entries = 2;</code>
        */
       public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntry.Builder> 
@@ -1886,6 +2210,13 @@ public final class LogReadingServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the log entries.
+       * After getting log entries initially with [Criteria], you can use `next_page_token` as the value
+       * for the [ReadRequest.page_token] parameter in the next read request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 3;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -1901,6 +2232,13 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the log entries.
+       * After getting log entries initially with [Criteria], you can use `next_page_token` as the value
+       * for the [ReadRequest.page_token] parameter in the next read request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -1917,6 +2255,13 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the log entries.
+       * After getting log entries initially with [Criteria], you can use `next_page_token` as the value
+       * for the [ReadRequest.page_token] parameter in the next read request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 3;</code>
        */
       public Builder setNextPageToken(
@@ -1930,6 +2275,13 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the log entries.
+       * After getting log entries initially with [Criteria], you can use `next_page_token` as the value
+       * for the [ReadRequest.page_token] parameter in the next read request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 3;</code>
        */
       public Builder clearNextPageToken() {
@@ -1939,6 +2291,13 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the log entries.
+       * After getting log entries initially with [Criteria], you can use `next_page_token` as the value
+       * for the [ReadRequest.page_token] parameter in the next read request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 3;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -1955,6 +2314,13 @@ public final class LogReadingServiceOuterClass {
 
       private java.lang.Object previousPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the previous page of the log entries.
+       * After getting log entries initially with [Criteria], you can use `previous_page_token` as the value
+       * for the [ReadRequest.page_token] parameter in the next read request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string previous_page_token = 4;</code>
        */
       public java.lang.String getPreviousPageToken() {
@@ -1970,6 +2336,13 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the previous page of the log entries.
+       * After getting log entries initially with [Criteria], you can use `previous_page_token` as the value
+       * for the [ReadRequest.page_token] parameter in the next read request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string previous_page_token = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -1986,6 +2359,13 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the previous page of the log entries.
+       * After getting log entries initially with [Criteria], you can use `previous_page_token` as the value
+       * for the [ReadRequest.page_token] parameter in the next read request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string previous_page_token = 4;</code>
        */
       public Builder setPreviousPageToken(
@@ -1999,6 +2379,13 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the previous page of the log entries.
+       * After getting log entries initially with [Criteria], you can use `previous_page_token` as the value
+       * for the [ReadRequest.page_token] parameter in the next read request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string previous_page_token = 4;</code>
        */
       public Builder clearPreviousPageToken() {
@@ -2008,6 +2395,13 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the previous page of the log entries.
+       * After getting log entries initially with [Criteria], you can use `previous_page_token` as the value
+       * for the [ReadRequest.page_token] parameter in the next read request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string previous_page_token = 4;</code>
        */
       public Builder setPreviousPageTokenBytes(
@@ -2079,117 +2473,232 @@ public final class LogReadingServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the log group to return.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * ID of the log group to return.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
 
     /**
+     * <pre>
+     * List of resource types to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     java.util.List<java.lang.String>
         getResourceTypesList();
     /**
+     * <pre>
+     * List of resource types to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     int getResourceTypesCount();
     /**
+     * <pre>
+     * List of resource types to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     java.lang.String getResourceTypes(int index);
     /**
+     * <pre>
+     * List of resource types to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getResourceTypesBytes(int index);
 
     /**
+     * <pre>
+     * List of resource IDs to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     java.util.List<java.lang.String>
         getResourceIdsList();
     /**
+     * <pre>
+     * List of resource IDs to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     int getResourceIdsCount();
     /**
+     * <pre>
+     * List of resource IDs to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     java.lang.String getResourceIds(int index);
     /**
+     * <pre>
+     * List of resource IDs to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getResourceIdsBytes(int index);
 
     /**
+     * <pre>
+     * Lower bound of log entries timestamps.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp since = 4;</code>
      */
     boolean hasSince();
     /**
+     * <pre>
+     * Lower bound of log entries timestamps.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp since = 4;</code>
      */
     com.google.protobuf.Timestamp getSince();
     /**
+     * <pre>
+     * Lower bound of log entries timestamps.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp since = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getSinceOrBuilder();
 
     /**
+     * <pre>
+     * Upper bound of log entries timestamps.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp until = 5;</code>
      */
     boolean hasUntil();
     /**
+     * <pre>
+     * Upper bound of log entries timestamps.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp until = 5;</code>
      */
     com.google.protobuf.Timestamp getUntil();
     /**
+     * <pre>
+     * Upper bound of log entries timestamps.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp until = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUntilOrBuilder();
 
     /**
+     * <pre>
+     * List of log levels to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
     java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level> getLevelsList();
     /**
+     * <pre>
+     * List of log levels to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
     int getLevelsCount();
     /**
+     * <pre>
+     * List of log levels to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevels(int index);
     /**
+     * <pre>
+     * List of log levels to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
     java.util.List<java.lang.Integer>
     getLevelsValueList();
     /**
+     * <pre>
+     * List of log levels to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
     int getLevelsValue(int index);
 
     /**
+     * <pre>
+     * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+     * </pre>
+     *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+     * </pre>
+     *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
         getFilterBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return.
+     * </pre>
+     *
      * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
      */
     long getPageSize();
   }
   /**
+   * <pre>
+   * Read criteria. Should be used in initial [ReadRequest].
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.logging.v1.Criteria}
    */
   public  static final class Criteria extends
@@ -2363,6 +2872,11 @@ public final class LogReadingServiceOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * ID of the log group to return.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public java.lang.String getLogGroupId() {
@@ -2378,6 +2892,11 @@ public final class LogReadingServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the log group to return.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2397,6 +2916,11 @@ public final class LogReadingServiceOuterClass {
     public static final int RESOURCE_TYPES_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList resourceTypes_;
     /**
+     * <pre>
+     * List of resource types to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -2404,18 +2928,33 @@ public final class LogReadingServiceOuterClass {
       return resourceTypes_;
     }
     /**
+     * <pre>
+     * List of resource types to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public int getResourceTypesCount() {
       return resourceTypes_.size();
     }
     /**
+     * <pre>
+     * List of resource types to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public java.lang.String getResourceTypes(int index) {
       return resourceTypes_.get(index);
     }
     /**
+     * <pre>
+     * List of resource types to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2426,6 +2965,11 @@ public final class LogReadingServiceOuterClass {
     public static final int RESOURCE_IDS_FIELD_NUMBER = 3;
     private com.google.protobuf.LazyStringList resourceIds_;
     /**
+     * <pre>
+     * List of resource IDs to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -2433,18 +2977,33 @@ public final class LogReadingServiceOuterClass {
       return resourceIds_;
     }
     /**
+     * <pre>
+     * List of resource IDs to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public int getResourceIdsCount() {
       return resourceIds_.size();
     }
     /**
+     * <pre>
+     * List of resource IDs to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public java.lang.String getResourceIds(int index) {
       return resourceIds_.get(index);
     }
     /**
+     * <pre>
+     * List of resource IDs to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2455,18 +3014,30 @@ public final class LogReadingServiceOuterClass {
     public static final int SINCE_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp since_;
     /**
+     * <pre>
+     * Lower bound of log entries timestamps.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp since = 4;</code>
      */
     public boolean hasSince() {
       return since_ != null;
     }
     /**
+     * <pre>
+     * Lower bound of log entries timestamps.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp since = 4;</code>
      */
     public com.google.protobuf.Timestamp getSince() {
       return since_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : since_;
     }
     /**
+     * <pre>
+     * Lower bound of log entries timestamps.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp since = 4;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getSinceOrBuilder() {
@@ -2476,18 +3047,30 @@ public final class LogReadingServiceOuterClass {
     public static final int UNTIL_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp until_;
     /**
+     * <pre>
+     * Upper bound of log entries timestamps.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp until = 5;</code>
      */
     public boolean hasUntil() {
       return until_ != null;
     }
     /**
+     * <pre>
+     * Upper bound of log entries timestamps.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp until = 5;</code>
      */
     public com.google.protobuf.Timestamp getUntil() {
       return until_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : until_;
     }
     /**
+     * <pre>
+     * Upper bound of log entries timestamps.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp until = 5;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getUntilOrBuilder() {
@@ -2507,6 +3090,11 @@ public final class LogReadingServiceOuterClass {
               }
             };
     /**
+     * <pre>
+     * List of log levels to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
     public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level> getLevelsList() {
@@ -2514,18 +3102,33 @@ public final class LogReadingServiceOuterClass {
           java.lang.Integer, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level>(levels_, levels_converter_);
     }
     /**
+     * <pre>
+     * List of log levels to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
     public int getLevelsCount() {
       return levels_.size();
     }
     /**
+     * <pre>
+     * List of log levels to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevels(int index) {
       return levels_converter_.convert(levels_.get(index));
     }
     /**
+     * <pre>
+     * List of log levels to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
     public java.util.List<java.lang.Integer>
@@ -2533,6 +3136,11 @@ public final class LogReadingServiceOuterClass {
       return levels_;
     }
     /**
+     * <pre>
+     * List of log levels to limit log entries to.
+     * Empty list disables filter.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
      */
     public int getLevelsValue(int index) {
@@ -2543,6 +3151,10 @@ public final class LogReadingServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 7;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+     * </pre>
+     *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -2558,6 +3170,10 @@ public final class LogReadingServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+     * </pre>
+     *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2577,6 +3193,10 @@ public final class LogReadingServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 8;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return.
+     * </pre>
+     *
      * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
      */
     public long getPageSize() {
@@ -2852,6 +3472,10 @@ public final class LogReadingServiceOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Read criteria. Should be used in initial [ReadRequest].
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.logging.v1.Criteria}
      */
     public static final class Builder extends
@@ -3097,6 +3721,11 @@ public final class LogReadingServiceOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * ID of the log group to return.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public java.lang.String getLogGroupId() {
@@ -3112,6 +3741,11 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to return.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3128,6 +3762,11 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to return.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupId(
@@ -3141,6 +3780,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to return.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder clearLogGroupId() {
@@ -3150,6 +3794,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to return.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupIdBytes(
@@ -3172,6 +3821,11 @@ public final class LogReadingServiceOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of resource types to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -3179,18 +3833,33 @@ public final class LogReadingServiceOuterClass {
         return resourceTypes_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of resource types to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public int getResourceTypesCount() {
         return resourceTypes_.size();
       }
       /**
+       * <pre>
+       * List of resource types to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public java.lang.String getResourceTypes(int index) {
         return resourceTypes_.get(index);
       }
       /**
+       * <pre>
+       * List of resource types to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3198,6 +3867,11 @@ public final class LogReadingServiceOuterClass {
         return resourceTypes_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of resource types to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder setResourceTypes(
@@ -3211,6 +3885,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resource types to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addResourceTypes(
@@ -3224,6 +3903,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resource types to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addAllResourceTypes(
@@ -3235,6 +3919,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resource types to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder clearResourceTypes() {
@@ -3244,6 +3933,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resource types to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addResourceTypesBytes(
@@ -3266,6 +3960,11 @@ public final class LogReadingServiceOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of resource IDs to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -3273,18 +3972,33 @@ public final class LogReadingServiceOuterClass {
         return resourceIds_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of resource IDs to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public int getResourceIdsCount() {
         return resourceIds_.size();
       }
       /**
+       * <pre>
+       * List of resource IDs to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public java.lang.String getResourceIds(int index) {
         return resourceIds_.get(index);
       }
       /**
+       * <pre>
+       * List of resource IDs to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3292,6 +4006,11 @@ public final class LogReadingServiceOuterClass {
         return resourceIds_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of resource IDs to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder setResourceIds(
@@ -3305,6 +4024,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resource IDs to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addResourceIds(
@@ -3318,6 +4042,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resource IDs to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addAllResourceIds(
@@ -3329,6 +4058,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resource IDs to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder clearResourceIds() {
@@ -3338,6 +4072,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resource IDs to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addResourceIdsBytes(
@@ -3356,12 +4095,20 @@ public final class LogReadingServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> sinceBuilder_;
       /**
+       * <pre>
+       * Lower bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp since = 4;</code>
        */
       public boolean hasSince() {
         return sinceBuilder_ != null || since_ != null;
       }
       /**
+       * <pre>
+       * Lower bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp since = 4;</code>
        */
       public com.google.protobuf.Timestamp getSince() {
@@ -3372,6 +4119,10 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Lower bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp since = 4;</code>
        */
       public Builder setSince(com.google.protobuf.Timestamp value) {
@@ -3388,6 +4139,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Lower bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp since = 4;</code>
        */
       public Builder setSince(
@@ -3402,6 +4157,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Lower bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp since = 4;</code>
        */
       public Builder mergeSince(com.google.protobuf.Timestamp value) {
@@ -3420,6 +4179,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Lower bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp since = 4;</code>
        */
       public Builder clearSince() {
@@ -3434,6 +4197,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Lower bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp since = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getSinceBuilder() {
@@ -3442,6 +4209,10 @@ public final class LogReadingServiceOuterClass {
         return getSinceFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Lower bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp since = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getSinceOrBuilder() {
@@ -3453,6 +4224,10 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Lower bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp since = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3473,12 +4248,20 @@ public final class LogReadingServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> untilBuilder_;
       /**
+       * <pre>
+       * Upper bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp until = 5;</code>
        */
       public boolean hasUntil() {
         return untilBuilder_ != null || until_ != null;
       }
       /**
+       * <pre>
+       * Upper bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp until = 5;</code>
        */
       public com.google.protobuf.Timestamp getUntil() {
@@ -3489,6 +4272,10 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Upper bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp until = 5;</code>
        */
       public Builder setUntil(com.google.protobuf.Timestamp value) {
@@ -3505,6 +4292,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Upper bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp until = 5;</code>
        */
       public Builder setUntil(
@@ -3519,6 +4310,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Upper bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp until = 5;</code>
        */
       public Builder mergeUntil(com.google.protobuf.Timestamp value) {
@@ -3537,6 +4332,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Upper bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp until = 5;</code>
        */
       public Builder clearUntil() {
@@ -3551,6 +4350,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Upper bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp until = 5;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUntilBuilder() {
@@ -3559,6 +4362,10 @@ public final class LogReadingServiceOuterClass {
         return getUntilFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Upper bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp until = 5;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUntilOrBuilder() {
@@ -3570,6 +4377,10 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Upper bound of log entries timestamps.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp until = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3595,6 +4406,11 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of log levels to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
        */
       public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level> getLevelsList() {
@@ -3602,18 +4418,33 @@ public final class LogReadingServiceOuterClass {
             java.lang.Integer, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level>(levels_, levels_converter_);
       }
       /**
+       * <pre>
+       * List of log levels to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
        */
       public int getLevelsCount() {
         return levels_.size();
       }
       /**
+       * <pre>
+       * List of log levels to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevels(int index) {
         return levels_converter_.convert(levels_.get(index));
       }
       /**
+       * <pre>
+       * List of log levels to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
        */
       public Builder setLevels(
@@ -3627,6 +4458,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log levels to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
        */
       public Builder addLevels(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
@@ -3639,6 +4475,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log levels to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
        */
       public Builder addAllLevels(
@@ -3651,6 +4492,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log levels to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
        */
       public Builder clearLevels() {
@@ -3660,6 +4506,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log levels to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
        */
       public java.util.List<java.lang.Integer>
@@ -3667,12 +4518,22 @@ public final class LogReadingServiceOuterClass {
         return java.util.Collections.unmodifiableList(levels_);
       }
       /**
+       * <pre>
+       * List of log levels to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
        */
       public int getLevelsValue(int index) {
         return levels_.get(index);
       }
       /**
+       * <pre>
+       * List of log levels to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
        */
       public Builder setLevelsValue(
@@ -3683,6 +4544,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log levels to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
        */
       public Builder addLevelsValue(int value) {
@@ -3692,6 +4558,11 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log levels to limit log entries to.
+       * Empty list disables filter.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogLevel.Level levels = 6 [(.yandex.cloud.size) = "&lt;=10"];</code>
        */
       public Builder addAllLevelsValue(
@@ -3706,6 +4577,10 @@ public final class LogReadingServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+       * </pre>
+       *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -3721,6 +4596,10 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+       * </pre>
+       *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3737,6 +4616,10 @@ public final class LogReadingServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+       * </pre>
+       *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -3750,6 +4633,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+       * </pre>
+       *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -3759,6 +4646,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+       * </pre>
+       *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -3775,12 +4666,20 @@ public final class LogReadingServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return.
+       * </pre>
+       *
        * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return.
+       * </pre>
+       *
        * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -3790,6 +4689,10 @@ public final class LogReadingServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return.
+       * </pre>
+       *
        * <code>int64 page_size = 8 [(.yandex.cloud.value) = "1-1000"];</code>
        */
       public Builder clearPageSize() {

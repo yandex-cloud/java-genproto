@@ -19,10 +19,20 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the log group to return.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * ID of the log group to return.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     com.google.protobuf.ByteString
@@ -109,6 +119,11 @@ public final class LogGroupServiceOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * ID of the log group to return.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public java.lang.String getLogGroupId() {
@@ -124,6 +139,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the log group to return.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public com.google.protobuf.ByteString
@@ -445,6 +465,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * ID of the log group to return.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public java.lang.String getLogGroupId() {
@@ -460,6 +485,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to return.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public com.google.protobuf.ByteString
@@ -476,6 +506,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to return.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupId(
@@ -489,6 +524,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to return.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder clearLogGroupId() {
@@ -498,6 +538,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to return.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupIdBytes(
@@ -569,10 +614,20 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the log group to return stats for.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * ID of the log group to return stats for.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     com.google.protobuf.ByteString
@@ -659,6 +714,11 @@ public final class LogGroupServiceOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * ID of the log group to return stats for.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public java.lang.String getLogGroupId() {
@@ -674,6 +734,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the log group to return stats for.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public com.google.protobuf.ByteString
@@ -995,6 +1060,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * ID of the log group to return stats for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public java.lang.String getLogGroupId() {
@@ -1010,6 +1080,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to return stats for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1026,6 +1101,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to return stats for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupId(
@@ -1039,6 +1119,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to return stats for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder clearLogGroupId() {
@@ -1048,6 +1133,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to return stats for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupIdBytes(
@@ -1119,10 +1209,20 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID of the default log group to return.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID of the default log group to return.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     com.google.protobuf.ByteString
@@ -1209,6 +1309,11 @@ public final class LogGroupServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID of the default log group to return.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public java.lang.String getFolderId() {
@@ -1224,6 +1329,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID of the default log group to return.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1545,6 +1655,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID of the default log group to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public java.lang.String getFolderId() {
@@ -1560,6 +1675,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID of the default log group to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1576,6 +1696,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID of the default log group to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setFolderId(
@@ -1589,6 +1714,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID of the default log group to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder clearFolderId() {
@@ -1598,6 +1728,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID of the default log group to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setFolderIdBytes(
@@ -1669,25 +1804,52 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID of the log groups to return.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID of the log groups to return.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListLogGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListLogGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListLogGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
@@ -1695,8 +1857,13 @@ public final class LogGroupServiceOuterClass {
 
     /**
      * <pre>
-     * supported fields for filter:
-     * name
+     * A filter expression that filters log groups listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-log-group`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1704,8 +1871,13 @@ public final class LogGroupServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * supported fields for filter:
-     * name
+     * A filter expression that filters log groups listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-log-group`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1814,6 +1986,11 @@ public final class LogGroupServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID of the log groups to return.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public java.lang.String getFolderId() {
@@ -1829,6 +2006,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID of the log groups to return.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1848,6 +2030,13 @@ public final class LogGroupServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListLogGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2;</code>
      */
     public long getPageSize() {
@@ -1857,6 +2046,11 @@ public final class LogGroupServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListLogGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -1872,6 +2066,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListLogGroupsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1892,8 +2091,13 @@ public final class LogGroupServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * supported fields for filter:
-     * name
+     * A filter expression that filters log groups listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-log-group`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1912,8 +2116,13 @@ public final class LogGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * supported fields for filter:
-     * name
+     * A filter expression that filters log groups listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Example of a filter: `name=my-log-group`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -2289,6 +2498,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID of the log groups to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public java.lang.String getFolderId() {
@@ -2304,6 +2518,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID of the log groups to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public com.google.protobuf.ByteString
@@ -2320,6 +2539,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID of the log groups to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setFolderId(
@@ -2333,6 +2557,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID of the log groups to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder clearFolderId() {
@@ -2342,6 +2571,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID of the log groups to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setFolderIdBytes(
@@ -2358,12 +2592,26 @@ public final class LogGroupServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListLogGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListLogGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        */
       public Builder setPageSize(long value) {
@@ -2373,6 +2621,13 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListLogGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2;</code>
        */
       public Builder clearPageSize() {
@@ -2384,6 +2639,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLogGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -2399,6 +2659,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLogGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -2415,6 +2680,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLogGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -2428,6 +2698,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLogGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -2437,6 +2712,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLogGroupsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -2454,8 +2734,13 @@ public final class LogGroupServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * supported fields for filter:
-       * name
+       * A filter expression that filters log groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-log-group`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -2474,8 +2759,13 @@ public final class LogGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * supported fields for filter:
-       * name
+       * A filter expression that filters log groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-log-group`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -2495,8 +2785,13 @@ public final class LogGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * supported fields for filter:
-       * name
+       * A filter expression that filters log groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-log-group`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -2513,8 +2808,13 @@ public final class LogGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * supported fields for filter:
-       * name
+       * A filter expression that filters log groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-log-group`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -2527,8 +2827,13 @@ public final class LogGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * supported fields for filter:
-       * name
+       * A filter expression that filters log groups listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Example of a filter: `name=my-log-group`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -2602,34 +2907,68 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of log groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
     java.util.List<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> 
         getGroupsList();
     /**
+     * <pre>
+     * List of log groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
     yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup getGroups(int index);
     /**
+     * <pre>
+     * List of log groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
     int getGroupsCount();
     /**
+     * <pre>
+     * List of log groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroupOrBuilder> 
         getGroupsOrBuilderList();
     /**
+     * <pre>
+     * List of log groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
     yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroupOrBuilder getGroupsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListLogGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListLogGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListLogGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListLogGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -2730,12 +3069,20 @@ public final class LogGroupServiceOuterClass {
     public static final int GROUPS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> groups_;
     /**
+     * <pre>
+     * List of log groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
     public java.util.List<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> getGroupsList() {
       return groups_;
     }
     /**
+     * <pre>
+     * List of log groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroupOrBuilder> 
@@ -2743,18 +3090,30 @@ public final class LogGroupServiceOuterClass {
       return groups_;
     }
     /**
+     * <pre>
+     * List of log groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
     public int getGroupsCount() {
       return groups_.size();
     }
     /**
+     * <pre>
+     * List of log groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
     public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup getGroups(int index) {
       return groups_.get(index);
     }
     /**
+     * <pre>
+     * List of log groups in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
      */
     public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroupOrBuilder getGroupsOrBuilder(
@@ -2765,6 +3124,13 @@ public final class LogGroupServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListLogGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListLogGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -2780,6 +3146,13 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListLogGroupsRequest.page_size], use `next_page_token` as the value
+     * for the [ListLogGroupsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -3171,6 +3544,10 @@ public final class LogGroupServiceOuterClass {
           yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup, yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Builder, yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroupOrBuilder> groupsBuilder_;
 
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public java.util.List<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> getGroupsList() {
@@ -3181,6 +3558,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public int getGroupsCount() {
@@ -3191,6 +3572,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup getGroups(int index) {
@@ -3201,6 +3586,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public Builder setGroups(
@@ -3218,6 +3607,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public Builder setGroups(
@@ -3232,6 +3625,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public Builder addGroups(yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup value) {
@@ -3248,6 +3645,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public Builder addGroups(
@@ -3265,6 +3666,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public Builder addGroups(
@@ -3279,6 +3684,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public Builder addGroups(
@@ -3293,6 +3702,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public Builder addAllGroups(
@@ -3308,6 +3721,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public Builder clearGroups() {
@@ -3321,6 +3738,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public Builder removeGroups(int index) {
@@ -3334,6 +3755,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Builder getGroupsBuilder(
@@ -3341,6 +3766,10 @@ public final class LogGroupServiceOuterClass {
         return getGroupsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroupOrBuilder getGroupsOrBuilder(
@@ -3351,6 +3780,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroupOrBuilder> 
@@ -3362,6 +3795,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Builder addGroupsBuilder() {
@@ -3369,6 +3806,10 @@ public final class LogGroupServiceOuterClass {
             yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Builder addGroupsBuilder(
@@ -3377,6 +3818,10 @@ public final class LogGroupServiceOuterClass {
             index, yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of log groups in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroup groups = 1;</code>
        */
       public java.util.List<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.Builder> 
@@ -3400,6 +3845,13 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLogGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListLogGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -3415,6 +3867,13 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLogGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListLogGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -3431,6 +3890,13 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLogGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListLogGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -3444,6 +3910,13 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLogGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListLogGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -3453,6 +3926,13 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLogGroupsRequest.page_size], use `next_page_token` as the value
+       * for the [ListLogGroupsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -3524,40 +4004,76 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create a log group in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create a log group in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the log group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the log group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the log group.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the log group.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * Log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -3569,11 +4085,19 @@ public final class LogGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * Log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * Log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3581,6 +4105,10 @@ public final class LogGroupServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * Log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3588,14 +4116,32 @@ public final class LogGroupServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * Log group entry retention period.
+     * Entries will be present in group during this period.
+     * Must be at least `1h`.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
      */
     boolean hasRetentionPeriod();
     /**
+     * <pre>
+     * Log group entry retention period.
+     * Entries will be present in group during this period.
+     * Must be at least `1h`.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
      */
     com.google.protobuf.Duration getRetentionPeriod();
     /**
+     * <pre>
+     * Log group entry retention period.
+     * Entries will be present in group during this period.
+     * Must be at least `1h`.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
      */
     com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder();
@@ -3734,6 +4280,11 @@ public final class LogGroupServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create a log group in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public java.lang.String getFolderId() {
@@ -3749,6 +4300,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create a log group in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3768,6 +4324,11 @@ public final class LogGroupServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the log group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public java.lang.String getName() {
@@ -3783,6 +4344,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the log group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3802,6 +4368,10 @@ public final class LogGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the log group.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -3817,6 +4387,10 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the log group.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3860,6 +4434,10 @@ public final class LogGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * Log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3876,6 +4454,10 @@ public final class LogGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * Log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3883,6 +4465,10 @@ public final class LogGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * Log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3895,6 +4481,10 @@ public final class LogGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -3912,18 +4502,36 @@ public final class LogGroupServiceOuterClass {
     public static final int RETENTION_PERIOD_FIELD_NUMBER = 5;
     private com.google.protobuf.Duration retentionPeriod_;
     /**
+     * <pre>
+     * Log group entry retention period.
+     * Entries will be present in group during this period.
+     * Must be at least `1h`.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
      */
     public boolean hasRetentionPeriod() {
       return retentionPeriod_ != null;
     }
     /**
+     * <pre>
+     * Log group entry retention period.
+     * Entries will be present in group during this period.
+     * Must be at least `1h`.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
      */
     public com.google.protobuf.Duration getRetentionPeriod() {
       return retentionPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : retentionPeriod_;
     }
     /**
+     * <pre>
+     * Log group entry retention period.
+     * Entries will be present in group during this period.
+     * Must be at least `1h`.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
      */
     public com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder() {
@@ -4352,6 +4960,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create a log group in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public java.lang.String getFolderId() {
@@ -4367,6 +4980,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a log group in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4383,6 +5001,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a log group in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setFolderId(
@@ -4396,6 +5019,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a log group in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder clearFolderId() {
@@ -4405,6 +5033,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a log group in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setFolderIdBytes(
@@ -4421,6 +5054,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the log group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public java.lang.String getName() {
@@ -4436,6 +5074,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the log group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4452,6 +5095,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the log group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setName(
@@ -4465,6 +5113,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the log group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder clearName() {
@@ -4474,6 +5127,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the log group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setNameBytes(
@@ -4490,6 +5148,10 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the log group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -4505,6 +5167,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the log group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4521,6 +5187,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the log group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -4534,6 +5204,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the log group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -4543,6 +5217,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the log group.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -4584,6 +5262,10 @@ public final class LogGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * Log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4600,6 +5282,10 @@ public final class LogGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * Log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4607,6 +5293,10 @@ public final class LogGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * Log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4619,6 +5309,10 @@ public final class LogGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4639,6 +5333,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4658,6 +5356,10 @@ public final class LogGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * Log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -4670,6 +5372,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -4684,12 +5390,24 @@ public final class LogGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> retentionPeriodBuilder_;
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public boolean hasRetentionPeriod() {
         return retentionPeriodBuilder_ != null || retentionPeriod_ != null;
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public com.google.protobuf.Duration getRetentionPeriod() {
@@ -4700,6 +5418,12 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public Builder setRetentionPeriod(com.google.protobuf.Duration value) {
@@ -4716,6 +5440,12 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public Builder setRetentionPeriod(
@@ -4730,6 +5460,12 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public Builder mergeRetentionPeriod(com.google.protobuf.Duration value) {
@@ -4748,6 +5484,12 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public Builder clearRetentionPeriod() {
@@ -4762,6 +5504,12 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public com.google.protobuf.Duration.Builder getRetentionPeriodBuilder() {
@@ -4770,6 +5518,12 @@ public final class LogGroupServiceOuterClass {
         return getRetentionPeriodFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder() {
@@ -4781,6 +5535,12 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4854,10 +5614,18 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the log group being created.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * ID of the log group being created.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -4944,6 +5712,10 @@ public final class LogGroupServiceOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * ID of the log group being created.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     public java.lang.String getLogGroupId() {
@@ -4959,6 +5731,10 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the log group being created.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -5280,6 +6056,10 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * ID of the log group being created.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public java.lang.String getLogGroupId() {
@@ -5295,6 +6075,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group being created.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -5311,6 +6095,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group being created.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder setLogGroupId(
@@ -5324,6 +6112,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group being created.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder clearLogGroupId() {
@@ -5333,6 +6125,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group being created.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder setLogGroupIdBytes(
@@ -5404,53 +6200,101 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the log group to update.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * ID of the log group to update.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * New name of the log group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * New name of the log group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * New Description of the log group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * New Description of the log group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * New log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     int getLabelsCount();
     /**
+     * <pre>
+     * New log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     boolean containsLabels(
@@ -5462,11 +6306,19 @@ public final class LogGroupServiceOuterClass {
     java.util.Map<java.lang.String, java.lang.String>
     getLabels();
     /**
+     * <pre>
+     * New log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
     getLabelsMap();
     /**
+     * <pre>
+     * New log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5474,6 +6326,10 @@ public final class LogGroupServiceOuterClass {
         java.lang.String key,
         java.lang.String defaultValue);
     /**
+     * <pre>
+     * New log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5481,14 +6337,32 @@ public final class LogGroupServiceOuterClass {
         java.lang.String key);
 
     /**
+     * <pre>
+     * New log group entry retention period.
+     * Entries will be present in group during this period.
+     * Must be at least `1h`.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
      */
     boolean hasRetentionPeriod();
     /**
+     * <pre>
+     * New log group entry retention period.
+     * Entries will be present in group during this period.
+     * Must be at least `1h`.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
      */
     com.google.protobuf.Duration getRetentionPeriod();
     /**
+     * <pre>
+     * New log group entry retention period.
+     * Entries will be present in group during this period.
+     * Must be at least `1h`.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
      */
     com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder();
@@ -5640,6 +6514,11 @@ public final class LogGroupServiceOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * ID of the log group to update.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public java.lang.String getLogGroupId() {
@@ -5655,6 +6534,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the log group to update.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5674,18 +6558,30 @@ public final class LogGroupServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -5695,6 +6591,11 @@ public final class LogGroupServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * New name of the log group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public java.lang.String getName() {
@@ -5710,6 +6611,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New name of the log group.
+     * The name must be unique within the folder.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5729,6 +6635,10 @@ public final class LogGroupServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * New Description of the log group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -5744,6 +6654,10 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * New Description of the log group.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5787,6 +6701,10 @@ public final class LogGroupServiceOuterClass {
       return internalGetLabels().getMap().size();
     }
     /**
+     * <pre>
+     * New log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5803,6 +6721,10 @@ public final class LogGroupServiceOuterClass {
       return getLabelsMap();
     }
     /**
+     * <pre>
+     * New log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5810,6 +6732,10 @@ public final class LogGroupServiceOuterClass {
       return internalGetLabels().getMap();
     }
     /**
+     * <pre>
+     * New log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5822,6 +6748,10 @@ public final class LogGroupServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * New log group labels as `key:value` pairs.
+     * </pre>
+     *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
      */
 
@@ -5839,18 +6769,36 @@ public final class LogGroupServiceOuterClass {
     public static final int RETENTION_PERIOD_FIELD_NUMBER = 6;
     private com.google.protobuf.Duration retentionPeriod_;
     /**
+     * <pre>
+     * New log group entry retention period.
+     * Entries will be present in group during this period.
+     * Must be at least `1h`.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
      */
     public boolean hasRetentionPeriod() {
       return retentionPeriod_ != null;
     }
     /**
+     * <pre>
+     * New log group entry retention period.
+     * Entries will be present in group during this period.
+     * Must be at least `1h`.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
      */
     public com.google.protobuf.Duration getRetentionPeriod() {
       return retentionPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : retentionPeriod_;
     }
     /**
+     * <pre>
+     * New log group entry retention period.
+     * Entries will be present in group during this period.
+     * Must be at least `1h`.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
      */
     public com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder() {
@@ -6309,6 +7257,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * ID of the log group to update.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public java.lang.String getLogGroupId() {
@@ -6324,6 +7277,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to update.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6340,6 +7298,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to update.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupId(
@@ -6353,6 +7316,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to update.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder clearLogGroupId() {
@@ -6362,6 +7330,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to update.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupIdBytes(
@@ -6380,12 +7353,20 @@ public final class LogGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -6396,6 +7377,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -6412,6 +7397,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -6426,6 +7415,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -6444,6 +7437,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -6458,6 +7455,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -6466,6 +7467,10 @@ public final class LogGroupServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -6477,6 +7482,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6495,6 +7504,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * New name of the log group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public java.lang.String getName() {
@@ -6510,6 +7524,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name of the log group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6526,6 +7545,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New name of the log group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setName(
@@ -6539,6 +7563,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name of the log group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder clearName() {
@@ -6548,6 +7577,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New name of the log group.
+       * The name must be unique within the folder.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setNameBytes(
@@ -6564,6 +7598,10 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * New Description of the log group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -6579,6 +7617,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New Description of the log group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6595,6 +7637,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New Description of the log group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -6608,6 +7654,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New Description of the log group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -6617,6 +7667,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New Description of the log group.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -6658,6 +7712,10 @@ public final class LogGroupServiceOuterClass {
         return internalGetLabels().getMap().size();
       }
       /**
+       * <pre>
+       * New log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6674,6 +7732,10 @@ public final class LogGroupServiceOuterClass {
         return getLabelsMap();
       }
       /**
+       * <pre>
+       * New log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6681,6 +7743,10 @@ public final class LogGroupServiceOuterClass {
         return internalGetLabels().getMap();
       }
       /**
+       * <pre>
+       * New log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6693,6 +7759,10 @@ public final class LogGroupServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * New log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6713,6 +7783,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6732,6 +7806,10 @@ public final class LogGroupServiceOuterClass {
         return internalGetMutableLabels().getMutableMap();
       }
       /**
+       * <pre>
+       * New log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
       public Builder putLabels(
@@ -6744,6 +7822,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New log group labels as `key:value` pairs.
+       * </pre>
+       *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
        */
 
@@ -6758,12 +7840,24 @@ public final class LogGroupServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> retentionPeriodBuilder_;
       /**
+       * <pre>
+       * New log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public boolean hasRetentionPeriod() {
         return retentionPeriodBuilder_ != null || retentionPeriod_ != null;
       }
       /**
+       * <pre>
+       * New log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public com.google.protobuf.Duration getRetentionPeriod() {
@@ -6774,6 +7868,12 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public Builder setRetentionPeriod(com.google.protobuf.Duration value) {
@@ -6790,6 +7890,12 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public Builder setRetentionPeriod(
@@ -6804,6 +7910,12 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public Builder mergeRetentionPeriod(com.google.protobuf.Duration value) {
@@ -6822,6 +7934,12 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public Builder clearRetentionPeriod() {
@@ -6836,6 +7954,12 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * New log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public com.google.protobuf.Duration.Builder getRetentionPeriodBuilder() {
@@ -6844,6 +7968,12 @@ public final class LogGroupServiceOuterClass {
         return getRetentionPeriodFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * New log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       public com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder() {
@@ -6855,6 +7985,12 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * New log group entry retention period.
+       * Entries will be present in group during this period.
+       * Must be at least `1h`.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6928,10 +8064,18 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the log group being updated.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * ID of the log group being updated.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -7018,6 +8162,10 @@ public final class LogGroupServiceOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * ID of the log group being updated.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     public java.lang.String getLogGroupId() {
@@ -7033,6 +8181,10 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the log group being updated.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -7354,6 +8506,10 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * ID of the log group being updated.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public java.lang.String getLogGroupId() {
@@ -7369,6 +8525,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group being updated.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -7385,6 +8545,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group being updated.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder setLogGroupId(
@@ -7398,6 +8562,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group being updated.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder clearLogGroupId() {
@@ -7407,6 +8575,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group being updated.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder setLogGroupIdBytes(
@@ -7478,10 +8650,20 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the log group to delete.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * ID of the log group to delete.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     com.google.protobuf.ByteString
@@ -7568,6 +8750,11 @@ public final class LogGroupServiceOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * ID of the log group to delete.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public java.lang.String getLogGroupId() {
@@ -7583,6 +8770,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the log group to delete.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public com.google.protobuf.ByteString
@@ -7904,6 +9096,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * ID of the log group to delete.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public java.lang.String getLogGroupId() {
@@ -7919,6 +9116,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to delete.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public com.google.protobuf.ByteString
@@ -7935,6 +9137,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to delete.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupId(
@@ -7948,6 +9155,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to delete.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder clearLogGroupId() {
@@ -7957,6 +9169,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to delete.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupIdBytes(
@@ -8028,10 +9245,18 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the log group being deleted.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * ID of the log group being deleted.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -8118,6 +9343,10 @@ public final class LogGroupServiceOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * ID of the log group being deleted.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     public java.lang.String getLogGroupId() {
@@ -8133,6 +9362,10 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the log group being deleted.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -8454,6 +9687,10 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * ID of the log group being deleted.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public java.lang.String getLogGroupId() {
@@ -8469,6 +9706,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group being deleted.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -8485,6 +9726,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group being deleted.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder setLogGroupId(
@@ -8498,6 +9743,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group being deleted.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder clearLogGroupId() {
@@ -8507,6 +9756,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group being deleted.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder setLogGroupIdBytes(
@@ -8578,20 +9831,40 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the log group to list resources for.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * ID of the log group to list resources for.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
 
     /**
+     * <pre>
+     * Resource type to return resources for.
+     * If not specified, [ListResourcesResponse] will contain information about all resource types.
+     * </pre>
+     *
      * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getType();
     /**
+     * <pre>
+     * Resource type to return resources for.
+     * If not specified, [ListResourcesResponse] will contain information about all resource types.
+     * </pre>
+     *
      * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
@@ -8685,6 +9958,11 @@ public final class LogGroupServiceOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * ID of the log group to list resources for.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public java.lang.String getLogGroupId() {
@@ -8700,6 +9978,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the log group to list resources for.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public com.google.protobuf.ByteString
@@ -8719,6 +10002,11 @@ public final class LogGroupServiceOuterClass {
     public static final int TYPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object type_;
     /**
+     * <pre>
+     * Resource type to return resources for.
+     * If not specified, [ListResourcesResponse] will contain information about all resource types.
+     * </pre>
+     *
      * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getType() {
@@ -8734,6 +10022,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Resource type to return resources for.
+     * If not specified, [ListResourcesResponse] will contain information about all resource types.
+     * </pre>
+     *
      * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -9072,6 +10365,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * ID of the log group to list resources for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public java.lang.String getLogGroupId() {
@@ -9087,6 +10385,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to list resources for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public com.google.protobuf.ByteString
@@ -9103,6 +10406,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to list resources for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupId(
@@ -9116,6 +10424,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to list resources for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder clearLogGroupId() {
@@ -9125,6 +10438,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to list resources for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupIdBytes(
@@ -9141,6 +10459,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object type_ = "";
       /**
+       * <pre>
+       * Resource type to return resources for.
+       * If not specified, [ListResourcesResponse] will contain information about all resource types.
+       * </pre>
+       *
        * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getType() {
@@ -9156,6 +10479,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resource type to return resources for.
+       * If not specified, [ListResourcesResponse] will contain information about all resource types.
+       * </pre>
+       *
        * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -9172,6 +10500,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resource type to return resources for.
+       * If not specified, [ListResourcesResponse] will contain information about all resource types.
+       * </pre>
+       *
        * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setType(
@@ -9185,6 +10518,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource type to return resources for.
+       * If not specified, [ListResourcesResponse] will contain information about all resource types.
+       * </pre>
+       *
        * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearType() {
@@ -9194,6 +10532,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource type to return resources for.
+       * If not specified, [ListResourcesResponse] will contain information about all resource types.
+       * </pre>
+       *
        * <code>string type = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setTypeBytes(
@@ -9265,24 +10608,44 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of resources present in log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
     java.util.List<yandex.cloud.api.logging.v1.LogResource.LogGroupResource> 
         getResourcesList();
     /**
+     * <pre>
+     * List of resources present in log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
     yandex.cloud.api.logging.v1.LogResource.LogGroupResource getResources(int index);
     /**
+     * <pre>
+     * List of resources present in log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
     int getResourcesCount();
     /**
+     * <pre>
+     * List of resources present in log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.logging.v1.LogResource.LogGroupResourceOrBuilder> 
         getResourcesOrBuilderList();
     /**
+     * <pre>
+     * List of resources present in log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
     yandex.cloud.api.logging.v1.LogResource.LogGroupResourceOrBuilder getResourcesOrBuilder(
@@ -9375,12 +10738,20 @@ public final class LogGroupServiceOuterClass {
     public static final int RESOURCES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.logging.v1.LogResource.LogGroupResource> resources_;
     /**
+     * <pre>
+     * List of resources present in log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
     public java.util.List<yandex.cloud.api.logging.v1.LogResource.LogGroupResource> getResourcesList() {
       return resources_;
     }
     /**
+     * <pre>
+     * List of resources present in log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.logging.v1.LogResource.LogGroupResourceOrBuilder> 
@@ -9388,18 +10759,30 @@ public final class LogGroupServiceOuterClass {
       return resources_;
     }
     /**
+     * <pre>
+     * List of resources present in log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
     public int getResourcesCount() {
       return resources_.size();
     }
     /**
+     * <pre>
+     * List of resources present in log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
     public yandex.cloud.api.logging.v1.LogResource.LogGroupResource getResources(int index) {
       return resources_.get(index);
     }
     /**
+     * <pre>
+     * List of resources present in log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
      */
     public yandex.cloud.api.logging.v1.LogResource.LogGroupResourceOrBuilder getResourcesOrBuilder(
@@ -9763,6 +11146,10 @@ public final class LogGroupServiceOuterClass {
           yandex.cloud.api.logging.v1.LogResource.LogGroupResource, yandex.cloud.api.logging.v1.LogResource.LogGroupResource.Builder, yandex.cloud.api.logging.v1.LogResource.LogGroupResourceOrBuilder> resourcesBuilder_;
 
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public java.util.List<yandex.cloud.api.logging.v1.LogResource.LogGroupResource> getResourcesList() {
@@ -9773,6 +11160,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public int getResourcesCount() {
@@ -9783,6 +11174,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public yandex.cloud.api.logging.v1.LogResource.LogGroupResource getResources(int index) {
@@ -9793,6 +11188,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public Builder setResources(
@@ -9810,6 +11209,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public Builder setResources(
@@ -9824,6 +11227,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public Builder addResources(yandex.cloud.api.logging.v1.LogResource.LogGroupResource value) {
@@ -9840,6 +11247,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public Builder addResources(
@@ -9857,6 +11268,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public Builder addResources(
@@ -9871,6 +11286,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public Builder addResources(
@@ -9885,6 +11304,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public Builder addAllResources(
@@ -9900,6 +11323,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public Builder clearResources() {
@@ -9913,6 +11340,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public Builder removeResources(int index) {
@@ -9926,6 +11357,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public yandex.cloud.api.logging.v1.LogResource.LogGroupResource.Builder getResourcesBuilder(
@@ -9933,6 +11368,10 @@ public final class LogGroupServiceOuterClass {
         return getResourcesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public yandex.cloud.api.logging.v1.LogResource.LogGroupResourceOrBuilder getResourcesOrBuilder(
@@ -9943,6 +11382,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.logging.v1.LogResource.LogGroupResourceOrBuilder> 
@@ -9954,6 +11397,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public yandex.cloud.api.logging.v1.LogResource.LogGroupResource.Builder addResourcesBuilder() {
@@ -9961,6 +11408,10 @@ public final class LogGroupServiceOuterClass {
             yandex.cloud.api.logging.v1.LogResource.LogGroupResource.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public yandex.cloud.api.logging.v1.LogResource.LogGroupResource.Builder addResourcesBuilder(
@@ -9969,6 +11420,10 @@ public final class LogGroupServiceOuterClass {
             index, yandex.cloud.api.logging.v1.LogResource.LogGroupResource.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of resources present in log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.logging.v1.LogGroupResource resources = 1;</code>
        */
       public java.util.List<yandex.cloud.api.logging.v1.LogResource.LogGroupResource.Builder> 
@@ -10047,25 +11502,52 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the log group to list operations for.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * ID of the log group to list operations for.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
@@ -10073,12 +11555,18 @@ public final class LogGroupServiceOuterClass {
 
     /**
      * <pre>
-     * supported attributes:
-     * description
-     * created_at
-     * modified_at
-     * created_by
-     * done
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the following fields:
+     * * [operation.Operation.description]
+     * * [operation.Operation.created_at]
+     * * [operation.Operation.modified_at]
+     * * [operation.Operation.created_by]
+     * * [operation.Operation.done]
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Examples of a filter: `done=false`, `created_by='John.Doe'`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10086,12 +11574,18 @@ public final class LogGroupServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * supported attributes:
-     * description
-     * created_at
-     * modified_at
-     * created_by
-     * done
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the following fields:
+     * * [operation.Operation.description]
+     * * [operation.Operation.created_at]
+     * * [operation.Operation.modified_at]
+     * * [operation.Operation.created_by]
+     * * [operation.Operation.done]
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Examples of a filter: `done=false`, `created_by='John.Doe'`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10200,6 +11694,11 @@ public final class LogGroupServiceOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * ID of the log group to list operations for.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public java.lang.String getLogGroupId() {
@@ -10215,6 +11714,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the log group to list operations for.
+     * To get a log group ID make a [LogGroupService.List] request.
+     * </pre>
+     *
      * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
      */
     public com.google.protobuf.ByteString
@@ -10234,6 +11738,13 @@ public final class LogGroupServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -10243,6 +11754,11 @@ public final class LogGroupServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -10258,6 +11774,11 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -10278,12 +11799,18 @@ public final class LogGroupServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * supported attributes:
-     * description
-     * created_at
-     * modified_at
-     * created_by
-     * done
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the following fields:
+     * * [operation.Operation.description]
+     * * [operation.Operation.created_at]
+     * * [operation.Operation.modified_at]
+     * * [operation.Operation.created_by]
+     * * [operation.Operation.done]
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Examples of a filter: `done=false`, `created_by='John.Doe'`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10302,12 +11829,18 @@ public final class LogGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * supported attributes:
-     * description
-     * created_at
-     * modified_at
-     * created_by
-     * done
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the following fields:
+     * * [operation.Operation.description]
+     * * [operation.Operation.created_at]
+     * * [operation.Operation.modified_at]
+     * * [operation.Operation.created_by]
+     * * [operation.Operation.done]
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+     * for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+     * Examples of a filter: `done=false`, `created_by='John.Doe'`.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10683,6 +12216,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * ID of the log group to list operations for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public java.lang.String getLogGroupId() {
@@ -10698,6 +12236,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to list operations for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public com.google.protobuf.ByteString
@@ -10714,6 +12257,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the log group to list operations for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupId(
@@ -10727,6 +12275,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to list operations for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder clearLogGroupId() {
@@ -10736,6 +12289,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the log group to list operations for.
+       * To get a log group ID make a [LogGroupService.List] request.
+       * </pre>
+       *
        * <code>string log_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
        */
       public Builder setLogGroupIdBytes(
@@ -10752,12 +12310,26 @@ public final class LogGroupServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -10767,6 +12339,13 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -10778,6 +12357,11 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -10793,6 +12377,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -10809,6 +12398,11 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -10822,6 +12416,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -10831,6 +12430,11 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -10848,12 +12452,18 @@ public final class LogGroupServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * supported attributes:
-       * description
-       * created_at
-       * modified_at
-       * created_by
-       * done
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the following fields:
+       * * [operation.Operation.description]
+       * * [operation.Operation.created_at]
+       * * [operation.Operation.modified_at]
+       * * [operation.Operation.created_by]
+       * * [operation.Operation.done]
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10872,12 +12482,18 @@ public final class LogGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * supported attributes:
-       * description
-       * created_at
-       * modified_at
-       * created_by
-       * done
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the following fields:
+       * * [operation.Operation.description]
+       * * [operation.Operation.created_at]
+       * * [operation.Operation.modified_at]
+       * * [operation.Operation.created_by]
+       * * [operation.Operation.done]
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10897,12 +12513,18 @@ public final class LogGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * supported attributes:
-       * description
-       * created_at
-       * modified_at
-       * created_by
-       * done
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the following fields:
+       * * [operation.Operation.description]
+       * * [operation.Operation.created_at]
+       * * [operation.Operation.modified_at]
+       * * [operation.Operation.created_by]
+       * * [operation.Operation.done]
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10919,12 +12541,18 @@ public final class LogGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * supported attributes:
-       * description
-       * created_at
-       * modified_at
-       * created_by
-       * done
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the following fields:
+       * * [operation.Operation.description]
+       * * [operation.Operation.created_at]
+       * * [operation.Operation.modified_at]
+       * * [operation.Operation.created_by]
+       * * [operation.Operation.done]
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10937,12 +12565,18 @@ public final class LogGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * supported attributes:
-       * description
-       * created_at
-       * modified_at
-       * created_by
-       * done
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the following fields:
+       * * [operation.Operation.description]
+       * * [operation.Operation.created_at]
+       * * [operation.Operation.modified_at]
+       * * [operation.Operation.created_by]
+       * * [operation.Operation.done]
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
+       * for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -11016,34 +12650,68 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of operations for the specified log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
         getOperationsList();
     /**
+     * <pre>
+     * List of operations for the specified log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
     /**
+     * <pre>
+     * List of operations for the specified log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     int getOperationsCount();
     /**
+     * <pre>
+     * List of operations for the specified log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
         getOperationsOrBuilderList();
     /**
+     * <pre>
+     * List of operations for the specified log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -11144,12 +12812,20 @@ public final class LogGroupServiceOuterClass {
     public static final int OPERATIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
     /**
+     * <pre>
+     * List of operations for the specified log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -11157,18 +12833,30 @@ public final class LogGroupServiceOuterClass {
       return operations_;
     }
     /**
+     * <pre>
+     * List of operations for the specified log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public int getOperationsCount() {
       return operations_.size();
     }
     /**
+     * <pre>
+     * List of operations for the specified log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
       return operations_.get(index);
     }
     /**
+     * <pre>
+     * List of operations for the specified log group.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
      */
     public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -11179,6 +12867,13 @@ public final class LogGroupServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -11194,6 +12889,13 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -11585,6 +13287,10 @@ public final class LogGroupServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
 
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
@@ -11595,6 +13301,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public int getOperationsCount() {
@@ -11605,6 +13315,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
@@ -11615,6 +13329,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -11632,6 +13350,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder setOperations(
@@ -11646,6 +13368,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
@@ -11662,6 +13388,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -11679,6 +13409,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -11693,6 +13427,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addOperations(
@@ -11707,6 +13445,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder addAllOperations(
@@ -11722,6 +13464,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder clearOperations() {
@@ -11735,6 +13481,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public Builder removeOperations(int index) {
@@ -11748,6 +13498,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
@@ -11755,6 +13509,10 @@ public final class LogGroupServiceOuterClass {
         return getOperationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
@@ -11765,6 +13523,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
@@ -11776,6 +13538,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
@@ -11783,6 +13549,10 @@ public final class LogGroupServiceOuterClass {
             yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
@@ -11791,6 +13561,10 @@ public final class LogGroupServiceOuterClass {
             index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of operations for the specified log group.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
        */
       public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
@@ -11814,6 +13588,13 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -11829,6 +13610,13 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -11845,6 +13633,13 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -11858,6 +13653,13 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -11867,6 +13669,13 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -11938,21 +13747,37 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Log group ID the stats are returned for.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     java.lang.String getLogGroupId();
     /**
+     * <pre>
+     * Log group ID the stats are returned for.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
 
     /**
+     * <pre>
+     * Size of data in log group in bytes.
+     * </pre>
+     *
      * <code>int64 bytes = 2;</code>
      */
     long getBytes();
 
     /**
+     * <pre>
+     * Amount of records in log group.
+     * </pre>
+     *
      * <code>int64 records = 3;</code>
      */
     long getRecords();
@@ -12050,6 +13875,10 @@ public final class LogGroupServiceOuterClass {
     public static final int LOG_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object logGroupId_;
     /**
+     * <pre>
+     * Log group ID the stats are returned for.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     public java.lang.String getLogGroupId() {
@@ -12065,6 +13894,10 @@ public final class LogGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Log group ID the stats are returned for.
+     * </pre>
+     *
      * <code>string log_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -12084,6 +13917,10 @@ public final class LogGroupServiceOuterClass {
     public static final int BYTES_FIELD_NUMBER = 2;
     private long bytes_;
     /**
+     * <pre>
+     * Size of data in log group in bytes.
+     * </pre>
+     *
      * <code>int64 bytes = 2;</code>
      */
     public long getBytes() {
@@ -12093,6 +13930,10 @@ public final class LogGroupServiceOuterClass {
     public static final int RECORDS_FIELD_NUMBER = 3;
     private long records_;
     /**
+     * <pre>
+     * Amount of records in log group.
+     * </pre>
+     *
      * <code>int64 records = 3;</code>
      */
     public long getRecords() {
@@ -12440,6 +14281,10 @@ public final class LogGroupServiceOuterClass {
 
       private java.lang.Object logGroupId_ = "";
       /**
+       * <pre>
+       * Log group ID the stats are returned for.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public java.lang.String getLogGroupId() {
@@ -12455,6 +14300,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group ID the stats are returned for.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -12471,6 +14320,10 @@ public final class LogGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Log group ID the stats are returned for.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder setLogGroupId(
@@ -12484,6 +14337,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group ID the stats are returned for.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder clearLogGroupId() {
@@ -12493,6 +14350,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Log group ID the stats are returned for.
+       * </pre>
+       *
        * <code>string log_group_id = 1;</code>
        */
       public Builder setLogGroupIdBytes(
@@ -12509,12 +14370,20 @@ public final class LogGroupServiceOuterClass {
 
       private long bytes_ ;
       /**
+       * <pre>
+       * Size of data in log group in bytes.
+       * </pre>
+       *
        * <code>int64 bytes = 2;</code>
        */
       public long getBytes() {
         return bytes_;
       }
       /**
+       * <pre>
+       * Size of data in log group in bytes.
+       * </pre>
+       *
        * <code>int64 bytes = 2;</code>
        */
       public Builder setBytes(long value) {
@@ -12524,6 +14393,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Size of data in log group in bytes.
+       * </pre>
+       *
        * <code>int64 bytes = 2;</code>
        */
       public Builder clearBytes() {
@@ -12535,12 +14408,20 @@ public final class LogGroupServiceOuterClass {
 
       private long records_ ;
       /**
+       * <pre>
+       * Amount of records in log group.
+       * </pre>
+       *
        * <code>int64 records = 3;</code>
        */
       public long getRecords() {
         return records_;
       }
       /**
+       * <pre>
+       * Amount of records in log group.
+       * </pre>
+       *
        * <code>int64 records = 3;</code>
        */
       public Builder setRecords(long value) {
@@ -12550,6 +14431,10 @@ public final class LogGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Amount of records in log group.
+       * </pre>
+       *
        * <code>int64 records = 3;</code>
        */
       public Builder clearRecords() {

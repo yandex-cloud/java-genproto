@@ -87,6 +87,9 @@ public final class LogReadingServiceGrpc {
   public static abstract class LogReadingServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Read log entries from the specified log group.
+     * </pre>
      */
     public void read(yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse> responseObserver) {
@@ -125,6 +128,9 @@ public final class LogReadingServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Read log entries from the specified log group.
+     * </pre>
      */
     public void read(yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse> responseObserver) {
@@ -152,6 +158,9 @@ public final class LogReadingServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Read log entries from the specified log group.
+     * </pre>
      */
     public yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse read(yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadRequest request) {
       return blockingUnaryCall(
@@ -178,6 +187,9 @@ public final class LogReadingServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Read log entries from the specified log group.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadResponse> read(
         yandex.cloud.api.logging.v1.LogReadingServiceOuterClass.ReadRequest request) {
