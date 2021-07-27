@@ -8803,6 +8803,16 @@ public final class FunctionOuterClass {
 
     /**
      * <pre>
+     * Provisioned instances count in each zone.
+     * Billed separately.
+     * </pre>
+     *
+     * <code>int64 zone_provisioned_instances_count = 6;</code>
+     */
+    long getZoneProvisionedInstancesCount();
+
+    /**
+     * <pre>
      * Upper limit for instance count in each zone.
      * 0 means no limit.
      * </pre>
@@ -8836,6 +8846,7 @@ public final class FunctionOuterClass {
     private ScalingPolicy() {
       functionId_ = "";
       tag_ = "";
+      zoneProvisionedInstancesCount_ = 0L;
       zoneInstancesLimit_ = 0L;
       zoneRequestsLimit_ = 0L;
     }
@@ -8900,6 +8911,11 @@ public final class FunctionOuterClass {
                 modifiedAt_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 48: {
+
+              zoneProvisionedInstancesCount_ = input.readInt64();
               break;
             }
             case 56: {
@@ -9094,6 +9110,20 @@ public final class FunctionOuterClass {
       return getModifiedAt();
     }
 
+    public static final int ZONE_PROVISIONED_INSTANCES_COUNT_FIELD_NUMBER = 6;
+    private long zoneProvisionedInstancesCount_;
+    /**
+     * <pre>
+     * Provisioned instances count in each zone.
+     * Billed separately.
+     * </pre>
+     *
+     * <code>int64 zone_provisioned_instances_count = 6;</code>
+     */
+    public long getZoneProvisionedInstancesCount() {
+      return zoneProvisionedInstancesCount_;
+    }
+
     public static final int ZONE_INSTANCES_LIMIT_FIELD_NUMBER = 7;
     private long zoneInstancesLimit_;
     /**
@@ -9148,6 +9178,9 @@ public final class FunctionOuterClass {
       if (modifiedAt_ != null) {
         output.writeMessage(4, getModifiedAt());
       }
+      if (zoneProvisionedInstancesCount_ != 0L) {
+        output.writeInt64(6, zoneProvisionedInstancesCount_);
+      }
       if (zoneInstancesLimit_ != 0L) {
         output.writeInt64(7, zoneInstancesLimit_);
       }
@@ -9176,6 +9209,10 @@ public final class FunctionOuterClass {
       if (modifiedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getModifiedAt());
+      }
+      if (zoneProvisionedInstancesCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, zoneProvisionedInstancesCount_);
       }
       if (zoneInstancesLimit_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -9215,6 +9252,8 @@ public final class FunctionOuterClass {
         result = result && getModifiedAt()
             .equals(other.getModifiedAt());
       }
+      result = result && (getZoneProvisionedInstancesCount()
+          == other.getZoneProvisionedInstancesCount());
       result = result && (getZoneInstancesLimit()
           == other.getZoneInstancesLimit());
       result = result && (getZoneRequestsLimit()
@@ -9242,6 +9281,9 @@ public final class FunctionOuterClass {
         hash = (37 * hash) + MODIFIED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getModifiedAt().hashCode();
       }
+      hash = (37 * hash) + ZONE_PROVISIONED_INSTANCES_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getZoneProvisionedInstancesCount());
       hash = (37 * hash) + ZONE_INSTANCES_LIMIT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getZoneInstancesLimit());
@@ -9397,6 +9439,8 @@ public final class FunctionOuterClass {
           modifiedAt_ = null;
           modifiedAtBuilder_ = null;
         }
+        zoneProvisionedInstancesCount_ = 0L;
+
         zoneInstancesLimit_ = 0L;
 
         zoneRequestsLimit_ = 0L;
@@ -9439,6 +9483,7 @@ public final class FunctionOuterClass {
         } else {
           result.modifiedAt_ = modifiedAtBuilder_.build();
         }
+        result.zoneProvisionedInstancesCount_ = zoneProvisionedInstancesCount_;
         result.zoneInstancesLimit_ = zoneInstancesLimit_;
         result.zoneRequestsLimit_ = zoneRequestsLimit_;
         onBuilt();
@@ -9502,6 +9547,9 @@ public final class FunctionOuterClass {
         }
         if (other.hasModifiedAt()) {
           mergeModifiedAt(other.getModifiedAt());
+        }
+        if (other.getZoneProvisionedInstancesCount() != 0L) {
+          setZoneProvisionedInstancesCount(other.getZoneProvisionedInstancesCount());
         }
         if (other.getZoneInstancesLimit() != 0L) {
           setZoneInstancesLimit(other.getZoneInstancesLimit());
@@ -10022,6 +10070,47 @@ public final class FunctionOuterClass {
         return modifiedAtBuilder_;
       }
 
+      private long zoneProvisionedInstancesCount_ ;
+      /**
+       * <pre>
+       * Provisioned instances count in each zone.
+       * Billed separately.
+       * </pre>
+       *
+       * <code>int64 zone_provisioned_instances_count = 6;</code>
+       */
+      public long getZoneProvisionedInstancesCount() {
+        return zoneProvisionedInstancesCount_;
+      }
+      /**
+       * <pre>
+       * Provisioned instances count in each zone.
+       * Billed separately.
+       * </pre>
+       *
+       * <code>int64 zone_provisioned_instances_count = 6;</code>
+       */
+      public Builder setZoneProvisionedInstancesCount(long value) {
+        
+        zoneProvisionedInstancesCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Provisioned instances count in each zone.
+       * Billed separately.
+       * </pre>
+       *
+       * <code>int64 zone_provisioned_instances_count = 6;</code>
+       */
+      public Builder clearZoneProvisionedInstancesCount() {
+        
+        zoneProvisionedInstancesCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private long zoneInstancesLimit_ ;
       /**
        * <pre>
@@ -10253,16 +10342,17 @@ public final class FunctionOuterClass {
       "8\"O\n\007Package\022\031\n\013bucket_name\030\001 \001(\tB\004\350\3071\001\022" +
       "\031\n\013object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001" +
       "(\t\"5\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\021" +
-      "\n\tsubnet_id\030\002 \003(\t\"\315\001\n\rScalingPolicy\022\023\n\013f" +
+      "\n\tsubnet_id\030\002 \003(\t\"\367\001\n\rScalingPolicy\022\023\n\013f" +
       "unction_id\030\001 \001(\t\022\013\n\003tag\030\002 \001(\t\022.\n\ncreated" +
       "_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022/\n" +
       "\013modified_at\030\004 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022\034\n\024zone_instances_limit\030\007 \001(\003\022\033\n\023" +
-      "zone_requests_limit\030\010 \001(\003B~\n(yandex.clou" +
-      "d.api.serverless.functions.v1ZRgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "serverless/functions/v1;functionsb\006proto" +
-      "3"
+      "estamp\022(\n zone_provisioned_instances_cou" +
+      "nt\030\006 \001(\003\022\034\n\024zone_instances_limit\030\007 \001(\003\022\033" +
+      "\n\023zone_requests_limit\030\010 \001(\003B~\n(yandex.cl" +
+      "oud.api.serverless.functions.v1ZRgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/serverless/functions/v1;functionsb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10332,7 +10422,7 @@ public final class FunctionOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_descriptor,
-        new java.lang.String[] { "FunctionId", "Tag", "CreatedAt", "ModifiedAt", "ZoneInstancesLimit", "ZoneRequestsLimit", });
+        new java.lang.String[] { "FunctionId", "Tag", "CreatedAt", "ModifiedAt", "ZoneProvisionedInstancesCount", "ZoneInstancesLimit", "ZoneRequestsLimit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

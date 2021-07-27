@@ -127,6 +127,31 @@ public final class ProjectOuterClass {
      * <code>.yandex.cloud.datasphere.v1.Project.Settings settings = 6;</code>
      */
     yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.SettingsOrBuilder getSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+     */
+    boolean hasLimits();
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+     */
+    yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits getLimits();
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+     */
+    yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder getLimitsOrBuilder();
   }
   /**
    * <pre>
@@ -221,6 +246,19 @@ public final class ProjectOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(settings_);
                 settings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder subBuilder = null;
+              if (limits_ != null) {
+                subBuilder = limits_.toBuilder();
+              }
+              limits_ = input.readMessage(yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(limits_);
+                limits_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1453,6 +1491,927 @@ public final class ProjectOuterClass {
 
     }
 
+    public interface LimitsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.Project.Limits)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * The number of units that can be spent per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+       */
+      boolean hasMaxUnitsPerHour();
+      /**
+       * <pre>
+       * The number of units that can be spent per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+       */
+      com.google.protobuf.Int64Value getMaxUnitsPerHour();
+      /**
+       * <pre>
+       * The number of units that can be spent per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMaxUnitsPerHourOrBuilder();
+
+      /**
+       * <pre>
+       * The number of units that can be spent on the one execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+       */
+      boolean hasMaxUnitsPerExecution();
+      /**
+       * <pre>
+       * The number of units that can be spent on the one execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+       */
+      com.google.protobuf.Int64Value getMaxUnitsPerExecution();
+      /**
+       * <pre>
+       * The number of units that can be spent on the one execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMaxUnitsPerExecutionOrBuilder();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.Project.Limits}
+     */
+    public  static final class Limits extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.Project.Limits)
+        LimitsOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Limits.newBuilder() to construct.
+      private Limits(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Limits() {
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Limits(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (maxUnitsPerHour_ != null) {
+                  subBuilder = maxUnitsPerHour_.toBuilder();
+                }
+                maxUnitsPerHour_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(maxUnitsPerHour_);
+                  maxUnitsPerHour_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 26: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (maxUnitsPerExecution_ != null) {
+                  subBuilder = maxUnitsPerExecution_.toBuilder();
+                }
+                maxUnitsPerExecution_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(maxUnitsPerExecution_);
+                  maxUnitsPerExecution_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.ProjectOuterClass.internal_static_yandex_cloud_datasphere_v1_Project_Limits_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.ProjectOuterClass.internal_static_yandex_cloud_datasphere_v1_Project_Limits_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.class, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder.class);
+      }
+
+      public static final int MAX_UNITS_PER_HOUR_FIELD_NUMBER = 2;
+      private com.google.protobuf.Int64Value maxUnitsPerHour_;
+      /**
+       * <pre>
+       * The number of units that can be spent per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+       */
+      public boolean hasMaxUnitsPerHour() {
+        return maxUnitsPerHour_ != null;
+      }
+      /**
+       * <pre>
+       * The number of units that can be spent per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+       */
+      public com.google.protobuf.Int64Value getMaxUnitsPerHour() {
+        return maxUnitsPerHour_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerHour_;
+      }
+      /**
+       * <pre>
+       * The number of units that can be spent per hour.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxUnitsPerHourOrBuilder() {
+        return getMaxUnitsPerHour();
+      }
+
+      public static final int MAX_UNITS_PER_EXECUTION_FIELD_NUMBER = 3;
+      private com.google.protobuf.Int64Value maxUnitsPerExecution_;
+      /**
+       * <pre>
+       * The number of units that can be spent on the one execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+       */
+      public boolean hasMaxUnitsPerExecution() {
+        return maxUnitsPerExecution_ != null;
+      }
+      /**
+       * <pre>
+       * The number of units that can be spent on the one execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+       */
+      public com.google.protobuf.Int64Value getMaxUnitsPerExecution() {
+        return maxUnitsPerExecution_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerExecution_;
+      }
+      /**
+       * <pre>
+       * The number of units that can be spent on the one execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxUnitsPerExecutionOrBuilder() {
+        return getMaxUnitsPerExecution();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (maxUnitsPerHour_ != null) {
+          output.writeMessage(2, getMaxUnitsPerHour());
+        }
+        if (maxUnitsPerExecution_ != null) {
+          output.writeMessage(3, getMaxUnitsPerExecution());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (maxUnitsPerHour_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, getMaxUnitsPerHour());
+        }
+        if (maxUnitsPerExecution_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getMaxUnitsPerExecution());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits other = (yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits) obj;
+
+        boolean result = true;
+        result = result && (hasMaxUnitsPerHour() == other.hasMaxUnitsPerHour());
+        if (hasMaxUnitsPerHour()) {
+          result = result && getMaxUnitsPerHour()
+              .equals(other.getMaxUnitsPerHour());
+        }
+        result = result && (hasMaxUnitsPerExecution() == other.hasMaxUnitsPerExecution());
+        if (hasMaxUnitsPerExecution()) {
+          result = result && getMaxUnitsPerExecution()
+              .equals(other.getMaxUnitsPerExecution());
+        }
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasMaxUnitsPerHour()) {
+          hash = (37 * hash) + MAX_UNITS_PER_HOUR_FIELD_NUMBER;
+          hash = (53 * hash) + getMaxUnitsPerHour().hashCode();
+        }
+        if (hasMaxUnitsPerExecution()) {
+          hash = (37 * hash) + MAX_UNITS_PER_EXECUTION_FIELD_NUMBER;
+          hash = (53 * hash) + getMaxUnitsPerExecution().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.datasphere.v1.Project.Limits}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.Project.Limits)
+          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.datasphere.v1.ProjectOuterClass.internal_static_yandex_cloud_datasphere_v1_Project_Limits_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.datasphere.v1.ProjectOuterClass.internal_static_yandex_cloud_datasphere_v1_Project_Limits_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.class, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (maxUnitsPerHourBuilder_ == null) {
+            maxUnitsPerHour_ = null;
+          } else {
+            maxUnitsPerHour_ = null;
+            maxUnitsPerHourBuilder_ = null;
+          }
+          if (maxUnitsPerExecutionBuilder_ == null) {
+            maxUnitsPerExecution_ = null;
+          } else {
+            maxUnitsPerExecution_ = null;
+            maxUnitsPerExecutionBuilder_ = null;
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.datasphere.v1.ProjectOuterClass.internal_static_yandex_cloud_datasphere_v1_Project_Limits_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits getDefaultInstanceForType() {
+          return yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits build() {
+          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits buildPartial() {
+          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits result = new yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits(this);
+          if (maxUnitsPerHourBuilder_ == null) {
+            result.maxUnitsPerHour_ = maxUnitsPerHour_;
+          } else {
+            result.maxUnitsPerHour_ = maxUnitsPerHourBuilder_.build();
+          }
+          if (maxUnitsPerExecutionBuilder_ == null) {
+            result.maxUnitsPerExecution_ = maxUnitsPerExecution_;
+          } else {
+            result.maxUnitsPerExecution_ = maxUnitsPerExecutionBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits) {
+            return mergeFrom((yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits other) {
+          if (other == yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.getDefaultInstance()) return this;
+          if (other.hasMaxUnitsPerHour()) {
+            mergeMaxUnitsPerHour(other.getMaxUnitsPerHour());
+          }
+          if (other.hasMaxUnitsPerExecution()) {
+            mergeMaxUnitsPerExecution(other.getMaxUnitsPerExecution());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.google.protobuf.Int64Value maxUnitsPerHour_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxUnitsPerHourBuilder_;
+        /**
+         * <pre>
+         * The number of units that can be spent per hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+         */
+        public boolean hasMaxUnitsPerHour() {
+          return maxUnitsPerHourBuilder_ != null || maxUnitsPerHour_ != null;
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent per hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+         */
+        public com.google.protobuf.Int64Value getMaxUnitsPerHour() {
+          if (maxUnitsPerHourBuilder_ == null) {
+            return maxUnitsPerHour_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerHour_;
+          } else {
+            return maxUnitsPerHourBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent per hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+         */
+        public Builder setMaxUnitsPerHour(com.google.protobuf.Int64Value value) {
+          if (maxUnitsPerHourBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            maxUnitsPerHour_ = value;
+            onChanged();
+          } else {
+            maxUnitsPerHourBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent per hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+         */
+        public Builder setMaxUnitsPerHour(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (maxUnitsPerHourBuilder_ == null) {
+            maxUnitsPerHour_ = builderForValue.build();
+            onChanged();
+          } else {
+            maxUnitsPerHourBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent per hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+         */
+        public Builder mergeMaxUnitsPerHour(com.google.protobuf.Int64Value value) {
+          if (maxUnitsPerHourBuilder_ == null) {
+            if (maxUnitsPerHour_ != null) {
+              maxUnitsPerHour_ =
+                com.google.protobuf.Int64Value.newBuilder(maxUnitsPerHour_).mergeFrom(value).buildPartial();
+            } else {
+              maxUnitsPerHour_ = value;
+            }
+            onChanged();
+          } else {
+            maxUnitsPerHourBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent per hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+         */
+        public Builder clearMaxUnitsPerHour() {
+          if (maxUnitsPerHourBuilder_ == null) {
+            maxUnitsPerHour_ = null;
+            onChanged();
+          } else {
+            maxUnitsPerHour_ = null;
+            maxUnitsPerHourBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent per hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMaxUnitsPerHourBuilder() {
+          
+          onChanged();
+          return getMaxUnitsPerHourFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent per hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMaxUnitsPerHourOrBuilder() {
+          if (maxUnitsPerHourBuilder_ != null) {
+            return maxUnitsPerHourBuilder_.getMessageOrBuilder();
+          } else {
+            return maxUnitsPerHour_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerHour_;
+          }
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent per hour.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_hour = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMaxUnitsPerHourFieldBuilder() {
+          if (maxUnitsPerHourBuilder_ == null) {
+            maxUnitsPerHourBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMaxUnitsPerHour(),
+                    getParentForChildren(),
+                    isClean());
+            maxUnitsPerHour_ = null;
+          }
+          return maxUnitsPerHourBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value maxUnitsPerExecution_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxUnitsPerExecutionBuilder_;
+        /**
+         * <pre>
+         * The number of units that can be spent on the one execution.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+         */
+        public boolean hasMaxUnitsPerExecution() {
+          return maxUnitsPerExecutionBuilder_ != null || maxUnitsPerExecution_ != null;
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent on the one execution.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+         */
+        public com.google.protobuf.Int64Value getMaxUnitsPerExecution() {
+          if (maxUnitsPerExecutionBuilder_ == null) {
+            return maxUnitsPerExecution_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerExecution_;
+          } else {
+            return maxUnitsPerExecutionBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent on the one execution.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+         */
+        public Builder setMaxUnitsPerExecution(com.google.protobuf.Int64Value value) {
+          if (maxUnitsPerExecutionBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            maxUnitsPerExecution_ = value;
+            onChanged();
+          } else {
+            maxUnitsPerExecutionBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent on the one execution.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+         */
+        public Builder setMaxUnitsPerExecution(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (maxUnitsPerExecutionBuilder_ == null) {
+            maxUnitsPerExecution_ = builderForValue.build();
+            onChanged();
+          } else {
+            maxUnitsPerExecutionBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent on the one execution.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+         */
+        public Builder mergeMaxUnitsPerExecution(com.google.protobuf.Int64Value value) {
+          if (maxUnitsPerExecutionBuilder_ == null) {
+            if (maxUnitsPerExecution_ != null) {
+              maxUnitsPerExecution_ =
+                com.google.protobuf.Int64Value.newBuilder(maxUnitsPerExecution_).mergeFrom(value).buildPartial();
+            } else {
+              maxUnitsPerExecution_ = value;
+            }
+            onChanged();
+          } else {
+            maxUnitsPerExecutionBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent on the one execution.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+         */
+        public Builder clearMaxUnitsPerExecution() {
+          if (maxUnitsPerExecutionBuilder_ == null) {
+            maxUnitsPerExecution_ = null;
+            onChanged();
+          } else {
+            maxUnitsPerExecution_ = null;
+            maxUnitsPerExecutionBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent on the one execution.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMaxUnitsPerExecutionBuilder() {
+          
+          onChanged();
+          return getMaxUnitsPerExecutionFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent on the one execution.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMaxUnitsPerExecutionOrBuilder() {
+          if (maxUnitsPerExecutionBuilder_ != null) {
+            return maxUnitsPerExecutionBuilder_.getMessageOrBuilder();
+          } else {
+            return maxUnitsPerExecution_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : maxUnitsPerExecution_;
+          }
+        }
+        /**
+         * <pre>
+         * The number of units that can be spent on the one execution.
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_units_per_execution = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMaxUnitsPerExecutionFieldBuilder() {
+          if (maxUnitsPerExecutionBuilder_ == null) {
+            maxUnitsPerExecutionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMaxUnitsPerExecution(),
+                    getParentForChildren(),
+                    isClean());
+            maxUnitsPerExecution_ = null;
+          }
+          return maxUnitsPerExecutionBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.Project.Limits)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.Project.Limits)
+      private static final yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits();
+      }
+
+      public static yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Limits>
+          PARSER = new com.google.protobuf.AbstractParser<Limits>() {
+        @java.lang.Override
+        public Limits parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Limits(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Limits> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Limits> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -1675,6 +2634,39 @@ public final class ProjectOuterClass {
       return getSettings();
     }
 
+    public static final int LIMITS_FIELD_NUMBER = 7;
+    private yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits limits_;
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+     */
+    public boolean hasLimits() {
+      return limits_ != null;
+    }
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+     */
+    public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits getLimits() {
+      return limits_ == null ? yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.getDefaultInstance() : limits_;
+    }
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+     */
+    public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder getLimitsOrBuilder() {
+      return getLimits();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1707,6 +2699,9 @@ public final class ProjectOuterClass {
       if (settings_ != null) {
         output.writeMessage(6, getSettings());
       }
+      if (limits_ != null) {
+        output.writeMessage(7, getLimits());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1735,6 +2730,10 @@ public final class ProjectOuterClass {
       if (settings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getSettings());
+      }
+      if (limits_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getLimits());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1770,6 +2769,11 @@ public final class ProjectOuterClass {
         result = result && getSettings()
             .equals(other.getSettings());
       }
+      result = result && (hasLimits() == other.hasLimits());
+      if (hasLimits()) {
+        result = result && getLimits()
+            .equals(other.getLimits());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1796,6 +2800,10 @@ public final class ProjectOuterClass {
       if (hasSettings()) {
         hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getSettings().hashCode();
+      }
+      if (hasLimits()) {
+        hash = (37 * hash) + LIMITS_FIELD_NUMBER;
+        hash = (53 * hash) + getLimits().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1954,6 +2962,12 @@ public final class ProjectOuterClass {
           settings_ = null;
           settingsBuilder_ = null;
         }
+        if (limitsBuilder_ == null) {
+          limits_ = null;
+        } else {
+          limits_ = null;
+          limitsBuilder_ = null;
+        }
         return this;
       }
 
@@ -1993,6 +3007,11 @@ public final class ProjectOuterClass {
           result.settings_ = settings_;
         } else {
           result.settings_ = settingsBuilder_.build();
+        }
+        if (limitsBuilder_ == null) {
+          result.limits_ = limits_;
+        } else {
+          result.limits_ = limitsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2063,6 +3082,9 @@ public final class ProjectOuterClass {
         }
         if (other.hasSettings()) {
           mergeSettings(other.getSettings());
+        }
+        if (other.hasLimits()) {
+          mergeLimits(other.getLimits());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2718,6 +3740,159 @@ public final class ProjectOuterClass {
         }
         return settingsBuilder_;
       }
+
+      private yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits limits_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder> limitsBuilder_;
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+       */
+      public boolean hasLimits() {
+        return limitsBuilder_ != null || limits_ != null;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+       */
+      public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits getLimits() {
+        if (limitsBuilder_ == null) {
+          return limits_ == null ? yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.getDefaultInstance() : limits_;
+        } else {
+          return limitsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+       */
+      public Builder setLimits(yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits value) {
+        if (limitsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          limits_ = value;
+          onChanged();
+        } else {
+          limitsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+       */
+      public Builder setLimits(
+          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder builderForValue) {
+        if (limitsBuilder_ == null) {
+          limits_ = builderForValue.build();
+          onChanged();
+        } else {
+          limitsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+       */
+      public Builder mergeLimits(yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits value) {
+        if (limitsBuilder_ == null) {
+          if (limits_ != null) {
+            limits_ =
+              yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.newBuilder(limits_).mergeFrom(value).buildPartial();
+          } else {
+            limits_ = value;
+          }
+          onChanged();
+        } else {
+          limitsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+       */
+      public Builder clearLimits() {
+        if (limitsBuilder_ == null) {
+          limits_ = null;
+          onChanged();
+        } else {
+          limits_ = null;
+          limitsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+       */
+      public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder getLimitsBuilder() {
+        
+        onChanged();
+        return getLimitsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+       */
+      public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder getLimitsOrBuilder() {
+        if (limitsBuilder_ != null) {
+          return limitsBuilder_.getMessageOrBuilder();
+        } else {
+          return limits_ == null ?
+              yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.getDefaultInstance() : limits_;
+        }
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder> 
+          getLimitsFieldBuilder() {
+        if (limitsBuilder_ == null) {
+          limitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder>(
+                  getLimits(),
+                  getParentForChildren(),
+                  isClean());
+          limits_ = null;
+        }
+        return limitsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2781,6 +3956,11 @@ public final class ProjectOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v1_Project_Settings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_Project_Limits_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_Project_Limits_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2792,21 +3972,26 @@ public final class ProjectOuterClass {
     java.lang.String[] descriptorData = {
       "\n(yandex/cloud/datasphere/v1/project.pro" +
       "to\022\032yandex.cloud.datasphere.v1\032\037google/p" +
-      "rotobuf/timestamp.proto\"\246\003\n\007Project\022\n\n\002i" +
-      "d\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at" +
-      "\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004na" +
-      "me\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022>\n\010setting" +
-      "s\030\006 \001(\0132,.yandex.cloud.datasphere.v1.Pro" +
-      "ject.Settings\032\350\001\n\010Settings\022\032\n\022service_ac" +
-      "count_id\030\001 \001(\t\022\021\n\tsubnet_id\030\002 \001(\t\022\034\n\024dat" +
-      "a_proc_cluster_id\030\003 \001(\t\022L\n\013commit_mode\030\004" +
-      " \001(\01627.yandex.cloud.datasphere.v1.Projec" +
-      "t.Settings.CommitMode\"A\n\nCommitMode\022\033\n\027C" +
-      "OMMIT_MODE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\010" +
-      "\n\004AUTO\020\002Bk\n\036yandex.cloud.api.datasphere." +
-      "v1ZIgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/datasphere/v1;datasphereb\006p" +
-      "roto3"
+      "rotobuf/timestamp.proto\032\036google/protobuf" +
+      "/wrappers.proto\"\343\004\n\007Project\022\n\n\002id\030\001 \001(\t\022" +
+      "\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t" +
+      "\022\023\n\013description\030\005 \001(\t\022>\n\010settings\030\006 \001(\0132" +
+      ",.yandex.cloud.datasphere.v1.Project.Set" +
+      "tings\022:\n\006limits\030\007 \001(\0132*.yandex.cloud.dat" +
+      "asphere.v1.Project.Limits\032\350\001\n\010Settings\022\032" +
+      "\n\022service_account_id\030\001 \001(\t\022\021\n\tsubnet_id\030" +
+      "\002 \001(\t\022\034\n\024data_proc_cluster_id\030\003 \001(\t\022L\n\013c" +
+      "ommit_mode\030\004 \001(\01627.yandex.cloud.datasphe" +
+      "re.v1.Project.Settings.CommitMode\"A\n\nCom" +
+      "mitMode\022\033\n\027COMMIT_MODE_UNSPECIFIED\020\000\022\014\n\010" +
+      "STANDARD\020\001\022\010\n\004AUTO\020\002\032\177\n\006Limits\0227\n\022max_un" +
+      "its_per_hour\030\002 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022<\n\027max_units_per_execution\030\003 \001(\013" +
+      "2\033.google.protobuf.Int64ValueBk\n\036yandex." +
+      "cloud.api.datasphere.v1ZIgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/datasp" +
+      "here/v1;datasphereb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2820,20 +4005,28 @@ public final class ProjectOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_datasphere_v1_Project_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_datasphere_v1_Project_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v1_Project_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Settings", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Settings", "Limits", });
     internal_static_yandex_cloud_datasphere_v1_Project_Settings_descriptor =
       internal_static_yandex_cloud_datasphere_v1_Project_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_datasphere_v1_Project_Settings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v1_Project_Settings_descriptor,
         new java.lang.String[] { "ServiceAccountId", "SubnetId", "DataProcClusterId", "CommitMode", });
+    internal_static_yandex_cloud_datasphere_v1_Project_Limits_descriptor =
+      internal_static_yandex_cloud_datasphere_v1_Project_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_datasphere_v1_Project_Limits_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_Project_Limits_descriptor,
+        new java.lang.String[] { "MaxUnitsPerHour", "MaxUnitsPerExecution", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

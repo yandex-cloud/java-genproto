@@ -222,6 +222,70 @@ public final class ProjectServiceGrpc {
      return getListMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest,
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse> getGetUnitBalanceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetUnitBalance",
+      requestType = yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest.class,
+      responseType = yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest,
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse> getGetUnitBalanceMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse> getGetUnitBalanceMethod;
+    if ((getGetUnitBalanceMethod = ProjectServiceGrpc.getGetUnitBalanceMethod) == null) {
+      synchronized (ProjectServiceGrpc.class) {
+        if ((getGetUnitBalanceMethod = ProjectServiceGrpc.getGetUnitBalanceMethod) == null) {
+          ProjectServiceGrpc.getGetUnitBalanceMethod = getGetUnitBalanceMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.datasphere.v1.ProjectService", "GetUnitBalance"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("GetUnitBalance"))
+                  .build();
+          }
+        }
+     }
+     return getGetUnitBalanceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest,
+      com.google.protobuf.Empty> getSetUnitBalanceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetUnitBalance",
+      requestType = yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest,
+      com.google.protobuf.Empty> getSetUnitBalanceMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest, com.google.protobuf.Empty> getSetUnitBalanceMethod;
+    if ((getSetUnitBalanceMethod = ProjectServiceGrpc.getSetUnitBalanceMethod) == null) {
+      synchronized (ProjectServiceGrpc.class) {
+        if ((getSetUnitBalanceMethod = ProjectServiceGrpc.getSetUnitBalanceMethod) == null) {
+          ProjectServiceGrpc.getSetUnitBalanceMethod = getSetUnitBalanceMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.datasphere.v1.ProjectService", "SetUnitBalance"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new ProjectServiceMethodDescriptorSupplier("SetUnitBalance"))
+                  .build();
+          }
+        }
+     }
+     return getSetUnitBalanceMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -312,6 +376,26 @@ public final class ProjectServiceGrpc {
       asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Returns the unit balance of the specified project.
+     * </pre>
+     */
+    public void getUnitBalance(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetUnitBalanceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     *  Sets the unit balance of the specified project.
+     * </pre>
+     */
+    public void setUnitBalance(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      asyncUnimplementedUnaryCall(getSetUnitBalanceMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -356,6 +440,20 @@ public final class ProjectServiceGrpc {
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsRequest,
                 yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsResponse>(
                   this, METHODID_LIST)))
+          .addMethod(
+            getGetUnitBalanceMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest,
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse>(
+                  this, METHODID_GET_UNIT_BALANCE)))
+          .addMethod(
+            getSetUnitBalanceMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest,
+                com.google.protobuf.Empty>(
+                  this, METHODID_SET_UNIT_BALANCE)))
           .build();
     }
   }
@@ -446,6 +544,28 @@ public final class ProjectServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns the unit balance of the specified project.
+     * </pre>
+     */
+    public void getUnitBalance(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetUnitBalanceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *  Sets the unit balance of the specified project.
+     * </pre>
+     */
+    public void setUnitBalance(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getSetUnitBalanceMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -527,6 +647,26 @@ public final class ProjectServiceGrpc {
     public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsResponse list(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the unit balance of the specified project.
+     * </pre>
+     */
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse getUnitBalance(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetUnitBalanceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *  Sets the unit balance of the specified project.
+     * </pre>
+     */
+    public com.google.protobuf.Empty setUnitBalance(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getSetUnitBalanceMethod(), getCallOptions(), request);
     }
   }
 
@@ -616,6 +756,28 @@ public final class ProjectServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getListMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns the unit balance of the specified project.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse> getUnitBalance(
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetUnitBalanceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     *  Sets the unit balance of the specified project.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> setUnitBalance(
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getSetUnitBalanceMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE = 0;
@@ -624,6 +786,8 @@ public final class ProjectServiceGrpc {
   private static final int METHODID_OPEN = 3;
   private static final int METHODID_GET = 4;
   private static final int METHODID_LIST = 5;
+  private static final int METHODID_GET_UNIT_BALANCE = 6;
+  private static final int METHODID_SET_UNIT_BALANCE = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -665,6 +829,14 @@ public final class ProjectServiceGrpc {
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ListProjectsResponse>) responseObserver);
+          break;
+        case METHODID_GET_UNIT_BALANCE:
+          serviceImpl.getUnitBalance((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse>) responseObserver);
+          break;
+        case METHODID_SET_UNIT_BALANCE:
+          serviceImpl.setUnitBalance((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -733,6 +905,8 @@ public final class ProjectServiceGrpc {
               .addMethod(getOpenMethod())
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
+              .addMethod(getGetUnitBalanceMethod())
+              .addMethod(getSetUnitBalanceMethod())
               .build();
         }
       }

@@ -6925,6 +6925,31 @@ public final class BackendGroupOuterClass {
 
     /**
      * <pre>
+     * Storage bucket to use as a backend.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+     */
+    boolean hasStorageBucket();
+    /**
+     * <pre>
+     * Storage bucket to use as a backend.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend getStorageBucket();
+    /**
+     * <pre>
+     * Storage bucket to use as a backend.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackendOrBuilder getStorageBucketOrBuilder();
+
+    /**
+     * <pre>
      * Health checks to perform on targets from target groups.
      * For details about health checking, see [documentation](/docs/application-load-balancer/concepts/backend-group#health-checks).
      * If no health checks are specified, active health checking is not performed.
@@ -7122,9 +7147,9 @@ public final class BackendGroupOuterClass {
               break;
             }
             case 50: {
-              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
                 healthchecks_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck>();
-                mutable_bitField0_ |= 0x00000020;
+                mutable_bitField0_ |= 0x00000040;
               }
               healthchecks_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.parser(), extensionRegistry));
@@ -7148,6 +7173,20 @@ public final class BackendGroupOuterClass {
               useHttp2_ = input.readBool();
               break;
             }
+            case 74: {
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.Builder subBuilder = null;
+              if (backendTypeCase_ == 9) {
+                subBuilder = ((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) backendType_).toBuilder();
+              }
+              backendType_ =
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) backendType_);
+                backendType_ = subBuilder.buildPartial();
+              }
+              backendTypeCase_ = 9;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7163,7 +7202,7 @@ public final class BackendGroupOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
           healthchecks_ = java.util.Collections.unmodifiableList(healthchecks_);
         }
         this.unknownFields = unknownFields.build();
@@ -7189,6 +7228,7 @@ public final class BackendGroupOuterClass {
     public enum BackendTypeCase
         implements com.google.protobuf.Internal.EnumLite {
       TARGET_GROUPS(5),
+      STORAGE_BUCKET(9),
       BACKENDTYPE_NOT_SET(0);
       private final int value;
       private BackendTypeCase(int value) {
@@ -7205,6 +7245,7 @@ public final class BackendGroupOuterClass {
       public static BackendTypeCase forNumber(int value) {
         switch (value) {
           case 5: return TARGET_GROUPS;
+          case 9: return STORAGE_BUCKET;
           case 0: return BACKENDTYPE_NOT_SET;
           default: return null;
         }
@@ -7388,6 +7429,44 @@ public final class BackendGroupOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend.getDefaultInstance();
     }
 
+    public static final int STORAGE_BUCKET_FIELD_NUMBER = 9;
+    /**
+     * <pre>
+     * Storage bucket to use as a backend.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+     */
+    public boolean hasStorageBucket() {
+      return backendTypeCase_ == 9;
+    }
+    /**
+     * <pre>
+     * Storage bucket to use as a backend.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend getStorageBucket() {
+      if (backendTypeCase_ == 9) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) backendType_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Storage bucket to use as a backend.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackendOrBuilder getStorageBucketOrBuilder() {
+      if (backendTypeCase_ == 9) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) backendType_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.getDefaultInstance();
+    }
+
     public static final int HEALTHCHECKS_FIELD_NUMBER = 6;
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck> healthchecks_;
     /**
@@ -7547,6 +7626,9 @@ public final class BackendGroupOuterClass {
       if (useHttp2_ != false) {
         output.writeBool(8, useHttp2_);
       }
+      if (backendTypeCase_ == 9) {
+        output.writeMessage(9, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) backendType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7586,6 +7668,10 @@ public final class BackendGroupOuterClass {
       if (useHttp2_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, useHttp2_);
+      }
+      if (backendTypeCase_ == 9) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) backendType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7634,6 +7720,10 @@ public final class BackendGroupOuterClass {
           result = result && getTargetGroups()
               .equals(other.getTargetGroups());
           break;
+        case 9:
+          result = result && getStorageBucket()
+              .equals(other.getStorageBucket());
+          break;
         case 0:
         default:
       }
@@ -7676,6 +7766,10 @@ public final class BackendGroupOuterClass {
         case 5:
           hash = (37 * hash) + TARGET_GROUPS_FIELD_NUMBER;
           hash = (53 * hash) + getTargetGroups().hashCode();
+          break;
+        case 9:
+          hash = (37 * hash) + STORAGE_BUCKET_FIELD_NUMBER;
+          hash = (53 * hash) + getStorageBucket().hashCode();
           break;
         case 0:
         default:
@@ -7836,7 +7930,7 @@ public final class BackendGroupOuterClass {
 
         if (healthchecksBuilder_ == null) {
           healthchecks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
           healthchecksBuilder_.clear();
         }
@@ -7897,10 +7991,17 @@ public final class BackendGroupOuterClass {
             result.backendType_ = targetGroupsBuilder_.build();
           }
         }
+        if (backendTypeCase_ == 9) {
+          if (storageBucketBuilder_ == null) {
+            result.backendType_ = backendType_;
+          } else {
+            result.backendType_ = storageBucketBuilder_.build();
+          }
+        }
         if (healthchecksBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
             healthchecks_ = java.util.Collections.unmodifiableList(healthchecks_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
           }
           result.healthchecks_ = healthchecks_;
         } else {
@@ -7979,7 +8080,7 @@ public final class BackendGroupOuterClass {
           if (!other.healthchecks_.isEmpty()) {
             if (healthchecks_.isEmpty()) {
               healthchecks_ = other.healthchecks_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
             } else {
               ensureHealthchecksIsMutable();
               healthchecks_.addAll(other.healthchecks_);
@@ -7992,7 +8093,7 @@ public final class BackendGroupOuterClass {
               healthchecksBuilder_.dispose();
               healthchecksBuilder_ = null;
               healthchecks_ = other.healthchecks_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
               healthchecksBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getHealthchecksFieldBuilder() : null;
@@ -8010,6 +8111,10 @@ public final class BackendGroupOuterClass {
         switch (other.getBackendTypeCase()) {
           case TARGET_GROUPS: {
             mergeTargetGroups(other.getTargetGroups());
+            break;
+          }
+          case STORAGE_BUCKET: {
+            mergeStorageBucket(other.getStorageBucket());
             break;
           }
           case BACKENDTYPE_NOT_SET: {
@@ -8693,12 +8798,184 @@ public final class BackendGroupOuterClass {
         return targetGroupsBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackendOrBuilder> storageBucketBuilder_;
+      /**
+       * <pre>
+       * Storage bucket to use as a backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+       */
+      public boolean hasStorageBucket() {
+        return backendTypeCase_ == 9;
+      }
+      /**
+       * <pre>
+       * Storage bucket to use as a backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend getStorageBucket() {
+        if (storageBucketBuilder_ == null) {
+          if (backendTypeCase_ == 9) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) backendType_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.getDefaultInstance();
+        } else {
+          if (backendTypeCase_ == 9) {
+            return storageBucketBuilder_.getMessage();
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Storage bucket to use as a backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+       */
+      public Builder setStorageBucket(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend value) {
+        if (storageBucketBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backendType_ = value;
+          onChanged();
+        } else {
+          storageBucketBuilder_.setMessage(value);
+        }
+        backendTypeCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Storage bucket to use as a backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+       */
+      public Builder setStorageBucket(
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.Builder builderForValue) {
+        if (storageBucketBuilder_ == null) {
+          backendType_ = builderForValue.build();
+          onChanged();
+        } else {
+          storageBucketBuilder_.setMessage(builderForValue.build());
+        }
+        backendTypeCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Storage bucket to use as a backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+       */
+      public Builder mergeStorageBucket(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend value) {
+        if (storageBucketBuilder_ == null) {
+          if (backendTypeCase_ == 9 &&
+              backendType_ != yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.getDefaultInstance()) {
+            backendType_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.newBuilder((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) backendType_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            backendType_ = value;
+          }
+          onChanged();
+        } else {
+          if (backendTypeCase_ == 9) {
+            storageBucketBuilder_.mergeFrom(value);
+          }
+          storageBucketBuilder_.setMessage(value);
+        }
+        backendTypeCase_ = 9;
+        return this;
+      }
+      /**
+       * <pre>
+       * Storage bucket to use as a backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+       */
+      public Builder clearStorageBucket() {
+        if (storageBucketBuilder_ == null) {
+          if (backendTypeCase_ == 9) {
+            backendTypeCase_ = 0;
+            backendType_ = null;
+            onChanged();
+          }
+        } else {
+          if (backendTypeCase_ == 9) {
+            backendTypeCase_ = 0;
+            backendType_ = null;
+          }
+          storageBucketBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Storage bucket to use as a backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.Builder getStorageBucketBuilder() {
+        return getStorageBucketFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Storage bucket to use as a backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackendOrBuilder getStorageBucketOrBuilder() {
+        if ((backendTypeCase_ == 9) && (storageBucketBuilder_ != null)) {
+          return storageBucketBuilder_.getMessageOrBuilder();
+        } else {
+          if (backendTypeCase_ == 9) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) backendType_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Storage bucket to use as a backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackendOrBuilder> 
+          getStorageBucketFieldBuilder() {
+        if (storageBucketBuilder_ == null) {
+          if (!(backendTypeCase_ == 9)) {
+            backendType_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.getDefaultInstance();
+          }
+          storageBucketBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackendOrBuilder>(
+                  (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) backendType_,
+                  getParentForChildren(),
+                  isClean());
+          backendType_ = null;
+        }
+        backendTypeCase_ = 9;
+        onChanged();;
+        return storageBucketBuilder_;
+      }
+
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck> healthchecks_ =
         java.util.Collections.emptyList();
       private void ensureHealthchecksIsMutable() {
-        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
           healthchecks_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck>(healthchecks_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
          }
       }
 
@@ -8914,7 +9191,7 @@ public final class BackendGroupOuterClass {
       public Builder clearHealthchecks() {
         if (healthchecksBuilder_ == null) {
           healthchecks_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
           healthchecksBuilder_.clear();
@@ -9033,7 +9310,7 @@ public final class BackendGroupOuterClass {
           healthchecksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheck.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HealthCheckOrBuilder>(
                   healthchecks_,
-                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  ((bitField0_ & 0x00000040) == 0x00000040),
                   getParentForChildren(),
                   isClean());
           healthchecks_ = null;
@@ -13271,6 +13548,601 @@ public final class BackendGroupOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.BackendTls getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StorageBucketBackendOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.StorageBucketBackend)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Cloud S3 bucket name.
+     * Should have public access.
+     * </pre>
+     *
+     * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getBucket();
+    /**
+     * <pre>
+     * Cloud S3 bucket name.
+     * Should have public access.
+     * </pre>
+     *
+     * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getBucketBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StorageBucketBackend}
+   */
+  public  static final class StorageBucketBackend extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.StorageBucketBackend)
+      StorageBucketBackendOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StorageBucketBackend.newBuilder() to construct.
+    private StorageBucketBackend(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StorageBucketBackend() {
+      bucket_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StorageBucketBackend(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bucket_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StorageBucketBackend_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StorageBucketBackend_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.class, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.Builder.class);
+    }
+
+    public static final int BUCKET_FIELD_NUMBER = 1;
+    private volatile java.lang.Object bucket_;
+    /**
+     * <pre>
+     * Cloud S3 bucket name.
+     * Should have public access.
+     * </pre>
+     *
+     * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getBucket() {
+      java.lang.Object ref = bucket_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bucket_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Cloud S3 bucket name.
+     * Should have public access.
+     * </pre>
+     *
+     * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getBucketBytes() {
+      java.lang.Object ref = bucket_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bucket_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getBucketBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bucket_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getBucketBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bucket_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend other = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) obj;
+
+      boolean result = true;
+      result = result && getBucket()
+          .equals(other.getBucket());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BUCKET_FIELD_NUMBER;
+      hash = (53 * hash) + getBucket().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StorageBucketBackend}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.StorageBucketBackend)
+        yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackendOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StorageBucketBackend_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StorageBucketBackend_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.class, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bucket_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_StorageBucketBackend_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend build() {
+        yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend result = new yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend(this);
+        result.bucket_ = bucket_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.getDefaultInstance()) return this;
+        if (!other.getBucket().isEmpty()) {
+          bucket_ = other.bucket_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object bucket_ = "";
+      /**
+       * <pre>
+       * Cloud S3 bucket name.
+       * Should have public access.
+       * </pre>
+       *
+       * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getBucket() {
+        java.lang.Object ref = bucket_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bucket_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Cloud S3 bucket name.
+       * Should have public access.
+       * </pre>
+       *
+       * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getBucketBytes() {
+        java.lang.Object ref = bucket_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bucket_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Cloud S3 bucket name.
+       * Should have public access.
+       * </pre>
+       *
+       * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setBucket(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bucket_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud S3 bucket name.
+       * Should have public access.
+       * </pre>
+       *
+       * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearBucket() {
+        
+        bucket_ = getDefaultInstance().getBucket();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Cloud S3 bucket name.
+       * Should have public access.
+       * </pre>
+       *
+       * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setBucketBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        bucket_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.StorageBucketBackend)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.StorageBucketBackend)
+    private static final yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StorageBucketBackend>
+        PARSER = new com.google.protobuf.AbstractParser<StorageBucketBackend>() {
+      @java.lang.Override
+      public StorageBucketBackend parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StorageBucketBackend(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StorageBucketBackend> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StorageBucketBackend> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17993,6 +18865,11 @@ public final class BackendGroupOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_apploadbalancer_v1_BackendTls_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_StorageBucketBackend_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_StorageBucketBackend_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_apploadbalancer_v1_HealthCheck_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -18051,7 +18928,21 @@ public final class BackendGroupOuterClass {
       "ingConfig\022\"\n\017panic_threshold\030\001 \001(\003B\t\372\3071\005" +
       "0-100\0221\n\036locality_aware_routing_percent\030" +
       "\002 \001(\003B\t\372\3071\0050-100\022\027\n\017strict_locality\030\003 \001(" +
-      "\010\"\334\003\n\013HttpBackend\0222\n\004name\030\001 \001(\tB$\350\3071\001\362\3071" +
+      "\010\"\255\004\n\013HttpBackend\0222\n\004name\030\001 \001(\tB$\350\3071\001\362\3071" +
+      "\034[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n\016backend" +
+      "_weight\030\002 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022S\n\025load_balancing_config\030\003 \001(\01324.yand" +
+      "ex.cloud.apploadbalancer.v1.LoadBalancin" +
+      "gConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022M\n\rta" +
+      "rget_groups\030\005 \001(\01324.yandex.cloud.appload" +
+      "balancer.v1.TargetGroupsBackendH\000\022O\n\016sto" +
+      "rage_bucket\030\t \001(\01325.yandex.cloud.appload" +
+      "balancer.v1.StorageBucketBackendH\000\022B\n\014he" +
+      "althchecks\030\006 \003(\0132,.yandex.cloud.apploadb" +
+      "alancer.v1.HealthCheck\0228\n\003tls\030\007 \001(\0132+.ya" +
+      "ndex.cloud.apploadbalancer.v1.BackendTls" +
+      "\022\021\n\tuse_http2\030\010 \001(\010B\024\n\014backend_type\022\004\300\3011" +
+      "\001\"\311\003\n\013GrpcBackend\0222\n\004name\030\001 \001(\tB$\350\3071\001\362\3071" +
       "\034[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n\016backend" +
       "_weight\030\002 \001(\0132\033.google.protobuf.Int64Val" +
       "ue\022S\n\025load_balancing_config\030\003 \001(\01324.yand" +
@@ -18059,48 +18950,37 @@ public final class BackendGroupOuterClass {
       "gConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022M\n\rta" +
       "rget_groups\030\005 \001(\01324.yandex.cloud.appload" +
       "balancer.v1.TargetGroupsBackendH\000\022B\n\014hea" +
-      "lthchecks\030\006 \003(\0132,.yandex.cloud.apploadba" +
-      "lancer.v1.HealthCheck\0228\n\003tls\030\007 \001(\0132+.yan" +
-      "dex.cloud.apploadbalancer.v1.BackendTls\022" +
-      "\021\n\tuse_http2\030\010 \001(\010B\024\n\014backend_type\022\004\300\3011\001" +
-      "\"\311\003\n\013GrpcBackend\0222\n\004name\030\001 \001(\tB$\350\3071\001\362\3071\034" +
-      "[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n\016backend_" +
-      "weight\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022S\n\025load_balancing_config\030\003 \001(\01324.yande" +
-      "x.cloud.apploadbalancer.v1.LoadBalancing" +
-      "Config\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022M\n\rtar" +
-      "get_groups\030\005 \001(\01324.yandex.cloud.apploadb" +
-      "alancer.v1.TargetGroupsBackendH\000\022B\n\014heal" +
-      "thchecks\030\007 \003(\0132,.yandex.cloud.apploadbal" +
-      "ancer.v1.HealthCheck\0228\n\003tls\030\010 \001(\0132+.yand" +
-      "ex.cloud.apploadbalancer.v1.BackendTlsB\024" +
-      "\n\014backend_type\022\004\300\3011\001\"7\n\023TargetGroupsBack" +
-      "end\022 \n\020target_group_ids\030\001 \003(\tB\006\202\3101\002>0\"i\n" +
-      "\nBackendTls\022\013\n\003sni\030\001 \001(\t\022N\n\022validation_c" +
-      "ontext\030\003 \001(\01322.yandex.cloud.apploadbalan" +
-      "cer.v1.ValidationContext\"\357\005\n\013HealthCheck" +
-      "\0220\n\007timeout\030\001 \001(\0132\031.google.protobuf.Dura" +
-      "tionB\004\350\3071\001\0221\n\010interval\030\002 \001(\0132\031.google.pr" +
-      "otobuf.DurationB\004\350\3071\001\022\037\n\027interval_jitter" +
-      "_percent\030\003 \001(\001\022\031\n\021healthy_threshold\030\004 \001(" +
-      "\003\022\033\n\023unhealthy_threshold\030\005 \001(\003\022%\n\020health" +
-      "check_port\030\006 \001(\003B\013\372\3071\0070-65535\022P\n\006stream\030" +
-      "\007 \001(\0132>.yandex.cloud.apploadbalancer.v1." +
-      "HealthCheck.StreamHealthCheckH\000\022L\n\004http\030" +
-      "\010 \001(\0132<.yandex.cloud.apploadbalancer.v1." +
-      "HealthCheck.HttpHealthCheckH\000\022L\n\004grpc\030\t " +
-      "\001(\0132<.yandex.cloud.apploadbalancer.v1.He" +
-      "althCheck.GrpcHealthCheckH\000\032\206\001\n\021StreamHe" +
-      "althCheck\0226\n\004send\030\001 \001(\0132(.yandex.cloud.a" +
-      "pploadbalancer.v1.Payload\0229\n\007receive\030\002 \001" +
-      "(\0132(.yandex.cloud.apploadbalancer.v1.Pay" +
-      "load\032F\n\017HttpHealthCheck\022\014\n\004host\030\001 \001(\t\022\022\n" +
-      "\004path\030\002 \001(\tB\004\350\3071\001\022\021\n\tuse_http2\030\003 \001(\010\032\'\n\017" +
-      "GrpcHealthCheck\022\024\n\014service_name\030\001 \001(\tB\023\n" +
-      "\013healthcheck\022\004\300\3011\001Bz\n#yandex.cloud.api.a" +
-      "pploadbalancer.v1ZSgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/apploadbalan" +
-      "cer/v1;apploadbalancerb\006proto3"
+      "lthchecks\030\007 \003(\0132,.yandex.cloud.apploadba" +
+      "lancer.v1.HealthCheck\0228\n\003tls\030\010 \001(\0132+.yan" +
+      "dex.cloud.apploadbalancer.v1.BackendTlsB" +
+      "\024\n\014backend_type\022\004\300\3011\001\"7\n\023TargetGroupsBac" +
+      "kend\022 \n\020target_group_ids\030\001 \003(\tB\006\202\3101\002>0\"i" +
+      "\n\nBackendTls\022\013\n\003sni\030\001 \001(\t\022N\n\022validation_" +
+      "context\030\003 \001(\01322.yandex.cloud.apploadbala" +
+      "ncer.v1.ValidationContext\",\n\024StorageBuck" +
+      "etBackend\022\024\n\006bucket\030\001 \001(\tB\004\350\3071\001\"\357\005\n\013Heal" +
+      "thCheck\0220\n\007timeout\030\001 \001(\0132\031.google.protob" +
+      "uf.DurationB\004\350\3071\001\0221\n\010interval\030\002 \001(\0132\031.go" +
+      "ogle.protobuf.DurationB\004\350\3071\001\022\037\n\027interval" +
+      "_jitter_percent\030\003 \001(\001\022\031\n\021healthy_thresho" +
+      "ld\030\004 \001(\003\022\033\n\023unhealthy_threshold\030\005 \001(\003\022%\n" +
+      "\020healthcheck_port\030\006 \001(\003B\013\372\3071\0070-65535\022P\n\006" +
+      "stream\030\007 \001(\0132>.yandex.cloud.apploadbalan" +
+      "cer.v1.HealthCheck.StreamHealthCheckH\000\022L" +
+      "\n\004http\030\010 \001(\0132<.yandex.cloud.apploadbalan" +
+      "cer.v1.HealthCheck.HttpHealthCheckH\000\022L\n\004" +
+      "grpc\030\t \001(\0132<.yandex.cloud.apploadbalance" +
+      "r.v1.HealthCheck.GrpcHealthCheckH\000\032\206\001\n\021S" +
+      "treamHealthCheck\0226\n\004send\030\001 \001(\0132(.yandex." +
+      "cloud.apploadbalancer.v1.Payload\0229\n\007rece" +
+      "ive\030\002 \001(\0132(.yandex.cloud.apploadbalancer" +
+      ".v1.Payload\032F\n\017HttpHealthCheck\022\014\n\004host\030\001" +
+      " \001(\t\022\022\n\004path\030\002 \001(\tB\004\350\3071\001\022\021\n\tuse_http2\030\003 " +
+      "\001(\010\032\'\n\017GrpcHealthCheck\022\024\n\014service_name\030\001" +
+      " \001(\tB\023\n\013healthcheck\022\004\300\3011\001Bz\n#yandex.clou" +
+      "d.api.apploadbalancer.v1ZSgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/applo" +
+      "adbalancer/v1;apploadbalancerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -18173,7 +19053,7 @@ public final class BackendGroupOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_HttpBackend_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpBackend_descriptor,
-        new java.lang.String[] { "Name", "BackendWeight", "LoadBalancingConfig", "Port", "TargetGroups", "Healthchecks", "Tls", "UseHttp2", "BackendType", });
+        new java.lang.String[] { "Name", "BackendWeight", "LoadBalancingConfig", "Port", "TargetGroups", "StorageBucket", "Healthchecks", "Tls", "UseHttp2", "BackendType", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcBackend_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcBackend_fieldAccessorTable = new
@@ -18192,8 +19072,14 @@ public final class BackendGroupOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_BackendTls_descriptor,
         new java.lang.String[] { "Sni", "ValidationContext", });
-    internal_static_yandex_cloud_apploadbalancer_v1_HealthCheck_descriptor =
+    internal_static_yandex_cloud_apploadbalancer_v1_StorageBucketBackend_descriptor =
       getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_apploadbalancer_v1_StorageBucketBackend_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_StorageBucketBackend_descriptor,
+        new java.lang.String[] { "Bucket", });
+    internal_static_yandex_cloud_apploadbalancer_v1_HealthCheck_descriptor =
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_apploadbalancer_v1_HealthCheck_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HealthCheck_descriptor,

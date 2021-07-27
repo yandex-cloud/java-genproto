@@ -98,6 +98,31 @@ public final class ProjectServiceOuterClass {
      * <code>.yandex.cloud.datasphere.v1.Project.Settings settings = 4;</code>
      */
     yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.SettingsOrBuilder getSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+     */
+    boolean hasLimits();
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+     */
+    yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits getLimits();
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+     */
+    yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder getLimitsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v1.CreateProjectRequest}
@@ -168,6 +193,19 @@ public final class ProjectServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(settings_);
                 settings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder subBuilder = null;
+              if (limits_ != null) {
+                subBuilder = limits_.toBuilder();
+              }
+              limits_ = input.readMessage(yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(limits_);
+                limits_ = subBuilder.buildPartial();
               }
 
               break;
@@ -365,6 +403,39 @@ public final class ProjectServiceOuterClass {
       return getSettings();
     }
 
+    public static final int LIMITS_FIELD_NUMBER = 5;
+    private yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits limits_;
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+     */
+    public boolean hasLimits() {
+      return limits_ != null;
+    }
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+     */
+    public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits getLimits() {
+      return limits_ == null ? yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.getDefaultInstance() : limits_;
+    }
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+     */
+    public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder getLimitsOrBuilder() {
+      return getLimits();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -391,6 +462,9 @@ public final class ProjectServiceOuterClass {
       if (settings_ != null) {
         output.writeMessage(4, getSettings());
       }
+      if (limits_ != null) {
+        output.writeMessage(5, getLimits());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -412,6 +486,10 @@ public final class ProjectServiceOuterClass {
       if (settings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSettings());
+      }
+      if (limits_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getLimits());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -440,6 +518,11 @@ public final class ProjectServiceOuterClass {
         result = result && getSettings()
             .equals(other.getSettings());
       }
+      result = result && (hasLimits() == other.hasLimits());
+      if (hasLimits()) {
+        result = result && getLimits()
+            .equals(other.getLimits());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -460,6 +543,10 @@ public final class ProjectServiceOuterClass {
       if (hasSettings()) {
         hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getSettings().hashCode();
+      }
+      if (hasLimits()) {
+        hash = (37 * hash) + LIMITS_FIELD_NUMBER;
+        hash = (53 * hash) + getLimits().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -606,6 +693,12 @@ public final class ProjectServiceOuterClass {
           settings_ = null;
           settingsBuilder_ = null;
         }
+        if (limitsBuilder_ == null) {
+          limits_ = null;
+        } else {
+          limits_ = null;
+          limitsBuilder_ = null;
+        }
         return this;
       }
 
@@ -639,6 +732,11 @@ public final class ProjectServiceOuterClass {
           result.settings_ = settings_;
         } else {
           result.settings_ = settingsBuilder_.build();
+        }
+        if (limitsBuilder_ == null) {
+          result.limits_ = limits_;
+        } else {
+          result.limits_ = limitsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -702,6 +800,9 @@ public final class ProjectServiceOuterClass {
         }
         if (other.hasSettings()) {
           mergeSettings(other.getSettings());
+        }
+        if (other.hasLimits()) {
+          mergeLimits(other.getLimits());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1155,6 +1256,159 @@ public final class ProjectServiceOuterClass {
           settings_ = null;
         }
         return settingsBuilder_;
+      }
+
+      private yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits limits_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder> limitsBuilder_;
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+       */
+      public boolean hasLimits() {
+        return limitsBuilder_ != null || limits_ != null;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+       */
+      public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits getLimits() {
+        if (limitsBuilder_ == null) {
+          return limits_ == null ? yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.getDefaultInstance() : limits_;
+        } else {
+          return limitsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+       */
+      public Builder setLimits(yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits value) {
+        if (limitsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          limits_ = value;
+          onChanged();
+        } else {
+          limitsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+       */
+      public Builder setLimits(
+          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder builderForValue) {
+        if (limitsBuilder_ == null) {
+          limits_ = builderForValue.build();
+          onChanged();
+        } else {
+          limitsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+       */
+      public Builder mergeLimits(yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits value) {
+        if (limitsBuilder_ == null) {
+          if (limits_ != null) {
+            limits_ =
+              yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.newBuilder(limits_).mergeFrom(value).buildPartial();
+          } else {
+            limits_ = value;
+          }
+          onChanged();
+        } else {
+          limitsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+       */
+      public Builder clearLimits() {
+        if (limitsBuilder_ == null) {
+          limits_ = null;
+          onChanged();
+        } else {
+          limits_ = null;
+          limitsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+       */
+      public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder getLimitsBuilder() {
+        
+        onChanged();
+        return getLimitsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+       */
+      public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder getLimitsOrBuilder() {
+        if (limitsBuilder_ != null) {
+          return limitsBuilder_.getMessageOrBuilder();
+        } else {
+          return limits_ == null ?
+              yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.getDefaultInstance() : limits_;
+        }
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder> 
+          getLimitsFieldBuilder() {
+        if (limitsBuilder_ == null) {
+          limitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder>(
+                  getLimits(),
+                  getParentForChildren(),
+                  isClean());
+          limits_ = null;
+        }
+        return limitsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1904,6 +2158,31 @@ public final class ProjectServiceOuterClass {
      * <code>.yandex.cloud.datasphere.v1.Project.Settings settings = 5;</code>
      */
     yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.SettingsOrBuilder getSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+     */
+    boolean hasLimits();
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+     */
+    yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits getLimits();
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+     */
+    yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder getLimitsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v1.UpdateProjectRequest}
@@ -1987,6 +2266,19 @@ public final class ProjectServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(settings_);
                 settings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder subBuilder = null;
+              if (limits_ != null) {
+                subBuilder = limits_.toBuilder();
+              }
+              limits_ = input.readMessage(yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(limits_);
+                limits_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2217,6 +2509,39 @@ public final class ProjectServiceOuterClass {
       return getSettings();
     }
 
+    public static final int LIMITS_FIELD_NUMBER = 6;
+    private yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits limits_;
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+     */
+    public boolean hasLimits() {
+      return limits_ != null;
+    }
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+     */
+    public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits getLimits() {
+      return limits_ == null ? yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.getDefaultInstance() : limits_;
+    }
+    /**
+     * <pre>
+     * Limits of the project.
+     * </pre>
+     *
+     * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+     */
+    public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder getLimitsOrBuilder() {
+      return getLimits();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2246,6 +2571,9 @@ public final class ProjectServiceOuterClass {
       if (settings_ != null) {
         output.writeMessage(5, getSettings());
       }
+      if (limits_ != null) {
+        output.writeMessage(6, getLimits());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2271,6 +2599,10 @@ public final class ProjectServiceOuterClass {
       if (settings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getSettings());
+      }
+      if (limits_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getLimits());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2304,6 +2636,11 @@ public final class ProjectServiceOuterClass {
         result = result && getSettings()
             .equals(other.getSettings());
       }
+      result = result && (hasLimits() == other.hasLimits());
+      if (hasLimits()) {
+        result = result && getLimits()
+            .equals(other.getLimits());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2328,6 +2665,10 @@ public final class ProjectServiceOuterClass {
       if (hasSettings()) {
         hash = (37 * hash) + SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getSettings().hashCode();
+      }
+      if (hasLimits()) {
+        hash = (37 * hash) + LIMITS_FIELD_NUMBER;
+        hash = (53 * hash) + getLimits().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2480,6 +2821,12 @@ public final class ProjectServiceOuterClass {
           settings_ = null;
           settingsBuilder_ = null;
         }
+        if (limitsBuilder_ == null) {
+          limits_ = null;
+        } else {
+          limits_ = null;
+          limitsBuilder_ = null;
+        }
         return this;
       }
 
@@ -2518,6 +2865,11 @@ public final class ProjectServiceOuterClass {
           result.settings_ = settings_;
         } else {
           result.settings_ = settingsBuilder_.build();
+        }
+        if (limitsBuilder_ == null) {
+          result.limits_ = limits_;
+        } else {
+          result.limits_ = limitsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2584,6 +2936,9 @@ public final class ProjectServiceOuterClass {
         }
         if (other.hasSettings()) {
           mergeSettings(other.getSettings());
+        }
+        if (other.hasLimits()) {
+          mergeLimits(other.getLimits());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3190,6 +3545,159 @@ public final class ProjectServiceOuterClass {
           settings_ = null;
         }
         return settingsBuilder_;
+      }
+
+      private yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits limits_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder> limitsBuilder_;
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+       */
+      public boolean hasLimits() {
+        return limitsBuilder_ != null || limits_ != null;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+       */
+      public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits getLimits() {
+        if (limitsBuilder_ == null) {
+          return limits_ == null ? yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.getDefaultInstance() : limits_;
+        } else {
+          return limitsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+       */
+      public Builder setLimits(yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits value) {
+        if (limitsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          limits_ = value;
+          onChanged();
+        } else {
+          limitsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+       */
+      public Builder setLimits(
+          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder builderForValue) {
+        if (limitsBuilder_ == null) {
+          limits_ = builderForValue.build();
+          onChanged();
+        } else {
+          limitsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+       */
+      public Builder mergeLimits(yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits value) {
+        if (limitsBuilder_ == null) {
+          if (limits_ != null) {
+            limits_ =
+              yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.newBuilder(limits_).mergeFrom(value).buildPartial();
+          } else {
+            limits_ = value;
+          }
+          onChanged();
+        } else {
+          limitsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+       */
+      public Builder clearLimits() {
+        if (limitsBuilder_ == null) {
+          limits_ = null;
+          onChanged();
+        } else {
+          limits_ = null;
+          limitsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+       */
+      public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder getLimitsBuilder() {
+        
+        onChanged();
+        return getLimitsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+       */
+      public yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder getLimitsOrBuilder() {
+        if (limitsBuilder_ != null) {
+          return limitsBuilder_.getMessageOrBuilder();
+        } else {
+          return limits_ == null ?
+              yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.getDefaultInstance() : limits_;
+        }
+      }
+      /**
+       * <pre>
+       * Limits of the project.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v1.Project.Limits limits = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder> 
+          getLimitsFieldBuilder() {
+        if (limitsBuilder_ == null) {
+          limitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.Limits.Builder, yandex.cloud.api.datasphere.v1.ProjectOuterClass.Project.LimitsOrBuilder>(
+                  getLimits(),
+                  getParentForChildren(),
+                  isClean());
+          limits_ = null;
+        }
+        return limitsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9564,6 +10072,2099 @@ public final class ProjectServiceOuterClass {
 
   }
 
+  public interface GetUnitBalanceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.GetUnitBalanceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the project to return the unit balance for.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * ID of the project to return the unit balance for.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.GetUnitBalanceRequest}
+   */
+  public  static final class GetUnitBalanceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.GetUnitBalanceRequest)
+      GetUnitBalanceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetUnitBalanceRequest.newBuilder() to construct.
+    private GetUnitBalanceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetUnitBalanceRequest() {
+      projectId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetUnitBalanceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest.Builder.class);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <pre>
+     * ID of the project to return the unit balance for.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the project to return the unit balance for.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getProjectIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getProjectIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest other = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest) obj;
+
+      boolean result = true;
+      result = result && getProjectId()
+          .equals(other.getProjectId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.GetUnitBalanceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.GetUnitBalanceRequest)
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest build() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest buildPartial() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest result = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest(this);
+        result.projectId_ = projectId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest other) {
+        if (other == yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * ID of the project to return the unit balance for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project to return the unit balance for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project to return the unit balance for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project to return the unit balance for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project to return the unit balance for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.GetUnitBalanceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.GetUnitBalanceRequest)
+    private static final yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetUnitBalanceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetUnitBalanceRequest>() {
+      @java.lang.Override
+      public GetUnitBalanceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetUnitBalanceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetUnitBalanceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetUnitBalanceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetUnitBalanceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.GetUnitBalanceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The number of units available to the project.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+     */
+    boolean hasUnitBalance();
+    /**
+     * <pre>
+     * The number of units available to the project.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+     */
+    com.google.protobuf.Int64Value getUnitBalance();
+    /**
+     * <pre>
+     * The number of units available to the project.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getUnitBalanceOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.GetUnitBalanceResponse}
+   */
+  public  static final class GetUnitBalanceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.GetUnitBalanceResponse)
+      GetUnitBalanceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetUnitBalanceResponse.newBuilder() to construct.
+    private GetUnitBalanceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetUnitBalanceResponse() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetUnitBalanceResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (unitBalance_ != null) {
+                subBuilder = unitBalance_.toBuilder();
+              }
+              unitBalance_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(unitBalance_);
+                unitBalance_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse.Builder.class);
+    }
+
+    public static final int UNIT_BALANCE_FIELD_NUMBER = 1;
+    private com.google.protobuf.Int64Value unitBalance_;
+    /**
+     * <pre>
+     * The number of units available to the project.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+     */
+    public boolean hasUnitBalance() {
+      return unitBalance_ != null;
+    }
+    /**
+     * <pre>
+     * The number of units available to the project.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+     */
+    public com.google.protobuf.Int64Value getUnitBalance() {
+      return unitBalance_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : unitBalance_;
+    }
+    /**
+     * <pre>
+     * The number of units available to the project.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getUnitBalanceOrBuilder() {
+      return getUnitBalance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (unitBalance_ != null) {
+        output.writeMessage(1, getUnitBalance());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (unitBalance_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getUnitBalance());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse other = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse) obj;
+
+      boolean result = true;
+      result = result && (hasUnitBalance() == other.hasUnitBalance());
+      if (hasUnitBalance()) {
+        result = result && getUnitBalance()
+            .equals(other.getUnitBalance());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasUnitBalance()) {
+        hash = (37 * hash) + UNIT_BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getUnitBalance().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.GetUnitBalanceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.GetUnitBalanceResponse)
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (unitBalanceBuilder_ == null) {
+          unitBalance_ = null;
+        } else {
+          unitBalance_ = null;
+          unitBalanceBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse build() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse buildPartial() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse result = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse(this);
+        if (unitBalanceBuilder_ == null) {
+          result.unitBalance_ = unitBalance_;
+        } else {
+          result.unitBalance_ = unitBalanceBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse other) {
+        if (other == yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse.getDefaultInstance()) return this;
+        if (other.hasUnitBalance()) {
+          mergeUnitBalance(other.getUnitBalance());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value unitBalance_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> unitBalanceBuilder_;
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+       */
+      public boolean hasUnitBalance() {
+        return unitBalanceBuilder_ != null || unitBalance_ != null;
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+       */
+      public com.google.protobuf.Int64Value getUnitBalance() {
+        if (unitBalanceBuilder_ == null) {
+          return unitBalance_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : unitBalance_;
+        } else {
+          return unitBalanceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+       */
+      public Builder setUnitBalance(com.google.protobuf.Int64Value value) {
+        if (unitBalanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          unitBalance_ = value;
+          onChanged();
+        } else {
+          unitBalanceBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+       */
+      public Builder setUnitBalance(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (unitBalanceBuilder_ == null) {
+          unitBalance_ = builderForValue.build();
+          onChanged();
+        } else {
+          unitBalanceBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+       */
+      public Builder mergeUnitBalance(com.google.protobuf.Int64Value value) {
+        if (unitBalanceBuilder_ == null) {
+          if (unitBalance_ != null) {
+            unitBalance_ =
+              com.google.protobuf.Int64Value.newBuilder(unitBalance_).mergeFrom(value).buildPartial();
+          } else {
+            unitBalance_ = value;
+          }
+          onChanged();
+        } else {
+          unitBalanceBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+       */
+      public Builder clearUnitBalance() {
+        if (unitBalanceBuilder_ == null) {
+          unitBalance_ = null;
+          onChanged();
+        } else {
+          unitBalance_ = null;
+          unitBalanceBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getUnitBalanceBuilder() {
+        
+        onChanged();
+        return getUnitBalanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getUnitBalanceOrBuilder() {
+        if (unitBalanceBuilder_ != null) {
+          return unitBalanceBuilder_.getMessageOrBuilder();
+        } else {
+          return unitBalance_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : unitBalance_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getUnitBalanceFieldBuilder() {
+        if (unitBalanceBuilder_ == null) {
+          unitBalanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getUnitBalance(),
+                  getParentForChildren(),
+                  isClean());
+          unitBalance_ = null;
+        }
+        return unitBalanceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.GetUnitBalanceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.GetUnitBalanceResponse)
+    private static final yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetUnitBalanceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetUnitBalanceResponse>() {
+      @java.lang.Override
+      public GetUnitBalanceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetUnitBalanceResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetUnitBalanceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetUnitBalanceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetUnitBalanceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SetUnitBalanceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.SetUnitBalanceRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the project to set the unit balance for.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * ID of the project to set the unit balance for.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * The number of units available to the project.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+     */
+    boolean hasUnitBalance();
+    /**
+     * <pre>
+     * The number of units available to the project.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+     */
+    com.google.protobuf.Int64Value getUnitBalance();
+    /**
+     * <pre>
+     * The number of units available to the project.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getUnitBalanceOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.SetUnitBalanceRequest}
+   */
+  public  static final class SetUnitBalanceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.SetUnitBalanceRequest)
+      SetUnitBalanceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetUnitBalanceRequest.newBuilder() to construct.
+    private SetUnitBalanceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetUnitBalanceRequest() {
+      projectId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SetUnitBalanceRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (unitBalance_ != null) {
+                subBuilder = unitBalance_.toBuilder();
+              }
+              unitBalance_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(unitBalance_);
+                unitBalance_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_SetUnitBalanceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_SetUnitBalanceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest.Builder.class);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <pre>
+     * ID of the project to set the unit balance for.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the project to set the unit balance for.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UNIT_BALANCE_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value unitBalance_;
+    /**
+     * <pre>
+     * The number of units available to the project.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+     */
+    public boolean hasUnitBalance() {
+      return unitBalance_ != null;
+    }
+    /**
+     * <pre>
+     * The number of units available to the project.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+     */
+    public com.google.protobuf.Int64Value getUnitBalance() {
+      return unitBalance_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : unitBalance_;
+    }
+    /**
+     * <pre>
+     * The number of units available to the project.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getUnitBalanceOrBuilder() {
+      return getUnitBalance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getProjectIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (unitBalance_ != null) {
+        output.writeMessage(2, getUnitBalance());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getProjectIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (unitBalance_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUnitBalance());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest other = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest) obj;
+
+      boolean result = true;
+      result = result && getProjectId()
+          .equals(other.getProjectId());
+      result = result && (hasUnitBalance() == other.hasUnitBalance());
+      if (hasUnitBalance()) {
+        result = result && getUnitBalance()
+            .equals(other.getUnitBalance());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      if (hasUnitBalance()) {
+        hash = (37 * hash) + UNIT_BALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getUnitBalance().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.SetUnitBalanceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.SetUnitBalanceRequest)
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_SetUnitBalanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_SetUnitBalanceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        if (unitBalanceBuilder_ == null) {
+          unitBalance_ = null;
+        } else {
+          unitBalance_ = null;
+          unitBalanceBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_SetUnitBalanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest build() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest buildPartial() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest result = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest(this);
+        result.projectId_ = projectId_;
+        if (unitBalanceBuilder_ == null) {
+          result.unitBalance_ = unitBalance_;
+        } else {
+          result.unitBalance_ = unitBalanceBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest other) {
+        if (other == yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (other.hasUnitBalance()) {
+          mergeUnitBalance(other.getUnitBalance());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * ID of the project to set the unit balance for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project to set the unit balance for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project to set the unit balance for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project to set the unit balance for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project to set the unit balance for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value unitBalance_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> unitBalanceBuilder_;
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+       */
+      public boolean hasUnitBalance() {
+        return unitBalanceBuilder_ != null || unitBalance_ != null;
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+       */
+      public com.google.protobuf.Int64Value getUnitBalance() {
+        if (unitBalanceBuilder_ == null) {
+          return unitBalance_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : unitBalance_;
+        } else {
+          return unitBalanceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+       */
+      public Builder setUnitBalance(com.google.protobuf.Int64Value value) {
+        if (unitBalanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          unitBalance_ = value;
+          onChanged();
+        } else {
+          unitBalanceBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+       */
+      public Builder setUnitBalance(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (unitBalanceBuilder_ == null) {
+          unitBalance_ = builderForValue.build();
+          onChanged();
+        } else {
+          unitBalanceBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+       */
+      public Builder mergeUnitBalance(com.google.protobuf.Int64Value value) {
+        if (unitBalanceBuilder_ == null) {
+          if (unitBalance_ != null) {
+            unitBalance_ =
+              com.google.protobuf.Int64Value.newBuilder(unitBalance_).mergeFrom(value).buildPartial();
+          } else {
+            unitBalance_ = value;
+          }
+          onChanged();
+        } else {
+          unitBalanceBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+       */
+      public Builder clearUnitBalance() {
+        if (unitBalanceBuilder_ == null) {
+          unitBalance_ = null;
+          onChanged();
+        } else {
+          unitBalance_ = null;
+          unitBalanceBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getUnitBalanceBuilder() {
+        
+        onChanged();
+        return getUnitBalanceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getUnitBalanceOrBuilder() {
+        if (unitBalanceBuilder_ != null) {
+          return unitBalanceBuilder_.getMessageOrBuilder();
+        } else {
+          return unitBalance_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : unitBalance_;
+        }
+      }
+      /**
+       * <pre>
+       * The number of units available to the project.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value unit_balance = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getUnitBalanceFieldBuilder() {
+        if (unitBalanceBuilder_ == null) {
+          unitBalanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getUnitBalance(),
+                  getParentForChildren(),
+                  isClean());
+          unitBalance_ = null;
+        }
+        return unitBalanceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.SetUnitBalanceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.SetUnitBalanceRequest)
+    private static final yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetUnitBalanceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SetUnitBalanceRequest>() {
+      @java.lang.Override
+      public SetUnitBalanceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SetUnitBalanceRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetUnitBalanceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetUnitBalanceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.SetUnitBalanceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v1_CreateProjectRequest_descriptor;
   private static final 
@@ -9624,6 +12225,21 @@ public final class ProjectServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v1_ListProjectsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_SetUnitBalanceRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_SetUnitBalanceRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -9636,67 +12252,86 @@ public final class ProjectServiceOuterClass {
       "\n0yandex/cloud/datasphere/v1/project_ser" +
       "vice.proto\022\032yandex.cloud.datasphere.v1\032\034" +
       "google/api/annotations.proto\032 google/pro" +
-      "tobuf/field_mask.proto\032 yandex/cloud/api" +
-      "/operation.proto\032\035yandex/cloud/validatio" +
-      "n.proto\032&yandex/cloud/operation/operatio" +
-      "n.proto\032(yandex/cloud/datasphere/v1/proj" +
-      "ect.proto\"\322\001\n\024CreateProjectRequest\022\037\n\tfo" +
-      "lder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0229\n\004name\030\002 \001(" +
-      "\tB+\212\3101\004<=63\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z" +
-      "0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022>" +
-      "\n\010settings\030\004 \001(\0132,.yandex.cloud.datasphe" +
-      "re.v1.Project.Settings\"+\n\025CreateProjectM" +
-      "etadata\022\022\n\nproject_id\030\001 \001(\t\"\205\002\n\024UpdatePr" +
-      "ojectRequest\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001\212\310" +
-      "1\005<=200\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
-      "otobuf.FieldMask\0229\n\004name\030\003 \001(\tB+\212\3101\004<=63" +
-      "\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013d" +
-      "escription\030\004 \001(\tB\t\212\3101\005<=256\022>\n\010settings\030" +
-      "\005 \001(\0132,.yandex.cloud.datasphere.v1.Proje" +
-      "ct.Settings\"+\n\025UpdateProjectMetadata\022\022\n\n" +
-      "project_id\030\001 \001(\t\"9\n\024DeleteProjectRequest" +
-      "\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\"+\n\025D" +
-      "eleteProjectMetadata\022\022\n\nproject_id\030\001 \001(\t" +
-      "\"7\n\022OpenProjectRequest\022!\n\nproject_id\030\001 \001" +
-      "(\tB\r\350\3071\001\212\3101\005<=200\")\n\023OpenProjectMetadata" +
-      "\022\022\n\nproject_id\030\001 \001(\t\"A\n\023OpenProjectRespo" +
-      "nse\022\023\n\013project_url\030\001 \001(\t\022\025\n\rsession_toke" +
-      "n\030\002 \001(\t\"6\n\021GetProjectRequest\022!\n\nproject_" +
-      "id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\"t\n\023ListProjectsR" +
-      "equest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_t" +
-      "oken\030\003 \001(\tB\t\212\3101\005<=100\"f\n\024ListProjectsRes" +
-      "ponse\0225\n\010projects\030\001 \003(\0132#.yandex.cloud.d" +
-      "atasphere.v1.Project\022\027\n\017next_page_token\030" +
-      "\002 \001(\t2\201\010\n\016ProjectService\022\245\001\n\006Create\0220.ya" +
-      "ndex.cloud.datasphere.v1.CreateProjectRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"F\202\323\344\223\002\034\"\027/datasphere/v1/projects:\001*\262\322* " +
-      "\n\025CreateProjectMetadata\022\007Project\022\262\001\n\006Upd" +
-      "ate\0220.yandex.cloud.datasphere.v1.UpdateP" +
-      "rojectRequest\032!.yandex.cloud.operation.O" +
-      "peration\"S\202\323\344\223\002)2$/datasphere/v1/project" +
-      "s/{project_id}:\001*\262\322* \n\025UpdateProjectMeta" +
-      "data\022\007Project\022\275\001\n\006Delete\0220.yandex.cloud." +
-      "datasphere.v1.DeleteProjectRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"^\202\323\344\223\002&*$/" +
-      "datasphere/v1/projects/{project_id}\262\322*.\n" +
-      "\025DeleteProjectMetadata\022\025google.protobuf." +
-      "Empty\022\272\001\n\004Open\022..yandex.cloud.datasphere" +
-      ".v1.OpenProjectRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"_\202\323\344\223\002+\")/datasphere/v" +
-      "1/projects/{project_id}:open\262\322**\n\023OpenPr" +
-      "ojectMetadata\022\023OpenProjectResponse\022\207\001\n\003G" +
-      "et\022-.yandex.cloud.datasphere.v1.GetProje" +
-      "ctRequest\032#.yandex.cloud.datasphere.v1.P" +
-      "roject\",\202\323\344\223\002&\022$/datasphere/v1/projects/" +
-      "{project_id}\022\212\001\n\004List\022/.yandex.cloud.dat" +
-      "asphere.v1.ListProjectsRequest\0320.yandex." +
-      "cloud.datasphere.v1.ListProjectsResponse" +
-      "\"\037\202\323\344\223\002\031\022\027/datasphere/v1/projectsBk\n\036yan" +
-      "dex.cloud.api.datasphere.v1ZIgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/da" +
-      "tasphere/v1;datasphereb\006proto3"
+      "tobuf/field_mask.proto\032\033google/protobuf/" +
+      "empty.proto\032\036google/protobuf/wrappers.pr" +
+      "oto\032 yandex/cloud/api/operation.proto\032\035y" +
+      "andex/cloud/validation.proto\032&yandex/clo" +
+      "ud/operation/operation.proto\032(yandex/clo" +
+      "ud/datasphere/v1/project.proto\"\216\002\n\024Creat" +
+      "eProjectRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\0229\n\004name\030\002 \001(\tB+\212\3101\004<=63\362\3071\037[a-z" +
+      "]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descripti" +
+      "on\030\003 \001(\tB\t\212\3101\005<=256\022>\n\010settings\030\004 \001(\0132,." +
+      "yandex.cloud.datasphere.v1.Project.Setti" +
+      "ngs\022:\n\006limits\030\005 \001(\0132*.yandex.cloud.datas" +
+      "phere.v1.Project.Limits\"+\n\025CreateProject" +
+      "Metadata\022\022\n\nproject_id\030\001 \001(\t\"\301\002\n\024UpdateP" +
+      "rojectRequest\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001\212" +
+      "\3101\005<=200\022/\n\013update_mask\030\002 \001(\0132\032.google.p" +
+      "rotobuf.FieldMask\0229\n\004name\030\003 \001(\tB+\212\3101\004<=6" +
+      "3\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013" +
+      "description\030\004 \001(\tB\t\212\3101\005<=256\022>\n\010settings" +
+      "\030\005 \001(\0132,.yandex.cloud.datasphere.v1.Proj" +
+      "ect.Settings\022:\n\006limits\030\006 \001(\0132*.yandex.cl" +
+      "oud.datasphere.v1.Project.Limits\"+\n\025Upda" +
+      "teProjectMetadata\022\022\n\nproject_id\030\001 \001(\t\"9\n" +
+      "\024DeleteProjectRequest\022!\n\nproject_id\030\001 \001(" +
+      "\tB\r\350\3071\001\212\3101\005<=200\"+\n\025DeleteProjectMetadat" +
+      "a\022\022\n\nproject_id\030\001 \001(\t\"7\n\022OpenProjectRequ" +
+      "est\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\")" +
+      "\n\023OpenProjectMetadata\022\022\n\nproject_id\030\001 \001(" +
+      "\t\"A\n\023OpenProjectResponse\022\023\n\013project_url\030" +
+      "\001 \001(\t\022\025\n\rsession_token\030\002 \001(\t\"6\n\021GetProje" +
+      "ctRequest\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<" +
+      "=200\"t\n\023ListProjectsRequest\022\037\n\tfolder_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
+      "\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
+      "00\"f\n\024ListProjectsResponse\0225\n\010projects\030\001" +
+      " \003(\0132#.yandex.cloud.datasphere.v1.Projec" +
+      "t\022\027\n\017next_page_token\030\002 \001(\t\":\n\025GetUnitBal" +
+      "anceRequest\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001\212\3101" +
+      "\005<=200\"K\n\026GetUnitBalanceResponse\0221\n\014unit" +
+      "_balance\030\001 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\"m\n\025SetUnitBalanceRequest\022!\n\nproject_" +
+      "id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\0221\n\014unit_balance\030" +
+      "\002 \001(\0132\033.google.protobuf.Int64Value2\320\n\n\016P" +
+      "rojectService\022\245\001\n\006Create\0220.yandex.cloud." +
+      "datasphere.v1.CreateProjectRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"F\202\323\344\223\002\034\"\027/" +
+      "datasphere/v1/projects:\001*\262\322* \n\025CreatePro" +
+      "jectMetadata\022\007Project\022\262\001\n\006Update\0220.yande" +
+      "x.cloud.datasphere.v1.UpdateProjectReque" +
+      "st\032!.yandex.cloud.operation.Operation\"S\202" +
+      "\323\344\223\002)2$/datasphere/v1/projects/{project_" +
+      "id}:\001*\262\322* \n\025UpdateProjectMetadata\022\007Proje" +
+      "ct\022\275\001\n\006Delete\0220.yandex.cloud.datasphere." +
+      "v1.DeleteProjectRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"^\202\323\344\223\002&*$/datasphere/" +
+      "v1/projects/{project_id}\262\322*.\n\025DeleteProj" +
+      "ectMetadata\022\025google.protobuf.Empty\022\272\001\n\004O" +
+      "pen\022..yandex.cloud.datasphere.v1.OpenPro" +
+      "jectRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"_\202\323\344\223\002+\")/datasphere/v1/projects/" +
+      "{project_id}:open\262\322**\n\023OpenProjectMetada" +
+      "ta\022\023OpenProjectResponse\022\207\001\n\003Get\022-.yandex" +
+      ".cloud.datasphere.v1.GetProjectRequest\032#" +
+      ".yandex.cloud.datasphere.v1.Project\",\202\323\344" +
+      "\223\002&\022$/datasphere/v1/projects/{project_id" +
+      "}\022\212\001\n\004List\022/.yandex.cloud.datasphere.v1." +
+      "ListProjectsRequest\0320.yandex.cloud.datas" +
+      "phere.v1.ListProjectsResponse\"\037\202\323\344\223\002\031\022\027/" +
+      "datasphere/v1/projects\022\261\001\n\016GetUnitBalanc" +
+      "e\0221.yandex.cloud.datasphere.v1.GetUnitBa" +
+      "lanceRequest\0322.yandex.cloud.datasphere.v" +
+      "1.GetUnitBalanceResponse\"8\202\323\344\223\0022\0220/datas" +
+      "phere/v1/projects/{project_id}:unitBalan" +
+      "ce\022\230\001\n\016SetUnitBalance\0221.yandex.cloud.dat" +
+      "asphere.v1.SetUnitBalanceRequest\032\026.googl" +
+      "e.protobuf.Empty\";\202\323\344\223\0025\"0/datasphere/v1" +
+      "/projects/{project_id}:unitBalance:\001*Bk\n" +
+      "\036yandex.cloud.api.datasphere.v1ZIgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/datasphere/v1;datasphereb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9711,6 +12346,8 @@ public final class ProjectServiceOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.EmptyProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -9721,7 +12358,7 @@ public final class ProjectServiceOuterClass {
     internal_static_yandex_cloud_datasphere_v1_CreateProjectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v1_CreateProjectRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Settings", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Settings", "Limits", });
     internal_static_yandex_cloud_datasphere_v1_CreateProjectMetadata_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datasphere_v1_CreateProjectMetadata_fieldAccessorTable = new
@@ -9733,7 +12370,7 @@ public final class ProjectServiceOuterClass {
     internal_static_yandex_cloud_datasphere_v1_UpdateProjectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v1_UpdateProjectRequest_descriptor,
-        new java.lang.String[] { "ProjectId", "UpdateMask", "Name", "Description", "Settings", });
+        new java.lang.String[] { "ProjectId", "UpdateMask", "Name", "Description", "Settings", "Limits", });
     internal_static_yandex_cloud_datasphere_v1_UpdateProjectMetadata_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_datasphere_v1_UpdateProjectMetadata_fieldAccessorTable = new
@@ -9788,6 +12425,24 @@ public final class ProjectServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v1_ListProjectsResponse_descriptor,
         new java.lang.String[] { "Projects", "NextPageToken", });
+    internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceRequest_descriptor,
+        new java.lang.String[] { "ProjectId", });
+    internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_GetUnitBalanceResponse_descriptor,
+        new java.lang.String[] { "UnitBalance", });
+    internal_static_yandex_cloud_datasphere_v1_SetUnitBalanceRequest_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_datasphere_v1_SetUnitBalanceRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_SetUnitBalanceRequest_descriptor,
+        new java.lang.String[] { "ProjectId", "UnitBalance", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -9800,6 +12455,8 @@ public final class ProjectServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
