@@ -10177,7 +10177,7 @@ public final class AddressServiceOuterClass {
     /**
      * <pre>
      * ID of the address to list operations for.
-     * To get a address ID make a [tAddressService.List] request.
+     * To get a address ID make a [AddressService.List] request.
      * </pre>
      *
      * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10186,7 +10186,7 @@ public final class AddressServiceOuterClass {
     /**
      * <pre>
      * ID of the address to list operations for.
-     * To get a address ID make a [tAddressService.List] request.
+     * To get a address ID make a [AddressService.List] request.
      * </pre>
      *
      * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10322,7 +10322,7 @@ public final class AddressServiceOuterClass {
     /**
      * <pre>
      * ID of the address to list operations for.
-     * To get a address ID make a [tAddressService.List] request.
+     * To get a address ID make a [AddressService.List] request.
      * </pre>
      *
      * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10342,7 +10342,7 @@ public final class AddressServiceOuterClass {
     /**
      * <pre>
      * ID of the address to list operations for.
-     * To get a address ID make a [tAddressService.List] request.
+     * To get a address ID make a [AddressService.List] request.
      * </pre>
      *
      * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10763,7 +10763,7 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * ID of the address to list operations for.
-       * To get a address ID make a [tAddressService.List] request.
+       * To get a address ID make a [AddressService.List] request.
        * </pre>
        *
        * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10783,7 +10783,7 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * ID of the address to list operations for.
-       * To get a address ID make a [tAddressService.List] request.
+       * To get a address ID make a [AddressService.List] request.
        * </pre>
        *
        * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10804,7 +10804,7 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * ID of the address to list operations for.
-       * To get a address ID make a [tAddressService.List] request.
+       * To get a address ID make a [AddressService.List] request.
        * </pre>
        *
        * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10822,7 +10822,7 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * ID of the address to list operations for.
-       * To get a address ID make a [tAddressService.List] request.
+       * To get a address ID make a [AddressService.List] request.
        * </pre>
        *
        * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -10836,7 +10836,7 @@ public final class AddressServiceOuterClass {
       /**
        * <pre>
        * ID of the address to list operations for.
-       * To get a address ID make a [tAddressService.List] request.
+       * To get a address ID make a [AddressService.List] request.
        * </pre>
        *
        * <code>string address_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>

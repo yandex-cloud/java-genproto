@@ -189,8 +189,7 @@ public final class LogGroupOuterClass {
 
     /**
      * <pre>
-     * Log group status.
-     * See [Status] for possible values.
+     * Status of the log group.
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
@@ -198,8 +197,7 @@ public final class LogGroupOuterClass {
     int getStatusValue();
     /**
      * <pre>
-     * Log group status.
-     * See [Status] for possible values.
+     * Status of the log group.
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
@@ -911,8 +909,7 @@ public final class LogGroupOuterClass {
     private int status_;
     /**
      * <pre>
-     * Log group status.
-     * See [Status] for possible values.
+     * Status of the log group.
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
@@ -922,8 +919,7 @@ public final class LogGroupOuterClass {
     }
     /**
      * <pre>
-     * Log group status.
-     * See [Status] for possible values.
+     * Status of the log group.
      * </pre>
      *
      * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
@@ -2222,8 +2218,7 @@ public final class LogGroupOuterClass {
       private int status_ = 0;
       /**
        * <pre>
-       * Log group status.
-       * See [Status] for possible values.
+       * Status of the log group.
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
@@ -2233,8 +2228,7 @@ public final class LogGroupOuterClass {
       }
       /**
        * <pre>
-       * Log group status.
-       * See [Status] for possible values.
+       * Status of the log group.
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
@@ -2246,8 +2240,7 @@ public final class LogGroupOuterClass {
       }
       /**
        * <pre>
-       * Log group status.
-       * See [Status] for possible values.
+       * Status of the log group.
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
@@ -2259,8 +2252,7 @@ public final class LogGroupOuterClass {
       }
       /**
        * <pre>
-       * Log group status.
-       * See [Status] for possible values.
+       * Status of the log group.
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>
@@ -2276,8 +2268,7 @@ public final class LogGroupOuterClass {
       }
       /**
        * <pre>
-       * Log group status.
-       * See [Status] for possible values.
+       * Status of the log group.
        * </pre>
        *
        * <code>.yandex.cloud.logging.v1.LogGroup.Status status = 8;</code>

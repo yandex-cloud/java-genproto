@@ -8463,7 +8463,7 @@ public final class PSDS {
       "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\rdatabase_nam" +
       "e\030\002 \001(\tB\004\350\3071\001\022\033\n\rfrom_database\030\003 \001(\tB\004\350\307" +
       "1\001\022\027\n\tbackup_id\030\004 \001(\tB\004\350\3071\001\022.\n\004time\030\006 \001(" +
-      "\0132\032.google.protobuf.TimestampB\004\350\3071\0012\344\007\n\017" +
+      "\0132\032.google.protobuf.TimestampB\004\350\3071\0012\354\007\n\017" +
       "DatabaseService\022\254\001\n\003Get\0221.yandex.cloud.m" +
       "db.sqlserver.v1.GetDatabaseRequest\032\'.yan" +
       "dex.cloud.mdb.sqlserver.v1.Database\"I\202\323\344" +
@@ -8478,21 +8478,21 @@ public final class PSDS {
       "cloud.operation.Operation\"b\202\323\344\223\0026\"1/mdb/" +
       "sqlserver/v1/clusters/{cluster_id}/datab" +
       "ases:\001*\262\322*\"\n\026CreateDatabaseMetadata\022\010Dat" +
-      "abase\022\310\001\n\007Restore\0225.yandex.cloud.mdb.sql" +
+      "abase\022\320\001\n\007Restore\0225.yandex.cloud.mdb.sql" +
       "server.v1.RestoreDatabaseRequest\032!.yande" +
-      "x.cloud.operation.Operation\"c\202\323\344\223\0026\"1/md" +
+      "x.cloud.operation.Operation\"k\202\323\344\223\002>\"9/md" +
       "b/sqlserver/v1/clusters/{cluster_id}/dat" +
-      "abases:\001*\262\322*#\n\027RestoreDatabaseMetadata\022\010" +
-      "Database\022\337\001\n\006Delete\0224.yandex.cloud.mdb.s" +
-      "qlserver.v1.DeleteDatabaseRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"|\202\323\344\223\002C*A/m" +
-      "db/sqlserver/v1/clusters/{cluster_id}/da" +
-      "tabases/{database_name}\262\322*/\n\026DeleteDatab" +
-      "aseMetadata\022\025google.protobuf.EmptyBv\n!ya" +
-      "ndex.cloud.api.mdb.sqlserver.v1B\004PSDSZKg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/mdb/sqlserver/v1;sqlserverb\006prot" +
-      "o3"
+      "abases:restore:\001*\262\322*#\n\027RestoreDatabaseMe" +
+      "tadata\022\010Database\022\337\001\n\006Delete\0224.yandex.clo" +
+      "ud.mdb.sqlserver.v1.DeleteDatabaseReques" +
+      "t\032!.yandex.cloud.operation.Operation\"|\202\323" +
+      "\344\223\002C*A/mdb/sqlserver/v1/clusters/{cluste" +
+      "r_id}/databases/{database_name}\262\322*/\n\026Del" +
+      "eteDatabaseMetadata\022\025google.protobuf.Emp" +
+      "tyBv\n!yandex.cloud.api.mdb.sqlserver.v1B" +
+      "\004PSDSZKgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/mdb/sqlserver/v1;sqlserv" +
+      "erb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

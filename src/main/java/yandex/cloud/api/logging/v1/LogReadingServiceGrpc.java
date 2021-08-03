@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for reading from log groups.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -83,6 +86,9 @@ public final class LogReadingServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for reading from log groups.
+   * </pre>
    */
   public static abstract class LogReadingServiceImplBase implements io.grpc.BindableService {
 
@@ -110,6 +116,9 @@ public final class LogReadingServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for reading from log groups.
+   * </pre>
    */
   public static final class LogReadingServiceStub extends io.grpc.stub.AbstractStub<LogReadingServiceStub> {
     private LogReadingServiceStub(io.grpc.Channel channel) {
@@ -140,6 +149,9 @@ public final class LogReadingServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for reading from log groups.
+   * </pre>
    */
   public static final class LogReadingServiceBlockingStub extends io.grpc.stub.AbstractStub<LogReadingServiceBlockingStub> {
     private LogReadingServiceBlockingStub(io.grpc.Channel channel) {
@@ -169,6 +181,9 @@ public final class LogReadingServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for reading from log groups.
+   * </pre>
    */
   public static final class LogReadingServiceFutureStub extends io.grpc.stub.AbstractStub<LogReadingServiceFutureStub> {
     private LogReadingServiceFutureStub(io.grpc.Channel channel) {

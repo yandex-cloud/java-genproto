@@ -2669,7 +2669,7 @@ public final class LogReadingServiceOuterClass {
 
     /**
      * <pre>
-     * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+     * Filter expression. For details about filtering, see [documentation](/docs/logging/concepts/filter).
      * </pre>
      *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -2677,7 +2677,7 @@ public final class LogReadingServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+     * Filter expression. For details about filtering, see [documentation](/docs/logging/concepts/filter).
      * </pre>
      *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -3152,7 +3152,7 @@ public final class LogReadingServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+     * Filter expression. For details about filtering, see [documentation](/docs/logging/concepts/filter).
      * </pre>
      *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -3171,7 +3171,7 @@ public final class LogReadingServiceOuterClass {
     }
     /**
      * <pre>
-     * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+     * Filter expression. For details about filtering, see [documentation](/docs/logging/concepts/filter).
      * </pre>
      *
      * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -4578,7 +4578,7 @@ public final class LogReadingServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+       * Filter expression. For details about filtering, see [documentation](/docs/logging/concepts/filter).
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -4597,7 +4597,7 @@ public final class LogReadingServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+       * Filter expression. For details about filtering, see [documentation](/docs/logging/concepts/filter).
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -4617,7 +4617,7 @@ public final class LogReadingServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+       * Filter expression. For details about filtering, see [documentation](/docs/logging/concepts/filter).
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -4634,7 +4634,7 @@ public final class LogReadingServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+       * Filter expression. For details about filtering, see [documentation](/docs/logging/concepts/filter).
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -4647,7 +4647,7 @@ public final class LogReadingServiceOuterClass {
       }
       /**
        * <pre>
-       * Filter expression. See documentation at https://cloud.yandex.ru/docs/logging/concepts/filter.
+       * Filter expression. For details about filtering, see [documentation](/docs/logging/concepts/filter).
        * </pre>
        *
        * <code>string filter = 7 [(.yandex.cloud.length) = "&lt;=1000"];</code>

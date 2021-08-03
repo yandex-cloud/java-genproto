@@ -20,7 +20,7 @@ public final class BackupOuterClass {
 
     /**
      * <pre>
-     * ID of the backup.
+     * Required. ID of the backup.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -28,7 +28,7 @@ public final class BackupOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the backup.
+     * Required. ID of the backup.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -124,6 +124,49 @@ public final class BackupOuterClass {
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Size of backup in bytes
+     * </pre>
+     *
+     * <code>int64 size = 6;</code>
+     */
+    long getSize();
+
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType getType();
+
+    /**
+     * <pre>
+     * Method of backup creation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+     */
+    int getMethodValue();
+    /**
+     * <pre>
+     * Method of backup creation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod getMethod();
   }
   /**
    * <pre>
@@ -146,6 +189,9 @@ public final class BackupOuterClass {
       id_ = "";
       folderId_ = "";
       sourceClusterId_ = "";
+      size_ = 0L;
+      type_ = 0;
+      method_ = 0;
     }
 
     @java.lang.Override
@@ -216,6 +262,23 @@ public final class BackupOuterClass {
 
               break;
             }
+            case 48: {
+
+              size_ = input.readInt64();
+              break;
+            }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              method_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -248,11 +311,257 @@ public final class BackupOuterClass {
               yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.class, yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.Builder.class);
     }
 
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod}
+     */
+    public enum BackupMethod
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>BACKUP_METHOD_UNSPECIFIED = 0;</code>
+       */
+      BACKUP_METHOD_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Base backup 
+       * </pre>
+       *
+       * <code>BASE = 1;</code>
+       */
+      BASE(1),
+      /**
+       * <pre>
+       * Delta (incremental) PostgreSQL backup
+       * </pre>
+       *
+       * <code>INCREMENTAL = 2;</code>
+       */
+      INCREMENTAL(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>BACKUP_METHOD_UNSPECIFIED = 0;</code>
+       */
+      public static final int BACKUP_METHOD_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Base backup 
+       * </pre>
+       *
+       * <code>BASE = 1;</code>
+       */
+      public static final int BASE_VALUE = 1;
+      /**
+       * <pre>
+       * Delta (incremental) PostgreSQL backup
+       * </pre>
+       *
+       * <code>INCREMENTAL = 2;</code>
+       */
+      public static final int INCREMENTAL_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static BackupMethod valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static BackupMethod forNumber(int value) {
+        switch (value) {
+          case 0: return BACKUP_METHOD_UNSPECIFIED;
+          case 1: return BASE;
+          case 2: return INCREMENTAL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<BackupMethod>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          BackupMethod> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BackupMethod>() {
+              public BackupMethod findValueByNumber(int number) {
+                return BackupMethod.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final BackupMethod[] VALUES = values();
+
+      public static BackupMethod valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private BackupMethod(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType}
+     */
+    public enum BackupCreationType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>BACKUP_CREATION_TYPE_UNSPECIFIED = 0;</code>
+       */
+      BACKUP_CREATION_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Backup created by automated daily schedule
+       * </pre>
+       *
+       * <code>AUTOMATED = 1;</code>
+       */
+      AUTOMATED(1),
+      /**
+       * <pre>
+       * Backup created by user request
+       * </pre>
+       *
+       * <code>MANUAL = 2;</code>
+       */
+      MANUAL(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>BACKUP_CREATION_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int BACKUP_CREATION_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Backup created by automated daily schedule
+       * </pre>
+       *
+       * <code>AUTOMATED = 1;</code>
+       */
+      public static final int AUTOMATED_VALUE = 1;
+      /**
+       * <pre>
+       * Backup created by user request
+       * </pre>
+       *
+       * <code>MANUAL = 2;</code>
+       */
+      public static final int MANUAL_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static BackupCreationType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static BackupCreationType forNumber(int value) {
+        switch (value) {
+          case 0: return BACKUP_CREATION_TYPE_UNSPECIFIED;
+          case 1: return AUTOMATED;
+          case 2: return MANUAL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<BackupCreationType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          BackupCreationType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BackupCreationType>() {
+              public BackupCreationType findValueByNumber(int number) {
+                return BackupCreationType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final BackupCreationType[] VALUES = values();
+
+      public static BackupCreationType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private BackupCreationType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType)
+    }
+
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the backup.
+     * Required. ID of the backup.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -271,7 +580,7 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * ID of the backup.
+     * Required. ID of the backup.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -443,6 +752,69 @@ public final class BackupOuterClass {
       return getStartedAt();
     }
 
+    public static final int SIZE_FIELD_NUMBER = 6;
+    private long size_;
+    /**
+     * <pre>
+     * Size of backup in bytes
+     * </pre>
+     *
+     * <code>int64 size = 6;</code>
+     */
+    public long getSize() {
+      return size_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 7;
+    private int type_;
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+     */
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType result = yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType.valueOf(type_);
+      return result == null ? yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType.UNRECOGNIZED : result;
+    }
+
+    public static final int METHOD_FIELD_NUMBER = 8;
+    private int method_;
+    /**
+     * <pre>
+     * Method of backup creation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+     */
+    public int getMethodValue() {
+      return method_;
+    }
+    /**
+     * <pre>
+     * Method of backup creation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+     */
+    public yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod getMethod() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod result = yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod.valueOf(method_);
+      return result == null ? yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -472,6 +844,15 @@ public final class BackupOuterClass {
       if (startedAt_ != null) {
         output.writeMessage(5, getStartedAt());
       }
+      if (size_ != 0L) {
+        output.writeInt64(6, size_);
+      }
+      if (type_ != yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType.BACKUP_CREATION_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(7, type_);
+      }
+      if (method_ != yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod.BACKUP_METHOD_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, method_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -497,6 +878,18 @@ public final class BackupOuterClass {
       if (startedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getStartedAt());
+      }
+      if (size_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, size_);
+      }
+      if (type_ != yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType.BACKUP_CREATION_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, type_);
+      }
+      if (method_ != yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod.BACKUP_METHOD_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, method_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -530,6 +923,10 @@ public final class BackupOuterClass {
         result = result && getStartedAt()
             .equals(other.getStartedAt());
       }
+      result = result && (getSize()
+          == other.getSize());
+      result = result && type_ == other.type_;
+      result = result && method_ == other.method_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -555,6 +952,13 @@ public final class BackupOuterClass {
         hash = (37 * hash) + STARTED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getStartedAt().hashCode();
       }
+      hash = (37 * hash) + SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSize());
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + method_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -711,6 +1115,12 @@ public final class BackupOuterClass {
           startedAt_ = null;
           startedAtBuilder_ = null;
         }
+        size_ = 0L;
+
+        type_ = 0;
+
+        method_ = 0;
+
         return this;
       }
 
@@ -750,6 +1160,9 @@ public final class BackupOuterClass {
         } else {
           result.startedAt_ = startedAtBuilder_.build();
         }
+        result.size_ = size_;
+        result.type_ = type_;
+        result.method_ = method_;
         onBuilt();
         return result;
       }
@@ -816,6 +1229,15 @@ public final class BackupOuterClass {
         if (other.hasStartedAt()) {
           mergeStartedAt(other.getStartedAt());
         }
+        if (other.getSize() != 0L) {
+          setSize(other.getSize());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (other.method_ != 0) {
+          setMethodValue(other.getMethodValue());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -848,7 +1270,7 @@ public final class BackupOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the backup.
+       * Required. ID of the backup.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -867,7 +1289,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the backup.
+       * Required. ID of the backup.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -887,7 +1309,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the backup.
+       * Required. ID of the backup.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -904,7 +1326,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the backup.
+       * Required. ID of the backup.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -917,7 +1339,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * ID of the backup.
+       * Required. ID of the backup.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1426,6 +1848,174 @@ public final class BackupOuterClass {
         }
         return startedAtBuilder_;
       }
+
+      private long size_ ;
+      /**
+       * <pre>
+       * Size of backup in bytes
+       * </pre>
+       *
+       * <code>int64 size = 6;</code>
+       */
+      public long getSize() {
+        return size_;
+      }
+      /**
+       * <pre>
+       * Size of backup in bytes
+       * </pre>
+       *
+       * <code>int64 size = 6;</code>
+       */
+      public Builder setSize(long value) {
+        
+        size_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of backup in bytes
+       * </pre>
+       *
+       * <code>int64 size = 6;</code>
+       */
+      public Builder clearSize() {
+        
+        size_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+       */
+      public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType result = yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType.valueOf(type_);
+        return result == null ? yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+       */
+      public Builder setType(yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupCreationType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupCreationType type = 7;</code>
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int method_ = 0;
+      /**
+       * <pre>
+       * Method of backup creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+       */
+      public int getMethodValue() {
+        return method_;
+      }
+      /**
+       * <pre>
+       * Method of backup creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+       */
+      public Builder setMethodValue(int value) {
+        method_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Method of backup creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod getMethod() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod result = yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod.valueOf(method_);
+        return result == null ? yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Method of backup creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+       */
+      public Builder setMethod(yandex.cloud.api.mdb.postgresql.v1.BackupOuterClass.Backup.BackupMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        method_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Method of backup creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.Backup.BackupMethod method = 8;</code>
+       */
+      public Builder clearMethod() {
+        
+        method_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1495,14 +2085,22 @@ public final class BackupOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/mdb/postgresql/v1/backup." +
       "proto\022\036yandex.cloud.mdb.postgresql.v1\032\037g" +
-      "oogle/protobuf/timestamp.proto\"\242\001\n\006Backu" +
+      "oogle/protobuf/timestamp.proto\"\337\003\n\006Backu" +
       "p\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncrea" +
       "ted_at\030\003 \001(\0132\032.google.protobuf.Timestamp" +
       "\022\031\n\021source_cluster_id\030\004 \001(\t\022.\n\nstarted_a" +
-      "t\030\005 \001(\0132\032.google.protobuf.TimestampBs\n\"y" +
-      "andex.cloud.api.mdb.postgresql.v1ZMgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/mdb/postgresql/v1;postgresqlb\006proto3"
+      "t\030\005 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004s" +
+      "ize\030\006 \001(\003\022G\n\004type\030\007 \001(\01629.yandex.cloud.m" +
+      "db.postgresql.v1.Backup.BackupCreationTy" +
+      "pe\022C\n\006method\030\010 \001(\01623.yandex.cloud.mdb.po" +
+      "stgresql.v1.Backup.BackupMethod\"H\n\014Backu" +
+      "pMethod\022\035\n\031BACKUP_METHOD_UNSPECIFIED\020\000\022\010" +
+      "\n\004BASE\020\001\022\017\n\013INCREMENTAL\020\002\"U\n\022BackupCreat" +
+      "ionType\022$\n BACKUP_CREATION_TYPE_UNSPECIF" +
+      "IED\020\000\022\r\n\tAUTOMATED\020\001\022\n\n\006MANUAL\020\002Bs\n\"yand" +
+      "ex.cloud.api.mdb.postgresql.v1ZMgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/mdb/postgresql/v1;postgresqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1522,7 +2120,7 @@ public final class BackupOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_Backup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_Backup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "Size", "Type", "Method", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

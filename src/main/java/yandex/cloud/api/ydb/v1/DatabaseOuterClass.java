@@ -5786,6 +5786,27 @@ public final class DatabaseOuterClass {
   public interface ServerlessDatabaseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.ServerlessDatabase)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Specify explicit limit of request units for database.
+     * Default value is 0.
+     * If zero, then request units are unlimited for this database and units are limited
+     * by cloud quota value.
+     * </pre>
+     *
+     * <code>int64 request_units_per_second_limit = 1;</code>
+     */
+    long getRequestUnitsPerSecondLimit();
+
+    /**
+     * <pre>
+     * Specify serverless database storage size limit. If zero, default value is applied.
+     * </pre>
+     *
+     * <code>int64 storage_size_limit = 2;</code>
+     */
+    long getStorageSizeLimit();
   }
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.ServerlessDatabase}
@@ -5800,6 +5821,8 @@ public final class DatabaseOuterClass {
       super(builder);
     }
     private ServerlessDatabase() {
+      requestUnitsPerSecondLimit_ = 0L;
+      storageSizeLimit_ = 0L;
     }
 
     @java.lang.Override
@@ -5815,6 +5838,7 @@ public final class DatabaseOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5825,6 +5849,16 @@ public final class DatabaseOuterClass {
             case 0:
               done = true;
               break;
+            case 8: {
+
+              requestUnitsPerSecondLimit_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              storageSizeLimit_ = input.readInt64();
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5857,6 +5891,35 @@ public final class DatabaseOuterClass {
               yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase.Builder.class);
     }
 
+    public static final int REQUEST_UNITS_PER_SECOND_LIMIT_FIELD_NUMBER = 1;
+    private long requestUnitsPerSecondLimit_;
+    /**
+     * <pre>
+     * Specify explicit limit of request units for database.
+     * Default value is 0.
+     * If zero, then request units are unlimited for this database and units are limited
+     * by cloud quota value.
+     * </pre>
+     *
+     * <code>int64 request_units_per_second_limit = 1;</code>
+     */
+    public long getRequestUnitsPerSecondLimit() {
+      return requestUnitsPerSecondLimit_;
+    }
+
+    public static final int STORAGE_SIZE_LIMIT_FIELD_NUMBER = 2;
+    private long storageSizeLimit_;
+    /**
+     * <pre>
+     * Specify serverless database storage size limit. If zero, default value is applied.
+     * </pre>
+     *
+     * <code>int64 storage_size_limit = 2;</code>
+     */
+    public long getStorageSizeLimit() {
+      return storageSizeLimit_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5871,6 +5934,12 @@ public final class DatabaseOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (requestUnitsPerSecondLimit_ != 0L) {
+        output.writeInt64(1, requestUnitsPerSecondLimit_);
+      }
+      if (storageSizeLimit_ != 0L) {
+        output.writeInt64(2, storageSizeLimit_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5880,6 +5949,14 @@ public final class DatabaseOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (requestUnitsPerSecondLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, requestUnitsPerSecondLimit_);
+      }
+      if (storageSizeLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, storageSizeLimit_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5896,6 +5973,10 @@ public final class DatabaseOuterClass {
       yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase other = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase) obj;
 
       boolean result = true;
+      result = result && (getRequestUnitsPerSecondLimit()
+          == other.getRequestUnitsPerSecondLimit());
+      result = result && (getStorageSizeLimit()
+          == other.getStorageSizeLimit());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5907,6 +5988,12 @@ public final class DatabaseOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUEST_UNITS_PER_SECOND_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRequestUnitsPerSecondLimit());
+      hash = (37 * hash) + STORAGE_SIZE_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStorageSizeLimit());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6040,6 +6127,10 @@ public final class DatabaseOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        requestUnitsPerSecondLimit_ = 0L;
+
+        storageSizeLimit_ = 0L;
+
         return this;
       }
 
@@ -6066,6 +6157,8 @@ public final class DatabaseOuterClass {
       @java.lang.Override
       public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase buildPartial() {
         yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase(this);
+        result.requestUnitsPerSecondLimit_ = requestUnitsPerSecondLimit_;
+        result.storageSizeLimit_ = storageSizeLimit_;
         onBuilt();
         return result;
       }
@@ -6114,6 +6207,12 @@ public final class DatabaseOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase other) {
         if (other == yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase.getDefaultInstance()) return this;
+        if (other.getRequestUnitsPerSecondLimit() != 0L) {
+          setRequestUnitsPerSecondLimit(other.getRequestUnitsPerSecondLimit());
+        }
+        if (other.getStorageSizeLimit() != 0L) {
+          setStorageSizeLimit(other.getStorageSizeLimit());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6140,6 +6239,91 @@ public final class DatabaseOuterClass {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private long requestUnitsPerSecondLimit_ ;
+      /**
+       * <pre>
+       * Specify explicit limit of request units for database.
+       * Default value is 0.
+       * If zero, then request units are unlimited for this database and units are limited
+       * by cloud quota value.
+       * </pre>
+       *
+       * <code>int64 request_units_per_second_limit = 1;</code>
+       */
+      public long getRequestUnitsPerSecondLimit() {
+        return requestUnitsPerSecondLimit_;
+      }
+      /**
+       * <pre>
+       * Specify explicit limit of request units for database.
+       * Default value is 0.
+       * If zero, then request units are unlimited for this database and units are limited
+       * by cloud quota value.
+       * </pre>
+       *
+       * <code>int64 request_units_per_second_limit = 1;</code>
+       */
+      public Builder setRequestUnitsPerSecondLimit(long value) {
+        
+        requestUnitsPerSecondLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify explicit limit of request units for database.
+       * Default value is 0.
+       * If zero, then request units are unlimited for this database and units are limited
+       * by cloud quota value.
+       * </pre>
+       *
+       * <code>int64 request_units_per_second_limit = 1;</code>
+       */
+      public Builder clearRequestUnitsPerSecondLimit() {
+        
+        requestUnitsPerSecondLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long storageSizeLimit_ ;
+      /**
+       * <pre>
+       * Specify serverless database storage size limit. If zero, default value is applied.
+       * </pre>
+       *
+       * <code>int64 storage_size_limit = 2;</code>
+       */
+      public long getStorageSizeLimit() {
+        return storageSizeLimit_;
+      }
+      /**
+       * <pre>
+       * Specify serverless database storage size limit. If zero, default value is applied.
+       * </pre>
+       *
+       * <code>int64 storage_size_limit = 2;</code>
+       */
+      public Builder setStorageSizeLimit(long value) {
+        
+        storageSizeLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify serverless database storage size limit. If zero, default value is applied.
+       * </pre>
+       *
+       * <code>int64 storage_size_limit = 2;</code>
+       */
+      public Builder clearStorageSizeLimit() {
+        
+        storageSizeLimit_ = 0L;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -8499,6 +8683,15 @@ public final class DatabaseOuterClass {
      */
     yandex.cloud.api.ydb.v1.DatabaseOuterClass.StorageOptionOrBuilder getStorageOptionsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * output only field: storage size limit of dedicated database.
+     * </pre>
+     *
+     * <code>int64 storage_size_limit = 2;</code>
+     */
+    long getStorageSizeLimit();
   }
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.StorageConfig}
@@ -8514,6 +8707,7 @@ public final class DatabaseOuterClass {
     }
     private StorageConfig() {
       storageOptions_ = java.util.Collections.emptyList();
+      storageSizeLimit_ = 0L;
     }
 
     @java.lang.Override
@@ -8547,6 +8741,11 @@ public final class DatabaseOuterClass {
               }
               storageOptions_.add(
                   input.readMessage(yandex.cloud.api.ydb.v1.DatabaseOuterClass.StorageOption.parser(), extensionRegistry));
+              break;
+            }
+            case 16: {
+
+              storageSizeLimit_ = input.readInt64();
               break;
             }
             default: {
@@ -8584,6 +8783,7 @@ public final class DatabaseOuterClass {
               yandex.cloud.api.ydb.v1.DatabaseOuterClass.StorageConfig.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.StorageConfig.Builder.class);
     }
 
+    private int bitField0_;
     public static final int STORAGE_OPTIONS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.StorageOption> storageOptions_;
     /**
@@ -8619,6 +8819,19 @@ public final class DatabaseOuterClass {
       return storageOptions_.get(index);
     }
 
+    public static final int STORAGE_SIZE_LIMIT_FIELD_NUMBER = 2;
+    private long storageSizeLimit_;
+    /**
+     * <pre>
+     * output only field: storage size limit of dedicated database.
+     * </pre>
+     *
+     * <code>int64 storage_size_limit = 2;</code>
+     */
+    public long getStorageSizeLimit() {
+      return storageSizeLimit_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8636,6 +8849,9 @@ public final class DatabaseOuterClass {
       for (int i = 0; i < storageOptions_.size(); i++) {
         output.writeMessage(1, storageOptions_.get(i));
       }
+      if (storageSizeLimit_ != 0L) {
+        output.writeInt64(2, storageSizeLimit_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8648,6 +8864,10 @@ public final class DatabaseOuterClass {
       for (int i = 0; i < storageOptions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, storageOptions_.get(i));
+      }
+      if (storageSizeLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, storageSizeLimit_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8667,6 +8887,8 @@ public final class DatabaseOuterClass {
       boolean result = true;
       result = result && getStorageOptionsList()
           .equals(other.getStorageOptionsList());
+      result = result && (getStorageSizeLimit()
+          == other.getStorageSizeLimit());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -8682,6 +8904,9 @@ public final class DatabaseOuterClass {
         hash = (37 * hash) + STORAGE_OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getStorageOptionsList().hashCode();
       }
+      hash = (37 * hash) + STORAGE_SIZE_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStorageSizeLimit());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8822,6 +9047,8 @@ public final class DatabaseOuterClass {
         } else {
           storageOptionsBuilder_.clear();
         }
+        storageSizeLimit_ = 0L;
+
         return this;
       }
 
@@ -8849,6 +9076,7 @@ public final class DatabaseOuterClass {
       public yandex.cloud.api.ydb.v1.DatabaseOuterClass.StorageConfig buildPartial() {
         yandex.cloud.api.ydb.v1.DatabaseOuterClass.StorageConfig result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.StorageConfig(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (storageOptionsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             storageOptions_ = java.util.Collections.unmodifiableList(storageOptions_);
@@ -8858,6 +9086,8 @@ public final class DatabaseOuterClass {
         } else {
           result.storageOptions_ = storageOptionsBuilder_.build();
         }
+        result.storageSizeLimit_ = storageSizeLimit_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -8931,6 +9161,9 @@ public final class DatabaseOuterClass {
               storageOptionsBuilder_.addAllMessages(other.storageOptions_);
             }
           }
+        }
+        if (other.getStorageSizeLimit() != 0L) {
+          setStorageSizeLimit(other.getStorageSizeLimit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9200,6 +9433,44 @@ public final class DatabaseOuterClass {
           storageOptions_ = null;
         }
         return storageOptionsBuilder_;
+      }
+
+      private long storageSizeLimit_ ;
+      /**
+       * <pre>
+       * output only field: storage size limit of dedicated database.
+       * </pre>
+       *
+       * <code>int64 storage_size_limit = 2;</code>
+       */
+      public long getStorageSizeLimit() {
+        return storageSizeLimit_;
+      }
+      /**
+       * <pre>
+       * output only field: storage size limit of dedicated database.
+       * </pre>
+       *
+       * <code>int64 storage_size_limit = 2;</code>
+       */
+      public Builder setStorageSizeLimit(long value) {
+        
+        storageSizeLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * output only field: storage size limit of dedicated database.
+       * </pre>
+       *
+       * <code>int64 storage_size_limit = 2;</code>
+       */
+      public Builder clearStorageSizeLimit() {
+        
+        storageSizeLimit_ = 0L;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9963,19 +10234,22 @@ public final class DatabaseOuterClass {
       "d.ydb.v1.StorageConfig\0226\n\014scale_policy\030\003" +
       " \001(\0132 .yandex.cloud.ydb.v1.ScalePolicy\022\022" +
       "\n\nnetwork_id\030\004 \001(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\031" +
-      "\n\021assign_public_ips\030\006 \001(\010\"\024\n\022ServerlessD" +
-      "atabase\"&\n\rZonalDatabase\022\025\n\007zone_id\030\001 \001(" +
-      "\tB\004\350\3071\001\"+\n\020RegionalDatabase\022\027\n\tregion_id" +
-      "\030\001 \001(\tB\004\350\3071\001\"\212\001\n\013ScalePolicy\022B\n\013fixed_sc" +
-      "ale\030\001 \001(\0132+.yandex.cloud.ydb.v1.ScalePol" +
-      "icy.FixedScaleH\000\032#\n\nFixedScale\022\025\n\004size\030\001" +
-      " \001(\003B\007\372\3071\003>=1B\022\n\nscale_type\022\004\300\3011\001\"U\n\rSto" +
-      "rageConfig\022D\n\017storage_options\030\001 \003(\0132\".ya" +
-      "ndex.cloud.ydb.v1.StorageOptionB\007\202\3101\003>=1" +
-      "\"=\n\rStorageOption\022\027\n\017storage_type_id\030\001 \001" +
-      "(\t\022\023\n\013group_count\030\002 \001(\003BV\n\027yandex.cloud." +
-      "api.ydb.v1Z;github.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/ydb/v1;ydbb\006proto3"
+      "\n\021assign_public_ips\030\006 \001(\010\"X\n\022ServerlessD" +
+      "atabase\022&\n\036request_units_per_second_limi" +
+      "t\030\001 \001(\003\022\032\n\022storage_size_limit\030\002 \001(\003\"&\n\rZ" +
+      "onalDatabase\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\"+\n\020R" +
+      "egionalDatabase\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001" +
+      "\"\212\001\n\013ScalePolicy\022B\n\013fixed_scale\030\001 \001(\0132+." +
+      "yandex.cloud.ydb.v1.ScalePolicy.FixedSca" +
+      "leH\000\032#\n\nFixedScale\022\025\n\004size\030\001 \001(\003B\007\372\3071\003>=" +
+      "1B\022\n\nscale_type\022\004\300\3011\001\"q\n\rStorageConfig\022D" +
+      "\n\017storage_options\030\001 \003(\0132\".yandex.cloud.y" +
+      "db.v1.StorageOptionB\007\202\3101\003>=1\022\032\n\022storage_" +
+      "size_limit\030\002 \001(\003\"=\n\rStorageOption\022\027\n\017sto" +
+      "rage_type_id\030\001 \001(\t\022\023\n\013group_count\030\002 \001(\003B" +
+      "V\n\027yandex.cloud.api.ydb.v1Z;github.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/ydb" +
+      "/v1;ydbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10015,7 +10289,7 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_ydb_v1_ServerlessDatabase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_ServerlessDatabase_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "RequestUnitsPerSecondLimit", "StorageSizeLimit", });
     internal_static_yandex_cloud_ydb_v1_ZonalDatabase_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_ydb_v1_ZonalDatabase_fieldAccessorTable = new
@@ -10045,7 +10319,7 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_ydb_v1_StorageConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_StorageConfig_descriptor,
-        new java.lang.String[] { "StorageOptions", });
+        new java.lang.String[] { "StorageOptions", "StorageSizeLimit", });
     internal_static_yandex_cloud_ydb_v1_StorageOption_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_ydb_v1_StorageOption_fieldAccessorTable = new

@@ -45,6 +45,19 @@ public final class BackupOuterClass {
     yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupScheduleOrBuilder getWeeklyBackupScheduleOrBuilder();
 
     /**
+     * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+     */
+    boolean hasRecurringBackupSchedule();
+    /**
+     * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+     */
+    yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule getRecurringBackupSchedule();
+    /**
+     * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+     */
+    yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupScheduleOrBuilder getRecurringBackupScheduleOrBuilder();
+
+    /**
      * <pre>
      * output only field: when next backup will be executed
      * using provided schedule.
@@ -154,6 +167,20 @@ public final class BackupOuterClass {
 
               break;
             }
+            case 34: {
+              yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.Builder subBuilder = null;
+              if (policyCase_ == 4) {
+                subBuilder = ((yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) policy_).toBuilder();
+              }
+              policy_ =
+                  input.readMessage(yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) policy_);
+                policy_ = subBuilder.buildPartial();
+              }
+              policyCase_ = 4;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -192,6 +219,7 @@ public final class BackupOuterClass {
         implements com.google.protobuf.Internal.EnumLite {
       DAILY_BACKUP_SCHEDULE(1),
       WEEKLY_BACKUP_SCHEDULE(2),
+      RECURRING_BACKUP_SCHEDULE(4),
       POLICY_NOT_SET(0);
       private final int value;
       private PolicyCase(int value) {
@@ -209,6 +237,7 @@ public final class BackupOuterClass {
         switch (value) {
           case 1: return DAILY_BACKUP_SCHEDULE;
           case 2: return WEEKLY_BACKUP_SCHEDULE;
+          case 4: return RECURRING_BACKUP_SCHEDULE;
           case 0: return POLICY_NOT_SET;
           default: return null;
         }
@@ -276,6 +305,32 @@ public final class BackupOuterClass {
       return yandex.cloud.api.ydb.v1.BackupOuterClass.WeeklyBackupSchedule.getDefaultInstance();
     }
 
+    public static final int RECURRING_BACKUP_SCHEDULE_FIELD_NUMBER = 4;
+    /**
+     * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+     */
+    public boolean hasRecurringBackupSchedule() {
+      return policyCase_ == 4;
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+     */
+    public yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule getRecurringBackupSchedule() {
+      if (policyCase_ == 4) {
+         return (yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) policy_;
+      }
+      return yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+     */
+    public yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupScheduleOrBuilder getRecurringBackupScheduleOrBuilder() {
+      if (policyCase_ == 4) {
+         return (yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) policy_;
+      }
+      return yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.getDefaultInstance();
+    }
+
     public static final int NEXT_EXECUTE_TIME_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp nextExecuteTime_;
     /**
@@ -335,6 +390,9 @@ public final class BackupOuterClass {
       if (nextExecuteTime_ != null) {
         output.writeMessage(3, getNextExecuteTime());
       }
+      if (policyCase_ == 4) {
+        output.writeMessage(4, (yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) policy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -355,6 +413,10 @@ public final class BackupOuterClass {
       if (nextExecuteTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getNextExecuteTime());
+      }
+      if (policyCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) policy_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -389,6 +451,10 @@ public final class BackupOuterClass {
           result = result && getWeeklyBackupSchedule()
               .equals(other.getWeeklyBackupSchedule());
           break;
+        case 4:
+          result = result && getRecurringBackupSchedule()
+              .equals(other.getRecurringBackupSchedule());
+          break;
         case 0:
         default:
       }
@@ -415,6 +481,10 @@ public final class BackupOuterClass {
         case 2:
           hash = (37 * hash) + WEEKLY_BACKUP_SCHEDULE_FIELD_NUMBER;
           hash = (53 * hash) + getWeeklyBackupSchedule().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + RECURRING_BACKUP_SCHEDULE_FIELD_NUMBER;
+          hash = (53 * hash) + getRecurringBackupSchedule().hashCode();
           break;
         case 0:
         default:
@@ -600,6 +670,13 @@ public final class BackupOuterClass {
             result.policy_ = weeklyBackupScheduleBuilder_.build();
           }
         }
+        if (policyCase_ == 4) {
+          if (recurringBackupScheduleBuilder_ == null) {
+            result.policy_ = policy_;
+          } else {
+            result.policy_ = recurringBackupScheduleBuilder_.build();
+          }
+        }
         if (nextExecuteTimeBuilder_ == null) {
           result.nextExecuteTime_ = nextExecuteTime_;
         } else {
@@ -664,6 +741,10 @@ public final class BackupOuterClass {
           }
           case WEEKLY_BACKUP_SCHEDULE: {
             mergeWeeklyBackupSchedule(other.getWeeklyBackupSchedule());
+            break;
+          }
+          case RECURRING_BACKUP_SCHEDULE: {
+            mergeRecurringBackupSchedule(other.getRecurringBackupSchedule());
             break;
           }
           case POLICY_NOT_SET: {
@@ -986,6 +1067,142 @@ public final class BackupOuterClass {
         return weeklyBackupScheduleBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule, yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.Builder, yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupScheduleOrBuilder> recurringBackupScheduleBuilder_;
+      /**
+       * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+       */
+      public boolean hasRecurringBackupSchedule() {
+        return policyCase_ == 4;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+       */
+      public yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule getRecurringBackupSchedule() {
+        if (recurringBackupScheduleBuilder_ == null) {
+          if (policyCase_ == 4) {
+            return (yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) policy_;
+          }
+          return yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.getDefaultInstance();
+        } else {
+          if (policyCase_ == 4) {
+            return recurringBackupScheduleBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+       */
+      public Builder setRecurringBackupSchedule(yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule value) {
+        if (recurringBackupScheduleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          policy_ = value;
+          onChanged();
+        } else {
+          recurringBackupScheduleBuilder_.setMessage(value);
+        }
+        policyCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+       */
+      public Builder setRecurringBackupSchedule(
+          yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.Builder builderForValue) {
+        if (recurringBackupScheduleBuilder_ == null) {
+          policy_ = builderForValue.build();
+          onChanged();
+        } else {
+          recurringBackupScheduleBuilder_.setMessage(builderForValue.build());
+        }
+        policyCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+       */
+      public Builder mergeRecurringBackupSchedule(yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule value) {
+        if (recurringBackupScheduleBuilder_ == null) {
+          if (policyCase_ == 4 &&
+              policy_ != yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.getDefaultInstance()) {
+            policy_ = yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.newBuilder((yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) policy_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            policy_ = value;
+          }
+          onChanged();
+        } else {
+          if (policyCase_ == 4) {
+            recurringBackupScheduleBuilder_.mergeFrom(value);
+          }
+          recurringBackupScheduleBuilder_.setMessage(value);
+        }
+        policyCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+       */
+      public Builder clearRecurringBackupSchedule() {
+        if (recurringBackupScheduleBuilder_ == null) {
+          if (policyCase_ == 4) {
+            policyCase_ = 0;
+            policy_ = null;
+            onChanged();
+          }
+        } else {
+          if (policyCase_ == 4) {
+            policyCase_ = 0;
+            policy_ = null;
+          }
+          recurringBackupScheduleBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+       */
+      public yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.Builder getRecurringBackupScheduleBuilder() {
+        return getRecurringBackupScheduleFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+       */
+      public yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupScheduleOrBuilder getRecurringBackupScheduleOrBuilder() {
+        if ((policyCase_ == 4) && (recurringBackupScheduleBuilder_ != null)) {
+          return recurringBackupScheduleBuilder_.getMessageOrBuilder();
+        } else {
+          if (policyCase_ == 4) {
+            return (yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) policy_;
+          }
+          return yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.RecurringBackupSchedule recurring_backup_schedule = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule, yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.Builder, yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupScheduleOrBuilder> 
+          getRecurringBackupScheduleFieldBuilder() {
+        if (recurringBackupScheduleBuilder_ == null) {
+          if (!(policyCase_ == 4)) {
+            policy_ = yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.getDefaultInstance();
+          }
+          recurringBackupScheduleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule, yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.Builder, yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupScheduleOrBuilder>(
+                  (yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) policy_,
+                  getParentForChildren(),
+                  isClean());
+          policy_ = null;
+        }
+        policyCase_ = 4;
+        onChanged();;
+        return recurringBackupScheduleBuilder_;
+      }
+
       private com.google.protobuf.Timestamp nextExecuteTime_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> nextExecuteTimeBuilder_;
@@ -1195,6 +1412,864 @@ public final class BackupOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSchedule getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecurringBackupScheduleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.RecurringBackupSchedule)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Timestamp of the first recurrence.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * Timestamp of the first recurrence.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <pre>
+     * Timestamp of the first recurrence.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how
+     * this backup reccurs.
+     * The FREQ values of MINUTELY, and SECONDLY are not supported.
+     * </pre>
+     *
+     * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    java.lang.String getRecurrence();
+    /**
+     * <pre>
+     * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how
+     * this backup reccurs.
+     * The FREQ values of MINUTELY, and SECONDLY are not supported.
+     * </pre>
+     *
+     * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    com.google.protobuf.ByteString
+        getRecurrenceBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ydb.v1.RecurringBackupSchedule}
+   */
+  public  static final class RecurringBackupSchedule extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.RecurringBackupSchedule)
+      RecurringBackupScheduleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecurringBackupSchedule.newBuilder() to construct.
+    private RecurringBackupSchedule(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecurringBackupSchedule() {
+      recurrence_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RecurringBackupSchedule(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (startTime_ != null) {
+                subBuilder = startTime_.toBuilder();
+              }
+              startTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(startTime_);
+                startTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              recurrence_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ydb.v1.BackupOuterClass.internal_static_yandex_cloud_ydb_v1_RecurringBackupSchedule_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ydb.v1.BackupOuterClass.internal_static_yandex_cloud_ydb_v1_RecurringBackupSchedule_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.class, yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.Builder.class);
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * Timestamp of the first recurrence.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp of the first recurrence.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * Timestamp of the first recurrence.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return getStartTime();
+    }
+
+    public static final int RECURRENCE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object recurrence_;
+    /**
+     * <pre>
+     * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how
+     * this backup reccurs.
+     * The FREQ values of MINUTELY, and SECONDLY are not supported.
+     * </pre>
+     *
+     * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public java.lang.String getRecurrence() {
+      java.lang.Object ref = recurrence_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recurrence_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how
+     * this backup reccurs.
+     * The FREQ values of MINUTELY, and SECONDLY are not supported.
+     * </pre>
+     *
+     * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public com.google.protobuf.ByteString
+        getRecurrenceBytes() {
+      java.lang.Object ref = recurrence_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recurrence_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (startTime_ != null) {
+        output.writeMessage(1, getStartTime());
+      }
+      if (!getRecurrenceBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, recurrence_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getStartTime());
+      }
+      if (!getRecurrenceBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, recurrence_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule other = (yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) obj;
+
+      boolean result = true;
+      result = result && (hasStartTime() == other.hasStartTime());
+      if (hasStartTime()) {
+        result = result && getStartTime()
+            .equals(other.getStartTime());
+      }
+      result = result && getRecurrence()
+          .equals(other.getRecurrence());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      hash = (37 * hash) + RECURRENCE_FIELD_NUMBER;
+      hash = (53 * hash) + getRecurrence().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ydb.v1.RecurringBackupSchedule}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.RecurringBackupSchedule)
+        yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupScheduleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.BackupOuterClass.internal_static_yandex_cloud_ydb_v1_RecurringBackupSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ydb.v1.BackupOuterClass.internal_static_yandex_cloud_ydb_v1_RecurringBackupSchedule_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.class, yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (startTimeBuilder_ == null) {
+          startTime_ = null;
+        } else {
+          startTime_ = null;
+          startTimeBuilder_ = null;
+        }
+        recurrence_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ydb.v1.BackupOuterClass.internal_static_yandex_cloud_ydb_v1_RecurringBackupSchedule_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule getDefaultInstanceForType() {
+        return yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule build() {
+        yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule buildPartial() {
+        yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule result = new yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule(this);
+        if (startTimeBuilder_ == null) {
+          result.startTime_ = startTime_;
+        } else {
+          result.startTime_ = startTimeBuilder_.build();
+        }
+        result.recurrence_ = recurrence_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) {
+          return mergeFrom((yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule other) {
+        if (other == yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule.getDefaultInstance()) return this;
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (!other.getRecurrence().isEmpty()) {
+          recurrence_ = other.recurrence_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <pre>
+       * Timestamp of the first recurrence.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public boolean hasStartTime() {
+        return startTimeBuilder_ != null || startTime_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp of the first recurrence.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp of the first recurrence.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+          onChanged();
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of the first recurrence.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of the first recurrence.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (startTime_ != null) {
+            startTime_ =
+              com.google.protobuf.Timestamp.newBuilder(startTime_).mergeFrom(value).buildPartial();
+          } else {
+            startTime_ = value;
+          }
+          onChanged();
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of the first recurrence.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearStartTime() {
+        if (startTimeBuilder_ == null) {
+          startTime_ = null;
+          onChanged();
+        } else {
+          startTime_ = null;
+          startTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp of the first recurrence.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp of the first recurrence.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp of the first recurrence.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private java.lang.Object recurrence_ = "";
+      /**
+       * <pre>
+       * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how
+       * this backup reccurs.
+       * The FREQ values of MINUTELY, and SECONDLY are not supported.
+       * </pre>
+       *
+       * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getRecurrence() {
+        java.lang.Object ref = recurrence_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recurrence_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how
+       * this backup reccurs.
+       * The FREQ values of MINUTELY, and SECONDLY are not supported.
+       * </pre>
+       *
+       * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getRecurrenceBytes() {
+        java.lang.Object ref = recurrence_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recurrence_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how
+       * this backup reccurs.
+       * The FREQ values of MINUTELY, and SECONDLY are not supported.
+       * </pre>
+       *
+       * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setRecurrence(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        recurrence_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how
+       * this backup reccurs.
+       * The FREQ values of MINUTELY, and SECONDLY are not supported.
+       * </pre>
+       *
+       * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearRecurrence() {
+        
+        recurrence_ = getDefaultInstance().getRecurrence();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An RRULE (https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how
+       * this backup reccurs.
+       * The FREQ values of MINUTELY, and SECONDLY are not supported.
+       * </pre>
+       *
+       * <code>string recurrence = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setRecurrenceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        recurrence_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.RecurringBackupSchedule)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.RecurringBackupSchedule)
+    private static final yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule();
+    }
+
+    public static yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecurringBackupSchedule>
+        PARSER = new com.google.protobuf.AbstractParser<RecurringBackupSchedule>() {
+      @java.lang.Override
+      public RecurringBackupSchedule parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RecurringBackupSchedule(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecurringBackupSchedule> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecurringBackupSchedule> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ydb.v1.BackupOuterClass.RecurringBackupSchedule getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3640,6 +4715,15 @@ public final class BackupOuterClass {
      * <code>.yandex.cloud.ydb.v1.BackupSettings.Type type = 7;</code>
      */
     yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Type getType();
+
+    /**
+     * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+     */
+    int getStorageClassValue();
+    /**
+     * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+     */
+    yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass getStorageClass();
   }
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.BackupSettings}
@@ -3659,6 +4743,7 @@ public final class BackupOuterClass {
       sourcePaths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       sourcePathsToExclude_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       type_ = 0;
+      storageClass_ = 0;
     }
 
     @java.lang.Override
@@ -3745,6 +4830,12 @@ public final class BackupOuterClass {
               int rawValue = input.readEnum();
 
               type_ = rawValue;
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              storageClass_ = rawValue;
               break;
             }
             default: {
@@ -3890,6 +4981,167 @@ public final class BackupOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.ydb.v1.BackupSettings.Type)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.ydb.v1.BackupSettings.StorageClass}
+     */
+    public enum StorageClass
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>STORAGE_CLASS_UNSPECIFIED = 0;</code>
+       */
+      STORAGE_CLASS_UNSPECIFIED(0),
+      /**
+       * <code>STANDARD = 1;</code>
+       */
+      STANDARD(1),
+      /**
+       * <code>REDUCED_REDUNDANCY = 2;</code>
+       */
+      REDUCED_REDUNDANCY(2),
+      /**
+       * <code>STANDARD_IA = 3;</code>
+       */
+      STANDARD_IA(3),
+      /**
+       * <code>ONEZONE_IA = 4;</code>
+       */
+      ONEZONE_IA(4),
+      /**
+       * <code>INTELLIGENT_TIERING = 5;</code>
+       */
+      INTELLIGENT_TIERING(5),
+      /**
+       * <code>GLACIER = 6;</code>
+       */
+      GLACIER(6),
+      /**
+       * <code>DEEP_ARCHIVE = 7;</code>
+       */
+      DEEP_ARCHIVE(7),
+      /**
+       * <code>OUTPOSTS = 8;</code>
+       */
+      OUTPOSTS(8),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>STORAGE_CLASS_UNSPECIFIED = 0;</code>
+       */
+      public static final int STORAGE_CLASS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>STANDARD = 1;</code>
+       */
+      public static final int STANDARD_VALUE = 1;
+      /**
+       * <code>REDUCED_REDUNDANCY = 2;</code>
+       */
+      public static final int REDUCED_REDUNDANCY_VALUE = 2;
+      /**
+       * <code>STANDARD_IA = 3;</code>
+       */
+      public static final int STANDARD_IA_VALUE = 3;
+      /**
+       * <code>ONEZONE_IA = 4;</code>
+       */
+      public static final int ONEZONE_IA_VALUE = 4;
+      /**
+       * <code>INTELLIGENT_TIERING = 5;</code>
+       */
+      public static final int INTELLIGENT_TIERING_VALUE = 5;
+      /**
+       * <code>GLACIER = 6;</code>
+       */
+      public static final int GLACIER_VALUE = 6;
+      /**
+       * <code>DEEP_ARCHIVE = 7;</code>
+       */
+      public static final int DEEP_ARCHIVE_VALUE = 7;
+      /**
+       * <code>OUTPOSTS = 8;</code>
+       */
+      public static final int OUTPOSTS_VALUE = 8;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static StorageClass valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static StorageClass forNumber(int value) {
+        switch (value) {
+          case 0: return STORAGE_CLASS_UNSPECIFIED;
+          case 1: return STANDARD;
+          case 2: return REDUCED_REDUNDANCY;
+          case 3: return STANDARD_IA;
+          case 4: return ONEZONE_IA;
+          case 5: return INTELLIGENT_TIERING;
+          case 6: return GLACIER;
+          case 7: return DEEP_ARCHIVE;
+          case 8: return OUTPOSTS;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<StorageClass>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          StorageClass> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<StorageClass>() {
+              public StorageClass findValueByNumber(int number) {
+                return StorageClass.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final StorageClass[] VALUES = values();
+
+      public static StorageClass valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private StorageClass(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.ydb.v1.BackupSettings.StorageClass)
     }
 
     private int bitField0_;
@@ -4166,6 +5418,23 @@ public final class BackupOuterClass {
       return result == null ? yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Type.UNRECOGNIZED : result;
     }
 
+    public static final int STORAGE_CLASS_FIELD_NUMBER = 8;
+    private int storageClass_;
+    /**
+     * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+     */
+    public int getStorageClassValue() {
+      return storageClass_;
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+     */
+    public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass getStorageClass() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass result = yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass.valueOf(storageClass_);
+      return result == null ? yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4200,6 +5469,9 @@ public final class BackupOuterClass {
       }
       if (type_ != yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.Type.TYPE_UNSPECIFIED.getNumber()) {
         output.writeEnum(7, type_);
+      }
+      if (storageClass_ != yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass.STORAGE_CLASS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, storageClass_);
       }
       unknownFields.writeTo(output);
     }
@@ -4244,6 +5516,10 @@ public final class BackupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(7, type_);
       }
+      if (storageClass_ != yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass.STORAGE_CLASS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, storageClass_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4279,6 +5555,7 @@ public final class BackupOuterClass {
       result = result && getSourcePathsToExcludeList()
           .equals(other.getSourcePathsToExcludeList());
       result = result && type_ == other.type_;
+      result = result && storageClass_ == other.storageClass_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -4312,6 +5589,8 @@ public final class BackupOuterClass {
       }
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + type_;
+      hash = (37 * hash) + STORAGE_CLASS_FIELD_NUMBER;
+      hash = (53 * hash) + storageClass_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4467,6 +5746,8 @@ public final class BackupOuterClass {
         bitField0_ = (bitField0_ & ~0x00000020);
         type_ = 0;
 
+        storageClass_ = 0;
+
         return this;
       }
 
@@ -4518,6 +5799,7 @@ public final class BackupOuterClass {
         }
         result.sourcePathsToExclude_ = sourcePathsToExclude_;
         result.type_ = type_;
+        result.storageClass_ = storageClass_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4603,6 +5885,9 @@ public final class BackupOuterClass {
         }
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
+        }
+        if (other.storageClass_ != 0) {
+          setStorageClassValue(other.getStorageClassValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5455,6 +6740,51 @@ public final class BackupOuterClass {
       public Builder clearType() {
         
         type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int storageClass_ = 0;
+      /**
+       * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+       */
+      public int getStorageClassValue() {
+        return storageClass_;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+       */
+      public Builder setStorageClassValue(int value) {
+        storageClass_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+       */
+      public yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass getStorageClass() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass result = yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass.valueOf(storageClass_);
+        return result == null ? yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+       */
+      public Builder setStorageClass(yandex.cloud.api.ydb.v1.BackupOuterClass.BackupSettings.StorageClass value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        storageClass_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.BackupSettings.StorageClass storage_class = 8;</code>
+       */
+      public Builder clearStorageClass() {
+        
+        storageClass_ = 0;
         onChanged();
         return this;
       }
@@ -8941,6 +10271,11 @@ public final class BackupOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ydb_v1_BackupSchedule_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_RecurringBackupSchedule_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_RecurringBackupSchedule_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ydb_v1_DaysOfWeekBackupSchedule_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8984,48 +10319,59 @@ public final class BackupOuterClass {
       "mp.proto\032\036google/protobuf/duration.proto" +
       "\032\033google/type/timeofday.proto\032\033google/ty" +
       "pe/dayofweek.proto\032\035yandex/cloud/validat" +
-      "ion.proto\"\357\001\n\016BackupSchedule\022I\n\025daily_ba" +
+      "ion.proto\"\302\002\n\016BackupSchedule\022I\n\025daily_ba" +
       "ckup_schedule\030\001 \001(\0132(.yandex.cloud.ydb.v" +
       "1.DailyBackupScheduleH\000\022K\n\026weekly_backup" +
       "_schedule\030\002 \001(\0132).yandex.cloud.ydb.v1.We" +
-      "eklyBackupScheduleH\000\0225\n\021next_execute_tim" +
-      "e\030\003 \001(\0132\032.google.protobuf.TimestampB\016\n\006p" +
-      "olicy\022\004\300\3011\001\"}\n\030DaysOfWeekBackupSchedule\022" +
-      "-\n\004days\030\001 \003(\0162\026.google.type.DayOfWeekB\007\202" +
-      "\3101\0031-7\0222\n\014execute_time\030\002 \001(\0132\026.google.ty" +
-      "pe.TimeOfDayB\004\350\3071\001\"d\n\024WeeklyBackupSchedu" +
-      "le\022L\n\014days_of_week\030\001 \003(\0132-.yandex.cloud." +
-      "ydb.v1.DaysOfWeekBackupScheduleB\007\202\3101\0031-7" +
-      "\"I\n\023DailyBackupSchedule\0222\n\014execute_time\030" +
-      "\001 \001(\0132\026.google.type.TimeOfDayB\004\350\3071\001\"\370\002\n\016" +
-      "BackupSettings\022\027\n\004name\030\001 \001(\tB\t\212\3101\005<=256\022" +
-      "\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022<\n\017backu" +
-      "p_schedule\030\003 \001(\0132#.yandex.cloud.ydb.v1.B" +
-      "ackupSchedule\0226\n\023backup_time_to_live\030\004 \001" +
-      "(\0132\031.google.protobuf.Duration\022\037\n\014source_" +
-      "paths\030\005 \003(\tB\t\202\3101\005<=256\022*\n\027source_paths_t" +
-      "o_exclude\030\006 \003(\tB\t\202\3101\005<=256\0226\n\004type\030\007 \001(\016" +
-      "2(.yandex.cloud.ydb.v1.BackupSettings.Ty" +
-      "pe\"2\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006SYST" +
-      "EM\020\001\022\010\n\004USER\020\002\"L\n\014BackupConfig\022<\n\017backup" +
-      "_settings\030\001 \003(\0132#.yandex.cloud.ydb.v1.Ba" +
-      "ckupSettings\"\252\004\n\006Backup\022\n\n\002id\030\001 \001(\t\022\014\n\004n" +
-      "ame\030\002 \001(\t\022\021\n\tfolder_id\030\003 \001(\t\022\023\n\013database" +
-      "_id\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022.\n\ncreate" +
-      "d_at\030\006 \001(\0132\032.google.protobuf.Timestamp\022." +
-      "\n\nstarted_at\030\007 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\0220\n\014completed_at\030\010 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\0222\n\006status\030\t \001(\0162\".yande" +
-      "x.cloud.ydb.v1.Backup.Status\022<\n\017backup_s" +
-      "ettings\030\n \001(\0132#.yandex.cloud.ydb.v1.Back" +
-      "upSettings\022.\n\004type\030\013 \001(\0162 .yandex.cloud." +
-      "ydb.v1.Backup.Type\022\014\n\004size\030\014 \001(\003\"S\n\006Stat" +
-      "us\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001" +
-      "\022\t\n\005READY\020\002\022\t\n\005ERROR\020\003\022\r\n\tCANCELLED\020\004\"2\n" +
-      "\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006SYSTEM\020\001\022" +
-      "\010\n\004USER\020\002BV\n\027yandex.cloud.api.ydb.v1Z;gi" +
-      "thub.com/yandex-cloud/go-genproto/yandex" +
-      "/cloud/ydb/v1;ydbb\006proto3"
+      "eklyBackupScheduleH\000\022Q\n\031recurring_backup" +
+      "_schedule\030\004 \001(\0132,.yandex.cloud.ydb.v1.Re" +
+      "curringBackupScheduleH\000\0225\n\021next_execute_" +
+      "time\030\003 \001(\0132\032.google.protobuf.TimestampB\016" +
+      "\n\006policy\022\004\300\3011\001\"i\n\027RecurringBackupSchedul" +
+      "e\0224\n\nstart_time\030\001 \001(\0132\032.google.protobuf." +
+      "TimestampB\004\350\3071\001\022\030\n\nrecurrence\030\002 \001(\tB\004\350\3071" +
+      "\001\"}\n\030DaysOfWeekBackupSchedule\022-\n\004days\030\001 " +
+      "\003(\0162\026.google.type.DayOfWeekB\007\202\3101\0031-7\0222\n\014" +
+      "execute_time\030\002 \001(\0132\026.google.type.TimeOfD" +
+      "ayB\004\350\3071\001\"d\n\024WeeklyBackupSchedule\022L\n\014days" +
+      "_of_week\030\001 \003(\0132-.yandex.cloud.ydb.v1.Day" +
+      "sOfWeekBackupScheduleB\007\202\3101\0031-7\"I\n\023DailyB" +
+      "ackupSchedule\0222\n\014execute_time\030\001 \001(\0132\026.go" +
+      "ogle.type.TimeOfDayB\004\350\3071\001\"\376\004\n\016BackupSett" +
+      "ings\022\027\n\004name\030\001 \001(\tB\t\212\3101\005<=256\022\036\n\013descrip" +
+      "tion\030\002 \001(\tB\t\212\3101\005<=256\022<\n\017backup_schedule" +
+      "\030\003 \001(\0132#.yandex.cloud.ydb.v1.BackupSched" +
+      "ule\0226\n\023backup_time_to_live\030\004 \001(\0132\031.googl" +
+      "e.protobuf.Duration\022\037\n\014source_paths\030\005 \003(" +
+      "\tB\t\202\3101\005<=256\022*\n\027source_paths_to_exclude\030" +
+      "\006 \003(\tB\t\202\3101\005<=256\0226\n\004type\030\007 \001(\0162(.yandex." +
+      "cloud.ydb.v1.BackupSettings.Type\022G\n\rstor" +
+      "age_class\030\010 \001(\01620.yandex.cloud.ydb.v1.Ba" +
+      "ckupSettings.StorageClass\"2\n\004Type\022\024\n\020TYP" +
+      "E_UNSPECIFIED\020\000\022\n\n\006SYSTEM\020\001\022\010\n\004USER\020\002\"\272\001" +
+      "\n\014StorageClass\022\035\n\031STORAGE_CLASS_UNSPECIF" +
+      "IED\020\000\022\014\n\010STANDARD\020\001\022\026\n\022REDUCED_REDUNDANC" +
+      "Y\020\002\022\017\n\013STANDARD_IA\020\003\022\016\n\nONEZONE_IA\020\004\022\027\n\023" +
+      "INTELLIGENT_TIERING\020\005\022\013\n\007GLACIER\020\006\022\020\n\014DE" +
+      "EP_ARCHIVE\020\007\022\014\n\010OUTPOSTS\020\010\"L\n\014BackupConf" +
+      "ig\022<\n\017backup_settings\030\001 \003(\0132#.yandex.clo" +
+      "ud.ydb.v1.BackupSettings\"\252\004\n\006Backup\022\n\n\002i" +
+      "d\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\tfolder_id\030\003 \001(\t" +
+      "\022\023\n\013database_id\030\004 \001(\t\022\023\n\013description\030\005 \001" +
+      "(\t\022.\n\ncreated_at\030\006 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022.\n\nstarted_at\030\007 \001(\0132\032.google." +
+      "protobuf.Timestamp\0220\n\014completed_at\030\010 \001(\013" +
+      "2\032.google.protobuf.Timestamp\0222\n\006status\030\t" +
+      " \001(\0162\".yandex.cloud.ydb.v1.Backup.Status" +
+      "\022<\n\017backup_settings\030\n \001(\0132#.yandex.cloud" +
+      ".ydb.v1.BackupSettings\022.\n\004type\030\013 \001(\0162 .y" +
+      "andex.cloud.ydb.v1.Backup.Type\022\014\n\004size\030\014" +
+      " \001(\003\"S\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014" +
+      "\n\010CREATING\020\001\022\t\n\005READY\020\002\022\t\n\005ERROR\020\003\022\r\n\tCA" +
+      "NCELLED\020\004\"2\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022" +
+      "\n\n\006SYSTEM\020\001\022\010\n\004USER\020\002BV\n\027yandex.cloud.ap" +
+      "i.ydb.v1Z;github.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/ydb/v1;ydbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9049,39 +10395,45 @@ public final class BackupOuterClass {
     internal_static_yandex_cloud_ydb_v1_BackupSchedule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_BackupSchedule_descriptor,
-        new java.lang.String[] { "DailyBackupSchedule", "WeeklyBackupSchedule", "NextExecuteTime", "Policy", });
-    internal_static_yandex_cloud_ydb_v1_DaysOfWeekBackupSchedule_descriptor =
+        new java.lang.String[] { "DailyBackupSchedule", "WeeklyBackupSchedule", "RecurringBackupSchedule", "NextExecuteTime", "Policy", });
+    internal_static_yandex_cloud_ydb_v1_RecurringBackupSchedule_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_ydb_v1_RecurringBackupSchedule_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_RecurringBackupSchedule_descriptor,
+        new java.lang.String[] { "StartTime", "Recurrence", });
+    internal_static_yandex_cloud_ydb_v1_DaysOfWeekBackupSchedule_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_ydb_v1_DaysOfWeekBackupSchedule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_DaysOfWeekBackupSchedule_descriptor,
         new java.lang.String[] { "Days", "ExecuteTime", });
     internal_static_yandex_cloud_ydb_v1_WeeklyBackupSchedule_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_ydb_v1_WeeklyBackupSchedule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_WeeklyBackupSchedule_descriptor,
         new java.lang.String[] { "DaysOfWeek", });
     internal_static_yandex_cloud_ydb_v1_DailyBackupSchedule_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_ydb_v1_DailyBackupSchedule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_DailyBackupSchedule_descriptor,
         new java.lang.String[] { "ExecuteTime", });
     internal_static_yandex_cloud_ydb_v1_BackupSettings_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_ydb_v1_BackupSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_BackupSettings_descriptor,
-        new java.lang.String[] { "Name", "Description", "BackupSchedule", "BackupTimeToLive", "SourcePaths", "SourcePathsToExclude", "Type", });
+        new java.lang.String[] { "Name", "Description", "BackupSchedule", "BackupTimeToLive", "SourcePaths", "SourcePathsToExclude", "Type", "StorageClass", });
     internal_static_yandex_cloud_ydb_v1_BackupConfig_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_ydb_v1_BackupConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_BackupConfig_descriptor,
         new java.lang.String[] { "BackupSettings", });
     internal_static_yandex_cloud_ydb_v1_Backup_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_ydb_v1_Backup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_Backup_descriptor,

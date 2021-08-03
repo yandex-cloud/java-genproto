@@ -28976,7 +28976,7 @@ public final class InstanceGroupServiceOuterClass {
       "nse\022E\n\013log_records\030\001 \003(\01320.yandex.cloud." +
       "compute.v1.instancegroup.LogRecord\022\027\n\017ne" +
       "xt_page_token\030\002 \001(\t*(\n\021InstanceGroupView" +
-      "\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\234\037\n\024InstanceGroupS" +
+      "\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\256 \n\024InstanceGroupS" +
       "ervice\022\263\001\n\003Get\022>.yandex.cloud.compute.v1" +
       ".instancegroup.GetInstanceGroupRequest\0324" +
       ".yandex.cloud.compute.v1.instancegroup.I" +
@@ -29067,20 +29067,23 @@ public final class InstanceGroupServiceOuterClass {
       "compute/v1/instanceGroups/{resource_id}:" +
       "updateAccessBindings:\001*\262\322*<\n#access.Upda" +
       "teAccessBindingsMetadata\022\025google.protobu" +
-      "f.Empty\022\271\001\n\017ResumeProcesses\022J.yandex.clo" +
+      "f.Empty\022\203\002\n\017ResumeProcesses\022J.yandex.clo" +
       "ud.compute.v1.instancegroup.ResumeInstan" +
       "ceGroupProcessesRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"7\262\322*3\n\"ResumeInstance" +
-      "GroupProcessMetadata\022\rInstanceGroup\022\266\001\n\016" +
-      "PauseProcesses\022I.yandex.cloud.compute.v1" +
-      ".instancegroup.PauseInstanceGroupProcess" +
-      "esRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"6\262\322*2\n!PauseInstanceGroupProcessMet" +
-      "adata\022\rInstanceGroupB\204\001\n)yandex.cloud.ap" +
-      "i.compute.v1.instancegroupZWgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/com" +
-      "pute/v1/instancegroup;instancegroupb\006pro" +
-      "to3"
+      "peration.Operation\"\200\001\202\323\344\223\002C\">/compute/v1" +
+      "/instanceGroups/{instance_group_id}:resu" +
+      "meProcesses:\001*\262\322*3\n\"ResumeInstanceGroupP" +
+      "rocessMetadata\022\rInstanceGroup\022\376\001\n\016PauseP" +
+      "rocesses\022I.yandex.cloud.compute.v1.insta" +
+      "ncegroup.PauseInstanceGroupProcessesRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"~" +
+      "\202\323\344\223\002B\"=/compute/v1/instanceGroups/{inst" +
+      "ance_group_id}:pauseProcesses:\001*\262\322*2\n!Pa" +
+      "useInstanceGroupProcessMetadata\022\rInstanc" +
+      "eGroupB\204\001\n)yandex.cloud.api.compute.v1.i" +
+      "nstancegroupZWgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/compute/v1/instan" +
+      "cegroup;instancegroupb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

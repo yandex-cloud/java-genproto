@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for writing to log groups.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -83,6 +86,9 @@ public final class LogIngestionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for writing to log groups.
+   * </pre>
    */
   public static abstract class LogIngestionServiceImplBase implements io.grpc.BindableService {
 
@@ -110,6 +116,9 @@ public final class LogIngestionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for writing to log groups.
+   * </pre>
    */
   public static final class LogIngestionServiceStub extends io.grpc.stub.AbstractStub<LogIngestionServiceStub> {
     private LogIngestionServiceStub(io.grpc.Channel channel) {
@@ -140,6 +149,9 @@ public final class LogIngestionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for writing to log groups.
+   * </pre>
    */
   public static final class LogIngestionServiceBlockingStub extends io.grpc.stub.AbstractStub<LogIngestionServiceBlockingStub> {
     private LogIngestionServiceBlockingStub(io.grpc.Channel channel) {
@@ -169,6 +181,9 @@ public final class LogIngestionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for writing to log groups.
+   * </pre>
    */
   public static final class LogIngestionServiceFutureStub extends io.grpc.stub.AbstractStub<LogIngestionServiceFutureStub> {
     private LogIngestionServiceFutureStub(io.grpc.Channel channel) {

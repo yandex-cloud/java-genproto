@@ -1860,8 +1860,7 @@ public final class LogGroupServiceOuterClass {
      * A filter expression that filters log groups listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
      * Example of a filter: `name=my-log-group`.
      * </pre>
@@ -1874,8 +1873,7 @@ public final class LogGroupServiceOuterClass {
      * A filter expression that filters log groups listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
      * Example of a filter: `name=my-log-group`.
      * </pre>
@@ -2094,8 +2092,7 @@ public final class LogGroupServiceOuterClass {
      * A filter expression that filters log groups listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
      * Example of a filter: `name=my-log-group`.
      * </pre>
@@ -2119,8 +2116,7 @@ public final class LogGroupServiceOuterClass {
      * A filter expression that filters log groups listed in the response.
      * The expression must specify:
      * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
      * Example of a filter: `name=my-log-group`.
      * </pre>
@@ -2737,8 +2733,7 @@ public final class LogGroupServiceOuterClass {
        * A filter expression that filters log groups listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
        * Example of a filter: `name=my-log-group`.
        * </pre>
@@ -2762,8 +2757,7 @@ public final class LogGroupServiceOuterClass {
        * A filter expression that filters log groups listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
        * Example of a filter: `name=my-log-group`.
        * </pre>
@@ -2788,8 +2782,7 @@ public final class LogGroupServiceOuterClass {
        * A filter expression that filters log groups listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
        * Example of a filter: `name=my-log-group`.
        * </pre>
@@ -2811,8 +2804,7 @@ public final class LogGroupServiceOuterClass {
        * A filter expression that filters log groups listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
        * Example of a filter: `name=my-log-group`.
        * </pre>
@@ -2830,8 +2822,7 @@ public final class LogGroupServiceOuterClass {
        * A filter expression that filters log groups listed in the response.
        * The expression must specify:
        * 1. The field name. Currently filtering can only be applied to the [LogGroup.name] field.
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
        * Example of a filter: `name=my-log-group`.
        * </pre>
@@ -4029,7 +4020,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     java.lang.String getName();
     /**
@@ -4038,7 +4029,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4329,7 +4320,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -4349,7 +4340,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -5059,7 +5050,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5079,7 +5070,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5100,7 +5091,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -5118,7 +5109,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder clearName() {
         
@@ -5132,7 +5123,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6250,7 +6241,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     java.lang.String getName();
     /**
@@ -6259,7 +6250,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -6596,7 +6587,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -6616,7 +6607,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -7509,7 +7500,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7529,7 +7520,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7550,7 +7541,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -7568,7 +7559,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder clearName() {
         
@@ -7582,7 +7573,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -11557,14 +11548,8 @@ public final class LogGroupServiceOuterClass {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently filtering can be applied to the following fields:
-     * * [operation.Operation.description]
-     * * [operation.Operation.created_at]
-     * * [operation.Operation.modified_at]
-     * * [operation.Operation.created_by]
-     * * [operation.Operation.done]
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
+     * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
      * Examples of a filter: `done=false`, `created_by='John.Doe'`.
      * </pre>
@@ -11576,14 +11561,8 @@ public final class LogGroupServiceOuterClass {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently filtering can be applied to the following fields:
-     * * [operation.Operation.description]
-     * * [operation.Operation.created_at]
-     * * [operation.Operation.modified_at]
-     * * [operation.Operation.created_by]
-     * * [operation.Operation.done]
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
+     * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
      * Examples of a filter: `done=false`, `created_by='John.Doe'`.
      * </pre>
@@ -11801,14 +11780,8 @@ public final class LogGroupServiceOuterClass {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently filtering can be applied to the following fields:
-     * * [operation.Operation.description]
-     * * [operation.Operation.created_at]
-     * * [operation.Operation.modified_at]
-     * * [operation.Operation.created_by]
-     * * [operation.Operation.done]
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
+     * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
      * Examples of a filter: `done=false`, `created_by='John.Doe'`.
      * </pre>
@@ -11831,14 +11804,8 @@ public final class LogGroupServiceOuterClass {
      * <pre>
      * A filter expression that filters resources listed in the response.
      * The expression must specify:
-     * 1. The field name. Currently filtering can be applied to the following fields:
-     * * [operation.Operation.description]
-     * * [operation.Operation.created_at]
-     * * [operation.Operation.modified_at]
-     * * [operation.Operation.created_by]
-     * * [operation.Operation.done]
-     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-     * for lists of values.
+     * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+     * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
      * Examples of a filter: `done=false`, `created_by='John.Doe'`.
      * </pre>
@@ -12454,14 +12421,8 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the following fields:
-       * * [operation.Operation.description]
-       * * [operation.Operation.created_at]
-       * * [operation.Operation.modified_at]
-       * * [operation.Operation.created_by]
-       * * [operation.Operation.done]
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
        * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
@@ -12484,14 +12445,8 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the following fields:
-       * * [operation.Operation.description]
-       * * [operation.Operation.created_at]
-       * * [operation.Operation.modified_at]
-       * * [operation.Operation.created_by]
-       * * [operation.Operation.done]
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
        * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
@@ -12515,14 +12470,8 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the following fields:
-       * * [operation.Operation.description]
-       * * [operation.Operation.created_at]
-       * * [operation.Operation.modified_at]
-       * * [operation.Operation.created_by]
-       * * [operation.Operation.done]
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
        * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
@@ -12543,14 +12492,8 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the following fields:
-       * * [operation.Operation.description]
-       * * [operation.Operation.created_at]
-       * * [operation.Operation.modified_at]
-       * * [operation.Operation.created_by]
-       * * [operation.Operation.done]
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
        * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
@@ -12567,14 +12510,8 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * A filter expression that filters resources listed in the response.
        * The expression must specify:
-       * 1. The field name. Currently filtering can be applied to the following fields:
-       * * [operation.Operation.description]
-       * * [operation.Operation.created_at]
-       * * [operation.Operation.modified_at]
-       * * [operation.Operation.created_by]
-       * * [operation.Operation.done]
-       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN`
-       * for lists of values.
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+       * 2. A conditional operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]$`.
        * Examples of a filter: `done=false`, `created_by='John.Doe'`.
        * </pre>
@@ -14615,102 +14552,102 @@ public final class LogGroupServiceOuterClass {
       "<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"c\n\025Lis" +
       "tLogGroupsResponse\0221\n\006groups\030\001 \003(\0132!.yan" +
       "dex.cloud.logging.v1.LogGroup\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"\210\003\n\025CreateLogGroupRequest" +
-      "\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022/\n\004nam" +
-      "e\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-" +
-      "9]\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\213\001\n\006l" +
-      "abels\030\004 \003(\0132:.yandex.cloud.logging.v1.Cr" +
-      "eateLogGroupRequest.LabelsEntryB?\202\3101\004<=6" +
-      "4\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020" +
-      "[a-z][-_0-9a-z]*\022@\n\020retention_period\030\005 \001" +
-      "(\0132\031.google.protobuf.DurationB\013\372\3071\0071h-16" +
-      "8h\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\".\n\026CreateLogGroupMetadata\022\024\n\014l" +
-      "og_group_id\030\001 \001(\t\"\274\003\n\025UpdateLogGroupRequ" +
-      "est\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022" +
-      "/\n\013update_mask\030\002 \001(\0132\032.google.protobuf.F" +
-      "ieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0" +
-      "-9]{1,61}[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t" +
-      "\212\3101\005<=256\022\213\001\n\006labels\030\005 \003(\0132:.yandex.clou" +
-      "d.logging.v1.UpdateLogGroupRequest.Label" +
-      "sEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262" +
-      "\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022@\n\020reten" +
-      "tion_period\030\006 \001(\0132\031.google.protobuf.Dura" +
-      "tionB\013\372\3071\0071h-168h\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\".\n\026UpdateLogGro" +
-      "upMetadata\022\024\n\014log_group_id\030\001 \001(\t\";\n\025Dele" +
-      "teLogGroupRequest\022\"\n\014log_group_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=64\".\n\026DeleteLogGroupMetadata\022" +
-      "\024\n\014log_group_id\030\001 \001(\t\"S\n\024ListResourcesRe" +
-      "quest\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=6" +
-      "4\022\027\n\004type\030\002 \001(\tB\t\212\3101\005<=256\"U\n\025ListResour" +
-      "cesResponse\022<\n\tresources\030\001 \003(\0132).yandex." +
-      "cloud.logging.v1.LogGroupResource\"\225\001\n\025Li" +
-      "stOperationsRequest\022\"\n\014log_group_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=64\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
-      "0-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n" +
-      "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"h\n\026ListOperati" +
-      "onsResponse\0225\n\noperations\030\001 \003(\0132!.yandex" +
-      ".cloud.operation.Operation\022\027\n\017next_page_" +
-      "token\030\002 \001(\t\"P\n\030GetLogGroupStatsResponse\022" +
-      "\024\n\014log_group_id\030\001 \001(\t\022\r\n\005bytes\030\002 \001(\003\022\017\n\007" +
-      "records\030\003 \001(\0032\325\020\n\017LogGroupService\022\203\001\n\003Ge" +
-      "t\022+.yandex.cloud.logging.v1.GetLogGroupR" +
-      "equest\032!.yandex.cloud.logging.v1.LogGrou" +
-      "p\",\202\323\344\223\002&\022$/logging/v1/logGroups/{log_gr" +
-      "oup_id}\022\212\001\n\nGetDefault\0222.yandex.cloud.lo" +
-      "gging.v1.GetDefaultLogGroupRequest\032!.yan" +
-      "dex.cloud.logging.v1.LogGroup\"%\202\323\344\223\002\037\022\035/" +
-      "logging/v1/logGroups/default\022\240\001\n\005Stats\0220" +
-      ".yandex.cloud.logging.v1.GetLogGroupStat" +
-      "sRequest\0321.yandex.cloud.logging.v1.GetLo" +
-      "gGroupStatsResponse\"2\202\323\344\223\002,\022*/logging/v1" +
-      "/logGroups/{log_group_id}/stats\022\204\001\n\004List" +
-      "\022-.yandex.cloud.logging.v1.ListLogGroups" +
-      "Request\032..yandex.cloud.logging.v1.ListLo" +
-      "gGroupsResponse\"\035\202\323\344\223\002\027\022\025/logging/v1/log" +
-      "Groups\022\243\001\n\006Create\022..yandex.cloud.logging" +
-      ".v1.CreateLogGroupRequest\032!.yandex.cloud" +
-      ".operation.Operation\"F\202\323\344\223\002\032\"\025/logging/v" +
-      "1/logGroups:\001*\262\322*\"\n\026CreateLogGroupMetada" +
-      "ta\022\010LogGroup\022\262\001\n\006Update\022..yandex.cloud.l" +
-      "ogging.v1.UpdateLogGroupRequest\032!.yandex" +
-      ".cloud.operation.Operation\"U\202\323\344\223\002)2$/log" +
-      "ging/v1/logGroups/{log_group_id}:\001*\262\322*\"\n" +
-      "\026UpdateLogGroupMetadata\022\010LogGroup\022\274\001\n\006De" +
-      "lete\022..yandex.cloud.logging.v1.DeleteLog" +
-      "GroupRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"_\202\323\344\223\002&*$/logging/v1/logGroups/{" +
-      "log_group_id}\262\322*/\n\026DeleteLogGroupMetadat" +
-      "a\022\025google.protobuf.Empty\022\252\001\n\rListResourc" +
-      "es\022-.yandex.cloud.logging.v1.ListResourc" +
-      "esRequest\032..yandex.cloud.logging.v1.List" +
-      "ResourcesResponse\":\202\323\344\223\0024\0222/logging/v1/l" +
-      "ogGroups/{log_group_id}:listResources\022\252\001" +
-      "\n\016ListOperations\022..yandex.cloud.logging." +
-      "v1.ListOperationsRequest\032/.yandex.cloud." +
-      "logging.v1.ListOperationsResponse\"7\202\323\344\223\002" +
-      "1\022//logging/v1/logGroups/{log_group_id}/" +
-      "operations\022\265\001\n\022ListAccessBindings\022..yand" +
-      "ex.cloud.access.ListAccessBindingsReques" +
-      "t\032/.yandex.cloud.access.ListAccessBindin" +
-      "gsResponse\">\202\323\344\223\0028\0226/logging/v1/logGroup" +
-      "s/{resource_id}:listAccessBindings\022\344\001\n\021S" +
-      "etAccessBindings\022-.yandex.cloud.access.S" +
-      "etAccessBindingsRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"}\202\323\344\223\002:\"5/logging/v1/" +
-      "logGroups/{resource_id}:setAccessBinding" +
-      "s:\001*\262\322*9\n access.SetAccessBindingsMetada" +
-      "ta\022\025google.protobuf.Empty\022\361\001\n\024UpdateAcce" +
-      "ssBindings\0220.yandex.cloud.access.UpdateA" +
-      "ccessBindingsRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"\203\001\202\323\344\223\002=28/logging/v1/lo" +
-      "gGroups/{resource_id}:updateAccessBindin" +
-      "gs:\001*\262\322*<\n#access.UpdateAccessBindingsMe" +
-      "tadata\022\025google.protobuf.EmptyBb\n\033yandex." +
-      "cloud.api.logging.v1ZCgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/logging/v" +
-      "1;loggingb\006proto3"
+      "ge_token\030\002 \001(\t\"\215\003\n\025CreateLogGroupRequest" +
+      "\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\0224\n\004nam" +
+      "e\030\002 \001(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0" +
+      "-9])?)?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022" +
+      "\213\001\n\006labels\030\004 \003(\0132:.yandex.cloud.logging." +
+      "v1.CreateLogGroupRequest.LabelsEntryB?\202\310" +
+      "1\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262" +
+      "\3101\022\022\020[a-z][-_0-9a-z]*\022@\n\020retention_perio" +
+      "d\030\005 \001(\0132\031.google.protobuf.DurationB\013\372\3071\007" +
+      "1h-168h\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\".\n\026CreateLogGroupMetadata" +
+      "\022\024\n\014log_group_id\030\001 \001(\t\"\301\003\n\025UpdateLogGrou" +
+      "pRequest\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=64\022/\n\013update_mask\030\002 \001(\0132\032.google.proto" +
+      "buf.FieldMask\0224\n\004name\030\003 \001(\tB&\362\3071\"([a-z](" +
+      "[-a-z0-9]{0,61}[a-z0-9])?)?\022\036\n\013descripti" +
+      "on\030\004 \001(\tB\t\212\3101\005<=256\022\213\001\n\006labels\030\005 \003(\0132:.y" +
+      "andex.cloud.logging.v1.UpdateLogGroupReq" +
+      "uest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-" +
+      "_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]" +
+      "*\022@\n\020retention_period\030\006 \001(\0132\031.google.pro" +
+      "tobuf.DurationB\013\372\3071\0071h-168h\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\".\n\026Up" +
+      "dateLogGroupMetadata\022\024\n\014log_group_id\030\001 \001" +
+      "(\t\";\n\025DeleteLogGroupRequest\022\"\n\014log_group" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\".\n\026DeleteLogGrou" +
+      "pMetadata\022\024\n\014log_group_id\030\001 \001(\t\"S\n\024ListR" +
+      "esourcesRequest\022\"\n\014log_group_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=64\022\027\n\004type\030\002 \001(\tB\t\212\3101\005<=256\"U\n\025" +
+      "ListResourcesResponse\022<\n\tresources\030\001 \003(\013" +
+      "2).yandex.cloud.logging.v1.LogGroupResou" +
+      "rce\"\225\001\n\025ListOperationsRequest\022\"\n\014log_gro" +
+      "up_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022\035\n\tpage_size\030\002" +
+      " \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\310" +
+      "1\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"h\n\026L" +
+      "istOperationsResponse\0225\n\noperations\030\001 \003(" +
+      "\0132!.yandex.cloud.operation.Operation\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"P\n\030GetLogGroupStat" +
+      "sResponse\022\024\n\014log_group_id\030\001 \001(\t\022\r\n\005bytes" +
+      "\030\002 \001(\003\022\017\n\007records\030\003 \001(\0032\325\020\n\017LogGroupServ" +
+      "ice\022\203\001\n\003Get\022+.yandex.cloud.logging.v1.Ge" +
+      "tLogGroupRequest\032!.yandex.cloud.logging." +
+      "v1.LogGroup\",\202\323\344\223\002&\022$/logging/v1/logGrou" +
+      "ps/{log_group_id}\022\212\001\n\nGetDefault\0222.yande" +
+      "x.cloud.logging.v1.GetDefaultLogGroupReq" +
+      "uest\032!.yandex.cloud.logging.v1.LogGroup\"" +
+      "%\202\323\344\223\002\037\022\035/logging/v1/logGroups/default\022\240" +
+      "\001\n\005Stats\0220.yandex.cloud.logging.v1.GetLo" +
+      "gGroupStatsRequest\0321.yandex.cloud.loggin" +
+      "g.v1.GetLogGroupStatsResponse\"2\202\323\344\223\002,\022*/" +
+      "logging/v1/logGroups/{log_group_id}/stat" +
+      "s\022\204\001\n\004List\022-.yandex.cloud.logging.v1.Lis" +
+      "tLogGroupsRequest\032..yandex.cloud.logging" +
+      ".v1.ListLogGroupsResponse\"\035\202\323\344\223\002\027\022\025/logg" +
+      "ing/v1/logGroups\022\243\001\n\006Create\022..yandex.clo" +
+      "ud.logging.v1.CreateLogGroupRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"F\202\323\344\223\002\032\"\025" +
+      "/logging/v1/logGroups:\001*\262\322*\"\n\026CreateLogG" +
+      "roupMetadata\022\010LogGroup\022\262\001\n\006Update\022..yand" +
+      "ex.cloud.logging.v1.UpdateLogGroupReques" +
+      "t\032!.yandex.cloud.operation.Operation\"U\202\323" +
+      "\344\223\002)2$/logging/v1/logGroups/{log_group_i" +
+      "d}:\001*\262\322*\"\n\026UpdateLogGroupMetadata\022\010LogGr" +
+      "oup\022\274\001\n\006Delete\022..yandex.cloud.logging.v1" +
+      ".DeleteLogGroupRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"_\202\323\344\223\002&*$/logging/v1/l" +
+      "ogGroups/{log_group_id}\262\322*/\n\026DeleteLogGr" +
+      "oupMetadata\022\025google.protobuf.Empty\022\252\001\n\rL" +
+      "istResources\022-.yandex.cloud.logging.v1.L" +
+      "istResourcesRequest\032..yandex.cloud.loggi" +
+      "ng.v1.ListResourcesResponse\":\202\323\344\223\0024\0222/lo" +
+      "gging/v1/logGroups/{log_group_id}:listRe" +
+      "sources\022\252\001\n\016ListOperations\022..yandex.clou" +
+      "d.logging.v1.ListOperationsRequest\032/.yan" +
+      "dex.cloud.logging.v1.ListOperationsRespo" +
+      "nse\"7\202\323\344\223\0021\022//logging/v1/logGroups/{log_" +
+      "group_id}/operations\022\265\001\n\022ListAccessBindi" +
+      "ngs\022..yandex.cloud.access.ListAccessBind" +
+      "ingsRequest\032/.yandex.cloud.access.ListAc" +
+      "cessBindingsResponse\">\202\323\344\223\0028\0226/logging/v" +
+      "1/logGroups/{resource_id}:listAccessBind" +
+      "ings\022\344\001\n\021SetAccessBindings\022-.yandex.clou" +
+      "d.access.SetAccessBindingsRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"}\202\323\344\223\002:\"5/l" +
+      "ogging/v1/logGroups/{resource_id}:setAcc" +
+      "essBindings:\001*\262\322*9\n access.SetAccessBind" +
+      "ingsMetadata\022\025google.protobuf.Empty\022\361\001\n\024" +
+      "UpdateAccessBindings\0220.yandex.cloud.acce" +
+      "ss.UpdateAccessBindingsRequest\032!.yandex." +
+      "cloud.operation.Operation\"\203\001\202\323\344\223\002=28/log" +
+      "ging/v1/logGroups/{resource_id}:updateAc" +
+      "cessBindings:\001*\262\322*<\n#access.UpdateAccess" +
+      "BindingsMetadata\022\025google.protobuf.EmptyB" +
+      "b\n\033yandex.cloud.api.logging.v1ZCgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/logging/v1;loggingb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

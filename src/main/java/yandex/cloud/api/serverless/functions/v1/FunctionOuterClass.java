@@ -8803,13 +8803,13 @@ public final class FunctionOuterClass {
 
     /**
      * <pre>
-     * Provisioned instances count in each zone.
+     * Minimum guaranteed provisioned instances count for all zones in total.
      * Billed separately.
      * </pre>
      *
-     * <code>int64 zone_provisioned_instances_count = 6;</code>
+     * <code>int64 provisioned_instances_count = 6;</code>
      */
-    long getZoneProvisionedInstancesCount();
+    long getProvisionedInstancesCount();
 
     /**
      * <pre>
@@ -8846,7 +8846,7 @@ public final class FunctionOuterClass {
     private ScalingPolicy() {
       functionId_ = "";
       tag_ = "";
-      zoneProvisionedInstancesCount_ = 0L;
+      provisionedInstancesCount_ = 0L;
       zoneInstancesLimit_ = 0L;
       zoneRequestsLimit_ = 0L;
     }
@@ -8915,7 +8915,7 @@ public final class FunctionOuterClass {
             }
             case 48: {
 
-              zoneProvisionedInstancesCount_ = input.readInt64();
+              provisionedInstancesCount_ = input.readInt64();
               break;
             }
             case 56: {
@@ -9110,18 +9110,18 @@ public final class FunctionOuterClass {
       return getModifiedAt();
     }
 
-    public static final int ZONE_PROVISIONED_INSTANCES_COUNT_FIELD_NUMBER = 6;
-    private long zoneProvisionedInstancesCount_;
+    public static final int PROVISIONED_INSTANCES_COUNT_FIELD_NUMBER = 6;
+    private long provisionedInstancesCount_;
     /**
      * <pre>
-     * Provisioned instances count in each zone.
+     * Minimum guaranteed provisioned instances count for all zones in total.
      * Billed separately.
      * </pre>
      *
-     * <code>int64 zone_provisioned_instances_count = 6;</code>
+     * <code>int64 provisioned_instances_count = 6;</code>
      */
-    public long getZoneProvisionedInstancesCount() {
-      return zoneProvisionedInstancesCount_;
+    public long getProvisionedInstancesCount() {
+      return provisionedInstancesCount_;
     }
 
     public static final int ZONE_INSTANCES_LIMIT_FIELD_NUMBER = 7;
@@ -9178,8 +9178,8 @@ public final class FunctionOuterClass {
       if (modifiedAt_ != null) {
         output.writeMessage(4, getModifiedAt());
       }
-      if (zoneProvisionedInstancesCount_ != 0L) {
-        output.writeInt64(6, zoneProvisionedInstancesCount_);
+      if (provisionedInstancesCount_ != 0L) {
+        output.writeInt64(6, provisionedInstancesCount_);
       }
       if (zoneInstancesLimit_ != 0L) {
         output.writeInt64(7, zoneInstancesLimit_);
@@ -9210,9 +9210,9 @@ public final class FunctionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getModifiedAt());
       }
-      if (zoneProvisionedInstancesCount_ != 0L) {
+      if (provisionedInstancesCount_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(6, zoneProvisionedInstancesCount_);
+          .computeInt64Size(6, provisionedInstancesCount_);
       }
       if (zoneInstancesLimit_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -9252,8 +9252,8 @@ public final class FunctionOuterClass {
         result = result && getModifiedAt()
             .equals(other.getModifiedAt());
       }
-      result = result && (getZoneProvisionedInstancesCount()
-          == other.getZoneProvisionedInstancesCount());
+      result = result && (getProvisionedInstancesCount()
+          == other.getProvisionedInstancesCount());
       result = result && (getZoneInstancesLimit()
           == other.getZoneInstancesLimit());
       result = result && (getZoneRequestsLimit()
@@ -9281,9 +9281,9 @@ public final class FunctionOuterClass {
         hash = (37 * hash) + MODIFIED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getModifiedAt().hashCode();
       }
-      hash = (37 * hash) + ZONE_PROVISIONED_INSTANCES_COUNT_FIELD_NUMBER;
+      hash = (37 * hash) + PROVISIONED_INSTANCES_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getZoneProvisionedInstancesCount());
+          getProvisionedInstancesCount());
       hash = (37 * hash) + ZONE_INSTANCES_LIMIT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getZoneInstancesLimit());
@@ -9439,7 +9439,7 @@ public final class FunctionOuterClass {
           modifiedAt_ = null;
           modifiedAtBuilder_ = null;
         }
-        zoneProvisionedInstancesCount_ = 0L;
+        provisionedInstancesCount_ = 0L;
 
         zoneInstancesLimit_ = 0L;
 
@@ -9483,7 +9483,7 @@ public final class FunctionOuterClass {
         } else {
           result.modifiedAt_ = modifiedAtBuilder_.build();
         }
-        result.zoneProvisionedInstancesCount_ = zoneProvisionedInstancesCount_;
+        result.provisionedInstancesCount_ = provisionedInstancesCount_;
         result.zoneInstancesLimit_ = zoneInstancesLimit_;
         result.zoneRequestsLimit_ = zoneRequestsLimit_;
         onBuilt();
@@ -9548,8 +9548,8 @@ public final class FunctionOuterClass {
         if (other.hasModifiedAt()) {
           mergeModifiedAt(other.getModifiedAt());
         }
-        if (other.getZoneProvisionedInstancesCount() != 0L) {
-          setZoneProvisionedInstancesCount(other.getZoneProvisionedInstancesCount());
+        if (other.getProvisionedInstancesCount() != 0L) {
+          setProvisionedInstancesCount(other.getProvisionedInstancesCount());
         }
         if (other.getZoneInstancesLimit() != 0L) {
           setZoneInstancesLimit(other.getZoneInstancesLimit());
@@ -10070,43 +10070,43 @@ public final class FunctionOuterClass {
         return modifiedAtBuilder_;
       }
 
-      private long zoneProvisionedInstancesCount_ ;
+      private long provisionedInstancesCount_ ;
       /**
        * <pre>
-       * Provisioned instances count in each zone.
+       * Minimum guaranteed provisioned instances count for all zones in total.
        * Billed separately.
        * </pre>
        *
-       * <code>int64 zone_provisioned_instances_count = 6;</code>
+       * <code>int64 provisioned_instances_count = 6;</code>
        */
-      public long getZoneProvisionedInstancesCount() {
-        return zoneProvisionedInstancesCount_;
+      public long getProvisionedInstancesCount() {
+        return provisionedInstancesCount_;
       }
       /**
        * <pre>
-       * Provisioned instances count in each zone.
+       * Minimum guaranteed provisioned instances count for all zones in total.
        * Billed separately.
        * </pre>
        *
-       * <code>int64 zone_provisioned_instances_count = 6;</code>
+       * <code>int64 provisioned_instances_count = 6;</code>
        */
-      public Builder setZoneProvisionedInstancesCount(long value) {
+      public Builder setProvisionedInstancesCount(long value) {
         
-        zoneProvisionedInstancesCount_ = value;
+        provisionedInstancesCount_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Provisioned instances count in each zone.
+       * Minimum guaranteed provisioned instances count for all zones in total.
        * Billed separately.
        * </pre>
        *
-       * <code>int64 zone_provisioned_instances_count = 6;</code>
+       * <code>int64 provisioned_instances_count = 6;</code>
        */
-      public Builder clearZoneProvisionedInstancesCount() {
+      public Builder clearProvisionedInstancesCount() {
         
-        zoneProvisionedInstancesCount_ = 0L;
+        provisionedInstancesCount_ = 0L;
         onChanged();
         return this;
       }
@@ -10342,17 +10342,16 @@ public final class FunctionOuterClass {
       "8\"O\n\007Package\022\031\n\013bucket_name\030\001 \001(\tB\004\350\3071\001\022" +
       "\031\n\013object_name\030\002 \001(\tB\004\350\3071\001\022\016\n\006sha256\030\003 \001" +
       "(\t\"5\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\021" +
-      "\n\tsubnet_id\030\002 \003(\t\"\367\001\n\rScalingPolicy\022\023\n\013f" +
+      "\n\tsubnet_id\030\002 \003(\t\"\362\001\n\rScalingPolicy\022\023\n\013f" +
       "unction_id\030\001 \001(\t\022\013\n\003tag\030\002 \001(\t\022.\n\ncreated" +
       "_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022/\n" +
       "\013modified_at\030\004 \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022(\n zone_provisioned_instances_cou" +
-      "nt\030\006 \001(\003\022\034\n\024zone_instances_limit\030\007 \001(\003\022\033" +
-      "\n\023zone_requests_limit\030\010 \001(\003B~\n(yandex.cl" +
-      "oud.api.serverless.functions.v1ZRgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/serverless/functions/v1;functionsb\006pro" +
-      "to3"
+      "estamp\022#\n\033provisioned_instances_count\030\006 " +
+      "\001(\003\022\034\n\024zone_instances_limit\030\007 \001(\003\022\033\n\023zon" +
+      "e_requests_limit\030\010 \001(\003B~\n(yandex.cloud.a" +
+      "pi.serverless.functions.v1ZRgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/ser" +
+      "verless/functions/v1;functionsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10422,7 +10421,7 @@ public final class FunctionOuterClass {
     internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_ScalingPolicy_descriptor,
-        new java.lang.String[] { "FunctionId", "Tag", "CreatedAt", "ModifiedAt", "ZoneProvisionedInstancesCount", "ZoneInstancesLimit", "ZoneRequestsLimit", });
+        new java.lang.String[] { "FunctionId", "Tag", "CreatedAt", "ModifiedAt", "ProvisionedInstancesCount", "ZoneInstancesLimit", "ZoneRequestsLimit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
