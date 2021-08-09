@@ -5693,6 +5693,31 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    boolean hasBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    com.google.protobuf.Int64Value getBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder();
+
+    /**
+     * <pre>
      * Access policy to DB
      * </pre>
      *
@@ -5977,6 +6002,19 @@ public final class ClusterOuterClass {
                 postgresqlConfig_ = subBuilder.buildPartial();
               }
               postgresqlConfigCase_ = 15;
+              break;
+            }
+            case 138: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (backupRetainPeriodDays_ != null) {
+                subBuilder = backupRetainPeriodDays_.toBuilder();
+              }
+              backupRetainPeriodDays_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backupRetainPeriodDays_);
+                backupRetainPeriodDays_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -6539,6 +6577,39 @@ public final class ClusterOuterClass {
       return getBackupWindowStart();
     }
 
+    public static final int BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER = 17;
+    private com.google.protobuf.Int64Value backupRetainPeriodDays_;
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    public boolean hasBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ != null;
+    }
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+    }
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+      return getBackupRetainPeriodDays();
+    }
+
     public static final int ACCESS_FIELD_NUMBER = 9;
     private yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.Access access_;
     /**
@@ -6664,6 +6735,9 @@ public final class ClusterOuterClass {
       if (postgresqlConfigCase_ == 15) {
         output.writeMessage(15, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13) postgresqlConfig_);
       }
+      if (backupRetainPeriodDays_ != null) {
+        output.writeMessage(17, getBackupRetainPeriodDays());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6732,6 +6806,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfigSet13) postgresqlConfig_);
       }
+      if (backupRetainPeriodDays_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getBackupRetainPeriodDays());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6769,6 +6847,11 @@ public final class ClusterOuterClass {
       if (hasBackupWindowStart()) {
         result = result && getBackupWindowStart()
             .equals(other.getBackupWindowStart());
+      }
+      result = result && (hasBackupRetainPeriodDays() == other.hasBackupRetainPeriodDays());
+      if (hasBackupRetainPeriodDays()) {
+        result = result && getBackupRetainPeriodDays()
+            .equals(other.getBackupRetainPeriodDays());
       }
       result = result && (hasAccess() == other.hasAccess());
       if (hasAccess()) {
@@ -6847,6 +6930,10 @@ public final class ClusterOuterClass {
       if (hasBackupWindowStart()) {
         hash = (37 * hash) + BACKUP_WINDOW_START_FIELD_NUMBER;
         hash = (53 * hash) + getBackupWindowStart().hashCode();
+      }
+      if (hasBackupRetainPeriodDays()) {
+        hash = (37 * hash) + BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER;
+        hash = (53 * hash) + getBackupRetainPeriodDays().hashCode();
       }
       if (hasAccess()) {
         hash = (37 * hash) + ACCESS_FIELD_NUMBER;
@@ -7051,6 +7138,12 @@ public final class ClusterOuterClass {
           backupWindowStart_ = null;
           backupWindowStartBuilder_ = null;
         }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
         if (accessBuilder_ == null) {
           access_ = null;
         } else {
@@ -7168,6 +7261,11 @@ public final class ClusterOuterClass {
         } else {
           result.backupWindowStart_ = backupWindowStartBuilder_.build();
         }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDays_;
+        } else {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDaysBuilder_.build();
+        }
         if (accessBuilder_ == null) {
           result.access_ = access_;
         } else {
@@ -7242,6 +7340,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasBackupWindowStart()) {
           mergeBackupWindowStart(other.getBackupWindowStart());
+        }
+        if (other.hasBackupRetainPeriodDays()) {
+          mergeBackupRetainPeriodDays(other.getBackupRetainPeriodDays());
         }
         if (other.hasAccess()) {
           mergeAccess(other.getAccess());
@@ -9405,6 +9506,159 @@ public final class ClusterOuterClass {
           backupWindowStart_ = null;
         }
         return backupWindowStartBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value backupRetainPeriodDays_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backupRetainPeriodDaysBuilder_;
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public boolean hasBackupRetainPeriodDays() {
+        return backupRetainPeriodDaysBuilder_ != null || backupRetainPeriodDays_ != null;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        } else {
+          return backupRetainPeriodDaysBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public Builder setBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backupRetainPeriodDays_ = value;
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public Builder setBackupRetainPeriodDays(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = builderForValue.build();
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public Builder mergeBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (backupRetainPeriodDays_ != null) {
+            backupRetainPeriodDays_ =
+              com.google.protobuf.Int64Value.newBuilder(backupRetainPeriodDays_).mergeFrom(value).buildPartial();
+          } else {
+            backupRetainPeriodDays_ = value;
+          }
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public Builder clearBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+          onChanged();
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackupRetainPeriodDaysBuilder() {
+        
+        onChanged();
+        return getBackupRetainPeriodDaysFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+        if (backupRetainPeriodDaysBuilder_ != null) {
+          return backupRetainPeriodDaysBuilder_.getMessageOrBuilder();
+        } else {
+          return backupRetainPeriodDays_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        }
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackupRetainPeriodDaysFieldBuilder() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDaysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackupRetainPeriodDays(),
+                  getParentForChildren(),
+                  isClean());
+          backupRetainPeriodDays_ = null;
+        }
+        return backupRetainPeriodDaysBuilder_;
       }
 
       private yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.Access access_ = null;
@@ -20109,7 +20363,7 @@ public final class ClusterOuterClass {
       "\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n" +
       "\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014" +
       "\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004lin" +
-      "k\030\003 \001(\t\"\360\n\n\rClusterConfig\022\017\n\007version\030\001 \001" +
+      "k\030\003 \001(\t\"\272\013\n\rClusterConfig\022\017\n\007version\030\001 \001" +
       "(\t\022t\n\025postgresql_config_9_6\030\002 \001(\0132=.yand" +
       "ex.cloud.mdb.postgresql.v1.config.Postgr" +
       "esqlConfigSet9_6H\000R\024postgresqlConfig_9_6" +
@@ -20139,79 +20393,81 @@ public final class ClusterOuterClass {
       "rces\030\005 \001(\0132).yandex.cloud.mdb.postgresql" +
       ".v1.Resources\0220\n\014autofailover\030\006 \001(\0132\032.go" +
       "ogle.protobuf.BoolValue\0223\n\023backup_window" +
-      "_start\030\007 \001(\0132\026.google.type.TimeOfDay\0226\n\006" +
-      "access\030\t \001(\0132&.yandex.cloud.mdb.postgres" +
-      "ql.v1.Access\022W\n\027performance_diagnostics\030" +
-      "\014 \001(\01326.yandex.cloud.mdb.postgresql.v1.P" +
-      "erformanceDiagnosticsB\023\n\021postgresql_conf" +
-      "ig\"\376\001\n\026ConnectionPoolerConfig\022X\n\014pooling" +
-      "_mode\030\001 \001(\0162B.yandex.cloud.mdb.postgresq" +
-      "l.v1.ConnectionPoolerConfig.PoolingMode\022" +
-      "0\n\014pool_discard\030\002 \001(\0132\032.google.protobuf." +
-      "BoolValue\"X\n\013PoolingMode\022\034\n\030POOLING_MODE" +
-      "_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRANSACTI" +
-      "ON\020\002\022\r\n\tSTATEMENT\020\003\"\342\005\n\004Host\022\014\n\004name\030\001 \001" +
-      "(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022" +
-      "<\n\tresources\030\004 \001(\0132).yandex.cloud.mdb.po" +
-      "stgresql.v1.Resources\0227\n\004role\030\005 \001(\0162).ya" +
-      "ndex.cloud.mdb.postgresql.v1.Host.Role\022;" +
-      "\n\006health\030\006 \001(\0162+.yandex.cloud.mdb.postgr" +
-      "esql.v1.Host.Health\0229\n\010services\030\007 \003(\0132\'." +
-      "yandex.cloud.mdb.postgresql.v1.Service\022\021" +
-      "\n\tsubnet_id\030\010 \001(\t\022\032\n\022replication_source\030" +
-      "\t \001(\t\022-\n\010priority\030\n \001(\0132\033.google.protobu" +
-      "f.Int64Value\022:\n\006config\030\013 \001(\0132*.yandex.cl" +
-      "oud.mdb.postgresql.v1.HostConfig\022\030\n\020assi" +
-      "gn_public_ip\030\014 \001(\010\022F\n\014replica_type\030\r \001(\016" +
-      "20.yandex.cloud.mdb.postgresql.v1.Host.R" +
-      "eplicaType\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006" +
-      "MASTER\020\001\022\013\n\007REPLICA\020\002\"H\n\013ReplicaType\022\030\n\024" +
-      "REPLICA_TYPE_UNKNOWN\020\000\022\t\n\005ASYNC\020\001\022\010\n\004SYN" +
-      "C\020\002\022\n\n\006QUORUM\020\003\"?\n\006Health\022\022\n\016HEALTH_UNKN" +
-      "OWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003" +
-      "\"\377\007\n\nHostConfig\022y\n\025postgresql_config_9_6" +
-      "\030\001 \001(\0132>.yandex.cloud.mdb.postgresql.v1." +
-      "config.PostgresqlHostConfig9_6H\000R\030postgr" +
-      "esqlHostConfig_9_6\022\177\n\027postgresql_config_" +
-      "10_1c\030\004 \001(\0132@.yandex.cloud.mdb.postgresq" +
-      "l.v1.config.PostgresqlHostConfig10_1CH\000R" +
-      "\032postgresqlHostConfig_10_1c\022v\n\024postgresq" +
-      "l_config_10\030\002 \001(\0132=.yandex.cloud.mdb.pos" +
-      "tgresql.v1.config.PostgresqlHostConfig10" +
-      "H\000R\027postgresqlHostConfig_10\022v\n\024postgresq" +
-      "l_config_11\030\003 \001(\0132=.yandex.cloud.mdb.pos" +
-      "tgresql.v1.config.PostgresqlHostConfig11" +
-      "H\000R\027postgresqlHostConfig_11\022\177\n\027postgresq" +
-      "l_config_11_1c\030\006 \001(\0132@.yandex.cloud.mdb." +
+      "_start\030\007 \001(\0132\026.google.type.TimeOfDay\022H\n\031" +
+      "backup_retain_period_days\030\021 \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\010\372\3071\0047-60\0226\n\006access" +
+      "\030\t \001(\0132&.yandex.cloud.mdb.postgresql.v1." +
+      "Access\022W\n\027performance_diagnostics\030\014 \001(\0132" +
+      "6.yandex.cloud.mdb.postgresql.v1.Perform" +
+      "anceDiagnosticsB\023\n\021postgresql_config\"\376\001\n" +
+      "\026ConnectionPoolerConfig\022X\n\014pooling_mode\030" +
+      "\001 \001(\0162B.yandex.cloud.mdb.postgresql.v1.C" +
+      "onnectionPoolerConfig.PoolingMode\0220\n\014poo" +
+      "l_discard\030\002 \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\"X\n\013PoolingMode\022\034\n\030POOLING_MODE_UNSPE" +
+      "CIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRANSACTION\020\002\022\r" +
+      "\n\tSTATEMENT\020\003\"\342\005\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\n" +
+      "cluster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022<\n\tres" +
+      "ources\030\004 \001(\0132).yandex.cloud.mdb.postgres" +
+      "ql.v1.Resources\0227\n\004role\030\005 \001(\0162).yandex.c" +
+      "loud.mdb.postgresql.v1.Host.Role\022;\n\006heal" +
+      "th\030\006 \001(\0162+.yandex.cloud.mdb.postgresql.v" +
+      "1.Host.Health\0229\n\010services\030\007 \003(\0132\'.yandex" +
+      ".cloud.mdb.postgresql.v1.Service\022\021\n\tsubn" +
+      "et_id\030\010 \001(\t\022\032\n\022replication_source\030\t \001(\t\022" +
+      "-\n\010priority\030\n \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022:\n\006config\030\013 \001(\0132*.yandex.cloud.md" +
+      "b.postgresql.v1.HostConfig\022\030\n\020assign_pub" +
+      "lic_ip\030\014 \001(\010\022F\n\014replica_type\030\r \001(\01620.yan" +
+      "dex.cloud.mdb.postgresql.v1.Host.Replica" +
+      "Type\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER" +
+      "\020\001\022\013\n\007REPLICA\020\002\"H\n\013ReplicaType\022\030\n\024REPLIC" +
+      "A_TYPE_UNKNOWN\020\000\022\t\n\005ASYNC\020\001\022\010\n\004SYNC\020\002\022\n\n" +
+      "\006QUORUM\020\003\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022" +
+      "\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\377\007\n\nH" +
+      "ostConfig\022y\n\025postgresql_config_9_6\030\001 \001(\013" +
+      "2>.yandex.cloud.mdb.postgresql.v1.config" +
+      ".PostgresqlHostConfig9_6H\000R\030postgresqlHo" +
+      "stConfig_9_6\022\177\n\027postgresql_config_10_1c\030" +
+      "\004 \001(\0132@.yandex.cloud.mdb.postgresql.v1.c" +
+      "onfig.PostgresqlHostConfig10_1CH\000R\032postg" +
+      "resqlHostConfig_10_1c\022v\n\024postgresql_conf" +
+      "ig_10\030\002 \001(\0132=.yandex.cloud.mdb.postgresq" +
+      "l.v1.config.PostgresqlHostConfig10H\000R\027po" +
+      "stgresqlHostConfig_10\022v\n\024postgresql_conf" +
+      "ig_11\030\003 \001(\0132=.yandex.cloud.mdb.postgresq" +
+      "l.v1.config.PostgresqlHostConfig11H\000R\027po" +
+      "stgresqlHostConfig_11\022\177\n\027postgresql_conf" +
+      "ig_11_1c\030\006 \001(\0132@.yandex.cloud.mdb.postgr" +
+      "esql.v1.config.PostgresqlHostConfig11_1C" +
+      "H\000R\032postgresqlHostConfig_11_1c\022v\n\024postgr" +
+      "esql_config_12\030\005 \001(\0132=.yandex.cloud.mdb." +
       "postgresql.v1.config.PostgresqlHostConfi" +
-      "g11_1CH\000R\032postgresqlHostConfig_11_1c\022v\n\024" +
-      "postgresql_config_12\030\005 \001(\0132=.yandex.clou" +
-      "d.mdb.postgresql.v1.config.PostgresqlHos" +
-      "tConfig12H\000R\027postgresqlHostConfig_12\022\177\n\027" +
-      "postgresql_config_12_1c\030\007 \001(\0132@.yandex.c" +
+      "g12H\000R\027postgresqlHostConfig_12\022\177\n\027postgr" +
+      "esql_config_12_1c\030\007 \001(\0132@.yandex.cloud.m" +
+      "db.postgresql.v1.config.PostgresqlHostCo" +
+      "nfig12_1CH\000R\032postgresqlHostConfig_12_1c\022" +
+      "v\n\024postgresql_config_13\030\010 \001(\0132=.yandex.c" +
       "loud.mdb.postgresql.v1.config.Postgresql" +
-      "HostConfig12_1CH\000R\032postgresqlHostConfig_" +
-      "12_1c\022v\n\024postgresql_config_13\030\010 \001(\0132=.ya" +
-      "ndex.cloud.mdb.postgresql.v1.config.Post" +
-      "gresqlHostConfig13H\000R\027postgresqlHostConf" +
-      "ig_13B\023\n\021postgresql_config\"\362\001\n\007Service\022:" +
-      "\n\004type\030\001 \001(\0162,.yandex.cloud.mdb.postgres" +
-      "ql.v1.Service.Type\022>\n\006health\030\002 \001(\0162..yan" +
-      "dex.cloud.mdb.postgresql.v1.Service.Heal" +
-      "th\"8\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nPOST" +
-      "GRESQL\020\001\022\n\n\006POOLER\020\002\"1\n\006Health\022\022\n\016HEALTH" +
-      "_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResou" +
-      "rces\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk" +
-      "_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"@\n\006Acc" +
-      "ess\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022" +
-      "\022\n\nserverless\030\003 \001(\010\"\215\001\n\026PerformanceDiagn" +
-      "ostics\022\017\n\007enabled\030\001 \001(\010\022/\n\032sessions_samp" +
-      "ling_interval\030\002 \001(\003B\013\372\3071\0071-86400\0221\n\034stat" +
-      "ements_sampling_interval\030\003 \001(\003B\013\372\3071\0071-86" +
-      "400Bs\n\"yandex.cloud.api.mdb.postgresql.v" +
-      "1ZMgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/mdb/postgresql/v1;postgresql" +
-      "b\006proto3"
+      "HostConfig13H\000R\027postgresqlHostConfig_13B" +
+      "\023\n\021postgresql_config\"\362\001\n\007Service\022:\n\004type" +
+      "\030\001 \001(\0162,.yandex.cloud.mdb.postgresql.v1." +
+      "Service.Type\022>\n\006health\030\002 \001(\0162..yandex.cl" +
+      "oud.mdb.postgresql.v1.Service.Health\"8\n\004" +
+      "Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nPOSTGRESQL" +
+      "\020\001\022\n\n\006POOLER\020\002\"1\n\006Health\022\022\n\016HEALTH_UNKNO" +
+      "WN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\"P\n\tResources\022\032" +
+      "\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030" +
+      "\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"@\n\006Access\022\021\n" +
+      "\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\022\n\nser" +
+      "verless\030\003 \001(\010\"\215\001\n\026PerformanceDiagnostics" +
+      "\022\017\n\007enabled\030\001 \001(\010\022/\n\032sessions_sampling_i" +
+      "nterval\030\002 \001(\003B\013\372\3071\0071-86400\0221\n\034statements" +
+      "_sampling_interval\030\003 \001(\003B\013\372\3071\0071-86400Bs\n" +
+      "\"yandex.cloud.api.mdb.postgresql.v1ZMgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/mdb/postgresql/v1;postgresqlb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -20269,7 +20525,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig111C", "PostgresqlConfig12", "PostgresqlConfig121C", "PostgresqlConfig13", "PoolerConfig", "Resources", "Autofailover", "BackupWindowStart", "Access", "PerformanceDiagnostics", "PostgresqlConfig", });
+        new java.lang.String[] { "Version", "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig111C", "PostgresqlConfig12", "PostgresqlConfig121C", "PostgresqlConfig13", "PoolerConfig", "Resources", "Autofailover", "BackupWindowStart", "BackupRetainPeriodDays", "Access", "PerformanceDiagnostics", "PostgresqlConfig", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ConnectionPoolerConfig_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_postgresql_v1_ConnectionPoolerConfig_fieldAccessorTable = new

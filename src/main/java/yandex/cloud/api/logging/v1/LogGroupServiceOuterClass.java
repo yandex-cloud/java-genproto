@@ -4020,7 +4020,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
      */
     java.lang.String getName();
     /**
@@ -4029,7 +4029,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -4320,7 +4320,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -4340,7 +4340,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -5050,7 +5050,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -5070,7 +5070,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -5091,7 +5091,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -5109,7 +5109,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
        */
       public Builder clearName() {
         
@@ -5123,7 +5123,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6241,7 +6241,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
      */
     java.lang.String getName();
     /**
@@ -6250,7 +6250,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -6587,7 +6587,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -6607,7 +6607,7 @@ public final class LogGroupServiceOuterClass {
      * The name must be unique within the folder.
      * </pre>
      *
-     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -7500,7 +7500,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7520,7 +7520,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7541,7 +7541,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -7559,7 +7559,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
        */
       public Builder clearName() {
         
@@ -7573,7 +7573,7 @@ public final class LogGroupServiceOuterClass {
        * The name must be unique within the folder.
        * </pre>
        *
-       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{0,61}[a-z0-9])?)?"];</code>
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "([a-z]([-a-z0-9]{1,61}[a-z0-9])?)?"];</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -14554,7 +14554,7 @@ public final class LogGroupServiceOuterClass {
       "dex.cloud.logging.v1.LogGroup\022\027\n\017next_pa" +
       "ge_token\030\002 \001(\t\"\215\003\n\025CreateLogGroupRequest" +
       "\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\0224\n\004nam" +
-      "e\030\002 \001(\tB&\362\3071\"([a-z]([-a-z0-9]{0,61}[a-z0" +
+      "e\030\002 \001(\tB&\362\3071\"([a-z]([-a-z0-9]{1,61}[a-z0" +
       "-9])?)?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022" +
       "\213\001\n\006labels\030\004 \003(\0132:.yandex.cloud.logging." +
       "v1.CreateLogGroupRequest.LabelsEntryB?\202\310" +
@@ -14567,7 +14567,7 @@ public final class LogGroupServiceOuterClass {
       "pRequest\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
       "<=64\022/\n\013update_mask\030\002 \001(\0132\032.google.proto" +
       "buf.FieldMask\0224\n\004name\030\003 \001(\tB&\362\3071\"([a-z](" +
-      "[-a-z0-9]{0,61}[a-z0-9])?)?\022\036\n\013descripti" +
+      "[-a-z0-9]{1,61}[a-z0-9])?)?\022\036\n\013descripti" +
       "on\030\004 \001(\tB\t\212\3101\005<=256\022\213\001\n\006labels\030\005 \003(\0132:.y" +
       "andex.cloud.logging.v1.UpdateLogGroupReq" +
       "uest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-" +

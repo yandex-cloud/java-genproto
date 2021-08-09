@@ -15850,7 +15850,7 @@ public final class NodeOuterClass {
      * ID of the disk type.
      * </pre>
      *
-     * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd"];</code>
+     * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd|network-ssd-nonreplicated"];</code>
      */
     java.lang.String getDiskTypeId();
     /**
@@ -15858,7 +15858,7 @@ public final class NodeOuterClass {
      * ID of the disk type.
      * </pre>
      *
-     * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd"];</code>
+     * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd|network-ssd-nonreplicated"];</code>
      */
     com.google.protobuf.ByteString
         getDiskTypeIdBytes();
@@ -15963,7 +15963,7 @@ public final class NodeOuterClass {
      * ID of the disk type.
      * </pre>
      *
-     * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd"];</code>
+     * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd|network-ssd-nonreplicated"];</code>
      */
     public java.lang.String getDiskTypeId() {
       java.lang.Object ref = diskTypeId_;
@@ -15982,7 +15982,7 @@ public final class NodeOuterClass {
      * ID of the disk type.
      * </pre>
      *
-     * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd"];</code>
+     * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd|network-ssd-nonreplicated"];</code>
      */
     public com.google.protobuf.ByteString
         getDiskTypeIdBytes() {
@@ -16338,7 +16338,7 @@ public final class NodeOuterClass {
        * ID of the disk type.
        * </pre>
        *
-       * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd"];</code>
+       * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd|network-ssd-nonreplicated"];</code>
        */
       public java.lang.String getDiskTypeId() {
         java.lang.Object ref = diskTypeId_;
@@ -16357,7 +16357,7 @@ public final class NodeOuterClass {
        * ID of the disk type.
        * </pre>
        *
-       * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd"];</code>
+       * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd|network-ssd-nonreplicated"];</code>
        */
       public com.google.protobuf.ByteString
           getDiskTypeIdBytes() {
@@ -16377,7 +16377,7 @@ public final class NodeOuterClass {
        * ID of the disk type.
        * </pre>
        *
-       * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd"];</code>
+       * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd|network-ssd-nonreplicated"];</code>
        */
       public Builder setDiskTypeId(
           java.lang.String value) {
@@ -16394,7 +16394,7 @@ public final class NodeOuterClass {
        * ID of the disk type.
        * </pre>
        *
-       * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd"];</code>
+       * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd|network-ssd-nonreplicated"];</code>
        */
       public Builder clearDiskTypeId() {
         
@@ -16407,7 +16407,7 @@ public final class NodeOuterClass {
        * ID of the disk type.
        * </pre>
        *
-       * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd"];</code>
+       * <code>string disk_type_id = 1 [(.yandex.cloud.pattern) = "|network-ssd|network-hdd|network-ssd-nonreplicated"];</code>
        */
       public Builder setDiskTypeIdBytes(
           com.google.protobuf.ByteString value) {
@@ -17762,16 +17762,16 @@ public final class NodeOuterClass {
       "oud.k8s.v1.IpVersion\"y\n\rResourcesSpec\022\027\n" +
       "\006memory\030\001 \001(\003B\007\372\3071\003>=0\022\026\n\005cores\030\002 \001(\003B\007\372" +
       "\3071\003>=0\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\0050-100" +
-      "\022\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"f\n\010DiskSpec\0222\n\014d" +
-      "isk_type_id\030\001 \001(\tB\034\362\3071\030|network-ssd|netw" +
-      "ork-hdd\022&\n\tdisk_size\030\002 \001(\003B\023\372\3071\0170-439804" +
-      "6511104\"\'\n\020SchedulingPolicy\022\023\n\013preemptib" +
-      "le\030\001 \001(\010\"-\n\017PlacementPolicy\022\032\n\022placement" +
-      "_group_id\030\001 \001(\t*;\n\tIpVersion\022\032\n\026IP_VERSI" +
-      "ON_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027" +
-      "yandex.cloud.api.k8s.v1Z;github.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/k8s/v1" +
-      ";k8sb\006proto3"
+      "\022\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"\200\001\n\010DiskSpec\022L\n\014" +
+      "disk_type_id\030\001 \001(\tB6\362\30712|network-ssd|net" +
+      "work-hdd|network-ssd-nonreplicated\022&\n\tdi" +
+      "sk_size\030\002 \001(\003B\023\372\3071\0170-4398046511104\"\'\n\020Sc" +
+      "hedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"-\n\017P" +
+      "lacementPolicy\022\032\n\022placement_group_id\030\001 \001" +
+      "(\t*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIE" +
+      "D\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cloud." +
+      "api.k8s.v1Z;github.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

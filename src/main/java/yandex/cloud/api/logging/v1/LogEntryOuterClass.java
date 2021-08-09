@@ -3469,6 +3469,851 @@ public final class LogEntryOuterClass {
 
   }
 
+  public interface LogEntryDefaultsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.LogEntryDefaults)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Default entry severity.
+     * Will be applied if entry level is unspecified.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+     */
+    int getLevelValue();
+    /**
+     * <pre>
+     * Default entry severity.
+     * Will be applied if entry level is unspecified.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+     */
+    yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel();
+
+    /**
+     * <pre>
+     * Default entry annotation.
+     * Will be merged with entry annotation.
+     * Any conflict will be resolved in favor of entry own annotaion.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     */
+    boolean hasJsonPayload();
+    /**
+     * <pre>
+     * Default entry annotation.
+     * Will be merged with entry annotation.
+     * Any conflict will be resolved in favor of entry own annotaion.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     */
+    com.google.protobuf.Struct getJsonPayload();
+    /**
+     * <pre>
+     * Default entry annotation.
+     * Will be merged with entry annotation.
+     * Any conflict will be resolved in favor of entry own annotaion.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     */
+    com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.logging.v1.LogEntryDefaults}
+   */
+  public  static final class LogEntryDefaults extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.LogEntryDefaults)
+      LogEntryDefaultsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LogEntryDefaults.newBuilder() to construct.
+    private LogEntryDefaults(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LogEntryDefaults() {
+      level_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LogEntryDefaults(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+              int rawValue = input.readEnum();
+
+              level_ = rawValue;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (jsonPayload_ != null) {
+                subBuilder = jsonPayload_.toBuilder();
+              }
+              jsonPayload_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(jsonPayload_);
+                jsonPayload_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.logging.v1.LogEntryOuterClass.internal_static_yandex_cloud_logging_v1_LogEntryDefaults_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.logging.v1.LogEntryOuterClass.internal_static_yandex_cloud_logging_v1_LogEntryDefaults_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.class, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.Builder.class);
+    }
+
+    public static final int LEVEL_FIELD_NUMBER = 2;
+    private int level_;
+    /**
+     * <pre>
+     * Default entry severity.
+     * Will be applied if entry level is unspecified.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+     */
+    public int getLevelValue() {
+      return level_;
+    }
+    /**
+     * <pre>
+     * Default entry severity.
+     * Will be applied if entry level is unspecified.
+     * See [LogLevel.Level] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+     */
+    public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level result = yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.valueOf(level_);
+      return result == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.UNRECOGNIZED : result;
+    }
+
+    public static final int JSON_PAYLOAD_FIELD_NUMBER = 4;
+    private com.google.protobuf.Struct jsonPayload_;
+    /**
+     * <pre>
+     * Default entry annotation.
+     * Will be merged with entry annotation.
+     * Any conflict will be resolved in favor of entry own annotaion.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     */
+    public boolean hasJsonPayload() {
+      return jsonPayload_ != null;
+    }
+    /**
+     * <pre>
+     * Default entry annotation.
+     * Will be merged with entry annotation.
+     * Any conflict will be resolved in favor of entry own annotaion.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     */
+    public com.google.protobuf.Struct getJsonPayload() {
+      return jsonPayload_ == null ? com.google.protobuf.Struct.getDefaultInstance() : jsonPayload_;
+    }
+    /**
+     * <pre>
+     * Default entry annotation.
+     * Will be merged with entry annotation.
+     * Any conflict will be resolved in favor of entry own annotaion.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+     */
+    public com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder() {
+      return getJsonPayload();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (level_ != yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.LEVEL_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, level_);
+      }
+      if (jsonPayload_ != null) {
+        output.writeMessage(4, getJsonPayload());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (level_ != yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.LEVEL_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, level_);
+      }
+      if (jsonPayload_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getJsonPayload());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults other = (yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults) obj;
+
+      boolean result = true;
+      result = result && level_ == other.level_;
+      result = result && (hasJsonPayload() == other.hasJsonPayload());
+      if (hasJsonPayload()) {
+        result = result && getJsonPayload()
+            .equals(other.getJsonPayload());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + level_;
+      if (hasJsonPayload()) {
+        hash = (37 * hash) + JSON_PAYLOAD_FIELD_NUMBER;
+        hash = (53 * hash) + getJsonPayload().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.logging.v1.LogEntryDefaults}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.logging.v1.LogEntryDefaults)
+        yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaultsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.logging.v1.LogEntryOuterClass.internal_static_yandex_cloud_logging_v1_LogEntryDefaults_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.logging.v1.LogEntryOuterClass.internal_static_yandex_cloud_logging_v1_LogEntryDefaults_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.class, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        level_ = 0;
+
+        if (jsonPayloadBuilder_ == null) {
+          jsonPayload_ = null;
+        } else {
+          jsonPayload_ = null;
+          jsonPayloadBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.logging.v1.LogEntryOuterClass.internal_static_yandex_cloud_logging_v1_LogEntryDefaults_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults getDefaultInstanceForType() {
+        return yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults build() {
+        yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults buildPartial() {
+        yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults result = new yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults(this);
+        result.level_ = level_;
+        if (jsonPayloadBuilder_ == null) {
+          result.jsonPayload_ = jsonPayload_;
+        } else {
+          result.jsonPayload_ = jsonPayloadBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults) {
+          return mergeFrom((yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults other) {
+        if (other == yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.getDefaultInstance()) return this;
+        if (other.level_ != 0) {
+          setLevelValue(other.getLevelValue());
+        }
+        if (other.hasJsonPayload()) {
+          mergeJsonPayload(other.getJsonPayload());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int level_ = 0;
+      /**
+       * <pre>
+       * Default entry severity.
+       * Will be applied if entry level is unspecified.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       */
+      public int getLevelValue() {
+        return level_;
+      }
+      /**
+       * <pre>
+       * Default entry severity.
+       * Will be applied if entry level is unspecified.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       */
+      public Builder setLevelValue(int value) {
+        level_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default entry severity.
+       * Will be applied if entry level is unspecified.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       */
+      public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level getLevel() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level result = yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.valueOf(level_);
+        return result == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Default entry severity.
+       * Will be applied if entry level is unspecified.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       */
+      public Builder setLevel(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogLevel.Level value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        level_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default entry severity.
+       * Will be applied if entry level is unspecified.
+       * See [LogLevel.Level] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogLevel.Level level = 2;</code>
+       */
+      public Builder clearLevel() {
+        
+        level_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Struct jsonPayload_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> jsonPayloadBuilder_;
+      /**
+       * <pre>
+       * Default entry annotation.
+       * Will be merged with entry annotation.
+       * Any conflict will be resolved in favor of entry own annotaion.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       */
+      public boolean hasJsonPayload() {
+        return jsonPayloadBuilder_ != null || jsonPayload_ != null;
+      }
+      /**
+       * <pre>
+       * Default entry annotation.
+       * Will be merged with entry annotation.
+       * Any conflict will be resolved in favor of entry own annotaion.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       */
+      public com.google.protobuf.Struct getJsonPayload() {
+        if (jsonPayloadBuilder_ == null) {
+          return jsonPayload_ == null ? com.google.protobuf.Struct.getDefaultInstance() : jsonPayload_;
+        } else {
+          return jsonPayloadBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default entry annotation.
+       * Will be merged with entry annotation.
+       * Any conflict will be resolved in favor of entry own annotaion.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       */
+      public Builder setJsonPayload(com.google.protobuf.Struct value) {
+        if (jsonPayloadBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jsonPayload_ = value;
+          onChanged();
+        } else {
+          jsonPayloadBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default entry annotation.
+       * Will be merged with entry annotation.
+       * Any conflict will be resolved in favor of entry own annotaion.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       */
+      public Builder setJsonPayload(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (jsonPayloadBuilder_ == null) {
+          jsonPayload_ = builderForValue.build();
+          onChanged();
+        } else {
+          jsonPayloadBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default entry annotation.
+       * Will be merged with entry annotation.
+       * Any conflict will be resolved in favor of entry own annotaion.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       */
+      public Builder mergeJsonPayload(com.google.protobuf.Struct value) {
+        if (jsonPayloadBuilder_ == null) {
+          if (jsonPayload_ != null) {
+            jsonPayload_ =
+              com.google.protobuf.Struct.newBuilder(jsonPayload_).mergeFrom(value).buildPartial();
+          } else {
+            jsonPayload_ = value;
+          }
+          onChanged();
+        } else {
+          jsonPayloadBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default entry annotation.
+       * Will be merged with entry annotation.
+       * Any conflict will be resolved in favor of entry own annotaion.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       */
+      public Builder clearJsonPayload() {
+        if (jsonPayloadBuilder_ == null) {
+          jsonPayload_ = null;
+          onChanged();
+        } else {
+          jsonPayload_ = null;
+          jsonPayloadBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default entry annotation.
+       * Will be merged with entry annotation.
+       * Any conflict will be resolved in favor of entry own annotaion.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       */
+      public com.google.protobuf.Struct.Builder getJsonPayloadBuilder() {
+        
+        onChanged();
+        return getJsonPayloadFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default entry annotation.
+       * Will be merged with entry annotation.
+       * Any conflict will be resolved in favor of entry own annotaion.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       */
+      public com.google.protobuf.StructOrBuilder getJsonPayloadOrBuilder() {
+        if (jsonPayloadBuilder_ != null) {
+          return jsonPayloadBuilder_.getMessageOrBuilder();
+        } else {
+          return jsonPayload_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : jsonPayload_;
+        }
+      }
+      /**
+       * <pre>
+       * Default entry annotation.
+       * Will be merged with entry annotation.
+       * Any conflict will be resolved in favor of entry own annotaion.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getJsonPayloadFieldBuilder() {
+        if (jsonPayloadBuilder_ == null) {
+          jsonPayloadBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getJsonPayload(),
+                  getParentForChildren(),
+                  isClean());
+          jsonPayload_ = null;
+        }
+        return jsonPayloadBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.logging.v1.LogEntryDefaults)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.logging.v1.LogEntryDefaults)
+    private static final yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults();
+    }
+
+    public static yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LogEntryDefaults>
+        PARSER = new com.google.protobuf.AbstractParser<LogEntryDefaults>() {
+      @java.lang.Override
+      public LogEntryDefaults parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LogEntryDefaults(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LogEntryDefaults> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LogEntryDefaults> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface DestinationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.Destination)
       com.google.protobuf.MessageOrBuilder {
@@ -3478,7 +4323,7 @@ public final class LogEntryOuterClass {
      * Entry should be written to log group resolved by ID.
      * </pre>
      *
-     * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+     * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     java.lang.String getLogGroupId();
     /**
@@ -3486,7 +4331,7 @@ public final class LogEntryOuterClass {
      * Entry should be written to log group resolved by ID.
      * </pre>
      *
-     * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+     * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     com.google.protobuf.ByteString
         getLogGroupIdBytes();
@@ -3496,7 +4341,7 @@ public final class LogEntryOuterClass {
      * Entry should be written to default log group for the folder.
      * </pre>
      *
-     * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
+     * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     java.lang.String getFolderId();
     /**
@@ -3504,7 +4349,7 @@ public final class LogEntryOuterClass {
      * Entry should be written to default log group for the folder.
      * </pre>
      *
-     * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
+     * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     com.google.protobuf.ByteString
         getFolderIdBytes();
@@ -3638,7 +4483,7 @@ public final class LogEntryOuterClass {
      * Entry should be written to log group resolved by ID.
      * </pre>
      *
-     * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+     * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     public java.lang.String getLogGroupId() {
       java.lang.Object ref = "";
@@ -3662,7 +4507,7 @@ public final class LogEntryOuterClass {
      * Entry should be written to log group resolved by ID.
      * </pre>
      *
-     * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+     * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     public com.google.protobuf.ByteString
         getLogGroupIdBytes() {
@@ -3689,7 +4534,7 @@ public final class LogEntryOuterClass {
      * Entry should be written to default log group for the folder.
      * </pre>
      *
-     * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
+     * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     public java.lang.String getFolderId() {
       java.lang.Object ref = "";
@@ -3713,7 +4558,7 @@ public final class LogEntryOuterClass {
      * Entry should be written to default log group for the folder.
      * </pre>
      *
-     * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
+     * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     public com.google.protobuf.ByteString
         getFolderIdBytes() {
@@ -4105,7 +4950,7 @@ public final class LogEntryOuterClass {
        * Entry should be written to log group resolved by ID.
        * </pre>
        *
-       * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public java.lang.String getLogGroupId() {
         java.lang.Object ref = "";
@@ -4129,7 +4974,7 @@ public final class LogEntryOuterClass {
        * Entry should be written to log group resolved by ID.
        * </pre>
        *
-       * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public com.google.protobuf.ByteString
           getLogGroupIdBytes() {
@@ -4154,7 +4999,7 @@ public final class LogEntryOuterClass {
        * Entry should be written to log group resolved by ID.
        * </pre>
        *
-       * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder setLogGroupId(
           java.lang.String value) {
@@ -4171,7 +5016,7 @@ public final class LogEntryOuterClass {
        * Entry should be written to log group resolved by ID.
        * </pre>
        *
-       * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder clearLogGroupId() {
         if (destinationCase_ == 1) {
@@ -4186,7 +5031,7 @@ public final class LogEntryOuterClass {
        * Entry should be written to log group resolved by ID.
        * </pre>
        *
-       * <code>string log_group_id = 1 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * <code>string log_group_id = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder setLogGroupIdBytes(
           com.google.protobuf.ByteString value) {
@@ -4205,7 +5050,7 @@ public final class LogEntryOuterClass {
        * Entry should be written to default log group for the folder.
        * </pre>
        *
-       * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public java.lang.String getFolderId() {
         java.lang.Object ref = "";
@@ -4229,7 +5074,7 @@ public final class LogEntryOuterClass {
        * Entry should be written to default log group for the folder.
        * </pre>
        *
-       * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public com.google.protobuf.ByteString
           getFolderIdBytes() {
@@ -4254,7 +5099,7 @@ public final class LogEntryOuterClass {
        * Entry should be written to default log group for the folder.
        * </pre>
        *
-       * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder setFolderId(
           java.lang.String value) {
@@ -4271,7 +5116,7 @@ public final class LogEntryOuterClass {
        * Entry should be written to default log group for the folder.
        * </pre>
        *
-       * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder clearFolderId() {
         if (destinationCase_ == 2) {
@@ -4286,7 +5131,7 @@ public final class LogEntryOuterClass {
        * Entry should be written to default log group for the folder.
        * </pre>
        *
-       * <code>string folder_id = 2 [(.yandex.cloud.length) = "&lt;=64"];</code>
+       * <code>string folder_id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder setFolderIdBytes(
           com.google.protobuf.ByteString value) {
@@ -5132,6 +5977,11 @@ public final class LogEntryOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_logging_v1_IncomingLogEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_LogEntryDefaults_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_LogEntryDefaults_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_logging_v1_Destination_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -5169,16 +6019,21 @@ public final class LogEntryOuterClass {
       "(\0162\'.yandex.cloud.logging.v1.LogLevel.Le" +
       "vel\022\034\n\007message\030\003 \001(\tB\013\212\3101\007<=65536\022:\n\014jso" +
       "n_payload\030\004 \001(\0132\027.google.protobuf.Struct" +
-      "B\013\272\3101\007<=65536\"]\n\013Destination\022 \n\014log_grou" +
-      "p_id\030\001 \001(\tB\010\212\3101\004<=64H\000\022\035\n\tfolder_id\030\002 \001(" +
-      "\tB\010\212\3101\004<=64H\000B\r\n\013destination\"\242\001\n\010LogLeve" +
-      "l\0226\n\005level\030\001 \001(\0162\'.yandex.cloud.logging." +
-      "v1.LogLevel.Level\"^\n\005Level\022\025\n\021LEVEL_UNSP" +
-      "ECIFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\010\n\004INFO\020" +
-      "\003\022\010\n\004WARN\020\004\022\t\n\005ERROR\020\005\022\t\n\005FATAL\020\006Bb\n\033yan" +
-      "dex.cloud.api.logging.v1ZCgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/loggi" +
-      "ng/v1;loggingb\006proto3"
+      "B\013\272\3101\007<=65536\"\206\001\n\020LogEntryDefaults\0226\n\005le" +
+      "vel\030\002 \001(\0162\'.yandex.cloud.logging.v1.LogL" +
+      "evel.Level\022:\n\014json_payload\030\004 \001(\0132\027.googl" +
+      "e.protobuf.StructB\013\272\3101\007<=65536\"\231\001\n\013Desti" +
+      "nation\022;\n\014log_group_id\030\001 \001(\tB#\362\3071\037([a-zA" +
+      "-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tfolder_id" +
+      "\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63" +
+      "})?H\000B\023\n\013destination\022\004\300\3011\001\"\242\001\n\010LogLevel\022" +
+      "6\n\005level\030\001 \001(\0162\'.yandex.cloud.logging.v1" +
+      ".LogLevel.Level\"^\n\005Level\022\025\n\021LEVEL_UNSPEC" +
+      "IFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\010\n\004INFO\020\003\022" +
+      "\010\n\004WARN\020\004\022\t\n\005ERROR\020\005\022\t\n\005FATAL\020\006Bb\n\033yande" +
+      "x.cloud.api.logging.v1ZCgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/logging" +
+      "/v1;loggingb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5208,14 +6063,20 @@ public final class LogEntryOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_IncomingLogEntry_descriptor,
         new java.lang.String[] { "Timestamp", "Level", "Message", "JsonPayload", });
-    internal_static_yandex_cloud_logging_v1_Destination_descriptor =
+    internal_static_yandex_cloud_logging_v1_LogEntryDefaults_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_logging_v1_LogEntryDefaults_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_LogEntryDefaults_descriptor,
+        new java.lang.String[] { "Level", "JsonPayload", });
+    internal_static_yandex_cloud_logging_v1_Destination_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_logging_v1_Destination_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_Destination_descriptor,
         new java.lang.String[] { "LogGroupId", "FolderId", "Destination", });
     internal_static_yandex_cloud_logging_v1_LogLevel_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_logging_v1_LogLevel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_LogLevel_descriptor,
@@ -5223,7 +6084,9 @@ public final class LogEntryOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.bytes);
+    registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

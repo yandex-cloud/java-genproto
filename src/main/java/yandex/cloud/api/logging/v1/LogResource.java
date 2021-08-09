@@ -23,7 +23,7 @@ public final class LogResource {
      * Resource type, i.e., `serverless.function`
      * </pre>
      *
-     * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+     * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     java.lang.String getType();
     /**
@@ -31,7 +31,7 @@ public final class LogResource {
      * Resource type, i.e., `serverless.function`
      * </pre>
      *
-     * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+     * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -41,7 +41,7 @@ public final class LogResource {
      * Resource ID, i.e., ID of the function producing logs.
      * </pre>
      *
-     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     java.lang.String getId();
     /**
@@ -49,7 +49,7 @@ public final class LogResource {
      * Resource ID, i.e., ID of the function producing logs.
      * </pre>
      *
-     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -151,7 +151,7 @@ public final class LogResource {
      * Resource type, i.e., `serverless.function`
      * </pre>
      *
-     * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+     * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
@@ -170,7 +170,7 @@ public final class LogResource {
      * Resource type, i.e., `serverless.function`
      * </pre>
      *
-     * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+     * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
@@ -193,7 +193,7 @@ public final class LogResource {
      * Resource ID, i.e., ID of the function producing logs.
      * </pre>
      *
-     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -212,7 +212,7 @@ public final class LogResource {
      * Resource ID, i.e., ID of the function producing logs.
      * </pre>
      *
-     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -559,7 +559,7 @@ public final class LogResource {
        * Resource type, i.e., `serverless.function`
        * </pre>
        *
-       * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+       * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -578,7 +578,7 @@ public final class LogResource {
        * Resource type, i.e., `serverless.function`
        * </pre>
        *
-       * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+       * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -598,7 +598,7 @@ public final class LogResource {
        * Resource type, i.e., `serverless.function`
        * </pre>
        *
-       * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+       * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder setType(
           java.lang.String value) {
@@ -615,7 +615,7 @@ public final class LogResource {
        * Resource type, i.e., `serverless.function`
        * </pre>
        *
-       * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+       * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder clearType() {
         
@@ -628,7 +628,7 @@ public final class LogResource {
        * Resource type, i.e., `serverless.function`
        * </pre>
        *
-       * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+       * <code>string type = 1 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -648,7 +648,7 @@ public final class LogResource {
        * Resource ID, i.e., ID of the function producing logs.
        * </pre>
        *
-       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -667,7 +667,7 @@ public final class LogResource {
        * Resource ID, i.e., ID of the function producing logs.
        * </pre>
        *
-       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -687,7 +687,7 @@ public final class LogResource {
        * Resource ID, i.e., ID of the function producing logs.
        * </pre>
        *
-       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder setId(
           java.lang.String value) {
@@ -704,7 +704,7 @@ public final class LogResource {
        * Resource ID, i.e., ID of the function producing logs.
        * </pre>
        *
-       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder clearId() {
         
@@ -717,7 +717,7 @@ public final class LogResource {
        * Resource ID, i.e., ID of the function producing logs.
        * </pre>
        *
-       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{1,62})?"];</code>
+       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1672,9 +1672,9 @@ public final class LogResource {
       "otobuf/duration.proto\032\037google/protobuf/t" +
       "imestamp.proto\032\035yandex/cloud/validation." +
       "proto\"v\n\020LogEntryResource\0221\n\004type\030\001 \001(\tB" +
-      "#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{1,62})?\022/\n\002" +
-      "id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{1," +
-      "62})?\"-\n\020LogGroupResource\022\014\n\004type\030\001 \001(\t\022" +
+      "#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?\022/\n\002" +
+      "id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0," +
+      "63})?\"-\n\020LogGroupResource\022\014\n\004type\030\001 \001(\t\022" +
       "\013\n\003ids\030\002 \003(\tBb\n\033yandex.cloud.api.logging" +
       ".v1ZCgithub.com/yandex-cloud/go-genproto" +
       "/yandex/cloud/logging/v1;loggingb\006proto3"

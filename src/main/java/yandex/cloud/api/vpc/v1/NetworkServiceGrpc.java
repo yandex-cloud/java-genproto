@@ -222,6 +222,70 @@ public final class NetworkServiceGrpc {
      return getListSubnetsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest,
+      yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse> getListSecurityGroupsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSecurityGroups",
+      requestType = yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest.class,
+      responseType = yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest,
+      yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse> getListSecurityGroupsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest, yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse> getListSecurityGroupsMethod;
+    if ((getListSecurityGroupsMethod = NetworkServiceGrpc.getListSecurityGroupsMethod) == null) {
+      synchronized (NetworkServiceGrpc.class) {
+        if ((getListSecurityGroupsMethod = NetworkServiceGrpc.getListSecurityGroupsMethod) == null) {
+          NetworkServiceGrpc.getListSecurityGroupsMethod = getListSecurityGroupsMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest, yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.vpc.v1.NetworkService", "ListSecurityGroups"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new NetworkServiceMethodDescriptorSupplier("ListSecurityGroups"))
+                  .build();
+          }
+        }
+     }
+     return getListSecurityGroupsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest,
+      yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse> getListRouteTablesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListRouteTables",
+      requestType = yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest.class,
+      responseType = yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest,
+      yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse> getListRouteTablesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest, yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse> getListRouteTablesMethod;
+    if ((getListRouteTablesMethod = NetworkServiceGrpc.getListRouteTablesMethod) == null) {
+      synchronized (NetworkServiceGrpc.class) {
+        if ((getListRouteTablesMethod = NetworkServiceGrpc.getListRouteTablesMethod) == null) {
+          NetworkServiceGrpc.getListRouteTablesMethod = getListRouteTablesMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest, yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.vpc.v1.NetworkService", "ListRouteTables"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new NetworkServiceMethodDescriptorSupplier("ListRouteTables"))
+                  .build();
+          }
+        }
+     }
+     return getListRouteTablesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkOperationsRequest,
       yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkOperationsResponse> getListOperationsMethod;
 
@@ -381,6 +445,26 @@ public final class NetworkServiceGrpc {
 
     /**
      * <pre>
+     * Lists security groups from the specified network.
+     * </pre>
+     */
+    public void listSecurityGroups(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListSecurityGroupsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists route tables from the specified network.
+     * </pre>
+     */
+    public void listRouteTables(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListRouteTablesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified network.
      * </pre>
      */
@@ -443,6 +527,20 @@ public final class NetworkServiceGrpc {
                 yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSubnetsRequest,
                 yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSubnetsResponse>(
                   this, METHODID_LIST_SUBNETS)))
+          .addMethod(
+            getListSecurityGroupsMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest,
+                yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse>(
+                  this, METHODID_LIST_SECURITY_GROUPS)))
+          .addMethod(
+            getListRouteTablesMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest,
+                yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse>(
+                  this, METHODID_LIST_ROUTE_TABLES)))
           .addMethod(
             getListOperationsMethod(),
             asyncUnaryCall(
@@ -553,6 +651,28 @@ public final class NetworkServiceGrpc {
 
     /**
      * <pre>
+     * Lists security groups from the specified network.
+     * </pre>
+     */
+    public void listSecurityGroups(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListSecurityGroupsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists route tables from the specified network.
+     * </pre>
+     */
+    public void listRouteTables(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListRouteTablesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified network.
      * </pre>
      */
@@ -656,6 +776,26 @@ public final class NetworkServiceGrpc {
     public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSubnetsResponse listSubnets(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSubnetsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListSubnetsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists security groups from the specified network.
+     * </pre>
+     */
+    public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse listSecurityGroups(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListSecurityGroupsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists route tables from the specified network.
+     * </pre>
+     */
+    public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse listRouteTables(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getListRouteTablesMethod(), getCallOptions(), request);
     }
 
     /**
@@ -771,6 +911,28 @@ public final class NetworkServiceGrpc {
 
     /**
      * <pre>
+     * Lists security groups from the specified network.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse> listSecurityGroups(
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListSecurityGroupsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists route tables from the specified network.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse> listRouteTables(
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListRouteTablesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists operations for the specified network.
      * </pre>
      */
@@ -798,8 +960,10 @@ public final class NetworkServiceGrpc {
   private static final int METHODID_UPDATE = 3;
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_LIST_SUBNETS = 5;
-  private static final int METHODID_LIST_OPERATIONS = 6;
-  private static final int METHODID_MOVE = 7;
+  private static final int METHODID_LIST_SECURITY_GROUPS = 6;
+  private static final int METHODID_LIST_ROUTE_TABLES = 7;
+  private static final int METHODID_LIST_OPERATIONS = 8;
+  private static final int METHODID_MOVE = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -841,6 +1005,14 @@ public final class NetworkServiceGrpc {
         case METHODID_LIST_SUBNETS:
           serviceImpl.listSubnets((yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSubnetsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSubnetsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_SECURITY_GROUPS:
+          serviceImpl.listSecurityGroups((yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_ROUTE_TABLES:
+          serviceImpl.listRouteTables((yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse>) responseObserver);
           break;
         case METHODID_LIST_OPERATIONS:
           serviceImpl.listOperations((yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkOperationsRequest) request,
@@ -917,6 +1089,8 @@ public final class NetworkServiceGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getListSubnetsMethod())
+              .addMethod(getListSecurityGroupsMethod())
+              .addMethod(getListRouteTablesMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getMoveMethod())
               .build();

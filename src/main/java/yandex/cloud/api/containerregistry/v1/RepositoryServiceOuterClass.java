@@ -6166,51 +6166,53 @@ public final class RepositoryServiceOuterClass {
       "sitoryMetadata\022\025\n\rrepository_id\030\001 \001(\t\">\n" +
       "\027DeleteRepositoryRequest\022#\n\rrepository_i" +
       "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"1\n\030DeleteRepositor" +
-      "yMetadata\022\025\n\rrepository_id\030\001 \001(\t2\310\014\n\021Rep" +
+      "yMetadata\022\025\n\rrepository_id\030\001 \001(\t2\217\r\n\021Rep" +
       "ositoryService\022\252\001\n\003Get\0227.yandex.cloud.co" +
       "ntainerregistry.v1.GetRepositoryRequest\032" +
       "-.yandex.cloud.containerregistry.v1.Repo" +
       "sitory\";\202\323\344\223\0025\0223/container-registry/v1/r" +
-      "epositories/{repository_id}\022y\n\tGetByName" +
-      "\022=.yandex.cloud.containerregistry.v1.Get" +
-      "RepositoryByNameRequest\032-.yandex.cloud.c" +
-      "ontainerregistry.v1.Repository\022\254\001\n\004List\022" +
-      ":.yandex.cloud.containerregistry.v1.List" +
-      "RepositoriesRequest\032;.yandex.cloud.conta" +
-      "inerregistry.v1.ListRepositoriesResponse" +
-      "\"+\202\323\344\223\002%\022#/container-registry/v1/reposit" +
-      "ories\022\303\001\n\022ListAccessBindings\022..yandex.cl" +
-      "oud.access.ListAccessBindingsRequest\032/.y" +
-      "andex.cloud.access.ListAccessBindingsRes" +
-      "ponse\"L\202\323\344\223\002F\022D/container-registry/v1/re" +
-      "positories/{resource_id}:listAccessBindi" +
-      "ngs\022\301\001\n\006Upsert\022:.yandex.cloud.containerr" +
-      "egistry.v1.UpsertRepositoryRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"X\202\323\344\223\002(\"#/" +
-      "container-registry/v1/repositories:\001*\262\322*" +
-      "&\n\030UpsertRepositoryMetadata\022\nRepository\022" +
-      "\331\001\n\006Delete\022:.yandex.cloud.containerregis" +
-      "try.v1.DeleteRepositoryRequest\032!.yandex." +
-      "cloud.operation.Operation\"p\202\323\344\223\0025*3/cont" +
-      "ainer-registry/v1/repositories/{reposito" +
-      "ry_id}\262\322*1\n\030DeleteRepositoryMetadata\022\025go" +
-      "ogle.protobuf.Empty\022\363\001\n\021SetAccessBinding" +
-      "s\022-.yandex.cloud.access.SetAccessBinding" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\213\001\202\323\344\223\002H\"C/container-registry/v1/rep" +
-      "ositories/{resource_id}:setAccessBinding" +
-      "s:\001*\262\322*9\n access.SetAccessBindingsMetada" +
-      "ta\022\025google.protobuf.Empty\022\377\001\n\024UpdateAcce" +
-      "ssBindings\0220.yandex.cloud.access.UpdateA" +
-      "ccessBindingsRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"\221\001\202\323\344\223\002K\"F/container-reg" +
-      "istry/v1/repositories/{resource_id}:upda" +
-      "teAccessBindings:\001*\262\322*<\n#access.UpdateAc" +
-      "cessBindingsMetadata\022\025google.protobuf.Em" +
-      "ptyB\200\001\n%yandex.cloud.api.containerregist" +
-      "ry.v1ZWgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/containerregistry/v1;con" +
-      "tainerregistryb\006proto3"
+      "epositories/{repository_id}\022\277\001\n\tGetByNam" +
+      "e\022=.yandex.cloud.containerregistry.v1.Ge" +
+      "tRepositoryByNameRequest\032-.yandex.cloud." +
+      "containerregistry.v1.Repository\"D\202\323\344\223\002>\022" +
+      "</container-registry/v1/repositories/{re" +
+      "pository_name}:byName\022\254\001\n\004List\022:.yandex." +
+      "cloud.containerregistry.v1.ListRepositor" +
+      "iesRequest\032;.yandex.cloud.containerregis" +
+      "try.v1.ListRepositoriesResponse\"+\202\323\344\223\002%\022" +
+      "#/container-registry/v1/repositories\022\303\001\n" +
+      "\022ListAccessBindings\022..yandex.cloud.acces" +
+      "s.ListAccessBindingsRequest\032/.yandex.clo" +
+      "ud.access.ListAccessBindingsResponse\"L\202\323" +
+      "\344\223\002F\022D/container-registry/v1/repositorie" +
+      "s/{resource_id}:listAccessBindings\022\301\001\n\006U" +
+      "psert\022:.yandex.cloud.containerregistry.v" +
+      "1.UpsertRepositoryRequest\032!.yandex.cloud" +
+      ".operation.Operation\"X\202\323\344\223\002(\"#/container" +
+      "-registry/v1/repositories:\001*\262\322*&\n\030Upsert" +
+      "RepositoryMetadata\022\nRepository\022\331\001\n\006Delet" +
+      "e\022:.yandex.cloud.containerregistry.v1.De" +
+      "leteRepositoryRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"p\202\323\344\223\0025*3/container-reg" +
+      "istry/v1/repositories/{repository_id}\262\322*" +
+      "1\n\030DeleteRepositoryMetadata\022\025google.prot" +
+      "obuf.Empty\022\363\001\n\021SetAccessBindings\022-.yande" +
+      "x.cloud.access.SetAccessBindingsRequest\032" +
+      "!.yandex.cloud.operation.Operation\"\213\001\202\323\344" +
+      "\223\002H\"C/container-registry/v1/repositories" +
+      "/{resource_id}:setAccessBindings:\001*\262\322*9\n" +
+      " access.SetAccessBindingsMetadata\022\025googl" +
+      "e.protobuf.Empty\022\377\001\n\024UpdateAccessBinding" +
+      "s\0220.yandex.cloud.access.UpdateAccessBind" +
+      "ingsRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"\221\001\202\323\344\223\002K\"F/container-registry/v1/" +
+      "repositories/{resource_id}:updateAccessB" +
+      "indings:\001*\262\322*<\n#access.UpdateAccessBindi" +
+      "ngsMetadata\022\025google.protobuf.EmptyB\200\001\n%y" +
+      "andex.cloud.api.containerregistry.v1ZWgi" +
+      "thub.com/yandex-cloud/go-genproto/yandex" +
+      "/cloud/containerregistry/v1;containerreg" +
+      "istryb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

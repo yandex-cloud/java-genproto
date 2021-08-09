@@ -7430,48 +7430,56 @@ public final class ScannerServiceOuterClass {
       ".proto\032/yandex/cloud/containerregistry/v" +
       "1/scanner.proto\032&yandex/cloud/operation/" +
       "operation.proto\032\035yandex/cloud/validation" +
-      ".proto\"-\n\013ScanRequest\022\036\n\010image_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"&\n\014ScanMetadata\022\026\n\016scan_re" +
-      "sult_id\030\001 \001(\t\"<\n\024GetScanResultRequest\022$\n" +
-      "\016scan_result_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"6\n\030G" +
-      "etLastScanResultRequest\022\032\n\010image_id\030\001 \001(" +
-      "\tB\010\212\3101\004<=50\"\334\001\n\026ListScanResultsRequest\022\034" +
-      "\n\010image_id\030\001 \001(\tB\010\212\3101\004<=50H\000\022!\n\rreposito" +
-      "ry_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022\035\n\tpage_size\030\003 \001" +
-      "(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\tB\t\212\3101\005" +
-      "<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000\022\033\n\010ord" +
-      "er_by\030\006 \001(\tB\t\212\3101\005<=100B\n\n\002id\022\004\300\3011\001\"w\n\027Li" +
-      "stScanResultsResponse\022C\n\014scan_results\030\001 " +
-      "\003(\0132-.yandex.cloud.containerregistry.v1." +
-      "ScanResult\022\027\n\017next_page_token\030\002 \001(\t\"\271\001\n\032" +
-      "ListVulnerabilitiesRequest\022$\n\016scan_resul" +
-      "t_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010or" +
-      "der_by\030\005 \001(\tB\t\212\3101\005<=100\"\201\001\n\033ListVulnerab" +
-      "ilitiesResponse\022I\n\017vulnerabilities\030\001 \003(\013" +
-      "20.yandex.cloud.containerregistry.v1.Vul" +
-      "nerability\022\027\n\017next_page_token\030\002 \001(\t2\207\005\n\016" +
-      "ScannerService\022y\n\004Scan\022..yandex.cloud.co" +
-      "ntainerregistry.v1.ScanRequest\032!.yandex." +
-      "cloud.operation.Operation\"\036\262\322*\032\n\014ScanMet" +
-      "adata\022\nScanResult\022m\n\003Get\0227.yandex.cloud." +
-      "containerregistry.v1.GetScanResultReques" +
-      "t\032-.yandex.cloud.containerregistry.v1.Sc" +
-      "anResult\022u\n\007GetLast\022;.yandex.cloud.conta" +
-      "inerregistry.v1.GetLastScanResultRequest" +
-      "\032-.yandex.cloud.containerregistry.v1.Sca" +
-      "nResult\022}\n\004List\0229.yandex.cloud.container" +
-      "registry.v1.ListScanResultsRequest\032:.yan" +
-      "dex.cloud.containerregistry.v1.ListScanR" +
-      "esultsResponse\022\224\001\n\023ListVulnerabilities\022=" +
-      ".yandex.cloud.containerregistry.v1.ListV" +
-      "ulnerabilitiesRequest\032>.yandex.cloud.con" +
-      "tainerregistry.v1.ListVulnerabilitiesRes" +
-      "ponseB\200\001\n%yandex.cloud.api.containerregi" +
-      "stry.v1ZWgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/containerregistry/v1;c" +
-      "ontainerregistryb\006proto3"
+      ".proto\032\034google/api/annotations.proto\"-\n\013" +
+      "ScanRequest\022\036\n\010image_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\"&\n\014ScanMetadata\022\026\n\016scan_result_id\030\001 " +
+      "\001(\t\"<\n\024GetScanResultRequest\022$\n\016scan_resu" +
+      "lt_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"6\n\030GetLastScan" +
+      "ResultRequest\022\032\n\010image_id\030\001 \001(\tB\010\212\3101\004<=5" +
+      "0\"\334\001\n\026ListScanResultsRequest\022\034\n\010image_id" +
+      "\030\001 \001(\tB\010\212\3101\004<=50H\000\022!\n\rrepository_id\030\002 \001(" +
+      "\tB\010\212\3101\004<=50H\000\022\035\n\tpage_size\030\003 \001(\003B\n\372\3071\0060-" +
+      "1000\022\035\n\npage_token\030\004 \001(\tB\t\212\3101\005<=100\022\032\n\006f" +
+      "ilter\030\005 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\006 \001(" +
+      "\tB\t\212\3101\005<=100B\n\n\002id\022\004\300\3011\001\"w\n\027ListScanResu" +
+      "ltsResponse\022C\n\014scan_results\030\001 \003(\0132-.yand" +
+      "ex.cloud.containerregistry.v1.ScanResult" +
+      "\022\027\n\017next_page_token\030\002 \001(\t\"\271\001\n\032ListVulner" +
+      "abilitiesRequest\022$\n\016scan_result_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060" +
+      "-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006" +
+      "filter\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001" +
+      "(\tB\t\212\3101\005<=100\"\201\001\n\033ListVulnerabilitiesRes" +
+      "ponse\022I\n\017vulnerabilities\030\001 \003(\01320.yandex." +
+      "cloud.containerregistry.v1.Vulnerability" +
+      "\022\027\n\017next_page_token\030\002 \001(\t2\233\007\n\016ScannerSer" +
+      "vice\022\240\001\n\004Scan\022..yandex.cloud.containerre" +
+      "gistry.v1.ScanRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"E\202\323\344\223\002!\"\034/container-reg" +
+      "istry/v1/scans:\001*\262\322*\032\n\014ScanMetadata\022\nSca" +
+      "nResult\022\244\001\n\003Get\0227.yandex.cloud.container" +
+      "registry.v1.GetScanResultRequest\032-.yande" +
+      "x.cloud.containerregistry.v1.ScanResult\"" +
+      "5\202\323\344\223\002/\022-/container-registry/v1/scans/{s" +
+      "can_result_id}\022\266\001\n\007GetLast\022;.yandex.clou" +
+      "d.containerregistry.v1.GetLastScanResult" +
+      "Request\032-.yandex.cloud.containerregistry" +
+      ".v1.ScanResult\"?\202\323\344\223\0029\0227/container-regis" +
+      "try/v1/images/{image_id}:lastScanResult\022" +
+      "\243\001\n\004List\0229.yandex.cloud.containerregistr" +
+      "y.v1.ListScanResultsRequest\032:.yandex.clo" +
+      "ud.containerregistry.v1.ListScanResultsR" +
+      "esponse\"$\202\323\344\223\002\036\022\034/container-registry/v1/" +
+      "scans\022\337\001\n\023ListVulnerabilities\022=.yandex.c" +
+      "loud.containerregistry.v1.ListVulnerabil" +
+      "itiesRequest\032>.yandex.cloud.containerreg" +
+      "istry.v1.ListVulnerabilitiesResponse\"I\202\323" +
+      "\344\223\002C\022A/container-registry/v1/scans/{scan" +
+      "_result_id}:listVulnerabilitiesB\200\001\n%yand" +
+      "ex.cloud.api.containerregistry.v1ZWgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/containerregistry/v1;containerregist" +
+      "ryb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7488,6 +7496,7 @@ public final class ScannerServiceOuterClass {
           yandex.cloud.api.containerregistry.v1.Scanner.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
         }, assigner);
     internal_static_yandex_cloud_containerregistry_v1_ScanRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -7539,6 +7548,7 @@ public final class ScannerServiceOuterClass {
         new java.lang.String[] { "Vulnerabilities", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.length);
@@ -7550,6 +7560,7 @@ public final class ScannerServiceOuterClass {
     yandex.cloud.api.containerregistry.v1.Scanner.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

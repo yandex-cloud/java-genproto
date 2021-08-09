@@ -76,7 +76,7 @@ public final class LogIngestionServiceOuterClass {
      * List of log entries.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
     java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry> 
         getEntriesList();
@@ -85,7 +85,7 @@ public final class LogIngestionServiceOuterClass {
      * List of log entries.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry getEntries(int index);
     /**
@@ -93,7 +93,7 @@ public final class LogIngestionServiceOuterClass {
      * List of log entries.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
     int getEntriesCount();
     /**
@@ -101,7 +101,7 @@ public final class LogIngestionServiceOuterClass {
      * List of log entries.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
     java.util.List<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder> 
         getEntriesOrBuilderList();
@@ -110,10 +110,38 @@ public final class LogIngestionServiceOuterClass {
      * List of log entries.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
     yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder getEntriesOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Log entries defaults.
+     * See [LogEntryDefaults] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+     */
+    boolean hasDefaults();
+    /**
+     * <pre>
+     * Log entries defaults.
+     * See [LogEntryDefaults] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+     */
+    yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults getDefaults();
+    /**
+     * <pre>
+     * Log entries defaults.
+     * See [LogEntryDefaults] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+     */
+    yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaultsOrBuilder getDefaultsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.logging.v1.WriteRequest}
@@ -188,6 +216,19 @@ public final class LogIngestionServiceOuterClass {
               }
               entries_.add(
                   input.readMessage(yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.parser(), extensionRegistry));
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.Builder subBuilder = null;
+              if (defaults_ != null) {
+                subBuilder = defaults_.toBuilder();
+              }
+              defaults_ = input.readMessage(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(defaults_);
+                defaults_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -302,7 +343,7 @@ public final class LogIngestionServiceOuterClass {
      * List of log entries.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
     public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry> getEntriesList() {
       return entries_;
@@ -312,7 +353,7 @@ public final class LogIngestionServiceOuterClass {
      * List of log entries.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
     public java.util.List<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder> 
         getEntriesOrBuilderList() {
@@ -323,7 +364,7 @@ public final class LogIngestionServiceOuterClass {
      * List of log entries.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
     public int getEntriesCount() {
       return entries_.size();
@@ -333,7 +374,7 @@ public final class LogIngestionServiceOuterClass {
      * List of log entries.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry getEntries(int index) {
       return entries_.get(index);
@@ -343,11 +384,47 @@ public final class LogIngestionServiceOuterClass {
      * List of log entries.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
      */
     public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder getEntriesOrBuilder(
         int index) {
       return entries_.get(index);
+    }
+
+    public static final int DEFAULTS_FIELD_NUMBER = 4;
+    private yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults defaults_;
+    /**
+     * <pre>
+     * Log entries defaults.
+     * See [LogEntryDefaults] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+     */
+    public boolean hasDefaults() {
+      return defaults_ != null;
+    }
+    /**
+     * <pre>
+     * Log entries defaults.
+     * See [LogEntryDefaults] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+     */
+    public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults getDefaults() {
+      return defaults_ == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.getDefaultInstance() : defaults_;
+    }
+    /**
+     * <pre>
+     * Log entries defaults.
+     * See [LogEntryDefaults] for details.
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+     */
+    public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaultsOrBuilder getDefaultsOrBuilder() {
+      return getDefaults();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -373,6 +450,9 @@ public final class LogIngestionServiceOuterClass {
       for (int i = 0; i < entries_.size(); i++) {
         output.writeMessage(3, entries_.get(i));
       }
+      if (defaults_ != null) {
+        output.writeMessage(4, getDefaults());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -393,6 +473,10 @@ public final class LogIngestionServiceOuterClass {
       for (int i = 0; i < entries_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, entries_.get(i));
+      }
+      if (defaults_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDefaults());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -422,6 +506,11 @@ public final class LogIngestionServiceOuterClass {
       }
       result = result && getEntriesList()
           .equals(other.getEntriesList());
+      result = result && (hasDefaults() == other.hasDefaults());
+      if (hasDefaults()) {
+        result = result && getDefaults()
+            .equals(other.getDefaults());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -444,6 +533,10 @@ public final class LogIngestionServiceOuterClass {
       if (getEntriesCount() > 0) {
         hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
         hash = (53 * hash) + getEntriesList().hashCode();
+      }
+      if (hasDefaults()) {
+        hash = (37 * hash) + DEFAULTS_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaults().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -597,6 +690,12 @@ public final class LogIngestionServiceOuterClass {
         } else {
           entriesBuilder_.clear();
         }
+        if (defaultsBuilder_ == null) {
+          defaults_ = null;
+        } else {
+          defaults_ = null;
+          defaultsBuilder_ = null;
+        }
         return this;
       }
 
@@ -643,6 +742,11 @@ public final class LogIngestionServiceOuterClass {
           result.entries_ = entries_;
         } else {
           result.entries_ = entriesBuilder_.build();
+        }
+        if (defaultsBuilder_ == null) {
+          result.defaults_ = defaults_;
+        } else {
+          result.defaults_ = defaultsBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -724,6 +828,9 @@ public final class LogIngestionServiceOuterClass {
               entriesBuilder_.addAllMessages(other.entries_);
             }
           }
+        }
+        if (other.hasDefaults()) {
+          mergeDefaults(other.getDefaults());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1087,7 +1194,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry> getEntriesList() {
         if (entriesBuilder_ == null) {
@@ -1101,7 +1208,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public int getEntriesCount() {
         if (entriesBuilder_ == null) {
@@ -1115,7 +1222,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry getEntries(int index) {
         if (entriesBuilder_ == null) {
@@ -1129,7 +1236,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public Builder setEntries(
           int index, yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry value) {
@@ -1150,7 +1257,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public Builder setEntries(
           int index, yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.Builder builderForValue) {
@@ -1168,7 +1275,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public Builder addEntries(yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry value) {
         if (entriesBuilder_ == null) {
@@ -1188,7 +1295,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public Builder addEntries(
           int index, yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry value) {
@@ -1209,7 +1316,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public Builder addEntries(
           yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.Builder builderForValue) {
@@ -1227,7 +1334,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public Builder addEntries(
           int index, yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.Builder builderForValue) {
@@ -1245,7 +1352,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public Builder addAllEntries(
           java.lang.Iterable<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry> values) {
@@ -1264,7 +1371,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public Builder clearEntries() {
         if (entriesBuilder_ == null) {
@@ -1281,7 +1388,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public Builder removeEntries(int index) {
         if (entriesBuilder_ == null) {
@@ -1298,7 +1405,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.Builder getEntriesBuilder(
           int index) {
@@ -1309,7 +1416,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder getEntriesOrBuilder(
           int index) {
@@ -1323,7 +1430,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public java.util.List<? extends yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntryOrBuilder> 
            getEntriesOrBuilderList() {
@@ -1338,7 +1445,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.Builder addEntriesBuilder() {
         return getEntriesFieldBuilder().addBuilder(
@@ -1349,7 +1456,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.Builder addEntriesBuilder(
           int index) {
@@ -1361,7 +1468,7 @@ public final class LogIngestionServiceOuterClass {
        * List of log entries.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated .yandex.cloud.logging.v1.IncomingLogEntry entries = 3 [(.yandex.cloud.size) = "1-100"];</code>
        */
       public java.util.List<yandex.cloud.api.logging.v1.LogEntryOuterClass.IncomingLogEntry.Builder> 
            getEntriesBuilderList() {
@@ -1380,6 +1487,168 @@ public final class LogIngestionServiceOuterClass {
           entries_ = null;
         }
         return entriesBuilder_;
+      }
+
+      private yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults defaults_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.Builder, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaultsOrBuilder> defaultsBuilder_;
+      /**
+       * <pre>
+       * Log entries defaults.
+       * See [LogEntryDefaults] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+       */
+      public boolean hasDefaults() {
+        return defaultsBuilder_ != null || defaults_ != null;
+      }
+      /**
+       * <pre>
+       * Log entries defaults.
+       * See [LogEntryDefaults] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+       */
+      public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults getDefaults() {
+        if (defaultsBuilder_ == null) {
+          return defaults_ == null ? yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.getDefaultInstance() : defaults_;
+        } else {
+          return defaultsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Log entries defaults.
+       * See [LogEntryDefaults] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+       */
+      public Builder setDefaults(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults value) {
+        if (defaultsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          defaults_ = value;
+          onChanged();
+        } else {
+          defaultsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log entries defaults.
+       * See [LogEntryDefaults] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+       */
+      public Builder setDefaults(
+          yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.Builder builderForValue) {
+        if (defaultsBuilder_ == null) {
+          defaults_ = builderForValue.build();
+          onChanged();
+        } else {
+          defaultsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log entries defaults.
+       * See [LogEntryDefaults] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+       */
+      public Builder mergeDefaults(yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults value) {
+        if (defaultsBuilder_ == null) {
+          if (defaults_ != null) {
+            defaults_ =
+              yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.newBuilder(defaults_).mergeFrom(value).buildPartial();
+          } else {
+            defaults_ = value;
+          }
+          onChanged();
+        } else {
+          defaultsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log entries defaults.
+       * See [LogEntryDefaults] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+       */
+      public Builder clearDefaults() {
+        if (defaultsBuilder_ == null) {
+          defaults_ = null;
+          onChanged();
+        } else {
+          defaults_ = null;
+          defaultsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Log entries defaults.
+       * See [LogEntryDefaults] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+       */
+      public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.Builder getDefaultsBuilder() {
+        
+        onChanged();
+        return getDefaultsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Log entries defaults.
+       * See [LogEntryDefaults] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+       */
+      public yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaultsOrBuilder getDefaultsOrBuilder() {
+        if (defaultsBuilder_ != null) {
+          return defaultsBuilder_.getMessageOrBuilder();
+        } else {
+          return defaults_ == null ?
+              yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.getDefaultInstance() : defaults_;
+        }
+      }
+      /**
+       * <pre>
+       * Log entries defaults.
+       * See [LogEntryDefaults] for details.
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.LogEntryDefaults defaults = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.Builder, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaultsOrBuilder> 
+          getDefaultsFieldBuilder() {
+        if (defaultsBuilder_ == null) {
+          defaultsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaults.Builder, yandex.cloud.api.logging.v1.LogEntryOuterClass.LogEntryDefaultsOrBuilder>(
+                  getDefaults(),
+                  getParentForChildren(),
+                  isClean());
+          defaults_ = null;
+        }
+        return defaultsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2266,22 +2535,24 @@ public final class LogIngestionServiceOuterClass {
       "/status.proto\032\'yandex/cloud/logging/v1/l" +
       "og_entry.proto\032*yandex/cloud/logging/v1/" +
       "log_resource.proto\032\035yandex/cloud/validat" +
-      "ion.proto\"\323\001\n\014WriteRequest\022?\n\013destinatio" +
+      "ion.proto\"\220\002\n\014WriteRequest\022?\n\013destinatio" +
       "n\030\001 \001(\0132$.yandex.cloud.logging.v1.Destin" +
       "ationB\004\350\3071\001\022;\n\010resource\030\002 \001(\0132).yandex.c" +
       "loud.logging.v1.LogEntryResource\022E\n\007entr" +
       "ies\030\003 \003(\0132).yandex.cloud.logging.v1.Inco" +
-      "mingLogEntryB\t\202\3101\005<=100\"\226\001\n\rWriteRespons" +
-      "e\022B\n\006errors\030\001 \003(\01322.yandex.cloud.logging" +
-      ".v1.WriteResponse.ErrorsEntry\032A\n\013ErrorsE" +
-      "ntry\022\013\n\003key\030\001 \001(\003\022!\n\005value\030\002 \001(\0132\022.googl" +
-      "e.rpc.Status:\0028\0012\213\001\n\023LogIngestionService" +
-      "\022t\n\005Write\022%.yandex.cloud.logging.v1.Writ" +
-      "eRequest\032&.yandex.cloud.logging.v1.Write" +
-      "Response\"\034\202\323\344\223\002\026\"\021/logging/v1/write:\001*Bb" +
-      "\n\033yandex.cloud.api.logging.v1ZCgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "logging/v1;loggingb\006proto3"
+      "mingLogEntryB\t\202\3101\0051-100\022;\n\010defaults\030\004 \001(" +
+      "\0132).yandex.cloud.logging.v1.LogEntryDefa" +
+      "ults\"\226\001\n\rWriteResponse\022B\n\006errors\030\001 \003(\01322" +
+      ".yandex.cloud.logging.v1.WriteResponse.E" +
+      "rrorsEntry\032A\n\013ErrorsEntry\022\013\n\003key\030\001 \001(\003\022!" +
+      "\n\005value\030\002 \001(\0132\022.google.rpc.Status:\0028\0012\213\001" +
+      "\n\023LogIngestionService\022t\n\005Write\022%.yandex." +
+      "cloud.logging.v1.WriteRequest\032&.yandex.c" +
+      "loud.logging.v1.WriteResponse\"\034\202\323\344\223\002\026\"\021/" +
+      "logging/v1/write:\001*Bb\n\033yandex.cloud.api." +
+      "logging.v1ZCgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/logging/v1;loggingb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2305,7 +2576,7 @@ public final class LogIngestionServiceOuterClass {
     internal_static_yandex_cloud_logging_v1_WriteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_WriteRequest_descriptor,
-        new java.lang.String[] { "Destination", "Resource", "Entries", });
+        new java.lang.String[] { "Destination", "Resource", "Entries", "Defaults", });
     internal_static_yandex_cloud_logging_v1_WriteResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_logging_v1_WriteResponse_fieldAccessorTable = new

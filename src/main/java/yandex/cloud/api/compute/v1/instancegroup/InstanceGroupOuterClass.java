@@ -944,6 +944,9 @@ public final class InstanceGroupOuterClass {
        * In this state the group manages its instances and monitors their health,
        * creating, deleting, stopping, updating and starting instances as needed.
        * To stop the instance group, call [yandex.cloud.compute.v1.instancegroup.InstanceGroupService.Stop].
+       * To pause the processes in the instance group, i.e. scaling, checking instances' health,
+       * auto-healing and updating them, without stopping the instances,
+       * call [yandex.cloud.compute.v1.instancegroup.InstanceGroupService.PauseProcesses].
        * </pre>
        *
        * <code>ACTIVE = 2;</code>
@@ -979,6 +982,12 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Instance group is paused.
+       * In this state all the processes regarding the group management, i.e. scaling, checking instances' health,
+       * auto-healing and updating them, are paused. The instances that were running prior to pausing the group, however,
+       * may still be running.
+       * To resume the processes in the instance group,
+       * call [yandex.cloud.compute.v1.instancegroup.InstanceGroupService.ResumeProcesses].
+       * The group status will change to `ACTIVE`.
        * </pre>
        *
        * <code>PAUSED = 6;</code>
@@ -1005,6 +1014,9 @@ public final class InstanceGroupOuterClass {
        * In this state the group manages its instances and monitors their health,
        * creating, deleting, stopping, updating and starting instances as needed.
        * To stop the instance group, call [yandex.cloud.compute.v1.instancegroup.InstanceGroupService.Stop].
+       * To pause the processes in the instance group, i.e. scaling, checking instances' health,
+       * auto-healing and updating them, without stopping the instances,
+       * call [yandex.cloud.compute.v1.instancegroup.InstanceGroupService.PauseProcesses].
        * </pre>
        *
        * <code>ACTIVE = 2;</code>
@@ -1040,6 +1052,12 @@ public final class InstanceGroupOuterClass {
       /**
        * <pre>
        * Instance group is paused.
+       * In this state all the processes regarding the group management, i.e. scaling, checking instances' health,
+       * auto-healing and updating them, are paused. The instances that were running prior to pausing the group, however,
+       * may still be running.
+       * To resume the processes in the instance group,
+       * call [yandex.cloud.compute.v1.instancegroup.InstanceGroupService.ResumeProcesses].
+       * The group status will change to `ACTIVE`.
        * </pre>
        *
        * <code>PAUSED = 6;</code>

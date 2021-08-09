@@ -253,7 +253,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     *Creates a new SQL Server database in the specified cluster from a backup
+     * Creates a new SQL Server database in the specified cluster from a backup
      * </pre>
      */
     public void restore(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request,
@@ -369,7 +369,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     *Creates a new SQL Server database in the specified cluster from a backup
+     * Creates a new SQL Server database in the specified cluster from a backup
      * </pre>
      */
     public void restore(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request,
@@ -444,7 +444,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     *Creates a new SQL Server database in the specified cluster from a backup
+     * Creates a new SQL Server database in the specified cluster from a backup
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation restore(yandex.cloud.api.mdb.sqlserver.v1.PSDS.RestoreDatabaseRequest request) {
@@ -520,7 +520,7 @@ public final class DatabaseServiceGrpc {
 
     /**
      * <pre>
-     *Creates a new SQL Server database in the specified cluster from a backup
+     * Creates a new SQL Server database in the specified cluster from a backup
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> restore(

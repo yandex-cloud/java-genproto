@@ -133,10 +133,22 @@ public final class InstanceGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the instance group to resume processes in.
+     * The instance group must have a `PAUSED` status ([InstanceGroup.status]).
+     * To get the instance group ID, make a [InstanceGroupService.List] request.
+     * </pre>
+     *
      * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getInstanceGroupId();
     /**
+     * <pre>
+     * ID of the instance group to resume processes in.
+     * The instance group must have a `PAUSED` status ([InstanceGroup.status]).
+     * To get the instance group ID, make a [InstanceGroupService.List] request.
+     * </pre>
+     *
      * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -223,6 +235,12 @@ public final class InstanceGroupServiceOuterClass {
     public static final int INSTANCE_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceGroupId_;
     /**
+     * <pre>
+     * ID of the instance group to resume processes in.
+     * The instance group must have a `PAUSED` status ([InstanceGroup.status]).
+     * To get the instance group ID, make a [InstanceGroupService.List] request.
+     * </pre>
+     *
      * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getInstanceGroupId() {
@@ -238,6 +256,12 @@ public final class InstanceGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the instance group to resume processes in.
+     * The instance group must have a `PAUSED` status ([InstanceGroup.status]).
+     * To get the instance group ID, make a [InstanceGroupService.List] request.
+     * </pre>
+     *
      * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -559,6 +583,12 @@ public final class InstanceGroupServiceOuterClass {
 
       private java.lang.Object instanceGroupId_ = "";
       /**
+       * <pre>
+       * ID of the instance group to resume processes in.
+       * The instance group must have a `PAUSED` status ([InstanceGroup.status]).
+       * To get the instance group ID, make a [InstanceGroupService.List] request.
+       * </pre>
+       *
        * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getInstanceGroupId() {
@@ -574,6 +604,12 @@ public final class InstanceGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance group to resume processes in.
+       * The instance group must have a `PAUSED` status ([InstanceGroup.status]).
+       * To get the instance group ID, make a [InstanceGroupService.List] request.
+       * </pre>
+       *
        * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -590,6 +626,12 @@ public final class InstanceGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance group to resume processes in.
+       * The instance group must have a `PAUSED` status ([InstanceGroup.status]).
+       * To get the instance group ID, make a [InstanceGroupService.List] request.
+       * </pre>
+       *
        * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setInstanceGroupId(
@@ -603,6 +645,12 @@ public final class InstanceGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance group to resume processes in.
+       * The instance group must have a `PAUSED` status ([InstanceGroup.status]).
+       * To get the instance group ID, make a [InstanceGroupService.List] request.
+       * </pre>
+       *
        * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearInstanceGroupId() {
@@ -612,6 +660,12 @@ public final class InstanceGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance group to resume processes in.
+       * The instance group must have a `PAUSED` status ([InstanceGroup.status]).
+       * To get the instance group ID, make a [InstanceGroupService.List] request.
+       * </pre>
+       *
        * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setInstanceGroupIdBytes(
@@ -683,10 +737,18 @@ public final class InstanceGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the instance group that processes are being resumed in.
+     * </pre>
+     *
      * <code>string instance_group_id = 1;</code>
      */
     java.lang.String getInstanceGroupId();
     /**
+     * <pre>
+     * ID of the instance group that processes are being resumed in.
+     * </pre>
+     *
      * <code>string instance_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -773,6 +835,10 @@ public final class InstanceGroupServiceOuterClass {
     public static final int INSTANCE_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceGroupId_;
     /**
+     * <pre>
+     * ID of the instance group that processes are being resumed in.
+     * </pre>
+     *
      * <code>string instance_group_id = 1;</code>
      */
     public java.lang.String getInstanceGroupId() {
@@ -788,6 +854,10 @@ public final class InstanceGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the instance group that processes are being resumed in.
+     * </pre>
+     *
      * <code>string instance_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -1109,6 +1179,10 @@ public final class InstanceGroupServiceOuterClass {
 
       private java.lang.Object instanceGroupId_ = "";
       /**
+       * <pre>
+       * ID of the instance group that processes are being resumed in.
+       * </pre>
+       *
        * <code>string instance_group_id = 1;</code>
        */
       public java.lang.String getInstanceGroupId() {
@@ -1124,6 +1198,10 @@ public final class InstanceGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance group that processes are being resumed in.
+       * </pre>
+       *
        * <code>string instance_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -1140,6 +1218,10 @@ public final class InstanceGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance group that processes are being resumed in.
+       * </pre>
+       *
        * <code>string instance_group_id = 1;</code>
        */
       public Builder setInstanceGroupId(
@@ -1153,6 +1235,10 @@ public final class InstanceGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance group that processes are being resumed in.
+       * </pre>
+       *
        * <code>string instance_group_id = 1;</code>
        */
       public Builder clearInstanceGroupId() {
@@ -1162,6 +1248,10 @@ public final class InstanceGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance group that processes are being resumed in.
+       * </pre>
+       *
        * <code>string instance_group_id = 1;</code>
        */
       public Builder setInstanceGroupIdBytes(
@@ -1233,10 +1323,22 @@ public final class InstanceGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the instance group to pause processes in.
+     * The instance group must have an `ACTIVE` status ([InstanceGroup.status]).
+     * To get the instance group ID, make a [InstanceGroupService.List] request.
+     * </pre>
+     *
      * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getInstanceGroupId();
     /**
+     * <pre>
+     * ID of the instance group to pause processes in.
+     * The instance group must have an `ACTIVE` status ([InstanceGroup.status]).
+     * To get the instance group ID, make a [InstanceGroupService.List] request.
+     * </pre>
+     *
      * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -1323,6 +1425,12 @@ public final class InstanceGroupServiceOuterClass {
     public static final int INSTANCE_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceGroupId_;
     /**
+     * <pre>
+     * ID of the instance group to pause processes in.
+     * The instance group must have an `ACTIVE` status ([InstanceGroup.status]).
+     * To get the instance group ID, make a [InstanceGroupService.List] request.
+     * </pre>
+     *
      * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getInstanceGroupId() {
@@ -1338,6 +1446,12 @@ public final class InstanceGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the instance group to pause processes in.
+     * The instance group must have an `ACTIVE` status ([InstanceGroup.status]).
+     * To get the instance group ID, make a [InstanceGroupService.List] request.
+     * </pre>
+     *
      * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1659,6 +1773,12 @@ public final class InstanceGroupServiceOuterClass {
 
       private java.lang.Object instanceGroupId_ = "";
       /**
+       * <pre>
+       * ID of the instance group to pause processes in.
+       * The instance group must have an `ACTIVE` status ([InstanceGroup.status]).
+       * To get the instance group ID, make a [InstanceGroupService.List] request.
+       * </pre>
+       *
        * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getInstanceGroupId() {
@@ -1674,6 +1794,12 @@ public final class InstanceGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance group to pause processes in.
+       * The instance group must have an `ACTIVE` status ([InstanceGroup.status]).
+       * To get the instance group ID, make a [InstanceGroupService.List] request.
+       * </pre>
+       *
        * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1690,6 +1816,12 @@ public final class InstanceGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance group to pause processes in.
+       * The instance group must have an `ACTIVE` status ([InstanceGroup.status]).
+       * To get the instance group ID, make a [InstanceGroupService.List] request.
+       * </pre>
+       *
        * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setInstanceGroupId(
@@ -1703,6 +1835,12 @@ public final class InstanceGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance group to pause processes in.
+       * The instance group must have an `ACTIVE` status ([InstanceGroup.status]).
+       * To get the instance group ID, make a [InstanceGroupService.List] request.
+       * </pre>
+       *
        * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearInstanceGroupId() {
@@ -1712,6 +1850,12 @@ public final class InstanceGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance group to pause processes in.
+       * The instance group must have an `ACTIVE` status ([InstanceGroup.status]).
+       * To get the instance group ID, make a [InstanceGroupService.List] request.
+       * </pre>
+       *
        * <code>string instance_group_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setInstanceGroupIdBytes(
@@ -1783,10 +1927,18 @@ public final class InstanceGroupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the instance group that processes are being paused in.
+     * </pre>
+     *
      * <code>string instance_group_id = 1;</code>
      */
     java.lang.String getInstanceGroupId();
     /**
+     * <pre>
+     * ID of the instance group that processes are being paused in.
+     * </pre>
+     *
      * <code>string instance_group_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -1873,6 +2025,10 @@ public final class InstanceGroupServiceOuterClass {
     public static final int INSTANCE_GROUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceGroupId_;
     /**
+     * <pre>
+     * ID of the instance group that processes are being paused in.
+     * </pre>
+     *
      * <code>string instance_group_id = 1;</code>
      */
     public java.lang.String getInstanceGroupId() {
@@ -1888,6 +2044,10 @@ public final class InstanceGroupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the instance group that processes are being paused in.
+     * </pre>
+     *
      * <code>string instance_group_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -2209,6 +2369,10 @@ public final class InstanceGroupServiceOuterClass {
 
       private java.lang.Object instanceGroupId_ = "";
       /**
+       * <pre>
+       * ID of the instance group that processes are being paused in.
+       * </pre>
+       *
        * <code>string instance_group_id = 1;</code>
        */
       public java.lang.String getInstanceGroupId() {
@@ -2224,6 +2388,10 @@ public final class InstanceGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance group that processes are being paused in.
+       * </pre>
+       *
        * <code>string instance_group_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -2240,6 +2408,10 @@ public final class InstanceGroupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the instance group that processes are being paused in.
+       * </pre>
+       *
        * <code>string instance_group_id = 1;</code>
        */
       public Builder setInstanceGroupId(
@@ -2253,6 +2425,10 @@ public final class InstanceGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance group that processes are being paused in.
+       * </pre>
+       *
        * <code>string instance_group_id = 1;</code>
        */
       public Builder clearInstanceGroupId() {
@@ -2262,6 +2438,10 @@ public final class InstanceGroupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the instance group that processes are being paused in.
+       * </pre>
+       *
        * <code>string instance_group_id = 1;</code>
        */
       public Builder setInstanceGroupIdBytes(

@@ -10059,6 +10059,3988 @@ public final class NetworkServiceOuterClass {
 
   }
 
+  public interface ListNetworkSecurityGroupsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.ListNetworkSecurityGroupsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Network resource to list security groups for.
+     * </pre>
+     *
+     * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getNetworkId();
+    /**
+     * <pre>
+     * ID of the Network resource to list security groups for.
+     * </pre>
+     *
+     * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getNetworkIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListNetworkSecurityGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListNetworkSecurityGroupsResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListNetworkSecurityGroupsResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.ListNetworkSecurityGroupsRequest}
+   */
+  public  static final class ListNetworkSecurityGroupsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListNetworkSecurityGroupsRequest)
+      ListNetworkSecurityGroupsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListNetworkSecurityGroupsRequest.newBuilder() to construct.
+    private ListNetworkSecurityGroupsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListNetworkSecurityGroupsRequest() {
+      networkId_ = "";
+      pageSize_ = 0L;
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListNetworkSecurityGroupsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              networkId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest.class, yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest.Builder.class);
+    }
+
+    public static final int NETWORK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object networkId_;
+    /**
+     * <pre>
+     * ID of the Network resource to list security groups for.
+     * </pre>
+     *
+     * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getNetworkId() {
+      java.lang.Object ref = networkId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        networkId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Network resource to list security groups for.
+     * </pre>
+     *
+     * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNetworkIdBytes() {
+      java.lang.Object ref = networkId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        networkId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListNetworkSecurityGroupsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     */
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListNetworkSecurityGroupsResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListNetworkSecurityGroupsResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNetworkIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, networkId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNetworkIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, networkId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest other = (yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest) obj;
+
+      boolean result = true;
+      result = result && getNetworkId()
+          .equals(other.getNetworkId());
+      result = result && (getPageSize()
+          == other.getPageSize());
+      result = result && getPageToken()
+          .equals(other.getPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NETWORK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNetworkId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.ListNetworkSecurityGroupsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.ListNetworkSecurityGroupsRequest)
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest.class, yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        networkId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest build() {
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest buildPartial() {
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest result = new yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest(this);
+        result.networkId_ = networkId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest other) {
+        if (other == yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest.getDefaultInstance()) return this;
+        if (!other.getNetworkId().isEmpty()) {
+          networkId_ = other.networkId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object networkId_ = "";
+      /**
+       * <pre>
+       * ID of the Network resource to list security groups for.
+       * </pre>
+       *
+       * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getNetworkId() {
+        java.lang.Object ref = networkId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          networkId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Network resource to list security groups for.
+       * </pre>
+       *
+       * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNetworkIdBytes() {
+        java.lang.Object ref = networkId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          networkId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Network resource to list security groups for.
+       * </pre>
+       *
+       * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setNetworkId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        networkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Network resource to list security groups for.
+       * </pre>
+       *
+       * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearNetworkId() {
+        
+        networkId_ = getDefaultInstance().getNetworkId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Network resource to list security groups for.
+       * </pre>
+       *
+       * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setNetworkIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        networkId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListNetworkSecurityGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       */
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListNetworkSecurityGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListNetworkSecurityGroupsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListNetworkSecurityGroupsResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListNetworkSecurityGroupsResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListNetworkSecurityGroupsResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListNetworkSecurityGroupsResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListNetworkSecurityGroupsResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.ListNetworkSecurityGroupsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.ListNetworkSecurityGroupsRequest)
+    private static final yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest();
+    }
+
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListNetworkSecurityGroupsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListNetworkSecurityGroupsRequest>() {
+      @java.lang.Override
+      public ListNetworkSecurityGroupsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListNetworkSecurityGroupsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListNetworkSecurityGroupsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListNetworkSecurityGroupsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListNetworkSecurityGroupsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.ListNetworkSecurityGroupsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of security groups that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> 
+        getSecurityGroupsList();
+    /**
+     * <pre>
+     * List of security groups that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+     */
+    yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup getSecurityGroups(int index);
+    /**
+     * <pre>
+     * List of security groups that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+     */
+    int getSecurityGroupsCount();
+    /**
+     * <pre>
+     * List of security groups that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder> 
+        getSecurityGroupsOrBuilderList();
+    /**
+     * <pre>
+     * List of security groups that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+     */
+    yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder getSecurityGroupsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListNetworkSecurityGroupsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListNetworkSecurityGroupsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListNetworkSecurityGroupsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListNetworkSecurityGroupsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.ListNetworkSecurityGroupsResponse}
+   */
+  public  static final class ListNetworkSecurityGroupsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListNetworkSecurityGroupsResponse)
+      ListNetworkSecurityGroupsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListNetworkSecurityGroupsResponse.newBuilder() to construct.
+    private ListNetworkSecurityGroupsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListNetworkSecurityGroupsResponse() {
+      securityGroups_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListNetworkSecurityGroupsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                securityGroups_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              securityGroups_.add(
+                  input.readMessage(yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          securityGroups_ = java.util.Collections.unmodifiableList(securityGroups_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse.class, yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int SECURITY_GROUPS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> securityGroups_;
+    /**
+     * <pre>
+     * List of security groups that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> getSecurityGroupsList() {
+      return securityGroups_;
+    }
+    /**
+     * <pre>
+     * List of security groups that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder> 
+        getSecurityGroupsOrBuilderList() {
+      return securityGroups_;
+    }
+    /**
+     * <pre>
+     * List of security groups that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+     */
+    public int getSecurityGroupsCount() {
+      return securityGroups_.size();
+    }
+    /**
+     * <pre>
+     * List of security groups that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+     */
+    public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup getSecurityGroups(int index) {
+      return securityGroups_.get(index);
+    }
+    /**
+     * <pre>
+     * List of security groups that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+     */
+    public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder getSecurityGroupsOrBuilder(
+        int index) {
+      return securityGroups_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListNetworkSecurityGroupsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListNetworkSecurityGroupsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListNetworkSecurityGroupsRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListNetworkSecurityGroupsRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < securityGroups_.size(); i++) {
+        output.writeMessage(1, securityGroups_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < securityGroups_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, securityGroups_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse other = (yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse) obj;
+
+      boolean result = true;
+      result = result && getSecurityGroupsList()
+          .equals(other.getSecurityGroupsList());
+      result = result && getNextPageToken()
+          .equals(other.getNextPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSecurityGroupsCount() > 0) {
+        hash = (37 * hash) + SECURITY_GROUPS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecurityGroupsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.ListNetworkSecurityGroupsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.ListNetworkSecurityGroupsResponse)
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse.class, yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSecurityGroupsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (securityGroupsBuilder_ == null) {
+          securityGroups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          securityGroupsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse build() {
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse buildPartial() {
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse result = new yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (securityGroupsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            securityGroups_ = java.util.Collections.unmodifiableList(securityGroups_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.securityGroups_ = securityGroups_;
+        } else {
+          result.securityGroups_ = securityGroupsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse other) {
+        if (other == yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse.getDefaultInstance()) return this;
+        if (securityGroupsBuilder_ == null) {
+          if (!other.securityGroups_.isEmpty()) {
+            if (securityGroups_.isEmpty()) {
+              securityGroups_ = other.securityGroups_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSecurityGroupsIsMutable();
+              securityGroups_.addAll(other.securityGroups_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.securityGroups_.isEmpty()) {
+            if (securityGroupsBuilder_.isEmpty()) {
+              securityGroupsBuilder_.dispose();
+              securityGroupsBuilder_ = null;
+              securityGroups_ = other.securityGroups_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              securityGroupsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSecurityGroupsFieldBuilder() : null;
+            } else {
+              securityGroupsBuilder_.addAllMessages(other.securityGroups_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> securityGroups_ =
+        java.util.Collections.emptyList();
+      private void ensureSecurityGroupsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          securityGroups_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup>(securityGroups_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder> securityGroupsBuilder_;
+
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> getSecurityGroupsList() {
+        if (securityGroupsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(securityGroups_);
+        } else {
+          return securityGroupsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public int getSecurityGroupsCount() {
+        if (securityGroupsBuilder_ == null) {
+          return securityGroups_.size();
+        } else {
+          return securityGroupsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup getSecurityGroups(int index) {
+        if (securityGroupsBuilder_ == null) {
+          return securityGroups_.get(index);
+        } else {
+          return securityGroupsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public Builder setSecurityGroups(
+          int index, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup value) {
+        if (securityGroupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSecurityGroupsIsMutable();
+          securityGroups_.set(index, value);
+          onChanged();
+        } else {
+          securityGroupsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public Builder setSecurityGroups(
+          int index, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder builderForValue) {
+        if (securityGroupsBuilder_ == null) {
+          ensureSecurityGroupsIsMutable();
+          securityGroups_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          securityGroupsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public Builder addSecurityGroups(yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup value) {
+        if (securityGroupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSecurityGroupsIsMutable();
+          securityGroups_.add(value);
+          onChanged();
+        } else {
+          securityGroupsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public Builder addSecurityGroups(
+          int index, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup value) {
+        if (securityGroupsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSecurityGroupsIsMutable();
+          securityGroups_.add(index, value);
+          onChanged();
+        } else {
+          securityGroupsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public Builder addSecurityGroups(
+          yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder builderForValue) {
+        if (securityGroupsBuilder_ == null) {
+          ensureSecurityGroupsIsMutable();
+          securityGroups_.add(builderForValue.build());
+          onChanged();
+        } else {
+          securityGroupsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public Builder addSecurityGroups(
+          int index, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder builderForValue) {
+        if (securityGroupsBuilder_ == null) {
+          ensureSecurityGroupsIsMutable();
+          securityGroups_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          securityGroupsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public Builder addAllSecurityGroups(
+          java.lang.Iterable<? extends yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup> values) {
+        if (securityGroupsBuilder_ == null) {
+          ensureSecurityGroupsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, securityGroups_);
+          onChanged();
+        } else {
+          securityGroupsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public Builder clearSecurityGroups() {
+        if (securityGroupsBuilder_ == null) {
+          securityGroups_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          securityGroupsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public Builder removeSecurityGroups(int index) {
+        if (securityGroupsBuilder_ == null) {
+          ensureSecurityGroupsIsMutable();
+          securityGroups_.remove(index);
+          onChanged();
+        } else {
+          securityGroupsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder getSecurityGroupsBuilder(
+          int index) {
+        return getSecurityGroupsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder getSecurityGroupsOrBuilder(
+          int index) {
+        if (securityGroupsBuilder_ == null) {
+          return securityGroups_.get(index);  } else {
+          return securityGroupsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder> 
+           getSecurityGroupsOrBuilderList() {
+        if (securityGroupsBuilder_ != null) {
+          return securityGroupsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(securityGroups_);
+        }
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder addSecurityGroupsBuilder() {
+        return getSecurityGroupsFieldBuilder().addBuilder(
+            yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder addSecurityGroupsBuilder(
+          int index) {
+        return getSecurityGroupsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of security groups that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.SecurityGroup security_groups = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder> 
+           getSecurityGroupsBuilderList() {
+        return getSecurityGroupsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder> 
+          getSecurityGroupsFieldBuilder() {
+        if (securityGroupsBuilder_ == null) {
+          securityGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroup.Builder, yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.SecurityGroupOrBuilder>(
+                  securityGroups_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          securityGroups_ = null;
+        }
+        return securityGroupsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworkSecurityGroupsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworkSecurityGroupsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworkSecurityGroupsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworkSecurityGroupsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworkSecurityGroupsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworkSecurityGroupsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworkSecurityGroupsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworkSecurityGroupsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworkSecurityGroupsRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworkSecurityGroupsRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.ListNetworkSecurityGroupsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.ListNetworkSecurityGroupsResponse)
+    private static final yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse();
+    }
+
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListNetworkSecurityGroupsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListNetworkSecurityGroupsResponse>() {
+      @java.lang.Override
+      public ListNetworkSecurityGroupsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListNetworkSecurityGroupsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListNetworkSecurityGroupsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListNetworkSecurityGroupsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkSecurityGroupsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListNetworkRouteTablesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.ListNetworkRouteTablesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the Network resource to list route tables for.
+     * </pre>
+     *
+     * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getNetworkId();
+    /**
+     * <pre>
+     * ID of the Network resource to list route tables for.
+     * </pre>
+     *
+     * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getNetworkIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListNetworkRouteTablesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListNetworkRouteTablesResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListNetworkRouteTablesResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.ListNetworkRouteTablesRequest}
+   */
+  public  static final class ListNetworkRouteTablesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListNetworkRouteTablesRequest)
+      ListNetworkRouteTablesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListNetworkRouteTablesRequest.newBuilder() to construct.
+    private ListNetworkRouteTablesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListNetworkRouteTablesRequest() {
+      networkId_ = "";
+      pageSize_ = 0L;
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListNetworkRouteTablesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              networkId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest.class, yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest.Builder.class);
+    }
+
+    public static final int NETWORK_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object networkId_;
+    /**
+     * <pre>
+     * ID of the Network resource to list route tables for.
+     * </pre>
+     *
+     * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getNetworkId() {
+      java.lang.Object ref = networkId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        networkId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the Network resource to list route tables for.
+     * </pre>
+     *
+     * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNetworkIdBytes() {
+      java.lang.Object ref = networkId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        networkId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page that should be returned. If the number of available
+     * results is larger than [page_size],
+     * the service returns a [ListNetworkRouteTablesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+     */
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListNetworkRouteTablesResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. Set [page_token]
+     * to the [ListNetworkRouteTablesResponse.next_page_token]
+     * returned by a previous list request to get the next page of results.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getNetworkIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, networkId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNetworkIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, networkId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!getPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest other = (yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest) obj;
+
+      boolean result = true;
+      result = result && getNetworkId()
+          .equals(other.getNetworkId());
+      result = result && (getPageSize()
+          == other.getPageSize());
+      result = result && getPageToken()
+          .equals(other.getPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NETWORK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNetworkId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.ListNetworkRouteTablesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.ListNetworkRouteTablesRequest)
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest.class, yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        networkId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest build() {
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest buildPartial() {
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest result = new yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest(this);
+        result.networkId_ = networkId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest other) {
+        if (other == yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest.getDefaultInstance()) return this;
+        if (!other.getNetworkId().isEmpty()) {
+          networkId_ = other.networkId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object networkId_ = "";
+      /**
+       * <pre>
+       * ID of the Network resource to list route tables for.
+       * </pre>
+       *
+       * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getNetworkId() {
+        java.lang.Object ref = networkId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          networkId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Network resource to list route tables for.
+       * </pre>
+       *
+       * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNetworkIdBytes() {
+        java.lang.Object ref = networkId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          networkId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the Network resource to list route tables for.
+       * </pre>
+       *
+       * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setNetworkId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        networkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Network resource to list route tables for.
+       * </pre>
+       *
+       * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearNetworkId() {
+        
+        networkId_ = getDefaultInstance().getNetworkId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the Network resource to list route tables for.
+       * </pre>
+       *
+       * <code>string network_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setNetworkIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        networkId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListNetworkRouteTablesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       */
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListNetworkRouteTablesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than [page_size],
+       * the service returns a [ListNetworkRouteTablesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests. Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListNetworkRouteTablesResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListNetworkRouteTablesResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListNetworkRouteTablesResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListNetworkRouteTablesResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. Set [page_token]
+       * to the [ListNetworkRouteTablesResponse.next_page_token]
+       * returned by a previous list request to get the next page of results.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.ListNetworkRouteTablesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.ListNetworkRouteTablesRequest)
+    private static final yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest();
+    }
+
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListNetworkRouteTablesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListNetworkRouteTablesRequest>() {
+      @java.lang.Override
+      public ListNetworkRouteTablesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListNetworkRouteTablesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListNetworkRouteTablesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListNetworkRouteTablesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListNetworkRouteTablesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.ListNetworkRouteTablesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of route tables that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable> 
+        getRouteTablesList();
+    /**
+     * <pre>
+     * List of route tables that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+     */
+    yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable getRouteTables(int index);
+    /**
+     * <pre>
+     * List of route tables that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+     */
+    int getRouteTablesCount();
+    /**
+     * <pre>
+     * List of route tables that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTableOrBuilder> 
+        getRouteTablesOrBuilderList();
+    /**
+     * <pre>
+     * List of route tables that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+     */
+    yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTableOrBuilder getRouteTablesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListNetworkRouteTablesRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListNetworkRouteTablesRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListNetworkRouteTablesRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListNetworkRouteTablesRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.ListNetworkRouteTablesResponse}
+   */
+  public  static final class ListNetworkRouteTablesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.ListNetworkRouteTablesResponse)
+      ListNetworkRouteTablesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListNetworkRouteTablesResponse.newBuilder() to construct.
+    private ListNetworkRouteTablesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListNetworkRouteTablesResponse() {
+      routeTables_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListNetworkRouteTablesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                routeTables_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              routeTables_.add(
+                  input.readMessage(yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          routeTables_ = java.util.Collections.unmodifiableList(routeTables_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse.class, yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ROUTE_TABLES_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable> routeTables_;
+    /**
+     * <pre>
+     * List of route tables that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable> getRouteTablesList() {
+      return routeTables_;
+    }
+    /**
+     * <pre>
+     * List of route tables that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTableOrBuilder> 
+        getRouteTablesOrBuilderList() {
+      return routeTables_;
+    }
+    /**
+     * <pre>
+     * List of route tables that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+     */
+    public int getRouteTablesCount() {
+      return routeTables_.size();
+    }
+    /**
+     * <pre>
+     * List of route tables that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+     */
+    public yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable getRouteTables(int index) {
+      return routeTables_.get(index);
+    }
+    /**
+     * <pre>
+     * List of route tables that belong to the network which is specified in the request.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+     */
+    public yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTableOrBuilder getRouteTablesOrBuilder(
+        int index) {
+      return routeTables_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListNetworkRouteTablesRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListNetworkRouteTablesRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This token allows you to get the next page of results for list requests. If the number of results
+     * is larger than [ListNetworkRouteTablesRequest.page_size], use
+     * the [next_page_token] as the value
+     * for the [ListNetworkRouteTablesRequest.page_token] query parameter
+     * in the next list request. Subsequent list requests will have their own
+     * [next_page_token] to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < routeTables_.size(); i++) {
+        output.writeMessage(1, routeTables_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < routeTables_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, routeTables_.get(i));
+      }
+      if (!getNextPageTokenBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse other = (yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse) obj;
+
+      boolean result = true;
+      result = result && getRouteTablesList()
+          .equals(other.getRouteTablesList());
+      result = result && getNextPageToken()
+          .equals(other.getNextPageToken());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRouteTablesCount() > 0) {
+        hash = (37 * hash) + ROUTE_TABLES_FIELD_NUMBER;
+        hash = (53 * hash) + getRouteTablesList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.ListNetworkRouteTablesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.ListNetworkRouteTablesResponse)
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse.class, yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRouteTablesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (routeTablesBuilder_ == null) {
+          routeTables_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          routeTablesBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse build() {
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse buildPartial() {
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse result = new yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (routeTablesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            routeTables_ = java.util.Collections.unmodifiableList(routeTables_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.routeTables_ = routeTables_;
+        } else {
+          result.routeTables_ = routeTablesBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse other) {
+        if (other == yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse.getDefaultInstance()) return this;
+        if (routeTablesBuilder_ == null) {
+          if (!other.routeTables_.isEmpty()) {
+            if (routeTables_.isEmpty()) {
+              routeTables_ = other.routeTables_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRouteTablesIsMutable();
+              routeTables_.addAll(other.routeTables_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.routeTables_.isEmpty()) {
+            if (routeTablesBuilder_.isEmpty()) {
+              routeTablesBuilder_.dispose();
+              routeTablesBuilder_ = null;
+              routeTables_ = other.routeTables_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              routeTablesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRouteTablesFieldBuilder() : null;
+            } else {
+              routeTablesBuilder_.addAllMessages(other.routeTables_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable> routeTables_ =
+        java.util.Collections.emptyList();
+      private void ensureRouteTablesIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          routeTables_ = new java.util.ArrayList<yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable>(routeTables_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable, yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.Builder, yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTableOrBuilder> routeTablesBuilder_;
+
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable> getRouteTablesList() {
+        if (routeTablesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(routeTables_);
+        } else {
+          return routeTablesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public int getRouteTablesCount() {
+        if (routeTablesBuilder_ == null) {
+          return routeTables_.size();
+        } else {
+          return routeTablesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable getRouteTables(int index) {
+        if (routeTablesBuilder_ == null) {
+          return routeTables_.get(index);
+        } else {
+          return routeTablesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public Builder setRouteTables(
+          int index, yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable value) {
+        if (routeTablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRouteTablesIsMutable();
+          routeTables_.set(index, value);
+          onChanged();
+        } else {
+          routeTablesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public Builder setRouteTables(
+          int index, yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.Builder builderForValue) {
+        if (routeTablesBuilder_ == null) {
+          ensureRouteTablesIsMutable();
+          routeTables_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          routeTablesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public Builder addRouteTables(yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable value) {
+        if (routeTablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRouteTablesIsMutable();
+          routeTables_.add(value);
+          onChanged();
+        } else {
+          routeTablesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public Builder addRouteTables(
+          int index, yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable value) {
+        if (routeTablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRouteTablesIsMutable();
+          routeTables_.add(index, value);
+          onChanged();
+        } else {
+          routeTablesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public Builder addRouteTables(
+          yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.Builder builderForValue) {
+        if (routeTablesBuilder_ == null) {
+          ensureRouteTablesIsMutable();
+          routeTables_.add(builderForValue.build());
+          onChanged();
+        } else {
+          routeTablesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public Builder addRouteTables(
+          int index, yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.Builder builderForValue) {
+        if (routeTablesBuilder_ == null) {
+          ensureRouteTablesIsMutable();
+          routeTables_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          routeTablesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public Builder addAllRouteTables(
+          java.lang.Iterable<? extends yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable> values) {
+        if (routeTablesBuilder_ == null) {
+          ensureRouteTablesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, routeTables_);
+          onChanged();
+        } else {
+          routeTablesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public Builder clearRouteTables() {
+        if (routeTablesBuilder_ == null) {
+          routeTables_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          routeTablesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public Builder removeRouteTables(int index) {
+        if (routeTablesBuilder_ == null) {
+          ensureRouteTablesIsMutable();
+          routeTables_.remove(index);
+          onChanged();
+        } else {
+          routeTablesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.Builder getRouteTablesBuilder(
+          int index) {
+        return getRouteTablesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTableOrBuilder getRouteTablesOrBuilder(
+          int index) {
+        if (routeTablesBuilder_ == null) {
+          return routeTables_.get(index);  } else {
+          return routeTablesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTableOrBuilder> 
+           getRouteTablesOrBuilderList() {
+        if (routeTablesBuilder_ != null) {
+          return routeTablesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(routeTables_);
+        }
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.Builder addRouteTablesBuilder() {
+        return getRouteTablesFieldBuilder().addBuilder(
+            yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.Builder addRouteTablesBuilder(
+          int index) {
+        return getRouteTablesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of route tables that belong to the network which is specified in the request.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.vpc.v1.RouteTable route_tables = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.Builder> 
+           getRouteTablesBuilderList() {
+        return getRouteTablesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable, yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.Builder, yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTableOrBuilder> 
+          getRouteTablesFieldBuilder() {
+        if (routeTablesBuilder_ == null) {
+          routeTablesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable, yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTable.Builder, yandex.cloud.api.vpc.v1.RouteTableOuterClass.RouteTableOrBuilder>(
+                  routeTables_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          routeTables_ = null;
+        }
+        return routeTablesBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworkRouteTablesRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworkRouteTablesRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworkRouteTablesRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworkRouteTablesRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworkRouteTablesRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworkRouteTablesRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworkRouteTablesRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworkRouteTablesRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This token allows you to get the next page of results for list requests. If the number of results
+       * is larger than [ListNetworkRouteTablesRequest.page_size], use
+       * the [next_page_token] as the value
+       * for the [ListNetworkRouteTablesRequest.page_token] query parameter
+       * in the next list request. Subsequent list requests will have their own
+       * [next_page_token] to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.ListNetworkRouteTablesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.ListNetworkRouteTablesResponse)
+    private static final yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse();
+    }
+
+    public static yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListNetworkRouteTablesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListNetworkRouteTablesResponse>() {
+      @java.lang.Override
+      public ListNetworkRouteTablesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListNetworkRouteTablesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListNetworkRouteTablesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListNetworkRouteTablesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.NetworkServiceOuterClass.ListNetworkRouteTablesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListNetworkOperationsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.ListNetworkOperationsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -13429,6 +17411,26 @@ public final class NetworkServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_vpc_v1_ListNetworkSubnetsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_vpc_v1_ListNetworkOperationsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -13462,88 +17464,111 @@ public final class NetworkServiceOuterClass {
       "otations.proto\032 google/protobuf/field_ma" +
       "sk.proto\032 yandex/cloud/api/operation.pro" +
       "to\032!yandex/cloud/vpc/v1/network.proto\032 y" +
-      "andex/cloud/vpc/v1/subnet.proto\032&yandex/" +
-      "cloud/operation/operation.proto\032\035yandex/" +
-      "cloud/validation.proto\"5\n\021GetNetworkRequ" +
-      "est\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001" +
-      "\n\023ListNetworksRequest\022\037\n\tfolder_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
-      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006" +
-      "filter\030\004 \001(\tB\n\212\3101\006<=1000\"_\n\024ListNetworks" +
-      "Response\022.\n\010networks\030\001 \003(\0132\034.yandex.clou" +
-      "d.vpc.v1.Network\022\027\n\017next_page_token\030\002 \001(" +
-      "\t\"\300\002\n\024CreateNetworkRequest\022\037\n\tfolder_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035|" +
-      "[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descript" +
-      "ion\030\003 \001(\tB\t\212\3101\005<=256\022\206\001\n\006labels\030\004 \003(\01325." +
-      "yandex.cloud.vpc.v1.CreateNetworkRequest" +
-      ".LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9" +
-      "a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"+\n\025CreateNetworkMetadata\022\022\n\nnetwork" +
-      "_id\030\001 \001(\t\"\362\002\n\024UpdateNetworkRequest\022 \n\nne" +
-      "twork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_m" +
-      "ask\030\002 \001(\0132\032.google.protobuf.FieldMask\022/\n" +
-      "\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a" +
-      "-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\206" +
-      "\001\n\006labels\030\005 \003(\01325.yandex.cloud.vpc.v1.Up" +
-      "dateNetworkRequest.LabelsEntryB?\202\3101\004<=64" +
-      "\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[" +
-      "a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateNetworkM" +
-      "etadata\022\022\n\nnetwork_id\030\001 \001(\t\"8\n\024DeleteNet" +
-      "workRequest\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\"+\n\025DeleteNetworkMetadata\022\022\n\nnetwor" +
-      "k_id\030\001 \001(\t\"{\n\031ListNetworkSubnetsRequest\022" +
-      " \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpag" +
-      "e_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003" +
-      " \001(\tB\t\212\3101\005<=100\"c\n\032ListNetworkSubnetsRes" +
-      "ponse\022,\n\007subnets\030\001 \003(\0132\033.yandex.cloud.vp" +
-      "c.v1.Subnet\022\027\n\017next_page_token\030\002 \001(\t\"~\n\034" +
-      "ListNetworkOperationsRequest\022 \n\nnetwork_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
-      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
-      "=100\"o\n\035ListNetworkOperationsResponse\0225\n" +
-      "\noperations\030\001 \003(\0132!.yandex.cloud.operati" +
-      "on.Operation\022\027\n\017next_page_token\030\002 \001(\t\"c\n" +
-      "\022MoveNetworkRequest\022 \n\nnetwork_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_id\030\002" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023MoveNetworkMetadat" +
-      "a\022\022\n\nnetwork_id\030\001 \001(\t2\340\t\n\016NetworkService" +
-      "\022r\n\003Get\022&.yandex.cloud.vpc.v1.GetNetwork" +
-      "Request\032\034.yandex.cloud.vpc.v1.Network\"%\202" +
-      "\323\344\223\002\037\022\035/vpc/v1/networks/{network_id}\022u\n\004" +
-      "List\022(.yandex.cloud.vpc.v1.ListNetworksR" +
-      "equest\032).yandex.cloud.vpc.v1.ListNetwork" +
-      "sResponse\"\030\202\323\344\223\002\022\022\020/vpc/v1/networks\022\227\001\n\006" +
-      "Create\022).yandex.cloud.vpc.v1.CreateNetwo" +
-      "rkRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"?\202\323\344\223\002\025\"\020/vpc/v1/networks:\001*\262\322* \n\025C" +
-      "reateNetworkMetadata\022\007Network\022\244\001\n\006Update" +
-      "\022).yandex.cloud.vpc.v1.UpdateNetworkRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"L" +
-      "\202\323\344\223\002\"2\035/vpc/v1/networks/{network_id}:\001*" +
-      "\262\322* \n\025UpdateNetworkMetadata\022\007Network\022\257\001\n" +
-      "\006Delete\022).yandex.cloud.vpc.v1.DeleteNetw" +
-      "orkRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"W\202\323\344\223\002\037*\035/vpc/v1/networks/{network" +
-      "_id}\262\322*.\n\025DeleteNetworkMetadata\022\025google." +
-      "protobuf.Empty\022\235\001\n\013ListSubnets\022..yandex." +
-      "cloud.vpc.v1.ListNetworkSubnetsRequest\032/" +
-      ".yandex.cloud.vpc.v1.ListNetworkSubnetsR" +
-      "esponse\"-\202\323\344\223\002\'\022%/vpc/v1/networks/{netwo" +
-      "rk_id}/subnets\022\251\001\n\016ListOperations\0221.yand" +
-      "ex.cloud.vpc.v1.ListNetworkOperationsReq" +
-      "uest\0322.yandex.cloud.vpc.v1.ListNetworkOp" +
-      "erationsResponse\"0\202\323\344\223\002*\022(/vpc/v1/networ" +
-      "ks/{network_id}/operations\022\243\001\n\004Move\022\'.ya" +
-      "ndex.cloud.vpc.v1.MoveNetworkRequest\032!.y" +
-      "andex.cloud.operation.Operation\"O\202\323\344\223\002\'\"" +
-      "\"/vpc/v1/networks/{network_id}:move:\001*\262\322" +
-      "*\036\n\023MoveNetworkMetadata\022\007NetworkBV\n\027yand" +
-      "ex.cloud.api.vpc.v1Z;github.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/vpc/v1;vpc" +
-      "b\006proto3"
+      "andex/cloud/vpc/v1/subnet.proto\032(yandex/" +
+      "cloud/vpc/v1/security_group.proto\032%yande" +
+      "x/cloud/vpc/v1/route_table.proto\032&yandex" +
+      "/cloud/operation/operation.proto\032\035yandex" +
+      "/cloud/validation.proto\"5\n\021GetNetworkReq" +
+      "uest\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220" +
+      "\001\n\023ListNetworksRequest\022\037\n\tfolder_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
+      "<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n" +
+      "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"_\n\024ListNetwork" +
+      "sResponse\022.\n\010networks\030\001 \003(\0132\034.yandex.clo" +
+      "ud.vpc.v1.Network\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\"\300\002\n\024CreateNetworkRequest\022\037\n\tfolder_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\004name\030\002 \001(\tB!\362\3071\035" +
+      "|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descrip" +
+      "tion\030\003 \001(\tB\t\212\3101\005<=256\022\206\001\n\006labels\030\004 \003(\01325" +
+      ".yandex.cloud.vpc.v1.CreateNetworkReques" +
+      "t.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-" +
+      "9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-" +
+      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\"+\n\025CreateNetworkMetadata\022\022\n\nnetwor" +
+      "k_id\030\001 \001(\t\"\362\002\n\024UpdateNetworkRequest\022 \n\nn" +
+      "etwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_" +
+      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\022/" +
+      "\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[" +
+      "a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022" +
+      "\206\001\n\006labels\030\005 \003(\01325.yandex.cloud.vpc.v1.U" +
+      "pdateNetworkRequest.LabelsEntryB?\202\3101\004<=6" +
+      "4\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020" +
+      "[a-z][-_0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateNetwork" +
+      "Metadata\022\022\n\nnetwork_id\030\001 \001(\t\"8\n\024DeleteNe" +
+      "tworkRequest\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\"+\n\025DeleteNetworkMetadata\022\022\n\nnetwo" +
+      "rk_id\030\001 \001(\t\"{\n\031ListNetworkSubnetsRequest" +
+      "\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
+      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
+      "\003 \001(\tB\t\212\3101\005<=100\"c\n\032ListNetworkSubnetsRe" +
+      "sponse\022,\n\007subnets\030\001 \003(\0132\033.yandex.cloud.v" +
+      "pc.v1.Subnet\022\027\n\017next_page_token\030\002 \001(\t\"\202\001" +
+      "\n ListNetworkSecurityGroupsRequest\022 \n\nne" +
+      "twork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_siz" +
+      "e\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB" +
+      "\t\212\3101\005<=100\"y\n!ListNetworkSecurityGroupsR" +
+      "esponse\022;\n\017security_groups\030\001 \003(\0132\".yande" +
+      "x.cloud.vpc.v1.SecurityGroup\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t\"\177\n\035ListNetworkRouteTablesR" +
+      "equest\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
+      "token\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036ListNetworkRou" +
+      "teTablesResponse\0225\n\014route_tables\030\001 \003(\0132\037" +
+      ".yandex.cloud.vpc.v1.RouteTable\022\027\n\017next_" +
+      "page_token\030\002 \001(\t\"~\n\034ListNetworkOperation" +
+      "sRequest\022 \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npag" +
+      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListNetworkO" +
+      "perationsResponse\0225\n\noperations\030\001 \003(\0132!." +
+      "yandex.cloud.operation.Operation\022\027\n\017next" +
+      "_page_token\030\002 \001(\t\"c\n\022MoveNetworkRequest\022" +
+      " \n\nnetwork_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025des" +
+      "tination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\")" +
+      "\n\023MoveNetworkMetadata\022\022\n\nnetwork_id\030\001 \001(" +
+      "\t2\316\014\n\016NetworkService\022r\n\003Get\022&.yandex.clo" +
+      "ud.vpc.v1.GetNetworkRequest\032\034.yandex.clo" +
+      "ud.vpc.v1.Network\"%\202\323\344\223\002\037\022\035/vpc/v1/netwo" +
+      "rks/{network_id}\022u\n\004List\022(.yandex.cloud." +
+      "vpc.v1.ListNetworksRequest\032).yandex.clou" +
+      "d.vpc.v1.ListNetworksResponse\"\030\202\323\344\223\002\022\022\020/" +
+      "vpc/v1/networks\022\227\001\n\006Create\022).yandex.clou" +
+      "d.vpc.v1.CreateNetworkRequest\032!.yandex.c" +
+      "loud.operation.Operation\"?\202\323\344\223\002\025\"\020/vpc/v" +
+      "1/networks:\001*\262\322* \n\025CreateNetworkMetadata" +
+      "\022\007Network\022\244\001\n\006Update\022).yandex.cloud.vpc." +
+      "v1.UpdateNetworkRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"L\202\323\344\223\002\"2\035/vpc/v1/netw" +
+      "orks/{network_id}:\001*\262\322* \n\025UpdateNetworkM" +
+      "etadata\022\007Network\022\257\001\n\006Delete\022).yandex.clo" +
+      "ud.vpc.v1.DeleteNetworkRequest\032!.yandex." +
+      "cloud.operation.Operation\"W\202\323\344\223\002\037*\035/vpc/" +
+      "v1/networks/{network_id}\262\322*.\n\025DeleteNetw" +
+      "orkMetadata\022\025google.protobuf.Empty\022\235\001\n\013L" +
+      "istSubnets\022..yandex.cloud.vpc.v1.ListNet" +
+      "workSubnetsRequest\032/.yandex.cloud.vpc.v1" +
+      ".ListNetworkSubnetsResponse\"-\202\323\344\223\002\'\022%/vp" +
+      "c/v1/networks/{network_id}/subnets\022\272\001\n\022L" +
+      "istSecurityGroups\0225.yandex.cloud.vpc.v1." +
+      "ListNetworkSecurityGroupsRequest\0326.yande" +
+      "x.cloud.vpc.v1.ListNetworkSecurityGroups" +
+      "Response\"5\202\323\344\223\002/\022-/vpc/v1/networks/{netw" +
+      "ork_id}/security_groups\022\256\001\n\017ListRouteTab" +
+      "les\0222.yandex.cloud.vpc.v1.ListNetworkRou" +
+      "teTablesRequest\0323.yandex.cloud.vpc.v1.Li" +
+      "stNetworkRouteTablesResponse\"2\202\323\344\223\002,\022*/v" +
+      "pc/v1/networks/{network_id}/route_tables" +
+      "\022\251\001\n\016ListOperations\0221.yandex.cloud.vpc.v" +
+      "1.ListNetworkOperationsRequest\0322.yandex." +
+      "cloud.vpc.v1.ListNetworkOperationsRespon" +
+      "se\"0\202\323\344\223\002*\022(/vpc/v1/networks/{network_id" +
+      "}/operations\022\243\001\n\004Move\022\'.yandex.cloud.vpc" +
+      ".v1.MoveNetworkRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"O\202\323\344\223\002\'\"\"/vpc/v1/netwo" +
+      "rks/{network_id}:move:\001*\262\322*\036\n\023MoveNetwor" +
+      "kMetadata\022\007NetworkBV\n\027yandex.cloud.api.v" +
+      "pc.v1Z;github.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/vpc/v1;vpcb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13561,6 +17586,8 @@ public final class NetworkServiceOuterClass {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.vpc.v1.NetworkOuterClass.getDescriptor(),
           yandex.cloud.api.vpc.v1.SubnetOuterClass.getDescriptor(),
+          yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.getDescriptor(),
+          yandex.cloud.api.vpc.v1.RouteTableOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         }, assigner);
@@ -13642,26 +17669,50 @@ public final class NetworkServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_ListNetworkSubnetsResponse_descriptor,
         new java.lang.String[] { "Subnets", "NextPageToken", });
-    internal_static_yandex_cloud_vpc_v1_ListNetworkOperationsRequest_descriptor =
+    internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsRequest_descriptor =
       getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsRequest_descriptor,
+        new java.lang.String[] { "NetworkId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_ListNetworkSecurityGroupsResponse_descriptor,
+        new java.lang.String[] { "SecurityGroups", "NextPageToken", });
+    internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesRequest_descriptor,
+        new java.lang.String[] { "NetworkId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_ListNetworkRouteTablesResponse_descriptor,
+        new java.lang.String[] { "RouteTables", "NextPageToken", });
+    internal_static_yandex_cloud_vpc_v1_ListNetworkOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_vpc_v1_ListNetworkOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_ListNetworkOperationsRequest_descriptor,
         new java.lang.String[] { "NetworkId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_vpc_v1_ListNetworkOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_vpc_v1_ListNetworkOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_ListNetworkOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_vpc_v1_MoveNetworkRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_vpc_v1_MoveNetworkRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_MoveNetworkRequest_descriptor,
         new java.lang.String[] { "NetworkId", "DestinationFolderId", });
     internal_static_yandex_cloud_vpc_v1_MoveNetworkMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_vpc_v1_MoveNetworkMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_MoveNetworkMetadata_descriptor,
@@ -13683,6 +17734,8 @@ public final class NetworkServiceOuterClass {
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.vpc.v1.NetworkOuterClass.getDescriptor();
     yandex.cloud.api.vpc.v1.SubnetOuterClass.getDescriptor();
+    yandex.cloud.api.vpc.v1.SecurityGroupOuterClass.getDescriptor();
+    yandex.cloud.api.vpc.v1.RouteTableOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

@@ -845,7 +845,8 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Resume all process in instance group.
+     * Resumes all processes regarding management of the specified instance group,
+     * i.e. scaling, checking instances' health, auto-healing and updating them.
      * </pre>
      */
     public void resumeProcesses(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest request,
@@ -855,7 +856,8 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Pause all process in instance group.
+     * Pauses all processes regarding management of the specified instance group,
+     * i.e. scaling, checking instances' health, auto-healing and updating them. Running instances are not stopped.
      * </pre>
      */
     public void pauseProcesses(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest request,
@@ -1217,7 +1219,8 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Resume all process in instance group.
+     * Resumes all processes regarding management of the specified instance group,
+     * i.e. scaling, checking instances' health, auto-healing and updating them.
      * </pre>
      */
     public void resumeProcesses(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest request,
@@ -1228,7 +1231,8 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Pause all process in instance group.
+     * Pauses all processes regarding management of the specified instance group,
+     * i.e. scaling, checking instances' health, auto-healing and updating them. Running instances are not stopped.
      * </pre>
      */
     public void pauseProcesses(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest request,
@@ -1436,7 +1440,8 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Resume all process in instance group.
+     * Resumes all processes regarding management of the specified instance group,
+     * i.e. scaling, checking instances' health, auto-healing and updating them.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation resumeProcesses(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.ResumeInstanceGroupProcessesRequest request) {
@@ -1446,7 +1451,8 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Pause all process in instance group.
+     * Pauses all processes regarding management of the specified instance group,
+     * i.e. scaling, checking instances' health, auto-healing and updating them. Running instances are not stopped.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation pauseProcesses(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.PauseInstanceGroupProcessesRequest request) {
@@ -1670,7 +1676,8 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Resume all process in instance group.
+     * Resumes all processes regarding management of the specified instance group,
+     * i.e. scaling, checking instances' health, auto-healing and updating them.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> resumeProcesses(
@@ -1681,7 +1688,8 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
-     * Pause all process in instance group.
+     * Pauses all processes regarding management of the specified instance group,
+     * i.e. scaling, checking instances' health, auto-healing and updating them. Running instances are not stopped.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> pauseProcesses(

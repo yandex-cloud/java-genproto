@@ -96,6 +96,24 @@ public final class CloudOuterClass {
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
+
+    /**
+     * <pre>
+     * ID of the organization that the cloud belongs to.
+     * </pre>
+     *
+     * <code>string organization_id = 6;</code>
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <pre>
+     * ID of the organization that the cloud belongs to.
+     * </pre>
+     *
+     * <code>string organization_id = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
   }
   /**
    * <pre>
@@ -117,6 +135,7 @@ public final class CloudOuterClass {
       id_ = "";
       name_ = "";
       description_ = "";
+      organizationId_ = "";
     }
 
     @java.lang.Override
@@ -172,6 +191,12 @@ public final class CloudOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               description_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              organizationId_ = s;
               break;
             }
             default: {
@@ -365,6 +390,48 @@ public final class CloudOuterClass {
       }
     }
 
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 6;
+    private volatile java.lang.Object organizationId_;
+    /**
+     * <pre>
+     * ID of the organization that the cloud belongs to.
+     * </pre>
+     *
+     * <code>string organization_id = 6;</code>
+     */
+    public java.lang.String getOrganizationId() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        organizationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the organization that the cloud belongs to.
+     * </pre>
+     *
+     * <code>string organization_id = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        organizationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -391,6 +458,9 @@ public final class CloudOuterClass {
       if (!getDescriptionBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
+      if (!getOrganizationIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, organizationId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -412,6 +482,9 @@ public final class CloudOuterClass {
       }
       if (!getDescriptionBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      }
+      if (!getOrganizationIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, organizationId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -440,6 +513,8 @@ public final class CloudOuterClass {
           .equals(other.getName());
       result = result && getDescription()
           .equals(other.getDescription());
+      result = result && getOrganizationId()
+          .equals(other.getOrganizationId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -461,6 +536,8 @@ public final class CloudOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
       hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganizationId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -610,6 +687,8 @@ public final class CloudOuterClass {
 
         description_ = "";
 
+        organizationId_ = "";
+
         return this;
       }
 
@@ -644,6 +723,7 @@ public final class CloudOuterClass {
         }
         result.name_ = name_;
         result.description_ = description_;
+        result.organizationId_ = organizationId_;
         onBuilt();
         return result;
       }
@@ -705,6 +785,10 @@ public final class CloudOuterClass {
         }
         if (!other.getDescription().isEmpty()) {
           description_ = other.description_;
+          onChanged();
+        }
+        if (!other.getOrganizationId().isEmpty()) {
+          organizationId_ = other.organizationId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1155,6 +1239,95 @@ public final class CloudOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object organizationId_ = "";
+      /**
+       * <pre>
+       * ID of the organization that the cloud belongs to.
+       * </pre>
+       *
+       * <code>string organization_id = 6;</code>
+       */
+      public java.lang.String getOrganizationId() {
+        java.lang.Object ref = organizationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          organizationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the organization that the cloud belongs to.
+       * </pre>
+       *
+       * <code>string organization_id = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        java.lang.Object ref = organizationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          organizationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the organization that the cloud belongs to.
+       * </pre>
+       *
+       * <code>string organization_id = 6;</code>
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the organization that the cloud belongs to.
+       * </pre>
+       *
+       * <code>string organization_id = 6;</code>
+       */
+      public Builder clearOrganizationId() {
+        
+        organizationId_ = getDefaultInstance().getOrganizationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the organization that the cloud belongs to.
+       * </pre>
+       *
+       * <code>string organization_id = 6;</code>
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        organizationId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1224,13 +1397,14 @@ public final class CloudOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/resourcemanager/v1/cloud." +
       "proto\022\037yandex.cloud.resourcemanager.v1\032\037" +
-      "google/protobuf/timestamp.proto\"f\n\005Cloud" +
+      "google/protobuf/timestamp.proto\"\177\n\005Cloud" +
       "\022\n\n\002id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032.googl" +
       "e.protobuf.Timestamp\022\014\n\004name\030\003 \001(\t\022\023\n\013de" +
-      "scription\030\004 \001(\tBz\n#yandex.cloud.api.reso" +
-      "urcemanager.v1ZSgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/resourcemanager" +
-      "/v1;resourcemanagerb\006proto3"
+      "scription\030\004 \001(\t\022\027\n\017organization_id\030\006 \001(\t" +
+      "Bz\n#yandex.cloud.api.resourcemanager.v1Z" +
+      "Sgithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/resourcemanager/v1;resourceman" +
+      "agerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1250,7 +1424,7 @@ public final class CloudOuterClass {
     internal_static_yandex_cloud_resourcemanager_v1_Cloud_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_Cloud_descriptor,
-        new java.lang.String[] { "Id", "CreatedAt", "Name", "Description", });
+        new java.lang.String[] { "Id", "CreatedAt", "Name", "Description", "OrganizationId", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
