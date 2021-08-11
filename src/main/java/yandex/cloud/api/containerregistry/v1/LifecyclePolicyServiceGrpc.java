@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * A set of methods for managing Lifecycle policy resources.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.22.0)",
@@ -339,10 +342,17 @@ public final class LifecyclePolicyServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Lifecycle policy resources.
+   * </pre>
    */
   public static abstract class LifecyclePolicyServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified lifecycle policy.
+     * To get the list of all available lifecycle policies, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy> responseObserver) {
@@ -350,6 +360,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of lifecycle policies in the specified repository.
+     * </pre>
      */
     public void list(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse> responseObserver) {
@@ -357,6 +370,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a lifecycle policy in the specified repository.
+     * </pre>
      */
     public void create(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -364,6 +380,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified lifecycle policy.
+     * </pre>
      */
     public void update(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -371,6 +390,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified lifecycle policy.
+     * </pre>
      */
     public void delete(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -378,6 +400,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a request of a dry run of the lifecycle policy.
+     * </pre>
      */
     public void dryRun(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -385,6 +410,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the dry run result of the specified lifecycle policy.
+     * </pre>
      */
     public void getDryRunResult(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> responseObserver) {
@@ -392,6 +420,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of the dry run results.
+     * </pre>
      */
     public void listDryRunResults(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse> responseObserver) {
@@ -399,6 +430,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of the affected images.
+     * </pre>
      */
     public void listDryRunResultAffectedImages(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse> responseObserver) {
@@ -475,6 +509,9 @@ public final class LifecyclePolicyServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Lifecycle policy resources.
+   * </pre>
    */
   public static final class LifecyclePolicyServiceStub extends io.grpc.stub.AbstractStub<LifecyclePolicyServiceStub> {
     private LifecyclePolicyServiceStub(io.grpc.Channel channel) {
@@ -493,6 +530,10 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified lifecycle policy.
+     * To get the list of all available lifecycle policies, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy> responseObserver) {
@@ -501,6 +542,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of lifecycle policies in the specified repository.
+     * </pre>
      */
     public void list(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse> responseObserver) {
@@ -509,6 +553,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a lifecycle policy in the specified repository.
+     * </pre>
      */
     public void create(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -517,6 +564,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified lifecycle policy.
+     * </pre>
      */
     public void update(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -525,6 +575,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified lifecycle policy.
+     * </pre>
      */
     public void delete(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -533,6 +586,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a request of a dry run of the lifecycle policy.
+     * </pre>
      */
     public void dryRun(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -541,6 +597,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the dry run result of the specified lifecycle policy.
+     * </pre>
      */
     public void getDryRunResult(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> responseObserver) {
@@ -549,6 +608,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of the dry run results.
+     * </pre>
      */
     public void listDryRunResults(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse> responseObserver) {
@@ -557,6 +619,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of the affected images.
+     * </pre>
      */
     public void listDryRunResultAffectedImages(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse> responseObserver) {
@@ -566,6 +631,9 @@ public final class LifecyclePolicyServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Lifecycle policy resources.
+   * </pre>
    */
   public static final class LifecyclePolicyServiceBlockingStub extends io.grpc.stub.AbstractStub<LifecyclePolicyServiceBlockingStub> {
     private LifecyclePolicyServiceBlockingStub(io.grpc.Channel channel) {
@@ -584,6 +652,10 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified lifecycle policy.
+     * To get the list of all available lifecycle policies, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy get(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetLifecyclePolicyRequest request) {
       return blockingUnaryCall(
@@ -591,6 +663,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of lifecycle policies in the specified repository.
+     * </pre>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse list(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest request) {
       return blockingUnaryCall(
@@ -598,6 +673,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a lifecycle policy in the specified repository.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest request) {
       return blockingUnaryCall(
@@ -605,6 +683,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified lifecycle policy.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest request) {
       return blockingUnaryCall(
@@ -612,6 +693,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified lifecycle policy.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest request) {
       return blockingUnaryCall(
@@ -619,6 +703,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a request of a dry run of the lifecycle policy.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation dryRun(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest request) {
       return blockingUnaryCall(
@@ -626,6 +713,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the dry run result of the specified lifecycle policy.
+     * </pre>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult getDryRunResult(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest request) {
       return blockingUnaryCall(
@@ -633,6 +723,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of the dry run results.
+     * </pre>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse listDryRunResults(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest request) {
       return blockingUnaryCall(
@@ -640,6 +733,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of the affected images.
+     * </pre>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse listDryRunResultAffectedImages(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest request) {
       return blockingUnaryCall(
@@ -648,6 +744,9 @@ public final class LifecyclePolicyServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Lifecycle policy resources.
+   * </pre>
    */
   public static final class LifecyclePolicyServiceFutureStub extends io.grpc.stub.AbstractStub<LifecyclePolicyServiceFutureStub> {
     private LifecyclePolicyServiceFutureStub(io.grpc.Channel channel) {
@@ -666,6 +765,10 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified lifecycle policy.
+     * To get the list of all available lifecycle policies, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy> get(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetLifecyclePolicyRequest request) {
@@ -674,6 +777,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of lifecycle policies in the specified repository.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesResponse> list(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListLifecyclePoliciesRequest request) {
@@ -682,6 +788,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a lifecycle policy in the specified repository.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.CreateLifecyclePolicyRequest request) {
@@ -690,6 +799,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the specified lifecycle policy.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.UpdateLifecyclePolicyRequest request) {
@@ -698,6 +810,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified lifecycle policy.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DeleteLifecyclePolicyRequest request) {
@@ -706,6 +821,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a request of a dry run of the lifecycle policy.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> dryRun(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyRequest request) {
@@ -714,6 +832,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the dry run result of the specified lifecycle policy.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> getDryRunResult(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.GetDryRunLifecyclePolicyResultRequest request) {
@@ -722,6 +843,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of the dry run results.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsResponse> listDryRunResults(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultsRequest request) {
@@ -730,6 +854,9 @@ public final class LifecyclePolicyServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of the affected images.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesResponse> listDryRunResultAffectedImages(
         yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.ListDryRunLifecyclePolicyResultAffectedImagesRequest request) {

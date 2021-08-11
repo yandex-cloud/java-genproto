@@ -19,86 +19,162 @@ public final class LifecyclePolicyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
+     * <pre>
+     * Name of the lifecycle policy.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the lifecycle policy.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * ID of the repository that the lifecycle policy belongs to.
+     * Required. The maximum string length in characters is 50.
+     * </pre>
+     *
      * <code>string repository_id = 3;</code>
      */
     java.lang.String getRepositoryId();
     /**
+     * <pre>
+     * ID of the repository that the lifecycle policy belongs to.
+     * Required. The maximum string length in characters is 50.
+     * </pre>
+     *
      * <code>string repository_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getRepositoryIdBytes();
 
     /**
+     * <pre>
+     * Description of the lifecycle policy.
+     * The maximum string length in characters is 256.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the lifecycle policy.
+     * The maximum string length in characters is 256.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Status of lifecycle policy.
+     * </pre>
+     *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Status of lifecycle policy.
+     * </pre>
+     *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * The rules of lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
     java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> 
         getRulesList();
     /**
+     * <pre>
+     * The rules of lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index);
     /**
+     * <pre>
+     * The rules of lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
     int getRulesCount();
     /**
+     * <pre>
+     * The rules of lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
     java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
         getRulesOrBuilderList();
     /**
+     * <pre>
+     * The rules of lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
@@ -246,10 +322,19 @@ public final class LifecyclePolicyOuterClass {
        */
       STATUS_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Policy is active and regularly deletes Docker images according to the established rules.
+       * </pre>
+       *
        * <code>ACTIVE = 1;</code>
        */
       ACTIVE(1),
       /**
+       * <pre>
+       * Policy is disabled and does not delete Docker images in the repository.
+       * Policies in this status can be used for preparing and testing rules.
+       * </pre>
+       *
        * <code>DISABLED = 2;</code>
        */
       DISABLED(2),
@@ -261,10 +346,19 @@ public final class LifecyclePolicyOuterClass {
        */
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Policy is active and regularly deletes Docker images according to the established rules.
+       * </pre>
+       *
        * <code>ACTIVE = 1;</code>
        */
       public static final int ACTIVE_VALUE = 1;
       /**
+       * <pre>
+       * Policy is disabled and does not delete Docker images in the repository.
+       * Policies in this status can be used for preparing and testing rules.
+       * </pre>
+       *
        * <code>DISABLED = 2;</code>
        */
       public static final int DISABLED_VALUE = 2;
@@ -347,6 +441,10 @@ public final class LifecyclePolicyOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public java.lang.String getId() {
@@ -362,6 +460,10 @@ public final class LifecyclePolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -381,6 +483,10 @@ public final class LifecyclePolicyOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the lifecycle policy.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      */
     public java.lang.String getName() {
@@ -396,6 +502,10 @@ public final class LifecyclePolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the lifecycle policy.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -415,6 +525,11 @@ public final class LifecyclePolicyOuterClass {
     public static final int REPOSITORY_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object repositoryId_;
     /**
+     * <pre>
+     * ID of the repository that the lifecycle policy belongs to.
+     * Required. The maximum string length in characters is 50.
+     * </pre>
+     *
      * <code>string repository_id = 3;</code>
      */
     public java.lang.String getRepositoryId() {
@@ -430,6 +545,11 @@ public final class LifecyclePolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the repository that the lifecycle policy belongs to.
+     * Required. The maximum string length in characters is 50.
+     * </pre>
+     *
      * <code>string repository_id = 3;</code>
      */
     public com.google.protobuf.ByteString
@@ -449,6 +569,11 @@ public final class LifecyclePolicyOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the lifecycle policy.
+     * The maximum string length in characters is 256.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      */
     public java.lang.String getDescription() {
@@ -464,6 +589,11 @@ public final class LifecyclePolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the lifecycle policy.
+     * The maximum string length in characters is 256.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -483,12 +613,20 @@ public final class LifecyclePolicyOuterClass {
     public static final int STATUS_FIELD_NUMBER = 5;
     private int status_;
     /**
+     * <pre>
+     * Status of lifecycle policy.
+     * </pre>
+     *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
+     * <pre>
+     * Status of lifecycle policy.
+     * </pre>
+     *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
@@ -500,18 +638,30 @@ public final class LifecyclePolicyOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 6;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -521,12 +671,20 @@ public final class LifecyclePolicyOuterClass {
     public static final int RULES_FIELD_NUMBER = 7;
     private java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> rules_;
     /**
+     * <pre>
+     * The rules of lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
     public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> getRulesList() {
       return rules_;
     }
     /**
+     * <pre>
+     * The rules of lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
@@ -534,18 +692,30 @@ public final class LifecyclePolicyOuterClass {
       return rules_;
     }
     /**
+     * <pre>
+     * The rules of lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
     public int getRulesCount() {
       return rules_.size();
     }
     /**
+     * <pre>
+     * The rules of lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index) {
       return rules_.get(index);
     }
     /**
+     * <pre>
+     * The rules of lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
@@ -1014,6 +1184,10 @@ public final class LifecyclePolicyOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public java.lang.String getId() {
@@ -1029,6 +1203,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -1045,6 +1223,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setId(
@@ -1058,6 +1240,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder clearId() {
@@ -1067,6 +1253,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        */
       public Builder setIdBytes(
@@ -1083,6 +1273,10 @@ public final class LifecyclePolicyOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        */
       public java.lang.String getName() {
@@ -1098,6 +1292,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -1114,6 +1312,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        */
       public Builder setName(
@@ -1127,6 +1329,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        */
       public Builder clearName() {
@@ -1136,6 +1342,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        */
       public Builder setNameBytes(
@@ -1152,6 +1362,11 @@ public final class LifecyclePolicyOuterClass {
 
       private java.lang.Object repositoryId_ = "";
       /**
+       * <pre>
+       * ID of the repository that the lifecycle policy belongs to.
+       * Required. The maximum string length in characters is 50.
+       * </pre>
+       *
        * <code>string repository_id = 3;</code>
        */
       public java.lang.String getRepositoryId() {
@@ -1167,6 +1382,11 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the repository that the lifecycle policy belongs to.
+       * Required. The maximum string length in characters is 50.
+       * </pre>
+       *
        * <code>string repository_id = 3;</code>
        */
       public com.google.protobuf.ByteString
@@ -1183,6 +1403,11 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the repository that the lifecycle policy belongs to.
+       * Required. The maximum string length in characters is 50.
+       * </pre>
+       *
        * <code>string repository_id = 3;</code>
        */
       public Builder setRepositoryId(
@@ -1196,6 +1421,11 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the repository that the lifecycle policy belongs to.
+       * Required. The maximum string length in characters is 50.
+       * </pre>
+       *
        * <code>string repository_id = 3;</code>
        */
       public Builder clearRepositoryId() {
@@ -1205,6 +1435,11 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the repository that the lifecycle policy belongs to.
+       * Required. The maximum string length in characters is 50.
+       * </pre>
+       *
        * <code>string repository_id = 3;</code>
        */
       public Builder setRepositoryIdBytes(
@@ -1221,6 +1456,11 @@ public final class LifecyclePolicyOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the lifecycle policy.
+       * The maximum string length in characters is 256.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        */
       public java.lang.String getDescription() {
@@ -1236,6 +1476,11 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the lifecycle policy.
+       * The maximum string length in characters is 256.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -1252,6 +1497,11 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the lifecycle policy.
+       * The maximum string length in characters is 256.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        */
       public Builder setDescription(
@@ -1265,6 +1515,11 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the lifecycle policy.
+       * The maximum string length in characters is 256.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        */
       public Builder clearDescription() {
@@ -1274,6 +1529,11 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the lifecycle policy.
+       * The maximum string length in characters is 256.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        */
       public Builder setDescriptionBytes(
@@ -1290,12 +1550,20 @@ public final class LifecyclePolicyOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Status of lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
        */
       public int getStatusValue() {
         return status_;
       }
       /**
+       * <pre>
+       * Status of lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
        */
       public Builder setStatusValue(int value) {
@@ -1304,6 +1572,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
@@ -1312,6 +1584,10 @@ public final class LifecyclePolicyOuterClass {
         return result == null ? yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Status of lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
        */
       public Builder setStatus(yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status value) {
@@ -1324,6 +1600,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5;</code>
        */
       public Builder clearStatus() {
@@ -1337,12 +1617,20 @@ public final class LifecyclePolicyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -1353,6 +1641,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1369,6 +1661,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder setCreatedAt(
@@ -1383,6 +1679,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1401,6 +1701,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder clearCreatedAt() {
@@ -1415,6 +1719,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1423,6 +1731,10 @@ public final class LifecyclePolicyOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1434,6 +1746,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1463,6 +1779,10 @@ public final class LifecyclePolicyOuterClass {
           yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> rulesBuilder_;
 
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> getRulesList() {
@@ -1473,6 +1793,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public int getRulesCount() {
@@ -1483,6 +1807,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index) {
@@ -1493,6 +1821,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public Builder setRules(
@@ -1510,6 +1842,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public Builder setRules(
@@ -1524,6 +1860,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public Builder addRules(yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule value) {
@@ -1540,6 +1880,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public Builder addRules(
@@ -1557,6 +1901,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public Builder addRules(
@@ -1571,6 +1919,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public Builder addRules(
@@ -1585,6 +1937,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public Builder addAllRules(
@@ -1600,6 +1956,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public Builder clearRules() {
@@ -1613,6 +1973,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public Builder removeRules(int index) {
@@ -1626,6 +1990,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder getRulesBuilder(
@@ -1633,6 +2001,10 @@ public final class LifecyclePolicyOuterClass {
         return getRulesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
@@ -1643,6 +2015,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
@@ -1654,6 +2030,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder addRulesBuilder() {
@@ -1661,6 +2041,10 @@ public final class LifecyclePolicyOuterClass {
             yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.getDefaultInstance());
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder addRulesBuilder(
@@ -1669,6 +2053,10 @@ public final class LifecyclePolicyOuterClass {
             index, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.getDefaultInstance());
       }
       /**
+       * <pre>
+       * The rules of lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 7;</code>
        */
       public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder> 
@@ -1747,44 +2135,83 @@ public final class LifecyclePolicyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Description of the lifecycle policy rule.
+     * </pre>
+     *
      * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the lifecycle policy rule.
+     * </pre>
+     *
      * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Period of time for automatic deletion.
+     * Period must be a multiple of 24 hours.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
      */
     boolean hasExpirePeriod();
     /**
+     * <pre>
+     * Period of time for automatic deletion.
+     * Period must be a multiple of 24 hours.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
      */
     com.google.protobuf.Duration getExpirePeriod();
     /**
+     * <pre>
+     * Period of time for automatic deletion.
+     * Period must be a multiple of 24 hours.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
      */
     com.google.protobuf.DurationOrBuilder getExpirePeriodOrBuilder();
 
     /**
+     * <pre>
+     * Tag for specifying a filter in the form of a regular expression.
+     * </pre>
+     *
      * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getTagRegexp();
     /**
+     * <pre>
+     * Tag for specifying a filter in the form of a regular expression.
+     * </pre>
+     *
      * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getTagRegexpBytes();
 
     /**
+     * <pre>
+     * Tag for applying the rule to Docker images without tags.
+     * </pre>
+     *
      * <code>bool untagged = 4;</code>
      */
     boolean getUntagged();
 
     /**
+     * <pre>
+     * Number of Docker images (falling under the specified filter by tags) that must be left, even if the expire_period has already expired.
+     * </pre>
+     *
      * <code>int64 retained_top = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
     long getRetainedTop();
@@ -1902,6 +2329,10 @@ public final class LifecyclePolicyOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 1;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the lifecycle policy rule.
+     * </pre>
+     *
      * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -1917,6 +2348,10 @@ public final class LifecyclePolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the lifecycle policy rule.
+     * </pre>
+     *
      * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1936,18 +2371,33 @@ public final class LifecyclePolicyOuterClass {
     public static final int EXPIRE_PERIOD_FIELD_NUMBER = 2;
     private com.google.protobuf.Duration expirePeriod_;
     /**
+     * <pre>
+     * Period of time for automatic deletion.
+     * Period must be a multiple of 24 hours.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
      */
     public boolean hasExpirePeriod() {
       return expirePeriod_ != null;
     }
     /**
+     * <pre>
+     * Period of time for automatic deletion.
+     * Period must be a multiple of 24 hours.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
      */
     public com.google.protobuf.Duration getExpirePeriod() {
       return expirePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : expirePeriod_;
     }
     /**
+     * <pre>
+     * Period of time for automatic deletion.
+     * Period must be a multiple of 24 hours.
+     * </pre>
+     *
      * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
      */
     public com.google.protobuf.DurationOrBuilder getExpirePeriodOrBuilder() {
@@ -1957,6 +2407,10 @@ public final class LifecyclePolicyOuterClass {
     public static final int TAG_REGEXP_FIELD_NUMBER = 3;
     private volatile java.lang.Object tagRegexp_;
     /**
+     * <pre>
+     * Tag for specifying a filter in the form of a regular expression.
+     * </pre>
+     *
      * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getTagRegexp() {
@@ -1972,6 +2426,10 @@ public final class LifecyclePolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * Tag for specifying a filter in the form of a regular expression.
+     * </pre>
+     *
      * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1991,6 +2449,10 @@ public final class LifecyclePolicyOuterClass {
     public static final int UNTAGGED_FIELD_NUMBER = 4;
     private boolean untagged_;
     /**
+     * <pre>
+     * Tag for applying the rule to Docker images without tags.
+     * </pre>
+     *
      * <code>bool untagged = 4;</code>
      */
     public boolean getUntagged() {
@@ -2000,6 +2462,10 @@ public final class LifecyclePolicyOuterClass {
     public static final int RETAINED_TOP_FIELD_NUMBER = 5;
     private long retainedTop_;
     /**
+     * <pre>
+     * Number of Docker images (falling under the specified filter by tags) that must be left, even if the expire_period has already expired.
+     * </pre>
+     *
      * <code>int64 retained_top = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
      */
     public long getRetainedTop() {
@@ -2394,6 +2860,10 @@ public final class LifecyclePolicyOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the lifecycle policy rule.
+       * </pre>
+       *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -2409,6 +2879,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the lifecycle policy rule.
+       * </pre>
+       *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -2425,6 +2899,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the lifecycle policy rule.
+       * </pre>
+       *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -2438,6 +2916,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the lifecycle policy rule.
+       * </pre>
+       *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -2447,6 +2929,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the lifecycle policy rule.
+       * </pre>
+       *
        * <code>string description = 1 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -2465,12 +2951,22 @@ public final class LifecyclePolicyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> expirePeriodBuilder_;
       /**
+       * <pre>
+       * Period of time for automatic deletion.
+       * Period must be a multiple of 24 hours.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public boolean hasExpirePeriod() {
         return expirePeriodBuilder_ != null || expirePeriod_ != null;
       }
       /**
+       * <pre>
+       * Period of time for automatic deletion.
+       * Period must be a multiple of 24 hours.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public com.google.protobuf.Duration getExpirePeriod() {
@@ -2481,6 +2977,11 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Period of time for automatic deletion.
+       * Period must be a multiple of 24 hours.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public Builder setExpirePeriod(com.google.protobuf.Duration value) {
@@ -2497,6 +2998,11 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Period of time for automatic deletion.
+       * Period must be a multiple of 24 hours.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public Builder setExpirePeriod(
@@ -2511,6 +3017,11 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Period of time for automatic deletion.
+       * Period must be a multiple of 24 hours.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public Builder mergeExpirePeriod(com.google.protobuf.Duration value) {
@@ -2529,6 +3040,11 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Period of time for automatic deletion.
+       * Period must be a multiple of 24 hours.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public Builder clearExpirePeriod() {
@@ -2543,6 +3059,11 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Period of time for automatic deletion.
+       * Period must be a multiple of 24 hours.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public com.google.protobuf.Duration.Builder getExpirePeriodBuilder() {
@@ -2551,6 +3072,11 @@ public final class LifecyclePolicyOuterClass {
         return getExpirePeriodFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Period of time for automatic deletion.
+       * Period must be a multiple of 24 hours.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       public com.google.protobuf.DurationOrBuilder getExpirePeriodOrBuilder() {
@@ -2562,6 +3088,11 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Period of time for automatic deletion.
+       * Period must be a multiple of 24 hours.
+       * </pre>
+       *
        * <code>.google.protobuf.Duration expire_period = 2 [(.yandex.cloud.value) = "&gt;=24h"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2580,6 +3111,10 @@ public final class LifecyclePolicyOuterClass {
 
       private java.lang.Object tagRegexp_ = "";
       /**
+       * <pre>
+       * Tag for specifying a filter in the form of a regular expression.
+       * </pre>
+       *
        * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getTagRegexp() {
@@ -2595,6 +3130,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tag for specifying a filter in the form of a regular expression.
+       * </pre>
+       *
        * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -2611,6 +3150,10 @@ public final class LifecyclePolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tag for specifying a filter in the form of a regular expression.
+       * </pre>
+       *
        * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setTagRegexp(
@@ -2624,6 +3167,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tag for specifying a filter in the form of a regular expression.
+       * </pre>
+       *
        * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearTagRegexp() {
@@ -2633,6 +3180,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tag for specifying a filter in the form of a regular expression.
+       * </pre>
+       *
        * <code>string tag_regexp = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setTagRegexpBytes(
@@ -2649,12 +3200,20 @@ public final class LifecyclePolicyOuterClass {
 
       private boolean untagged_ ;
       /**
+       * <pre>
+       * Tag for applying the rule to Docker images without tags.
+       * </pre>
+       *
        * <code>bool untagged = 4;</code>
        */
       public boolean getUntagged() {
         return untagged_;
       }
       /**
+       * <pre>
+       * Tag for applying the rule to Docker images without tags.
+       * </pre>
+       *
        * <code>bool untagged = 4;</code>
        */
       public Builder setUntagged(boolean value) {
@@ -2664,6 +3223,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tag for applying the rule to Docker images without tags.
+       * </pre>
+       *
        * <code>bool untagged = 4;</code>
        */
       public Builder clearUntagged() {
@@ -2675,12 +3238,20 @@ public final class LifecyclePolicyOuterClass {
 
       private long retainedTop_ ;
       /**
+       * <pre>
+       * Number of Docker images (falling under the specified filter by tags) that must be left, even if the expire_period has already expired.
+       * </pre>
+       *
        * <code>int64 retained_top = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public long getRetainedTop() {
         return retainedTop_;
       }
       /**
+       * <pre>
+       * Number of Docker images (falling under the specified filter by tags) that must be left, even if the expire_period has already expired.
+       * </pre>
+       *
        * <code>int64 retained_top = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public Builder setRetainedTop(long value) {
@@ -2690,6 +3261,10 @@ public final class LifecyclePolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Number of Docker images (falling under the specified filter by tags) that must be left, even if the expire_period has already expired.
+       * </pre>
+       *
        * <code>int64 retained_top = 5 [(.yandex.cloud.value) = "&gt;=0"];</code>
        */
       public Builder clearRetainedTop() {

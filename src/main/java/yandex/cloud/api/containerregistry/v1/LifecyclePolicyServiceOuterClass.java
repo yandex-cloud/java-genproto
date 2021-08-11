@@ -19,10 +19,18 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getLifecyclePolicyId();
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -109,6 +117,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lifecyclePolicyId_;
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getLifecyclePolicyId() {
@@ -124,6 +136,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -445,6 +461,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object lifecyclePolicyId_ = "";
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getLifecyclePolicyId() {
@@ -460,6 +480,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -476,6 +500,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setLifecyclePolicyId(
@@ -489,6 +517,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearLifecyclePolicyId() {
@@ -498,6 +530,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setLifecyclePolicyIdBytes(
@@ -569,55 +605,114 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRegistryId();
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRegistryIdBytes();
 
     /**
+     * <pre>
+     * Repository of the lifecycle policy.
+     * </pre>
+     *
      * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRepositoryId();
     /**
+     * <pre>
+     * Repository of the lifecycle policy.
+     * </pre>
+     *
      * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRepositoryIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns 
+     * a [ListLifecyclePoliciesResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListLifecyclePoliciesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListLifecyclePoliciesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters lifecycle policy resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters lifecycle policy resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
         getFilterBytes();
 
     /**
+     * <pre>
+     * Sorting the list by [LifecyclePolicy.name], [LifecyclePolicy.created_at] and [LifecyclePolicy.status] fields.
+     * The default sorting order is ascending.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getOrderBy();
     /**
+     * <pre>
+     * Sorting the list by [LifecyclePolicy.name], [LifecyclePolicy.created_at] and [LifecyclePolicy.status] fields.
+     * The default sorting order is ascending.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
@@ -775,6 +870,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
     public static final int REGISTRY_ID_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRegistryId() {
@@ -795,6 +894,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -818,6 +921,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
     public static final int REPOSITORY_ID_FIELD_NUMBER = 6;
     /**
+     * <pre>
+     * Repository of the lifecycle policy.
+     * </pre>
+     *
      * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRepositoryId() {
@@ -838,6 +945,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Repository of the lifecycle policy.
+     * </pre>
+     *
      * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -862,6 +973,13 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns 
+     * a [ListLifecyclePoliciesResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -871,6 +989,11 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListLifecyclePoliciesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -886,6 +1009,11 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListLifecyclePoliciesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -905,6 +1033,14 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters lifecycle policy resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -920,6 +1056,14 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters lifecycle policy resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -939,6 +1083,11 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int ORDER_BY_FIELD_NUMBER = 5;
     private volatile java.lang.Object orderBy_;
     /**
+     * <pre>
+     * Sorting the list by [LifecyclePolicy.name], [LifecyclePolicy.created_at] and [LifecyclePolicy.status] fields.
+     * The default sorting order is ascending.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getOrderBy() {
@@ -954,6 +1103,11 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Sorting the list by [LifecyclePolicy.name], [LifecyclePolicy.created_at] and [LifecyclePolicy.status] fields.
+     * The default sorting order is ascending.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -1406,6 +1560,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
 
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRegistryId() {
@@ -1426,6 +1584,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1447,6 +1609,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryId(
@@ -1460,6 +1626,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRegistryId() {
@@ -1471,6 +1641,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string registry_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRegistryIdBytes(
@@ -1486,6 +1660,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * Repository of the lifecycle policy.
+       * </pre>
+       *
        * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRepositoryId() {
@@ -1506,6 +1684,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Repository of the lifecycle policy.
+       * </pre>
+       *
        * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1527,6 +1709,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Repository of the lifecycle policy.
+       * </pre>
+       *
        * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRepositoryId(
@@ -1540,6 +1726,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Repository of the lifecycle policy.
+       * </pre>
+       *
        * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRepositoryId() {
@@ -1551,6 +1741,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Repository of the lifecycle policy.
+       * </pre>
+       *
        * <code>string repository_id = 6 [(.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRepositoryIdBytes(
@@ -1567,12 +1761,26 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns 
+       * a [ListLifecyclePoliciesResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns 
+       * a [ListLifecyclePoliciesResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -1582,6 +1790,13 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns 
+       * a [ListLifecyclePoliciesResponse.next_page_token] that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -1593,6 +1808,11 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLifecyclePoliciesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -1608,6 +1828,11 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLifecyclePoliciesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1624,6 +1849,11 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLifecyclePoliciesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -1637,6 +1867,11 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLifecyclePoliciesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -1646,6 +1881,11 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLifecyclePoliciesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -1662,6 +1902,14 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters lifecycle policy resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -1677,6 +1925,14 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters lifecycle policy resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1693,6 +1949,14 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters lifecycle policy resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -1706,6 +1970,14 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters lifecycle policy resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -1715,6 +1987,14 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters lifecycle policy resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -1731,6 +2011,11 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object orderBy_ = "";
       /**
+       * <pre>
+       * Sorting the list by [LifecyclePolicy.name], [LifecyclePolicy.created_at] and [LifecyclePolicy.status] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getOrderBy() {
@@ -1746,6 +2031,11 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sorting the list by [LifecyclePolicy.name], [LifecyclePolicy.created_at] and [LifecyclePolicy.status] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -1762,6 +2052,11 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sorting the list by [LifecyclePolicy.name], [LifecyclePolicy.created_at] and [LifecyclePolicy.status] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setOrderBy(
@@ -1775,6 +2070,11 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sorting the list by [LifecyclePolicy.name], [LifecyclePolicy.created_at] and [LifecyclePolicy.status] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearOrderBy() {
@@ -1784,6 +2084,11 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sorting the list by [LifecyclePolicy.name], [LifecyclePolicy.created_at] and [LifecyclePolicy.status] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setOrderByBytes(
@@ -1855,34 +2160,68 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of lifecycle policies.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
     java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy> 
         getLifecyclePoliciesList();
     /**
+     * <pre>
+     * List of lifecycle policies.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy getLifecyclePolicies(int index);
     /**
+     * <pre>
+     * List of lifecycle policies.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
     int getLifecyclePoliciesCount();
     /**
+     * <pre>
+     * List of lifecycle policies.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyOrBuilder> 
         getLifecyclePoliciesOrBuilderList();
     /**
+     * <pre>
+     * List of lifecycle policies.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyOrBuilder getLifecyclePoliciesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListLifecyclePoliciesRequest.page_size], use `next_page_token` as the value
+     * for the [ListLifecyclePoliciesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListLifecyclePoliciesRequest.page_size], use `next_page_token` as the value
+     * for the [ListLifecyclePoliciesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -1983,12 +2322,20 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int LIFECYCLE_POLICIES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy> lifecyclePolicies_;
     /**
+     * <pre>
+     * List of lifecycle policies.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
     public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy> getLifecyclePoliciesList() {
       return lifecyclePolicies_;
     }
     /**
+     * <pre>
+     * List of lifecycle policies.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyOrBuilder> 
@@ -1996,18 +2343,30 @@ public final class LifecyclePolicyServiceOuterClass {
       return lifecyclePolicies_;
     }
     /**
+     * <pre>
+     * List of lifecycle policies.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
     public int getLifecyclePoliciesCount() {
       return lifecyclePolicies_.size();
     }
     /**
+     * <pre>
+     * List of lifecycle policies.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy getLifecyclePolicies(int index) {
       return lifecyclePolicies_.get(index);
     }
     /**
+     * <pre>
+     * List of lifecycle policies.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyOrBuilder getLifecyclePoliciesOrBuilder(
@@ -2018,6 +2377,13 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListLifecyclePoliciesRequest.page_size], use `next_page_token` as the value
+     * for the [ListLifecyclePoliciesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -2033,6 +2399,13 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListLifecyclePoliciesRequest.page_size], use `next_page_token` as the value
+     * for the [ListLifecyclePoliciesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -2424,6 +2797,10 @@ public final class LifecyclePolicyServiceOuterClass {
           yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Builder, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyOrBuilder> lifecyclePoliciesBuilder_;
 
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy> getLifecyclePoliciesList() {
@@ -2434,6 +2811,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public int getLifecyclePoliciesCount() {
@@ -2444,6 +2825,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy getLifecyclePolicies(int index) {
@@ -2454,6 +2839,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public Builder setLifecyclePolicies(
@@ -2471,6 +2860,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public Builder setLifecyclePolicies(
@@ -2485,6 +2878,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public Builder addLifecyclePolicies(yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy value) {
@@ -2501,6 +2898,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public Builder addLifecyclePolicies(
@@ -2518,6 +2919,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public Builder addLifecyclePolicies(
@@ -2532,6 +2937,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public Builder addLifecyclePolicies(
@@ -2546,6 +2955,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public Builder addAllLifecyclePolicies(
@@ -2561,6 +2974,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public Builder clearLifecyclePolicies() {
@@ -2574,6 +2991,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public Builder removeLifecyclePolicies(int index) {
@@ -2587,6 +3008,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Builder getLifecyclePoliciesBuilder(
@@ -2594,6 +3019,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return getLifecyclePoliciesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyOrBuilder getLifecyclePoliciesOrBuilder(
@@ -2604,6 +3033,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicyOrBuilder> 
@@ -2615,6 +3048,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Builder addLifecyclePoliciesBuilder() {
@@ -2622,6 +3059,10 @@ public final class LifecyclePolicyServiceOuterClass {
             yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Builder addLifecyclePoliciesBuilder(
@@ -2630,6 +3071,10 @@ public final class LifecyclePolicyServiceOuterClass {
             index, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of lifecycle policies.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecyclePolicy lifecycle_policies = 1;</code>
        */
       public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Builder> 
@@ -2653,6 +3098,13 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLifecyclePoliciesRequest.page_size], use `next_page_token` as the value
+       * for the [ListLifecyclePoliciesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -2668,6 +3120,13 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLifecyclePoliciesRequest.page_size], use `next_page_token` as the value
+       * for the [ListLifecyclePoliciesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -2684,6 +3143,13 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLifecyclePoliciesRequest.page_size], use `next_page_token` as the value
+       * for the [ListLifecyclePoliciesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -2697,6 +3163,13 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLifecyclePoliciesRequest.page_size], use `next_page_token` as the value
+       * for the [ListLifecyclePoliciesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -2706,6 +3179,13 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLifecyclePoliciesRequest.page_size], use `next_page_token` as the value
+       * for the [ListLifecyclePoliciesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -2777,63 +3257,115 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the lifecycle policy repository.
+     * </pre>
+     *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getRepositoryId();
     /**
+     * <pre>
+     * ID of the lifecycle policy repository.
+     * </pre>
+     *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getRepositoryIdBytes();
 
     /**
+     * <pre>
+     * Name of lifecycle policy.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of lifecycle policy.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of lifecycle policy.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of lifecycle policy.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Status of the lifecycle policy.
+     * </pre>
+     *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Status of the lifecycle policy.
+     * </pre>
+     *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus();
 
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
     java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> 
         getRulesList();
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index);
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
     int getRulesCount();
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
     java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
         getRulesOrBuilderList();
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
@@ -2955,6 +3487,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int REPOSITORY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object repositoryId_;
     /**
+     * <pre>
+     * ID of the lifecycle policy repository.
+     * </pre>
+     *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getRepositoryId() {
@@ -2970,6 +3506,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the lifecycle policy repository.
+     * </pre>
+     *
      * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -2989,6 +3529,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of lifecycle policy.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public java.lang.String getName() {
@@ -3004,6 +3548,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of lifecycle policy.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3023,6 +3571,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of lifecycle policy.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -3038,6 +3590,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of lifecycle policy.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -3057,12 +3613,20 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int STATUS_FIELD_NUMBER = 4;
     private int status_;
     /**
+     * <pre>
+     * Status of the lifecycle policy.
+     * </pre>
+     *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
+     * <pre>
+     * Status of the lifecycle policy.
+     * </pre>
+     *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
@@ -3074,12 +3638,20 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int RULES_FIELD_NUMBER = 5;
     private java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> rules_;
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
     public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> getRulesList() {
       return rules_;
     }
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
@@ -3087,18 +3659,30 @@ public final class LifecyclePolicyServiceOuterClass {
       return rules_;
     }
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
     public int getRulesCount() {
       return rules_.size();
     }
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index) {
       return rules_.get(index);
     }
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
@@ -3520,6 +4104,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object repositoryId_ = "";
       /**
+       * <pre>
+       * ID of the lifecycle policy repository.
+       * </pre>
+       *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getRepositoryId() {
@@ -3535,6 +4123,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy repository.
+       * </pre>
+       *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3551,6 +4143,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy repository.
+       * </pre>
+       *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRepositoryId(
@@ -3564,6 +4160,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy repository.
+       * </pre>
+       *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearRepositoryId() {
@@ -3573,6 +4173,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy repository.
+       * </pre>
+       *
        * <code>string repository_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setRepositoryIdBytes(
@@ -3589,6 +4193,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public java.lang.String getName() {
@@ -3604,6 +4212,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3620,6 +4232,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setName(
@@ -3633,6 +4249,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder clearName() {
@@ -3642,6 +4262,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setNameBytes(
@@ -3658,6 +4282,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of lifecycle policy.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -3673,6 +4301,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of lifecycle policy.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -3689,6 +4321,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of lifecycle policy.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -3702,6 +4338,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of lifecycle policy.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -3711,6 +4351,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of lifecycle policy.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -3727,12 +4371,20 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Status of the lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
        */
       public int getStatusValue() {
         return status_;
       }
       /**
+       * <pre>
+       * Status of the lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setStatusValue(int value) {
@@ -3741,6 +4393,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
@@ -3749,6 +4405,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return result == null ? yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Status of the lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setStatus(yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status value) {
@@ -3761,6 +4421,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 4 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearStatus() {
@@ -3783,6 +4447,10 @@ public final class LifecyclePolicyServiceOuterClass {
           yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> rulesBuilder_;
 
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> getRulesList() {
@@ -3793,6 +4461,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public int getRulesCount() {
@@ -3803,6 +4475,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index) {
@@ -3813,6 +4489,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public Builder setRules(
@@ -3830,6 +4510,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public Builder setRules(
@@ -3844,6 +4528,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public Builder addRules(yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule value) {
@@ -3860,6 +4548,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public Builder addRules(
@@ -3877,6 +4569,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public Builder addRules(
@@ -3891,6 +4587,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public Builder addRules(
@@ -3905,6 +4605,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public Builder addAllRules(
@@ -3920,6 +4624,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public Builder clearRules() {
@@ -3933,6 +4641,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public Builder removeRules(int index) {
@@ -3946,6 +4658,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder getRulesBuilder(
@@ -3953,6 +4669,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return getRulesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
@@ -3963,6 +4683,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
@@ -3974,6 +4698,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder addRulesBuilder() {
@@ -3981,6 +4709,10 @@ public final class LifecyclePolicyServiceOuterClass {
             yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.getDefaultInstance());
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder addRulesBuilder(
@@ -3989,6 +4721,10 @@ public final class LifecyclePolicyServiceOuterClass {
             index, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.getDefaultInstance());
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 5;</code>
        */
       public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder> 
@@ -4067,76 +4803,140 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getLifecyclePolicyId();
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
 
     /**
+     * <pre>
+     * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     boolean hasUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMask getUpdateMask();
     /**
+     * <pre>
+     * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * Name of lifecycle policy.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of lifecycle policy.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of lifecycle policy.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of lifecycle policy.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Status of the lifecycle policy.
+     * </pre>
+     *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Status of the lifecycle policy.
+     * </pre>
+     *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus();
 
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
     java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> 
         getRulesList();
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index);
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
     int getRulesCount();
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
     java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
         getRulesOrBuilderList();
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
@@ -4271,6 +5071,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lifecyclePolicyId_;
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getLifecyclePolicyId() {
@@ -4286,6 +5090,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -4305,18 +5113,30 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int UPDATE_MASK_FIELD_NUMBER = 2;
     private com.google.protobuf.FieldMask updateMask_;
     /**
+     * <pre>
+     * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public boolean hasUpdateMask() {
       return updateMask_ != null;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
       return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
+     * <pre>
+     * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+     * </pre>
+     *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -4326,6 +5146,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of lifecycle policy.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public java.lang.String getName() {
@@ -4341,6 +5165,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of lifecycle policy.
+     * </pre>
+     *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      */
     public com.google.protobuf.ByteString
@@ -4360,6 +5188,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of lifecycle policy.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public java.lang.String getDescription() {
@@ -4375,6 +5207,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of lifecycle policy.
+     * </pre>
+     *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
      */
     public com.google.protobuf.ByteString
@@ -4394,12 +5230,20 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int STATUS_FIELD_NUMBER = 5;
     private int status_;
     /**
+     * <pre>
+     * Status of the lifecycle policy.
+     * </pre>
+     *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
      */
     public int getStatusValue() {
       return status_;
     }
     /**
+     * <pre>
+     * Status of the lifecycle policy.
+     * </pre>
+     *
      * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
@@ -4411,12 +5255,20 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int RULES_FIELD_NUMBER = 6;
     private java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> rules_;
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
     public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> getRulesList() {
       return rules_;
     }
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
@@ -4424,18 +5276,30 @@ public final class LifecyclePolicyServiceOuterClass {
       return rules_;
     }
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
     public int getRulesCount() {
       return rules_.size();
     }
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index) {
       return rules_.get(index);
     }
     /**
+     * <pre>
+     * The rules of the lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
@@ -4887,6 +5751,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object lifecyclePolicyId_ = "";
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getLifecyclePolicyId() {
@@ -4902,6 +5770,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -4918,6 +5790,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setLifecyclePolicyId(
@@ -4931,6 +5807,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearLifecyclePolicyId() {
@@ -4940,6 +5820,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setLifecyclePolicyIdBytes(
@@ -4958,12 +5842,20 @@ public final class LifecyclePolicyServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
+       * <pre>
+       * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public boolean hasUpdateMask() {
         return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask getUpdateMask() {
@@ -4974,6 +5866,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
@@ -4990,6 +5886,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder setUpdateMask(
@@ -5004,6 +5904,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
@@ -5022,6 +5926,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public Builder clearUpdateMask() {
@@ -5036,6 +5944,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
@@ -5044,6 +5956,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -5055,6 +5971,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Field mask that specifies which fields of the lifecycle policy resource are going to be updated.
+       * </pre>
+       *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5073,6 +5993,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public java.lang.String getName() {
@@ -5088,6 +6012,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public com.google.protobuf.ByteString
@@ -5104,6 +6032,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setName(
@@ -5117,6 +6049,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder clearName() {
@@ -5126,6 +6062,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of lifecycle policy.
+       * </pre>
+       *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        */
       public Builder setNameBytes(
@@ -5142,6 +6082,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of lifecycle policy.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public java.lang.String getDescription() {
@@ -5157,6 +6101,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of lifecycle policy.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public com.google.protobuf.ByteString
@@ -5173,6 +6121,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of lifecycle policy.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescription(
@@ -5186,6 +6138,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of lifecycle policy.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder clearDescription() {
@@ -5195,6 +6151,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of lifecycle policy.
+       * </pre>
+       *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
        */
       public Builder setDescriptionBytes(
@@ -5211,12 +6171,20 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Status of the lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
        */
       public int getStatusValue() {
         return status_;
       }
       /**
+       * <pre>
+       * Status of the lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setStatusValue(int value) {
@@ -5225,6 +6193,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status getStatus() {
@@ -5233,6 +6205,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return result == null ? yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Status of the lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setStatus(yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecyclePolicy.Status value) {
@@ -5245,6 +6221,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the lifecycle policy.
+       * </pre>
+       *
        * <code>.yandex.cloud.containerregistry.v1.LifecyclePolicy.Status status = 5 [(.yandex.cloud.required) = true];</code>
        */
       public Builder clearStatus() {
@@ -5267,6 +6247,10 @@ public final class LifecyclePolicyServiceOuterClass {
           yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> rulesBuilder_;
 
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule> getRulesList() {
@@ -5277,6 +6261,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public int getRulesCount() {
@@ -5287,6 +6275,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule getRules(int index) {
@@ -5297,6 +6289,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public Builder setRules(
@@ -5314,6 +6310,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public Builder setRules(
@@ -5328,6 +6328,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public Builder addRules(yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule value) {
@@ -5344,6 +6348,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public Builder addRules(
@@ -5361,6 +6369,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public Builder addRules(
@@ -5375,6 +6387,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public Builder addRules(
@@ -5389,6 +6405,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public Builder addAllRules(
@@ -5404,6 +6424,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public Builder clearRules() {
@@ -5417,6 +6441,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public Builder removeRules(int index) {
@@ -5430,6 +6458,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder getRulesBuilder(
@@ -5437,6 +6469,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return getRulesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder getRulesOrBuilder(
@@ -5447,6 +6483,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRuleOrBuilder> 
@@ -5458,6 +6498,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder addRulesBuilder() {
@@ -5465,6 +6509,10 @@ public final class LifecyclePolicyServiceOuterClass {
             yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.getDefaultInstance());
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder addRulesBuilder(
@@ -5473,6 +6521,10 @@ public final class LifecyclePolicyServiceOuterClass {
             index, yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.getDefaultInstance());
       }
       /**
+       * <pre>
+       * The rules of the lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.LifecycleRule rules = 6;</code>
        */
       public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyOuterClass.LifecycleRule.Builder> 
@@ -5551,10 +6603,18 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getLifecyclePolicyId();
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -5641,6 +6701,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lifecyclePolicyId_;
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getLifecyclePolicyId() {
@@ -5656,6 +6720,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -5977,6 +7045,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object lifecyclePolicyId_ = "";
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getLifecyclePolicyId() {
@@ -5992,6 +7064,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -6008,6 +7084,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setLifecyclePolicyId(
@@ -6021,6 +7101,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearLifecyclePolicyId() {
@@ -6030,6 +7114,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setLifecyclePolicyIdBytes(
@@ -6101,10 +7189,18 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the lifecycle policy resource that is being created.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1;</code>
      */
     java.lang.String getLifecyclePolicyId();
     /**
+     * <pre>
+     * ID of the lifecycle policy resource that is being created.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -6191,6 +7287,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lifecyclePolicyId_;
     /**
+     * <pre>
+     * ID of the lifecycle policy resource that is being created.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1;</code>
      */
     public java.lang.String getLifecyclePolicyId() {
@@ -6206,6 +7306,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the lifecycle policy resource that is being created.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -6527,6 +7631,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object lifecyclePolicyId_ = "";
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being created.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public java.lang.String getLifecyclePolicyId() {
@@ -6542,6 +7650,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being created.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -6558,6 +7670,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being created.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public Builder setLifecyclePolicyId(
@@ -6571,6 +7687,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being created.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public Builder clearLifecyclePolicyId() {
@@ -6580,6 +7700,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being created.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public Builder setLifecyclePolicyIdBytes(
@@ -6651,10 +7775,18 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the lifecycle policy resource that is being updated.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1;</code>
      */
     java.lang.String getLifecyclePolicyId();
     /**
+     * <pre>
+     * ID of the lifecycle policy resource that is being updated.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -6741,6 +7873,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lifecyclePolicyId_;
     /**
+     * <pre>
+     * ID of the lifecycle policy resource that is being updated.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1;</code>
      */
     public java.lang.String getLifecyclePolicyId() {
@@ -6756,6 +7892,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the lifecycle policy resource that is being updated.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -7077,6 +8217,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object lifecyclePolicyId_ = "";
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being updated.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public java.lang.String getLifecyclePolicyId() {
@@ -7092,6 +8236,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being updated.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -7108,6 +8256,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being updated.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public Builder setLifecyclePolicyId(
@@ -7121,6 +8273,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being updated.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public Builder clearLifecyclePolicyId() {
@@ -7130,6 +8286,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being updated.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public Builder setLifecyclePolicyIdBytes(
@@ -7201,10 +8361,18 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the lifecycle policy resource that is being deleted.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1;</code>
      */
     java.lang.String getLifecyclePolicyId();
     /**
+     * <pre>
+     * ID of the lifecycle policy resource that is being deleted.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1;</code>
      */
     com.google.protobuf.ByteString
@@ -7291,6 +8459,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lifecyclePolicyId_;
     /**
+     * <pre>
+     * ID of the lifecycle policy resource that is being deleted.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1;</code>
      */
     public java.lang.String getLifecyclePolicyId() {
@@ -7306,6 +8478,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the lifecycle policy resource that is being deleted.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -7627,6 +8803,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object lifecyclePolicyId_ = "";
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being deleted.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public java.lang.String getLifecyclePolicyId() {
@@ -7642,6 +8822,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being deleted.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -7658,6 +8842,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being deleted.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public Builder setLifecyclePolicyId(
@@ -7671,6 +8859,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being deleted.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public Builder clearLifecyclePolicyId() {
@@ -7680,6 +8872,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy resource that is being deleted.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1;</code>
        */
       public Builder setLifecyclePolicyIdBytes(
@@ -7751,10 +8947,18 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getLifecyclePolicyId();
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -7841,6 +9045,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lifecyclePolicyId_;
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getLifecyclePolicyId() {
@@ -7856,6 +9064,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -8177,6 +9389,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object lifecyclePolicyId_ = "";
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getLifecyclePolicyId() {
@@ -8192,6 +9408,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -8208,6 +9428,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setLifecyclePolicyId(
@@ -8221,6 +9445,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearLifecyclePolicyId() {
@@ -8230,6 +9458,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setLifecyclePolicyIdBytes(
@@ -8301,20 +9533,36 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy.
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
      */
     java.lang.String getDryRunLifecyclePolicyResultId();
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy.
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getDryRunLifecyclePolicyResultIdBytes();
 
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 2;</code>
      */
     java.lang.String getLifecyclePolicyId();
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -8408,6 +9656,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int DRY_RUN_LIFECYCLE_POLICY_RESULT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dryRunLifecyclePolicyResultId_;
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy.
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
      */
     public java.lang.String getDryRunLifecyclePolicyResultId() {
@@ -8423,6 +9675,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy.
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -8442,6 +9698,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object lifecyclePolicyId_;
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 2;</code>
      */
     public java.lang.String getLifecyclePolicyId() {
@@ -8457,6 +9717,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -8795,6 +10059,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object dryRunLifecyclePolicyResultId_ = "";
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
        */
       public java.lang.String getDryRunLifecyclePolicyResultId() {
@@ -8810,6 +10078,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -8826,6 +10098,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
        */
       public Builder setDryRunLifecyclePolicyResultId(
@@ -8839,6 +10115,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
        */
       public Builder clearDryRunLifecyclePolicyResultId() {
@@ -8848,6 +10128,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
        */
       public Builder setDryRunLifecyclePolicyResultIdBytes(
@@ -8864,6 +10148,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object lifecyclePolicyId_ = "";
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 2;</code>
        */
       public java.lang.String getLifecyclePolicyId() {
@@ -8879,6 +10167,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -8895,6 +10187,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 2;</code>
        */
       public Builder setLifecyclePolicyId(
@@ -8908,6 +10204,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 2;</code>
        */
       public Builder clearLifecyclePolicyId() {
@@ -8917,6 +10217,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 2;</code>
        */
       public Builder setLifecyclePolicyIdBytes(
@@ -8988,39 +10292,71 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy.
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
      */
     java.lang.String getDryRunLifecyclePolicyResultId();
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy.
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
      */
     com.google.protobuf.ByteString
         getDryRunLifecyclePolicyResultIdBytes();
 
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 2;</code>
      */
     java.lang.String getLifecyclePolicyId();
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
 
     /**
+     * <pre>
+     * Time of the getting result.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp run_at = 3;</code>
      */
     boolean hasRunAt();
     /**
+     * <pre>
+     * Time of the getting result.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp run_at = 3;</code>
      */
     com.google.protobuf.Timestamp getRunAt();
     /**
+     * <pre>
+     * Time of the getting result.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp run_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getRunAtOrBuilder();
 
     /**
+     * <pre>
+     * Count of affected images.
+     * </pre>
+     *
      * <code>int64 affected_images_count = 4;</code>
      */
     long getAffectedImagesCount();
@@ -9132,6 +10468,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int DRY_RUN_LIFECYCLE_POLICY_RESULT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dryRunLifecyclePolicyResultId_;
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy.
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
      */
     public java.lang.String getDryRunLifecyclePolicyResultId() {
@@ -9147,6 +10487,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy.
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
      */
     public com.google.protobuf.ByteString
@@ -9166,6 +10510,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object lifecyclePolicyId_;
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 2;</code>
      */
     public java.lang.String getLifecyclePolicyId() {
@@ -9181,6 +10529,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -9200,18 +10552,30 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int RUN_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp runAt_;
     /**
+     * <pre>
+     * Time of the getting result.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp run_at = 3;</code>
      */
     public boolean hasRunAt() {
       return runAt_ != null;
     }
     /**
+     * <pre>
+     * Time of the getting result.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp run_at = 3;</code>
      */
     public com.google.protobuf.Timestamp getRunAt() {
       return runAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : runAt_;
     }
     /**
+     * <pre>
+     * Time of the getting result.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp run_at = 3;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getRunAtOrBuilder() {
@@ -9221,6 +10585,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int AFFECTED_IMAGES_COUNT_FIELD_NUMBER = 4;
     private long affectedImagesCount_;
     /**
+     * <pre>
+     * Count of affected images.
+     * </pre>
+     *
      * <code>int64 affected_images_count = 4;</code>
      */
     public long getAffectedImagesCount() {
@@ -9597,6 +10965,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object dryRunLifecyclePolicyResultId_ = "";
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
        */
       public java.lang.String getDryRunLifecyclePolicyResultId() {
@@ -9612,6 +10984,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -9628,6 +11004,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
        */
       public Builder setDryRunLifecyclePolicyResultId(
@@ -9641,6 +11021,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
        */
       public Builder clearDryRunLifecyclePolicyResultId() {
@@ -9650,6 +11034,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1;</code>
        */
       public Builder setDryRunLifecyclePolicyResultIdBytes(
@@ -9666,6 +11054,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object lifecyclePolicyId_ = "";
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 2;</code>
        */
       public java.lang.String getLifecyclePolicyId() {
@@ -9681,6 +11073,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -9697,6 +11093,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 2;</code>
        */
       public Builder setLifecyclePolicyId(
@@ -9710,6 +11110,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 2;</code>
        */
       public Builder clearLifecyclePolicyId() {
@@ -9719,6 +11123,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 2;</code>
        */
       public Builder setLifecyclePolicyIdBytes(
@@ -9737,12 +11145,20 @@ public final class LifecyclePolicyServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> runAtBuilder_;
       /**
+       * <pre>
+       * Time of the getting result.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp run_at = 3;</code>
        */
       public boolean hasRunAt() {
         return runAtBuilder_ != null || runAt_ != null;
       }
       /**
+       * <pre>
+       * Time of the getting result.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp run_at = 3;</code>
        */
       public com.google.protobuf.Timestamp getRunAt() {
@@ -9753,6 +11169,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Time of the getting result.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp run_at = 3;</code>
        */
       public Builder setRunAt(com.google.protobuf.Timestamp value) {
@@ -9769,6 +11189,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time of the getting result.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp run_at = 3;</code>
        */
       public Builder setRunAt(
@@ -9783,6 +11207,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time of the getting result.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp run_at = 3;</code>
        */
       public Builder mergeRunAt(com.google.protobuf.Timestamp value) {
@@ -9801,6 +11229,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time of the getting result.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp run_at = 3;</code>
        */
       public Builder clearRunAt() {
@@ -9815,6 +11247,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Time of the getting result.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp run_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getRunAtBuilder() {
@@ -9823,6 +11259,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return getRunAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time of the getting result.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp run_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getRunAtOrBuilder() {
@@ -9834,6 +11274,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Time of the getting result.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp run_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9852,12 +11296,20 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private long affectedImagesCount_ ;
       /**
+       * <pre>
+       * Count of affected images.
+       * </pre>
+       *
        * <code>int64 affected_images_count = 4;</code>
        */
       public long getAffectedImagesCount() {
         return affectedImagesCount_;
       }
       /**
+       * <pre>
+       * Count of affected images.
+       * </pre>
+       *
        * <code>int64 affected_images_count = 4;</code>
        */
       public Builder setAffectedImagesCount(long value) {
@@ -9867,6 +11319,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Count of affected images.
+       * </pre>
+       *
        * <code>int64 affected_images_count = 4;</code>
        */
       public Builder clearAffectedImagesCount() {
@@ -9933,10 +11389,18 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy.
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getDryRunLifecyclePolicyResultId();
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy.
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
@@ -10023,6 +11487,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int DRY_RUN_LIFECYCLE_POLICY_RESULT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dryRunLifecyclePolicyResultId_;
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy.
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getDryRunLifecyclePolicyResultId() {
@@ -10038,6 +11506,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy.
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -10359,6 +11831,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object dryRunLifecyclePolicyResultId_ = "";
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getDryRunLifecyclePolicyResultId() {
@@ -10374,6 +11850,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -10390,6 +11870,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDryRunLifecyclePolicyResultId(
@@ -10403,6 +11887,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearDryRunLifecyclePolicyResultId() {
@@ -10412,6 +11900,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy.
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDryRunLifecyclePolicyResultIdBytes(
@@ -10483,45 +11975,96 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getLifecyclePolicyId();
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getLifecyclePolicyIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns 
+     * a [ListDryRunLifecyclePolicyResultsResponse.next_page_token] that can be used to get 
+     * the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDryRunLifecyclePolicyResultsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDryRunLifecyclePolicyResultsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters dry run results listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters dry run results listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
         getFilterBytes();
 
     /**
+     * <pre>
+     * Sorting the list by [DryRunLifecyclePolicyResult.run_at] and [DryRunLifecyclePolicyResult.affected_images_count] fields.
+     * The default sorting order is ascending.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getOrderBy();
     /**
+     * <pre>
+     * Sorting the list by [DryRunLifecyclePolicyResult.run_at] and [DryRunLifecyclePolicyResult.affected_images_count] fields.
+     * The default sorting order is ascending.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
@@ -10635,6 +12178,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int LIFECYCLE_POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lifecyclePolicyId_;
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getLifecyclePolicyId() {
@@ -10650,6 +12197,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the lifecycle policy.
+     * </pre>
+     *
      * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -10669,6 +12220,13 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns 
+     * a [ListDryRunLifecyclePolicyResultsResponse.next_page_token] that can be used to get 
+     * the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -10678,6 +12236,11 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDryRunLifecyclePolicyResultsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -10693,6 +12256,11 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDryRunLifecyclePolicyResultsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -10712,6 +12280,14 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters dry run results listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -10727,6 +12303,14 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters dry run results listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -10746,6 +12330,11 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int ORDER_BY_FIELD_NUMBER = 5;
     private volatile java.lang.Object orderBy_;
     /**
+     * <pre>
+     * Sorting the list by [DryRunLifecyclePolicyResult.run_at] and [DryRunLifecyclePolicyResult.affected_images_count] fields.
+     * The default sorting order is ascending.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getOrderBy() {
@@ -10761,6 +12350,11 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Sorting the list by [DryRunLifecyclePolicyResult.run_at] and [DryRunLifecyclePolicyResult.affected_images_count] fields.
+     * The default sorting order is ascending.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -11151,6 +12745,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object lifecyclePolicyId_ = "";
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getLifecyclePolicyId() {
@@ -11166,6 +12764,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -11182,6 +12784,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setLifecyclePolicyId(
@@ -11195,6 +12801,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearLifecyclePolicyId() {
@@ -11204,6 +12814,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the lifecycle policy.
+       * </pre>
+       *
        * <code>string lifecycle_policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setLifecyclePolicyIdBytes(
@@ -11220,12 +12834,26 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns 
+       * a [ListDryRunLifecyclePolicyResultsResponse.next_page_token] that can be used to get 
+       * the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns 
+       * a [ListDryRunLifecyclePolicyResultsResponse.next_page_token] that can be used to get 
+       * the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -11235,6 +12863,13 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns 
+       * a [ListDryRunLifecyclePolicyResultsResponse.next_page_token] that can be used to get 
+       * the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -11246,6 +12881,11 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDryRunLifecyclePolicyResultsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -11261,6 +12901,11 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDryRunLifecyclePolicyResultsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -11277,6 +12922,11 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDryRunLifecyclePolicyResultsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -11290,6 +12940,11 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDryRunLifecyclePolicyResultsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -11299,6 +12954,11 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDryRunLifecyclePolicyResultsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -11315,6 +12975,14 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters dry run results listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -11330,6 +12998,14 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters dry run results listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -11346,6 +13022,14 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters dry run results listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -11359,6 +13043,14 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters dry run results listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -11368,6 +13060,14 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters dry run results listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -11384,6 +13084,11 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object orderBy_ = "";
       /**
+       * <pre>
+       * Sorting the list by [DryRunLifecyclePolicyResult.run_at] and [DryRunLifecyclePolicyResult.affected_images_count] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getOrderBy() {
@@ -11399,6 +13104,11 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sorting the list by [DryRunLifecyclePolicyResult.run_at] and [DryRunLifecyclePolicyResult.affected_images_count] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -11415,6 +13125,11 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sorting the list by [DryRunLifecyclePolicyResult.run_at] and [DryRunLifecyclePolicyResult.affected_images_count] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setOrderBy(
@@ -11428,6 +13143,11 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sorting the list by [DryRunLifecyclePolicyResult.run_at] and [DryRunLifecyclePolicyResult.affected_images_count] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearOrderBy() {
@@ -11437,6 +13157,11 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sorting the list by [DryRunLifecyclePolicyResult.run_at] and [DryRunLifecyclePolicyResult.affected_images_count] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setOrderByBytes(
@@ -11508,34 +13233,68 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of results of dry runs of a lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
     java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> 
         getDryRunLifecyclePolicyResultsList();
     /**
+     * <pre>
+     * List of results of dry runs of a lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult getDryRunLifecyclePolicyResults(int index);
     /**
+     * <pre>
+     * List of results of dry runs of a lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
     int getDryRunLifecyclePolicyResultsCount();
     /**
+     * <pre>
+     * List of results of dry runs of a lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResultOrBuilder> 
         getDryRunLifecyclePolicyResultsOrBuilderList();
     /**
+     * <pre>
+     * List of results of dry runs of a lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
     yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResultOrBuilder getDryRunLifecyclePolicyResultsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDryRunLifecyclePolicyResultsRequest.page_size] use `next_page_token` as the value
+     * for the [ListDryRunLifecyclePolicyResultsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDryRunLifecyclePolicyResultsRequest.page_size] use `next_page_token` as the value
+     * for the [ListDryRunLifecyclePolicyResultsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -11636,12 +13395,20 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int DRY_RUN_LIFECYCLE_POLICY_RESULTS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> dryRunLifecyclePolicyResults_;
     /**
+     * <pre>
+     * List of results of dry runs of a lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
     public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> getDryRunLifecyclePolicyResultsList() {
       return dryRunLifecyclePolicyResults_;
     }
     /**
+     * <pre>
+     * List of results of dry runs of a lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResultOrBuilder> 
@@ -11649,18 +13416,30 @@ public final class LifecyclePolicyServiceOuterClass {
       return dryRunLifecyclePolicyResults_;
     }
     /**
+     * <pre>
+     * List of results of dry runs of a lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
     public int getDryRunLifecyclePolicyResultsCount() {
       return dryRunLifecyclePolicyResults_.size();
     }
     /**
+     * <pre>
+     * List of results of dry runs of a lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult getDryRunLifecyclePolicyResults(int index) {
       return dryRunLifecyclePolicyResults_.get(index);
     }
     /**
+     * <pre>
+     * List of results of dry runs of a lifecycle policy.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
      */
     public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResultOrBuilder getDryRunLifecyclePolicyResultsOrBuilder(
@@ -11671,6 +13450,13 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDryRunLifecyclePolicyResultsRequest.page_size] use `next_page_token` as the value
+     * for the [ListDryRunLifecyclePolicyResultsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -11686,6 +13472,13 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDryRunLifecyclePolicyResultsRequest.page_size] use `next_page_token` as the value
+     * for the [ListDryRunLifecyclePolicyResultsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -12077,6 +13870,10 @@ public final class LifecyclePolicyServiceOuterClass {
           yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult.Builder, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResultOrBuilder> dryRunLifecyclePolicyResultsBuilder_;
 
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult> getDryRunLifecyclePolicyResultsList() {
@@ -12087,6 +13884,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public int getDryRunLifecyclePolicyResultsCount() {
@@ -12097,6 +13898,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult getDryRunLifecyclePolicyResults(int index) {
@@ -12107,6 +13912,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public Builder setDryRunLifecyclePolicyResults(
@@ -12124,6 +13933,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public Builder setDryRunLifecyclePolicyResults(
@@ -12138,6 +13951,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public Builder addDryRunLifecyclePolicyResults(yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult value) {
@@ -12154,6 +13971,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public Builder addDryRunLifecyclePolicyResults(
@@ -12171,6 +13992,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public Builder addDryRunLifecyclePolicyResults(
@@ -12185,6 +14010,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public Builder addDryRunLifecyclePolicyResults(
@@ -12199,6 +14028,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public Builder addAllDryRunLifecyclePolicyResults(
@@ -12214,6 +14047,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public Builder clearDryRunLifecyclePolicyResults() {
@@ -12227,6 +14064,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public Builder removeDryRunLifecyclePolicyResults(int index) {
@@ -12240,6 +14081,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult.Builder getDryRunLifecyclePolicyResultsBuilder(
@@ -12247,6 +14092,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return getDryRunLifecyclePolicyResultsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResultOrBuilder getDryRunLifecyclePolicyResultsOrBuilder(
@@ -12257,6 +14106,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResultOrBuilder> 
@@ -12268,6 +14121,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult.Builder addDryRunLifecyclePolicyResultsBuilder() {
@@ -12275,6 +14132,10 @@ public final class LifecyclePolicyServiceOuterClass {
             yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult.Builder addDryRunLifecyclePolicyResultsBuilder(
@@ -12283,6 +14144,10 @@ public final class LifecyclePolicyServiceOuterClass {
             index, yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of results of dry runs of a lifecycle policy.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.DryRunLifecyclePolicyResult dry_run_lifecycle_policy_results = 1;</code>
        */
       public java.util.List<yandex.cloud.api.containerregistry.v1.LifecyclePolicyServiceOuterClass.DryRunLifecyclePolicyResult.Builder> 
@@ -12306,6 +14171,13 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDryRunLifecyclePolicyResultsRequest.page_size] use `next_page_token` as the value
+       * for the [ListDryRunLifecyclePolicyResultsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -12321,6 +14193,13 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDryRunLifecyclePolicyResultsRequest.page_size] use `next_page_token` as the value
+       * for the [ListDryRunLifecyclePolicyResultsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -12337,6 +14216,13 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDryRunLifecyclePolicyResultsRequest.page_size] use `next_page_token` as the value
+       * for the [ListDryRunLifecyclePolicyResultsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -12350,6 +14236,13 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDryRunLifecyclePolicyResultsRequest.page_size] use `next_page_token` as the value
+       * for the [ListDryRunLifecyclePolicyResultsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -12359,6 +14252,13 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDryRunLifecyclePolicyResultsRequest.page_size] use `next_page_token` as the value
+       * for the [ListDryRunLifecyclePolicyResultsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(
@@ -12430,45 +14330,95 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     java.lang.String getDryRunLifecyclePolicyResultId();
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     com.google.protobuf.ByteString
         getDryRunLifecyclePolicyResultIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters affected images listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters affected images listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     com.google.protobuf.ByteString
         getFilterBytes();
 
     /**
+     * <pre>
+     * Sorting the list by [LifecyclePolicy.name] and [LifecyclePolicy.created_at] fields.
+     * The default sorting order is ascending.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     java.lang.String getOrderBy();
     /**
+     * <pre>
+     * Sorting the list by [LifecyclePolicy.name] and [LifecyclePolicy.created_at] fields.
+     * The default sorting order is ascending.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
@@ -12582,6 +14532,10 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int DRY_RUN_LIFECYCLE_POLICY_RESULT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object dryRunLifecyclePolicyResultId_;
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public java.lang.String getDryRunLifecyclePolicyResultId() {
@@ -12597,6 +14551,10 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the dry run result of the lifecycle policy
+     * </pre>
+     *
      * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      */
     public com.google.protobuf.ByteString
@@ -12616,6 +14574,12 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      */
     public long getPageSize() {
@@ -12625,6 +14589,11 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getPageToken() {
@@ -12640,6 +14609,11 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -12659,6 +14633,14 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters affected images listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public java.lang.String getFilter() {
@@ -12674,6 +14656,14 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters affected images listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      */
     public com.google.protobuf.ByteString
@@ -12693,6 +14683,11 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int ORDER_BY_FIELD_NUMBER = 5;
     private volatile java.lang.Object orderBy_;
     /**
+     * <pre>
+     * Sorting the list by [LifecyclePolicy.name] and [LifecyclePolicy.created_at] fields.
+     * The default sorting order is ascending.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public java.lang.String getOrderBy() {
@@ -12708,6 +14703,11 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Sorting the list by [LifecyclePolicy.name] and [LifecyclePolicy.created_at] fields.
+     * The default sorting order is ascending.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
@@ -13098,6 +15098,10 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object dryRunLifecyclePolicyResultId_ = "";
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public java.lang.String getDryRunLifecyclePolicyResultId() {
@@ -13113,6 +15117,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public com.google.protobuf.ByteString
@@ -13129,6 +15137,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDryRunLifecyclePolicyResultId(
@@ -13142,6 +15154,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder clearDryRunLifecyclePolicyResultId() {
@@ -13151,6 +15167,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the dry run result of the lifecycle policy
+       * </pre>
+       *
        * <code>string dry_run_lifecycle_policy_result_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        */
       public Builder setDryRunLifecyclePolicyResultIdBytes(
@@ -13167,12 +15187,24 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public long getPageSize() {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder setPageSize(long value) {
@@ -13182,6 +15214,12 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        */
       public Builder clearPageSize() {
@@ -13193,6 +15231,11 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getPageToken() {
@@ -13208,6 +15251,11 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -13224,6 +15272,11 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageToken(
@@ -13237,6 +15290,11 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearPageToken() {
@@ -13246,6 +15304,11 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListDryRunLifecyclePolicyResultAffectedImagesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setPageTokenBytes(
@@ -13262,6 +15325,14 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters affected images listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public java.lang.String getFilter() {
@@ -13277,6 +15348,14 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters affected images listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public com.google.protobuf.ByteString
@@ -13293,6 +15372,14 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters affected images listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilter(
@@ -13306,6 +15393,14 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters affected images listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder clearFilter() {
@@ -13315,6 +15410,14 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters affected images listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [LifecyclePolicy.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        */
       public Builder setFilterBytes(
@@ -13331,6 +15434,11 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object orderBy_ = "";
       /**
+       * <pre>
+       * Sorting the list by [LifecyclePolicy.name] and [LifecyclePolicy.created_at] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public java.lang.String getOrderBy() {
@@ -13346,6 +15454,11 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sorting the list by [LifecyclePolicy.name] and [LifecyclePolicy.created_at] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
@@ -13362,6 +15475,11 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sorting the list by [LifecyclePolicy.name] and [LifecyclePolicy.created_at] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setOrderBy(
@@ -13375,6 +15493,11 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sorting the list by [LifecyclePolicy.name] and [LifecyclePolicy.created_at] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder clearOrderBy() {
@@ -13384,6 +15507,11 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sorting the list by [LifecyclePolicy.name] and [LifecyclePolicy.created_at] fields.
+       * The default sorting order is ascending.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        */
       public Builder setOrderByBytes(
@@ -13455,34 +15583,68 @@ public final class LifecyclePolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of affected images.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
     java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> 
         getAffectedImagesList();
     /**
+     * <pre>
+     * List of affected images.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
     yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages(int index);
     /**
+     * <pre>
+     * List of affected images.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
     int getAffectedImagesCount();
     /**
+     * <pre>
+     * List of affected images.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
         getAffectedImagesOrBuilderList();
     /**
+     * <pre>
+     * List of affected images.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
     yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImagesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     com.google.protobuf.ByteString
@@ -13583,12 +15745,20 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int AFFECTED_IMAGES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> affectedImages_;
     /**
+     * <pre>
+     * List of affected images.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
     public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> getAffectedImagesList() {
       return affectedImages_;
     }
     /**
+     * <pre>
+     * List of affected images.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
     public java.util.List<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
@@ -13596,18 +15766,30 @@ public final class LifecyclePolicyServiceOuterClass {
       return affectedImages_;
     }
     /**
+     * <pre>
+     * List of affected images.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
     public int getAffectedImagesCount() {
       return affectedImages_.size();
     }
     /**
+     * <pre>
+     * List of affected images.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
     public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages(int index) {
       return affectedImages_.get(index);
     }
     /**
+     * <pre>
+     * List of affected images.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
      */
     public yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImagesOrBuilder(
@@ -13618,6 +15800,13 @@ public final class LifecyclePolicyServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public java.lang.String getNextPageToken() {
@@ -13633,6 +15822,13 @@ public final class LifecyclePolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_size], use `next_page_token` as the value
+     * for the [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      */
     public com.google.protobuf.ByteString
@@ -14024,6 +16220,10 @@ public final class LifecyclePolicyServiceOuterClass {
           yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder, yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> affectedImagesBuilder_;
 
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image> getAffectedImagesList() {
@@ -14034,6 +16234,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public int getAffectedImagesCount() {
@@ -14044,6 +16248,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image getAffectedImages(int index) {
@@ -14054,6 +16262,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public Builder setAffectedImages(
@@ -14071,6 +16283,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public Builder setAffectedImages(
@@ -14085,6 +16301,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public Builder addAffectedImages(yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image value) {
@@ -14101,6 +16321,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public Builder addAffectedImages(
@@ -14118,6 +16342,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public Builder addAffectedImages(
@@ -14132,6 +16360,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public Builder addAffectedImages(
@@ -14146,6 +16378,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public Builder addAllAffectedImages(
@@ -14161,6 +16397,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public Builder clearAffectedImages() {
@@ -14174,6 +16414,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public Builder removeAffectedImages(int index) {
@@ -14187,6 +16431,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder getAffectedImagesBuilder(
@@ -14194,6 +16442,10 @@ public final class LifecyclePolicyServiceOuterClass {
         return getAffectedImagesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder getAffectedImagesOrBuilder(
@@ -14204,6 +16456,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.containerregistry.v1.ImageOuterClass.ImageOrBuilder> 
@@ -14215,6 +16471,10 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder addAffectedImagesBuilder() {
@@ -14222,6 +16482,10 @@ public final class LifecyclePolicyServiceOuterClass {
             yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder addAffectedImagesBuilder(
@@ -14230,6 +16494,10 @@ public final class LifecyclePolicyServiceOuterClass {
             index, yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of affected images.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.containerregistry.v1.Image affected_images = 1;</code>
        */
       public java.util.List<yandex.cloud.api.containerregistry.v1.ImageOuterClass.Image.Builder> 
@@ -14253,6 +16521,13 @@ public final class LifecyclePolicyServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public java.lang.String getNextPageToken() {
@@ -14268,6 +16543,13 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public com.google.protobuf.ByteString
@@ -14284,6 +16566,13 @@ public final class LifecyclePolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageToken(
@@ -14297,6 +16586,13 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder clearNextPageToken() {
@@ -14306,6 +16602,13 @@ public final class LifecyclePolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_size], use `next_page_token` as the value
+       * for the [ListDryRunLifecyclePolicyResultAffectedImagesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        */
       public Builder setNextPageTokenBytes(

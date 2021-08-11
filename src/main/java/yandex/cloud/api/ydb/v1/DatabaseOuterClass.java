@@ -5789,15 +5789,16 @@ public final class DatabaseOuterClass {
 
     /**
      * <pre>
-     * Specify explicit limit of request units for database.
-     * Default value is 0.
-     * If zero, then request units are unlimited for this database and units are limited
-     * by cloud quota value.
+     * Let's define 1 RU  - 1 request unit
+     * Let's define 1 RCU - 1 request capacity unit, which is 1 RU per second.
+     * If `enable_throttling_rcu_limit` flag is true, the database will be throttled using `throttling_rcu_limit` value.
+     * Otherwise, the database is throttled using the cloud quotas.
+     * If zero, all requests will be blocked until non zero value is set.
      * </pre>
      *
-     * <code>int64 request_units_per_second_limit = 1;</code>
+     * <code>int64 throttling_rcu_limit = 1;</code>
      */
-    long getRequestUnitsPerSecondLimit();
+    long getThrottlingRcuLimit();
 
     /**
      * <pre>
@@ -5807,6 +5808,26 @@ public final class DatabaseOuterClass {
      * <code>int64 storage_size_limit = 2;</code>
      */
     long getStorageSizeLimit();
+
+    /**
+     * <pre>
+     * If false, the database is throttled by cloud value.
+     * </pre>
+     *
+     * <code>bool enable_throttling_rcu_limit = 3;</code>
+     */
+    boolean getEnableThrottlingRcuLimit();
+
+    /**
+     * <pre>
+     * Specify the number of provisioned RCUs to pay less if the database has predictable load.
+     * You will be charged for the provisioned capacity regularly even if this capacity is not fully consumed.
+     * You will be charged for the on-demand consumption only if provisioned capacity is consumed.
+     * </pre>
+     *
+     * <code>int64 provisioned_rcu_limit = 4;</code>
+     */
+    long getProvisionedRcuLimit();
   }
   /**
    * Protobuf type {@code yandex.cloud.ydb.v1.ServerlessDatabase}
@@ -5821,8 +5842,10 @@ public final class DatabaseOuterClass {
       super(builder);
     }
     private ServerlessDatabase() {
-      requestUnitsPerSecondLimit_ = 0L;
+      throttlingRcuLimit_ = 0L;
       storageSizeLimit_ = 0L;
+      enableThrottlingRcuLimit_ = false;
+      provisionedRcuLimit_ = 0L;
     }
 
     @java.lang.Override
@@ -5851,12 +5874,22 @@ public final class DatabaseOuterClass {
               break;
             case 8: {
 
-              requestUnitsPerSecondLimit_ = input.readInt64();
+              throttlingRcuLimit_ = input.readInt64();
               break;
             }
             case 16: {
 
               storageSizeLimit_ = input.readInt64();
+              break;
+            }
+            case 24: {
+
+              enableThrottlingRcuLimit_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              provisionedRcuLimit_ = input.readInt64();
               break;
             }
             default: {
@@ -5891,20 +5924,21 @@ public final class DatabaseOuterClass {
               yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase.Builder.class);
     }
 
-    public static final int REQUEST_UNITS_PER_SECOND_LIMIT_FIELD_NUMBER = 1;
-    private long requestUnitsPerSecondLimit_;
+    public static final int THROTTLING_RCU_LIMIT_FIELD_NUMBER = 1;
+    private long throttlingRcuLimit_;
     /**
      * <pre>
-     * Specify explicit limit of request units for database.
-     * Default value is 0.
-     * If zero, then request units are unlimited for this database and units are limited
-     * by cloud quota value.
+     * Let's define 1 RU  - 1 request unit
+     * Let's define 1 RCU - 1 request capacity unit, which is 1 RU per second.
+     * If `enable_throttling_rcu_limit` flag is true, the database will be throttled using `throttling_rcu_limit` value.
+     * Otherwise, the database is throttled using the cloud quotas.
+     * If zero, all requests will be blocked until non zero value is set.
      * </pre>
      *
-     * <code>int64 request_units_per_second_limit = 1;</code>
+     * <code>int64 throttling_rcu_limit = 1;</code>
      */
-    public long getRequestUnitsPerSecondLimit() {
-      return requestUnitsPerSecondLimit_;
+    public long getThrottlingRcuLimit() {
+      return throttlingRcuLimit_;
     }
 
     public static final int STORAGE_SIZE_LIMIT_FIELD_NUMBER = 2;
@@ -5918,6 +5952,34 @@ public final class DatabaseOuterClass {
      */
     public long getStorageSizeLimit() {
       return storageSizeLimit_;
+    }
+
+    public static final int ENABLE_THROTTLING_RCU_LIMIT_FIELD_NUMBER = 3;
+    private boolean enableThrottlingRcuLimit_;
+    /**
+     * <pre>
+     * If false, the database is throttled by cloud value.
+     * </pre>
+     *
+     * <code>bool enable_throttling_rcu_limit = 3;</code>
+     */
+    public boolean getEnableThrottlingRcuLimit() {
+      return enableThrottlingRcuLimit_;
+    }
+
+    public static final int PROVISIONED_RCU_LIMIT_FIELD_NUMBER = 4;
+    private long provisionedRcuLimit_;
+    /**
+     * <pre>
+     * Specify the number of provisioned RCUs to pay less if the database has predictable load.
+     * You will be charged for the provisioned capacity regularly even if this capacity is not fully consumed.
+     * You will be charged for the on-demand consumption only if provisioned capacity is consumed.
+     * </pre>
+     *
+     * <code>int64 provisioned_rcu_limit = 4;</code>
+     */
+    public long getProvisionedRcuLimit() {
+      return provisionedRcuLimit_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5934,11 +5996,17 @@ public final class DatabaseOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (requestUnitsPerSecondLimit_ != 0L) {
-        output.writeInt64(1, requestUnitsPerSecondLimit_);
+      if (throttlingRcuLimit_ != 0L) {
+        output.writeInt64(1, throttlingRcuLimit_);
       }
       if (storageSizeLimit_ != 0L) {
         output.writeInt64(2, storageSizeLimit_);
+      }
+      if (enableThrottlingRcuLimit_ != false) {
+        output.writeBool(3, enableThrottlingRcuLimit_);
+      }
+      if (provisionedRcuLimit_ != 0L) {
+        output.writeInt64(4, provisionedRcuLimit_);
       }
       unknownFields.writeTo(output);
     }
@@ -5949,13 +6017,21 @@ public final class DatabaseOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (requestUnitsPerSecondLimit_ != 0L) {
+      if (throttlingRcuLimit_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, requestUnitsPerSecondLimit_);
+          .computeInt64Size(1, throttlingRcuLimit_);
       }
       if (storageSizeLimit_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, storageSizeLimit_);
+      }
+      if (enableThrottlingRcuLimit_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, enableThrottlingRcuLimit_);
+      }
+      if (provisionedRcuLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, provisionedRcuLimit_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5973,10 +6049,14 @@ public final class DatabaseOuterClass {
       yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase other = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase) obj;
 
       boolean result = true;
-      result = result && (getRequestUnitsPerSecondLimit()
-          == other.getRequestUnitsPerSecondLimit());
+      result = result && (getThrottlingRcuLimit()
+          == other.getThrottlingRcuLimit());
       result = result && (getStorageSizeLimit()
           == other.getStorageSizeLimit());
+      result = result && (getEnableThrottlingRcuLimit()
+          == other.getEnableThrottlingRcuLimit());
+      result = result && (getProvisionedRcuLimit()
+          == other.getProvisionedRcuLimit());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5988,12 +6068,18 @@ public final class DatabaseOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + REQUEST_UNITS_PER_SECOND_LIMIT_FIELD_NUMBER;
+      hash = (37 * hash) + THROTTLING_RCU_LIMIT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getRequestUnitsPerSecondLimit());
+          getThrottlingRcuLimit());
       hash = (37 * hash) + STORAGE_SIZE_LIMIT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getStorageSizeLimit());
+      hash = (37 * hash) + ENABLE_THROTTLING_RCU_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableThrottlingRcuLimit());
+      hash = (37 * hash) + PROVISIONED_RCU_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProvisionedRcuLimit());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6127,9 +6213,13 @@ public final class DatabaseOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        requestUnitsPerSecondLimit_ = 0L;
+        throttlingRcuLimit_ = 0L;
 
         storageSizeLimit_ = 0L;
+
+        enableThrottlingRcuLimit_ = false;
+
+        provisionedRcuLimit_ = 0L;
 
         return this;
       }
@@ -6157,8 +6247,10 @@ public final class DatabaseOuterClass {
       @java.lang.Override
       public yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase buildPartial() {
         yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase(this);
-        result.requestUnitsPerSecondLimit_ = requestUnitsPerSecondLimit_;
+        result.throttlingRcuLimit_ = throttlingRcuLimit_;
         result.storageSizeLimit_ = storageSizeLimit_;
+        result.enableThrottlingRcuLimit_ = enableThrottlingRcuLimit_;
+        result.provisionedRcuLimit_ = provisionedRcuLimit_;
         onBuilt();
         return result;
       }
@@ -6207,11 +6299,17 @@ public final class DatabaseOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase other) {
         if (other == yandex.cloud.api.ydb.v1.DatabaseOuterClass.ServerlessDatabase.getDefaultInstance()) return this;
-        if (other.getRequestUnitsPerSecondLimit() != 0L) {
-          setRequestUnitsPerSecondLimit(other.getRequestUnitsPerSecondLimit());
+        if (other.getThrottlingRcuLimit() != 0L) {
+          setThrottlingRcuLimit(other.getThrottlingRcuLimit());
         }
         if (other.getStorageSizeLimit() != 0L) {
           setStorageSizeLimit(other.getStorageSizeLimit());
+        }
+        if (other.getEnableThrottlingRcuLimit() != false) {
+          setEnableThrottlingRcuLimit(other.getEnableThrottlingRcuLimit());
+        }
+        if (other.getProvisionedRcuLimit() != 0L) {
+          setProvisionedRcuLimit(other.getProvisionedRcuLimit());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6242,49 +6340,52 @@ public final class DatabaseOuterClass {
         return this;
       }
 
-      private long requestUnitsPerSecondLimit_ ;
+      private long throttlingRcuLimit_ ;
       /**
        * <pre>
-       * Specify explicit limit of request units for database.
-       * Default value is 0.
-       * If zero, then request units are unlimited for this database and units are limited
-       * by cloud quota value.
+       * Let's define 1 RU  - 1 request unit
+       * Let's define 1 RCU - 1 request capacity unit, which is 1 RU per second.
+       * If `enable_throttling_rcu_limit` flag is true, the database will be throttled using `throttling_rcu_limit` value.
+       * Otherwise, the database is throttled using the cloud quotas.
+       * If zero, all requests will be blocked until non zero value is set.
        * </pre>
        *
-       * <code>int64 request_units_per_second_limit = 1;</code>
+       * <code>int64 throttling_rcu_limit = 1;</code>
        */
-      public long getRequestUnitsPerSecondLimit() {
-        return requestUnitsPerSecondLimit_;
+      public long getThrottlingRcuLimit() {
+        return throttlingRcuLimit_;
       }
       /**
        * <pre>
-       * Specify explicit limit of request units for database.
-       * Default value is 0.
-       * If zero, then request units are unlimited for this database and units are limited
-       * by cloud quota value.
+       * Let's define 1 RU  - 1 request unit
+       * Let's define 1 RCU - 1 request capacity unit, which is 1 RU per second.
+       * If `enable_throttling_rcu_limit` flag is true, the database will be throttled using `throttling_rcu_limit` value.
+       * Otherwise, the database is throttled using the cloud quotas.
+       * If zero, all requests will be blocked until non zero value is set.
        * </pre>
        *
-       * <code>int64 request_units_per_second_limit = 1;</code>
+       * <code>int64 throttling_rcu_limit = 1;</code>
        */
-      public Builder setRequestUnitsPerSecondLimit(long value) {
+      public Builder setThrottlingRcuLimit(long value) {
         
-        requestUnitsPerSecondLimit_ = value;
+        throttlingRcuLimit_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Specify explicit limit of request units for database.
-       * Default value is 0.
-       * If zero, then request units are unlimited for this database and units are limited
-       * by cloud quota value.
+       * Let's define 1 RU  - 1 request unit
+       * Let's define 1 RCU - 1 request capacity unit, which is 1 RU per second.
+       * If `enable_throttling_rcu_limit` flag is true, the database will be throttled using `throttling_rcu_limit` value.
+       * Otherwise, the database is throttled using the cloud quotas.
+       * If zero, all requests will be blocked until non zero value is set.
        * </pre>
        *
-       * <code>int64 request_units_per_second_limit = 1;</code>
+       * <code>int64 throttling_rcu_limit = 1;</code>
        */
-      public Builder clearRequestUnitsPerSecondLimit() {
+      public Builder clearThrottlingRcuLimit() {
         
-        requestUnitsPerSecondLimit_ = 0L;
+        throttlingRcuLimit_ = 0L;
         onChanged();
         return this;
       }
@@ -6323,6 +6424,88 @@ public final class DatabaseOuterClass {
       public Builder clearStorageSizeLimit() {
         
         storageSizeLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableThrottlingRcuLimit_ ;
+      /**
+       * <pre>
+       * If false, the database is throttled by cloud value.
+       * </pre>
+       *
+       * <code>bool enable_throttling_rcu_limit = 3;</code>
+       */
+      public boolean getEnableThrottlingRcuLimit() {
+        return enableThrottlingRcuLimit_;
+      }
+      /**
+       * <pre>
+       * If false, the database is throttled by cloud value.
+       * </pre>
+       *
+       * <code>bool enable_throttling_rcu_limit = 3;</code>
+       */
+      public Builder setEnableThrottlingRcuLimit(boolean value) {
+        
+        enableThrottlingRcuLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If false, the database is throttled by cloud value.
+       * </pre>
+       *
+       * <code>bool enable_throttling_rcu_limit = 3;</code>
+       */
+      public Builder clearEnableThrottlingRcuLimit() {
+        
+        enableThrottlingRcuLimit_ = false;
+        onChanged();
+        return this;
+      }
+
+      private long provisionedRcuLimit_ ;
+      /**
+       * <pre>
+       * Specify the number of provisioned RCUs to pay less if the database has predictable load.
+       * You will be charged for the provisioned capacity regularly even if this capacity is not fully consumed.
+       * You will be charged for the on-demand consumption only if provisioned capacity is consumed.
+       * </pre>
+       *
+       * <code>int64 provisioned_rcu_limit = 4;</code>
+       */
+      public long getProvisionedRcuLimit() {
+        return provisionedRcuLimit_;
+      }
+      /**
+       * <pre>
+       * Specify the number of provisioned RCUs to pay less if the database has predictable load.
+       * You will be charged for the provisioned capacity regularly even if this capacity is not fully consumed.
+       * You will be charged for the on-demand consumption only if provisioned capacity is consumed.
+       * </pre>
+       *
+       * <code>int64 provisioned_rcu_limit = 4;</code>
+       */
+      public Builder setProvisionedRcuLimit(long value) {
+        
+        provisionedRcuLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the number of provisioned RCUs to pay less if the database has predictable load.
+       * You will be charged for the provisioned capacity regularly even if this capacity is not fully consumed.
+       * You will be charged for the on-demand consumption only if provisioned capacity is consumed.
+       * </pre>
+       *
+       * <code>int64 provisioned_rcu_limit = 4;</code>
+       */
+      public Builder clearProvisionedRcuLimit() {
+        
+        provisionedRcuLimit_ = 0L;
         onChanged();
         return this;
       }
@@ -10234,22 +10417,23 @@ public final class DatabaseOuterClass {
       "d.ydb.v1.StorageConfig\0226\n\014scale_policy\030\003" +
       " \001(\0132 .yandex.cloud.ydb.v1.ScalePolicy\022\022" +
       "\n\nnetwork_id\030\004 \001(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\031" +
-      "\n\021assign_public_ips\030\006 \001(\010\"X\n\022ServerlessD" +
-      "atabase\022&\n\036request_units_per_second_limi" +
-      "t\030\001 \001(\003\022\032\n\022storage_size_limit\030\002 \001(\003\"&\n\rZ" +
-      "onalDatabase\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\"+\n\020R" +
-      "egionalDatabase\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001" +
-      "\"\212\001\n\013ScalePolicy\022B\n\013fixed_scale\030\001 \001(\0132+." +
-      "yandex.cloud.ydb.v1.ScalePolicy.FixedSca" +
-      "leH\000\032#\n\nFixedScale\022\025\n\004size\030\001 \001(\003B\007\372\3071\003>=" +
-      "1B\022\n\nscale_type\022\004\300\3011\001\"q\n\rStorageConfig\022D" +
-      "\n\017storage_options\030\001 \003(\0132\".yandex.cloud.y" +
-      "db.v1.StorageOptionB\007\202\3101\003>=1\022\032\n\022storage_" +
-      "size_limit\030\002 \001(\003\"=\n\rStorageOption\022\027\n\017sto" +
-      "rage_type_id\030\001 \001(\t\022\023\n\013group_count\030\002 \001(\003B" +
-      "V\n\027yandex.cloud.api.ydb.v1Z;github.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/ydb" +
-      "/v1;ydbb\006proto3"
+      "\n\021assign_public_ips\030\006 \001(\010\"\222\001\n\022Serverless" +
+      "Database\022\034\n\024throttling_rcu_limit\030\001 \001(\003\022\032" +
+      "\n\022storage_size_limit\030\002 \001(\003\022#\n\033enable_thr" +
+      "ottling_rcu_limit\030\003 \001(\010\022\035\n\025provisioned_r" +
+      "cu_limit\030\004 \001(\003\"&\n\rZonalDatabase\022\025\n\007zone_" +
+      "id\030\001 \001(\tB\004\350\3071\001\"+\n\020RegionalDatabase\022\027\n\tre" +
+      "gion_id\030\001 \001(\tB\004\350\3071\001\"\212\001\n\013ScalePolicy\022B\n\013f" +
+      "ixed_scale\030\001 \001(\0132+.yandex.cloud.ydb.v1.S" +
+      "calePolicy.FixedScaleH\000\032#\n\nFixedScale\022\025\n" +
+      "\004size\030\001 \001(\003B\007\372\3071\003>=1B\022\n\nscale_type\022\004\300\3011\001" +
+      "\"q\n\rStorageConfig\022D\n\017storage_options\030\001 \003" +
+      "(\0132\".yandex.cloud.ydb.v1.StorageOptionB\007" +
+      "\202\3101\003>=1\022\032\n\022storage_size_limit\030\002 \001(\003\"=\n\rS" +
+      "torageOption\022\027\n\017storage_type_id\030\001 \001(\t\022\023\n" +
+      "\013group_count\030\002 \001(\003BV\n\027yandex.cloud.api.y" +
+      "db.v1Z;github.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/ydb/v1;ydbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10289,7 +10473,7 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_ydb_v1_ServerlessDatabase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_ServerlessDatabase_descriptor,
-        new java.lang.String[] { "RequestUnitsPerSecondLimit", "StorageSizeLimit", });
+        new java.lang.String[] { "ThrottlingRcuLimit", "StorageSizeLimit", "EnableThrottlingRcuLimit", "ProvisionedRcuLimit", });
     internal_static_yandex_cloud_ydb_v1_ZonalDatabase_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_ydb_v1_ZonalDatabase_fieldAccessorTable = new

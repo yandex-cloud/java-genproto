@@ -41,7 +41,7 @@ public final class LogResource {
      * Resource ID, i.e., ID of the function producing logs.
      * </pre>
      *
-     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     java.lang.String getId();
     /**
@@ -49,7 +49,7 @@ public final class LogResource {
      * Resource ID, i.e., ID of the function producing logs.
      * </pre>
      *
-     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -193,7 +193,7 @@ public final class LogResource {
      * Resource ID, i.e., ID of the function producing logs.
      * </pre>
      *
-     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -212,7 +212,7 @@ public final class LogResource {
      * Resource ID, i.e., ID of the function producing logs.
      * </pre>
      *
-     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+     * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -648,7 +648,7 @@ public final class LogResource {
        * Resource ID, i.e., ID of the function producing logs.
        * </pre>
        *
-       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -667,7 +667,7 @@ public final class LogResource {
        * Resource ID, i.e., ID of the function producing logs.
        * </pre>
        *
-       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -687,7 +687,7 @@ public final class LogResource {
        * Resource ID, i.e., ID of the function producing logs.
        * </pre>
        *
-       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder setId(
           java.lang.String value) {
@@ -704,7 +704,7 @@ public final class LogResource {
        * Resource ID, i.e., ID of the function producing logs.
        * </pre>
        *
-       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder clearId() {
         
@@ -717,7 +717,7 @@ public final class LogResource {
        * Resource ID, i.e., ID of the function producing logs.
        * </pre>
        *
-       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z][-a-zA-Z0-9_.]{0,63})?"];</code>
+       * <code>string id = 2 [(.yandex.cloud.pattern) = "([a-zA-Z0-9][-a-zA-Z0-9_.]{0,63})?"];</code>
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1671,13 +1671,14 @@ public final class LogResource {
       "roto\022\027yandex.cloud.logging.v1\032\036google/pr" +
       "otobuf/duration.proto\032\037google/protobuf/t" +
       "imestamp.proto\032\035yandex/cloud/validation." +
-      "proto\"v\n\020LogEntryResource\0221\n\004type\030\001 \001(\tB" +
-      "#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?\022/\n\002" +
-      "id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0," +
-      "63})?\"-\n\020LogGroupResource\022\014\n\004type\030\001 \001(\t\022" +
-      "\013\n\003ids\030\002 \003(\tBb\n\033yandex.cloud.api.logging" +
-      ".v1ZCgithub.com/yandex-cloud/go-genproto" +
-      "/yandex/cloud/logging/v1;loggingb\006proto3"
+      "proto\"y\n\020LogEntryResource\0221\n\004type\030\001 \001(\tB" +
+      "#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?\0222\n\002" +
+      "id\030\002 \001(\tB&\362\3071\"([a-zA-Z0-9][-a-zA-Z0-9_.]" +
+      "{0,63})?\"-\n\020LogGroupResource\022\014\n\004type\030\001 \001" +
+      "(\t\022\013\n\003ids\030\002 \003(\tBb\n\033yandex.cloud.api.logg" +
+      "ing.v1ZCgithub.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/logging/v1;loggingb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

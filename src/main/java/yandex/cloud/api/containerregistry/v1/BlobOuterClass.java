@@ -64,19 +64,35 @@ public final class BlobOuterClass {
     long getSize();
 
     /**
+     * <pre>
+     * List of blob urls.
+     * </pre>
+     *
      * <code>repeated string urls = 4;</code>
      */
     java.util.List<java.lang.String>
         getUrlsList();
     /**
+     * <pre>
+     * List of blob urls.
+     * </pre>
+     *
      * <code>repeated string urls = 4;</code>
      */
     int getUrlsCount();
     /**
+     * <pre>
+     * List of blob urls.
+     * </pre>
+     *
      * <code>repeated string urls = 4;</code>
      */
     java.lang.String getUrls(int index);
     /**
+     * <pre>
+     * List of blob urls.
+     * </pre>
+     *
      * <code>repeated string urls = 4;</code>
      */
     com.google.protobuf.ByteString
@@ -291,6 +307,10 @@ public final class BlobOuterClass {
     public static final int URLS_FIELD_NUMBER = 4;
     private com.google.protobuf.LazyStringList urls_;
     /**
+     * <pre>
+     * List of blob urls.
+     * </pre>
+     *
      * <code>repeated string urls = 4;</code>
      */
     public com.google.protobuf.ProtocolStringList
@@ -298,18 +318,30 @@ public final class BlobOuterClass {
       return urls_;
     }
     /**
+     * <pre>
+     * List of blob urls.
+     * </pre>
+     *
      * <code>repeated string urls = 4;</code>
      */
     public int getUrlsCount() {
       return urls_.size();
     }
     /**
+     * <pre>
+     * List of blob urls.
+     * </pre>
+     *
      * <code>repeated string urls = 4;</code>
      */
     public java.lang.String getUrls(int index) {
       return urls_.get(index);
     }
     /**
+     * <pre>
+     * List of blob urls.
+     * </pre>
+     *
      * <code>repeated string urls = 4;</code>
      */
     public com.google.protobuf.ByteString
@@ -921,6 +953,10 @@ public final class BlobOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of blob urls.
+       * </pre>
+       *
        * <code>repeated string urls = 4;</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -928,18 +964,30 @@ public final class BlobOuterClass {
         return urls_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of blob urls.
+       * </pre>
+       *
        * <code>repeated string urls = 4;</code>
        */
       public int getUrlsCount() {
         return urls_.size();
       }
       /**
+       * <pre>
+       * List of blob urls.
+       * </pre>
+       *
        * <code>repeated string urls = 4;</code>
        */
       public java.lang.String getUrls(int index) {
         return urls_.get(index);
       }
       /**
+       * <pre>
+       * List of blob urls.
+       * </pre>
+       *
        * <code>repeated string urls = 4;</code>
        */
       public com.google.protobuf.ByteString
@@ -947,6 +995,10 @@ public final class BlobOuterClass {
         return urls_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of blob urls.
+       * </pre>
+       *
        * <code>repeated string urls = 4;</code>
        */
       public Builder setUrls(
@@ -960,6 +1012,10 @@ public final class BlobOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of blob urls.
+       * </pre>
+       *
        * <code>repeated string urls = 4;</code>
        */
       public Builder addUrls(
@@ -973,6 +1029,10 @@ public final class BlobOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of blob urls.
+       * </pre>
+       *
        * <code>repeated string urls = 4;</code>
        */
       public Builder addAllUrls(
@@ -984,6 +1044,10 @@ public final class BlobOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of blob urls.
+       * </pre>
+       *
        * <code>repeated string urls = 4;</code>
        */
       public Builder clearUrls() {
@@ -993,6 +1057,10 @@ public final class BlobOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of blob urls.
+       * </pre>
+       *
        * <code>repeated string urls = 4;</code>
        */
       public Builder addUrlsBytes(

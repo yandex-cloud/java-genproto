@@ -45486,6 +45486,31 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    boolean hasBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    com.google.protobuf.Int64Value getBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder();
+
+    /**
+     * <pre>
      * Access policy to DB
      * </pre>
      *
@@ -45770,6 +45795,19 @@ public final class ClusterServiceOuterClass {
                 postgresqlConfig_ = subBuilder.buildPartial();
               }
               postgresqlConfigCase_ = 15;
+              break;
+            }
+            case 138: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (backupRetainPeriodDays_ != null) {
+                subBuilder = backupRetainPeriodDays_.toBuilder();
+              }
+              backupRetainPeriodDays_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backupRetainPeriodDays_);
+                backupRetainPeriodDays_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -46334,6 +46372,39 @@ public final class ClusterServiceOuterClass {
       return getBackupWindowStart();
     }
 
+    public static final int BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER = 17;
+    private com.google.protobuf.Int64Value backupRetainPeriodDays_;
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    public boolean hasBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ != null;
+    }
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+    }
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+      return getBackupRetainPeriodDays();
+    }
+
     public static final int ACCESS_FIELD_NUMBER = 9;
     private yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.Access access_;
     /**
@@ -46459,6 +46530,9 @@ public final class ClusterServiceOuterClass {
       if (postgresqlConfigCase_ == 15) {
         output.writeMessage(15, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfig13) postgresqlConfig_);
       }
+      if (backupRetainPeriodDays_ != null) {
+        output.writeMessage(17, getBackupRetainPeriodDays());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -46527,6 +46601,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql13.PostgresqlConfig13) postgresqlConfig_);
       }
+      if (backupRetainPeriodDays_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getBackupRetainPeriodDays());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -46564,6 +46642,11 @@ public final class ClusterServiceOuterClass {
       if (hasBackupWindowStart()) {
         result = result && getBackupWindowStart()
             .equals(other.getBackupWindowStart());
+      }
+      result = result && (hasBackupRetainPeriodDays() == other.hasBackupRetainPeriodDays());
+      if (hasBackupRetainPeriodDays()) {
+        result = result && getBackupRetainPeriodDays()
+            .equals(other.getBackupRetainPeriodDays());
       }
       result = result && (hasAccess() == other.hasAccess());
       if (hasAccess()) {
@@ -46642,6 +46725,10 @@ public final class ClusterServiceOuterClass {
       if (hasBackupWindowStart()) {
         hash = (37 * hash) + BACKUP_WINDOW_START_FIELD_NUMBER;
         hash = (53 * hash) + getBackupWindowStart().hashCode();
+      }
+      if (hasBackupRetainPeriodDays()) {
+        hash = (37 * hash) + BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER;
+        hash = (53 * hash) + getBackupRetainPeriodDays().hashCode();
       }
       if (hasAccess()) {
         hash = (37 * hash) + ACCESS_FIELD_NUMBER;
@@ -46846,6 +46933,12 @@ public final class ClusterServiceOuterClass {
           backupWindowStart_ = null;
           backupWindowStartBuilder_ = null;
         }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
         if (accessBuilder_ == null) {
           access_ = null;
         } else {
@@ -46963,6 +47056,11 @@ public final class ClusterServiceOuterClass {
         } else {
           result.backupWindowStart_ = backupWindowStartBuilder_.build();
         }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDays_;
+        } else {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDaysBuilder_.build();
+        }
         if (accessBuilder_ == null) {
           result.access_ = access_;
         } else {
@@ -47037,6 +47135,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasBackupWindowStart()) {
           mergeBackupWindowStart(other.getBackupWindowStart());
+        }
+        if (other.hasBackupRetainPeriodDays()) {
+          mergeBackupRetainPeriodDays(other.getBackupRetainPeriodDays());
         }
         if (other.hasAccess()) {
           mergeAccess(other.getAccess());
@@ -49205,6 +49306,159 @@ public final class ClusterServiceOuterClass {
           backupWindowStart_ = null;
         }
         return backupWindowStartBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value backupRetainPeriodDays_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backupRetainPeriodDaysBuilder_;
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public boolean hasBackupRetainPeriodDays() {
+        return backupRetainPeriodDaysBuilder_ != null || backupRetainPeriodDays_ != null;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        } else {
+          return backupRetainPeriodDaysBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public Builder setBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backupRetainPeriodDays_ = value;
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public Builder setBackupRetainPeriodDays(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = builderForValue.build();
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public Builder mergeBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (backupRetainPeriodDays_ != null) {
+            backupRetainPeriodDays_ =
+              com.google.protobuf.Int64Value.newBuilder(backupRetainPeriodDays_).mergeFrom(value).buildPartial();
+          } else {
+            backupRetainPeriodDays_ = value;
+          }
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public Builder clearBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+          onChanged();
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackupRetainPeriodDaysBuilder() {
+        
+        onChanged();
+        return getBackupRetainPeriodDaysFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+        if (backupRetainPeriodDaysBuilder_ != null) {
+          return backupRetainPeriodDaysBuilder_.getMessageOrBuilder();
+        } else {
+          return backupRetainPeriodDays_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        }
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 17 [(.yandex.cloud.value) = "7-60"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackupRetainPeriodDaysFieldBuilder() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDaysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackupRetainPeriodDays(),
+                  getParentForChildren(),
+                  isClean());
+          backupRetainPeriodDays_ = null;
+        }
+        return backupRetainPeriodDaysBuilder_;
       }
 
       private yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.Access access_ = null;
@@ -52716,7 +52970,7 @@ public final class ClusterServiceOuterClass {
       "_ip\030\003 \001(\010\022\032\n\022replication_source\030\004 \001(\t\022-\n" +
       "\010priority\030\005 \001(\0132\033.google.protobuf.Int64V" +
       "alue\022C\n\013config_spec\030\006 \001(\0132..yandex.cloud" +
-      ".mdb.postgresql.v1.ConfigHostSpec\"\325\n\n\nCo" +
+      ".mdb.postgresql.v1.ConfigHostSpec\"\237\013\n\nCo" +
       "nfigSpec\022\017\n\007version\030\001 \001(\t\022q\n\025postgresql_" +
       "config_9_6\030\002 \001(\0132:.yandex.cloud.mdb.post" +
       "gresql.v1.config.PostgresqlConfig9_6H\000R\024" +
@@ -52746,141 +53000,143 @@ public final class ClusterServiceOuterClass {
       "ces\030\005 \001(\0132).yandex.cloud.mdb.postgresql." +
       "v1.Resources\0220\n\014autofailover\030\006 \001(\0132\032.goo" +
       "gle.protobuf.BoolValue\0223\n\023backup_window_" +
-      "start\030\010 \001(\0132\026.google.type.TimeOfDay\0226\n\006a" +
-      "ccess\030\t \001(\0132&.yandex.cloud.mdb.postgresq" +
-      "l.v1.Access\022W\n\027performance_diagnostics\030\014" +
-      " \001(\01326.yandex.cloud.mdb.postgresql.v1.Pe" +
-      "rformanceDiagnosticsB\023\n\021postgresql_confi" +
-      "g\"\203\010\n\016ConfigHostSpec\022y\n\025postgresql_confi" +
-      "g_9_6\030\001 \001(\0132>.yandex.cloud.mdb.postgresq" +
-      "l.v1.config.PostgresqlHostConfig9_6H\000R\030p" +
-      "ostgresqlHostConfig_9_6\022\177\n\027postgresql_co" +
-      "nfig_10_1c\030\004 \001(\0132@.yandex.cloud.mdb.post" +
-      "gresql.v1.config.PostgresqlHostConfig10_" +
-      "1CH\000R\032postgresqlHostConfig_10_1c\022v\n\024post" +
-      "gresql_config_10\030\002 \001(\0132=.yandex.cloud.md" +
-      "b.postgresql.v1.config.PostgresqlHostCon" +
-      "fig10H\000R\027postgresqlHostConfig_10\022v\n\024post" +
-      "gresql_config_11\030\003 \001(\0132=.yandex.cloud.md" +
-      "b.postgresql.v1.config.PostgresqlHostCon" +
-      "fig11H\000R\027postgresqlHostConfig_11\022\177\n\027post" +
-      "gresql_config_11_1c\030\006 \001(\0132@.yandex.cloud" +
+      "start\030\010 \001(\0132\026.google.type.TimeOfDay\022H\n\031b" +
+      "ackup_retain_period_days\030\021 \001(\0132\033.google." +
+      "protobuf.Int64ValueB\010\372\3071\0047-60\0226\n\006access\030" +
+      "\t \001(\0132&.yandex.cloud.mdb.postgresql.v1.A" +
+      "ccess\022W\n\027performance_diagnostics\030\014 \001(\01326" +
+      ".yandex.cloud.mdb.postgresql.v1.Performa" +
+      "nceDiagnosticsB\023\n\021postgresql_config\"\203\010\n\016" +
+      "ConfigHostSpec\022y\n\025postgresql_config_9_6\030" +
+      "\001 \001(\0132>.yandex.cloud.mdb.postgresql.v1.c" +
+      "onfig.PostgresqlHostConfig9_6H\000R\030postgre" +
+      "sqlHostConfig_9_6\022\177\n\027postgresql_config_1" +
+      "0_1c\030\004 \001(\0132@.yandex.cloud.mdb.postgresql" +
+      ".v1.config.PostgresqlHostConfig10_1CH\000R\032" +
+      "postgresqlHostConfig_10_1c\022v\n\024postgresql" +
+      "_config_10\030\002 \001(\0132=.yandex.cloud.mdb.post" +
+      "gresql.v1.config.PostgresqlHostConfig10H" +
+      "\000R\027postgresqlHostConfig_10\022v\n\024postgresql" +
+      "_config_11\030\003 \001(\0132=.yandex.cloud.mdb.post" +
+      "gresql.v1.config.PostgresqlHostConfig11H" +
+      "\000R\027postgresqlHostConfig_11\022\177\n\027postgresql" +
+      "_config_11_1c\030\006 \001(\0132@.yandex.cloud.mdb.p" +
+      "ostgresql.v1.config.PostgresqlHostConfig" +
+      "11_1CH\000R\032postgresqlHostConfig_11_1c\022v\n\024p" +
+      "ostgresql_config_12\030\005 \001(\0132=.yandex.cloud" +
       ".mdb.postgresql.v1.config.PostgresqlHost" +
-      "Config11_1CH\000R\032postgresqlHostConfig_11_1" +
-      "c\022v\n\024postgresql_config_12\030\005 \001(\0132=.yandex" +
-      ".cloud.mdb.postgresql.v1.config.Postgres" +
-      "qlHostConfig12H\000R\027postgresqlHostConfig_1" +
-      "2\022\177\n\027postgresql_config_12_1c\030\007 \001(\0132@.yan" +
+      "Config12H\000R\027postgresqlHostConfig_12\022\177\n\027p" +
+      "ostgresql_config_12_1c\030\007 \001(\0132@.yandex.cl" +
+      "oud.mdb.postgresql.v1.config.PostgresqlH" +
+      "ostConfig12_1CH\000R\032postgresqlHostConfig_1" +
+      "2_1c\022v\n\024postgresql_config_13\030\010 \001(\0132=.yan" +
       "dex.cloud.mdb.postgresql.v1.config.Postg" +
-      "resqlHostConfig12_1CH\000R\032postgresqlHostCo" +
-      "nfig_12_1c\022v\n\024postgresql_config_13\030\010 \001(\013" +
-      "2=.yandex.cloud.mdb.postgresql.v1.config" +
-      ".PostgresqlHostConfig13H\000R\027postgresqlHos" +
-      "tConfig_13B\023\n\021postgresql_config2\267\037\n\016Clus" +
-      "terService\022\227\001\n\003Get\0221.yandex.cloud.mdb.po" +
-      "stgresql.v1.GetClusterRequest\032\'.yandex.c" +
-      "loud.mdb.postgresql.v1.Cluster\"4\202\323\344\223\002.\022," +
+      "resqlHostConfig13H\000R\027postgresqlHostConfi" +
+      "g_13B\023\n\021postgresql_config2\267\037\n\016ClusterSer" +
+      "vice\022\227\001\n\003Get\0221.yandex.cloud.mdb.postgres" +
+      "ql.v1.GetClusterRequest\032\'.yandex.cloud.m" +
+      "db.postgresql.v1.Cluster\"4\202\323\344\223\002.\022,/manag" +
+      "ed-postgresql/v1/clusters/{cluster_id}\022\232" +
+      "\001\n\004List\0223.yandex.cloud.mdb.postgresql.v1" +
+      ".ListClustersRequest\0324.yandex.cloud.mdb." +
+      "postgresql.v1.ListClustersResponse\"\'\202\323\344\223" +
+      "\002!\022\037/managed-postgresql/v1/clusters\022\261\001\n\006" +
+      "Create\0224.yandex.cloud.mdb.postgresql.v1." +
+      "CreateClusterRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"N\202\323\344\223\002$\"\037/managed-postgr" +
+      "esql/v1/clusters:\001*\262\322* \n\025CreateClusterMe" +
+      "tadata\022\007Cluster\022\276\001\n\006Update\0224.yandex.clou" +
+      "d.mdb.postgresql.v1.UpdateClusterRequest" +
+      "\032!.yandex.cloud.operation.Operation\"[\202\323\344" +
+      "\223\00212,/managed-postgresql/v1/clusters/{cl" +
+      "uster_id}:\001*\262\322* \n\025UpdateClusterMetadata\022" +
+      "\007Cluster\022\311\001\n\006Delete\0224.yandex.cloud.mdb.p" +
+      "ostgresql.v1.DeleteClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"f\202\323\344\223\002.*,/m" +
+      "anaged-postgresql/v1/clusters/{cluster_i" +
+      "d}\262\322*.\n\025DeleteClusterMetadata\022\025google.pr" +
+      "otobuf.Empty\022\276\001\n\005Start\0223.yandex.cloud.md" +
+      "b.postgresql.v1.StartClusterRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"]\202\323\344\223\0024\"2" +
       "/managed-postgresql/v1/clusters/{cluster" +
-      "_id}\022\232\001\n\004List\0223.yandex.cloud.mdb.postgre" +
-      "sql.v1.ListClustersRequest\0324.yandex.clou" +
-      "d.mdb.postgresql.v1.ListClustersResponse" +
-      "\"\'\202\323\344\223\002!\022\037/managed-postgresql/v1/cluster" +
-      "s\022\261\001\n\006Create\0224.yandex.cloud.mdb.postgres" +
-      "ql.v1.CreateClusterRequest\032!.yandex.clou" +
-      "d.operation.Operation\"N\202\323\344\223\002$\"\037/managed-" +
-      "postgresql/v1/clusters:\001*\262\322* \n\025CreateClu" +
-      "sterMetadata\022\007Cluster\022\276\001\n\006Update\0224.yande" +
-      "x.cloud.mdb.postgresql.v1.UpdateClusterR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"[\202\323\344\223\00212,/managed-postgresql/v1/cluste" +
-      "rs/{cluster_id}:\001*\262\322* \n\025UpdateClusterMet" +
-      "adata\022\007Cluster\022\311\001\n\006Delete\0224.yandex.cloud" +
-      ".mdb.postgresql.v1.DeleteClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"f\202\323\344\223" +
-      "\002.*,/managed-postgresql/v1/clusters/{clu" +
-      "ster_id}\262\322*.\n\025DeleteClusterMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\276\001\n\005Start\0223.yandex.cl" +
-      "oud.mdb.postgresql.v1.StartClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"]\202\323" +
-      "\344\223\0024\"2/managed-postgresql/v1/clusters/{c" +
-      "luster_id}:start\262\322*\037\n\024StartClusterMetada" +
-      "ta\022\007Cluster\022\272\001\n\004Stop\0222.yandex.cloud.mdb." +
-      "postgresql.v1.StopClusterRequest\032!.yande" +
-      "x.cloud.operation.Operation\"[\202\323\344\223\0023\"1/ma" +
-      "naged-postgresql/v1/clusters/{cluster_id" +
-      "}:stop\262\322*\036\n\023StopClusterMetadata\022\007Cluster" +
-      "\022\275\001\n\004Move\0222.yandex.cloud.mdb.postgresql." +
-      "v1.MoveClusterRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"^\202\323\344\223\0026\"1/managed-postg" +
-      "resql/v1/clusters/{cluster_id}:move:\001*\262\322" +
-      "*\036\n\023MoveClusterMetadata\022\007Cluster\022\302\001\n\006Bac" +
-      "kup\0224.yandex.cloud.mdb.postgresql.v1.Bac" +
-      "kupClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"_\202\323\344\223\0025\"3/managed-postgresq" +
-      "l/v1/clusters/{cluster_id}:backup\262\322* \n\025B" +
-      "ackupClusterMetadata\022\007Cluster\022\274\001\n\007Restor" +
-      "e\0225.yandex.cloud.mdb.postgresql.v1.Resto" +
-      "reClusterRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"W\202\323\344\223\002,\"\'/managed-postgresql" +
-      "/v1/clusters:restore:\001*\262\322*!\n\026RestoreClus" +
-      "terMetadata\022\007Cluster\022\363\001\n\025RescheduleMaint" +
-      "enance\022<.yandex.cloud.mdb.postgresql.v1." +
-      "RescheduleMaintenanceRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"y\202\323\344\223\002G\"B/manage" +
-      "d-postgresql/v1/clusters/{cluster_id}:re" +
-      "scheduleMaintenance:\001*\262\322*(\n\035RescheduleMa" +
-      "intenanceMetadata\022\007Cluster\022\341\001\n\rStartFail" +
-      "over\022;.yandex.cloud.mdb.postgresql.v1.St" +
-      "artClusterFailoverRequest\032!.yandex.cloud" +
-      ".operation.Operation\"p\202\323\344\223\002?\":/managed-p" +
-      "ostgresql/v1/clusters/{cluster_id}:start" +
-      "Failover:\001*\262\322*\'\n\034StartClusterFailoverMet" +
-      "adata\022\007Cluster\022\266\001\n\010ListLogs\0226.yandex.clo" +
-      "ud.mdb.postgresql.v1.ListClusterLogsRequ" +
-      "est\0327.yandex.cloud.mdb.postgresql.v1.Lis" +
-      "tClusterLogsResponse\"9\202\323\344\223\0023\0221/managed-p" +
-      "ostgresql/v1/clusters/{cluster_id}:logs\022" +
-      "\273\001\n\nStreamLogs\0228.yandex.cloud.mdb.postgr" +
-      "esql.v1.StreamClusterLogsRequest\032/.yande" +
-      "x.cloud.mdb.postgresql.v1.StreamLogRecor" +
-      "d\"@\202\323\344\223\002:\0228/managed-postgresql/v1/cluste" +
-      "rs/{cluster_id}:stream_logs0\001\022\316\001\n\016ListOp" +
-      "erations\022<.yandex.cloud.mdb.postgresql.v" +
-      "1.ListClusterOperationsRequest\032=.yandex." +
-      "cloud.mdb.postgresql.v1.ListClusterOpera" +
-      "tionsResponse\"?\202\323\344\223\0029\0227/managed-postgres" +
-      "ql/v1/clusters/{cluster_id}/operations\022\302" +
-      "\001\n\013ListBackups\0229.yandex.cloud.mdb.postgr" +
-      "esql.v1.ListClusterBackupsRequest\032:.yand" +
-      "ex.cloud.mdb.postgresql.v1.ListClusterBa" +
-      "ckupsResponse\"<\202\323\344\223\0026\0224/managed-postgres" +
-      "ql/v1/clusters/{cluster_id}/backups\022\272\001\n\t" +
-      "ListHosts\0227.yandex.cloud.mdb.postgresql." +
-      "v1.ListClusterHostsRequest\0328.yandex.clou" +
-      "d.mdb.postgresql.v1.ListClusterHostsResp" +
-      "onse\":\202\323\344\223\0024\0222/managed-postgresql/v1/clu" +
-      "sters/{cluster_id}/hosts\022\344\001\n\010AddHosts\0226." +
-      "yandex.cloud.mdb.postgresql.v1.AddCluste" +
-      "rHostsRequest\032!.yandex.cloud.operation.O" +
-      "peration\"}\202\323\344\223\002C\">/managed-postgresql/v1" +
-      "/clusters/{cluster_id}/hosts:batchCreate" +
-      ":\001*\262\322*0\n\027AddClusterHostsMetadata\022\025google" +
-      ".protobuf.Empty\022\356\001\n\013DeleteHosts\0229.yandex" +
-      ".cloud.mdb.postgresql.v1.DeleteClusterHo" +
-      "stsRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"\200\001\202\323\344\223\002C\">/managed-postgresql/v1/c" +
-      "lusters/{cluster_id}/hosts:batchDelete:\001" +
-      "*\262\322*3\n\032DeleteClusterHostsMetadata\022\025googl" +
-      "e.protobuf.Empty\022\356\001\n\013UpdateHosts\0229.yande" +
-      "x.cloud.mdb.postgresql.v1.UpdateClusterH" +
-      "ostsRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"\200\001\202\323\344\223\002C\">/managed-postgresql/v1/" +
-      "clusters/{cluster_id}/hosts:batchUpdate:" +
-      "\001*\262\322*3\n\032UpdateClusterHostsMetadata\022\025goog" +
-      "le.protobuf.EmptyBs\n\"yandex.cloud.api.md" +
-      "b.postgresql.v1ZMgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/mdb/postgresql" +
-      "/v1;postgresqlb\006proto3"
+      "_id}:start\262\322*\037\n\024StartClusterMetadata\022\007Cl" +
+      "uster\022\272\001\n\004Stop\0222.yandex.cloud.mdb.postgr" +
+      "esql.v1.StopClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"[\202\323\344\223\0023\"1/managed-" +
+      "postgresql/v1/clusters/{cluster_id}:stop" +
+      "\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\275\001\n\004M" +
+      "ove\0222.yandex.cloud.mdb.postgresql.v1.Mov" +
+      "eClusterRequest\032!.yandex.cloud.operation" +
+      ".Operation\"^\202\323\344\223\0026\"1/managed-postgresql/" +
+      "v1/clusters/{cluster_id}:move:\001*\262\322*\036\n\023Mo" +
+      "veClusterMetadata\022\007Cluster\022\302\001\n\006Backup\0224." +
+      "yandex.cloud.mdb.postgresql.v1.BackupClu" +
+      "sterRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"_\202\323\344\223\0025\"3/managed-postgresql/v1/c" +
+      "lusters/{cluster_id}:backup\262\322* \n\025BackupC" +
+      "lusterMetadata\022\007Cluster\022\274\001\n\007Restore\0225.ya" +
+      "ndex.cloud.mdb.postgresql.v1.RestoreClus" +
+      "terRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"W\202\323\344\223\002,\"\'/managed-postgresql/v1/cl" +
+      "usters:restore:\001*\262\322*!\n\026RestoreClusterMet" +
+      "adata\022\007Cluster\022\363\001\n\025RescheduleMaintenance" +
+      "\022<.yandex.cloud.mdb.postgresql.v1.Resche" +
+      "duleMaintenanceRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"y\202\323\344\223\002G\"B/managed-post" +
+      "gresql/v1/clusters/{cluster_id}:reschedu" +
+      "leMaintenance:\001*\262\322*(\n\035RescheduleMaintena" +
+      "nceMetadata\022\007Cluster\022\341\001\n\rStartFailover\022;" +
+      ".yandex.cloud.mdb.postgresql.v1.StartClu" +
+      "sterFailoverRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"p\202\323\344\223\002?\":/managed-postgre" +
+      "sql/v1/clusters/{cluster_id}:startFailov" +
+      "er:\001*\262\322*\'\n\034StartClusterFailoverMetadata\022" +
+      "\007Cluster\022\266\001\n\010ListLogs\0226.yandex.cloud.mdb" +
+      ".postgresql.v1.ListClusterLogsRequest\0327." +
+      "yandex.cloud.mdb.postgresql.v1.ListClust" +
+      "erLogsResponse\"9\202\323\344\223\0023\0221/managed-postgre" +
+      "sql/v1/clusters/{cluster_id}:logs\022\273\001\n\nSt" +
+      "reamLogs\0228.yandex.cloud.mdb.postgresql.v" +
+      "1.StreamClusterLogsRequest\032/.yandex.clou" +
+      "d.mdb.postgresql.v1.StreamLogRecord\"@\202\323\344" +
+      "\223\002:\0228/managed-postgresql/v1/clusters/{cl" +
+      "uster_id}:stream_logs0\001\022\316\001\n\016ListOperatio" +
+      "ns\022<.yandex.cloud.mdb.postgresql.v1.List" +
+      "ClusterOperationsRequest\032=.yandex.cloud." +
+      "mdb.postgresql.v1.ListClusterOperationsR" +
+      "esponse\"?\202\323\344\223\0029\0227/managed-postgresql/v1/" +
+      "clusters/{cluster_id}/operations\022\302\001\n\013Lis" +
+      "tBackups\0229.yandex.cloud.mdb.postgresql.v" +
+      "1.ListClusterBackupsRequest\032:.yandex.clo" +
+      "ud.mdb.postgresql.v1.ListClusterBackupsR" +
+      "esponse\"<\202\323\344\223\0026\0224/managed-postgresql/v1/" +
+      "clusters/{cluster_id}/backups\022\272\001\n\tListHo" +
+      "sts\0227.yandex.cloud.mdb.postgresql.v1.Lis" +
+      "tClusterHostsRequest\0328.yandex.cloud.mdb." +
+      "postgresql.v1.ListClusterHostsResponse\":" +
+      "\202\323\344\223\0024\0222/managed-postgresql/v1/clusters/" +
+      "{cluster_id}/hosts\022\344\001\n\010AddHosts\0226.yandex" +
+      ".cloud.mdb.postgresql.v1.AddClusterHosts" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"}\202\323\344\223\002C\">/managed-postgresql/v1/clust" +
+      "ers/{cluster_id}/hosts:batchCreate:\001*\262\322*" +
+      "0\n\027AddClusterHostsMetadata\022\025google.proto" +
+      "buf.Empty\022\356\001\n\013DeleteHosts\0229.yandex.cloud" +
+      ".mdb.postgresql.v1.DeleteClusterHostsReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "\200\001\202\323\344\223\002C\">/managed-postgresql/v1/cluster" +
+      "s/{cluster_id}/hosts:batchDelete:\001*\262\322*3\n" +
+      "\032DeleteClusterHostsMetadata\022\025google.prot" +
+      "obuf.Empty\022\356\001\n\013UpdateHosts\0229.yandex.clou" +
+      "d.mdb.postgresql.v1.UpdateClusterHostsRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"\200\001\202\323\344\223\002C\">/managed-postgresql/v1/cluste" +
+      "rs/{cluster_id}/hosts:batchUpdate:\001*\262\322*3" +
+      "\n\032UpdateClusterHostsMetadata\022\025google.pro" +
+      "tobuf.EmptyBs\n\"yandex.cloud.api.mdb.post" +
+      "gresql.v1ZMgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/mdb/postgresql/v1;po" +
+      "stgresqlb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -53204,7 +53460,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Version", "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig111C", "PostgresqlConfig12", "PostgresqlConfig121C", "PostgresqlConfig13", "PoolerConfig", "Resources", "Autofailover", "BackupWindowStart", "Access", "PerformanceDiagnostics", "PostgresqlConfig", });
+        new java.lang.String[] { "Version", "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig111C", "PostgresqlConfig12", "PostgresqlConfig121C", "PostgresqlConfig13", "PoolerConfig", "Resources", "Autofailover", "BackupWindowStart", "BackupRetainPeriodDays", "Access", "PerformanceDiagnostics", "PostgresqlConfig", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ConfigHostSpec_descriptor =
       getDescriptor().getMessageTypes().get(43);
     internal_static_yandex_cloud_mdb_postgresql_v1_ConfigHostSpec_fieldAccessorTable = new
