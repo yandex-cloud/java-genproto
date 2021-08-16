@@ -413,6 +413,24 @@ public final class ClusterOuterClass {
      * <code>bool deletion_protection = 17;</code>
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+     * </pre>
+     *
+     * <code>string log_group_id = 18;</code>
+     */
+    java.lang.String getLogGroupId();
+    /**
+     * <pre>
+     * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+     * </pre>
+     *
+     * <code>string log_group_id = 18;</code>
+     */
+    com.google.protobuf.ByteString
+        getLogGroupIdBytes();
   }
   /**
    * <pre>
@@ -445,6 +463,7 @@ public final class ClusterOuterClass {
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       deletionProtection_ = false;
+      logGroupId_ = "";
     }
 
     @java.lang.Override
@@ -599,6 +618,12 @@ public final class ClusterOuterClass {
             case 136: {
 
               deletionProtection_ = input.readBool();
+              break;
+            }
+            case 146: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              logGroupId_ = s;
               break;
             }
             default: {
@@ -1527,6 +1552,48 @@ public final class ClusterOuterClass {
       return deletionProtection_;
     }
 
+    public static final int LOG_GROUP_ID_FIELD_NUMBER = 18;
+    private volatile java.lang.Object logGroupId_;
+    /**
+     * <pre>
+     * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+     * </pre>
+     *
+     * <code>string log_group_id = 18;</code>
+     */
+    public java.lang.String getLogGroupId() {
+      java.lang.Object ref = logGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        logGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+     * </pre>
+     *
+     * <code>string log_group_id = 18;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLogGroupIdBytes() {
+      java.lang.Object ref = logGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        logGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1594,6 +1661,9 @@ public final class ClusterOuterClass {
       }
       if (deletionProtection_ != false) {
         output.writeBool(17, deletionProtection_);
+      }
+      if (!getLogGroupIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, logGroupId_);
       }
       unknownFields.writeTo(output);
     }
@@ -1679,6 +1749,9 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(17, deletionProtection_);
       }
+      if (!getLogGroupIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, logGroupId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1733,6 +1806,8 @@ public final class ClusterOuterClass {
           .equals(other.getHostGroupIdsList());
       result = result && (getDeletionProtection()
           == other.getDeletionProtection());
+      result = result && getLogGroupId()
+          .equals(other.getLogGroupId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1792,6 +1867,8 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      hash = (37 * hash) + LOG_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLogGroupId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1997,6 +2074,8 @@ public final class ClusterOuterClass {
         bitField0_ = (bitField0_ & ~0x00008000);
         deletionProtection_ = false;
 
+        logGroupId_ = "";
+
         return this;
       }
 
@@ -2067,6 +2146,7 @@ public final class ClusterOuterClass {
         }
         result.hostGroupIds_ = hostGroupIds_;
         result.deletionProtection_ = deletionProtection_;
+        result.logGroupId_ = logGroupId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2209,6 +2289,10 @@ public final class ClusterOuterClass {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (!other.getLogGroupId().isEmpty()) {
+          logGroupId_ = other.logGroupId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4094,6 +4178,95 @@ public final class ClusterOuterClass {
       public Builder clearDeletionProtection() {
         
         deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object logGroupId_ = "";
+      /**
+       * <pre>
+       * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+       * </pre>
+       *
+       * <code>string log_group_id = 18;</code>
+       */
+      public java.lang.String getLogGroupId() {
+        java.lang.Object ref = logGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          logGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+       * </pre>
+       *
+       * <code>string log_group_id = 18;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLogGroupIdBytes() {
+        java.lang.Object ref = logGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          logGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+       * </pre>
+       *
+       * <code>string log_group_id = 18;</code>
+       */
+      public Builder setLogGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        logGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+       * </pre>
+       *
+       * <code>string log_group_id = 18;</code>
+       */
+      public Builder clearLogGroupId() {
+        
+        logGroupId_ = getDefaultInstance().getLogGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cloud logging log group to write logs. If not set, logs will not be sent to logging service
+       * </pre>
+       *
+       * <code>string log_group_id = 18;</code>
+       */
+      public Builder setLogGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        logGroupId_ = value;
         onChanged();
         return this;
       }
@@ -7632,7 +7805,7 @@ public final class ClusterOuterClass {
       "\022\030yandex.cloud.dataproc.v1\032\037google/proto" +
       "buf/timestamp.proto\032%yandex/cloud/datapr" +
       "oc/v1/common.proto\032\035yandex/cloud/validat" +
-      "ion.proto\"\364\005\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
+      "ion.proto\"\212\006\n\007Cluster\022\n\n\002id\030\001 \001(\t\022\021\n\tfol" +
       "der_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.googl" +
       "e.protobuf.Timestamp\022\026\n\004name\030\004 \001(\tB\010\212\3101\004" +
       "1-63\022\036\n\013description\030\005 \001(\tB\t\212\3101\0050-256\022G\n\006" +
@@ -7647,28 +7820,28 @@ public final class ClusterOuterClass {
       "_account_id\030\014 \001(\t\022\016\n\006bucket\030\r \001(\t\022\020\n\010ui_" +
       "proxy\030\016 \001(\010\022\032\n\022security_group_ids\030\017 \003(\t\022" +
       "\026\n\016host_group_ids\030\020 \003(\t\022\033\n\023deletion_prot" +
-      "ection\030\021 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"k\n\006Status\022\022\n\016STATUS_" +
-      "UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005" +
-      "ERROR\020\003\022\014\n\010STOPPING\020\004\022\013\n\007STOPPED\020\005\022\014\n\010ST" +
-      "ARTING\020\006\"=\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013" +
-      "description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\241\003\n\014Hado" +
-      "opConfig\022@\n\010services\030\001 \003(\0162..yandex.clou" +
-      "d.dataproc.v1.HadoopConfig.Service\022J\n\npr" +
-      "operties\030\002 \003(\01326.yandex.cloud.dataproc.v" +
-      "1.HadoopConfig.PropertiesEntry\022\027\n\017ssh_pu" +
-      "blic_keys\030\003 \003(\t\0321\n\017PropertiesEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\266\001\n\007Service\022\027" +
-      "\n\023SERVICE_UNSPECIFIED\020\000\022\010\n\004HDFS\020\001\022\010\n\004YAR" +
-      "N\020\002\022\r\n\tMAPREDUCE\020\003\022\010\n\004HIVE\020\004\022\007\n\003TEZ\020\005\022\r\n" +
-      "\tZOOKEEPER\020\006\022\t\n\005HBASE\020\007\022\t\n\005SQOOP\020\010\022\t\n\005FL" +
-      "UME\020\t\022\t\n\005SPARK\020\n\022\014\n\010ZEPPELIN\020\013\022\t\n\005OOZIE\020" +
-      "\014\022\010\n\004LIVY\020\r\"[\n\rClusterConfig\022\022\n\nversion_" +
-      "id\030\001 \001(\t\0226\n\006hadoop\030\002 \001(\0132&.yandex.cloud." +
-      "dataproc.v1.HadoopConfigBe\n\034yandex.cloud" +
-      ".api.dataproc.v1ZEgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/dataproc/v1;d" +
-      "ataprocb\006proto3"
+      "ection\030\021 \001(\010\022\024\n\014log_group_id\030\022 \001(\t\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"k\n\006Status\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREAT" +
+      "ING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010STOPPIN" +
+      "G\020\004\022\013\n\007STOPPED\020\005\022\014\n\010STARTING\020\006\"=\n\nMonito" +
+      "ring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022" +
+      "\014\n\004link\030\003 \001(\t\"\241\003\n\014HadoopConfig\022@\n\010servic" +
+      "es\030\001 \003(\0162..yandex.cloud.dataproc.v1.Hado" +
+      "opConfig.Service\022J\n\nproperties\030\002 \003(\01326.y" +
+      "andex.cloud.dataproc.v1.HadoopConfig.Pro" +
+      "pertiesEntry\022\027\n\017ssh_public_keys\030\003 \003(\t\0321\n" +
+      "\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"\266\001\n\007Service\022\027\n\023SERVICE_UNSPECIF" +
+      "IED\020\000\022\010\n\004HDFS\020\001\022\010\n\004YARN\020\002\022\r\n\tMAPREDUCE\020\003" +
+      "\022\010\n\004HIVE\020\004\022\007\n\003TEZ\020\005\022\r\n\tZOOKEEPER\020\006\022\t\n\005HB" +
+      "ASE\020\007\022\t\n\005SQOOP\020\010\022\t\n\005FLUME\020\t\022\t\n\005SPARK\020\n\022\014" +
+      "\n\010ZEPPELIN\020\013\022\t\n\005OOZIE\020\014\022\010\n\004LIVY\020\r\"[\n\rClu" +
+      "sterConfig\022\022\n\nversion_id\030\001 \001(\t\0226\n\006hadoop" +
+      "\030\002 \001(\0132&.yandex.cloud.dataproc.v1.Hadoop" +
+      "ConfigBe\n\034yandex.cloud.api.dataproc.v1ZE" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/dataproc/v1;dataprocb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7690,7 +7863,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_dataproc_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Monitoring", "Config", "Health", "Status", "ZoneId", "ServiceAccountId", "Bucket", "UiProxy", "SecurityGroupIds", "HostGroupIds", "DeletionProtection", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Monitoring", "Config", "Health", "Status", "ZoneId", "ServiceAccountId", "Bucket", "UiProxy", "SecurityGroupIds", "HostGroupIds", "DeletionProtection", "LogGroupId", });
     internal_static_yandex_cloud_dataproc_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_dataproc_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_dataproc_v1_Cluster_LabelsEntry_fieldAccessorTable = new

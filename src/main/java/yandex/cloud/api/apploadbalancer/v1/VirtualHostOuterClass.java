@@ -176,7 +176,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * Deprecated, use route_options.modify_request_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -185,7 +185,7 @@ public final class VirtualHostOuterClass {
         getModifyRequestHeadersList();
     /**
      * <pre>
-     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * Deprecated, use route_options.modify_request_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -193,7 +193,7 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyRequestHeaders(int index);
     /**
      * <pre>
-     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * Deprecated, use route_options.modify_request_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -201,7 +201,7 @@ public final class VirtualHostOuterClass {
     int getModifyRequestHeadersCount();
     /**
      * <pre>
-     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * Deprecated, use route_options.modify_request_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -210,7 +210,7 @@ public final class VirtualHostOuterClass {
         getModifyRequestHeadersOrBuilderList();
     /**
      * <pre>
-     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * Deprecated, use route_options.modify_request_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -220,8 +220,7 @@ public final class VirtualHostOuterClass {
 
     /**
      * <pre>
-     * Modifications that are made to the headers of HTTP responses received from backends
-     * before responses are forwarded to clients.
+     * Deprecated, use route_options.modify_response_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -230,8 +229,7 @@ public final class VirtualHostOuterClass {
         getModifyResponseHeadersList();
     /**
      * <pre>
-     * Modifications that are made to the headers of HTTP responses received from backends
-     * before responses are forwarded to clients.
+     * Deprecated, use route_options.modify_response_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -239,8 +237,7 @@ public final class VirtualHostOuterClass {
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyResponseHeaders(int index);
     /**
      * <pre>
-     * Modifications that are made to the headers of HTTP responses received from backends
-     * before responses are forwarded to clients.
+     * Deprecated, use route_options.modify_response_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -248,8 +245,7 @@ public final class VirtualHostOuterClass {
     int getModifyResponseHeadersCount();
     /**
      * <pre>
-     * Modifications that are made to the headers of HTTP responses received from backends
-     * before responses are forwarded to clients.
+     * Deprecated, use route_options.modify_response_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -258,14 +254,26 @@ public final class VirtualHostOuterClass {
         getModifyResponseHeadersOrBuilderList();
     /**
      * <pre>
-     * Modifications that are made to the headers of HTTP responses received from backends
-     * before responses are forwarded to clients.
+     * Deprecated, use route_options.modify_response_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
         int index);
+
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+     */
+    boolean hasRouteOptions();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder();
   }
   /**
    * <pre>
@@ -356,6 +364,19 @@ public final class VirtualHostOuterClass {
               }
               modifyResponseHeaders_.add(
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder subBuilder = null;
+              if (routeOptions_ != null) {
+                subBuilder = routeOptions_.toBuilder();
+              }
+              routeOptions_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(routeOptions_);
+                routeOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -608,7 +629,7 @@ public final class VirtualHostOuterClass {
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyRequestHeaders_;
     /**
      * <pre>
-     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * Deprecated, use route_options.modify_request_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -618,7 +639,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * Deprecated, use route_options.modify_request_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -629,7 +650,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * Deprecated, use route_options.modify_request_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -639,7 +660,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * Deprecated, use route_options.modify_request_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -649,7 +670,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+     * Deprecated, use route_options.modify_request_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -663,8 +684,7 @@ public final class VirtualHostOuterClass {
     private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyResponseHeaders_;
     /**
      * <pre>
-     * Modifications that are made to the headers of HTTP responses received from backends
-     * before responses are forwarded to clients.
+     * Deprecated, use route_options.modify_response_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -674,8 +694,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Modifications that are made to the headers of HTTP responses received from backends
-     * before responses are forwarded to clients.
+     * Deprecated, use route_options.modify_response_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -686,8 +705,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Modifications that are made to the headers of HTTP responses received from backends
-     * before responses are forwarded to clients.
+     * Deprecated, use route_options.modify_response_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -697,8 +715,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Modifications that are made to the headers of HTTP responses received from backends
-     * before responses are forwarded to clients.
+     * Deprecated, use route_options.modify_response_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -708,8 +725,7 @@ public final class VirtualHostOuterClass {
     }
     /**
      * <pre>
-     * Modifications that are made to the headers of HTTP responses received from backends
-     * before responses are forwarded to clients.
+     * Deprecated, use route_options.modify_response_headers.
      * </pre>
      *
      * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -717,6 +733,27 @@ public final class VirtualHostOuterClass {
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
         int index) {
       return modifyResponseHeaders_.get(index);
+    }
+
+    public static final int ROUTE_OPTIONS_FIELD_NUMBER = 6;
+    private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions routeOptions_;
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+     */
+    public boolean hasRouteOptions() {
+      return routeOptions_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions() {
+      return routeOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder() {
+      return getRouteOptions();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -747,6 +784,9 @@ public final class VirtualHostOuterClass {
       }
       for (int i = 0; i < modifyResponseHeaders_.size(); i++) {
         output.writeMessage(5, modifyResponseHeaders_.get(i));
+      }
+      if (routeOptions_ != null) {
+        output.writeMessage(6, getRouteOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -780,6 +820,10 @@ public final class VirtualHostOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, modifyResponseHeaders_.get(i));
       }
+      if (routeOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getRouteOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -806,6 +850,11 @@ public final class VirtualHostOuterClass {
           .equals(other.getModifyRequestHeadersList());
       result = result && getModifyResponseHeadersList()
           .equals(other.getModifyResponseHeadersList());
+      result = result && (hasRouteOptions() == other.hasRouteOptions());
+      if (hasRouteOptions()) {
+        result = result && getRouteOptions()
+            .equals(other.getRouteOptions());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -834,6 +883,10 @@ public final class VirtualHostOuterClass {
       if (getModifyResponseHeadersCount() > 0) {
         hash = (37 * hash) + MODIFY_RESPONSE_HEADERS_FIELD_NUMBER;
         hash = (53 * hash) + getModifyResponseHeadersList().hashCode();
+      }
+      if (hasRouteOptions()) {
+        hash = (37 * hash) + ROUTE_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getRouteOptions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -998,6 +1051,12 @@ public final class VirtualHostOuterClass {
         } else {
           modifyResponseHeadersBuilder_.clear();
         }
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = null;
+        } else {
+          routeOptions_ = null;
+          routeOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -1058,6 +1117,11 @@ public final class VirtualHostOuterClass {
           result.modifyResponseHeaders_ = modifyResponseHeaders_;
         } else {
           result.modifyResponseHeaders_ = modifyResponseHeadersBuilder_.build();
+        }
+        if (routeOptionsBuilder_ == null) {
+          result.routeOptions_ = routeOptions_;
+        } else {
+          result.routeOptions_ = routeOptionsBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -1199,6 +1263,9 @@ public final class VirtualHostOuterClass {
               modifyResponseHeadersBuilder_.addAllMessages(other.modifyResponseHeaders_);
             }
           }
+        }
+        if (other.hasRouteOptions()) {
+          mergeRouteOptions(other.getRouteOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1955,7 +2022,7 @@ public final class VirtualHostOuterClass {
 
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1969,7 +2036,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1983,7 +2050,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -1997,7 +2064,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2018,7 +2085,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2036,7 +2103,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2056,7 +2123,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2077,7 +2144,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2095,7 +2162,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2113,7 +2180,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2132,7 +2199,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2149,7 +2216,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2166,7 +2233,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2177,7 +2244,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2191,7 +2258,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2206,7 +2273,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2217,7 +2284,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2229,7 +2296,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of incoming HTTP requests before they are forwarded to backends.
+       * Deprecated, use route_options.modify_request_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 4;</code>
@@ -2267,8 +2334,7 @@ public final class VirtualHostOuterClass {
 
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2282,8 +2348,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2297,8 +2362,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2312,8 +2376,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2334,8 +2397,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2353,8 +2415,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2374,8 +2435,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2396,8 +2456,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2415,8 +2474,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2434,8 +2492,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2454,8 +2511,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2472,8 +2528,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2490,8 +2545,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2502,8 +2556,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2517,8 +2570,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2533,8 +2585,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2545,8 +2596,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2558,8 +2608,7 @@ public final class VirtualHostOuterClass {
       }
       /**
        * <pre>
-       * Modifications that are made to the headers of HTTP responses received from backends
-       * before responses are forwarded to clients.
+       * Deprecated, use route_options.modify_response_headers.
        * </pre>
        *
        * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 5;</code>
@@ -2581,6 +2630,123 @@ public final class VirtualHostOuterClass {
           modifyResponseHeaders_ = null;
         }
         return modifyResponseHeadersBuilder_;
+      }
+
+      private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions routeOptions_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder> routeOptionsBuilder_;
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+       */
+      public boolean hasRouteOptions() {
+        return routeOptionsBuilder_ != null || routeOptions_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions() {
+        if (routeOptionsBuilder_ == null) {
+          return routeOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+        } else {
+          return routeOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+       */
+      public Builder setRouteOptions(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions value) {
+        if (routeOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          routeOptions_ = value;
+          onChanged();
+        } else {
+          routeOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+       */
+      public Builder setRouteOptions(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder builderForValue) {
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          routeOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+       */
+      public Builder mergeRouteOptions(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions value) {
+        if (routeOptionsBuilder_ == null) {
+          if (routeOptions_ != null) {
+            routeOptions_ =
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.newBuilder(routeOptions_).mergeFrom(value).buildPartial();
+          } else {
+            routeOptions_ = value;
+          }
+          onChanged();
+        } else {
+          routeOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+       */
+      public Builder clearRouteOptions() {
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = null;
+          onChanged();
+        } else {
+          routeOptions_ = null;
+          routeOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder getRouteOptionsBuilder() {
+        
+        onChanged();
+        return getRouteOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder() {
+        if (routeOptionsBuilder_ != null) {
+          return routeOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return routeOptions_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder> 
+          getRouteOptionsFieldBuilder() {
+        if (routeOptionsBuilder_ == null) {
+          routeOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder>(
+                  getRouteOptions(),
+                  getParentForChildren(),
+                  isClean());
+          routeOptions_ = null;
+        }
+        return routeOptionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2630,6 +2796,1379 @@ public final class VirtualHostOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.VirtualHost getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RouteOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.RouteOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Apply the following modifications to the request headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> 
+        getModifyRequestHeadersList();
+    /**
+     * <pre>
+     * Apply the following modifications to the request headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyRequestHeaders(int index);
+    /**
+     * <pre>
+     * Apply the following modifications to the request headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+     */
+    int getModifyRequestHeadersCount();
+    /**
+     * <pre>
+     * Apply the following modifications to the request headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
+        getModifyRequestHeadersOrBuilderList();
+    /**
+     * <pre>
+     * Apply the following modifications to the request headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyRequestHeadersOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Apply the following modifications to the response headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> 
+        getModifyResponseHeadersList();
+    /**
+     * <pre>
+     * Apply the following modifications to the response headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyResponseHeaders(int index);
+    /**
+     * <pre>
+     * Apply the following modifications to the response headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+     */
+    int getModifyResponseHeadersCount();
+    /**
+     * <pre>
+     * Apply the following modifications to the response headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
+        getModifyResponseHeadersOrBuilderList();
+    /**
+     * <pre>
+     * Apply the following modifications to the response headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RouteOptions}
+   */
+  public  static final class RouteOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.apploadbalancer.v1.RouteOptions)
+      RouteOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RouteOptions.newBuilder() to construct.
+    private RouteOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RouteOptions() {
+      modifyRequestHeaders_ = java.util.Collections.emptyList();
+      modifyResponseHeaders_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RouteOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                modifyRequestHeaders_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              modifyRequestHeaders_.add(
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                modifyResponseHeaders_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              modifyResponseHeaders_.add(
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          modifyRequestHeaders_ = java.util.Collections.unmodifiableList(modifyRequestHeaders_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          modifyResponseHeaders_ = java.util.Collections.unmodifiableList(modifyResponseHeaders_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder.class);
+    }
+
+    public static final int MODIFY_REQUEST_HEADERS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyRequestHeaders_;
+    /**
+     * <pre>
+     * Apply the following modifications to the request headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyRequestHeadersList() {
+      return modifyRequestHeaders_;
+    }
+    /**
+     * <pre>
+     * Apply the following modifications to the request headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
+        getModifyRequestHeadersOrBuilderList() {
+      return modifyRequestHeaders_;
+    }
+    /**
+     * <pre>
+     * Apply the following modifications to the request headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+     */
+    public int getModifyRequestHeadersCount() {
+      return modifyRequestHeaders_.size();
+    }
+    /**
+     * <pre>
+     * Apply the following modifications to the request headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyRequestHeaders(int index) {
+      return modifyRequestHeaders_.get(index);
+    }
+    /**
+     * <pre>
+     * Apply the following modifications to the request headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyRequestHeadersOrBuilder(
+        int index) {
+      return modifyRequestHeaders_.get(index);
+    }
+
+    public static final int MODIFY_RESPONSE_HEADERS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyResponseHeaders_;
+    /**
+     * <pre>
+     * Apply the following modifications to the response headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+     */
+    public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyResponseHeadersList() {
+      return modifyResponseHeaders_;
+    }
+    /**
+     * <pre>
+     * Apply the following modifications to the response headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
+        getModifyResponseHeadersOrBuilderList() {
+      return modifyResponseHeaders_;
+    }
+    /**
+     * <pre>
+     * Apply the following modifications to the response headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+     */
+    public int getModifyResponseHeadersCount() {
+      return modifyResponseHeaders_.size();
+    }
+    /**
+     * <pre>
+     * Apply the following modifications to the response headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyResponseHeaders(int index) {
+      return modifyResponseHeaders_.get(index);
+    }
+    /**
+     * <pre>
+     * Apply the following modifications to the response headers.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
+        int index) {
+      return modifyResponseHeaders_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < modifyRequestHeaders_.size(); i++) {
+        output.writeMessage(1, modifyRequestHeaders_.get(i));
+      }
+      for (int i = 0; i < modifyResponseHeaders_.size(); i++) {
+        output.writeMessage(2, modifyResponseHeaders_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < modifyRequestHeaders_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, modifyRequestHeaders_.get(i));
+      }
+      for (int i = 0; i < modifyResponseHeaders_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, modifyResponseHeaders_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions other = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions) obj;
+
+      boolean result = true;
+      result = result && getModifyRequestHeadersList()
+          .equals(other.getModifyRequestHeadersList());
+      result = result && getModifyResponseHeadersList()
+          .equals(other.getModifyResponseHeadersList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getModifyRequestHeadersCount() > 0) {
+        hash = (37 * hash) + MODIFY_REQUEST_HEADERS_FIELD_NUMBER;
+        hash = (53 * hash) + getModifyRequestHeadersList().hashCode();
+      }
+      if (getModifyResponseHeadersCount() > 0) {
+        hash = (37 * hash) + MODIFY_RESPONSE_HEADERS_FIELD_NUMBER;
+        hash = (53 * hash) + getModifyResponseHeadersList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RouteOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.apploadbalancer.v1.RouteOptions)
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.class, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getModifyRequestHeadersFieldBuilder();
+          getModifyResponseHeadersFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (modifyRequestHeadersBuilder_ == null) {
+          modifyRequestHeaders_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          modifyRequestHeadersBuilder_.clear();
+        }
+        if (modifyResponseHeadersBuilder_ == null) {
+          modifyResponseHeaders_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          modifyResponseHeadersBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions build() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions buildPartial() {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions result = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions(this);
+        int from_bitField0_ = bitField0_;
+        if (modifyRequestHeadersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            modifyRequestHeaders_ = java.util.Collections.unmodifiableList(modifyRequestHeaders_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.modifyRequestHeaders_ = modifyRequestHeaders_;
+        } else {
+          result.modifyRequestHeaders_ = modifyRequestHeadersBuilder_.build();
+        }
+        if (modifyResponseHeadersBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            modifyResponseHeaders_ = java.util.Collections.unmodifiableList(modifyResponseHeaders_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.modifyResponseHeaders_ = modifyResponseHeaders_;
+        } else {
+          result.modifyResponseHeaders_ = modifyResponseHeadersBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions) {
+          return mergeFrom((yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions other) {
+        if (other == yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance()) return this;
+        if (modifyRequestHeadersBuilder_ == null) {
+          if (!other.modifyRequestHeaders_.isEmpty()) {
+            if (modifyRequestHeaders_.isEmpty()) {
+              modifyRequestHeaders_ = other.modifyRequestHeaders_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureModifyRequestHeadersIsMutable();
+              modifyRequestHeaders_.addAll(other.modifyRequestHeaders_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.modifyRequestHeaders_.isEmpty()) {
+            if (modifyRequestHeadersBuilder_.isEmpty()) {
+              modifyRequestHeadersBuilder_.dispose();
+              modifyRequestHeadersBuilder_ = null;
+              modifyRequestHeaders_ = other.modifyRequestHeaders_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              modifyRequestHeadersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getModifyRequestHeadersFieldBuilder() : null;
+            } else {
+              modifyRequestHeadersBuilder_.addAllMessages(other.modifyRequestHeaders_);
+            }
+          }
+        }
+        if (modifyResponseHeadersBuilder_ == null) {
+          if (!other.modifyResponseHeaders_.isEmpty()) {
+            if (modifyResponseHeaders_.isEmpty()) {
+              modifyResponseHeaders_ = other.modifyResponseHeaders_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureModifyResponseHeadersIsMutable();
+              modifyResponseHeaders_.addAll(other.modifyResponseHeaders_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.modifyResponseHeaders_.isEmpty()) {
+            if (modifyResponseHeadersBuilder_.isEmpty()) {
+              modifyResponseHeadersBuilder_.dispose();
+              modifyResponseHeadersBuilder_ = null;
+              modifyResponseHeaders_ = other.modifyResponseHeaders_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              modifyResponseHeadersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getModifyResponseHeadersFieldBuilder() : null;
+            } else {
+              modifyResponseHeadersBuilder_.addAllMessages(other.modifyResponseHeaders_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyRequestHeaders_ =
+        java.util.Collections.emptyList();
+      private void ensureModifyRequestHeadersIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          modifyRequestHeaders_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification>(modifyRequestHeaders_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> modifyRequestHeadersBuilder_;
+
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyRequestHeadersList() {
+        if (modifyRequestHeadersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(modifyRequestHeaders_);
+        } else {
+          return modifyRequestHeadersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public int getModifyRequestHeadersCount() {
+        if (modifyRequestHeadersBuilder_ == null) {
+          return modifyRequestHeaders_.size();
+        } else {
+          return modifyRequestHeadersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyRequestHeaders(int index) {
+        if (modifyRequestHeadersBuilder_ == null) {
+          return modifyRequestHeaders_.get(index);
+        } else {
+          return modifyRequestHeadersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public Builder setModifyRequestHeaders(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification value) {
+        if (modifyRequestHeadersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModifyRequestHeadersIsMutable();
+          modifyRequestHeaders_.set(index, value);
+          onChanged();
+        } else {
+          modifyRequestHeadersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public Builder setModifyRequestHeaders(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder builderForValue) {
+        if (modifyRequestHeadersBuilder_ == null) {
+          ensureModifyRequestHeadersIsMutable();
+          modifyRequestHeaders_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          modifyRequestHeadersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public Builder addModifyRequestHeaders(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification value) {
+        if (modifyRequestHeadersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModifyRequestHeadersIsMutable();
+          modifyRequestHeaders_.add(value);
+          onChanged();
+        } else {
+          modifyRequestHeadersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public Builder addModifyRequestHeaders(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification value) {
+        if (modifyRequestHeadersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModifyRequestHeadersIsMutable();
+          modifyRequestHeaders_.add(index, value);
+          onChanged();
+        } else {
+          modifyRequestHeadersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public Builder addModifyRequestHeaders(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder builderForValue) {
+        if (modifyRequestHeadersBuilder_ == null) {
+          ensureModifyRequestHeadersIsMutable();
+          modifyRequestHeaders_.add(builderForValue.build());
+          onChanged();
+        } else {
+          modifyRequestHeadersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public Builder addModifyRequestHeaders(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder builderForValue) {
+        if (modifyRequestHeadersBuilder_ == null) {
+          ensureModifyRequestHeadersIsMutable();
+          modifyRequestHeaders_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          modifyRequestHeadersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public Builder addAllModifyRequestHeaders(
+          java.lang.Iterable<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> values) {
+        if (modifyRequestHeadersBuilder_ == null) {
+          ensureModifyRequestHeadersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, modifyRequestHeaders_);
+          onChanged();
+        } else {
+          modifyRequestHeadersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public Builder clearModifyRequestHeaders() {
+        if (modifyRequestHeadersBuilder_ == null) {
+          modifyRequestHeaders_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          modifyRequestHeadersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public Builder removeModifyRequestHeaders(int index) {
+        if (modifyRequestHeadersBuilder_ == null) {
+          ensureModifyRequestHeadersIsMutable();
+          modifyRequestHeaders_.remove(index);
+          onChanged();
+        } else {
+          modifyRequestHeadersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder getModifyRequestHeadersBuilder(
+          int index) {
+        return getModifyRequestHeadersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyRequestHeadersOrBuilder(
+          int index) {
+        if (modifyRequestHeadersBuilder_ == null) {
+          return modifyRequestHeaders_.get(index);  } else {
+          return modifyRequestHeadersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
+           getModifyRequestHeadersOrBuilderList() {
+        if (modifyRequestHeadersBuilder_ != null) {
+          return modifyRequestHeadersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(modifyRequestHeaders_);
+        }
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder addModifyRequestHeadersBuilder() {
+        return getModifyRequestHeadersFieldBuilder().addBuilder(
+            yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder addModifyRequestHeadersBuilder(
+          int index) {
+        return getModifyRequestHeadersFieldBuilder().addBuilder(
+            index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the request headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_request_headers = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder> 
+           getModifyRequestHeadersBuilderList() {
+        return getModifyRequestHeadersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
+          getModifyRequestHeadersFieldBuilder() {
+        if (modifyRequestHeadersBuilder_ == null) {
+          modifyRequestHeadersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder>(
+                  modifyRequestHeaders_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          modifyRequestHeaders_ = null;
+        }
+        return modifyRequestHeadersBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> modifyResponseHeaders_ =
+        java.util.Collections.emptyList();
+      private void ensureModifyResponseHeadersIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          modifyResponseHeaders_ = new java.util.ArrayList<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification>(modifyResponseHeaders_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> modifyResponseHeadersBuilder_;
+
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> getModifyResponseHeadersList() {
+        if (modifyResponseHeadersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(modifyResponseHeaders_);
+        } else {
+          return modifyResponseHeadersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public int getModifyResponseHeadersCount() {
+        if (modifyResponseHeadersBuilder_ == null) {
+          return modifyResponseHeaders_.size();
+        } else {
+          return modifyResponseHeadersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification getModifyResponseHeaders(int index) {
+        if (modifyResponseHeadersBuilder_ == null) {
+          return modifyResponseHeaders_.get(index);
+        } else {
+          return modifyResponseHeadersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public Builder setModifyResponseHeaders(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification value) {
+        if (modifyResponseHeadersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModifyResponseHeadersIsMutable();
+          modifyResponseHeaders_.set(index, value);
+          onChanged();
+        } else {
+          modifyResponseHeadersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public Builder setModifyResponseHeaders(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder builderForValue) {
+        if (modifyResponseHeadersBuilder_ == null) {
+          ensureModifyResponseHeadersIsMutable();
+          modifyResponseHeaders_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          modifyResponseHeadersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public Builder addModifyResponseHeaders(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification value) {
+        if (modifyResponseHeadersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModifyResponseHeadersIsMutable();
+          modifyResponseHeaders_.add(value);
+          onChanged();
+        } else {
+          modifyResponseHeadersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public Builder addModifyResponseHeaders(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification value) {
+        if (modifyResponseHeadersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModifyResponseHeadersIsMutable();
+          modifyResponseHeaders_.add(index, value);
+          onChanged();
+        } else {
+          modifyResponseHeadersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public Builder addModifyResponseHeaders(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder builderForValue) {
+        if (modifyResponseHeadersBuilder_ == null) {
+          ensureModifyResponseHeadersIsMutable();
+          modifyResponseHeaders_.add(builderForValue.build());
+          onChanged();
+        } else {
+          modifyResponseHeadersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public Builder addModifyResponseHeaders(
+          int index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder builderForValue) {
+        if (modifyResponseHeadersBuilder_ == null) {
+          ensureModifyResponseHeadersIsMutable();
+          modifyResponseHeaders_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          modifyResponseHeadersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public Builder addAllModifyResponseHeaders(
+          java.lang.Iterable<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification> values) {
+        if (modifyResponseHeadersBuilder_ == null) {
+          ensureModifyResponseHeadersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, modifyResponseHeaders_);
+          onChanged();
+        } else {
+          modifyResponseHeadersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public Builder clearModifyResponseHeaders() {
+        if (modifyResponseHeadersBuilder_ == null) {
+          modifyResponseHeaders_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          modifyResponseHeadersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public Builder removeModifyResponseHeaders(int index) {
+        if (modifyResponseHeadersBuilder_ == null) {
+          ensureModifyResponseHeadersIsMutable();
+          modifyResponseHeaders_.remove(index);
+          onChanged();
+        } else {
+          modifyResponseHeadersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder getModifyResponseHeadersBuilder(
+          int index) {
+        return getModifyResponseHeadersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder getModifyResponseHeadersOrBuilder(
+          int index) {
+        if (modifyResponseHeadersBuilder_ == null) {
+          return modifyResponseHeaders_.get(index);  } else {
+          return modifyResponseHeadersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
+           getModifyResponseHeadersOrBuilderList() {
+        if (modifyResponseHeadersBuilder_ != null) {
+          return modifyResponseHeadersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(modifyResponseHeaders_);
+        }
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder addModifyResponseHeadersBuilder() {
+        return getModifyResponseHeadersFieldBuilder().addBuilder(
+            yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder addModifyResponseHeadersBuilder(
+          int index) {
+        return getModifyResponseHeadersFieldBuilder().addBuilder(
+            index, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Apply the following modifications to the response headers.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.apploadbalancer.v1.HeaderModification modify_response_headers = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder> 
+           getModifyResponseHeadersBuilderList() {
+        return getModifyResponseHeadersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder> 
+          getModifyResponseHeadersFieldBuilder() {
+        if (modifyResponseHeadersBuilder_ == null) {
+          modifyResponseHeadersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModification.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.HeaderModificationOrBuilder>(
+                  modifyResponseHeaders_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          modifyResponseHeaders_ = null;
+        }
+        return modifyResponseHeadersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.apploadbalancer.v1.RouteOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.apploadbalancer.v1.RouteOptions)
+    private static final yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions();
+    }
+
+    public static yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RouteOptions>
+        PARSER = new com.google.protobuf.AbstractParser<RouteOptions>() {
+      @java.lang.Override
+      public RouteOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RouteOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RouteOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RouteOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2713,6 +4252,7 @@ public final class VirtualHostOuterClass {
     /**
      * <pre>
      * Replaces the name of the header with the specified string.
+     * This operation is only supported for ALB Virtual Hosts.
      * </pre>
      *
      * <code>string rename = 5;</code>
@@ -2721,6 +4261,7 @@ public final class VirtualHostOuterClass {
     /**
      * <pre>
      * Replaces the name of the header with the specified string.
+     * This operation is only supported for ALB Virtual Hosts.
      * </pre>
      *
      * <code>string rename = 5;</code>
@@ -3048,6 +4589,7 @@ public final class VirtualHostOuterClass {
     /**
      * <pre>
      * Replaces the name of the header with the specified string.
+     * This operation is only supported for ALB Virtual Hosts.
      * </pre>
      *
      * <code>string rename = 5;</code>
@@ -3072,6 +4614,7 @@ public final class VirtualHostOuterClass {
     /**
      * <pre>
      * Replaces the name of the header with the specified string.
+     * This operation is only supported for ALB Virtual Hosts.
      * </pre>
      *
      * <code>string rename = 5;</code>
@@ -3884,6 +5427,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Replaces the name of the header with the specified string.
+       * This operation is only supported for ALB Virtual Hosts.
        * </pre>
        *
        * <code>string rename = 5;</code>
@@ -3908,6 +5452,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Replaces the name of the header with the specified string.
+       * This operation is only supported for ALB Virtual Hosts.
        * </pre>
        *
        * <code>string rename = 5;</code>
@@ -3933,6 +5478,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Replaces the name of the header with the specified string.
+       * This operation is only supported for ALB Virtual Hosts.
        * </pre>
        *
        * <code>string rename = 5;</code>
@@ -3950,6 +5496,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Replaces the name of the header with the specified string.
+       * This operation is only supported for ALB Virtual Hosts.
        * </pre>
        *
        * <code>string rename = 5;</code>
@@ -3965,6 +5512,7 @@ public final class VirtualHostOuterClass {
       /**
        * <pre>
        * Replaces the name of the header with the specified string.
+       * This operation is only supported for ALB Virtual Hosts.
        * </pre>
        *
        * <code>string rename = 5;</code>
@@ -4105,6 +5653,19 @@ public final class VirtualHostOuterClass {
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRouteOrBuilder getGrpcOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+     */
+    boolean hasRouteOptions();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder();
+
     public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.Route.RouteCase getRouteCase();
   }
   /**
@@ -4184,6 +5745,19 @@ public final class VirtualHostOuterClass {
                 route_ = subBuilder.buildPartial();
               }
               routeCase_ = 3;
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder subBuilder = null;
+              if (routeOptions_ != null) {
+                subBuilder = routeOptions_.toBuilder();
+              }
+              routeOptions_ = input.readMessage(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(routeOptions_);
+                routeOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -4374,6 +5948,27 @@ public final class VirtualHostOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute.getDefaultInstance();
     }
 
+    public static final int ROUTE_OPTIONS_FIELD_NUMBER = 4;
+    private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions routeOptions_;
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+     */
+    public boolean hasRouteOptions() {
+      return routeOptions_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions() {
+      return routeOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder() {
+      return getRouteOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4397,6 +5992,9 @@ public final class VirtualHostOuterClass {
       if (routeCase_ == 3) {
         output.writeMessage(3, (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute) route_);
       }
+      if (routeOptions_ != null) {
+        output.writeMessage(4, getRouteOptions());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4417,6 +6015,10 @@ public final class VirtualHostOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.GrpcRoute) route_);
       }
+      if (routeOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getRouteOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4435,6 +6037,11 @@ public final class VirtualHostOuterClass {
       boolean result = true;
       result = result && getName()
           .equals(other.getName());
+      result = result && (hasRouteOptions() == other.hasRouteOptions());
+      if (hasRouteOptions()) {
+        result = result && getRouteOptions()
+            .equals(other.getRouteOptions());
+      }
       result = result && getRouteCase().equals(
           other.getRouteCase());
       if (!result) return false;
@@ -4463,6 +6070,10 @@ public final class VirtualHostOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      if (hasRouteOptions()) {
+        hash = (37 * hash) + ROUTE_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getRouteOptions().hashCode();
+      }
       switch (routeCase_) {
         case 2:
           hash = (37 * hash) + HTTP_FIELD_NUMBER;
@@ -4615,6 +6226,12 @@ public final class VirtualHostOuterClass {
         super.clear();
         name_ = "";
 
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = null;
+        } else {
+          routeOptions_ = null;
+          routeOptionsBuilder_ = null;
+        }
         routeCase_ = 0;
         route_ = null;
         return this;
@@ -4657,6 +6274,11 @@ public final class VirtualHostOuterClass {
           } else {
             result.route_ = grpcBuilder_.build();
           }
+        }
+        if (routeOptionsBuilder_ == null) {
+          result.routeOptions_ = routeOptions_;
+        } else {
+          result.routeOptions_ = routeOptionsBuilder_.build();
         }
         result.routeCase_ = routeCase_;
         onBuilt();
@@ -4710,6 +6332,9 @@ public final class VirtualHostOuterClass {
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
+        }
+        if (other.hasRouteOptions()) {
+          mergeRouteOptions(other.getRouteOptions());
         }
         switch (other.getRouteCase()) {
           case HTTP: {
@@ -5199,6 +6824,123 @@ public final class VirtualHostOuterClass {
         routeCase_ = 3;
         onChanged();;
         return grpcBuilder_;
+      }
+
+      private yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions routeOptions_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder> routeOptionsBuilder_;
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+       */
+      public boolean hasRouteOptions() {
+        return routeOptionsBuilder_ != null || routeOptions_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions getRouteOptions() {
+        if (routeOptionsBuilder_ == null) {
+          return routeOptions_ == null ? yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+        } else {
+          return routeOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+       */
+      public Builder setRouteOptions(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions value) {
+        if (routeOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          routeOptions_ = value;
+          onChanged();
+        } else {
+          routeOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+       */
+      public Builder setRouteOptions(
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder builderForValue) {
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          routeOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+       */
+      public Builder mergeRouteOptions(yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions value) {
+        if (routeOptionsBuilder_ == null) {
+          if (routeOptions_ != null) {
+            routeOptions_ =
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.newBuilder(routeOptions_).mergeFrom(value).buildPartial();
+          } else {
+            routeOptions_ = value;
+          }
+          onChanged();
+        } else {
+          routeOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+       */
+      public Builder clearRouteOptions() {
+        if (routeOptionsBuilder_ == null) {
+          routeOptions_ = null;
+          onChanged();
+        } else {
+          routeOptions_ = null;
+          routeOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder getRouteOptionsBuilder() {
+        
+        onChanged();
+        return getRouteOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder getRouteOptionsOrBuilder() {
+        if (routeOptionsBuilder_ != null) {
+          return routeOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return routeOptions_ == null ?
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.getDefaultInstance() : routeOptions_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.RouteOptions route_options = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder> 
+          getRouteOptionsFieldBuilder() {
+        if (routeOptionsBuilder_ == null) {
+          routeOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptions.Builder, yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RouteOptionsOrBuilder>(
+                  getRouteOptions(),
+                  getParentForChildren(),
+                  isClean());
+          routeOptions_ = null;
+        }
+        return routeOptionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17665,6 +19407,11 @@ public final class VirtualHostOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_apploadbalancer_v1_VirtualHost_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_apploadbalancer_v1_HeaderModification_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -17737,76 +19484,85 @@ public final class VirtualHostOuterClass {
       "l_host.proto\022\037yandex.cloud.apploadbalanc" +
       "er.v1\032\036google/protobuf/duration.proto\032-y" +
       "andex/cloud/apploadbalancer/v1/payload.p" +
-      "roto\032\035yandex/cloud/validation.proto\"\227\002\n\013" +
+      "roto\032\035yandex/cloud/validation.proto\"\335\002\n\013" +
       "VirtualHost\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022\021\n\tautho" +
       "rity\030\002 \003(\t\0226\n\006routes\030\003 \003(\0132&.yandex.clou" +
       "d.apploadbalancer.v1.Route\022S\n\026modify_req" +
       "uest_headers\030\004 \003(\01323.yandex.cloud.apploa" +
       "dbalancer.v1.HeaderModification\022T\n\027modif" +
       "y_response_headers\030\005 \003(\01323.yandex.cloud." +
-      "apploadbalancer.v1.HeaderModification\"x\n" +
-      "\022HeaderModification\022\014\n\004name\030\001 \001(\t\022\020\n\006app" +
-      "end\030\002 \001(\tH\000\022\021\n\007replace\030\003 \001(\tH\000\022\020\n\006remove" +
-      "\030\004 \001(\010H\000\022\020\n\006rename\030\005 \001(\tH\000B\013\n\toperation\"" +
-      "\242\001\n\005Route\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022:\n\004http\030\002 " +
-      "\001(\0132*.yandex.cloud.apploadbalancer.v1.Ht" +
-      "tpRouteH\000\022:\n\004grpc\030\003 \001(\0132*.yandex.cloud.a" +
-      "pploadbalancer.v1.GrpcRouteH\000B\r\n\005route\022\004" +
-      "\300\3011\001\"\265\002\n\tHttpRoute\022>\n\005match\030\001 \001(\0132/.yand" +
-      "ex.cloud.apploadbalancer.v1.HttpRouteMat" +
+      "apploadbalancer.v1.HeaderModification\022D\n" +
+      "\rroute_options\030\006 \001(\0132-.yandex.cloud.appl" +
+      "oadbalancer.v1.RouteOptions\"\271\001\n\014RouteOpt" +
+      "ions\022S\n\026modify_request_headers\030\001 \003(\01323.y" +
+      "andex.cloud.apploadbalancer.v1.HeaderMod" +
+      "ification\022T\n\027modify_response_headers\030\002 \003" +
+      "(\01323.yandex.cloud.apploadbalancer.v1.Hea" +
+      "derModification\"x\n\022HeaderModification\022\014\n" +
+      "\004name\030\001 \001(\t\022\020\n\006append\030\002 \001(\tH\000\022\021\n\007replace" +
+      "\030\003 \001(\tH\000\022\020\n\006remove\030\004 \001(\010H\000\022\020\n\006rename\030\005 \001" +
+      "(\tH\000B\013\n\toperation\"\350\001\n\005Route\022\022\n\004name\030\001 \001(" +
+      "\tB\004\350\3071\001\022:\n\004http\030\002 \001(\0132*.yandex.cloud.app" +
+      "loadbalancer.v1.HttpRouteH\000\022:\n\004grpc\030\003 \001(" +
+      "\0132*.yandex.cloud.apploadbalancer.v1.Grpc" +
+      "RouteH\000\022D\n\rroute_options\030\004 \001(\0132-.yandex." +
+      "cloud.apploadbalancer.v1.RouteOptionsB\r\n" +
+      "\005route\022\004\300\3011\001\"\265\002\n\tHttpRoute\022>\n\005match\030\001 \001(" +
+      "\0132/.yandex.cloud.apploadbalancer.v1.Http" +
+      "RouteMatch\022A\n\005route\030\002 \001(\01320.yandex.cloud" +
+      ".apploadbalancer.v1.HttpRouteActionH\000\022C\n" +
+      "\010redirect\030\003 \001(\0132/.yandex.cloud.apploadba" +
+      "lancer.v1.RedirectActionH\000\022P\n\017direct_res" +
+      "ponse\030\004 \001(\01325.yandex.cloud.apploadbalanc" +
+      "er.v1.DirectResponseActionH\000B\016\n\006action\022\004" +
+      "\300\3011\001\"\364\001\n\tGrpcRoute\022>\n\005match\030\001 \001(\0132/.yand" +
+      "ex.cloud.apploadbalancer.v1.GrpcRouteMat" +
       "ch\022A\n\005route\030\002 \001(\01320.yandex.cloud.appload" +
-      "balancer.v1.HttpRouteActionH\000\022C\n\010redirec" +
-      "t\030\003 \001(\0132/.yandex.cloud.apploadbalancer.v" +
-      "1.RedirectActionH\000\022P\n\017direct_response\030\004 " +
-      "\001(\01325.yandex.cloud.apploadbalancer.v1.Di" +
-      "rectResponseActionH\000B\016\n\006action\022\004\300\3011\001\"\364\001\n" +
-      "\tGrpcRoute\022>\n\005match\030\001 \001(\0132/.yandex.cloud" +
-      ".apploadbalancer.v1.GrpcRouteMatch\022A\n\005ro" +
-      "ute\030\002 \001(\01320.yandex.cloud.apploadbalancer" +
-      ".v1.GrpcRouteActionH\000\022T\n\017status_response" +
-      "\030\003 \001(\01329.yandex.cloud.apploadbalancer.v1" +
-      ".GrpcStatusResponseActionH\000B\016\n\006action\022\004\300" +
-      "\3011\001\"a\n\016HttpRouteMatch\022\023\n\013http_method\030\001 \003" +
-      "(\t\022:\n\004path\030\002 \001(\0132,.yandex.cloud.apploadb" +
-      "alancer.v1.StringMatch\"L\n\016GrpcRouteMatch" +
-      "\022:\n\004fqmn\030\001 \001(\0132,.yandex.cloud.apploadbal" +
-      "ancer.v1.StringMatch\"K\n\013StringMatch\022\025\n\013e" +
-      "xact_match\030\001 \001(\tH\000\022\026\n\014prefix_match\030\002 \001(\t" +
-      "H\000B\r\n\005match\022\004\300\3011\001\"\372\002\n\016RedirectAction\022\026\n\016" +
-      "replace_scheme\030\001 \001(\t\022\024\n\014replace_host\030\002 \001" +
-      "(\t\022\024\n\014replace_port\030\003 \001(\003\022\026\n\014replace_path" +
-      "\030\004 \001(\tH\000\022\030\n\016replace_prefix\030\005 \001(\tH\000\022\024\n\014re" +
-      "move_query\030\006 \001(\010\022[\n\rresponse_code\030\007 \001(\0162" +
-      "D.yandex.cloud.apploadbalancer.v1.Redire" +
-      "ctAction.RedirectResponseCode\"w\n\024Redirec" +
-      "tResponseCode\022\025\n\021MOVED_PERMANENTLY\020\000\022\t\n\005" +
-      "FOUND\020\001\022\r\n\tSEE_OTHER\020\002\022\026\n\022TEMPORARY_REDI" +
-      "RECT\020\003\022\026\n\022PERMANENT_REDIRECT\020\004B\006\n\004path\"k" +
-      "\n\024DirectResponseAction\022\033\n\006status\030\001 \001(\003B\013" +
-      "\372\3071\007100-599\0226\n\004body\030\002 \001(\0132(.yandex.cloud" +
-      ".apploadbalancer.v1.Payload\"\202\002\n\030GrpcStat" +
-      "usResponseAction\022P\n\006status\030\001 \001(\0162@.yande" +
-      "x.cloud.apploadbalancer.v1.GrpcStatusRes" +
-      "ponseAction.Status\"\223\001\n\006Status\022\006\n\002OK\020\000\022\024\n" +
-      "\020INVALID_ARGUMENT\020\001\022\r\n\tNOT_FOUND\020\002\022\025\n\021PE" +
-      "RMISSION_DENIED\020\003\022\023\n\017UNAUTHENTICATED\020\004\022\021" +
-      "\n\rUNIMPLEMENTED\020\005\022\014\n\010INTERNAL\020\006\022\017\n\013UNAVA" +
-      "ILABLE\020\007\"\214\002\n\017HttpRouteAction\022\036\n\020backend_" +
-      "group_id\030\001 \001(\tB\004\350\3071\001\022*\n\007timeout\030\002 \001(\0132\031." +
-      "google.protobuf.Duration\022/\n\014idle_timeout" +
-      "\030\003 \001(\0132\031.google.protobuf.Duration\022\026\n\014hos" +
-      "t_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_rewrite\030\005" +
-      " \001(\010H\000\022\026\n\016prefix_rewrite\030\006 \001(\t\022\025\n\rupgrad" +
-      "e_types\030\007 \003(\tB\030\n\026host_rewrite_specifier\"" +
-      "\341\001\n\017GrpcRouteAction\022\036\n\020backend_group_id\030" +
-      "\001 \001(\tB\004\350\3071\001\022.\n\013max_timeout\030\002 \001(\0132\031.googl" +
-      "e.protobuf.Duration\022/\n\014idle_timeout\030\003 \001(" +
-      "\0132\031.google.protobuf.Duration\022\026\n\014host_rew" +
-      "rite\030\004 \001(\tH\000\022\033\n\021auto_host_rewrite\030\005 \001(\010H" +
-      "\000B\030\n\026host_rewrite_specifierBz\n#yandex.cl" +
-      "oud.api.apploadbalancer.v1ZSgithub.com/y" +
-      "andex-cloud/go-genproto/yandex/cloud/app" +
-      "loadbalancer/v1;apploadbalancerb\006proto3"
+      "balancer.v1.GrpcRouteActionH\000\022T\n\017status_" +
+      "response\030\003 \001(\01329.yandex.cloud.apploadbal" +
+      "ancer.v1.GrpcStatusResponseActionH\000B\016\n\006a" +
+      "ction\022\004\300\3011\001\"a\n\016HttpRouteMatch\022\023\n\013http_me" +
+      "thod\030\001 \003(\t\022:\n\004path\030\002 \001(\0132,.yandex.cloud." +
+      "apploadbalancer.v1.StringMatch\"L\n\016GrpcRo" +
+      "uteMatch\022:\n\004fqmn\030\001 \001(\0132,.yandex.cloud.ap" +
+      "ploadbalancer.v1.StringMatch\"K\n\013StringMa" +
+      "tch\022\025\n\013exact_match\030\001 \001(\tH\000\022\026\n\014prefix_mat" +
+      "ch\030\002 \001(\tH\000B\r\n\005match\022\004\300\3011\001\"\372\002\n\016RedirectAc" +
+      "tion\022\026\n\016replace_scheme\030\001 \001(\t\022\024\n\014replace_" +
+      "host\030\002 \001(\t\022\024\n\014replace_port\030\003 \001(\003\022\026\n\014repl" +
+      "ace_path\030\004 \001(\tH\000\022\030\n\016replace_prefix\030\005 \001(\t" +
+      "H\000\022\024\n\014remove_query\030\006 \001(\010\022[\n\rresponse_cod" +
+      "e\030\007 \001(\0162D.yandex.cloud.apploadbalancer.v" +
+      "1.RedirectAction.RedirectResponseCode\"w\n" +
+      "\024RedirectResponseCode\022\025\n\021MOVED_PERMANENT" +
+      "LY\020\000\022\t\n\005FOUND\020\001\022\r\n\tSEE_OTHER\020\002\022\026\n\022TEMPOR" +
+      "ARY_REDIRECT\020\003\022\026\n\022PERMANENT_REDIRECT\020\004B\006" +
+      "\n\004path\"k\n\024DirectResponseAction\022\033\n\006status" +
+      "\030\001 \001(\003B\013\372\3071\007100-599\0226\n\004body\030\002 \001(\0132(.yand" +
+      "ex.cloud.apploadbalancer.v1.Payload\"\202\002\n\030" +
+      "GrpcStatusResponseAction\022P\n\006status\030\001 \001(\016" +
+      "2@.yandex.cloud.apploadbalancer.v1.GrpcS" +
+      "tatusResponseAction.Status\"\223\001\n\006Status\022\006\n" +
+      "\002OK\020\000\022\024\n\020INVALID_ARGUMENT\020\001\022\r\n\tNOT_FOUND" +
+      "\020\002\022\025\n\021PERMISSION_DENIED\020\003\022\023\n\017UNAUTHENTIC" +
+      "ATED\020\004\022\021\n\rUNIMPLEMENTED\020\005\022\014\n\010INTERNAL\020\006\022" +
+      "\017\n\013UNAVAILABLE\020\007\"\214\002\n\017HttpRouteAction\022\036\n\020" +
+      "backend_group_id\030\001 \001(\tB\004\350\3071\001\022*\n\007timeout\030" +
+      "\002 \001(\0132\031.google.protobuf.Duration\022/\n\014idle" +
+      "_timeout\030\003 \001(\0132\031.google.protobuf.Duratio" +
+      "n\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_r" +
+      "ewrite\030\005 \001(\010H\000\022\026\n\016prefix_rewrite\030\006 \001(\t\022\025" +
+      "\n\rupgrade_types\030\007 \003(\tB\030\n\026host_rewrite_sp" +
+      "ecifier\"\341\001\n\017GrpcRouteAction\022\036\n\020backend_g" +
+      "roup_id\030\001 \001(\tB\004\350\3071\001\022.\n\013max_timeout\030\002 \001(\013" +
+      "2\031.google.protobuf.Duration\022/\n\014idle_time" +
+      "out\030\003 \001(\0132\031.google.protobuf.Duration\022\026\n\014" +
+      "host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_rewrit" +
+      "e\030\005 \001(\010H\000B\030\n\026host_rewrite_specifierBz\n#y" +
+      "andex.cloud.api.apploadbalancer.v1ZSgith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/apploadbalancer/v1;apploadbalancerb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17828,75 +19584,81 @@ public final class VirtualHostOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_VirtualHost_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_VirtualHost_descriptor,
-        new java.lang.String[] { "Name", "Authority", "Routes", "ModifyRequestHeaders", "ModifyResponseHeaders", });
-    internal_static_yandex_cloud_apploadbalancer_v1_HeaderModification_descriptor =
+        new java.lang.String[] { "Name", "Authority", "Routes", "ModifyRequestHeaders", "ModifyResponseHeaders", "RouteOptions", });
+    internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_descriptor,
+        new java.lang.String[] { "ModifyRequestHeaders", "ModifyResponseHeaders", });
+    internal_static_yandex_cloud_apploadbalancer_v1_HeaderModification_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_apploadbalancer_v1_HeaderModification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HeaderModification_descriptor,
         new java.lang.String[] { "Name", "Append", "Replace", "Remove", "Rename", "Operation", });
     internal_static_yandex_cloud_apploadbalancer_v1_Route_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_apploadbalancer_v1_Route_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_Route_descriptor,
-        new java.lang.String[] { "Name", "Http", "Grpc", "Route", });
+        new java.lang.String[] { "Name", "Http", "Grpc", "RouteOptions", "Route", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRoute_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRoute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpRoute_descriptor,
         new java.lang.String[] { "Match", "Route", "Redirect", "DirectResponse", "Action", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRoute_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRoute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcRoute_descriptor,
         new java.lang.String[] { "Match", "Route", "StatusResponse", "Action", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteMatch_descriptor,
         new java.lang.String[] { "HttpMethod", "Path", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteMatch_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteMatch_descriptor,
         new java.lang.String[] { "Fqmn", });
     internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_StringMatch_descriptor,
         new java.lang.String[] { "ExactMatch", "PrefixMatch", "Match", });
     internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_RedirectAction_descriptor,
         new java.lang.String[] { "ReplaceScheme", "ReplaceHost", "ReplacePort", "ReplacePath", "ReplacePrefix", "RemoveQuery", "ResponseCode", "Path", });
     internal_static_yandex_cloud_apploadbalancer_v1_DirectResponseAction_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_apploadbalancer_v1_DirectResponseAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_DirectResponseAction_descriptor,
         new java.lang.String[] { "Status", "Body", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcStatusResponseAction_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcStatusResponseAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcStatusResponseAction_descriptor,
         new java.lang.String[] { "Status", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteAction_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpRouteAction_descriptor,
         new java.lang.String[] { "BackendGroupId", "Timeout", "IdleTimeout", "HostRewrite", "AutoHostRewrite", "PrefixRewrite", "UpgradeTypes", "HostRewriteSpecifier", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteAction_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcRouteAction_descriptor,

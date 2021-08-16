@@ -4799,13 +4799,12 @@ public final class LogReadingServiceOuterClass {
       "mestamp\022A\n\006levels\030\006 \003(\0162\'.yandex.cloud.l" +
       "ogging.v1.LogLevel.LevelB\010\202\3101\004<=10\022\032\n\006fi" +
       "lter\030\007 \001(\tB\n\212\3101\006<=1000\022\035\n\tpage_size\030\010 \001(" +
-      "\003B\n\372\3071\0061-10002\202\001\n\021LogReadingService\022m\n\004R" +
-      "ead\022$.yandex.cloud.logging.v1.ReadReques" +
-      "t\032%.yandex.cloud.logging.v1.ReadResponse" +
-      "\"\030\202\323\344\223\002\022\022\020/logging/v1/readBb\n\033yandex.clo" +
-      "ud.api.logging.v1ZCgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/logging/v1;l" +
-      "oggingb\006proto3"
+      "\003B\n\372\3071\0061-10002h\n\021LogReadingService\022S\n\004Re" +
+      "ad\022$.yandex.cloud.logging.v1.ReadRequest" +
+      "\032%.yandex.cloud.logging.v1.ReadResponseB" +
+      "b\n\033yandex.cloud.api.logging.v1ZCgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/logging/v1;loggingb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4843,7 +4842,6 @@ public final class LogReadingServiceOuterClass {
         new java.lang.String[] { "LogGroupId", "ResourceTypes", "ResourceIds", "Since", "Until", "Levels", "Filter", "PageSize", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);

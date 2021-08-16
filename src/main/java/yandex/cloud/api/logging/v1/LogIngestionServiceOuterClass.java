@@ -2545,14 +2545,13 @@ public final class LogIngestionServiceOuterClass {
       "ults\"\226\001\n\rWriteResponse\022B\n\006errors\030\001 \003(\01322" +
       ".yandex.cloud.logging.v1.WriteResponse.E" +
       "rrorsEntry\032A\n\013ErrorsEntry\022\013\n\003key\030\001 \001(\003\022!" +
-      "\n\005value\030\002 \001(\0132\022.google.rpc.Status:\0028\0012\213\001" +
-      "\n\023LogIngestionService\022t\n\005Write\022%.yandex." +
-      "cloud.logging.v1.WriteRequest\032&.yandex.c" +
-      "loud.logging.v1.WriteResponse\"\034\202\323\344\223\002\026\"\021/" +
-      "logging/v1/write:\001*Bb\n\033yandex.cloud.api." +
-      "logging.v1ZCgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/logging/v1;loggingb" +
-      "\006proto3"
+      "\n\005value\030\002 \001(\0132\022.google.rpc.Status:\0028\0012m\n" +
+      "\023LogIngestionService\022V\n\005Write\022%.yandex.c" +
+      "loud.logging.v1.WriteRequest\032&.yandex.cl" +
+      "oud.logging.v1.WriteResponseBb\n\033yandex.c" +
+      "loud.api.logging.v1ZCgithub.com/yandex-c" +
+      "loud/go-genproto/yandex/cloud/logging/v1" +
+      ";loggingb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2591,7 +2590,6 @@ public final class LogIngestionServiceOuterClass {
         new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.size);
     com.google.protobuf.Descriptors.FileDescriptor
