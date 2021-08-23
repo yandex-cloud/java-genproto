@@ -2289,7 +2289,7 @@ public final class LogEntryOuterClass {
      * Entry text message.
      * </pre>
      *
-     * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
+     * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
     java.lang.String getMessage();
     /**
@@ -2297,7 +2297,7 @@ public final class LogEntryOuterClass {
      * Entry text message.
      * </pre>
      *
-     * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
+     * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
     com.google.protobuf.ByteString
         getMessageBytes();
@@ -2505,7 +2505,7 @@ public final class LogEntryOuterClass {
      * Entry text message.
      * </pre>
      *
-     * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
+     * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
     public java.lang.String getMessage() {
       java.lang.Object ref = message_;
@@ -2524,7 +2524,7 @@ public final class LogEntryOuterClass {
      * Entry text message.
      * </pre>
      *
-     * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
+     * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
      */
     public com.google.protobuf.ByteString
         getMessageBytes() {
@@ -3181,7 +3181,7 @@ public final class LogEntryOuterClass {
        * Entry text message.
        * </pre>
        *
-       * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
+       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       public java.lang.String getMessage() {
         java.lang.Object ref = message_;
@@ -3200,7 +3200,7 @@ public final class LogEntryOuterClass {
        * Entry text message.
        * </pre>
        *
-       * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
+       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       public com.google.protobuf.ByteString
           getMessageBytes() {
@@ -3220,7 +3220,7 @@ public final class LogEntryOuterClass {
        * Entry text message.
        * </pre>
        *
-       * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
+       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       public Builder setMessage(
           java.lang.String value) {
@@ -3237,7 +3237,7 @@ public final class LogEntryOuterClass {
        * Entry text message.
        * </pre>
        *
-       * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
+       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       public Builder clearMessage() {
         
@@ -3250,7 +3250,7 @@ public final class LogEntryOuterClass {
        * Entry text message.
        * </pre>
        *
-       * <code>string message = 3 [(.yandex.cloud.length) = "&lt;=65536"];</code>
+       * <code>string message = 3 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
        */
       public Builder setMessageBytes(
           com.google.protobuf.ByteString value) {
@@ -3498,7 +3498,7 @@ public final class LogEntryOuterClass {
      * <pre>
      * Default entry annotation.
      * Will be merged with entry annotation.
-     * Any conflict will be resolved in favor of entry own annotaion.
+     * Any conflict will be resolved in favor of entry own annotation.
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -3508,7 +3508,7 @@ public final class LogEntryOuterClass {
      * <pre>
      * Default entry annotation.
      * Will be merged with entry annotation.
-     * Any conflict will be resolved in favor of entry own annotaion.
+     * Any conflict will be resolved in favor of entry own annotation.
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -3518,7 +3518,7 @@ public final class LogEntryOuterClass {
      * <pre>
      * Default entry annotation.
      * Will be merged with entry annotation.
-     * Any conflict will be resolved in favor of entry own annotaion.
+     * Any conflict will be resolved in favor of entry own annotation.
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -3651,7 +3651,7 @@ public final class LogEntryOuterClass {
      * <pre>
      * Default entry annotation.
      * Will be merged with entry annotation.
-     * Any conflict will be resolved in favor of entry own annotaion.
+     * Any conflict will be resolved in favor of entry own annotation.
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -3663,7 +3663,7 @@ public final class LogEntryOuterClass {
      * <pre>
      * Default entry annotation.
      * Will be merged with entry annotation.
-     * Any conflict will be resolved in favor of entry own annotaion.
+     * Any conflict will be resolved in favor of entry own annotation.
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -3675,7 +3675,7 @@ public final class LogEntryOuterClass {
      * <pre>
      * Default entry annotation.
      * Will be merged with entry annotation.
-     * Any conflict will be resolved in favor of entry own annotaion.
+     * Any conflict will be resolved in favor of entry own annotation.
      * </pre>
      *
      * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -4098,7 +4098,7 @@ public final class LogEntryOuterClass {
        * <pre>
        * Default entry annotation.
        * Will be merged with entry annotation.
-       * Any conflict will be resolved in favor of entry own annotaion.
+       * Any conflict will be resolved in favor of entry own annotation.
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -4110,7 +4110,7 @@ public final class LogEntryOuterClass {
        * <pre>
        * Default entry annotation.
        * Will be merged with entry annotation.
-       * Any conflict will be resolved in favor of entry own annotaion.
+       * Any conflict will be resolved in favor of entry own annotation.
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -4126,7 +4126,7 @@ public final class LogEntryOuterClass {
        * <pre>
        * Default entry annotation.
        * Will be merged with entry annotation.
-       * Any conflict will be resolved in favor of entry own annotaion.
+       * Any conflict will be resolved in favor of entry own annotation.
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -4148,7 +4148,7 @@ public final class LogEntryOuterClass {
        * <pre>
        * Default entry annotation.
        * Will be merged with entry annotation.
-       * Any conflict will be resolved in favor of entry own annotaion.
+       * Any conflict will be resolved in favor of entry own annotation.
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -4168,7 +4168,7 @@ public final class LogEntryOuterClass {
        * <pre>
        * Default entry annotation.
        * Will be merged with entry annotation.
-       * Any conflict will be resolved in favor of entry own annotaion.
+       * Any conflict will be resolved in favor of entry own annotation.
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -4192,7 +4192,7 @@ public final class LogEntryOuterClass {
        * <pre>
        * Default entry annotation.
        * Will be merged with entry annotation.
-       * Any conflict will be resolved in favor of entry own annotaion.
+       * Any conflict will be resolved in favor of entry own annotation.
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -4212,7 +4212,7 @@ public final class LogEntryOuterClass {
        * <pre>
        * Default entry annotation.
        * Will be merged with entry annotation.
-       * Any conflict will be resolved in favor of entry own annotaion.
+       * Any conflict will be resolved in favor of entry own annotation.
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -4226,7 +4226,7 @@ public final class LogEntryOuterClass {
        * <pre>
        * Default entry annotation.
        * Will be merged with entry annotation.
-       * Any conflict will be resolved in favor of entry own annotaion.
+       * Any conflict will be resolved in favor of entry own annotation.
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -4243,7 +4243,7 @@ public final class LogEntryOuterClass {
        * <pre>
        * Default entry annotation.
        * Will be merged with entry annotation.
-       * Any conflict will be resolved in favor of entry own annotaion.
+       * Any conflict will be resolved in favor of entry own annotation.
        * </pre>
        *
        * <code>.google.protobuf.Struct json_payload = 4 [(.yandex.cloud.bytes) = "&lt;=65536"];</code>
@@ -6017,7 +6017,7 @@ public final class LogEntryOuterClass {
       "comingLogEntry\0223\n\ttimestamp\030\001 \001(\0132\032.goog" +
       "le.protobuf.TimestampB\004\350\3071\001\0226\n\005level\030\002 \001" +
       "(\0162\'.yandex.cloud.logging.v1.LogLevel.Le" +
-      "vel\022\034\n\007message\030\003 \001(\tB\013\212\3101\007<=65536\022:\n\014jso" +
+      "vel\022\034\n\007message\030\003 \001(\tB\013\272\3101\007<=65536\022:\n\014jso" +
       "n_payload\030\004 \001(\0132\027.google.protobuf.Struct" +
       "B\013\272\3101\007<=65536\"\206\001\n\020LogEntryDefaults\0226\n\005le" +
       "vel\030\002 \001(\0162\'.yandex.cloud.logging.v1.LogL" +
@@ -6085,7 +6085,6 @@ public final class LogEntryOuterClass {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.bytes);
     registry.add(yandex.cloud.api.Validation.exactlyOne);
-    registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor

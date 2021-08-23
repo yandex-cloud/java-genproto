@@ -2498,7 +2498,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     java.util.List<java.lang.String>
         getResourceTypesList();
@@ -2508,7 +2508,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     int getResourceTypesCount();
     /**
@@ -2517,7 +2517,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     java.lang.String getResourceTypes(int index);
     /**
@@ -2526,7 +2526,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getResourceTypesBytes(int index);
@@ -2537,7 +2537,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     java.util.List<java.lang.String>
         getResourceIdsList();
@@ -2547,7 +2547,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     int getResourceIdsCount();
     /**
@@ -2556,7 +2556,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     java.lang.String getResourceIds(int index);
     /**
@@ -2565,7 +2565,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     com.google.protobuf.ByteString
         getResourceIdsBytes(int index);
@@ -2921,7 +2921,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ProtocolStringList
         getResourceTypesList() {
@@ -2933,7 +2933,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public int getResourceTypesCount() {
       return resourceTypes_.size();
@@ -2944,7 +2944,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public java.lang.String getResourceTypes(int index) {
       return resourceTypes_.get(index);
@@ -2955,7 +2955,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
         getResourceTypesBytes(int index) {
@@ -2970,7 +2970,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ProtocolStringList
         getResourceIdsList() {
@@ -2982,7 +2982,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public int getResourceIdsCount() {
       return resourceIds_.size();
@@ -2993,7 +2993,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public java.lang.String getResourceIds(int index) {
       return resourceIds_.get(index);
@@ -3004,7 +3004,7 @@ public final class LogReadingServiceOuterClass {
      * Empty list disables filter.
      * </pre>
      *
-     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+     * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
      */
     public com.google.protobuf.ByteString
         getResourceIdsBytes(int index) {
@@ -3826,7 +3826,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ProtocolStringList
           getResourceTypesList() {
@@ -3838,7 +3838,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public int getResourceTypesCount() {
         return resourceTypes_.size();
@@ -3849,7 +3849,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public java.lang.String getResourceTypes(int index) {
         return resourceTypes_.get(index);
@@ -3860,7 +3860,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
           getResourceTypesBytes(int index) {
@@ -3872,7 +3872,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder setResourceTypes(
           int index, java.lang.String value) {
@@ -3890,7 +3890,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addResourceTypes(
           java.lang.String value) {
@@ -3908,7 +3908,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addAllResourceTypes(
           java.lang.Iterable<java.lang.String> values) {
@@ -3924,7 +3924,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder clearResourceTypes() {
         resourceTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -3938,7 +3938,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_types = 2 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addResourceTypesBytes(
           com.google.protobuf.ByteString value) {
@@ -3965,7 +3965,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ProtocolStringList
           getResourceIdsList() {
@@ -3977,7 +3977,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public int getResourceIdsCount() {
         return resourceIds_.size();
@@ -3988,7 +3988,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public java.lang.String getResourceIds(int index) {
         return resourceIds_.get(index);
@@ -3999,7 +3999,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public com.google.protobuf.ByteString
           getResourceIdsBytes(int index) {
@@ -4011,7 +4011,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder setResourceIds(
           int index, java.lang.String value) {
@@ -4029,7 +4029,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addResourceIds(
           java.lang.String value) {
@@ -4047,7 +4047,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addAllResourceIds(
           java.lang.Iterable<java.lang.String> values) {
@@ -4063,7 +4063,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder clearResourceIds() {
         resourceIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -4077,7 +4077,7 @@ public final class LogReadingServiceOuterClass {
        * Empty list disables filter.
        * </pre>
        *
-       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "[a-zA-Z][-a-zA-Z0-9_.]{1,62}", (.yandex.cloud.size) = "&lt;=100"];</code>
+       * <code>repeated string resource_ids = 3 [(.yandex.cloud.pattern) = "|[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}", (.yandex.cloud.size) = "&lt;=100"];</code>
        */
       public Builder addResourceIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -4789,22 +4789,22 @@ public final class LogReadingServiceOuterClass {
       "ReadResponse\022\024\n\014log_group_id\030\001 \001(\t\0222\n\007en" +
       "tries\030\002 \003(\0132!.yandex.cloud.logging.v1.Lo" +
       "gEntry\022\027\n\017next_page_token\030\003 \001(\t\022\033\n\023previ" +
-      "ous_page_token\030\004 \001(\t\"\206\003\n\010Criteria\022\"\n\014log" +
-      "_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022A\n\016resourc" +
-      "e_types\030\002 \003(\tB)\362\3071\034[a-zA-Z][-a-zA-Z0-9_." +
-      "]{1,62}\202\3101\005<=100\022?\n\014resource_ids\030\003 \003(\tB)" +
-      "\362\3071\034[a-zA-Z][-a-zA-Z0-9_.]{1,62}\202\3101\005<=10" +
-      "0\022)\n\005since\030\004 \001(\0132\032.google.protobuf.Times" +
-      "tamp\022)\n\005until\030\005 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\022A\n\006levels\030\006 \003(\0162\'.yandex.cloud.l" +
-      "ogging.v1.LogLevel.LevelB\010\202\3101\004<=10\022\032\n\006fi" +
-      "lter\030\007 \001(\tB\n\212\3101\006<=1000\022\035\n\tpage_size\030\010 \001(" +
-      "\003B\n\372\3071\0061-10002h\n\021LogReadingService\022S\n\004Re" +
-      "ad\022$.yandex.cloud.logging.v1.ReadRequest" +
-      "\032%.yandex.cloud.logging.v1.ReadResponseB" +
-      "b\n\033yandex.cloud.api.logging.v1ZCgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/logging/v1;loggingb\006proto3"
+      "ous_page_token\030\004 \001(\t\"\213\003\n\010Criteria\022\"\n\014log" +
+      "_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022B\n\016resourc" +
+      "e_types\030\002 \003(\tB*\362\3071\035|[a-zA-Z][-a-zA-Z0-9_" +
+      ".]{0,63}\202\3101\005<=100\022C\n\014resource_ids\030\003 \003(\tB" +
+      "-\362\3071 |[a-zA-Z0-9][-a-zA-Z0-9_.]{0,63}\202\3101" +
+      "\005<=100\022)\n\005since\030\004 \001(\0132\032.google.protobuf." +
+      "Timestamp\022)\n\005until\030\005 \001(\0132\032.google.protob" +
+      "uf.Timestamp\022A\n\006levels\030\006 \003(\0162\'.yandex.cl" +
+      "oud.logging.v1.LogLevel.LevelB\010\202\3101\004<=10\022" +
+      "\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\022\035\n\tpage_size" +
+      "\030\010 \001(\003B\n\372\3071\0061-10002h\n\021LogReadingService\022" +
+      "S\n\004Read\022$.yandex.cloud.logging.v1.ReadRe" +
+      "quest\032%.yandex.cloud.logging.v1.ReadResp" +
+      "onseBb\n\033yandex.cloud.api.logging.v1ZCgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/logging/v1;loggingb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

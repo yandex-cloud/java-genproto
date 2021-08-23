@@ -6835,7 +6835,7 @@ public final class BackendGroupOuterClass {
      * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
      * Weights must be set either for all backends in a group or for none of them.
      * Setting no weights is the same as setting equal non-zero weights for all backends.
-     * If set to `0`, traffic is not sent to the backend.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -6846,7 +6846,7 @@ public final class BackendGroupOuterClass {
      * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
      * Weights must be set either for all backends in a group or for none of them.
      * Setting no weights is the same as setting equal non-zero weights for all backends.
-     * If set to `0`, traffic is not sent to the backend.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -6857,7 +6857,7 @@ public final class BackendGroupOuterClass {
      * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
      * Weights must be set either for all backends in a group or for none of them.
      * Setting no weights is the same as setting equal non-zero weights for all backends.
-     * If set to `0`, traffic is not sent to the backend.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -6900,7 +6900,8 @@ public final class BackendGroupOuterClass {
 
     /**
      * <pre>
-     * Target groups that belong to the backend.
+     * Target groups that belong to the backend. For details about target groups, see
+     * [documentation](/docs/application-load-balancer/concepts/target-group).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -6908,7 +6909,8 @@ public final class BackendGroupOuterClass {
     boolean hasTargetGroups();
     /**
      * <pre>
-     * Target groups that belong to the backend.
+     * Target groups that belong to the backend. For details about target groups, see
+     * [documentation](/docs/application-load-balancer/concepts/target-group).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -6916,7 +6918,8 @@ public final class BackendGroupOuterClass {
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend getTargetGroups();
     /**
      * <pre>
-     * Target groups that belong to the backend.
+     * Target groups that belong to the backend. For details about target groups, see
+     * [documentation](/docs/application-load-balancer/concepts/target-group).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -6925,7 +6928,10 @@ public final class BackendGroupOuterClass {
 
     /**
      * <pre>
-     * Storage bucket to use as a backend.
+     * Object Storage bucket to use as the backend. For details about buckets, see
+     * [documentation](/docs/storage/concepts/bucket).
+     * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+     * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -6933,7 +6939,10 @@ public final class BackendGroupOuterClass {
     boolean hasStorageBucket();
     /**
      * <pre>
-     * Storage bucket to use as a backend.
+     * Object Storage bucket to use as the backend. For details about buckets, see
+     * [documentation](/docs/storage/concepts/bucket).
+     * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+     * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -6941,7 +6950,10 @@ public final class BackendGroupOuterClass {
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend getStorageBucket();
     /**
      * <pre>
-     * Storage bucket to use as a backend.
+     * Object Storage bucket to use as the backend. For details about buckets, see
+     * [documentation](/docs/storage/concepts/bucket).
+     * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+     * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -7310,7 +7322,7 @@ public final class BackendGroupOuterClass {
      * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
      * Weights must be set either for all backends in a group or for none of them.
      * Setting no weights is the same as setting equal non-zero weights for all backends.
-     * If set to `0`, traffic is not sent to the backend.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -7323,7 +7335,7 @@ public final class BackendGroupOuterClass {
      * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
      * Weights must be set either for all backends in a group or for none of them.
      * Setting no weights is the same as setting equal non-zero weights for all backends.
-     * If set to `0`, traffic is not sent to the backend.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -7336,7 +7348,7 @@ public final class BackendGroupOuterClass {
      * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
      * Weights must be set either for all backends in a group or for none of them.
      * Setting no weights is the same as setting equal non-zero weights for all backends.
-     * If set to `0`, traffic is not sent to the backend.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -7394,7 +7406,8 @@ public final class BackendGroupOuterClass {
     public static final int TARGET_GROUPS_FIELD_NUMBER = 5;
     /**
      * <pre>
-     * Target groups that belong to the backend.
+     * Target groups that belong to the backend. For details about target groups, see
+     * [documentation](/docs/application-load-balancer/concepts/target-group).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -7404,7 +7417,8 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * Target groups that belong to the backend.
+     * Target groups that belong to the backend. For details about target groups, see
+     * [documentation](/docs/application-load-balancer/concepts/target-group).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -7417,7 +7431,8 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * Target groups that belong to the backend.
+     * Target groups that belong to the backend. For details about target groups, see
+     * [documentation](/docs/application-load-balancer/concepts/target-group).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -7432,7 +7447,10 @@ public final class BackendGroupOuterClass {
     public static final int STORAGE_BUCKET_FIELD_NUMBER = 9;
     /**
      * <pre>
-     * Storage bucket to use as a backend.
+     * Object Storage bucket to use as the backend. For details about buckets, see
+     * [documentation](/docs/storage/concepts/bucket).
+     * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+     * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -7442,7 +7460,10 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * Storage bucket to use as a backend.
+     * Object Storage bucket to use as the backend. For details about buckets, see
+     * [documentation](/docs/storage/concepts/bucket).
+     * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+     * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -7455,7 +7476,10 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * Storage bucket to use as a backend.
+     * Object Storage bucket to use as the backend. For details about buckets, see
+     * [documentation](/docs/storage/concepts/bucket).
+     * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+     * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
      * </pre>
      *
      * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -8263,7 +8287,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends in a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -8276,7 +8300,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends in a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -8293,7 +8317,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends in a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -8316,7 +8340,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends in a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -8337,7 +8361,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends in a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -8362,7 +8386,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends in a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -8383,7 +8407,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends in a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -8398,7 +8422,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends in a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -8416,7 +8440,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends in a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -8630,7 +8654,8 @@ public final class BackendGroupOuterClass {
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.TargetGroupsBackendOrBuilder> targetGroupsBuilder_;
       /**
        * <pre>
-       * Target groups that belong to the backend.
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -8640,7 +8665,8 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Target groups that belong to the backend.
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -8660,7 +8686,8 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Target groups that belong to the backend.
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -8680,7 +8707,8 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Target groups that belong to the backend.
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -8698,7 +8726,8 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Target groups that belong to the backend.
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -8724,7 +8753,8 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Target groups that belong to the backend.
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -8747,7 +8777,8 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Target groups that belong to the backend.
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -8757,7 +8788,8 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Target groups that belong to the backend.
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -8774,7 +8806,8 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Target groups that belong to the backend.
+       * Target groups that belong to the backend. For details about target groups, see
+       * [documentation](/docs/application-load-balancer/concepts/target-group).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.TargetGroupsBackend target_groups = 5;</code>
@@ -8802,7 +8835,10 @@ public final class BackendGroupOuterClass {
           yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackend.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.StorageBucketBackendOrBuilder> storageBucketBuilder_;
       /**
        * <pre>
-       * Storage bucket to use as a backend.
+       * Object Storage bucket to use as the backend. For details about buckets, see
+       * [documentation](/docs/storage/concepts/bucket).
+       * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+       * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -8812,7 +8848,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Storage bucket to use as a backend.
+       * Object Storage bucket to use as the backend. For details about buckets, see
+       * [documentation](/docs/storage/concepts/bucket).
+       * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+       * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -8832,7 +8871,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Storage bucket to use as a backend.
+       * Object Storage bucket to use as the backend. For details about buckets, see
+       * [documentation](/docs/storage/concepts/bucket).
+       * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+       * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -8852,7 +8894,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Storage bucket to use as a backend.
+       * Object Storage bucket to use as the backend. For details about buckets, see
+       * [documentation](/docs/storage/concepts/bucket).
+       * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+       * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -8870,7 +8915,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Storage bucket to use as a backend.
+       * Object Storage bucket to use as the backend. For details about buckets, see
+       * [documentation](/docs/storage/concepts/bucket).
+       * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+       * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -8896,7 +8944,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Storage bucket to use as a backend.
+       * Object Storage bucket to use as the backend. For details about buckets, see
+       * [documentation](/docs/storage/concepts/bucket).
+       * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+       * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -8919,7 +8970,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Storage bucket to use as a backend.
+       * Object Storage bucket to use as the backend. For details about buckets, see
+       * [documentation](/docs/storage/concepts/bucket).
+       * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+       * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -8929,7 +8983,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Storage bucket to use as a backend.
+       * Object Storage bucket to use as the backend. For details about buckets, see
+       * [documentation](/docs/storage/concepts/bucket).
+       * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+       * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -8946,7 +9003,10 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Storage bucket to use as a backend.
+       * Object Storage bucket to use as the backend. For details about buckets, see
+       * [documentation](/docs/storage/concepts/bucket).
+       * If a bucket is used as a backend, the list of bucket objects and the objects themselves must be publicly
+       * accessible. For instructions, see [documentation](/docs/storage/operations/buckets/bucket-availability).
        * </pre>
        *
        * <code>.yandex.cloud.apploadbalancer.v1.StorageBucketBackend storage_bucket = 9;</code>
@@ -9618,7 +9678,7 @@ public final class BackendGroupOuterClass {
      * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
      * Weights must be set either for all backends of a group or for none of them.
      * Setting no weights is the same as setting equal non-zero weights for all backends.
-     * If set to `0`, traffic is not sent to the backend.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -9629,7 +9689,7 @@ public final class BackendGroupOuterClass {
      * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
      * Weights must be set either for all backends of a group or for none of them.
      * Setting no weights is the same as setting equal non-zero weights for all backends.
-     * If set to `0`, traffic is not sent to the backend.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -9640,7 +9700,7 @@ public final class BackendGroupOuterClass {
      * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
      * Weights must be set either for all backends of a group or for none of them.
      * Setting no weights is the same as setting equal non-zero weights for all backends.
-     * If set to `0`, traffic is not sent to the backend.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10036,7 +10096,7 @@ public final class BackendGroupOuterClass {
      * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
      * Weights must be set either for all backends of a group or for none of them.
      * Setting no weights is the same as setting equal non-zero weights for all backends.
-     * If set to `0`, traffic is not sent to the backend.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10049,7 +10109,7 @@ public final class BackendGroupOuterClass {
      * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
      * Weights must be set either for all backends of a group or for none of them.
      * Setting no weights is the same as setting equal non-zero weights for all backends.
-     * If set to `0`, traffic is not sent to the backend.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10062,7 +10122,7 @@ public final class BackendGroupOuterClass {
      * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
      * Weights must be set either for all backends of a group or for none of them.
      * Setting no weights is the same as setting equal non-zero weights for all backends.
-     * If set to `0`, traffic is not sent to the backend.
+     * If the weight is non-positive, traffic is not sent to the backend.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10893,7 +10953,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends of a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10906,7 +10966,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends of a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10923,7 +10983,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends of a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10946,7 +11006,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends of a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10967,7 +11027,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends of a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -10992,7 +11052,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends of a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -11013,7 +11073,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends of a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -11028,7 +11088,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends of a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -11046,7 +11106,7 @@ public final class BackendGroupOuterClass {
        * Backend weight. Traffic is distributed between backends of a backend group according to their weights.
        * Weights must be set either for all backends of a group or for none of them.
        * Setting no weights is the same as setting equal non-zero weights for all backends.
-       * If set to `0`, traffic is not sent to the backend.
+       * If the weight is non-positive, traffic is not sent to the backend.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value backend_weight = 2;</code>
@@ -13559,8 +13619,7 @@ public final class BackendGroupOuterClass {
 
     /**
      * <pre>
-     * Cloud S3 bucket name.
-     * Should have public access.
+     * Name of the bucket.
      * </pre>
      *
      * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
@@ -13568,8 +13627,7 @@ public final class BackendGroupOuterClass {
     java.lang.String getBucket();
     /**
      * <pre>
-     * Cloud S3 bucket name.
-     * Should have public access.
+     * Name of the bucket.
      * </pre>
      *
      * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
@@ -13578,6 +13636,11 @@ public final class BackendGroupOuterClass {
         getBucketBytes();
   }
   /**
+   * <pre>
+   * A resource for Object Storage bucket used as a backend. For details about the concept,
+   * see [documentation](/docs/storage/concepts/bucket).
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StorageBucketBackend}
    */
   public  static final class StorageBucketBackend extends
@@ -13659,8 +13722,7 @@ public final class BackendGroupOuterClass {
     private volatile java.lang.Object bucket_;
     /**
      * <pre>
-     * Cloud S3 bucket name.
-     * Should have public access.
+     * Name of the bucket.
      * </pre>
      *
      * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
@@ -13679,8 +13741,7 @@ public final class BackendGroupOuterClass {
     }
     /**
      * <pre>
-     * Cloud S3 bucket name.
-     * Should have public access.
+     * Name of the bucket.
      * </pre>
      *
      * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
@@ -13855,6 +13916,11 @@ public final class BackendGroupOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * A resource for Object Storage bucket used as a backend. For details about the concept,
+     * see [documentation](/docs/storage/concepts/bucket).
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.apploadbalancer.v1.StorageBucketBackend}
      */
     public static final class Builder extends
@@ -14005,8 +14071,7 @@ public final class BackendGroupOuterClass {
       private java.lang.Object bucket_ = "";
       /**
        * <pre>
-       * Cloud S3 bucket name.
-       * Should have public access.
+       * Name of the bucket.
        * </pre>
        *
        * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
@@ -14025,8 +14090,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Cloud S3 bucket name.
-       * Should have public access.
+       * Name of the bucket.
        * </pre>
        *
        * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
@@ -14046,8 +14110,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Cloud S3 bucket name.
-       * Should have public access.
+       * Name of the bucket.
        * </pre>
        *
        * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
@@ -14064,8 +14127,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Cloud S3 bucket name.
-       * Should have public access.
+       * Name of the bucket.
        * </pre>
        *
        * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
@@ -14078,8 +14140,7 @@ public final class BackendGroupOuterClass {
       }
       /**
        * <pre>
-       * Cloud S3 bucket name.
-       * Should have public access.
+       * Name of the bucket.
        * </pre>
        *
        * <code>string bucket = 1 [(.yandex.cloud.required) = true];</code>
