@@ -295,6 +295,15 @@ public final class ImageOuterClass {
      * <code>.yandex.cloud.compute.v1.Os os = 12;</code>
      */
     yandex.cloud.api.compute.v1.ImageOuterClass.OsOrBuilder getOsOrBuilder();
+
+    /**
+     * <pre>
+     * When true, indicates there is an image pool for fast creation disks from the image.
+     * </pre>
+     *
+     * <code>bool pooled = 13;</code>
+     */
+    boolean getPooled();
   }
   /**
    * <pre>
@@ -322,6 +331,7 @@ public final class ImageOuterClass {
       minDiskSize_ = 0L;
       productIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       status_ = 0;
+      pooled_ = false;
     }
 
     @java.lang.Override
@@ -440,6 +450,11 @@ public final class ImageOuterClass {
                 os_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 104: {
+
+              pooled_ = input.readBool();
               break;
             }
             default: {
@@ -1125,6 +1140,19 @@ public final class ImageOuterClass {
       return getOs();
     }
 
+    public static final int POOLED_FIELD_NUMBER = 13;
+    private boolean pooled_;
+    /**
+     * <pre>
+     * When true, indicates there is an image pool for fast creation disks from the image.
+     * </pre>
+     *
+     * <code>bool pooled = 13;</code>
+     */
+    public boolean getPooled() {
+      return pooled_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1177,6 +1205,9 @@ public final class ImageOuterClass {
       }
       if (os_ != null) {
         output.writeMessage(12, getOs());
+      }
+      if (pooled_ != false) {
+        output.writeBool(13, pooled_);
       }
       unknownFields.writeTo(output);
     }
@@ -1240,6 +1271,10 @@ public final class ImageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(12, getOs());
       }
+      if (pooled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, pooled_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1285,6 +1320,8 @@ public final class ImageOuterClass {
         result = result && getOs()
             .equals(other.getOs());
       }
+      result = result && (getPooled()
+          == other.getPooled());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1330,6 +1367,9 @@ public final class ImageOuterClass {
         hash = (37 * hash) + OS_FIELD_NUMBER;
         hash = (53 * hash) + getOs().hashCode();
       }
+      hash = (37 * hash) + POOLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPooled());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1520,6 +1560,8 @@ public final class ImageOuterClass {
           os_ = null;
           osBuilder_ = null;
         }
+        pooled_ = false;
+
         return this;
       }
 
@@ -1573,6 +1615,7 @@ public final class ImageOuterClass {
         } else {
           result.os_ = osBuilder_.build();
         }
+        result.pooled_ = pooled_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1668,6 +1711,9 @@ public final class ImageOuterClass {
         }
         if (other.hasOs()) {
           mergeOs(other.getOs());
+        }
+        if (other.getPooled() != false) {
+          setPooled(other.getPooled());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2895,6 +2941,44 @@ public final class ImageOuterClass {
         }
         return osBuilder_;
       }
+
+      private boolean pooled_ ;
+      /**
+       * <pre>
+       * When true, indicates there is an image pool for fast creation disks from the image.
+       * </pre>
+       *
+       * <code>bool pooled = 13;</code>
+       */
+      public boolean getPooled() {
+        return pooled_;
+      }
+      /**
+       * <pre>
+       * When true, indicates there is an image pool for fast creation disks from the image.
+       * </pre>
+       *
+       * <code>bool pooled = 13;</code>
+       */
+      public Builder setPooled(boolean value) {
+        
+        pooled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * When true, indicates there is an image pool for fast creation disks from the image.
+       * </pre>
+       *
+       * <code>bool pooled = 13;</code>
+       */
+      public Builder clearPooled() {
+        
+        pooled_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3649,7 +3733,7 @@ public final class ImageOuterClass {
     java.lang.String[] descriptorData = {
       "\n#yandex/cloud/compute/v1/image.proto\022\027y" +
       "andex.cloud.compute.v1\032\037google/protobuf/" +
-      "timestamp.proto\"\352\003\n\005Image\022\n\n\002id\030\001 \001(\t\022\021\n" +
+      "timestamp.proto\"\372\003\n\005Image\022\n\n\002id\030\001 \001(\t\022\021\n" +
       "\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.g" +
       "oogle.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023" +
       "\n\013description\030\005 \001(\t\022:\n\006labels\030\006 \003(\0132*.ya" +
@@ -3658,16 +3742,16 @@ public final class ImageOuterClass {
       "\rmin_disk_size\030\t \001(\003\022\023\n\013product_ids\030\n \003(" +
       "\t\0225\n\006status\030\013 \001(\0162%.yandex.cloud.compute" +
       ".v1.Image.Status\022\'\n\002os\030\014 \001(\0132\033.yandex.cl" +
-      "oud.compute.v1.Os\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"R\n\006Status\022\026\n\022ST" +
-      "ATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\t\n\005READ" +
-      "Y\020\002\022\t\n\005ERROR\020\003\022\014\n\010DELETING\020\004\"j\n\002Os\022.\n\004ty" +
-      "pe\030\001 \001(\0162 .yandex.cloud.compute.v1.Os.Ty" +
-      "pe\"4\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\t\n\005LINU" +
-      "X\020\001\022\013\n\007WINDOWS\020\002Bb\n\033yandex.cloud.api.com" +
-      "pute.v1ZCgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/compute/v1;computeb\006pr" +
-      "oto3"
+      "oud.compute.v1.Os\022\016\n\006pooled\030\r \001(\010\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\"R\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CR" +
+      "EATING\020\001\022\t\n\005READY\020\002\022\t\n\005ERROR\020\003\022\014\n\010DELETI" +
+      "NG\020\004\"j\n\002Os\022.\n\004type\030\001 \001(\0162 .yandex.cloud." +
+      "compute.v1.Os.Type\"4\n\004Type\022\024\n\020TYPE_UNSPE" +
+      "CIFIED\020\000\022\t\n\005LINUX\020\001\022\013\n\007WINDOWS\020\002Bb\n\033yand" +
+      "ex.cloud.api.compute.v1ZCgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/comput" +
+      "e/v1;computeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3687,7 +3771,7 @@ public final class ImageOuterClass {
     internal_static_yandex_cloud_compute_v1_Image_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_Image_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Family", "StorageSize", "MinDiskSize", "ProductIds", "Status", "Os", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Family", "StorageSize", "MinDiskSize", "ProductIds", "Status", "Os", "Pooled", });
     internal_static_yandex_cloud_compute_v1_Image_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_Image_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Image_LabelsEntry_fieldAccessorTable = new

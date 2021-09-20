@@ -5264,6 +5264,15 @@ public final class ClusterOuterClass {
      * <code>bool unmanaged_topics = 7;</code>
      */
     boolean getUnmanagedTopics();
+
+    /**
+     * <pre>
+     * Enables managed schema registry on cluster
+     * </pre>
+     *
+     * <code>bool schema_registry = 8;</code>
+     */
+    boolean getSchemaRegistry();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConfigSpec}
@@ -5282,6 +5291,7 @@ public final class ClusterOuterClass {
       zoneId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       assignPublicIp_ = false;
       unmanagedTopics_ = false;
+      schemaRegistry_ = false;
     }
 
     @java.lang.Override
@@ -5370,6 +5380,11 @@ public final class ClusterOuterClass {
             case 56: {
 
               unmanagedTopics_ = input.readBool();
+              break;
+            }
+            case 64: {
+
+              schemaRegistry_ = input.readBool();
               break;
             }
             default: {
@@ -7676,6 +7691,19 @@ public final class ClusterOuterClass {
       return unmanagedTopics_;
     }
 
+    public static final int SCHEMA_REGISTRY_FIELD_NUMBER = 8;
+    private boolean schemaRegistry_;
+    /**
+     * <pre>
+     * Enables managed schema registry on cluster
+     * </pre>
+     *
+     * <code>bool schema_registry = 8;</code>
+     */
+    public boolean getSchemaRegistry() {
+      return schemaRegistry_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7710,6 +7738,9 @@ public final class ClusterOuterClass {
       }
       if (unmanagedTopics_ != false) {
         output.writeBool(7, unmanagedTopics_);
+      }
+      if (schemaRegistry_ != false) {
+        output.writeBool(8, schemaRegistry_);
       }
       unknownFields.writeTo(output);
     }
@@ -7751,6 +7782,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, unmanagedTopics_);
       }
+      if (schemaRegistry_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, schemaRegistry_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7790,6 +7825,8 @@ public final class ClusterOuterClass {
           == other.getAssignPublicIp());
       result = result && (getUnmanagedTopics()
           == other.getUnmanagedTopics());
+      result = result && (getSchemaRegistry()
+          == other.getSchemaRegistry());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7825,6 +7862,9 @@ public final class ClusterOuterClass {
       hash = (37 * hash) + UNMANAGED_TOPICS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getUnmanagedTopics());
+      hash = (37 * hash) + SCHEMA_REGISTRY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSchemaRegistry());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7984,6 +8024,8 @@ public final class ClusterOuterClass {
 
         unmanagedTopics_ = false;
 
+        schemaRegistry_ = false;
+
         return this;
       }
 
@@ -8035,6 +8077,7 @@ public final class ClusterOuterClass {
         }
         result.assignPublicIp_ = assignPublicIp_;
         result.unmanagedTopics_ = unmanagedTopics_;
+        result.schemaRegistry_ = schemaRegistry_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8112,6 +8155,9 @@ public final class ClusterOuterClass {
         }
         if (other.getUnmanagedTopics() != false) {
           setUnmanagedTopics(other.getUnmanagedTopics());
+        }
+        if (other.getSchemaRegistry() != false) {
+          setSchemaRegistry(other.getSchemaRegistry());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8896,6 +8942,44 @@ public final class ClusterOuterClass {
       public Builder clearUnmanagedTopics() {
         
         unmanagedTopics_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean schemaRegistry_ ;
+      /**
+       * <pre>
+       * Enables managed schema registry on cluster
+       * </pre>
+       *
+       * <code>bool schema_registry = 8;</code>
+       */
+      public boolean getSchemaRegistry() {
+        return schemaRegistry_;
+      }
+      /**
+       * <pre>
+       * Enables managed schema registry on cluster
+       * </pre>
+       *
+       * <code>bool schema_registry = 8;</code>
+       */
+      public Builder setSchemaRegistry(boolean value) {
+        
+        schemaRegistry_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables managed schema registry on cluster
+       * </pre>
+       *
+       * <code>bool schema_registry = 8;</code>
+       */
+      public Builder clearSchemaRegistry() {
+        
+        schemaRegistry_ = false;
         onChanged();
         return this;
       }
@@ -24699,27 +24783,51 @@ public final class ClusterOuterClass {
       "RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010ST" +
       "OPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nM" +
       "onitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002" +
-      " \001(\t\022\014\n\004link\030\003 \001(\t\"\267\005\n\nConfigSpec\022\017\n\007ver" +
+      " \001(\t\022\014\n\004link\030\003 \001(\t\"\320\005\n\nConfigSpec\022\017\n\007ver" +
       "sion\030\001 \001(\t\022:\n\005kafka\030\002 \001(\0132+.yandex.cloud" +
       ".mdb.kafka.v1.ConfigSpec.Kafka\022B\n\tzookee" +
       "per\030\003 \001(\0132/.yandex.cloud.mdb.kafka.v1.Co" +
       "nfigSpec.Zookeeper\022\017\n\007zone_id\030\004 \003(\t\0222\n\rb" +
       "rokers_count\030\005 \001(\0132\033.google.protobuf.Int" +
       "64Value\022\030\n\020assign_public_ip\030\006 \001(\010\022\030\n\020unm" +
-      "anaged_topics\030\007 \001(\010\032\330\002\n\005Kafka\0227\n\tresourc" +
-      "es\030\001 \001(\0132$.yandex.cloud.mdb.kafka.v1.Res" +
-      "ources\022V\n\020kafka_config_2_1\030\002 \001(\0132).yande" +
-      "x.cloud.mdb.kafka.v1.KafkaConfig2_1H\000R\017k" +
-      "afkaConfig_2_1\022V\n\020kafka_config_2_6\030\003 \001(\013" +
-      "2).yandex.cloud.mdb.kafka.v1.KafkaConfig" +
-      "2_6H\000R\017kafkaConfig_2_6\022V\n\020kafka_config_2" +
-      "_8\030\004 \001(\0132).yandex.cloud.mdb.kafka.v1.Kaf" +
-      "kaConfig2_8H\000R\017kafkaConfig_2_8B\016\n\014kafka_" +
-      "config\032D\n\tZookeeper\0227\n\tresources\030\001 \001(\0132$" +
-      ".yandex.cloud.mdb.kafka.v1.Resources\"P\n\t" +
-      "Resources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n" +
-      "\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\244" +
-      "\007\n\016KafkaConfig2_1\022D\n\020compression_type\030\001 " +
+      "anaged_topics\030\007 \001(\010\022\027\n\017schema_registry\030\010" +
+      " \001(\010\032\330\002\n\005Kafka\0227\n\tresources\030\001 \001(\0132$.yand" +
+      "ex.cloud.mdb.kafka.v1.Resources\022V\n\020kafka" +
+      "_config_2_1\030\002 \001(\0132).yandex.cloud.mdb.kaf" +
+      "ka.v1.KafkaConfig2_1H\000R\017kafkaConfig_2_1\022" +
+      "V\n\020kafka_config_2_6\030\003 \001(\0132).yandex.cloud" +
+      ".mdb.kafka.v1.KafkaConfig2_6H\000R\017kafkaCon" +
+      "fig_2_6\022V\n\020kafka_config_2_8\030\004 \001(\0132).yand" +
+      "ex.cloud.mdb.kafka.v1.KafkaConfig2_8H\000R\017" +
+      "kafkaConfig_2_8B\016\n\014kafka_config\032D\n\tZooke" +
+      "eper\0227\n\tresources\030\001 \001(\0132$.yandex.cloud.m" +
+      "db.kafka.v1.Resources\"P\n\tResources\022\032\n\022re" +
+      "source_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(" +
+      "\003\022\024\n\014disk_type_id\030\003 \001(\t\"\244\007\n\016KafkaConfig2" +
+      "_1\022D\n\020compression_type\030\001 \001(\0162*.yandex.cl" +
+      "oud.mdb.kafka.v1.CompressionType\022@\n\033log_" +
+      "flush_interval_messages\030\002 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022:\n\025log_flush_interval" +
+      "_ms\030\003 \001(\0132\033.google.protobuf.Int64Value\022D" +
+      "\n\037log_flush_scheduler_interval_ms\030\004 \001(\0132" +
+      "\033.google.protobuf.Int64Value\0228\n\023log_rete" +
+      "ntion_bytes\030\005 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0228\n\023log_retention_hours\030\006 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022:\n\025log_retentio" +
+      "n_minutes\030\007 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\0225\n\020log_retention_ms\030\010 \001(\0132\033.google." +
+      "protobuf.Int64Value\0226\n\021log_segment_bytes" +
+      "\030\t \001(\0132\033.google.protobuf.Int64Value\0223\n\017l" +
+      "og_preallocate\030\n \001(\0132\032.google.protobuf.B" +
+      "oolValue\022=\n\030socket_send_buffer_bytes\030\013 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022@\n\033socke" +
+      "t_receive_buffer_bytes\030\014 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022=\n\031auto_create_topics_" +
+      "enable\030\r \001(\0132\032.google.protobuf.BoolValue" +
+      "\0223\n\016num_partitions\030\016 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022?\n\032default_replication_fac" +
+      "tor\030\017 \001(\0132\033.google.protobuf.Int64Value\"\244" +
+      "\007\n\016KafkaConfig2_6\022D\n\020compression_type\030\001 " +
       "\001(\0162*.yandex.cloud.mdb.kafka.v1.Compress" +
       "ionType\022@\n\033log_flush_interval_messages\030\002" +
       " \001(\0132\033.google.protobuf.Int64Value\022:\n\025log" +
@@ -24742,7 +24850,7 @@ public final class ClusterOuterClass {
       "tobuf.BoolValue\0223\n\016num_partitions\030\016 \001(\0132" +
       "\033.google.protobuf.Int64Value\022?\n\032default_" +
       "replication_factor\030\017 \001(\0132\033.google.protob" +
-      "uf.Int64Value\"\244\007\n\016KafkaConfig2_6\022D\n\020comp" +
+      "uf.Int64Value\"\244\007\n\016KafkaConfig2_8\022D\n\020comp" +
       "ression_type\030\001 \001(\0162*.yandex.cloud.mdb.ka" +
       "fka.v1.CompressionType\022@\n\033log_flush_inte" +
       "rval_messages\030\002 \001(\0132\033.google.protobuf.In" +
@@ -24765,43 +24873,20 @@ public final class ClusterOuterClass {
       "(\0132\032.google.protobuf.BoolValue\0223\n\016num_pa" +
       "rtitions\030\016 \001(\0132\033.google.protobuf.Int64Va" +
       "lue\022?\n\032default_replication_factor\030\017 \001(\0132" +
-      "\033.google.protobuf.Int64Value\"\244\007\n\016KafkaCo" +
-      "nfig2_8\022D\n\020compression_type\030\001 \001(\0162*.yand" +
-      "ex.cloud.mdb.kafka.v1.CompressionType\022@\n" +
-      "\033log_flush_interval_messages\030\002 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022:\n\025log_flush_int" +
-      "erval_ms\030\003 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022D\n\037log_flush_scheduler_interval_ms\030\004" +
-      " \001(\0132\033.google.protobuf.Int64Value\0228\n\023log" +
-      "_retention_bytes\030\005 \001(\0132\033.google.protobuf" +
-      ".Int64Value\0228\n\023log_retention_hours\030\006 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022:\n\025log_ret" +
-      "ention_minutes\030\007 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\0226\n\021log_segment_" +
-      "bytes\030\t \001(\0132\033.google.protobuf.Int64Value" +
-      "\0223\n\017log_preallocate\030\n \001(\0132\032.google.proto" +
-      "buf.BoolValue\022=\n\030socket_send_buffer_byte" +
-      "s\030\013 \001(\0132\033.google.protobuf.Int64Value\022@\n\033" +
-      "socket_receive_buffer_bytes\030\014 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022=\n\031auto_create_to" +
-      "pics_enable\030\r \001(\0132\032.google.protobuf.Bool" +
-      "Value\0223\n\016num_partitions\030\016 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022?\n\032default_replicatio" +
-      "n_factor\030\017 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\"\375\002\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id" +
-      "\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$." +
-      "yandex.cloud.mdb.kafka.v1.Host.Role\0227\n\tr" +
-      "esources\030\005 \001(\0132$.yandex.cloud.mdb.kafka." +
-      "v1.Resources\0226\n\006health\030\006 \001(\0162&.yandex.cl" +
-      "oud.mdb.kafka.v1.Host.Health\022\021\n\tsubnet_i" +
-      "d\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"6\n\004Rol" +
-      "e\022\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZO" +
-      "OKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIV" +
-      "E\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003Bd\n\035yandex.cl" +
-      "oud.api.mdb.kafka.v1ZCgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/mdb/kafka" +
-      "/v1;kafkab\006proto3"
+      "\033.google.protobuf.Int64Value\"\375\002\n\004Host\022\014\n" +
+      "\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022\017\n\007zone_" +
+      "id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.yandex.cloud.md" +
+      "b.kafka.v1.Host.Role\0227\n\tresources\030\005 \001(\0132" +
+      "$.yandex.cloud.mdb.kafka.v1.Resources\0226\n" +
+      "\006health\030\006 \001(\0162&.yandex.cloud.mdb.kafka.v" +
+      "1.Host.Health\022\021\n\tsubnet_id\030\010 \001(\t\022\030\n\020assi" +
+      "gn_public_ip\030\t \001(\010\"6\n\004Role\022\024\n\020ROLE_UNSPE" +
+      "CIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPER\020\002\"8\n\006He" +
+      "alth\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014" +
+      "\n\010DEGRADED\020\003Bd\n\035yandex.cloud.api.mdb.kaf" +
+      "ka.v1ZCgithub.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/mdb/kafka/v1;kafkab\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -24841,7 +24926,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", "UnmanagedTopics", });
+        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", "UnmanagedTopics", "SchemaRegistry", });
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_fieldAccessorTable = new

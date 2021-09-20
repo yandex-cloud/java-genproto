@@ -499,6 +499,41 @@ public final class GPC {
      * <code>bool deletion_protection = 22;</code>
      */
     boolean getDeletionProtection();
+
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 23;</code>
+     */
+    java.util.List<java.lang.String>
+        getHostGroupIdsList();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 23;</code>
+     */
+    int getHostGroupIdsCount();
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 23;</code>
+     */
+    java.lang.String getHostGroupIds(int index);
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 23;</code>
+     */
+    com.google.protobuf.ByteString
+        getHostGroupIdsBytes(int index);
   }
   /**
    * <pre>
@@ -532,6 +567,7 @@ public final class GPC {
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       userName_ = "";
       deletionProtection_ = false;
+      hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -741,6 +777,15 @@ public final class GPC {
               deletionProtection_ = input.readBool();
               break;
             }
+            case 186: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+                hostGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00400000;
+              }
+              hostGroupIds_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -761,6 +806,9 @@ public final class GPC {
         }
         if (((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+          hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -2060,6 +2108,51 @@ public final class GPC {
       return deletionProtection_;
     }
 
+    public static final int HOST_GROUP_IDS_FIELD_NUMBER = 23;
+    private com.google.protobuf.LazyStringList hostGroupIds_;
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 23;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getHostGroupIdsList() {
+      return hostGroupIds_;
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 23;</code>
+     */
+    public int getHostGroupIdsCount() {
+      return hostGroupIds_.size();
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 23;</code>
+     */
+    public java.lang.String getHostGroupIds(int index) {
+      return hostGroupIds_.get(index);
+    }
+    /**
+     * <pre>
+     * Host groups hosting VMs of the cluster.
+     * </pre>
+     *
+     * <code>repeated string host_group_ids = 23;</code>
+     */
+    public com.google.protobuf.ByteString
+        getHostGroupIdsBytes(int index) {
+      return hostGroupIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2142,6 +2235,9 @@ public final class GPC {
       }
       if (deletionProtection_ != false) {
         output.writeBool(22, deletionProtection_);
+      }
+      for (int i = 0; i < hostGroupIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 23, hostGroupIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -2244,6 +2340,14 @@ public final class GPC {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(22, deletionProtection_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < hostGroupIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(hostGroupIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getHostGroupIdsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2319,6 +2423,8 @@ public final class GPC {
           .equals(other.getUserName());
       result = result && (getDeletionProtection()
           == other.getDeletionProtection());
+      result = result && getHostGroupIdsList()
+          .equals(other.getHostGroupIdsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2396,6 +2502,10 @@ public final class GPC {
       hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDeletionProtection());
+      if (getHostGroupIdsCount() > 0) {
+        hash = (37 * hash) + HOST_GROUP_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getHostGroupIdsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2627,6 +2737,8 @@ public final class GPC {
 
         deletionProtection_ = false;
 
+        hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00400000);
         return this;
       }
 
@@ -2714,6 +2826,11 @@ public final class GPC {
         result.securityGroupIds_ = securityGroupIds_;
         result.userName_ = userName_;
         result.deletionProtection_ = deletionProtection_;
+        if (((bitField0_ & 0x00400000) == 0x00400000)) {
+          hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00400000);
+        }
+        result.hostGroupIds_ = hostGroupIds_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2863,6 +2980,16 @@ public final class GPC {
         }
         if (other.getDeletionProtection() != false) {
           setDeletionProtection(other.getDeletionProtection());
+        }
+        if (!other.hostGroupIds_.isEmpty()) {
+          if (hostGroupIds_.isEmpty()) {
+            hostGroupIds_ = other.hostGroupIds_;
+            bitField0_ = (bitField0_ & ~0x00400000);
+          } else {
+            ensureHostGroupIdsIsMutable();
+            hostGroupIds_.addAll(other.hostGroupIds_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5292,6 +5419,136 @@ public final class GPC {
       public Builder clearDeletionProtection() {
         
         deletionProtection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureHostGroupIdsIsMutable() {
+        if (!((bitField0_ & 0x00400000) == 0x00400000)) {
+          hostGroupIds_ = new com.google.protobuf.LazyStringArrayList(hostGroupIds_);
+          bitField0_ |= 0x00400000;
+         }
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 23;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getHostGroupIdsList() {
+        return hostGroupIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 23;</code>
+       */
+      public int getHostGroupIdsCount() {
+        return hostGroupIds_.size();
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 23;</code>
+       */
+      public java.lang.String getHostGroupIds(int index) {
+        return hostGroupIds_.get(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 23;</code>
+       */
+      public com.google.protobuf.ByteString
+          getHostGroupIdsBytes(int index) {
+        return hostGroupIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 23;</code>
+       */
+      public Builder setHostGroupIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostGroupIdsIsMutable();
+        hostGroupIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 23;</code>
+       */
+      public Builder addHostGroupIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHostGroupIdsIsMutable();
+        hostGroupIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 23;</code>
+       */
+      public Builder addAllHostGroupIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureHostGroupIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, hostGroupIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 23;</code>
+       */
+      public Builder clearHostGroupIds() {
+        hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00400000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Host groups hosting VMs of the cluster.
+       * </pre>
+       *
+       * <code>repeated string host_group_ids = 23;</code>
+       */
+      public Builder addHostGroupIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureHostGroupIdsIsMutable();
+        hostGroupIds_.add(value);
         onChanged();
         return this;
       }
@@ -8485,7 +8742,7 @@ public final class GPC {
       "pe/timeofday.proto\032\035yandex/cloud/validat" +
       "ion.proto\032*yandex/cloud/mdb/greenplum/v1" +
       "/config.proto\032/yandex/cloud/mdb/greenplu" +
-      "m/v1/maintenance.proto\"\265\n\n\007Cluster\022\n\n\002id" +
+      "m/v1/maintenance.proto\"\315\n\n\007Cluster\022\n\n\002id" +
       "\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030" +
       "\003 \001(\0132\032.google.protobuf.Timestamp\022\032\n\004nam" +
       "e\030\004 \001(\tB\014\350\3071\001\212\3101\004<=63\022>\n\006config\030\005 \001(\0132.." +
@@ -8511,26 +8768,27 @@ public final class GPC {
       "3.yandex.cloud.mdb.greenplum.v1.Maintena" +
       "nceOperation\022\032\n\022security_group_ids\030\024 \003(\t" +
       "\022\021\n\tuser_name\030\025 \001(\t\022\033\n\023deletion_protecti" +
-      "on\030\026 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"I\n\013Environment\022\033\n\027ENVIRO" +
-      "NMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tP" +
-      "RESTABLE\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000" +
-      "\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006S" +
-      "tatus\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022" +
-      "\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n" +
-      "\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=" +
-      "\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descriptio" +
-      "n\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\340\001\n\017GreenplumConfi" +
-      "g\022\017\n\007version\030\001 \001(\t\0223\n\023backup_window_star" +
-      "t\030\002 \001(\0132\026.google.type.TimeOfDay\0225\n\006acces" +
-      "s\030\003 \001(\0132%.yandex.cloud.mdb.greenplum.v1." +
-      "Access\022\031\n\007zone_id\030\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsub" +
-      "net_id\030\005 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_" +
-      "ip\030\006 \001(\010\",\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n" +
-      "\007web_sql\030\002 \001(\010Bu\n!yandex.cloud.api.mdb.g" +
-      "reenplum.v1B\003GPCZKgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/mdb/greenplum" +
-      "/v1;greenplumb\006proto3"
+      "on\030\026 \001(\010\022\026\n\016host_group_ids\030\027 \003(\t\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPECIFIE" +
+      "D\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006He" +
+      "alth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004D" +
+      "EAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_" +
+      "UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005" +
+      "ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007S" +
+      "TOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004" +
+      "name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030" +
+      "\003 \001(\t\"\340\001\n\017GreenplumConfig\022\017\n\007version\030\001 \001" +
+      "(\t\0223\n\023backup_window_start\030\002 \001(\0132\026.google" +
+      ".type.TimeOfDay\0225\n\006access\030\003 \001(\0132%.yandex" +
+      ".cloud.mdb.greenplum.v1.Access\022\031\n\007zone_i" +
+      "d\030\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\005 \001(\tB\010\212\310" +
+      "1\004<=50\022\030\n\020assign_public_ip\030\006 \001(\010\",\n\006Acce" +
+      "ss\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010Bu" +
+      "\n!yandex.cloud.api.mdb.greenplum.v1B\003GPC" +
+      "ZKgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/mdb/greenplum/v1;greenplumb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8554,7 +8812,7 @@ public final class GPC {
     internal_static_yandex_cloud_mdb_greenplum_v1_Cluster_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_Cluster_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Config", "Description", "Labels", "Environment", "Monitoring", "MasterConfig", "SegmentConfig", "MasterHostCount", "SegmentHostCount", "SegmentInHost", "NetworkId", "Health", "Status", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "UserName", "DeletionProtection", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Config", "Description", "Labels", "Environment", "Monitoring", "MasterConfig", "SegmentConfig", "MasterHostCount", "SegmentHostCount", "SegmentInHost", "NetworkId", "Health", "Status", "MaintenanceWindow", "PlannedOperation", "SecurityGroupIds", "UserName", "DeletionProtection", "HostGroupIds", });
     internal_static_yandex_cloud_mdb_greenplum_v1_Cluster_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_greenplum_v1_Cluster_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_greenplum_v1_Cluster_LabelsEntry_fieldAccessorTable = new

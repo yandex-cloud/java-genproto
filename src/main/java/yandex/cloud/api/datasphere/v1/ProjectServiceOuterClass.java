@@ -12165,6 +12165,7193 @@ public final class ProjectServiceOuterClass {
 
   }
 
+  public interface ProjectExecutionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.ProjectExecutionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the project to execute notebook/cell in.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * ID of the project to execute notebook/cell in.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * ID of the notebook to execute.
+     * </pre>
+     *
+     * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    java.lang.String getNotebookId();
+    /**
+     * <pre>
+     * ID of the notebook to execute.
+     * </pre>
+     *
+     * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    com.google.protobuf.ByteString
+        getNotebookIdBytes();
+
+    /**
+     * <pre>
+     * ID of the cell to execute.
+     * </pre>
+     *
+     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    java.lang.String getCellId();
+    /**
+     * <pre>
+     * ID of the cell to execute.
+     * </pre>
+     *
+     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    com.google.protobuf.ByteString
+        getCellIdBytes();
+
+    /**
+     * <pre>
+     * Values of input variables.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct input_variables = 4;</code>
+     */
+    boolean hasInputVariables();
+    /**
+     * <pre>
+     * Values of input variables.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct input_variables = 4;</code>
+     */
+    com.google.protobuf.Struct getInputVariables();
+    /**
+     * <pre>
+     * Values of input variables.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct input_variables = 4;</code>
+     */
+    com.google.protobuf.StructOrBuilder getInputVariablesOrBuilder();
+
+    /**
+     * <pre>
+     * Names of output variables.
+     * </pre>
+     *
+     * <code>repeated string output_variable_names = 5;</code>
+     */
+    java.util.List<java.lang.String>
+        getOutputVariableNamesList();
+    /**
+     * <pre>
+     * Names of output variables.
+     * </pre>
+     *
+     * <code>repeated string output_variable_names = 5;</code>
+     */
+    int getOutputVariableNamesCount();
+    /**
+     * <pre>
+     * Names of output variables.
+     * </pre>
+     *
+     * <code>repeated string output_variable_names = 5;</code>
+     */
+    java.lang.String getOutputVariableNames(int index);
+    /**
+     * <pre>
+     * Names of output variables.
+     * </pre>
+     *
+     * <code>repeated string output_variable_names = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getOutputVariableNamesBytes(int index);
+
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest.TargetCase getTargetCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.ProjectExecutionRequest}
+   */
+  public  static final class ProjectExecutionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.ProjectExecutionRequest)
+      ProjectExecutionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProjectExecutionRequest.newBuilder() to construct.
+    private ProjectExecutionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProjectExecutionRequest() {
+      projectId_ = "";
+      outputVariableNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ProjectExecutionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              targetCase_ = 2;
+              target_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              targetCase_ = 3;
+              target_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (inputVariables_ != null) {
+                subBuilder = inputVariables_.toBuilder();
+              }
+              inputVariables_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(inputVariables_);
+                inputVariables_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                outputVariableNames_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              outputVariableNames_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          outputVariableNames_ = outputVariableNames_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    private int targetCase_ = 0;
+    private java.lang.Object target_;
+    public enum TargetCase
+        implements com.google.protobuf.Internal.EnumLite {
+      NOTEBOOK_ID(2),
+      CELL_ID(3),
+      TARGET_NOT_SET(0);
+      private final int value;
+      private TargetCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TargetCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TargetCase forNumber(int value) {
+        switch (value) {
+          case 2: return NOTEBOOK_ID;
+          case 3: return CELL_ID;
+          case 0: return TARGET_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TargetCase
+    getTargetCase() {
+      return TargetCase.forNumber(
+          targetCase_);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <pre>
+     * ID of the project to execute notebook/cell in.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the project to execute notebook/cell in.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOTEBOOK_ID_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * ID of the notebook to execute.
+     * </pre>
+     *
+     * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public java.lang.String getNotebookId() {
+      java.lang.Object ref = "";
+      if (targetCase_ == 2) {
+        ref = target_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (targetCase_ == 2) {
+          target_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the notebook to execute.
+     * </pre>
+     *
+     * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNotebookIdBytes() {
+      java.lang.Object ref = "";
+      if (targetCase_ == 2) {
+        ref = target_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (targetCase_ == 2) {
+          target_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CELL_ID_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * ID of the cell to execute.
+     * </pre>
+     *
+     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public java.lang.String getCellId() {
+      java.lang.Object ref = "";
+      if (targetCase_ == 3) {
+        ref = target_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (targetCase_ == 3) {
+          target_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cell to execute.
+     * </pre>
+     *
+     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getCellIdBytes() {
+      java.lang.Object ref = "";
+      if (targetCase_ == 3) {
+        ref = target_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (targetCase_ == 3) {
+          target_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INPUT_VARIABLES_FIELD_NUMBER = 4;
+    private com.google.protobuf.Struct inputVariables_;
+    /**
+     * <pre>
+     * Values of input variables.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct input_variables = 4;</code>
+     */
+    public boolean hasInputVariables() {
+      return inputVariables_ != null;
+    }
+    /**
+     * <pre>
+     * Values of input variables.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct input_variables = 4;</code>
+     */
+    public com.google.protobuf.Struct getInputVariables() {
+      return inputVariables_ == null ? com.google.protobuf.Struct.getDefaultInstance() : inputVariables_;
+    }
+    /**
+     * <pre>
+     * Values of input variables.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct input_variables = 4;</code>
+     */
+    public com.google.protobuf.StructOrBuilder getInputVariablesOrBuilder() {
+      return getInputVariables();
+    }
+
+    public static final int OUTPUT_VARIABLE_NAMES_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList outputVariableNames_;
+    /**
+     * <pre>
+     * Names of output variables.
+     * </pre>
+     *
+     * <code>repeated string output_variable_names = 5;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getOutputVariableNamesList() {
+      return outputVariableNames_;
+    }
+    /**
+     * <pre>
+     * Names of output variables.
+     * </pre>
+     *
+     * <code>repeated string output_variable_names = 5;</code>
+     */
+    public int getOutputVariableNamesCount() {
+      return outputVariableNames_.size();
+    }
+    /**
+     * <pre>
+     * Names of output variables.
+     * </pre>
+     *
+     * <code>repeated string output_variable_names = 5;</code>
+     */
+    public java.lang.String getOutputVariableNames(int index) {
+      return outputVariableNames_.get(index);
+    }
+    /**
+     * <pre>
+     * Names of output variables.
+     * </pre>
+     *
+     * <code>repeated string output_variable_names = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOutputVariableNamesBytes(int index) {
+      return outputVariableNames_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getProjectIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (targetCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, target_);
+      }
+      if (targetCase_ == 3) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, target_);
+      }
+      if (inputVariables_ != null) {
+        output.writeMessage(4, getInputVariables());
+      }
+      for (int i = 0; i < outputVariableNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, outputVariableNames_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getProjectIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (targetCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, target_);
+      }
+      if (targetCase_ == 3) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, target_);
+      }
+      if (inputVariables_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getInputVariables());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < outputVariableNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(outputVariableNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getOutputVariableNamesList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest other = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest) obj;
+
+      boolean result = true;
+      result = result && getProjectId()
+          .equals(other.getProjectId());
+      result = result && (hasInputVariables() == other.hasInputVariables());
+      if (hasInputVariables()) {
+        result = result && getInputVariables()
+            .equals(other.getInputVariables());
+      }
+      result = result && getOutputVariableNamesList()
+          .equals(other.getOutputVariableNamesList());
+      result = result && getTargetCase().equals(
+          other.getTargetCase());
+      if (!result) return false;
+      switch (targetCase_) {
+        case 2:
+          result = result && getNotebookId()
+              .equals(other.getNotebookId());
+          break;
+        case 3:
+          result = result && getCellId()
+              .equals(other.getCellId());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      if (hasInputVariables()) {
+        hash = (37 * hash) + INPUT_VARIABLES_FIELD_NUMBER;
+        hash = (53 * hash) + getInputVariables().hashCode();
+      }
+      if (getOutputVariableNamesCount() > 0) {
+        hash = (37 * hash) + OUTPUT_VARIABLE_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getOutputVariableNamesList().hashCode();
+      }
+      switch (targetCase_) {
+        case 2:
+          hash = (37 * hash) + NOTEBOOK_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getNotebookId().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + CELL_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getCellId().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.ProjectExecutionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.ProjectExecutionRequest)
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        if (inputVariablesBuilder_ == null) {
+          inputVariables_ = null;
+        } else {
+          inputVariables_ = null;
+          inputVariablesBuilder_ = null;
+        }
+        outputVariableNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        targetCase_ = 0;
+        target_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest build() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest buildPartial() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest result = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.projectId_ = projectId_;
+        if (targetCase_ == 2) {
+          result.target_ = target_;
+        }
+        if (targetCase_ == 3) {
+          result.target_ = target_;
+        }
+        if (inputVariablesBuilder_ == null) {
+          result.inputVariables_ = inputVariables_;
+        } else {
+          result.inputVariables_ = inputVariablesBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          outputVariableNames_ = outputVariableNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.outputVariableNames_ = outputVariableNames_;
+        result.bitField0_ = to_bitField0_;
+        result.targetCase_ = targetCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest other) {
+        if (other == yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (other.hasInputVariables()) {
+          mergeInputVariables(other.getInputVariables());
+        }
+        if (!other.outputVariableNames_.isEmpty()) {
+          if (outputVariableNames_.isEmpty()) {
+            outputVariableNames_ = other.outputVariableNames_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureOutputVariableNamesIsMutable();
+            outputVariableNames_.addAll(other.outputVariableNames_);
+          }
+          onChanged();
+        }
+        switch (other.getTargetCase()) {
+          case NOTEBOOK_ID: {
+            targetCase_ = 2;
+            target_ = other.target_;
+            onChanged();
+            break;
+          }
+          case CELL_ID: {
+            targetCase_ = 3;
+            target_ = other.target_;
+            onChanged();
+            break;
+          }
+          case TARGET_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int targetCase_ = 0;
+      private java.lang.Object target_;
+      public TargetCase
+          getTargetCase() {
+        return TargetCase.forNumber(
+            targetCase_);
+      }
+
+      public Builder clearTarget() {
+        targetCase_ = 0;
+        target_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * ID of the project to execute notebook/cell in.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project to execute notebook/cell in.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project to execute notebook/cell in.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project to execute notebook/cell in.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project to execute notebook/cell in.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * ID of the notebook to execute.
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public java.lang.String getNotebookId() {
+        java.lang.Object ref = "";
+        if (targetCase_ == 2) {
+          ref = target_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (targetCase_ == 2) {
+            target_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the notebook to execute.
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNotebookIdBytes() {
+        java.lang.Object ref = "";
+        if (targetCase_ == 2) {
+          ref = target_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (targetCase_ == 2) {
+            target_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the notebook to execute.
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setNotebookId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  targetCase_ = 2;
+        target_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the notebook to execute.
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder clearNotebookId() {
+        if (targetCase_ == 2) {
+          targetCase_ = 0;
+          target_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the notebook to execute.
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setNotebookIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        targetCase_ = 2;
+        target_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * ID of the cell to execute.
+       * </pre>
+       *
+       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public java.lang.String getCellId() {
+        java.lang.Object ref = "";
+        if (targetCase_ == 3) {
+          ref = target_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (targetCase_ == 3) {
+            target_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cell to execute.
+       * </pre>
+       *
+       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getCellIdBytes() {
+        java.lang.Object ref = "";
+        if (targetCase_ == 3) {
+          ref = target_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (targetCase_ == 3) {
+            target_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cell to execute.
+       * </pre>
+       *
+       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setCellId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  targetCase_ = 3;
+        target_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cell to execute.
+       * </pre>
+       *
+       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder clearCellId() {
+        if (targetCase_ == 3) {
+          targetCase_ = 0;
+          target_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cell to execute.
+       * </pre>
+       *
+       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setCellIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        targetCase_ = 3;
+        target_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Struct inputVariables_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> inputVariablesBuilder_;
+      /**
+       * <pre>
+       * Values of input variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input_variables = 4;</code>
+       */
+      public boolean hasInputVariables() {
+        return inputVariablesBuilder_ != null || inputVariables_ != null;
+      }
+      /**
+       * <pre>
+       * Values of input variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input_variables = 4;</code>
+       */
+      public com.google.protobuf.Struct getInputVariables() {
+        if (inputVariablesBuilder_ == null) {
+          return inputVariables_ == null ? com.google.protobuf.Struct.getDefaultInstance() : inputVariables_;
+        } else {
+          return inputVariablesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Values of input variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input_variables = 4;</code>
+       */
+      public Builder setInputVariables(com.google.protobuf.Struct value) {
+        if (inputVariablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          inputVariables_ = value;
+          onChanged();
+        } else {
+          inputVariablesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of input variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input_variables = 4;</code>
+       */
+      public Builder setInputVariables(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (inputVariablesBuilder_ == null) {
+          inputVariables_ = builderForValue.build();
+          onChanged();
+        } else {
+          inputVariablesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of input variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input_variables = 4;</code>
+       */
+      public Builder mergeInputVariables(com.google.protobuf.Struct value) {
+        if (inputVariablesBuilder_ == null) {
+          if (inputVariables_ != null) {
+            inputVariables_ =
+              com.google.protobuf.Struct.newBuilder(inputVariables_).mergeFrom(value).buildPartial();
+          } else {
+            inputVariables_ = value;
+          }
+          onChanged();
+        } else {
+          inputVariablesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of input variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input_variables = 4;</code>
+       */
+      public Builder clearInputVariables() {
+        if (inputVariablesBuilder_ == null) {
+          inputVariables_ = null;
+          onChanged();
+        } else {
+          inputVariables_ = null;
+          inputVariablesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of input variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input_variables = 4;</code>
+       */
+      public com.google.protobuf.Struct.Builder getInputVariablesBuilder() {
+        
+        onChanged();
+        return getInputVariablesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Values of input variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input_variables = 4;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getInputVariablesOrBuilder() {
+        if (inputVariablesBuilder_ != null) {
+          return inputVariablesBuilder_.getMessageOrBuilder();
+        } else {
+          return inputVariables_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : inputVariables_;
+        }
+      }
+      /**
+       * <pre>
+       * Values of input variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct input_variables = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getInputVariablesFieldBuilder() {
+        if (inputVariablesBuilder_ == null) {
+          inputVariablesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getInputVariables(),
+                  getParentForChildren(),
+                  isClean());
+          inputVariables_ = null;
+        }
+        return inputVariablesBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList outputVariableNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureOutputVariableNamesIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          outputVariableNames_ = new com.google.protobuf.LazyStringArrayList(outputVariableNames_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <pre>
+       * Names of output variables.
+       * </pre>
+       *
+       * <code>repeated string output_variable_names = 5;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getOutputVariableNamesList() {
+        return outputVariableNames_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Names of output variables.
+       * </pre>
+       *
+       * <code>repeated string output_variable_names = 5;</code>
+       */
+      public int getOutputVariableNamesCount() {
+        return outputVariableNames_.size();
+      }
+      /**
+       * <pre>
+       * Names of output variables.
+       * </pre>
+       *
+       * <code>repeated string output_variable_names = 5;</code>
+       */
+      public java.lang.String getOutputVariableNames(int index) {
+        return outputVariableNames_.get(index);
+      }
+      /**
+       * <pre>
+       * Names of output variables.
+       * </pre>
+       *
+       * <code>repeated string output_variable_names = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOutputVariableNamesBytes(int index) {
+        return outputVariableNames_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Names of output variables.
+       * </pre>
+       *
+       * <code>repeated string output_variable_names = 5;</code>
+       */
+      public Builder setOutputVariableNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureOutputVariableNamesIsMutable();
+        outputVariableNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Names of output variables.
+       * </pre>
+       *
+       * <code>repeated string output_variable_names = 5;</code>
+       */
+      public Builder addOutputVariableNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureOutputVariableNamesIsMutable();
+        outputVariableNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Names of output variables.
+       * </pre>
+       *
+       * <code>repeated string output_variable_names = 5;</code>
+       */
+      public Builder addAllOutputVariableNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureOutputVariableNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, outputVariableNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Names of output variables.
+       * </pre>
+       *
+       * <code>repeated string output_variable_names = 5;</code>
+       */
+      public Builder clearOutputVariableNames() {
+        outputVariableNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Names of output variables.
+       * </pre>
+       *
+       * <code>repeated string output_variable_names = 5;</code>
+       */
+      public Builder addOutputVariableNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureOutputVariableNamesIsMutable();
+        outputVariableNames_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.ProjectExecutionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.ProjectExecutionRequest)
+    private static final yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProjectExecutionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ProjectExecutionRequest>() {
+      @java.lang.Override
+      public ProjectExecutionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ProjectExecutionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProjectExecutionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProjectExecutionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProjectExecutionMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.ProjectExecutionMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the project in which notebook is being executed.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * ID of the project in which notebook is being executed.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * ID of the notebook that is being executed
+     * </pre>
+     *
+     * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    java.lang.String getNotebookId();
+    /**
+     * <pre>
+     * ID of the notebook that is being executed
+     * </pre>
+     *
+     * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    com.google.protobuf.ByteString
+        getNotebookIdBytes();
+
+    /**
+     * <pre>
+     * ID of the cell that is being executed
+     * </pre>
+     *
+     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    java.lang.String getCellId();
+    /**
+     * <pre>
+     * ID of the cell that is being executed
+     * </pre>
+     *
+     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    com.google.protobuf.ByteString
+        getCellIdBytes();
+
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata.TargetCase getTargetCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.ProjectExecutionMetadata}
+   */
+  public  static final class ProjectExecutionMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.ProjectExecutionMetadata)
+      ProjectExecutionMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProjectExecutionMetadata.newBuilder() to construct.
+    private ProjectExecutionMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProjectExecutionMetadata() {
+      projectId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ProjectExecutionMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              targetCase_ = 2;
+              target_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              targetCase_ = 3;
+              target_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata.Builder.class);
+    }
+
+    private int targetCase_ = 0;
+    private java.lang.Object target_;
+    public enum TargetCase
+        implements com.google.protobuf.Internal.EnumLite {
+      NOTEBOOK_ID(2),
+      CELL_ID(3),
+      TARGET_NOT_SET(0);
+      private final int value;
+      private TargetCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TargetCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TargetCase forNumber(int value) {
+        switch (value) {
+          case 2: return NOTEBOOK_ID;
+          case 3: return CELL_ID;
+          case 0: return TARGET_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TargetCase
+    getTargetCase() {
+      return TargetCase.forNumber(
+          targetCase_);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <pre>
+     * ID of the project in which notebook is being executed.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     */
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the project in which notebook is being executed.
+     * </pre>
+     *
+     * <code>string project_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOTEBOOK_ID_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * ID of the notebook that is being executed
+     * </pre>
+     *
+     * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public java.lang.String getNotebookId() {
+      java.lang.Object ref = "";
+      if (targetCase_ == 2) {
+        ref = target_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (targetCase_ == 2) {
+          target_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the notebook that is being executed
+     * </pre>
+     *
+     * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNotebookIdBytes() {
+      java.lang.Object ref = "";
+      if (targetCase_ == 2) {
+        ref = target_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (targetCase_ == 2) {
+          target_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CELL_ID_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * ID of the cell that is being executed
+     * </pre>
+     *
+     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public java.lang.String getCellId() {
+      java.lang.Object ref = "";
+      if (targetCase_ == 3) {
+        ref = target_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (targetCase_ == 3) {
+          target_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cell that is being executed
+     * </pre>
+     *
+     * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getCellIdBytes() {
+      java.lang.Object ref = "";
+      if (targetCase_ == 3) {
+        ref = target_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (targetCase_ == 3) {
+          target_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getProjectIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (targetCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, target_);
+      }
+      if (targetCase_ == 3) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, target_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getProjectIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (targetCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, target_);
+      }
+      if (targetCase_ == 3) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, target_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata other = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata) obj;
+
+      boolean result = true;
+      result = result && getProjectId()
+          .equals(other.getProjectId());
+      result = result && getTargetCase().equals(
+          other.getTargetCase());
+      if (!result) return false;
+      switch (targetCase_) {
+        case 2:
+          result = result && getNotebookId()
+              .equals(other.getNotebookId());
+          break;
+        case 3:
+          result = result && getCellId()
+              .equals(other.getCellId());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      switch (targetCase_) {
+        case 2:
+          hash = (37 * hash) + NOTEBOOK_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getNotebookId().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + CELL_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getCellId().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.ProjectExecutionMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.ProjectExecutionMetadata)
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        targetCase_ = 0;
+        target_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata build() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata buildPartial() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata result = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata(this);
+        result.projectId_ = projectId_;
+        if (targetCase_ == 2) {
+          result.target_ = target_;
+        }
+        if (targetCase_ == 3) {
+          result.target_ = target_;
+        }
+        result.targetCase_ = targetCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata other) {
+        if (other == yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        switch (other.getTargetCase()) {
+          case NOTEBOOK_ID: {
+            targetCase_ = 2;
+            target_ = other.target_;
+            onChanged();
+            break;
+          }
+          case CELL_ID: {
+            targetCase_ = 3;
+            target_ = other.target_;
+            onChanged();
+            break;
+          }
+          case TARGET_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int targetCase_ = 0;
+      private java.lang.Object target_;
+      public TargetCase
+          getTargetCase() {
+        return TargetCase.forNumber(
+            targetCase_);
+      }
+
+      public Builder clearTarget() {
+        targetCase_ = 0;
+        target_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * ID of the project in which notebook is being executed.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project in which notebook is being executed.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project in which notebook is being executed.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project in which notebook is being executed.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project in which notebook is being executed.
+       * </pre>
+       *
+       * <code>string project_id = 1;</code>
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * ID of the notebook that is being executed
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public java.lang.String getNotebookId() {
+        java.lang.Object ref = "";
+        if (targetCase_ == 2) {
+          ref = target_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (targetCase_ == 2) {
+            target_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the notebook that is being executed
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNotebookIdBytes() {
+        java.lang.Object ref = "";
+        if (targetCase_ == 2) {
+          ref = target_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (targetCase_ == 2) {
+            target_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the notebook that is being executed
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setNotebookId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  targetCase_ = 2;
+        target_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the notebook that is being executed
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder clearNotebookId() {
+        if (targetCase_ == 2) {
+          targetCase_ = 0;
+          target_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the notebook that is being executed
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setNotebookIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        targetCase_ = 2;
+        target_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * ID of the cell that is being executed
+       * </pre>
+       *
+       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public java.lang.String getCellId() {
+        java.lang.Object ref = "";
+        if (targetCase_ == 3) {
+          ref = target_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (targetCase_ == 3) {
+            target_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cell that is being executed
+       * </pre>
+       *
+       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getCellIdBytes() {
+        java.lang.Object ref = "";
+        if (targetCase_ == 3) {
+          ref = target_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (targetCase_ == 3) {
+            target_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cell that is being executed
+       * </pre>
+       *
+       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setCellId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  targetCase_ = 3;
+        target_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cell that is being executed
+       * </pre>
+       *
+       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder clearCellId() {
+        if (targetCase_ == 3) {
+          targetCase_ = 0;
+          target_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cell that is being executed
+       * </pre>
+       *
+       * <code>string cell_id = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setCellIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        targetCase_ = 3;
+        target_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.ProjectExecutionMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.ProjectExecutionMetadata)
+    private static final yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProjectExecutionMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<ProjectExecutionMetadata>() {
+      @java.lang.Override
+      public ProjectExecutionMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ProjectExecutionMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProjectExecutionMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProjectExecutionMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProjectExecutionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.ProjectExecutionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the checkpoint resulting from the execution.
+     * </pre>
+     *
+     * <code>string checkpoint_id = 1;</code>
+     */
+    java.lang.String getCheckpointId();
+    /**
+     * <pre>
+     * ID of the checkpoint resulting from the execution.
+     * </pre>
+     *
+     * <code>string checkpoint_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getCheckpointIdBytes();
+
+    /**
+     * <pre>
+     * Values of output variables resulting from the execution.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct output_variables = 2;</code>
+     */
+    boolean hasOutputVariables();
+    /**
+     * <pre>
+     * Values of output variables resulting from the execution.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct output_variables = 2;</code>
+     */
+    com.google.protobuf.Struct getOutputVariables();
+    /**
+     * <pre>
+     * Values of output variables resulting from the execution.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct output_variables = 2;</code>
+     */
+    com.google.protobuf.StructOrBuilder getOutputVariablesOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.ProjectExecutionResponse}
+   */
+  public  static final class ProjectExecutionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.ProjectExecutionResponse)
+      ProjectExecutionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProjectExecutionResponse.newBuilder() to construct.
+    private ProjectExecutionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProjectExecutionResponse() {
+      checkpointId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ProjectExecutionResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              checkpointId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (outputVariables_ != null) {
+                subBuilder = outputVariables_.toBuilder();
+              }
+              outputVariables_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(outputVariables_);
+                outputVariables_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse.Builder.class);
+    }
+
+    public static final int CHECKPOINT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object checkpointId_;
+    /**
+     * <pre>
+     * ID of the checkpoint resulting from the execution.
+     * </pre>
+     *
+     * <code>string checkpoint_id = 1;</code>
+     */
+    public java.lang.String getCheckpointId() {
+      java.lang.Object ref = checkpointId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        checkpointId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the checkpoint resulting from the execution.
+     * </pre>
+     *
+     * <code>string checkpoint_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCheckpointIdBytes() {
+      java.lang.Object ref = checkpointId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        checkpointId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OUTPUT_VARIABLES_FIELD_NUMBER = 2;
+    private com.google.protobuf.Struct outputVariables_;
+    /**
+     * <pre>
+     * Values of output variables resulting from the execution.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct output_variables = 2;</code>
+     */
+    public boolean hasOutputVariables() {
+      return outputVariables_ != null;
+    }
+    /**
+     * <pre>
+     * Values of output variables resulting from the execution.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct output_variables = 2;</code>
+     */
+    public com.google.protobuf.Struct getOutputVariables() {
+      return outputVariables_ == null ? com.google.protobuf.Struct.getDefaultInstance() : outputVariables_;
+    }
+    /**
+     * <pre>
+     * Values of output variables resulting from the execution.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct output_variables = 2;</code>
+     */
+    public com.google.protobuf.StructOrBuilder getOutputVariablesOrBuilder() {
+      return getOutputVariables();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getCheckpointIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, checkpointId_);
+      }
+      if (outputVariables_ != null) {
+        output.writeMessage(2, getOutputVariables());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getCheckpointIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, checkpointId_);
+      }
+      if (outputVariables_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOutputVariables());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse other = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse) obj;
+
+      boolean result = true;
+      result = result && getCheckpointId()
+          .equals(other.getCheckpointId());
+      result = result && (hasOutputVariables() == other.hasOutputVariables());
+      if (hasOutputVariables()) {
+        result = result && getOutputVariables()
+            .equals(other.getOutputVariables());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CHECKPOINT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCheckpointId().hashCode();
+      if (hasOutputVariables()) {
+        hash = (37 * hash) + OUTPUT_VARIABLES_FIELD_NUMBER;
+        hash = (53 * hash) + getOutputVariables().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.ProjectExecutionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.ProjectExecutionResponse)
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        checkpointId_ = "";
+
+        if (outputVariablesBuilder_ == null) {
+          outputVariables_ = null;
+        } else {
+          outputVariables_ = null;
+          outputVariablesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_ProjectExecutionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse build() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse buildPartial() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse result = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse(this);
+        result.checkpointId_ = checkpointId_;
+        if (outputVariablesBuilder_ == null) {
+          result.outputVariables_ = outputVariables_;
+        } else {
+          result.outputVariables_ = outputVariablesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse other) {
+        if (other == yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse.getDefaultInstance()) return this;
+        if (!other.getCheckpointId().isEmpty()) {
+          checkpointId_ = other.checkpointId_;
+          onChanged();
+        }
+        if (other.hasOutputVariables()) {
+          mergeOutputVariables(other.getOutputVariables());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object checkpointId_ = "";
+      /**
+       * <pre>
+       * ID of the checkpoint resulting from the execution.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 1;</code>
+       */
+      public java.lang.String getCheckpointId() {
+        java.lang.Object ref = checkpointId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          checkpointId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the checkpoint resulting from the execution.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCheckpointIdBytes() {
+        java.lang.Object ref = checkpointId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          checkpointId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the checkpoint resulting from the execution.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 1;</code>
+       */
+      public Builder setCheckpointId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        checkpointId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the checkpoint resulting from the execution.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 1;</code>
+       */
+      public Builder clearCheckpointId() {
+        
+        checkpointId_ = getDefaultInstance().getCheckpointId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the checkpoint resulting from the execution.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 1;</code>
+       */
+      public Builder setCheckpointIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        checkpointId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Struct outputVariables_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> outputVariablesBuilder_;
+      /**
+       * <pre>
+       * Values of output variables resulting from the execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       */
+      public boolean hasOutputVariables() {
+        return outputVariablesBuilder_ != null || outputVariables_ != null;
+      }
+      /**
+       * <pre>
+       * Values of output variables resulting from the execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       */
+      public com.google.protobuf.Struct getOutputVariables() {
+        if (outputVariablesBuilder_ == null) {
+          return outputVariables_ == null ? com.google.protobuf.Struct.getDefaultInstance() : outputVariables_;
+        } else {
+          return outputVariablesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Values of output variables resulting from the execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       */
+      public Builder setOutputVariables(com.google.protobuf.Struct value) {
+        if (outputVariablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          outputVariables_ = value;
+          onChanged();
+        } else {
+          outputVariablesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of output variables resulting from the execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       */
+      public Builder setOutputVariables(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (outputVariablesBuilder_ == null) {
+          outputVariables_ = builderForValue.build();
+          onChanged();
+        } else {
+          outputVariablesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of output variables resulting from the execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       */
+      public Builder mergeOutputVariables(com.google.protobuf.Struct value) {
+        if (outputVariablesBuilder_ == null) {
+          if (outputVariables_ != null) {
+            outputVariables_ =
+              com.google.protobuf.Struct.newBuilder(outputVariables_).mergeFrom(value).buildPartial();
+          } else {
+            outputVariables_ = value;
+          }
+          onChanged();
+        } else {
+          outputVariablesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of output variables resulting from the execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       */
+      public Builder clearOutputVariables() {
+        if (outputVariablesBuilder_ == null) {
+          outputVariables_ = null;
+          onChanged();
+        } else {
+          outputVariables_ = null;
+          outputVariablesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of output variables resulting from the execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       */
+      public com.google.protobuf.Struct.Builder getOutputVariablesBuilder() {
+        
+        onChanged();
+        return getOutputVariablesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Values of output variables resulting from the execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getOutputVariablesOrBuilder() {
+        if (outputVariablesBuilder_ != null) {
+          return outputVariablesBuilder_.getMessageOrBuilder();
+        } else {
+          return outputVariables_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : outputVariables_;
+        }
+      }
+      /**
+       * <pre>
+       * Values of output variables resulting from the execution.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct output_variables = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getOutputVariablesFieldBuilder() {
+        if (outputVariablesBuilder_ == null) {
+          outputVariablesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getOutputVariables(),
+                  getParentForChildren(),
+                  isClean());
+          outputVariables_ = null;
+        }
+        return outputVariablesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.ProjectExecutionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.ProjectExecutionResponse)
+    private static final yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProjectExecutionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ProjectExecutionResponse>() {
+      @java.lang.Override
+      public ProjectExecutionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ProjectExecutionResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProjectExecutionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProjectExecutionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.ProjectExecutionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CellOutputsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.CellOutputsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the project to return cell outputs for.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * ID of the project to return cell outputs for.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * ID of the cell to return outputs for.
+     * </pre>
+     *
+     * <code>string cell_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    java.lang.String getCellId();
+    /**
+     * <pre>
+     * ID of the cell to return outputs for.
+     * </pre>
+     *
+     * <code>string cell_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    com.google.protobuf.ByteString
+        getCellIdBytes();
+
+    /**
+     * <pre>
+     * ID of the checkpoint to return cell outputs for.
+     * </pre>
+     *
+     * <code>string checkpoint_id = 3;</code>
+     */
+    java.lang.String getCheckpointId();
+    /**
+     * <pre>
+     * ID of the checkpoint to return cell outputs for.
+     * </pre>
+     *
+     * <code>string checkpoint_id = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getCheckpointIdBytes();
+
+    /**
+     * <pre>
+     * Timestamp from which to return outputs.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_at = 4;</code>
+     */
+    boolean hasStartAt();
+    /**
+     * <pre>
+     * Timestamp from which to return outputs.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_at = 4;</code>
+     */
+    com.google.protobuf.Timestamp getStartAt();
+    /**
+     * <pre>
+     * Timestamp from which to return outputs.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_at = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartAtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.CellOutputsRequest}
+   */
+  public  static final class CellOutputsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.CellOutputsRequest)
+      CellOutputsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CellOutputsRequest.newBuilder() to construct.
+    private CellOutputsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CellOutputsRequest() {
+      projectId_ = "";
+      cellId_ = "";
+      checkpointId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CellOutputsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cellId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              checkpointId_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (startAt_ != null) {
+                subBuilder = startAt_.toBuilder();
+              }
+              startAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(startAt_);
+                startAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_CellOutputsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_CellOutputsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest.Builder.class);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <pre>
+     * ID of the project to return cell outputs for.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the project to return cell outputs for.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CELL_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object cellId_;
+    /**
+     * <pre>
+     * ID of the cell to return outputs for.
+     * </pre>
+     *
+     * <code>string cell_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public java.lang.String getCellId() {
+      java.lang.Object ref = cellId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cellId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the cell to return outputs for.
+     * </pre>
+     *
+     * <code>string cell_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getCellIdBytes() {
+      java.lang.Object ref = cellId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cellId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHECKPOINT_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object checkpointId_;
+    /**
+     * <pre>
+     * ID of the checkpoint to return cell outputs for.
+     * </pre>
+     *
+     * <code>string checkpoint_id = 3;</code>
+     */
+    public java.lang.String getCheckpointId() {
+      java.lang.Object ref = checkpointId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        checkpointId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the checkpoint to return cell outputs for.
+     * </pre>
+     *
+     * <code>string checkpoint_id = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCheckpointIdBytes() {
+      java.lang.Object ref = checkpointId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        checkpointId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp startAt_;
+    /**
+     * <pre>
+     * Timestamp from which to return outputs.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_at = 4;</code>
+     */
+    public boolean hasStartAt() {
+      return startAt_ != null;
+    }
+    /**
+     * <pre>
+     * Timestamp from which to return outputs.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_at = 4;</code>
+     */
+    public com.google.protobuf.Timestamp getStartAt() {
+      return startAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startAt_;
+    }
+    /**
+     * <pre>
+     * Timestamp from which to return outputs.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_at = 4;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getStartAtOrBuilder() {
+      return getStartAt();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getProjectIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (!getCellIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, cellId_);
+      }
+      if (!getCheckpointIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, checkpointId_);
+      }
+      if (startAt_ != null) {
+        output.writeMessage(4, getStartAt());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getProjectIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (!getCellIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, cellId_);
+      }
+      if (!getCheckpointIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, checkpointId_);
+      }
+      if (startAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getStartAt());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest other = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest) obj;
+
+      boolean result = true;
+      result = result && getProjectId()
+          .equals(other.getProjectId());
+      result = result && getCellId()
+          .equals(other.getCellId());
+      result = result && getCheckpointId()
+          .equals(other.getCheckpointId());
+      result = result && (hasStartAt() == other.hasStartAt());
+      if (hasStartAt()) {
+        result = result && getStartAt()
+            .equals(other.getStartAt());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (37 * hash) + CELL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCellId().hashCode();
+      hash = (37 * hash) + CHECKPOINT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCheckpointId().hashCode();
+      if (hasStartAt()) {
+        hash = (37 * hash) + START_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getStartAt().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.CellOutputsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.CellOutputsRequest)
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_CellOutputsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_CellOutputsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        cellId_ = "";
+
+        checkpointId_ = "";
+
+        if (startAtBuilder_ == null) {
+          startAt_ = null;
+        } else {
+          startAt_ = null;
+          startAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_CellOutputsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest build() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest buildPartial() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest result = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest(this);
+        result.projectId_ = projectId_;
+        result.cellId_ = cellId_;
+        result.checkpointId_ = checkpointId_;
+        if (startAtBuilder_ == null) {
+          result.startAt_ = startAt_;
+        } else {
+          result.startAt_ = startAtBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest other) {
+        if (other == yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (!other.getCellId().isEmpty()) {
+          cellId_ = other.cellId_;
+          onChanged();
+        }
+        if (!other.getCheckpointId().isEmpty()) {
+          checkpointId_ = other.checkpointId_;
+          onChanged();
+        }
+        if (other.hasStartAt()) {
+          mergeStartAt(other.getStartAt());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * ID of the project to return cell outputs for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project to return cell outputs for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project to return cell outputs for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project to return cell outputs for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project to return cell outputs for.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cellId_ = "";
+      /**
+       * <pre>
+       * ID of the cell to return outputs for.
+       * </pre>
+       *
+       * <code>string cell_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public java.lang.String getCellId() {
+        java.lang.Object ref = cellId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cellId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cell to return outputs for.
+       * </pre>
+       *
+       * <code>string cell_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getCellIdBytes() {
+        java.lang.Object ref = cellId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cellId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the cell to return outputs for.
+       * </pre>
+       *
+       * <code>string cell_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setCellId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cellId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cell to return outputs for.
+       * </pre>
+       *
+       * <code>string cell_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder clearCellId() {
+        
+        cellId_ = getDefaultInstance().getCellId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the cell to return outputs for.
+       * </pre>
+       *
+       * <code>string cell_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setCellIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cellId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object checkpointId_ = "";
+      /**
+       * <pre>
+       * ID of the checkpoint to return cell outputs for.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 3;</code>
+       */
+      public java.lang.String getCheckpointId() {
+        java.lang.Object ref = checkpointId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          checkpointId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the checkpoint to return cell outputs for.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCheckpointIdBytes() {
+        java.lang.Object ref = checkpointId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          checkpointId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the checkpoint to return cell outputs for.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 3;</code>
+       */
+      public Builder setCheckpointId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        checkpointId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the checkpoint to return cell outputs for.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 3;</code>
+       */
+      public Builder clearCheckpointId() {
+        
+        checkpointId_ = getDefaultInstance().getCheckpointId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the checkpoint to return cell outputs for.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 3;</code>
+       */
+      public Builder setCheckpointIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        checkpointId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startAt_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startAtBuilder_;
+      /**
+       * <pre>
+       * Timestamp from which to return outputs.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_at = 4;</code>
+       */
+      public boolean hasStartAt() {
+        return startAtBuilder_ != null || startAt_ != null;
+      }
+      /**
+       * <pre>
+       * Timestamp from which to return outputs.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp getStartAt() {
+        if (startAtBuilder_ == null) {
+          return startAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startAt_;
+        } else {
+          return startAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp from which to return outputs.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_at = 4;</code>
+       */
+      public Builder setStartAt(com.google.protobuf.Timestamp value) {
+        if (startAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startAt_ = value;
+          onChanged();
+        } else {
+          startAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp from which to return outputs.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_at = 4;</code>
+       */
+      public Builder setStartAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startAtBuilder_ == null) {
+          startAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          startAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp from which to return outputs.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_at = 4;</code>
+       */
+      public Builder mergeStartAt(com.google.protobuf.Timestamp value) {
+        if (startAtBuilder_ == null) {
+          if (startAt_ != null) {
+            startAt_ =
+              com.google.protobuf.Timestamp.newBuilder(startAt_).mergeFrom(value).buildPartial();
+          } else {
+            startAt_ = value;
+          }
+          onChanged();
+        } else {
+          startAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp from which to return outputs.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_at = 4;</code>
+       */
+      public Builder clearStartAt() {
+        if (startAtBuilder_ == null) {
+          startAt_ = null;
+          onChanged();
+        } else {
+          startAt_ = null;
+          startAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Timestamp from which to return outputs.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartAtBuilder() {
+        
+        onChanged();
+        return getStartAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Timestamp from which to return outputs.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_at = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartAtOrBuilder() {
+        if (startAtBuilder_ != null) {
+          return startAtBuilder_.getMessageOrBuilder();
+        } else {
+          return startAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Timestamp from which to return outputs.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_at = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartAtFieldBuilder() {
+        if (startAtBuilder_ == null) {
+          startAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartAt(),
+                  getParentForChildren(),
+                  isClean());
+          startAt_ = null;
+        }
+        return startAtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.CellOutputsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.CellOutputsRequest)
+    private static final yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CellOutputsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CellOutputsRequest>() {
+      @java.lang.Override
+      public CellOutputsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CellOutputsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CellOutputsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CellOutputsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CellOutputsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.CellOutputsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of outputs.
+     * </pre>
+     *
+     * <code>repeated string outputs = 1;</code>
+     */
+    java.util.List<java.lang.String>
+        getOutputsList();
+    /**
+     * <pre>
+     * List of outputs.
+     * </pre>
+     *
+     * <code>repeated string outputs = 1;</code>
+     */
+    int getOutputsCount();
+    /**
+     * <pre>
+     * List of outputs.
+     * </pre>
+     *
+     * <code>repeated string outputs = 1;</code>
+     */
+    java.lang.String getOutputs(int index);
+    /**
+     * <pre>
+     * List of outputs.
+     * </pre>
+     *
+     * <code>repeated string outputs = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getOutputsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.CellOutputsResponse}
+   */
+  public  static final class CellOutputsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.CellOutputsResponse)
+      CellOutputsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CellOutputsResponse.newBuilder() to construct.
+    private CellOutputsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CellOutputsResponse() {
+      outputs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CellOutputsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                outputs_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              outputs_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          outputs_ = outputs_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_CellOutputsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_CellOutputsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse.Builder.class);
+    }
+
+    public static final int OUTPUTS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList outputs_;
+    /**
+     * <pre>
+     * List of outputs.
+     * </pre>
+     *
+     * <code>repeated string outputs = 1;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getOutputsList() {
+      return outputs_;
+    }
+    /**
+     * <pre>
+     * List of outputs.
+     * </pre>
+     *
+     * <code>repeated string outputs = 1;</code>
+     */
+    public int getOutputsCount() {
+      return outputs_.size();
+    }
+    /**
+     * <pre>
+     * List of outputs.
+     * </pre>
+     *
+     * <code>repeated string outputs = 1;</code>
+     */
+    public java.lang.String getOutputs(int index) {
+      return outputs_.get(index);
+    }
+    /**
+     * <pre>
+     * List of outputs.
+     * </pre>
+     *
+     * <code>repeated string outputs = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getOutputsBytes(int index) {
+      return outputs_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < outputs_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, outputs_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < outputs_.size(); i++) {
+          dataSize += computeStringSizeNoTag(outputs_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getOutputsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse other = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse) obj;
+
+      boolean result = true;
+      result = result && getOutputsList()
+          .equals(other.getOutputsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getOutputsCount() > 0) {
+        hash = (37 * hash) + OUTPUTS_FIELD_NUMBER;
+        hash = (53 * hash) + getOutputsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.CellOutputsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.CellOutputsResponse)
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_CellOutputsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_CellOutputsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        outputs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_CellOutputsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse build() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse buildPartial() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse result = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          outputs_ = outputs_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.outputs_ = outputs_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse other) {
+        if (other == yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse.getDefaultInstance()) return this;
+        if (!other.outputs_.isEmpty()) {
+          if (outputs_.isEmpty()) {
+            outputs_ = other.outputs_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureOutputsIsMutable();
+            outputs_.addAll(other.outputs_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList outputs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureOutputsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          outputs_ = new com.google.protobuf.LazyStringArrayList(outputs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * List of outputs.
+       * </pre>
+       *
+       * <code>repeated string outputs = 1;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getOutputsList() {
+        return outputs_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of outputs.
+       * </pre>
+       *
+       * <code>repeated string outputs = 1;</code>
+       */
+      public int getOutputsCount() {
+        return outputs_.size();
+      }
+      /**
+       * <pre>
+       * List of outputs.
+       * </pre>
+       *
+       * <code>repeated string outputs = 1;</code>
+       */
+      public java.lang.String getOutputs(int index) {
+        return outputs_.get(index);
+      }
+      /**
+       * <pre>
+       * List of outputs.
+       * </pre>
+       *
+       * <code>repeated string outputs = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getOutputsBytes(int index) {
+        return outputs_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of outputs.
+       * </pre>
+       *
+       * <code>repeated string outputs = 1;</code>
+       */
+      public Builder setOutputs(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureOutputsIsMutable();
+        outputs_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of outputs.
+       * </pre>
+       *
+       * <code>repeated string outputs = 1;</code>
+       */
+      public Builder addOutputs(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureOutputsIsMutable();
+        outputs_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of outputs.
+       * </pre>
+       *
+       * <code>repeated string outputs = 1;</code>
+       */
+      public Builder addAllOutputs(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureOutputsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, outputs_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of outputs.
+       * </pre>
+       *
+       * <code>repeated string outputs = 1;</code>
+       */
+      public Builder clearOutputs() {
+        outputs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of outputs.
+       * </pre>
+       *
+       * <code>repeated string outputs = 1;</code>
+       */
+      public Builder addOutputsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureOutputsIsMutable();
+        outputs_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.CellOutputsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.CellOutputsResponse)
+    private static final yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CellOutputsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CellOutputsResponse>() {
+      @java.lang.Override
+      public CellOutputsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CellOutputsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CellOutputsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CellOutputsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.CellOutputsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetStateVariablesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.GetStateVariablesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the project, for which to return state variables.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    java.lang.String getProjectId();
+    /**
+     * <pre>
+     * ID of the project, for which to return state variables.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <pre>
+     * ID of the notebook, for which to return state variables.
+     * </pre>
+     *
+     * <code>string notebook_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    java.lang.String getNotebookId();
+    /**
+     * <pre>
+     * ID of the notebook, for which to return state variables.
+     * </pre>
+     *
+     * <code>string notebook_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    com.google.protobuf.ByteString
+        getNotebookIdBytes();
+
+    /**
+     * <pre>
+     * Names of variables to return.
+     * </pre>
+     *
+     * <code>repeated string variable_names = 3;</code>
+     */
+    java.util.List<java.lang.String>
+        getVariableNamesList();
+    /**
+     * <pre>
+     * Names of variables to return.
+     * </pre>
+     *
+     * <code>repeated string variable_names = 3;</code>
+     */
+    int getVariableNamesCount();
+    /**
+     * <pre>
+     * Names of variables to return.
+     * </pre>
+     *
+     * <code>repeated string variable_names = 3;</code>
+     */
+    java.lang.String getVariableNames(int index);
+    /**
+     * <pre>
+     * Names of variables to return.
+     * </pre>
+     *
+     * <code>repeated string variable_names = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getVariableNamesBytes(int index);
+
+    /**
+     * <pre>
+     * ID of the checkpoint, for which to return state variables.
+     * </pre>
+     *
+     * <code>string checkpoint_id = 4;</code>
+     */
+    java.lang.String getCheckpointId();
+    /**
+     * <pre>
+     * ID of the checkpoint, for which to return state variables.
+     * </pre>
+     *
+     * <code>string checkpoint_id = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getCheckpointIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.GetStateVariablesRequest}
+   */
+  public  static final class GetStateVariablesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.GetStateVariablesRequest)
+      GetStateVariablesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetStateVariablesRequest.newBuilder() to construct.
+    private GetStateVariablesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetStateVariablesRequest() {
+      projectId_ = "";
+      notebookId_ = "";
+      variableNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      checkpointId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetStateVariablesRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              notebookId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                variableNames_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              variableNames_.add(s);
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              checkpointId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          variableNames_ = variableNames_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetStateVariablesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetStateVariablesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <pre>
+     * ID of the project, for which to return state variables.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the project, for which to return state variables.
+     * </pre>
+     *
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOTEBOOK_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object notebookId_;
+    /**
+     * <pre>
+     * ID of the notebook, for which to return state variables.
+     * </pre>
+     *
+     * <code>string notebook_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public java.lang.String getNotebookId() {
+      java.lang.Object ref = notebookId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        notebookId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the notebook, for which to return state variables.
+     * </pre>
+     *
+     * <code>string notebook_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getNotebookIdBytes() {
+      java.lang.Object ref = notebookId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        notebookId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VARIABLE_NAMES_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList variableNames_;
+    /**
+     * <pre>
+     * Names of variables to return.
+     * </pre>
+     *
+     * <code>repeated string variable_names = 3;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getVariableNamesList() {
+      return variableNames_;
+    }
+    /**
+     * <pre>
+     * Names of variables to return.
+     * </pre>
+     *
+     * <code>repeated string variable_names = 3;</code>
+     */
+    public int getVariableNamesCount() {
+      return variableNames_.size();
+    }
+    /**
+     * <pre>
+     * Names of variables to return.
+     * </pre>
+     *
+     * <code>repeated string variable_names = 3;</code>
+     */
+    public java.lang.String getVariableNames(int index) {
+      return variableNames_.get(index);
+    }
+    /**
+     * <pre>
+     * Names of variables to return.
+     * </pre>
+     *
+     * <code>repeated string variable_names = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVariableNamesBytes(int index) {
+      return variableNames_.getByteString(index);
+    }
+
+    public static final int CHECKPOINT_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object checkpointId_;
+    /**
+     * <pre>
+     * ID of the checkpoint, for which to return state variables.
+     * </pre>
+     *
+     * <code>string checkpoint_id = 4;</code>
+     */
+    public java.lang.String getCheckpointId() {
+      java.lang.Object ref = checkpointId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        checkpointId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the checkpoint, for which to return state variables.
+     * </pre>
+     *
+     * <code>string checkpoint_id = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCheckpointIdBytes() {
+      java.lang.Object ref = checkpointId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        checkpointId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getProjectIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (!getNotebookIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, notebookId_);
+      }
+      for (int i = 0; i < variableNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, variableNames_.getRaw(i));
+      }
+      if (!getCheckpointIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, checkpointId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getProjectIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (!getNotebookIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, notebookId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < variableNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(variableNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getVariableNamesList().size();
+      }
+      if (!getCheckpointIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, checkpointId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest other = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest) obj;
+
+      boolean result = true;
+      result = result && getProjectId()
+          .equals(other.getProjectId());
+      result = result && getNotebookId()
+          .equals(other.getNotebookId());
+      result = result && getVariableNamesList()
+          .equals(other.getVariableNamesList());
+      result = result && getCheckpointId()
+          .equals(other.getCheckpointId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (37 * hash) + NOTEBOOK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNotebookId().hashCode();
+      if (getVariableNamesCount() > 0) {
+        hash = (37 * hash) + VARIABLE_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getVariableNamesList().hashCode();
+      }
+      hash = (37 * hash) + CHECKPOINT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getCheckpointId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.GetStateVariablesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.GetStateVariablesRequest)
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetStateVariablesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetStateVariablesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        notebookId_ = "";
+
+        variableNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        checkpointId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetStateVariablesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest build() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest buildPartial() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest result = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.projectId_ = projectId_;
+        result.notebookId_ = notebookId_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          variableNames_ = variableNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.variableNames_ = variableNames_;
+        result.checkpointId_ = checkpointId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest other) {
+        if (other == yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (!other.getNotebookId().isEmpty()) {
+          notebookId_ = other.notebookId_;
+          onChanged();
+        }
+        if (!other.variableNames_.isEmpty()) {
+          if (variableNames_.isEmpty()) {
+            variableNames_ = other.variableNames_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureVariableNamesIsMutable();
+            variableNames_.addAll(other.variableNames_);
+          }
+          onChanged();
+        }
+        if (!other.getCheckpointId().isEmpty()) {
+          checkpointId_ = other.checkpointId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <pre>
+       * ID of the project, for which to return state variables.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project, for which to return state variables.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the project, for which to return state variables.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project, for which to return state variables.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the project, for which to return state variables.
+       * </pre>
+       *
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object notebookId_ = "";
+      /**
+       * <pre>
+       * ID of the notebook, for which to return state variables.
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public java.lang.String getNotebookId() {
+        java.lang.Object ref = notebookId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          notebookId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the notebook, for which to return state variables.
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getNotebookIdBytes() {
+        java.lang.Object ref = notebookId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          notebookId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the notebook, for which to return state variables.
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setNotebookId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        notebookId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the notebook, for which to return state variables.
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder clearNotebookId() {
+        
+        notebookId_ = getDefaultInstance().getNotebookId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the notebook, for which to return state variables.
+       * </pre>
+       *
+       * <code>string notebook_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=200"];</code>
+       */
+      public Builder setNotebookIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        notebookId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList variableNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureVariableNamesIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          variableNames_ = new com.google.protobuf.LazyStringArrayList(variableNames_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       * Names of variables to return.
+       * </pre>
+       *
+       * <code>repeated string variable_names = 3;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getVariableNamesList() {
+        return variableNames_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Names of variables to return.
+       * </pre>
+       *
+       * <code>repeated string variable_names = 3;</code>
+       */
+      public int getVariableNamesCount() {
+        return variableNames_.size();
+      }
+      /**
+       * <pre>
+       * Names of variables to return.
+       * </pre>
+       *
+       * <code>repeated string variable_names = 3;</code>
+       */
+      public java.lang.String getVariableNames(int index) {
+        return variableNames_.get(index);
+      }
+      /**
+       * <pre>
+       * Names of variables to return.
+       * </pre>
+       *
+       * <code>repeated string variable_names = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVariableNamesBytes(int index) {
+        return variableNames_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Names of variables to return.
+       * </pre>
+       *
+       * <code>repeated string variable_names = 3;</code>
+       */
+      public Builder setVariableNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureVariableNamesIsMutable();
+        variableNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Names of variables to return.
+       * </pre>
+       *
+       * <code>repeated string variable_names = 3;</code>
+       */
+      public Builder addVariableNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureVariableNamesIsMutable();
+        variableNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Names of variables to return.
+       * </pre>
+       *
+       * <code>repeated string variable_names = 3;</code>
+       */
+      public Builder addAllVariableNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureVariableNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, variableNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Names of variables to return.
+       * </pre>
+       *
+       * <code>repeated string variable_names = 3;</code>
+       */
+      public Builder clearVariableNames() {
+        variableNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Names of variables to return.
+       * </pre>
+       *
+       * <code>repeated string variable_names = 3;</code>
+       */
+      public Builder addVariableNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureVariableNamesIsMutable();
+        variableNames_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object checkpointId_ = "";
+      /**
+       * <pre>
+       * ID of the checkpoint, for which to return state variables.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 4;</code>
+       */
+      public java.lang.String getCheckpointId() {
+        java.lang.Object ref = checkpointId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          checkpointId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the checkpoint, for which to return state variables.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCheckpointIdBytes() {
+        java.lang.Object ref = checkpointId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          checkpointId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the checkpoint, for which to return state variables.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 4;</code>
+       */
+      public Builder setCheckpointId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        checkpointId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the checkpoint, for which to return state variables.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 4;</code>
+       */
+      public Builder clearCheckpointId() {
+        
+        checkpointId_ = getDefaultInstance().getCheckpointId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the checkpoint, for which to return state variables.
+       * </pre>
+       *
+       * <code>string checkpoint_id = 4;</code>
+       */
+      public Builder setCheckpointIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        checkpointId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.GetStateVariablesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.GetStateVariablesRequest)
+    private static final yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetStateVariablesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetStateVariablesRequest>() {
+      @java.lang.Override
+      public GetStateVariablesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetStateVariablesRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetStateVariablesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetStateVariablesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetStateVariablesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v1.GetStateVariablesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Values of the specified variables.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct variables = 1;</code>
+     */
+    boolean hasVariables();
+    /**
+     * <pre>
+     * Values of the specified variables.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct variables = 1;</code>
+     */
+    com.google.protobuf.Struct getVariables();
+    /**
+     * <pre>
+     * Values of the specified variables.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct variables = 1;</code>
+     */
+    com.google.protobuf.StructOrBuilder getVariablesOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v1.GetStateVariablesResponse}
+   */
+  public  static final class GetStateVariablesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v1.GetStateVariablesResponse)
+      GetStateVariablesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetStateVariablesResponse.newBuilder() to construct.
+    private GetStateVariablesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetStateVariablesResponse() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetStateVariablesResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Struct.Builder subBuilder = null;
+              if (variables_ != null) {
+                subBuilder = variables_.toBuilder();
+              }
+              variables_ = input.readMessage(com.google.protobuf.Struct.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(variables_);
+                variables_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetStateVariablesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetStateVariablesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse.Builder.class);
+    }
+
+    public static final int VARIABLES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Struct variables_;
+    /**
+     * <pre>
+     * Values of the specified variables.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct variables = 1;</code>
+     */
+    public boolean hasVariables() {
+      return variables_ != null;
+    }
+    /**
+     * <pre>
+     * Values of the specified variables.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct variables = 1;</code>
+     */
+    public com.google.protobuf.Struct getVariables() {
+      return variables_ == null ? com.google.protobuf.Struct.getDefaultInstance() : variables_;
+    }
+    /**
+     * <pre>
+     * Values of the specified variables.
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct variables = 1;</code>
+     */
+    public com.google.protobuf.StructOrBuilder getVariablesOrBuilder() {
+      return getVariables();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (variables_ != null) {
+        output.writeMessage(1, getVariables());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (variables_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getVariables());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse other = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse) obj;
+
+      boolean result = true;
+      result = result && (hasVariables() == other.hasVariables());
+      if (hasVariables()) {
+        result = result && getVariables()
+            .equals(other.getVariables());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasVariables()) {
+        hash = (37 * hash) + VARIABLES_FIELD_NUMBER;
+        hash = (53 * hash) + getVariables().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v1.GetStateVariablesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v1.GetStateVariablesResponse)
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetStateVariablesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetStateVariablesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse.class, yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (variablesBuilder_ == null) {
+          variables_ = null;
+        } else {
+          variables_ = null;
+          variablesBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v1_GetStateVariablesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse build() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse buildPartial() {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse result = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse(this);
+        if (variablesBuilder_ == null) {
+          result.variables_ = variables_;
+        } else {
+          result.variables_ = variablesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse) {
+          return mergeFrom((yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse other) {
+        if (other == yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse.getDefaultInstance()) return this;
+        if (other.hasVariables()) {
+          mergeVariables(other.getVariables());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Struct variables_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> variablesBuilder_;
+      /**
+       * <pre>
+       * Values of the specified variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct variables = 1;</code>
+       */
+      public boolean hasVariables() {
+        return variablesBuilder_ != null || variables_ != null;
+      }
+      /**
+       * <pre>
+       * Values of the specified variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct variables = 1;</code>
+       */
+      public com.google.protobuf.Struct getVariables() {
+        if (variablesBuilder_ == null) {
+          return variables_ == null ? com.google.protobuf.Struct.getDefaultInstance() : variables_;
+        } else {
+          return variablesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Values of the specified variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct variables = 1;</code>
+       */
+      public Builder setVariables(com.google.protobuf.Struct value) {
+        if (variablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          variables_ = value;
+          onChanged();
+        } else {
+          variablesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of the specified variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct variables = 1;</code>
+       */
+      public Builder setVariables(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (variablesBuilder_ == null) {
+          variables_ = builderForValue.build();
+          onChanged();
+        } else {
+          variablesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of the specified variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct variables = 1;</code>
+       */
+      public Builder mergeVariables(com.google.protobuf.Struct value) {
+        if (variablesBuilder_ == null) {
+          if (variables_ != null) {
+            variables_ =
+              com.google.protobuf.Struct.newBuilder(variables_).mergeFrom(value).buildPartial();
+          } else {
+            variables_ = value;
+          }
+          onChanged();
+        } else {
+          variablesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of the specified variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct variables = 1;</code>
+       */
+      public Builder clearVariables() {
+        if (variablesBuilder_ == null) {
+          variables_ = null;
+          onChanged();
+        } else {
+          variables_ = null;
+          variablesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of the specified variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct variables = 1;</code>
+       */
+      public com.google.protobuf.Struct.Builder getVariablesBuilder() {
+        
+        onChanged();
+        return getVariablesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Values of the specified variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct variables = 1;</code>
+       */
+      public com.google.protobuf.StructOrBuilder getVariablesOrBuilder() {
+        if (variablesBuilder_ != null) {
+          return variablesBuilder_.getMessageOrBuilder();
+        } else {
+          return variables_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : variables_;
+        }
+      }
+      /**
+       * <pre>
+       * Values of the specified variables.
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct variables = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getVariablesFieldBuilder() {
+        if (variablesBuilder_ == null) {
+          variablesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getVariables(),
+                  getParentForChildren(),
+                  isClean());
+          variables_ = null;
+        }
+        return variablesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v1.GetStateVariablesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v1.GetStateVariablesResponse)
+    private static final yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse();
+    }
+
+    public static yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetStateVariablesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetStateVariablesResponse>() {
+      @java.lang.Override
+      public GetStateVariablesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetStateVariablesResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetStateVariablesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetStateVariablesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v1.ProjectServiceOuterClass.GetStateVariablesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v1_CreateProjectRequest_descriptor;
   private static final 
@@ -12240,6 +19427,41 @@ public final class ProjectServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v1_SetUnitBalanceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_ProjectExecutionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_ProjectExecutionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_ProjectExecutionMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_ProjectExecutionMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_ProjectExecutionResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_ProjectExecutionResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_CellOutputsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_CellOutputsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_CellOutputsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_CellOutputsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_GetStateVariablesRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_GetStateVariablesRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v1_GetStateVariablesResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v1_GetStateVariablesResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12254,84 +19476,122 @@ public final class ProjectServiceOuterClass {
       "google/api/annotations.proto\032 google/pro" +
       "tobuf/field_mask.proto\032\033google/protobuf/" +
       "empty.proto\032\036google/protobuf/wrappers.pr" +
-      "oto\032 yandex/cloud/api/operation.proto\032\035y" +
-      "andex/cloud/validation.proto\032&yandex/clo" +
-      "ud/operation/operation.proto\032(yandex/clo" +
-      "ud/datasphere/v1/project.proto\"\216\002\n\024Creat" +
-      "eProjectRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\0229\n\004name\030\002 \001(\tB+\212\3101\004<=63\362\3071\037[a-z" +
-      "]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descripti" +
-      "on\030\003 \001(\tB\t\212\3101\005<=256\022>\n\010settings\030\004 \001(\0132,." +
-      "yandex.cloud.datasphere.v1.Project.Setti" +
-      "ngs\022:\n\006limits\030\005 \001(\0132*.yandex.cloud.datas" +
-      "phere.v1.Project.Limits\"+\n\025CreateProject" +
-      "Metadata\022\022\n\nproject_id\030\001 \001(\t\"\301\002\n\024UpdateP" +
-      "rojectRequest\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001\212" +
-      "\3101\005<=200\022/\n\013update_mask\030\002 \001(\0132\032.google.p" +
-      "rotobuf.FieldMask\0229\n\004name\030\003 \001(\tB+\212\3101\004<=6" +
-      "3\362\3071\037[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013" +
-      "description\030\004 \001(\tB\t\212\3101\005<=256\022>\n\010settings" +
-      "\030\005 \001(\0132,.yandex.cloud.datasphere.v1.Proj" +
-      "ect.Settings\022:\n\006limits\030\006 \001(\0132*.yandex.cl" +
-      "oud.datasphere.v1.Project.Limits\"+\n\025Upda" +
-      "teProjectMetadata\022\022\n\nproject_id\030\001 \001(\t\"9\n" +
-      "\024DeleteProjectRequest\022!\n\nproject_id\030\001 \001(" +
-      "\tB\r\350\3071\001\212\3101\005<=200\"+\n\025DeleteProjectMetadat" +
-      "a\022\022\n\nproject_id\030\001 \001(\t\"7\n\022OpenProjectRequ" +
-      "est\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\")" +
-      "\n\023OpenProjectMetadata\022\022\n\nproject_id\030\001 \001(" +
-      "\t\"A\n\023OpenProjectResponse\022\023\n\013project_url\030" +
-      "\001 \001(\t\022\025\n\rsession_token\030\002 \001(\t\"6\n\021GetProje" +
-      "ctRequest\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<" +
-      "=200\"t\n\023ListProjectsRequest\022\037\n\tfolder_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
-      "\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
-      "00\"f\n\024ListProjectsResponse\0225\n\010projects\030\001" +
-      " \003(\0132#.yandex.cloud.datasphere.v1.Projec" +
-      "t\022\027\n\017next_page_token\030\002 \001(\t\":\n\025GetUnitBal" +
+      "oto\032\037google/protobuf/timestamp.proto\032\034go" +
+      "ogle/protobuf/struct.proto\032 yandex/cloud" +
+      "/api/operation.proto\032\035yandex/cloud/valid" +
+      "ation.proto\032&yandex/cloud/operation/oper" +
+      "ation.proto\032(yandex/cloud/datasphere/v1/" +
+      "project.proto\"\216\002\n\024CreateProjectRequest\022\037" +
+      "\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0229\n\004name\030" +
+      "\002 \001(\tB+\212\3101\004<=63\362\3071\037[a-z]([-a-z0-9]{0,61}" +
+      "[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=2" +
+      "56\022>\n\010settings\030\004 \001(\0132,.yandex.cloud.data" +
+      "sphere.v1.Project.Settings\022:\n\006limits\030\005 \001" +
+      "(\0132*.yandex.cloud.datasphere.v1.Project." +
+      "Limits\"+\n\025CreateProjectMetadata\022\022\n\nproje" +
+      "ct_id\030\001 \001(\t\"\301\002\n\024UpdateProjectRequest\022!\n\n" +
+      "project_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\022/\n\013updat" +
+      "e_mask\030\002 \001(\0132\032.google.protobuf.FieldMask" +
+      "\0229\n\004name\030\003 \001(\tB+\212\3101\004<=63\362\3071\037[a-z]([-a-z0" +
+      "-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\t" +
+      "B\t\212\3101\005<=256\022>\n\010settings\030\005 \001(\0132,.yandex.c" +
+      "loud.datasphere.v1.Project.Settings\022:\n\006l" +
+      "imits\030\006 \001(\0132*.yandex.cloud.datasphere.v1" +
+      ".Project.Limits\"+\n\025UpdateProjectMetadata" +
+      "\022\022\n\nproject_id\030\001 \001(\t\"9\n\024DeleteProjectReq" +
+      "uest\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\"" +
+      "+\n\025DeleteProjectMetadata\022\022\n\nproject_id\030\001" +
+      " \001(\t\"7\n\022OpenProjectRequest\022!\n\nproject_id" +
+      "\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\")\n\023OpenProjectMeta" +
+      "data\022\022\n\nproject_id\030\001 \001(\t\"A\n\023OpenProjectR" +
+      "esponse\022\023\n\013project_url\030\001 \001(\t\022\025\n\rsession_" +
+      "token\030\002 \001(\t\"6\n\021GetProjectRequest\022!\n\nproj" +
+      "ect_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\"t\n\023ListProje" +
+      "ctsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npa" +
+      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\"f\n\024ListProject" +
+      "sResponse\0225\n\010projects\030\001 \003(\0132#.yandex.clo" +
+      "ud.datasphere.v1.Project\022\027\n\017next_page_to" +
+      "ken\030\002 \001(\t\":\n\025GetUnitBalanceRequest\022!\n\npr" +
+      "oject_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\"K\n\026GetUnit" +
+      "BalanceResponse\0221\n\014unit_balance\030\001 \001(\0132\033." +
+      "google.protobuf.Int64Value\"m\n\025SetUnitBal" +
       "anceRequest\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001\212\3101" +
-      "\005<=200\"K\n\026GetUnitBalanceResponse\0221\n\014unit" +
-      "_balance\030\001 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\"m\n\025SetUnitBalanceRequest\022!\n\nproject_" +
-      "id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200\0221\n\014unit_balance\030" +
-      "\002 \001(\0132\033.google.protobuf.Int64Value2\320\n\n\016P" +
-      "rojectService\022\245\001\n\006Create\0220.yandex.cloud." +
-      "datasphere.v1.CreateProjectRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"F\202\323\344\223\002\034\"\027/" +
-      "datasphere/v1/projects:\001*\262\322* \n\025CreatePro" +
-      "jectMetadata\022\007Project\022\262\001\n\006Update\0220.yande" +
-      "x.cloud.datasphere.v1.UpdateProjectReque" +
-      "st\032!.yandex.cloud.operation.Operation\"S\202" +
-      "\323\344\223\002)2$/datasphere/v1/projects/{project_" +
-      "id}:\001*\262\322* \n\025UpdateProjectMetadata\022\007Proje" +
-      "ct\022\275\001\n\006Delete\0220.yandex.cloud.datasphere." +
-      "v1.DeleteProjectRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"^\202\323\344\223\002&*$/datasphere/" +
-      "v1/projects/{project_id}\262\322*.\n\025DeleteProj" +
-      "ectMetadata\022\025google.protobuf.Empty\022\272\001\n\004O" +
-      "pen\022..yandex.cloud.datasphere.v1.OpenPro" +
-      "jectRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"_\202\323\344\223\002+\")/datasphere/v1/projects/" +
-      "{project_id}:open\262\322**\n\023OpenProjectMetada" +
-      "ta\022\023OpenProjectResponse\022\207\001\n\003Get\022-.yandex" +
-      ".cloud.datasphere.v1.GetProjectRequest\032#" +
-      ".yandex.cloud.datasphere.v1.Project\",\202\323\344" +
-      "\223\002&\022$/datasphere/v1/projects/{project_id" +
-      "}\022\212\001\n\004List\022/.yandex.cloud.datasphere.v1." +
-      "ListProjectsRequest\0320.yandex.cloud.datas" +
-      "phere.v1.ListProjectsResponse\"\037\202\323\344\223\002\031\022\027/" +
-      "datasphere/v1/projects\022\261\001\n\016GetUnitBalanc" +
-      "e\0221.yandex.cloud.datasphere.v1.GetUnitBa" +
-      "lanceRequest\0322.yandex.cloud.datasphere.v" +
-      "1.GetUnitBalanceResponse\"8\202\323\344\223\0022\0220/datas" +
-      "phere/v1/projects/{project_id}:unitBalan" +
-      "ce\022\230\001\n\016SetUnitBalance\0221.yandex.cloud.dat" +
-      "asphere.v1.SetUnitBalanceRequest\032\026.googl" +
-      "e.protobuf.Empty\";\202\323\344\223\0025\"0/datasphere/v1" +
-      "/projects/{project_id}:unitBalance:\001*Bk\n" +
-      "\036yandex.cloud.api.datasphere.v1ZIgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/datasphere/v1;datasphereb\006proto3"
+      "\005<=200\0221\n\014unit_balance\030\002 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\"\335\001\n\027ProjectExecutionRe" +
+      "quest\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001\212\3101\005<=200" +
+      "\022 \n\013notebook_id\030\002 \001(\tB\t\212\3101\005<=200H\000\022\034\n\007ce" +
+      "ll_id\030\003 \001(\tB\t\212\3101\005<=200H\000\0220\n\017input_variab" +
+      "les\030\004 \001(\0132\027.google.protobuf.Struct\022\035\n\025ou" +
+      "tput_variable_names\030\005 \003(\tB\016\n\006target\022\004\300\3011" +
+      "\001\"~\n\030ProjectExecutionMetadata\022\022\n\nproject" +
+      "_id\030\001 \001(\t\022 \n\013notebook_id\030\002 \001(\tB\t\212\3101\005<=20" +
+      "0H\000\022\034\n\007cell_id\030\003 \001(\tB\t\212\3101\005<=200H\000B\016\n\006tar" +
+      "get\022\004\300\3011\001\"d\n\030ProjectExecutionResponse\022\025\n" +
+      "\rcheckpoint_id\030\001 \001(\t\0221\n\020output_variables" +
+      "\030\002 \001(\0132\027.google.protobuf.Struct\"\234\001\n\022Cell" +
+      "OutputsRequest\022!\n\nproject_id\030\001 \001(\tB\r\350\3071\001" +
+      "\212\3101\005<=200\022\036\n\007cell_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=20" +
+      "0\022\025\n\rcheckpoint_id\030\003 \001(\t\022,\n\010start_at\030\004 \001" +
+      "(\0132\032.google.protobuf.Timestamp\"&\n\023CellOu" +
+      "tputsResponse\022\017\n\007outputs\030\001 \003(\t\"\220\001\n\030GetSt" +
+      "ateVariablesRequest\022!\n\nproject_id\030\001 \001(\tB" +
+      "\r\350\3071\001\212\3101\005<=200\022\"\n\013notebook_id\030\002 \001(\tB\r\350\3071" +
+      "\001\212\3101\005<=200\022\026\n\016variable_names\030\003 \003(\t\022\025\n\rch" +
+      "eckpoint_id\030\004 \001(\t\"G\n\031GetStateVariablesRe" +
+      "sponse\022*\n\tvariables\030\001 \001(\0132\027.google.proto" +
+      "buf.Struct2\223\017\n\016ProjectService\022\245\001\n\006Create" +
+      "\0220.yandex.cloud.datasphere.v1.CreateProj" +
+      "ectRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"F\202\323\344\223\002\034\"\027/datasphere/v1/projects:\001" +
+      "*\262\322* \n\025CreateProjectMetadata\022\007Project\022\262\001" +
+      "\n\006Update\0220.yandex.cloud.datasphere.v1.Up" +
+      "dateProjectRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"S\202\323\344\223\002)2$/datasphere/v1/pr" +
+      "ojects/{project_id}:\001*\262\322* \n\025UpdateProjec" +
+      "tMetadata\022\007Project\022\275\001\n\006Delete\0220.yandex.c" +
+      "loud.datasphere.v1.DeleteProjectRequest\032" +
+      "!.yandex.cloud.operation.Operation\"^\202\323\344\223" +
+      "\002&*$/datasphere/v1/projects/{project_id}" +
+      "\262\322*.\n\025DeleteProjectMetadata\022\025google.prot" +
+      "obuf.Empty\022\272\001\n\004Open\022..yandex.cloud.datas" +
+      "phere.v1.OpenProjectRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"_\202\323\344\223\002+\")/datasph" +
+      "ere/v1/projects/{project_id}:open\262\322**\n\023O" +
+      "penProjectMetadata\022\023OpenProjectResponse\022" +
+      "\207\001\n\003Get\022-.yandex.cloud.datasphere.v1.Get" +
+      "ProjectRequest\032#.yandex.cloud.datasphere" +
+      ".v1.Project\",\202\323\344\223\002&\022$/datasphere/v1/proj" +
+      "ects/{project_id}\022\212\001\n\004List\022/.yandex.clou" +
+      "d.datasphere.v1.ListProjectsRequest\0320.ya" +
+      "ndex.cloud.datasphere.v1.ListProjectsRes" +
+      "ponse\"\037\202\323\344\223\002\031\022\027/datasphere/v1/projects\022\261" +
+      "\001\n\016GetUnitBalance\0221.yandex.cloud.datasph" +
+      "ere.v1.GetUnitBalanceRequest\0322.yandex.cl" +
+      "oud.datasphere.v1.GetUnitBalanceResponse" +
+      "\"8\202\323\344\223\0022\0220/datasphere/v1/projects/{proje" +
+      "ct_id}:unitBalance\022\230\001\n\016SetUnitBalance\0221." +
+      "yandex.cloud.datasphere.v1.SetUnitBalanc" +
+      "eRequest\032\026.google.protobuf.Empty\";\202\323\344\223\0025" +
+      "\"0/datasphere/v1/projects/{project_id}:u" +
+      "nitBalance:\001*\022\322\001\n\007Execute\0223.yandex.cloud" +
+      ".datasphere.v1.ProjectExecutionRequest\032!" +
+      ".yandex.cloud.operation.Operation\"o\202\323\344\223\002" +
+      "1\",/datasphere/v1/projects/{project_id}:" +
+      "execute:\001*\262\322*4\n\030ProjectExecutionMetadata" +
+      "\022\030ProjectExecutionResponse\022\253\001\n\016GetCellOu" +
+      "tputs\022..yandex.cloud.datasphere.v1.CellO" +
+      "utputsRequest\032/.yandex.cloud.datasphere." +
+      "v1.CellOutputsResponse\"8\202\323\344\223\0022\0220/datasph" +
+      "ere/v1/projects/{project_id}:cellOutputs" +
+      "\022\275\001\n\021GetStateVariables\0224.yandex.cloud.da" +
+      "tasphere.v1.GetStateVariablesRequest\0325.y" +
+      "andex.cloud.datasphere.v1.GetStateVariab" +
+      "lesResponse\";\202\323\344\223\0025\0223/datasphere/v1/proj" +
+      "ects/{project_id}:stateVariablesBk\n\036yand" +
+      "ex.cloud.api.datasphere.v1ZIgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/dat" +
+      "asphere/v1;datasphereb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12348,6 +19608,8 @@ public final class ProjectServiceOuterClass {
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.StructProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -12443,10 +19705,53 @@ public final class ProjectServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v1_SetUnitBalanceRequest_descriptor,
         new java.lang.String[] { "ProjectId", "UnitBalance", });
+    internal_static_yandex_cloud_datasphere_v1_ProjectExecutionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_yandex_cloud_datasphere_v1_ProjectExecutionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_ProjectExecutionRequest_descriptor,
+        new java.lang.String[] { "ProjectId", "NotebookId", "CellId", "InputVariables", "OutputVariableNames", "Target", });
+    internal_static_yandex_cloud_datasphere_v1_ProjectExecutionMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_yandex_cloud_datasphere_v1_ProjectExecutionMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_ProjectExecutionMetadata_descriptor,
+        new java.lang.String[] { "ProjectId", "NotebookId", "CellId", "Target", });
+    internal_static_yandex_cloud_datasphere_v1_ProjectExecutionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_yandex_cloud_datasphere_v1_ProjectExecutionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_ProjectExecutionResponse_descriptor,
+        new java.lang.String[] { "CheckpointId", "OutputVariables", });
+    internal_static_yandex_cloud_datasphere_v1_CellOutputsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_yandex_cloud_datasphere_v1_CellOutputsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_CellOutputsRequest_descriptor,
+        new java.lang.String[] { "ProjectId", "CellId", "CheckpointId", "StartAt", });
+    internal_static_yandex_cloud_datasphere_v1_CellOutputsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_yandex_cloud_datasphere_v1_CellOutputsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_CellOutputsResponse_descriptor,
+        new java.lang.String[] { "Outputs", });
+    internal_static_yandex_cloud_datasphere_v1_GetStateVariablesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_yandex_cloud_datasphere_v1_GetStateVariablesRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_GetStateVariablesRequest_descriptor,
+        new java.lang.String[] { "ProjectId", "NotebookId", "VariableNames", "CheckpointId", });
+    internal_static_yandex_cloud_datasphere_v1_GetStateVariablesResponse_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_yandex_cloud_datasphere_v1_GetStateVariablesResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v1_GetStateVariablesResponse_descriptor,
+        new java.lang.String[] { "Variables", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
+    registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
@@ -12457,6 +19762,8 @@ public final class ProjectServiceOuterClass {
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.StructProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

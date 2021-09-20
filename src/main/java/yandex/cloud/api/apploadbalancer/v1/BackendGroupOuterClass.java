@@ -14,6 +14,138 @@ public final class BackendGroupOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.apploadbalancer.v1.LoadBalancingMode}
+   */
+  public enum LoadBalancingMode
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ROUND_ROBIN = 0;</code>
+     */
+    ROUND_ROBIN(0),
+    /**
+     * <code>RANDOM = 1;</code>
+     */
+    RANDOM(1),
+    /**
+     * <pre>
+     * Using power of two choices.
+     * </pre>
+     *
+     * <code>LEAST_REQUEST = 2;</code>
+     */
+    LEAST_REQUEST(2),
+    /**
+     * <pre>
+     * MAGLEV_HASH allows session affinity for that backend.
+     * </pre>
+     *
+     * <code>MAGLEV_HASH = 3;</code>
+     */
+    MAGLEV_HASH(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>ROUND_ROBIN = 0;</code>
+     */
+    public static final int ROUND_ROBIN_VALUE = 0;
+    /**
+     * <code>RANDOM = 1;</code>
+     */
+    public static final int RANDOM_VALUE = 1;
+    /**
+     * <pre>
+     * Using power of two choices.
+     * </pre>
+     *
+     * <code>LEAST_REQUEST = 2;</code>
+     */
+    public static final int LEAST_REQUEST_VALUE = 2;
+    /**
+     * <pre>
+     * MAGLEV_HASH allows session affinity for that backend.
+     * </pre>
+     *
+     * <code>MAGLEV_HASH = 3;</code>
+     */
+    public static final int MAGLEV_HASH_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static LoadBalancingMode valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static LoadBalancingMode forNumber(int value) {
+      switch (value) {
+        case 0: return ROUND_ROBIN;
+        case 1: return RANDOM;
+        case 2: return LEAST_REQUEST;
+        case 3: return MAGLEV_HASH;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<LoadBalancingMode>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        LoadBalancingMode> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<LoadBalancingMode>() {
+            public LoadBalancingMode findValueByNumber(int number) {
+              return LoadBalancingMode.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final LoadBalancingMode[] VALUES = values();
+
+    public static LoadBalancingMode valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private LoadBalancingMode(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.apploadbalancer.v1.LoadBalancingMode)
+  }
+
   public interface BackendGroupOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.apploadbalancer.v1.BackendGroup)
       com.google.protobuf.MessageOrBuilder {
@@ -2462,6 +2594,47 @@ public final class BackendGroupOuterClass {
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendOrBuilder getBackendsOrBuilder(
         int index);
+
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     */
+    boolean hasConnection();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     */
+    boolean hasHeader();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     */
+    boolean hasCookie();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder();
+
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup.SessionAffinityCase getSessionAffinityCase();
   }
   /**
    * <pre>
@@ -2516,6 +2689,48 @@ public final class BackendGroupOuterClass {
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend.parser(), extensionRegistry));
               break;
             }
+            case 18: {
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder subBuilder = null;
+              if (sessionAffinityCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_).toBuilder();
+              }
+              sessionAffinity_ =
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_);
+                sessionAffinity_ = subBuilder.buildPartial();
+              }
+              sessionAffinityCase_ = 2;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder subBuilder = null;
+              if (sessionAffinityCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_).toBuilder();
+              }
+              sessionAffinity_ =
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_);
+                sessionAffinity_ = subBuilder.buildPartial();
+              }
+              sessionAffinityCase_ = 3;
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder subBuilder = null;
+              if (sessionAffinityCase_ == 4) {
+                subBuilder = ((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_).toBuilder();
+              }
+              sessionAffinity_ =
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_);
+                sessionAffinity_ = subBuilder.buildPartial();
+              }
+              sessionAffinityCase_ = 4;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2549,6 +2764,47 @@ public final class BackendGroupOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_HttpBackendGroup_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup.class, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup.Builder.class);
+    }
+
+    private int bitField0_;
+    private int sessionAffinityCase_ = 0;
+    private java.lang.Object sessionAffinity_;
+    public enum SessionAffinityCase
+        implements com.google.protobuf.Internal.EnumLite {
+      CONNECTION(2),
+      HEADER(3),
+      COOKIE(4),
+      SESSIONAFFINITY_NOT_SET(0);
+      private final int value;
+      private SessionAffinityCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SessionAffinityCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SessionAffinityCase forNumber(int value) {
+        switch (value) {
+          case 2: return CONNECTION;
+          case 3: return HEADER;
+          case 4: return COOKIE;
+          case 0: return SESSIONAFFINITY_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SessionAffinityCase
+    getSessionAffinityCase() {
+      return SessionAffinityCase.forNumber(
+          sessionAffinityCase_);
     }
 
     public static final int BACKENDS_FIELD_NUMBER = 1;
@@ -2606,6 +2862,84 @@ public final class BackendGroupOuterClass {
       return backends_.get(index);
     }
 
+    public static final int CONNECTION_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     */
+    public boolean hasConnection() {
+      return sessionAffinityCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
+      if (sessionAffinityCase_ == 2) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
+      if (sessionAffinityCase_ == 2) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
+    }
+
+    public static final int HEADER_FIELD_NUMBER = 3;
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     */
+    public boolean hasHeader() {
+      return sessionAffinityCase_ == 3;
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader() {
+      if (sessionAffinityCase_ == 3) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder() {
+      if (sessionAffinityCase_ == 3) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
+    }
+
+    public static final int COOKIE_FIELD_NUMBER = 4;
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     */
+    public boolean hasCookie() {
+      return sessionAffinityCase_ == 4;
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie() {
+      if (sessionAffinityCase_ == 4) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder() {
+      if (sessionAffinityCase_ == 4) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2623,6 +2957,15 @@ public final class BackendGroupOuterClass {
       for (int i = 0; i < backends_.size(); i++) {
         output.writeMessage(1, backends_.get(i));
       }
+      if (sessionAffinityCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_);
+      }
+      if (sessionAffinityCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_);
+      }
+      if (sessionAffinityCase_ == 4) {
+        output.writeMessage(4, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2635,6 +2978,18 @@ public final class BackendGroupOuterClass {
       for (int i = 0; i < backends_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, backends_.get(i));
+      }
+      if (sessionAffinityCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_);
+      }
+      if (sessionAffinityCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_);
+      }
+      if (sessionAffinityCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2654,6 +3009,25 @@ public final class BackendGroupOuterClass {
       boolean result = true;
       result = result && getBackendsList()
           .equals(other.getBackendsList());
+      result = result && getSessionAffinityCase().equals(
+          other.getSessionAffinityCase());
+      if (!result) return false;
+      switch (sessionAffinityCase_) {
+        case 2:
+          result = result && getConnection()
+              .equals(other.getConnection());
+          break;
+        case 3:
+          result = result && getHeader()
+              .equals(other.getHeader());
+          break;
+        case 4:
+          result = result && getCookie()
+              .equals(other.getCookie());
+          break;
+        case 0:
+        default:
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2668,6 +3042,22 @@ public final class BackendGroupOuterClass {
       if (getBackendsCount() > 0) {
         hash = (37 * hash) + BACKENDS_FIELD_NUMBER;
         hash = (53 * hash) + getBackendsList().hashCode();
+      }
+      switch (sessionAffinityCase_) {
+        case 2:
+          hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
+          hash = (53 * hash) + getConnection().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + HEADER_FIELD_NUMBER;
+          hash = (53 * hash) + getHeader().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + COOKIE_FIELD_NUMBER;
+          hash = (53 * hash) + getCookie().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2813,6 +3203,8 @@ public final class BackendGroupOuterClass {
         } else {
           backendsBuilder_.clear();
         }
+        sessionAffinityCase_ = 0;
+        sessionAffinity_ = null;
         return this;
       }
 
@@ -2840,6 +3232,7 @@ public final class BackendGroupOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup result = new yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackendGroup(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (backendsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             backends_ = java.util.Collections.unmodifiableList(backends_);
@@ -2849,6 +3242,29 @@ public final class BackendGroupOuterClass {
         } else {
           result.backends_ = backendsBuilder_.build();
         }
+        if (sessionAffinityCase_ == 2) {
+          if (connectionBuilder_ == null) {
+            result.sessionAffinity_ = sessionAffinity_;
+          } else {
+            result.sessionAffinity_ = connectionBuilder_.build();
+          }
+        }
+        if (sessionAffinityCase_ == 3) {
+          if (headerBuilder_ == null) {
+            result.sessionAffinity_ = sessionAffinity_;
+          } else {
+            result.sessionAffinity_ = headerBuilder_.build();
+          }
+        }
+        if (sessionAffinityCase_ == 4) {
+          if (cookieBuilder_ == null) {
+            result.sessionAffinity_ = sessionAffinity_;
+          } else {
+            result.sessionAffinity_ = cookieBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.sessionAffinityCase_ = sessionAffinityCase_;
         onBuilt();
         return result;
       }
@@ -2923,6 +3339,23 @@ public final class BackendGroupOuterClass {
             }
           }
         }
+        switch (other.getSessionAffinityCase()) {
+          case CONNECTION: {
+            mergeConnection(other.getConnection());
+            break;
+          }
+          case HEADER: {
+            mergeHeader(other.getHeader());
+            break;
+          }
+          case COOKIE: {
+            mergeCookie(other.getCookie());
+            break;
+          }
+          case SESSIONAFFINITY_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2951,6 +3384,21 @@ public final class BackendGroupOuterClass {
         }
         return this;
       }
+      private int sessionAffinityCase_ = 0;
+      private java.lang.Object sessionAffinity_;
+      public SessionAffinityCase
+          getSessionAffinityCase() {
+        return SessionAffinityCase.forNumber(
+            sessionAffinityCase_);
+      }
+
+      public Builder clearSessionAffinity() {
+        sessionAffinityCase_ = 0;
+        sessionAffinity_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HttpBackend> backends_ =
@@ -3264,6 +3712,414 @@ public final class BackendGroupOuterClass {
         }
         return backendsBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder> connectionBuilder_;
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public boolean hasConnection() {
+        return sessionAffinityCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
+        if (connectionBuilder_ == null) {
+          if (sessionAffinityCase_ == 2) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
+        } else {
+          if (sessionAffinityCase_ == 2) {
+            return connectionBuilder_.getMessage();
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public Builder setConnection(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity value) {
+        if (connectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessionAffinity_ = value;
+          onChanged();
+        } else {
+          connectionBuilder_.setMessage(value);
+        }
+        sessionAffinityCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public Builder setConnection(
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder builderForValue) {
+        if (connectionBuilder_ == null) {
+          sessionAffinity_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionBuilder_.setMessage(builderForValue.build());
+        }
+        sessionAffinityCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public Builder mergeConnection(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity value) {
+        if (connectionBuilder_ == null) {
+          if (sessionAffinityCase_ == 2 &&
+              sessionAffinity_ != yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance()) {
+            sessionAffinity_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.newBuilder((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sessionAffinity_ = value;
+          }
+          onChanged();
+        } else {
+          if (sessionAffinityCase_ == 2) {
+            connectionBuilder_.mergeFrom(value);
+          }
+          connectionBuilder_.setMessage(value);
+        }
+        sessionAffinityCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public Builder clearConnection() {
+        if (connectionBuilder_ == null) {
+          if (sessionAffinityCase_ == 2) {
+            sessionAffinityCase_ = 0;
+            sessionAffinity_ = null;
+            onChanged();
+          }
+        } else {
+          if (sessionAffinityCase_ == 2) {
+            sessionAffinityCase_ = 0;
+            sessionAffinity_ = null;
+          }
+          connectionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder getConnectionBuilder() {
+        return getConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
+        if ((sessionAffinityCase_ == 2) && (connectionBuilder_ != null)) {
+          return connectionBuilder_.getMessageOrBuilder();
+        } else {
+          if (sessionAffinityCase_ == 2) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder> 
+          getConnectionFieldBuilder() {
+        if (connectionBuilder_ == null) {
+          if (!(sessionAffinityCase_ == 2)) {
+            sessionAffinity_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
+          }
+          connectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder>(
+                  (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_,
+                  getParentForChildren(),
+                  isClean());
+          sessionAffinity_ = null;
+        }
+        sessionAffinityCase_ = 2;
+        onChanged();;
+        return connectionBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder> headerBuilder_;
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public boolean hasHeader() {
+        return sessionAffinityCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader() {
+        if (headerBuilder_ == null) {
+          if (sessionAffinityCase_ == 3) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
+        } else {
+          if (sessionAffinityCase_ == 3) {
+            return headerBuilder_.getMessage();
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public Builder setHeader(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity value) {
+        if (headerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessionAffinity_ = value;
+          onChanged();
+        } else {
+          headerBuilder_.setMessage(value);
+        }
+        sessionAffinityCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public Builder setHeader(
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder builderForValue) {
+        if (headerBuilder_ == null) {
+          sessionAffinity_ = builderForValue.build();
+          onChanged();
+        } else {
+          headerBuilder_.setMessage(builderForValue.build());
+        }
+        sessionAffinityCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public Builder mergeHeader(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity value) {
+        if (headerBuilder_ == null) {
+          if (sessionAffinityCase_ == 3 &&
+              sessionAffinity_ != yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance()) {
+            sessionAffinity_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.newBuilder((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sessionAffinity_ = value;
+          }
+          onChanged();
+        } else {
+          if (sessionAffinityCase_ == 3) {
+            headerBuilder_.mergeFrom(value);
+          }
+          headerBuilder_.setMessage(value);
+        }
+        sessionAffinityCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public Builder clearHeader() {
+        if (headerBuilder_ == null) {
+          if (sessionAffinityCase_ == 3) {
+            sessionAffinityCase_ = 0;
+            sessionAffinity_ = null;
+            onChanged();
+          }
+        } else {
+          if (sessionAffinityCase_ == 3) {
+            sessionAffinityCase_ = 0;
+            sessionAffinity_ = null;
+          }
+          headerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder getHeaderBuilder() {
+        return getHeaderFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder() {
+        if ((sessionAffinityCase_ == 3) && (headerBuilder_ != null)) {
+          return headerBuilder_.getMessageOrBuilder();
+        } else {
+          if (sessionAffinityCase_ == 3) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder> 
+          getHeaderFieldBuilder() {
+        if (headerBuilder_ == null) {
+          if (!(sessionAffinityCase_ == 3)) {
+            sessionAffinity_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
+          }
+          headerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder>(
+                  (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_,
+                  getParentForChildren(),
+                  isClean());
+          sessionAffinity_ = null;
+        }
+        sessionAffinityCase_ = 3;
+        onChanged();;
+        return headerBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder> cookieBuilder_;
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public boolean hasCookie() {
+        return sessionAffinityCase_ == 4;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie() {
+        if (cookieBuilder_ == null) {
+          if (sessionAffinityCase_ == 4) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
+        } else {
+          if (sessionAffinityCase_ == 4) {
+            return cookieBuilder_.getMessage();
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public Builder setCookie(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity value) {
+        if (cookieBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessionAffinity_ = value;
+          onChanged();
+        } else {
+          cookieBuilder_.setMessage(value);
+        }
+        sessionAffinityCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public Builder setCookie(
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder builderForValue) {
+        if (cookieBuilder_ == null) {
+          sessionAffinity_ = builderForValue.build();
+          onChanged();
+        } else {
+          cookieBuilder_.setMessage(builderForValue.build());
+        }
+        sessionAffinityCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public Builder mergeCookie(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity value) {
+        if (cookieBuilder_ == null) {
+          if (sessionAffinityCase_ == 4 &&
+              sessionAffinity_ != yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance()) {
+            sessionAffinity_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.newBuilder((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sessionAffinity_ = value;
+          }
+          onChanged();
+        } else {
+          if (sessionAffinityCase_ == 4) {
+            cookieBuilder_.mergeFrom(value);
+          }
+          cookieBuilder_.setMessage(value);
+        }
+        sessionAffinityCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public Builder clearCookie() {
+        if (cookieBuilder_ == null) {
+          if (sessionAffinityCase_ == 4) {
+            sessionAffinityCase_ = 0;
+            sessionAffinity_ = null;
+            onChanged();
+          }
+        } else {
+          if (sessionAffinityCase_ == 4) {
+            sessionAffinityCase_ = 0;
+            sessionAffinity_ = null;
+          }
+          cookieBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder getCookieBuilder() {
+        return getCookieFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder() {
+        if ((sessionAffinityCase_ == 4) && (cookieBuilder_ != null)) {
+          return cookieBuilder_.getMessageOrBuilder();
+        } else {
+          if (sessionAffinityCase_ == 4) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder> 
+          getCookieFieldBuilder() {
+        if (cookieBuilder_ == null) {
+          if (!(sessionAffinityCase_ == 4)) {
+            sessionAffinity_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
+          }
+          cookieBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder>(
+                  (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_,
+                  getParentForChildren(),
+                  isClean());
+          sessionAffinity_ = null;
+        }
+        sessionAffinityCase_ = 4;
+        onChanged();;
+        return cookieBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3364,6 +4220,47 @@ public final class BackendGroupOuterClass {
      */
     yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendOrBuilder getBackendsOrBuilder(
         int index);
+
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     */
+    boolean hasConnection();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     */
+    boolean hasHeader();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     */
+    boolean hasCookie();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie();
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder();
+
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup.SessionAffinityCase getSessionAffinityCase();
   }
   /**
    * <pre>
@@ -3418,6 +4315,48 @@ public final class BackendGroupOuterClass {
                   input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend.parser(), extensionRegistry));
               break;
             }
+            case 18: {
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder subBuilder = null;
+              if (sessionAffinityCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_).toBuilder();
+              }
+              sessionAffinity_ =
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_);
+                sessionAffinity_ = subBuilder.buildPartial();
+              }
+              sessionAffinityCase_ = 2;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder subBuilder = null;
+              if (sessionAffinityCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_).toBuilder();
+              }
+              sessionAffinity_ =
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_);
+                sessionAffinity_ = subBuilder.buildPartial();
+              }
+              sessionAffinityCase_ = 3;
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder subBuilder = null;
+              if (sessionAffinityCase_ == 4) {
+                subBuilder = ((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_).toBuilder();
+              }
+              sessionAffinity_ =
+                  input.readMessage(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_);
+                sessionAffinity_ = subBuilder.buildPartial();
+              }
+              sessionAffinityCase_ = 4;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3451,6 +4390,47 @@ public final class BackendGroupOuterClass {
       return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.internal_static_yandex_cloud_apploadbalancer_v1_GrpcBackendGroup_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup.class, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup.Builder.class);
+    }
+
+    private int bitField0_;
+    private int sessionAffinityCase_ = 0;
+    private java.lang.Object sessionAffinity_;
+    public enum SessionAffinityCase
+        implements com.google.protobuf.Internal.EnumLite {
+      CONNECTION(2),
+      HEADER(3),
+      COOKIE(4),
+      SESSIONAFFINITY_NOT_SET(0);
+      private final int value;
+      private SessionAffinityCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SessionAffinityCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SessionAffinityCase forNumber(int value) {
+        switch (value) {
+          case 2: return CONNECTION;
+          case 3: return HEADER;
+          case 4: return COOKIE;
+          case 0: return SESSIONAFFINITY_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SessionAffinityCase
+    getSessionAffinityCase() {
+      return SessionAffinityCase.forNumber(
+          sessionAffinityCase_);
     }
 
     public static final int BACKENDS_FIELD_NUMBER = 1;
@@ -3508,6 +4488,84 @@ public final class BackendGroupOuterClass {
       return backends_.get(index);
     }
 
+    public static final int CONNECTION_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     */
+    public boolean hasConnection() {
+      return sessionAffinityCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
+      if (sessionAffinityCase_ == 2) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
+      if (sessionAffinityCase_ == 2) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
+    }
+
+    public static final int HEADER_FIELD_NUMBER = 3;
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     */
+    public boolean hasHeader() {
+      return sessionAffinityCase_ == 3;
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader() {
+      if (sessionAffinityCase_ == 3) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder() {
+      if (sessionAffinityCase_ == 3) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
+    }
+
+    public static final int COOKIE_FIELD_NUMBER = 4;
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     */
+    public boolean hasCookie() {
+      return sessionAffinityCase_ == 4;
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie() {
+      if (sessionAffinityCase_ == 4) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder() {
+      if (sessionAffinityCase_ == 4) {
+         return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_;
+      }
+      return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3525,6 +4583,15 @@ public final class BackendGroupOuterClass {
       for (int i = 0; i < backends_.size(); i++) {
         output.writeMessage(1, backends_.get(i));
       }
+      if (sessionAffinityCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_);
+      }
+      if (sessionAffinityCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_);
+      }
+      if (sessionAffinityCase_ == 4) {
+        output.writeMessage(4, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3537,6 +4604,18 @@ public final class BackendGroupOuterClass {
       for (int i = 0; i < backends_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, backends_.get(i));
+      }
+      if (sessionAffinityCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_);
+      }
+      if (sessionAffinityCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_);
+      }
+      if (sessionAffinityCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3556,6 +4635,25 @@ public final class BackendGroupOuterClass {
       boolean result = true;
       result = result && getBackendsList()
           .equals(other.getBackendsList());
+      result = result && getSessionAffinityCase().equals(
+          other.getSessionAffinityCase());
+      if (!result) return false;
+      switch (sessionAffinityCase_) {
+        case 2:
+          result = result && getConnection()
+              .equals(other.getConnection());
+          break;
+        case 3:
+          result = result && getHeader()
+              .equals(other.getHeader());
+          break;
+        case 4:
+          result = result && getCookie()
+              .equals(other.getCookie());
+          break;
+        case 0:
+        default:
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3570,6 +4668,22 @@ public final class BackendGroupOuterClass {
       if (getBackendsCount() > 0) {
         hash = (37 * hash) + BACKENDS_FIELD_NUMBER;
         hash = (53 * hash) + getBackendsList().hashCode();
+      }
+      switch (sessionAffinityCase_) {
+        case 2:
+          hash = (37 * hash) + CONNECTION_FIELD_NUMBER;
+          hash = (53 * hash) + getConnection().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + HEADER_FIELD_NUMBER;
+          hash = (53 * hash) + getHeader().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + COOKIE_FIELD_NUMBER;
+          hash = (53 * hash) + getCookie().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3715,6 +4829,8 @@ public final class BackendGroupOuterClass {
         } else {
           backendsBuilder_.clear();
         }
+        sessionAffinityCase_ = 0;
+        sessionAffinity_ = null;
         return this;
       }
 
@@ -3742,6 +4858,7 @@ public final class BackendGroupOuterClass {
       public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup buildPartial() {
         yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup result = new yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackendGroup(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (backendsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             backends_ = java.util.Collections.unmodifiableList(backends_);
@@ -3751,6 +4868,29 @@ public final class BackendGroupOuterClass {
         } else {
           result.backends_ = backendsBuilder_.build();
         }
+        if (sessionAffinityCase_ == 2) {
+          if (connectionBuilder_ == null) {
+            result.sessionAffinity_ = sessionAffinity_;
+          } else {
+            result.sessionAffinity_ = connectionBuilder_.build();
+          }
+        }
+        if (sessionAffinityCase_ == 3) {
+          if (headerBuilder_ == null) {
+            result.sessionAffinity_ = sessionAffinity_;
+          } else {
+            result.sessionAffinity_ = headerBuilder_.build();
+          }
+        }
+        if (sessionAffinityCase_ == 4) {
+          if (cookieBuilder_ == null) {
+            result.sessionAffinity_ = sessionAffinity_;
+          } else {
+            result.sessionAffinity_ = cookieBuilder_.build();
+          }
+        }
+        result.bitField0_ = to_bitField0_;
+        result.sessionAffinityCase_ = sessionAffinityCase_;
         onBuilt();
         return result;
       }
@@ -3825,6 +4965,23 @@ public final class BackendGroupOuterClass {
             }
           }
         }
+        switch (other.getSessionAffinityCase()) {
+          case CONNECTION: {
+            mergeConnection(other.getConnection());
+            break;
+          }
+          case HEADER: {
+            mergeHeader(other.getHeader());
+            break;
+          }
+          case COOKIE: {
+            mergeCookie(other.getCookie());
+            break;
+          }
+          case SESSIONAFFINITY_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3853,6 +5010,21 @@ public final class BackendGroupOuterClass {
         }
         return this;
       }
+      private int sessionAffinityCase_ = 0;
+      private java.lang.Object sessionAffinity_;
+      public SessionAffinityCase
+          getSessionAffinityCase() {
+        return SessionAffinityCase.forNumber(
+            sessionAffinityCase_);
+      }
+
+      public Builder clearSessionAffinity() {
+        sessionAffinityCase_ = 0;
+        sessionAffinity_ = null;
+        onChanged();
+        return this;
+      }
+
       private int bitField0_;
 
       private java.util.List<yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.GrpcBackend> backends_ =
@@ -4165,6 +5337,414 @@ public final class BackendGroupOuterClass {
           backends_ = null;
         }
         return backendsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder> connectionBuilder_;
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public boolean hasConnection() {
+        return sessionAffinityCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity getConnection() {
+        if (connectionBuilder_ == null) {
+          if (sessionAffinityCase_ == 2) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
+        } else {
+          if (sessionAffinityCase_ == 2) {
+            return connectionBuilder_.getMessage();
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public Builder setConnection(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity value) {
+        if (connectionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessionAffinity_ = value;
+          onChanged();
+        } else {
+          connectionBuilder_.setMessage(value);
+        }
+        sessionAffinityCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public Builder setConnection(
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder builderForValue) {
+        if (connectionBuilder_ == null) {
+          sessionAffinity_ = builderForValue.build();
+          onChanged();
+        } else {
+          connectionBuilder_.setMessage(builderForValue.build());
+        }
+        sessionAffinityCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public Builder mergeConnection(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity value) {
+        if (connectionBuilder_ == null) {
+          if (sessionAffinityCase_ == 2 &&
+              sessionAffinity_ != yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance()) {
+            sessionAffinity_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.newBuilder((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sessionAffinity_ = value;
+          }
+          onChanged();
+        } else {
+          if (sessionAffinityCase_ == 2) {
+            connectionBuilder_.mergeFrom(value);
+          }
+          connectionBuilder_.setMessage(value);
+        }
+        sessionAffinityCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public Builder clearConnection() {
+        if (connectionBuilder_ == null) {
+          if (sessionAffinityCase_ == 2) {
+            sessionAffinityCase_ = 0;
+            sessionAffinity_ = null;
+            onChanged();
+          }
+        } else {
+          if (sessionAffinityCase_ == 2) {
+            sessionAffinityCase_ = 0;
+            sessionAffinity_ = null;
+          }
+          connectionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder getConnectionBuilder() {
+        return getConnectionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder getConnectionOrBuilder() {
+        if ((sessionAffinityCase_ == 2) && (connectionBuilder_ != null)) {
+          return connectionBuilder_.getMessageOrBuilder();
+        } else {
+          if (sessionAffinityCase_ == 2) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.ConnectionSessionAffinity connection = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder> 
+          getConnectionFieldBuilder() {
+        if (connectionBuilder_ == null) {
+          if (!(sessionAffinityCase_ == 2)) {
+            sessionAffinity_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.getDefaultInstance();
+          }
+          connectionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinityOrBuilder>(
+                  (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.ConnectionSessionAffinity) sessionAffinity_,
+                  getParentForChildren(),
+                  isClean());
+          sessionAffinity_ = null;
+        }
+        sessionAffinityCase_ = 2;
+        onChanged();;
+        return connectionBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder> headerBuilder_;
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public boolean hasHeader() {
+        return sessionAffinityCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity getHeader() {
+        if (headerBuilder_ == null) {
+          if (sessionAffinityCase_ == 3) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
+        } else {
+          if (sessionAffinityCase_ == 3) {
+            return headerBuilder_.getMessage();
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public Builder setHeader(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity value) {
+        if (headerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessionAffinity_ = value;
+          onChanged();
+        } else {
+          headerBuilder_.setMessage(value);
+        }
+        sessionAffinityCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public Builder setHeader(
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder builderForValue) {
+        if (headerBuilder_ == null) {
+          sessionAffinity_ = builderForValue.build();
+          onChanged();
+        } else {
+          headerBuilder_.setMessage(builderForValue.build());
+        }
+        sessionAffinityCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public Builder mergeHeader(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity value) {
+        if (headerBuilder_ == null) {
+          if (sessionAffinityCase_ == 3 &&
+              sessionAffinity_ != yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance()) {
+            sessionAffinity_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.newBuilder((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sessionAffinity_ = value;
+          }
+          onChanged();
+        } else {
+          if (sessionAffinityCase_ == 3) {
+            headerBuilder_.mergeFrom(value);
+          }
+          headerBuilder_.setMessage(value);
+        }
+        sessionAffinityCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public Builder clearHeader() {
+        if (headerBuilder_ == null) {
+          if (sessionAffinityCase_ == 3) {
+            sessionAffinityCase_ = 0;
+            sessionAffinity_ = null;
+            onChanged();
+          }
+        } else {
+          if (sessionAffinityCase_ == 3) {
+            sessionAffinityCase_ = 0;
+            sessionAffinity_ = null;
+          }
+          headerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder getHeaderBuilder() {
+        return getHeaderFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder getHeaderOrBuilder() {
+        if ((sessionAffinityCase_ == 3) && (headerBuilder_ != null)) {
+          return headerBuilder_.getMessageOrBuilder();
+        } else {
+          if (sessionAffinityCase_ == 3) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.HeaderSessionAffinity header = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder> 
+          getHeaderFieldBuilder() {
+        if (headerBuilder_ == null) {
+          if (!(sessionAffinityCase_ == 3)) {
+            sessionAffinity_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.getDefaultInstance();
+          }
+          headerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinityOrBuilder>(
+                  (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.HeaderSessionAffinity) sessionAffinity_,
+                  getParentForChildren(),
+                  isClean());
+          sessionAffinity_ = null;
+        }
+        sessionAffinityCase_ = 3;
+        onChanged();;
+        return headerBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder> cookieBuilder_;
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public boolean hasCookie() {
+        return sessionAffinityCase_ == 4;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity getCookie() {
+        if (cookieBuilder_ == null) {
+          if (sessionAffinityCase_ == 4) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
+        } else {
+          if (sessionAffinityCase_ == 4) {
+            return cookieBuilder_.getMessage();
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public Builder setCookie(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity value) {
+        if (cookieBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessionAffinity_ = value;
+          onChanged();
+        } else {
+          cookieBuilder_.setMessage(value);
+        }
+        sessionAffinityCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public Builder setCookie(
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder builderForValue) {
+        if (cookieBuilder_ == null) {
+          sessionAffinity_ = builderForValue.build();
+          onChanged();
+        } else {
+          cookieBuilder_.setMessage(builderForValue.build());
+        }
+        sessionAffinityCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public Builder mergeCookie(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity value) {
+        if (cookieBuilder_ == null) {
+          if (sessionAffinityCase_ == 4 &&
+              sessionAffinity_ != yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance()) {
+            sessionAffinity_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.newBuilder((yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sessionAffinity_ = value;
+          }
+          onChanged();
+        } else {
+          if (sessionAffinityCase_ == 4) {
+            cookieBuilder_.mergeFrom(value);
+          }
+          cookieBuilder_.setMessage(value);
+        }
+        sessionAffinityCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public Builder clearCookie() {
+        if (cookieBuilder_ == null) {
+          if (sessionAffinityCase_ == 4) {
+            sessionAffinityCase_ = 0;
+            sessionAffinity_ = null;
+            onChanged();
+          }
+        } else {
+          if (sessionAffinityCase_ == 4) {
+            sessionAffinityCase_ = 0;
+            sessionAffinity_ = null;
+          }
+          cookieBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder getCookieBuilder() {
+        return getCookieFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder getCookieOrBuilder() {
+        if ((sessionAffinityCase_ == 4) && (cookieBuilder_ != null)) {
+          return cookieBuilder_.getMessageOrBuilder();
+        } else {
+          if (sessionAffinityCase_ == 4) {
+            return (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_;
+          }
+          return yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.apploadbalancer.v1.CookieSessionAffinity cookie = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder> 
+          getCookieFieldBuilder() {
+        if (cookieBuilder_ == null) {
+          if (!(sessionAffinityCase_ == 4)) {
+            sessionAffinity_ = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.getDefaultInstance();
+          }
+          cookieBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity.Builder, yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinityOrBuilder>(
+                  (yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.CookieSessionAffinity) sessionAffinity_,
+                  getParentForChildren(),
+                  isClean());
+          sessionAffinity_ = null;
+        }
+        sessionAffinityCase_ = 4;
+        onChanged();;
+        return cookieBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6097,6 +7677,23 @@ public final class BackendGroupOuterClass {
      * <code>bool strict_locality = 3;</code>
      */
     boolean getStrictLocality();
+
+    /**
+     * <pre>
+     * Specifies algorithm the load balancer uses for target selection in particular backend.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+     */
+    int getModeValue();
+    /**
+     * <pre>
+     * Specifies algorithm the load balancer uses for target selection in particular backend.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+     */
+    yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode getMode();
   }
   /**
    * <pre>
@@ -6118,6 +7715,7 @@ public final class BackendGroupOuterClass {
       panicThreshold_ = 0L;
       localityAwareRoutingPercent_ = 0L;
       strictLocality_ = false;
+      mode_ = 0;
     }
 
     @java.lang.Override
@@ -6157,6 +7755,12 @@ public final class BackendGroupOuterClass {
             case 24: {
 
               strictLocality_ = input.readBool();
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              mode_ = rawValue;
               break;
             }
             default: {
@@ -6247,6 +7851,31 @@ public final class BackendGroupOuterClass {
       return strictLocality_;
     }
 
+    public static final int MODE_FIELD_NUMBER = 4;
+    private int mode_;
+    /**
+     * <pre>
+     * Specifies algorithm the load balancer uses for target selection in particular backend.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+     */
+    public int getModeValue() {
+      return mode_;
+    }
+    /**
+     * <pre>
+     * Specifies algorithm the load balancer uses for target selection in particular backend.
+     * </pre>
+     *
+     * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+     */
+    public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode getMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode result = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode.valueOf(mode_);
+      return result == null ? yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6270,6 +7899,9 @@ public final class BackendGroupOuterClass {
       if (strictLocality_ != false) {
         output.writeBool(3, strictLocality_);
       }
+      if (mode_ != yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode.ROUND_ROBIN.getNumber()) {
+        output.writeEnum(4, mode_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6290,6 +7922,10 @@ public final class BackendGroupOuterClass {
       if (strictLocality_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, strictLocality_);
+      }
+      if (mode_ != yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode.ROUND_ROBIN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, mode_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6313,6 +7949,7 @@ public final class BackendGroupOuterClass {
           == other.getLocalityAwareRoutingPercent());
       result = result && (getStrictLocality()
           == other.getStrictLocality());
+      result = result && mode_ == other.mode_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -6333,6 +7970,8 @@ public final class BackendGroupOuterClass {
       hash = (37 * hash) + STRICT_LOCALITY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getStrictLocality());
+      hash = (37 * hash) + MODE_FIELD_NUMBER;
+      hash = (53 * hash) + mode_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6476,6 +8115,8 @@ public final class BackendGroupOuterClass {
 
         strictLocality_ = false;
 
+        mode_ = 0;
+
         return this;
       }
 
@@ -6505,6 +8146,7 @@ public final class BackendGroupOuterClass {
         result.panicThreshold_ = panicThreshold_;
         result.localityAwareRoutingPercent_ = localityAwareRoutingPercent_;
         result.strictLocality_ = strictLocality_;
+        result.mode_ = mode_;
         onBuilt();
         return result;
       }
@@ -6561,6 +8203,9 @@ public final class BackendGroupOuterClass {
         }
         if (other.getStrictLocality() != false) {
           setStrictLocality(other.getStrictLocality());
+        }
+        if (other.mode_ != 0) {
+          setModeValue(other.getModeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6752,6 +8397,71 @@ public final class BackendGroupOuterClass {
       public Builder clearStrictLocality() {
         
         strictLocality_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int mode_ = 0;
+      /**
+       * <pre>
+       * Specifies algorithm the load balancer uses for target selection in particular backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+       */
+      public int getModeValue() {
+        return mode_;
+      }
+      /**
+       * <pre>
+       * Specifies algorithm the load balancer uses for target selection in particular backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+       */
+      public Builder setModeValue(int value) {
+        mode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies algorithm the load balancer uses for target selection in particular backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+       */
+      public yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode getMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode result = yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode.valueOf(mode_);
+        return result == null ? yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Specifies algorithm the load balancer uses for target selection in particular backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+       */
+      public Builder setMode(yandex.cloud.api.apploadbalancer.v1.BackendGroupOuterClass.LoadBalancingMode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        mode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies algorithm the load balancer uses for target selection in particular backend.
+       * </pre>
+       *
+       * <code>.yandex.cloud.apploadbalancer.v1.LoadBalancingMode mode = 4;</code>
+       */
+      public Builder clearMode() {
+        
+        mode_ = 0;
         onChanged();
         return this;
       }
@@ -18976,72 +20686,89 @@ public final class BackendGroupOuterClass {
       "pploadbalancer.v1.GrpcBackendGroupH\000\022.\n\n" +
       "created_at\030\t \001(\0132\032.google.protobuf.Times" +
       "tamp\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001B\t\n\007backend\"R\n\020HttpBackendGro" +
-      "up\022>\n\010backends\030\001 \003(\0132,.yandex.cloud.appl" +
-      "oadbalancer.v1.HttpBackend\"R\n\020GrpcBacken" +
-      "dGroup\022>\n\010backends\030\001 \003(\0132,.yandex.cloud." +
-      "apploadbalancer.v1.GrpcBackend\"7\n\025Header" +
-      "SessionAffinity\022\036\n\013header_name\030\001 \001(\tB\t\212\310" +
-      "1\0051-256\"X\n\025CookieSessionAffinity\022\027\n\004name" +
-      "\030\001 \001(\tB\t\212\3101\0051-256\022&\n\003ttl\030\002 \001(\0132\031.google." +
-      "protobuf.Duration\".\n\031ConnectionSessionAf" +
-      "finity\022\021\n\tsource_ip\030\001 \001(\010\"\205\001\n\023LoadBalanc" +
-      "ingConfig\022\"\n\017panic_threshold\030\001 \001(\003B\t\372\3071\005" +
-      "0-100\0221\n\036locality_aware_routing_percent\030" +
-      "\002 \001(\003B\t\372\3071\0050-100\022\027\n\017strict_locality\030\003 \001(" +
-      "\010\"\255\004\n\013HttpBackend\0222\n\004name\030\001 \001(\tB$\350\3071\001\362\3071" +
-      "\034[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n\016backend" +
-      "_weight\030\002 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022S\n\025load_balancing_config\030\003 \001(\01324.yand" +
-      "ex.cloud.apploadbalancer.v1.LoadBalancin" +
-      "gConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022M\n\rta" +
-      "rget_groups\030\005 \001(\01324.yandex.cloud.appload" +
-      "balancer.v1.TargetGroupsBackendH\000\022O\n\016sto" +
-      "rage_bucket\030\t \001(\01325.yandex.cloud.appload" +
-      "balancer.v1.StorageBucketBackendH\000\022B\n\014he" +
-      "althchecks\030\006 \003(\0132,.yandex.cloud.apploadb" +
-      "alancer.v1.HealthCheck\0228\n\003tls\030\007 \001(\0132+.ya" +
-      "ndex.cloud.apploadbalancer.v1.BackendTls" +
-      "\022\021\n\tuse_http2\030\010 \001(\010B\024\n\014backend_type\022\004\300\3011" +
-      "\001\"\311\003\n\013GrpcBackend\0222\n\004name\030\001 \001(\tB$\350\3071\001\362\3071" +
-      "\034[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n\016backend" +
-      "_weight\030\002 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022S\n\025load_balancing_config\030\003 \001(\01324.yand" +
-      "ex.cloud.apploadbalancer.v1.LoadBalancin" +
-      "gConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022M\n\rta" +
-      "rget_groups\030\005 \001(\01324.yandex.cloud.appload" +
-      "balancer.v1.TargetGroupsBackendH\000\022B\n\014hea" +
-      "lthchecks\030\007 \003(\0132,.yandex.cloud.apploadba" +
-      "lancer.v1.HealthCheck\0228\n\003tls\030\010 \001(\0132+.yan" +
-      "dex.cloud.apploadbalancer.v1.BackendTlsB" +
-      "\024\n\014backend_type\022\004\300\3011\001\"7\n\023TargetGroupsBac" +
-      "kend\022 \n\020target_group_ids\030\001 \003(\tB\006\202\3101\002>0\"i" +
-      "\n\nBackendTls\022\013\n\003sni\030\001 \001(\t\022N\n\022validation_" +
-      "context\030\003 \001(\01322.yandex.cloud.apploadbala" +
-      "ncer.v1.ValidationContext\",\n\024StorageBuck" +
-      "etBackend\022\024\n\006bucket\030\001 \001(\tB\004\350\3071\001\"\357\005\n\013Heal" +
-      "thCheck\0220\n\007timeout\030\001 \001(\0132\031.google.protob" +
-      "uf.DurationB\004\350\3071\001\0221\n\010interval\030\002 \001(\0132\031.go" +
-      "ogle.protobuf.DurationB\004\350\3071\001\022\037\n\027interval" +
-      "_jitter_percent\030\003 \001(\001\022\031\n\021healthy_thresho" +
-      "ld\030\004 \001(\003\022\033\n\023unhealthy_threshold\030\005 \001(\003\022%\n" +
-      "\020healthcheck_port\030\006 \001(\003B\013\372\3071\0070-65535\022P\n\006" +
-      "stream\030\007 \001(\0132>.yandex.cloud.apploadbalan" +
-      "cer.v1.HealthCheck.StreamHealthCheckH\000\022L" +
-      "\n\004http\030\010 \001(\0132<.yandex.cloud.apploadbalan" +
-      "cer.v1.HealthCheck.HttpHealthCheckH\000\022L\n\004" +
-      "grpc\030\t \001(\0132<.yandex.cloud.apploadbalance" +
-      "r.v1.HealthCheck.GrpcHealthCheckH\000\032\206\001\n\021S" +
-      "treamHealthCheck\0226\n\004send\030\001 \001(\0132(.yandex." +
-      "cloud.apploadbalancer.v1.Payload\0229\n\007rece" +
-      "ive\030\002 \001(\0132(.yandex.cloud.apploadbalancer" +
-      ".v1.Payload\032F\n\017HttpHealthCheck\022\014\n\004host\030\001" +
-      " \001(\t\022\022\n\004path\030\002 \001(\tB\004\350\3071\001\022\021\n\tuse_http2\030\003 " +
-      "\001(\010\032\'\n\017GrpcHealthCheck\022\024\n\014service_name\030\001" +
-      " \001(\tB\023\n\013healthcheck\022\004\300\3011\001Bz\n#yandex.clou" +
-      "d.api.apploadbalancer.v1ZSgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/applo" +
-      "adbalancer/v1;apploadbalancerb\006proto3"
+      "e\030\002 \001(\t:\0028\001B\t\n\007backend\"\314\002\n\020HttpBackendGr" +
+      "oup\022>\n\010backends\030\001 \003(\0132,.yandex.cloud.app" +
+      "loadbalancer.v1.HttpBackend\022P\n\nconnectio" +
+      "n\030\002 \001(\0132:.yandex.cloud.apploadbalancer.v" +
+      "1.ConnectionSessionAffinityH\000\022H\n\006header\030" +
+      "\003 \001(\01326.yandex.cloud.apploadbalancer.v1." +
+      "HeaderSessionAffinityH\000\022H\n\006cookie\030\004 \001(\0132" +
+      "6.yandex.cloud.apploadbalancer.v1.Cookie" +
+      "SessionAffinityH\000B\022\n\020session_affinity\"\314\002" +
+      "\n\020GrpcBackendGroup\022>\n\010backends\030\001 \003(\0132,.y" +
+      "andex.cloud.apploadbalancer.v1.GrpcBacke" +
+      "nd\022P\n\nconnection\030\002 \001(\0132:.yandex.cloud.ap" +
+      "ploadbalancer.v1.ConnectionSessionAffini" +
+      "tyH\000\022H\n\006header\030\003 \001(\01326.yandex.cloud.appl" +
+      "oadbalancer.v1.HeaderSessionAffinityH\000\022H" +
+      "\n\006cookie\030\004 \001(\01326.yandex.cloud.apploadbal" +
+      "ancer.v1.CookieSessionAffinityH\000B\022\n\020sess" +
+      "ion_affinity\"7\n\025HeaderSessionAffinity\022\036\n" +
+      "\013header_name\030\001 \001(\tB\t\212\3101\0051-256\"X\n\025CookieS" +
+      "essionAffinity\022\027\n\004name\030\001 \001(\tB\t\212\3101\0051-256\022" +
+      "&\n\003ttl\030\002 \001(\0132\031.google.protobuf.Duration\"" +
+      ".\n\031ConnectionSessionAffinity\022\021\n\tsource_i" +
+      "p\030\001 \001(\010\"\307\001\n\023LoadBalancingConfig\022\"\n\017panic" +
+      "_threshold\030\001 \001(\003B\t\372\3071\0050-100\0221\n\036locality_" +
+      "aware_routing_percent\030\002 \001(\003B\t\372\3071\0050-100\022\027" +
+      "\n\017strict_locality\030\003 \001(\010\022@\n\004mode\030\004 \001(\01622." +
+      "yandex.cloud.apploadbalancer.v1.LoadBala" +
+      "ncingMode\"\255\004\n\013HttpBackend\0222\n\004name\030\001 \001(\tB" +
+      "$\350\3071\001\362\3071\034[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n" +
+      "\016backend_weight\030\002 \001(\0132\033.google.protobuf." +
+      "Int64Value\022S\n\025load_balancing_config\030\003 \001(" +
+      "\01324.yandex.cloud.apploadbalancer.v1.Load" +
+      "BalancingConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-655" +
+      "35\022M\n\rtarget_groups\030\005 \001(\01324.yandex.cloud" +
+      ".apploadbalancer.v1.TargetGroupsBackendH" +
+      "\000\022O\n\016storage_bucket\030\t \001(\01325.yandex.cloud" +
+      ".apploadbalancer.v1.StorageBucketBackend" +
+      "H\000\022B\n\014healthchecks\030\006 \003(\0132,.yandex.cloud." +
+      "apploadbalancer.v1.HealthCheck\0228\n\003tls\030\007 " +
+      "\001(\0132+.yandex.cloud.apploadbalancer.v1.Ba" +
+      "ckendTls\022\021\n\tuse_http2\030\010 \001(\010B\024\n\014backend_t" +
+      "ype\022\004\300\3011\001\"\311\003\n\013GrpcBackend\0222\n\004name\030\001 \001(\tB" +
+      "$\350\3071\001\362\3071\034[a-z][-a-z0-9]{1,61}[a-z0-9]\0223\n" +
+      "\016backend_weight\030\002 \001(\0132\033.google.protobuf." +
+      "Int64Value\022S\n\025load_balancing_config\030\003 \001(" +
+      "\01324.yandex.cloud.apploadbalancer.v1.Load" +
+      "BalancingConfig\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-655" +
+      "35\022M\n\rtarget_groups\030\005 \001(\01324.yandex.cloud" +
+      ".apploadbalancer.v1.TargetGroupsBackendH" +
+      "\000\022B\n\014healthchecks\030\007 \003(\0132,.yandex.cloud.a" +
+      "pploadbalancer.v1.HealthCheck\0228\n\003tls\030\010 \001" +
+      "(\0132+.yandex.cloud.apploadbalancer.v1.Bac" +
+      "kendTlsB\024\n\014backend_type\022\004\300\3011\001\"7\n\023TargetG" +
+      "roupsBackend\022 \n\020target_group_ids\030\001 \003(\tB\006" +
+      "\202\3101\002>0\"i\n\nBackendTls\022\013\n\003sni\030\001 \001(\t\022N\n\022val" +
+      "idation_context\030\003 \001(\01322.yandex.cloud.app" +
+      "loadbalancer.v1.ValidationContext\",\n\024Sto" +
+      "rageBucketBackend\022\024\n\006bucket\030\001 \001(\tB\004\350\3071\001\"" +
+      "\357\005\n\013HealthCheck\0220\n\007timeout\030\001 \001(\0132\031.googl" +
+      "e.protobuf.DurationB\004\350\3071\001\0221\n\010interval\030\002 " +
+      "\001(\0132\031.google.protobuf.DurationB\004\350\3071\001\022\037\n\027" +
+      "interval_jitter_percent\030\003 \001(\001\022\031\n\021healthy" +
+      "_threshold\030\004 \001(\003\022\033\n\023unhealthy_threshold\030" +
+      "\005 \001(\003\022%\n\020healthcheck_port\030\006 \001(\003B\013\372\3071\0070-6" +
+      "5535\022P\n\006stream\030\007 \001(\0132>.yandex.cloud.appl" +
+      "oadbalancer.v1.HealthCheck.StreamHealthC" +
+      "heckH\000\022L\n\004http\030\010 \001(\0132<.yandex.cloud.appl" +
+      "oadbalancer.v1.HealthCheck.HttpHealthChe" +
+      "ckH\000\022L\n\004grpc\030\t \001(\0132<.yandex.cloud.apploa" +
+      "dbalancer.v1.HealthCheck.GrpcHealthCheck" +
+      "H\000\032\206\001\n\021StreamHealthCheck\0226\n\004send\030\001 \001(\0132(" +
+      ".yandex.cloud.apploadbalancer.v1.Payload" +
+      "\0229\n\007receive\030\002 \001(\0132(.yandex.cloud.appload" +
+      "balancer.v1.Payload\032F\n\017HttpHealthCheck\022\014" +
+      "\n\004host\030\001 \001(\t\022\022\n\004path\030\002 \001(\tB\004\350\3071\001\022\021\n\tuse_" +
+      "http2\030\003 \001(\010\032\'\n\017GrpcHealthCheck\022\024\n\014servic" +
+      "e_name\030\001 \001(\tB\023\n\013healthcheck\022\004\300\3011\001*T\n\021Loa" +
+      "dBalancingMode\022\017\n\013ROUND_ROBIN\020\000\022\n\n\006RANDO" +
+      "M\020\001\022\021\n\rLEAST_REQUEST\020\002\022\017\n\013MAGLEV_HASH\020\003B" +
+      "z\n#yandex.cloud.api.apploadbalancer.v1ZS" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/apploadbalancer/v1;apploadbalan" +
+      "cerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19078,13 +20805,13 @@ public final class BackendGroupOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_HttpBackendGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_HttpBackendGroup_descriptor,
-        new java.lang.String[] { "Backends", });
+        new java.lang.String[] { "Backends", "Connection", "Header", "Cookie", "SessionAffinity", });
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcBackendGroup_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_apploadbalancer_v1_GrpcBackendGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_GrpcBackendGroup_descriptor,
-        new java.lang.String[] { "Backends", });
+        new java.lang.String[] { "Backends", "Connection", "Header", "Cookie", "SessionAffinity", });
     internal_static_yandex_cloud_apploadbalancer_v1_HeaderSessionAffinity_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_apploadbalancer_v1_HeaderSessionAffinity_fieldAccessorTable = new
@@ -19108,7 +20835,7 @@ public final class BackendGroupOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancingConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_LoadBalancingConfig_descriptor,
-        new java.lang.String[] { "PanicThreshold", "LocalityAwareRoutingPercent", "StrictLocality", });
+        new java.lang.String[] { "PanicThreshold", "LocalityAwareRoutingPercent", "StrictLocality", "Mode", });
     internal_static_yandex_cloud_apploadbalancer_v1_HttpBackend_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_apploadbalancer_v1_HttpBackend_fieldAccessorTable = new

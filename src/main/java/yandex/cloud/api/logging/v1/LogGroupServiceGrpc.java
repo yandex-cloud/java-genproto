@@ -62,38 +62,6 @@ public final class LogGroupServiceGrpc {
      return getGetMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest,
-      yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> getGetDefaultMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetDefault",
-      requestType = yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest.class,
-      responseType = yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest,
-      yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> getGetDefaultMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest, yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> getGetDefaultMethod;
-    if ((getGetDefaultMethod = LogGroupServiceGrpc.getGetDefaultMethod) == null) {
-      synchronized (LogGroupServiceGrpc.class) {
-        if ((getGetDefaultMethod = LogGroupServiceGrpc.getGetDefaultMethod) == null) {
-          LogGroupServiceGrpc.getGetDefaultMethod = getGetDefaultMethod = 
-              io.grpc.MethodDescriptor.<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest, yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "yandex.cloud.logging.v1.LogGroupService", "GetDefault"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup.getDefaultInstance()))
-                  .setSchemaDescriptor(new LogGroupServiceMethodDescriptorSupplier("GetDefault"))
-                  .build();
-          }
-        }
-     }
-     return getGetDefaultMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsRequest,
       yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupStatsResponse> getStatsMethod;
 
@@ -457,17 +425,6 @@ public final class LogGroupServiceGrpc {
 
     /**
      * <pre>
-     * Returns default log group for the folder.
-     * To get the list of all available log groups, make a [List] request.
-     * </pre>
-     */
-    public void getDefault(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetDefaultMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Returns stats for the specified log group.
      * </pre>
      */
@@ -576,13 +533,6 @@ public final class LogGroupServiceGrpc {
                 yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup>(
                   this, METHODID_GET)))
           .addMethod(
-            getGetDefaultMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest,
-                yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup>(
-                  this, METHODID_GET_DEFAULT)))
-          .addMethod(
             getStatsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
@@ -687,18 +637,6 @@ public final class LogGroupServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Returns default log group for the folder.
-     * To get the list of all available log groups, make a [List] request.
-     * </pre>
-     */
-    public void getDefault(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getGetDefaultMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -846,17 +784,6 @@ public final class LogGroupServiceGrpc {
 
     /**
      * <pre>
-     * Returns default log group for the folder.
-     * To get the list of all available log groups, make a [List] request.
-     * </pre>
-     */
-    public yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup getDefault(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getGetDefaultMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * Returns stats for the specified log group.
      * </pre>
      */
@@ -991,18 +918,6 @@ public final class LogGroupServiceGrpc {
 
     /**
      * <pre>
-     * Returns default log group for the folder.
-     * To get the list of all available log groups, make a [List] request.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup> getDefault(
-        yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getGetDefaultMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Returns stats for the specified log group.
      * </pre>
      */
@@ -1113,17 +1028,16 @@ public final class LogGroupServiceGrpc {
   }
 
   private static final int METHODID_GET = 0;
-  private static final int METHODID_GET_DEFAULT = 1;
-  private static final int METHODID_STATS = 2;
-  private static final int METHODID_LIST = 3;
-  private static final int METHODID_CREATE = 4;
-  private static final int METHODID_UPDATE = 5;
-  private static final int METHODID_DELETE = 6;
-  private static final int METHODID_LIST_RESOURCES = 7;
-  private static final int METHODID_LIST_OPERATIONS = 8;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 9;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 10;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 11;
+  private static final int METHODID_STATS = 1;
+  private static final int METHODID_LIST = 2;
+  private static final int METHODID_CREATE = 3;
+  private static final int METHODID_UPDATE = 4;
+  private static final int METHODID_DELETE = 5;
+  private static final int METHODID_LIST_RESOURCES = 6;
+  private static final int METHODID_LIST_OPERATIONS = 7;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 8;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 9;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1144,10 +1058,6 @@ public final class LogGroupServiceGrpc {
       switch (methodId) {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetLogGroupRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup>) responseObserver);
-          break;
-        case METHODID_GET_DEFAULT:
-          serviceImpl.getDefault((yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.logging.v1.LogGroupOuterClass.LogGroup>) responseObserver);
           break;
         case METHODID_STATS:
@@ -1252,7 +1162,6 @@ public final class LogGroupServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new LogGroupServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
-              .addMethod(getGetDefaultMethod())
               .addMethod(getStatsMethod())
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())

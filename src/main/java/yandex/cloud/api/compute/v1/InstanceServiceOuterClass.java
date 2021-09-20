@@ -3400,6 +3400,50 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
+     * Array of filesystems to attach to the instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+     */
+    java.util.List<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec> 
+        getFilesystemSpecsList();
+    /**
+     * <pre>
+     * Array of filesystems to attach to the instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec getFilesystemSpecs(int index);
+    /**
+     * <pre>
+     * Array of filesystems to attach to the instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+     */
+    int getFilesystemSpecsCount();
+    /**
+     * <pre>
+     * Array of filesystems to attach to the instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder> 
+        getFilesystemSpecsOrBuilderList();
+    /**
+     * <pre>
+     * Array of filesystems to attach to the instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder getFilesystemSpecsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
      * Network configuration for the instance. Specifies how the network interface is configured
      * to interact with other services on the internal network and on the internet.
      * Currently only one network interface is supported per instance.
@@ -3592,6 +3636,7 @@ public final class InstanceServiceOuterClass {
       zoneId_ = "";
       platformId_ = "";
       secondaryDiskSpecs_ = java.util.Collections.emptyList();
+      filesystemSpecs_ = java.util.Collections.emptyList();
       networkInterfaceSpecs_ = java.util.Collections.emptyList();
       hostname_ = "";
       serviceAccountId_ = "";
@@ -3713,9 +3758,9 @@ public final class InstanceServiceOuterClass {
               break;
             }
             case 90: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
                 networkInterfaceSpecs_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.NetworkInterfaceSpec>();
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000800;
               }
               networkInterfaceSpecs_.add(
                   input.readMessage(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.NetworkInterfaceSpec.parser(), extensionRegistry));
@@ -3772,6 +3817,15 @@ public final class InstanceServiceOuterClass {
 
               break;
             }
+            case 138: {
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+                filesystemSpecs_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec>();
+                mutable_bitField0_ |= 0x00000400;
+              }
+              filesystemSpecs_.add(
+                  input.readMessage(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3790,8 +3844,11 @@ public final class InstanceServiceOuterClass {
         if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
           secondaryDiskSpecs_ = java.util.Collections.unmodifiableList(secondaryDiskSpecs_);
         }
-        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
           networkInterfaceSpecs_ = java.util.Collections.unmodifiableList(networkInterfaceSpecs_);
+        }
+        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+          filesystemSpecs_ = java.util.Collections.unmodifiableList(filesystemSpecs_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -4375,6 +4432,61 @@ public final class InstanceServiceOuterClass {
       return secondaryDiskSpecs_.get(index);
     }
 
+    public static final int FILESYSTEM_SPECS_FIELD_NUMBER = 17;
+    private java.util.List<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec> filesystemSpecs_;
+    /**
+     * <pre>
+     * Array of filesystems to attach to the instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+     */
+    public java.util.List<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec> getFilesystemSpecsList() {
+      return filesystemSpecs_;
+    }
+    /**
+     * <pre>
+     * Array of filesystems to attach to the instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder> 
+        getFilesystemSpecsOrBuilderList() {
+      return filesystemSpecs_;
+    }
+    /**
+     * <pre>
+     * Array of filesystems to attach to the instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+     */
+    public int getFilesystemSpecsCount() {
+      return filesystemSpecs_.size();
+    }
+    /**
+     * <pre>
+     * Array of filesystems to attach to the instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+     */
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec getFilesystemSpecs(int index) {
+      return filesystemSpecs_.get(index);
+    }
+    /**
+     * <pre>
+     * Array of filesystems to attach to the instance.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+     */
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder getFilesystemSpecsOrBuilder(
+        int index) {
+      return filesystemSpecs_.get(index);
+    }
+
     public static final int NETWORK_INTERFACE_SPECS_FIELD_NUMBER = 11;
     private java.util.List<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.NetworkInterfaceSpec> networkInterfaceSpecs_;
     /**
@@ -4701,6 +4813,9 @@ public final class InstanceServiceOuterClass {
       if (placementPolicy_ != null) {
         output.writeMessage(16, getPlacementPolicy());
       }
+      for (int i = 0; i < filesystemSpecs_.size(); i++) {
+        output.writeMessage(17, filesystemSpecs_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4779,6 +4894,10 @@ public final class InstanceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getPlacementPolicy());
       }
+      for (int i = 0; i < filesystemSpecs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, filesystemSpecs_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4821,6 +4940,8 @@ public final class InstanceServiceOuterClass {
       }
       result = result && getSecondaryDiskSpecsList()
           .equals(other.getSecondaryDiskSpecsList());
+      result = result && getFilesystemSpecsList()
+          .equals(other.getFilesystemSpecsList());
       result = result && getNetworkInterfaceSpecsList()
           .equals(other.getNetworkInterfaceSpecsList());
       result = result && getHostname()
@@ -4882,6 +5003,10 @@ public final class InstanceServiceOuterClass {
       if (getSecondaryDiskSpecsCount() > 0) {
         hash = (37 * hash) + SECONDARY_DISK_SPECS_FIELD_NUMBER;
         hash = (53 * hash) + getSecondaryDiskSpecsList().hashCode();
+      }
+      if (getFilesystemSpecsCount() > 0) {
+        hash = (37 * hash) + FILESYSTEM_SPECS_FIELD_NUMBER;
+        hash = (53 * hash) + getFilesystemSpecsList().hashCode();
       }
       if (getNetworkInterfaceSpecsCount() > 0) {
         hash = (37 * hash) + NETWORK_INTERFACE_SPECS_FIELD_NUMBER;
@@ -5058,6 +5183,7 @@ public final class InstanceServiceOuterClass {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getSecondaryDiskSpecsFieldBuilder();
+          getFilesystemSpecsFieldBuilder();
           getNetworkInterfaceSpecsFieldBuilder();
         }
       }
@@ -5094,9 +5220,15 @@ public final class InstanceServiceOuterClass {
         } else {
           secondaryDiskSpecsBuilder_.clear();
         }
+        if (filesystemSpecsBuilder_ == null) {
+          filesystemSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+        } else {
+          filesystemSpecsBuilder_.clear();
+        }
         if (networkInterfaceSpecsBuilder_ == null) {
           networkInterfaceSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000800);
         } else {
           networkInterfaceSpecsBuilder_.clear();
         }
@@ -5178,10 +5310,19 @@ public final class InstanceServiceOuterClass {
         } else {
           result.secondaryDiskSpecs_ = secondaryDiskSpecsBuilder_.build();
         }
-        if (networkInterfaceSpecsBuilder_ == null) {
+        if (filesystemSpecsBuilder_ == null) {
           if (((bitField0_ & 0x00000400) == 0x00000400)) {
-            networkInterfaceSpecs_ = java.util.Collections.unmodifiableList(networkInterfaceSpecs_);
+            filesystemSpecs_ = java.util.Collections.unmodifiableList(filesystemSpecs_);
             bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.filesystemSpecs_ = filesystemSpecs_;
+        } else {
+          result.filesystemSpecs_ = filesystemSpecsBuilder_.build();
+        }
+        if (networkInterfaceSpecsBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+            networkInterfaceSpecs_ = java.util.Collections.unmodifiableList(networkInterfaceSpecs_);
+            bitField0_ = (bitField0_ & ~0x00000800);
           }
           result.networkInterfaceSpecs_ = networkInterfaceSpecs_;
         } else {
@@ -5309,11 +5450,37 @@ public final class InstanceServiceOuterClass {
             }
           }
         }
+        if (filesystemSpecsBuilder_ == null) {
+          if (!other.filesystemSpecs_.isEmpty()) {
+            if (filesystemSpecs_.isEmpty()) {
+              filesystemSpecs_ = other.filesystemSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureFilesystemSpecsIsMutable();
+              filesystemSpecs_.addAll(other.filesystemSpecs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.filesystemSpecs_.isEmpty()) {
+            if (filesystemSpecsBuilder_.isEmpty()) {
+              filesystemSpecsBuilder_.dispose();
+              filesystemSpecsBuilder_ = null;
+              filesystemSpecs_ = other.filesystemSpecs_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              filesystemSpecsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFilesystemSpecsFieldBuilder() : null;
+            } else {
+              filesystemSpecsBuilder_.addAllMessages(other.filesystemSpecs_);
+            }
+          }
+        }
         if (networkInterfaceSpecsBuilder_ == null) {
           if (!other.networkInterfaceSpecs_.isEmpty()) {
             if (networkInterfaceSpecs_.isEmpty()) {
               networkInterfaceSpecs_ = other.networkInterfaceSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000800);
             } else {
               ensureNetworkInterfaceSpecsIsMutable();
               networkInterfaceSpecs_.addAll(other.networkInterfaceSpecs_);
@@ -5326,7 +5493,7 @@ public final class InstanceServiceOuterClass {
               networkInterfaceSpecsBuilder_.dispose();
               networkInterfaceSpecsBuilder_ = null;
               networkInterfaceSpecs_ = other.networkInterfaceSpecs_;
-              bitField0_ = (bitField0_ & ~0x00000400);
+              bitField0_ = (bitField0_ & ~0x00000800);
               networkInterfaceSpecsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getNetworkInterfaceSpecsFieldBuilder() : null;
@@ -6821,12 +6988,324 @@ public final class InstanceServiceOuterClass {
         return secondaryDiskSpecsBuilder_;
       }
 
+      private java.util.List<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec> filesystemSpecs_ =
+        java.util.Collections.emptyList();
+      private void ensureFilesystemSpecsIsMutable() {
+        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+          filesystemSpecs_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec>(filesystemSpecs_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder> filesystemSpecsBuilder_;
+
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec> getFilesystemSpecsList() {
+        if (filesystemSpecsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(filesystemSpecs_);
+        } else {
+          return filesystemSpecsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public int getFilesystemSpecsCount() {
+        if (filesystemSpecsBuilder_ == null) {
+          return filesystemSpecs_.size();
+        } else {
+          return filesystemSpecsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec getFilesystemSpecs(int index) {
+        if (filesystemSpecsBuilder_ == null) {
+          return filesystemSpecs_.get(index);
+        } else {
+          return filesystemSpecsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public Builder setFilesystemSpecs(
+          int index, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec value) {
+        if (filesystemSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesystemSpecsIsMutable();
+          filesystemSpecs_.set(index, value);
+          onChanged();
+        } else {
+          filesystemSpecsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public Builder setFilesystemSpecs(
+          int index, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder builderForValue) {
+        if (filesystemSpecsBuilder_ == null) {
+          ensureFilesystemSpecsIsMutable();
+          filesystemSpecs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          filesystemSpecsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public Builder addFilesystemSpecs(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec value) {
+        if (filesystemSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesystemSpecsIsMutable();
+          filesystemSpecs_.add(value);
+          onChanged();
+        } else {
+          filesystemSpecsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public Builder addFilesystemSpecs(
+          int index, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec value) {
+        if (filesystemSpecsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFilesystemSpecsIsMutable();
+          filesystemSpecs_.add(index, value);
+          onChanged();
+        } else {
+          filesystemSpecsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public Builder addFilesystemSpecs(
+          yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder builderForValue) {
+        if (filesystemSpecsBuilder_ == null) {
+          ensureFilesystemSpecsIsMutable();
+          filesystemSpecs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          filesystemSpecsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public Builder addFilesystemSpecs(
+          int index, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder builderForValue) {
+        if (filesystemSpecsBuilder_ == null) {
+          ensureFilesystemSpecsIsMutable();
+          filesystemSpecs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          filesystemSpecsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public Builder addAllFilesystemSpecs(
+          java.lang.Iterable<? extends yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec> values) {
+        if (filesystemSpecsBuilder_ == null) {
+          ensureFilesystemSpecsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, filesystemSpecs_);
+          onChanged();
+        } else {
+          filesystemSpecsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public Builder clearFilesystemSpecs() {
+        if (filesystemSpecsBuilder_ == null) {
+          filesystemSpecs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          filesystemSpecsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public Builder removeFilesystemSpecs(int index) {
+        if (filesystemSpecsBuilder_ == null) {
+          ensureFilesystemSpecsIsMutable();
+          filesystemSpecs_.remove(index);
+          onChanged();
+        } else {
+          filesystemSpecsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder getFilesystemSpecsBuilder(
+          int index) {
+        return getFilesystemSpecsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder getFilesystemSpecsOrBuilder(
+          int index) {
+        if (filesystemSpecsBuilder_ == null) {
+          return filesystemSpecs_.get(index);  } else {
+          return filesystemSpecsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder> 
+           getFilesystemSpecsOrBuilderList() {
+        if (filesystemSpecsBuilder_ != null) {
+          return filesystemSpecsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(filesystemSpecs_);
+        }
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder addFilesystemSpecsBuilder() {
+        return getFilesystemSpecsFieldBuilder().addBuilder(
+            yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder addFilesystemSpecsBuilder(
+          int index) {
+        return getFilesystemSpecsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Array of filesystems to attach to the instance.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder> 
+           getFilesystemSpecsBuilderList() {
+        return getFilesystemSpecsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder> 
+          getFilesystemSpecsFieldBuilder() {
+        if (filesystemSpecsBuilder_ == null) {
+          filesystemSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder>(
+                  filesystemSpecs_,
+                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  getParentForChildren(),
+                  isClean());
+          filesystemSpecs_ = null;
+        }
+        return filesystemSpecsBuilder_;
+      }
+
       private java.util.List<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.NetworkInterfaceSpec> networkInterfaceSpecs_ =
         java.util.Collections.emptyList();
       private void ensureNetworkInterfaceSpecsIsMutable() {
-        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
           networkInterfaceSpecs_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.NetworkInterfaceSpec>(networkInterfaceSpecs_);
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000800;
          }
       }
 
@@ -7042,7 +7521,7 @@ public final class InstanceServiceOuterClass {
       public Builder clearNetworkInterfaceSpecs() {
         if (networkInterfaceSpecsBuilder_ == null) {
           networkInterfaceSpecs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000800);
           onChanged();
         } else {
           networkInterfaceSpecsBuilder_.clear();
@@ -7161,7 +7640,7 @@ public final class InstanceServiceOuterClass {
           networkInterfaceSpecsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.compute.v1.InstanceServiceOuterClass.NetworkInterfaceSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.NetworkInterfaceSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.NetworkInterfaceSpecOrBuilder>(
                   networkInterfaceSpecs_,
-                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  ((bitField0_ & 0x00000800) == 0x00000800),
                   getParentForChildren(),
                   isClean());
           networkInterfaceSpecs_ = null;
@@ -23484,6 +23963,3438 @@ public final class InstanceServiceOuterClass {
 
   }
 
+  public interface AttachInstanceFilesystemRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.AttachInstanceFilesystemRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instance to attach the filesystem to.
+     * To get the instance ID, use a [InstanceService.List] request.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * ID of the instance to attach the filesystem to.
+     * To get the instance ID, use a [InstanceService.List] request.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+
+    /**
+     * <pre>
+     * Filesystem that should be attached.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    boolean hasAttachedFilesystemSpec();
+    /**
+     * <pre>
+     * Filesystem that should be attached.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec getAttachedFilesystemSpec();
+    /**
+     * <pre>
+     * Filesystem that should be attached.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder getAttachedFilesystemSpecOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.AttachInstanceFilesystemRequest}
+   */
+  public  static final class AttachInstanceFilesystemRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.AttachInstanceFilesystemRequest)
+      AttachInstanceFilesystemRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AttachInstanceFilesystemRequest.newBuilder() to construct.
+    private AttachInstanceFilesystemRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AttachInstanceFilesystemRequest() {
+      instanceId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AttachInstanceFilesystemRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder subBuilder = null;
+              if (attachedFilesystemSpec_ != null) {
+                subBuilder = attachedFilesystemSpec_.toBuilder();
+              }
+              attachedFilesystemSpec_ = input.readMessage(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(attachedFilesystemSpec_);
+                attachedFilesystemSpec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest.Builder.class);
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * ID of the instance to attach the filesystem to.
+     * To get the instance ID, use a [InstanceService.List] request.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instance to attach the filesystem to.
+     * To get the instance ID, use a [InstanceService.List] request.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ATTACHED_FILESYSTEM_SPEC_FIELD_NUMBER = 2;
+    private yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec attachedFilesystemSpec_;
+    /**
+     * <pre>
+     * Filesystem that should be attached.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public boolean hasAttachedFilesystemSpec() {
+      return attachedFilesystemSpec_ != null;
+    }
+    /**
+     * <pre>
+     * Filesystem that should be attached.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec getAttachedFilesystemSpec() {
+      return attachedFilesystemSpec_ == null ? yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.getDefaultInstance() : attachedFilesystemSpec_;
+    }
+    /**
+     * <pre>
+     * Filesystem that should be attached.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+     */
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder getAttachedFilesystemSpecOrBuilder() {
+      return getAttachedFilesystemSpec();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInstanceIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceId_);
+      }
+      if (attachedFilesystemSpec_ != null) {
+        output.writeMessage(2, getAttachedFilesystemSpec());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInstanceIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceId_);
+      }
+      if (attachedFilesystemSpec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAttachedFilesystemSpec());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest other = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest) obj;
+
+      boolean result = true;
+      result = result && getInstanceId()
+          .equals(other.getInstanceId());
+      result = result && (hasAttachedFilesystemSpec() == other.hasAttachedFilesystemSpec());
+      if (hasAttachedFilesystemSpec()) {
+        result = result && getAttachedFilesystemSpec()
+            .equals(other.getAttachedFilesystemSpec());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      if (hasAttachedFilesystemSpec()) {
+        hash = (37 * hash) + ATTACHED_FILESYSTEM_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getAttachedFilesystemSpec().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.AttachInstanceFilesystemRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.AttachInstanceFilesystemRequest)
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceId_ = "";
+
+        if (attachedFilesystemSpecBuilder_ == null) {
+          attachedFilesystemSpec_ = null;
+        } else {
+          attachedFilesystemSpec_ = null;
+          attachedFilesystemSpecBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest build() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest result = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest(this);
+        result.instanceId_ = instanceId_;
+        if (attachedFilesystemSpecBuilder_ == null) {
+          result.attachedFilesystemSpec_ = attachedFilesystemSpec_;
+        } else {
+          result.attachedFilesystemSpec_ = attachedFilesystemSpecBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest.getDefaultInstance()) return this;
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        if (other.hasAttachedFilesystemSpec()) {
+          mergeAttachedFilesystemSpec(other.getAttachedFilesystemSpec());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * ID of the instance to attach the filesystem to.
+       * To get the instance ID, use a [InstanceService.List] request.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance to attach the filesystem to.
+       * To get the instance ID, use a [InstanceService.List] request.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance to attach the filesystem to.
+       * To get the instance ID, use a [InstanceService.List] request.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance to attach the filesystem to.
+       * To get the instance ID, use a [InstanceService.List] request.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance to attach the filesystem to.
+       * To get the instance ID, use a [InstanceService.List] request.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec attachedFilesystemSpec_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder> attachedFilesystemSpecBuilder_;
+      /**
+       * <pre>
+       * Filesystem that should be attached.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public boolean hasAttachedFilesystemSpec() {
+        return attachedFilesystemSpecBuilder_ != null || attachedFilesystemSpec_ != null;
+      }
+      /**
+       * <pre>
+       * Filesystem that should be attached.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec getAttachedFilesystemSpec() {
+        if (attachedFilesystemSpecBuilder_ == null) {
+          return attachedFilesystemSpec_ == null ? yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.getDefaultInstance() : attachedFilesystemSpec_;
+        } else {
+          return attachedFilesystemSpecBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Filesystem that should be attached.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setAttachedFilesystemSpec(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec value) {
+        if (attachedFilesystemSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          attachedFilesystemSpec_ = value;
+          onChanged();
+        } else {
+          attachedFilesystemSpecBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Filesystem that should be attached.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setAttachedFilesystemSpec(
+          yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder builderForValue) {
+        if (attachedFilesystemSpecBuilder_ == null) {
+          attachedFilesystemSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          attachedFilesystemSpecBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Filesystem that should be attached.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeAttachedFilesystemSpec(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec value) {
+        if (attachedFilesystemSpecBuilder_ == null) {
+          if (attachedFilesystemSpec_ != null) {
+            attachedFilesystemSpec_ =
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.newBuilder(attachedFilesystemSpec_).mergeFrom(value).buildPartial();
+          } else {
+            attachedFilesystemSpec_ = value;
+          }
+          onChanged();
+        } else {
+          attachedFilesystemSpecBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Filesystem that should be attached.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearAttachedFilesystemSpec() {
+        if (attachedFilesystemSpecBuilder_ == null) {
+          attachedFilesystemSpec_ = null;
+          onChanged();
+        } else {
+          attachedFilesystemSpec_ = null;
+          attachedFilesystemSpecBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Filesystem that should be attached.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder getAttachedFilesystemSpecBuilder() {
+        
+        onChanged();
+        return getAttachedFilesystemSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Filesystem that should be attached.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder getAttachedFilesystemSpecOrBuilder() {
+        if (attachedFilesystemSpecBuilder_ != null) {
+          return attachedFilesystemSpecBuilder_.getMessageOrBuilder();
+        } else {
+          return attachedFilesystemSpec_ == null ?
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.getDefaultInstance() : attachedFilesystemSpec_;
+        }
+      }
+      /**
+       * <pre>
+       * Filesystem that should be attached.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder> 
+          getAttachedFilesystemSpecFieldBuilder() {
+        if (attachedFilesystemSpecBuilder_ == null) {
+          attachedFilesystemSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder>(
+                  getAttachedFilesystemSpec(),
+                  getParentForChildren(),
+                  isClean());
+          attachedFilesystemSpec_ = null;
+        }
+        return attachedFilesystemSpecBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.AttachInstanceFilesystemRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.AttachInstanceFilesystemRequest)
+    private static final yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AttachInstanceFilesystemRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AttachInstanceFilesystemRequest>() {
+      @java.lang.Override
+      public AttachInstanceFilesystemRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AttachInstanceFilesystemRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AttachInstanceFilesystemRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AttachInstanceFilesystemRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AttachInstanceFilesystemMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.AttachInstanceFilesystemMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+
+    /**
+     * <pre>
+     * ID of the filesystem.
+     * </pre>
+     *
+     * <code>string filesystem_id = 2;</code>
+     */
+    java.lang.String getFilesystemId();
+    /**
+     * <pre>
+     * ID of the filesystem.
+     * </pre>
+     *
+     * <code>string filesystem_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getFilesystemIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.AttachInstanceFilesystemMetadata}
+   */
+  public  static final class AttachInstanceFilesystemMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.AttachInstanceFilesystemMetadata)
+      AttachInstanceFilesystemMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AttachInstanceFilesystemMetadata.newBuilder() to construct.
+    private AttachInstanceFilesystemMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AttachInstanceFilesystemMetadata() {
+      instanceId_ = "";
+      filesystemId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AttachInstanceFilesystemMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filesystemId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata.Builder.class);
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     */
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILESYSTEM_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object filesystemId_;
+    /**
+     * <pre>
+     * ID of the filesystem.
+     * </pre>
+     *
+     * <code>string filesystem_id = 2;</code>
+     */
+    public java.lang.String getFilesystemId() {
+      java.lang.Object ref = filesystemId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filesystemId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the filesystem.
+     * </pre>
+     *
+     * <code>string filesystem_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFilesystemIdBytes() {
+      java.lang.Object ref = filesystemId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filesystemId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInstanceIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceId_);
+      }
+      if (!getFilesystemIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filesystemId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInstanceIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceId_);
+      }
+      if (!getFilesystemIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filesystemId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata other = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata) obj;
+
+      boolean result = true;
+      result = result && getInstanceId()
+          .equals(other.getInstanceId());
+      result = result && getFilesystemId()
+          .equals(other.getFilesystemId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      hash = (37 * hash) + FILESYSTEM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFilesystemId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.AttachInstanceFilesystemMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.AttachInstanceFilesystemMetadata)
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceId_ = "";
+
+        filesystemId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata build() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata result = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata(this);
+        result.instanceId_ = instanceId_;
+        result.filesystemId_ = filesystemId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata.getDefaultInstance()) return this;
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        if (!other.getFilesystemId().isEmpty()) {
+          filesystemId_ = other.filesystemId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filesystemId_ = "";
+      /**
+       * <pre>
+       * ID of the filesystem.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2;</code>
+       */
+      public java.lang.String getFilesystemId() {
+        java.lang.Object ref = filesystemId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filesystemId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the filesystem.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFilesystemIdBytes() {
+        java.lang.Object ref = filesystemId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filesystemId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the filesystem.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2;</code>
+       */
+      public Builder setFilesystemId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filesystemId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the filesystem.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2;</code>
+       */
+      public Builder clearFilesystemId() {
+        
+        filesystemId_ = getDefaultInstance().getFilesystemId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the filesystem.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2;</code>
+       */
+      public Builder setFilesystemIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filesystemId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.AttachInstanceFilesystemMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.AttachInstanceFilesystemMetadata)
+    private static final yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AttachInstanceFilesystemMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<AttachInstanceFilesystemMetadata>() {
+      @java.lang.Override
+      public AttachInstanceFilesystemMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AttachInstanceFilesystemMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AttachInstanceFilesystemMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AttachInstanceFilesystemMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DetachInstanceFilesystemRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.DetachInstanceFilesystemRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instance to detach the filesystem from.
+     * To get the instance ID, use a [InstanceService.List] request.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * ID of the instance to detach the filesystem from.
+     * To get the instance ID, use a [InstanceService.List] request.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+
+    /**
+     * <pre>
+     * ID of the filesystem that should be detached.
+     * </pre>
+     *
+     * <code>string filesystem_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getFilesystemId();
+    /**
+     * <pre>
+     * ID of the filesystem that should be detached.
+     * </pre>
+     *
+     * <code>string filesystem_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getFilesystemIdBytes();
+
+    /**
+     * <pre>
+     * Tag of the filesystem that should be detached.
+     * </pre>
+     *
+     * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+     */
+    java.lang.String getDeviceName();
+    /**
+     * <pre>
+     * Tag of the filesystem that should be detached.
+     * </pre>
+     *
+     * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDeviceNameBytes();
+
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest.FilesystemCase getFilesystemCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.DetachInstanceFilesystemRequest}
+   */
+  public  static final class DetachInstanceFilesystemRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DetachInstanceFilesystemRequest)
+      DetachInstanceFilesystemRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DetachInstanceFilesystemRequest.newBuilder() to construct.
+    private DetachInstanceFilesystemRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DetachInstanceFilesystemRequest() {
+      instanceId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DetachInstanceFilesystemRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              filesystemCase_ = 2;
+              filesystem_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              filesystemCase_ = 3;
+              filesystem_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest.Builder.class);
+    }
+
+    private int filesystemCase_ = 0;
+    private java.lang.Object filesystem_;
+    public enum FilesystemCase
+        implements com.google.protobuf.Internal.EnumLite {
+      FILESYSTEM_ID(2),
+      DEVICE_NAME(3),
+      FILESYSTEM_NOT_SET(0);
+      private final int value;
+      private FilesystemCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static FilesystemCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static FilesystemCase forNumber(int value) {
+        switch (value) {
+          case 2: return FILESYSTEM_ID;
+          case 3: return DEVICE_NAME;
+          case 0: return FILESYSTEM_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public FilesystemCase
+    getFilesystemCase() {
+      return FilesystemCase.forNumber(
+          filesystemCase_);
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * ID of the instance to detach the filesystem from.
+     * To get the instance ID, use a [InstanceService.List] request.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instance to detach the filesystem from.
+     * To get the instance ID, use a [InstanceService.List] request.
+     * </pre>
+     *
+     * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILESYSTEM_ID_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * ID of the filesystem that should be detached.
+     * </pre>
+     *
+     * <code>string filesystem_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getFilesystemId() {
+      java.lang.Object ref = "";
+      if (filesystemCase_ == 2) {
+        ref = filesystem_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (filesystemCase_ == 2) {
+          filesystem_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the filesystem that should be detached.
+     * </pre>
+     *
+     * <code>string filesystem_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getFilesystemIdBytes() {
+      java.lang.Object ref = "";
+      if (filesystemCase_ == 2) {
+        ref = filesystem_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (filesystemCase_ == 2) {
+          filesystem_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEVICE_NAME_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Tag of the filesystem that should be detached.
+     * </pre>
+     *
+     * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+     */
+    public java.lang.String getDeviceName() {
+      java.lang.Object ref = "";
+      if (filesystemCase_ == 3) {
+        ref = filesystem_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (filesystemCase_ == 3) {
+          filesystem_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Tag of the filesystem that should be detached.
+     * </pre>
+     *
+     * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDeviceNameBytes() {
+      java.lang.Object ref = "";
+      if (filesystemCase_ == 3) {
+        ref = filesystem_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (filesystemCase_ == 3) {
+          filesystem_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInstanceIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceId_);
+      }
+      if (filesystemCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filesystem_);
+      }
+      if (filesystemCase_ == 3) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, filesystem_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInstanceIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceId_);
+      }
+      if (filesystemCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filesystem_);
+      }
+      if (filesystemCase_ == 3) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, filesystem_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest other = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest) obj;
+
+      boolean result = true;
+      result = result && getInstanceId()
+          .equals(other.getInstanceId());
+      result = result && getFilesystemCase().equals(
+          other.getFilesystemCase());
+      if (!result) return false;
+      switch (filesystemCase_) {
+        case 2:
+          result = result && getFilesystemId()
+              .equals(other.getFilesystemId());
+          break;
+        case 3:
+          result = result && getDeviceName()
+              .equals(other.getDeviceName());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      switch (filesystemCase_) {
+        case 2:
+          hash = (37 * hash) + FILESYSTEM_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getFilesystemId().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + DEVICE_NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getDeviceName().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.DetachInstanceFilesystemRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.DetachInstanceFilesystemRequest)
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceId_ = "";
+
+        filesystemCase_ = 0;
+        filesystem_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest build() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest result = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest(this);
+        result.instanceId_ = instanceId_;
+        if (filesystemCase_ == 2) {
+          result.filesystem_ = filesystem_;
+        }
+        if (filesystemCase_ == 3) {
+          result.filesystem_ = filesystem_;
+        }
+        result.filesystemCase_ = filesystemCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest.getDefaultInstance()) return this;
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        switch (other.getFilesystemCase()) {
+          case FILESYSTEM_ID: {
+            filesystemCase_ = 2;
+            filesystem_ = other.filesystem_;
+            onChanged();
+            break;
+          }
+          case DEVICE_NAME: {
+            filesystemCase_ = 3;
+            filesystem_ = other.filesystem_;
+            onChanged();
+            break;
+          }
+          case FILESYSTEM_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int filesystemCase_ = 0;
+      private java.lang.Object filesystem_;
+      public FilesystemCase
+          getFilesystemCase() {
+        return FilesystemCase.forNumber(
+            filesystemCase_);
+      }
+
+      public Builder clearFilesystem() {
+        filesystemCase_ = 0;
+        filesystem_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * ID of the instance to detach the filesystem from.
+       * To get the instance ID, use a [InstanceService.List] request.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance to detach the filesystem from.
+       * To get the instance ID, use a [InstanceService.List] request.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance to detach the filesystem from.
+       * To get the instance ID, use a [InstanceService.List] request.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance to detach the filesystem from.
+       * To get the instance ID, use a [InstanceService.List] request.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance to detach the filesystem from.
+       * To get the instance ID, use a [InstanceService.List] request.
+       * </pre>
+       *
+       * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * ID of the filesystem that should be detached.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getFilesystemId() {
+        java.lang.Object ref = "";
+        if (filesystemCase_ == 2) {
+          ref = filesystem_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (filesystemCase_ == 2) {
+            filesystem_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the filesystem that should be detached.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getFilesystemIdBytes() {
+        java.lang.Object ref = "";
+        if (filesystemCase_ == 2) {
+          ref = filesystem_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (filesystemCase_ == 2) {
+            filesystem_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the filesystem that should be detached.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setFilesystemId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  filesystemCase_ = 2;
+        filesystem_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the filesystem that should be detached.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearFilesystemId() {
+        if (filesystemCase_ == 2) {
+          filesystemCase_ = 0;
+          filesystem_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the filesystem that should be detached.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setFilesystemIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        filesystemCase_ = 2;
+        filesystem_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Tag of the filesystem that should be detached.
+       * </pre>
+       *
+       * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+       */
+      public java.lang.String getDeviceName() {
+        java.lang.Object ref = "";
+        if (filesystemCase_ == 3) {
+          ref = filesystem_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (filesystemCase_ == 3) {
+            filesystem_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Tag of the filesystem that should be detached.
+       * </pre>
+       *
+       * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDeviceNameBytes() {
+        java.lang.Object ref = "";
+        if (filesystemCase_ == 3) {
+          ref = filesystem_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (filesystemCase_ == 3) {
+            filesystem_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Tag of the filesystem that should be detached.
+       * </pre>
+       *
+       * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+       */
+      public Builder setDeviceName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  filesystemCase_ = 3;
+        filesystem_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Tag of the filesystem that should be detached.
+       * </pre>
+       *
+       * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+       */
+      public Builder clearDeviceName() {
+        if (filesystemCase_ == 3) {
+          filesystemCase_ = 0;
+          filesystem_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Tag of the filesystem that should be detached.
+       * </pre>
+       *
+       * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+       */
+      public Builder setDeviceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        filesystemCase_ = 3;
+        filesystem_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.DetachInstanceFilesystemRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.DetachInstanceFilesystemRequest)
+    private static final yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DetachInstanceFilesystemRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DetachInstanceFilesystemRequest>() {
+      @java.lang.Override
+      public DetachInstanceFilesystemRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DetachInstanceFilesystemRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DetachInstanceFilesystemRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DetachInstanceFilesystemRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DetachInstanceFilesystemMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.DetachInstanceFilesystemMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     */
+    java.lang.String getInstanceId();
+    /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getInstanceIdBytes();
+
+    /**
+     * <pre>
+     * ID of the filesystem.
+     * </pre>
+     *
+     * <code>string filesystem_id = 2;</code>
+     */
+    java.lang.String getFilesystemId();
+    /**
+     * <pre>
+     * ID of the filesystem.
+     * </pre>
+     *
+     * <code>string filesystem_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getFilesystemIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.DetachInstanceFilesystemMetadata}
+   */
+  public  static final class DetachInstanceFilesystemMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.DetachInstanceFilesystemMetadata)
+      DetachInstanceFilesystemMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DetachInstanceFilesystemMetadata.newBuilder() to construct.
+    private DetachInstanceFilesystemMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DetachInstanceFilesystemMetadata() {
+      instanceId_ = "";
+      filesystemId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DetachInstanceFilesystemMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              instanceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filesystemId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata.Builder.class);
+    }
+
+    public static final int INSTANCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object instanceId_;
+    /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     */
+    public java.lang.String getInstanceId() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        instanceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the instance.
+     * </pre>
+     *
+     * <code>string instance_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getInstanceIdBytes() {
+      java.lang.Object ref = instanceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        instanceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILESYSTEM_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object filesystemId_;
+    /**
+     * <pre>
+     * ID of the filesystem.
+     * </pre>
+     *
+     * <code>string filesystem_id = 2;</code>
+     */
+    public java.lang.String getFilesystemId() {
+      java.lang.Object ref = filesystemId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filesystemId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the filesystem.
+     * </pre>
+     *
+     * <code>string filesystem_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFilesystemIdBytes() {
+      java.lang.Object ref = filesystemId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filesystemId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getInstanceIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, instanceId_);
+      }
+      if (!getFilesystemIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filesystemId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getInstanceIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, instanceId_);
+      }
+      if (!getFilesystemIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filesystemId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata other = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata) obj;
+
+      boolean result = true;
+      result = result && getInstanceId()
+          .equals(other.getInstanceId());
+      result = result && getFilesystemId()
+          .equals(other.getFilesystemId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + INSTANCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInstanceId().hashCode();
+      hash = (37 * hash) + FILESYSTEM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFilesystemId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.DetachInstanceFilesystemMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.DetachInstanceFilesystemMetadata)
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        instanceId_ = "";
+
+        filesystemId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata build() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata result = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata(this);
+        result.instanceId_ = instanceId_;
+        result.filesystemId_ = filesystemId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata.getDefaultInstance()) return this;
+        if (!other.getInstanceId().isEmpty()) {
+          instanceId_ = other.instanceId_;
+          onChanged();
+        }
+        if (!other.getFilesystemId().isEmpty()) {
+          filesystemId_ = other.filesystemId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object instanceId_ = "";
+      /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public java.lang.String getInstanceId() {
+        java.lang.Object ref = instanceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          instanceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getInstanceIdBytes() {
+        java.lang.Object ref = instanceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          instanceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public Builder setInstanceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public Builder clearInstanceId() {
+        
+        instanceId_ = getDefaultInstance().getInstanceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the instance.
+       * </pre>
+       *
+       * <code>string instance_id = 1;</code>
+       */
+      public Builder setInstanceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        instanceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filesystemId_ = "";
+      /**
+       * <pre>
+       * ID of the filesystem.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2;</code>
+       */
+      public java.lang.String getFilesystemId() {
+        java.lang.Object ref = filesystemId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filesystemId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the filesystem.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFilesystemIdBytes() {
+        java.lang.Object ref = filesystemId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filesystemId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the filesystem.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2;</code>
+       */
+      public Builder setFilesystemId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filesystemId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the filesystem.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2;</code>
+       */
+      public Builder clearFilesystemId() {
+        
+        filesystemId_ = getDefaultInstance().getFilesystemId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the filesystem.
+       * </pre>
+       *
+       * <code>string filesystem_id = 2;</code>
+       */
+      public Builder setFilesystemIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filesystemId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.DetachInstanceFilesystemMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.DetachInstanceFilesystemMetadata)
+    private static final yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DetachInstanceFilesystemMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DetachInstanceFilesystemMetadata>() {
+      @java.lang.Override
+      public DetachInstanceFilesystemMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DetachInstanceFilesystemMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DetachInstanceFilesystemMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DetachInstanceFilesystemMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface AddInstanceOneToOneNatRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.AddInstanceOneToOneNatRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -35565,6 +39476,1027 @@ public final class InstanceServiceOuterClass {
 
   }
 
+  public interface AttachedFilesystemSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.AttachedFilesystemSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The mode in which to attach this disk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
+     */
+    int getModeValue();
+    /**
+     * <pre>
+     * The mode in which to attach this disk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Mode getMode();
+
+    /**
+     * <pre>
+     * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+     * If not specified, a random value will be generated.
+     * </pre>
+     *
+     * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+     */
+    java.lang.String getDeviceName();
+    /**
+     * <pre>
+     * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+     * If not specified, a random value will be generated.
+     * </pre>
+     *
+     * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+     */
+    com.google.protobuf.ByteString
+        getDeviceNameBytes();
+
+    /**
+     * <pre>
+     * ID of the filesystem that should be attached.
+     * </pre>
+     *
+     * <code>string filesystem_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    java.lang.String getFilesystemId();
+    /**
+     * <pre>
+     * ID of the filesystem that should be attached.
+     * </pre>
+     *
+     * <code>string filesystem_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    com.google.protobuf.ByteString
+        getFilesystemIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.AttachedFilesystemSpec}
+   */
+  public  static final class AttachedFilesystemSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.AttachedFilesystemSpec)
+      AttachedFilesystemSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AttachedFilesystemSpec.newBuilder() to construct.
+    private AttachedFilesystemSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AttachedFilesystemSpec() {
+      mode_ = 0;
+      deviceName_ = "";
+      filesystemId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AttachedFilesystemSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              mode_ = rawValue;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              deviceName_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filesystemId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachedFilesystemSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachedFilesystemSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode}
+     */
+    public enum Mode
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>MODE_UNSPECIFIED = 0;</code>
+       */
+      MODE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Read-only access.
+       * </pre>
+       *
+       * <code>READ_ONLY = 1;</code>
+       */
+      READ_ONLY(1),
+      /**
+       * <pre>
+       * Read/Write access. Default value.
+       * </pre>
+       *
+       * <code>READ_WRITE = 2;</code>
+       */
+      READ_WRITE(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>MODE_UNSPECIFIED = 0;</code>
+       */
+      public static final int MODE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Read-only access.
+       * </pre>
+       *
+       * <code>READ_ONLY = 1;</code>
+       */
+      public static final int READ_ONLY_VALUE = 1;
+      /**
+       * <pre>
+       * Read/Write access. Default value.
+       * </pre>
+       *
+       * <code>READ_WRITE = 2;</code>
+       */
+      public static final int READ_WRITE_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Mode valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static Mode forNumber(int value) {
+        switch (value) {
+          case 0: return MODE_UNSPECIFIED;
+          case 1: return READ_ONLY;
+          case 2: return READ_WRITE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Mode>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Mode> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Mode>() {
+              public Mode findValueByNumber(int number) {
+                return Mode.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Mode[] VALUES = values();
+
+      public static Mode valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Mode(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode)
+    }
+
+    public static final int MODE_FIELD_NUMBER = 1;
+    private int mode_;
+    /**
+     * <pre>
+     * The mode in which to attach this disk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
+     */
+    public int getModeValue() {
+      return mode_;
+    }
+    /**
+     * <pre>
+     * The mode in which to attach this disk.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
+     */
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Mode getMode() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Mode result = yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Mode.valueOf(mode_);
+      return result == null ? yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Mode.UNRECOGNIZED : result;
+    }
+
+    public static final int DEVICE_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object deviceName_;
+    /**
+     * <pre>
+     * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+     * If not specified, a random value will be generated.
+     * </pre>
+     *
+     * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+     */
+    public java.lang.String getDeviceName() {
+      java.lang.Object ref = deviceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        deviceName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+     * If not specified, a random value will be generated.
+     * </pre>
+     *
+     * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getDeviceNameBytes() {
+      java.lang.Object ref = deviceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        deviceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILESYSTEM_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object filesystemId_;
+    /**
+     * <pre>
+     * ID of the filesystem that should be attached.
+     * </pre>
+     *
+     * <code>string filesystem_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public java.lang.String getFilesystemId() {
+      java.lang.Object ref = filesystemId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filesystemId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the filesystem that should be attached.
+     * </pre>
+     *
+     * <code>string filesystem_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     */
+    public com.google.protobuf.ByteString
+        getFilesystemIdBytes() {
+      java.lang.Object ref = filesystemId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filesystemId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (mode_ != yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Mode.MODE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, mode_);
+      }
+      if (!getDeviceNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deviceName_);
+      }
+      if (!getFilesystemIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, filesystemId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (mode_ != yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Mode.MODE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, mode_);
+      }
+      if (!getDeviceNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deviceName_);
+      }
+      if (!getFilesystemIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, filesystemId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec other = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec) obj;
+
+      boolean result = true;
+      result = result && mode_ == other.mode_;
+      result = result && getDeviceName()
+          .equals(other.getDeviceName());
+      result = result && getFilesystemId()
+          .equals(other.getFilesystemId());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODE_FIELD_NUMBER;
+      hash = (53 * hash) + mode_;
+      hash = (37 * hash) + DEVICE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDeviceName().hashCode();
+      hash = (37 * hash) + FILESYSTEM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFilesystemId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.AttachedFilesystemSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.AttachedFilesystemSpec)
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachedFilesystemSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachedFilesystemSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.class, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        mode_ = 0;
+
+        deviceName_ = "";
+
+        filesystemId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.internal_static_yandex_cloud_compute_v1_AttachedFilesystemSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec build() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec buildPartial() {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec result = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec(this);
+        result.mode_ = mode_;
+        result.deviceName_ = deviceName_;
+        result.filesystemId_ = filesystemId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec) {
+          return mergeFrom((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec other) {
+        if (other == yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.getDefaultInstance()) return this;
+        if (other.mode_ != 0) {
+          setModeValue(other.getModeValue());
+        }
+        if (!other.getDeviceName().isEmpty()) {
+          deviceName_ = other.deviceName_;
+          onChanged();
+        }
+        if (!other.getFilesystemId().isEmpty()) {
+          filesystemId_ = other.filesystemId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int mode_ = 0;
+      /**
+       * <pre>
+       * The mode in which to attach this disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
+       */
+      public int getModeValue() {
+        return mode_;
+      }
+      /**
+       * <pre>
+       * The mode in which to attach this disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
+       */
+      public Builder setModeValue(int value) {
+        mode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The mode in which to attach this disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Mode getMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Mode result = yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Mode.valueOf(mode_);
+        return result == null ? yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Mode.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * The mode in which to attach this disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
+       */
+      public Builder setMode(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Mode value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        mode_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The mode in which to attach this disk.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
+       */
+      public Builder clearMode() {
+        
+        mode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object deviceName_ = "";
+      /**
+       * <pre>
+       * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+       * If not specified, a random value will be generated.
+       * </pre>
+       *
+       * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+       */
+      public java.lang.String getDeviceName() {
+        java.lang.Object ref = deviceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          deviceName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+       * If not specified, a random value will be generated.
+       * </pre>
+       *
+       * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDeviceNameBytes() {
+        java.lang.Object ref = deviceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          deviceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+       * If not specified, a random value will be generated.
+       * </pre>
+       *
+       * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+       */
+      public Builder setDeviceName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        deviceName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+       * If not specified, a random value will be generated.
+       * </pre>
+       *
+       * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+       */
+      public Builder clearDeviceName() {
+        
+        deviceName_ = getDefaultInstance().getDeviceName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+       * If not specified, a random value will be generated.
+       * </pre>
+       *
+       * <code>string device_name = 2 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
+       */
+      public Builder setDeviceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        deviceName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filesystemId_ = "";
+      /**
+       * <pre>
+       * ID of the filesystem that should be attached.
+       * </pre>
+       *
+       * <code>string filesystem_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getFilesystemId() {
+        java.lang.Object ref = filesystemId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filesystemId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the filesystem that should be attached.
+       * </pre>
+       *
+       * <code>string filesystem_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getFilesystemIdBytes() {
+        java.lang.Object ref = filesystemId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filesystemId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the filesystem that should be attached.
+       * </pre>
+       *
+       * <code>string filesystem_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setFilesystemId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filesystemId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the filesystem that should be attached.
+       * </pre>
+       *
+       * <code>string filesystem_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder clearFilesystemId() {
+        
+        filesystemId_ = getDefaultInstance().getFilesystemId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the filesystem that should be attached.
+       * </pre>
+       *
+       * <code>string filesystem_id = 3 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public Builder setFilesystemIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filesystemId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.AttachedFilesystemSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.AttachedFilesystemSpec)
+    private static final yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec();
+    }
+
+    public static yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AttachedFilesystemSpec>
+        PARSER = new com.google.protobuf.AbstractParser<AttachedFilesystemSpec>() {
+      @java.lang.Override
+      public AttachedFilesystemSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AttachedFilesystemSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AttachedFilesystemSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AttachedFilesystemSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface NetworkInterfaceSpecOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.NetworkInterfaceSpec)
       com.google.protobuf.MessageOrBuilder {
@@ -40537,6 +45469,26 @@ public final class InstanceServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_DetachInstanceDiskMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -40592,6 +45544,11 @@ public final class InstanceServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_AttachedDiskSpec_DiskSpec_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_AttachedFilesystemSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_AttachedFilesystemSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_NetworkInterfaceSpec_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -40637,7 +45594,7 @@ public final class InstanceServiceOuterClass {
       " \001(\tB\n\212\3101\006<=1000\"f\n\025ListInstancesRespons" +
       "e\0224\n\tinstances\030\001 \003(\0132!.yandex.cloud.comp" +
       "ute.v1.Instance\022\027\n\017next_page_token\030\002 \001(\t" +
-      "\"\346\010\n\025CreateInstanceRequest\022\037\n\tfolder_id\030" +
+      "\"\261\t\n\025CreateInstanceRequest\022\037\n\tfolder_id\030" +
       "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |" +
       "[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descr" +
       "iption\030\003 \001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\004 \003(\013" +
@@ -40653,221 +45610,253 @@ public final class InstanceServiceOuterClass {
       "\t \001(\0132).yandex.cloud.compute.v1.Attached" +
       "DiskSpecB\004\350\3071\001\022P\n\024secondary_disk_specs\030\n" +
       " \003(\0132).yandex.cloud.compute.v1.AttachedD" +
-      "iskSpecB\007\202\3101\003<=3\022U\n\027network_interface_sp" +
-      "ecs\030\013 \003(\0132-.yandex.cloud.compute.v1.Netw" +
-      "orkInterfaceSpecB\005\202\3101\0011\0226\n\010hostname\030\014 \001(" +
-      "\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022" +
-      "D\n\021scheduling_policy\030\r \001(\0132).yandex.clou" +
-      "d.compute.v1.SchedulingPolicy\022\032\n\022service" +
-      "_account_id\030\016 \001(\t\022B\n\020network_settings\030\017 " +
-      "\001(\0132(.yandex.cloud.compute.v1.NetworkSet" +
-      "tings\022B\n\020placement_policy\030\020 \001(\0132(.yandex" +
-      ".cloud.compute.v1.PlacementPolicy\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\"7\n\026CreateInstanceMetadata\022\035\n\013i" +
-      "nstance_id\030\001 \001(\tB\010\212\3101\004<=50\"\376\005\n\025UpdateIns" +
-      "tanceRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
-      "otobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-" +
-      "z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descript" +
-      "ion\030\004 \001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\005 \003(\0132:." +
-      "yandex.cloud.compute.v1.UpdateInstanceRe" +
-      "quest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[" +
-      "-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./" +
-      "\\@0-9a-z]*\022\023\n\013platform_id\030\006 \001(\t\022>\n\016resou" +
-      "rces_spec\030\007 \001(\0132&.yandex.cloud.compute.v" +
-      "1.ResourcesSpec\022N\n\010metadata\030\010 \003(\0132<.yand" +
-      "ex.cloud.compute.v1.UpdateInstanceReques" +
-      "t.MetadataEntry\022\032\n\022service_account_id\030\t " +
-      "\001(\t\022B\n\020network_settings\030\n \001(\0132(.yandex.c" +
-      "loud.compute.v1.NetworkSettings\022B\n\020place" +
-      "ment_policy\030\013 \001(\0132(.yandex.cloud.compute" +
-      ".v1.PlacementPolicy\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026U" +
-      "pdateInstanceMetadata\022\023\n\013instance_id\030\001 \001" +
-      "(\t\":\n\025DeleteInstanceRequest\022!\n\013instance_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteInstance" +
-      "Metadata\022\023\n\013instance_id\030\001 \001(\t\"\307\001\n\035Update" +
-      "InstanceMetadataRequest\022\023\n\013instance_id\030\001" +
-      " \001(\t\022\016\n\006delete\030\002 \003(\t\022R\n\006upsert\030\003 \003(\0132B.y" +
-      "andex.cloud.compute.v1.UpdateInstanceMet" +
-      "adataRequest.UpsertEntry\032-\n\013UpsertEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"5\n\036Updat" +
-      "eInstanceMetadataMetadata\022\023\n\013instance_id" +
-      "\030\001 \001(\t\"b\n\"GetInstanceSerialPortOutputReq" +
-      "uest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\031\n\004port\030\002 \001(\003B\013\372\3071\0071,2,3,4\"7\n#GetInstanc" +
-      "eSerialPortOutputResponse\022\020\n\010contents\030\001 " +
-      "\001(\t\"8\n\023StopInstanceRequest\022!\n\013instance_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\024StopInstanceMet" +
-      "adata\022\023\n\013instance_id\030\001 \001(\t\"9\n\024StartInsta" +
-      "nceRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\",\n\025StartInstanceMetadata\022\023\n\013instan" +
-      "ce_id\030\001 \001(\t\";\n\026RestartInstanceRequest\022!\n" +
-      "\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\".\n\027Rest" +
-      "artInstanceMetadata\022\023\n\013instance_id\030\001 \001(\t" +
-      "\"\213\001\n\031AttachInstanceDiskRequest\022!\n\013instan" +
-      "ce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022K\n\022attached_di" +
-      "sk_spec\030\002 \001(\0132).yandex.cloud.compute.v1." +
-      "AttachedDiskSpecB\004\350\3071\001\"B\n\032AttachInstance" +
-      "DiskMetadata\022\023\n\013instance_id\030\001 \001(\t\022\017\n\007dis" +
-      "k_id\030\002 \001(\t\"\232\001\n\031DetachInstanceDiskRequest" +
-      "\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\007d" +
-      "isk_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022/\n\013device_name\030" +
-      "\003 \001(\tB\030\362\3071\024[a-z][a-z0-9-_]{,19}H\000B\014\n\004dis" +
-      "k\022\004\300\3011\001\"B\n\032DetachInstanceDiskMetadata\022\023\n" +
-      "\013instance_id\030\001 \001(\t\022\017\n\007disk_id\030\002 \001(\t\"\266\001\n\035" +
-      "AddInstanceOneToOneNatRequest\022\023\n\013instanc" +
-      "e_id\030\001 \001(\t\022\037\n\027network_interface_index\030\002 " +
-      "\001(\t\022\030\n\020internal_address\030\003 \001(\t\022E\n\023one_to_" +
-      "one_nat_spec\030\004 \001(\0132(.yandex.cloud.comput" +
-      "e.v1.OneToOneNatSpec\"5\n\036AddInstanceOneTo" +
-      "OneNatMetadata\022\023\n\013instance_id\030\001 \001(\t\"r\n R" +
-      "emoveInstanceOneToOneNatRequest\022\023\n\013insta" +
-      "nce_id\030\001 \001(\t\022\037\n\027network_interface_index\030" +
-      "\002 \001(\t\022\030\n\020internal_address\030\003 \001(\t\"8\n!Remov" +
-      "eInstanceOneToOneNatMetadata\022\023\n\013instance" +
-      "_id\030\001 \001(\t\"\345\002\n%UpdateInstanceNetworkInter" +
-      "faceRequest\022\031\n\013instance_id\030\001 \001(\tB\004\350\3071\001\022%" +
-      "\n\027network_interface_index\030\002 \001(\tB\004\350\3071\001\022/\n" +
-      "\013update_mask\030\003 \001(\0132\032.google.protobuf.Fie" +
-      "ldMask\022\021\n\tsubnet_id\030\004 \001(\t\022L\n\027primary_v4_" +
-      "address_spec\030\005 \001(\0132+.yandex.cloud.comput" +
-      "e.v1.PrimaryAddressSpec\022L\n\027primary_v6_ad" +
-      "dress_spec\030\006 \001(\0132+.yandex.cloud.compute." +
-      "v1.PrimaryAddressSpec\022\032\n\022security_group_" +
-      "ids\030\007 \003(\t\"^\n&UpdateInstanceNetworkInterf" +
-      "aceMetadata\022\023\n\013instance_id\030\001 \001(\t\022\037\n\027netw" +
-      "ork_interface_index\030\002 \001(\t\"\200\001\n\035ListInstan" +
-      "ceOperationsRequest\022!\n\013instance_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
-      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"p\n\036" +
-      "ListInstanceOperationsResponse\0225\n\noperat" +
-      "ions\030\001 \003(\0132!.yandex.cloud.operation.Oper" +
-      "ation\022\027\n\017next_page_token\030\002 \001(\t\"\347\001\n\rResou" +
-      "rcesSpec\022&\n\006memory\030\001 \001(\003B\026\350\3071\001\372\3071\016<=2748" +
-      "77906944\022i\n\005cores\030\002 \001(\003BZ\350\3071\001\372\3071R2,4,6,8" +
-      ",10,12,14,16,18,20,22,24,26,28,30,32,34," +
-      "36,40,44,48,52,56,60,64,68,72,76,80\022(\n\rc" +
-      "ore_fraction\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n" +
-      "\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\230\005\n\020AttachedDis" +
-      "kSpec\022<\n\004mode\030\001 \001(\0162..yandex.cloud.compu" +
-      "te.v1.AttachedDiskSpec.Mode\022-\n\013device_na" +
-      "me\030\002 \001(\tB\030\362\3071\024[a-z][a-z0-9-_]{,19}\022\023\n\013au" +
-      "to_delete\030\003 \001(\010\022G\n\tdisk_spec\030\004 \001(\01322.yan" +
-      "dex.cloud.compute.v1.AttachedDiskSpec.Di" +
-      "skSpecH\000\022\033\n\007disk_id\030\005 \001(\tB\010\212\3101\004<=50H\000\032\320\002" +
-      "\n\010DiskSpec\0222\n\004name\030\001 \001(\tB$\362\3071 |[a-z]([-a" +
-      "-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\002 " +
-      "\001(\tB\t\212\3101\005<=256\022\031\n\007type_id\030\003 \001(\tB\010\212\3101\004<=5" +
-      "0\022+\n\004size\030\004 \001(\003B\035\350\3071\001\372\3071\0254194304-4398046" +
-      "511104\022\022\n\nblock_size\030\010 \001(\003\022K\n\025disk_place" +
-      "ment_policy\030\007 \001(\0132,.yandex.cloud.compute" +
-      ".v1.DiskPlacementPolicy\022\034\n\010image_id\030\005 \001(" +
-      "\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\006 \001(\tB\010\212\3101\004" +
-      "<=50H\000B\010\n\006source\";\n\004Mode\022\024\n\020MODE_UNSPECI" +
-      "FIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002B\014\n" +
-      "\004disk\022\004\300\3011\001\"\357\001\n\024NetworkInterfaceSpec\022\037\n\t" +
-      "subnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022L\n\027primary" +
-      "_v4_address_spec\030\002 \001(\0132+.yandex.cloud.co" +
-      "mpute.v1.PrimaryAddressSpec\022L\n\027primary_v" +
-      "6_address_spec\030\003 \001(\0132+.yandex.cloud.comp" +
-      "ute.v1.PrimaryAddressSpec\022\032\n\022security_gr" +
-      "oup_ids\030\006 \003(\t\"\256\001\n\022PrimaryAddressSpec\022\017\n\007" +
-      "address\030\001 \001(\t\022E\n\023one_to_one_nat_spec\030\002 \001" +
-      "(\0132(.yandex.cloud.compute.v1.OneToOneNat" +
-      "Spec\022@\n\020dns_record_specs\030\003 \003(\0132&.yandex." +
-      "cloud.compute.v1.DnsRecordSpec\"\234\001\n\017OneTo" +
-      "OneNatSpec\0226\n\nip_version\030\001 \001(\0162\".yandex." +
-      "cloud.compute.v1.IpVersion\022\017\n\007address\030\002 " +
-      "\001(\t\022@\n\020dns_record_specs\030\003 \003(\0132&.yandex.c" +
-      "loud.compute.v1.DnsRecordSpec\"_\n\rDnsReco" +
-      "rdSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_i" +
-      "d\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr" +
-      "\030\004 \001(\010*#\n\014InstanceView\022\t\n\005BASIC\020\000\022\010\n\004FUL" +
-      "L\020\0012\252\030\n\017InstanceService\022\202\001\n\003Get\022+.yandex" +
-      ".cloud.compute.v1.GetInstanceRequest\032!.y" +
-      "andex.cloud.compute.v1.Instance\"+\202\323\344\223\002%\022" +
-      "#/compute/v1/instances/{instance_id}\022\204\001\n" +
-      "\004List\022-.yandex.cloud.compute.v1.ListInst" +
-      "ancesRequest\032..yandex.cloud.compute.v1.L" +
-      "istInstancesResponse\"\035\202\323\344\223\002\027\022\025/compute/v" +
-      "1/instances\022\243\001\n\006Create\022..yandex.cloud.co" +
-      "mpute.v1.CreateInstanceRequest\032!.yandex." +
-      "cloud.operation.Operation\"F\202\323\344\223\002\032\"\025/comp" +
-      "ute/v1/instances:\001*\262\322*\"\n\026CreateInstanceM" +
-      "etadata\022\010Instance\022\261\001\n\006Update\022..yandex.cl" +
-      "oud.compute.v1.UpdateInstanceRequest\032!.y" +
-      "andex.cloud.operation.Operation\"T\202\323\344\223\002(2" +
-      "#/compute/v1/instances/{instance_id}:\001*\262" +
-      "\322*\"\n\026UpdateInstanceMetadata\022\010Instance\022\273\001" +
-      "\n\006Delete\022..yandex.cloud.compute.v1.Delet" +
-      "eInstanceRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"^\202\323\344\223\002%*#/compute/v1/instanc" +
-      "es/{instance_id}\262\322*/\n\026DeleteInstanceMeta" +
-      "data\022\025google.protobuf.Empty\022\330\001\n\016UpdateMe" +
-      "tadata\0226.yandex.cloud.compute.v1.UpdateI" +
-      "nstanceMetadataRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"k\202\323\344\223\0027\"2/compute/v1/i" +
-      "nstances/{instance_id}/updateMetadata:\001*" +
-      "\262\322**\n\036UpdateInstanceMetadataMetadata\022\010In" +
-      "stance\022\316\001\n\023GetSerialPortOutput\022;.yandex." +
-      "cloud.compute.v1.GetInstanceSerialPortOu" +
-      "tputRequest\032<.yandex.cloud.compute.v1.Ge" +
-      "tInstanceSerialPortOutputResponse\"<\202\323\344\223\002" +
-      "6\0224/compute/v1/instances/{instance_id}:s" +
-      "erialPortOutput\022\272\001\n\004Stop\022,.yandex.cloud." +
-      "compute.v1.StopInstanceRequest\032!.yandex." +
-      "cloud.operation.Operation\"a\202\323\344\223\002*\"(/comp" +
-      "ute/v1/instances/{instance_id}:stop\262\322*-\n" +
-      "\024StopInstanceMetadata\022\025google.protobuf.E" +
-      "mpty\022\261\001\n\005Start\022-.yandex.cloud.compute.v1" +
-      ".StartInstanceRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"V\202\323\344\223\002+\")/compute/v1/in" +
-      "stances/{instance_id}:start\262\322*!\n\025StartIn" +
-      "stanceMetadata\022\010Instance\022\306\001\n\007Restart\022/.y" +
-      "andex.cloud.compute.v1.RestartInstanceRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"g\202\323\344\223\002-\"+/compute/v1/instances/{instanc" +
-      "e_id}:restart\262\322*0\n\027RestartInstanceMetada" +
-      "ta\022\025google.protobuf.Empty\022\310\001\n\nAttachDisk" +
-      "\0222.yandex.cloud.compute.v1.AttachInstanc" +
-      "eDiskRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"c\202\323\344\223\0023\"./compute/v1/instances/{" +
-      "instance_id}:attachDisk:\001*\262\322*&\n\032AttachIn" +
-      "stanceDiskMetadata\022\010Instance\022\310\001\n\nDetachD" +
-      "isk\0222.yandex.cloud.compute.v1.DetachInst" +
-      "anceDiskRequest\032!.yandex.cloud.operation" +
-      ".Operation\"c\202\323\344\223\0023\"./compute/v1/instance" +
-      "s/{instance_id}:detachDisk:\001*\262\322*&\n\032Detac" +
-      "hInstanceDiskMetadata\022\010Instance\022\330\001\n\016AddO" +
-      "neToOneNat\0226.yandex.cloud.compute.v1.Add" +
-      "InstanceOneToOneNatRequest\032!.yandex.clou" +
-      "d.operation.Operation\"k\202\323\344\223\0027\"2/compute/" +
-      "v1/instances/{instance_id}/addOneToOneNa" +
-      "t:\001*\262\322**\n\036AddInstanceOneToOneNatMetadata" +
-      "\022\010Instance\022\344\001\n\021RemoveOneToOneNat\0229.yande" +
-      "x.cloud.compute.v1.RemoveInstanceOneToOn" +
-      "eNatRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"q\202\323\344\223\002:\"5/compute/v1/instances/{i" +
-      "nstance_id}/removeOneToOneNat:\001*\262\322*-\n!Re" +
-      "moveInstanceOneToOneNatMetadata\022\010Instanc" +
-      "e\022\370\001\n\026UpdateNetworkInterface\022>.yandex.cl" +
-      "oud.compute.v1.UpdateInstanceNetworkInte" +
-      "rfaceRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"{\202\323\344\223\002?2:/compute/v1/instances/{" +
-      "instance_id}/updateNetworkInterface:\001*\262\322" +
-      "*2\n&UpdateInstanceNetworkInterfaceMetada" +
-      "ta\022\010Instance\022\271\001\n\016ListOperations\0226.yandex" +
-      ".cloud.compute.v1.ListInstanceOperations" +
-      "Request\0327.yandex.cloud.compute.v1.ListIn" +
-      "stanceOperationsResponse\"6\202\323\344\223\0020\022./compu" +
-      "te/v1/instances/{instance_id}/operations" +
-      "Bb\n\033yandex.cloud.api.compute.v1ZCgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/compute/v1;computeb\006proto3"
+      "iskSpecB\007\202\3101\003<=3\022I\n\020filesystem_specs\030\021 \003" +
+      "(\0132/.yandex.cloud.compute.v1.AttachedFil" +
+      "esystemSpec\022U\n\027network_interface_specs\030\013" +
+      " \003(\0132-.yandex.cloud.compute.v1.NetworkIn" +
+      "terfaceSpecB\005\202\3101\0011\0226\n\010hostname\030\014 \001(\tB$\362\307" +
+      "1 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022D\n\021sc" +
+      "heduling_policy\030\r \001(\0132).yandex.cloud.com" +
+      "pute.v1.SchedulingPolicy\022\032\n\022service_acco" +
+      "unt_id\030\016 \001(\t\022B\n\020network_settings\030\017 \001(\0132(" +
+      ".yandex.cloud.compute.v1.NetworkSettings" +
+      "\022B\n\020placement_policy\030\020 \001(\0132(.yandex.clou" +
+      "d.compute.v1.PlacementPolicy\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rM" +
+      "etadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"7\n\026CreateInstanceMetadata\022\035\n\013instan" +
+      "ce_id\030\001 \001(\tB\010\212\3101\004<=50\"\376\005\n\025UpdateInstance" +
+      "Request\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-" +
+      "a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004" +
+      " \001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\005 \003(\0132:.yande" +
+      "x.cloud.compute.v1.UpdateInstanceRequest" +
+      ".LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\" +
+      "@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9" +
+      "a-z]*\022\023\n\013platform_id\030\006 \001(\t\022>\n\016resources_" +
+      "spec\030\007 \001(\0132&.yandex.cloud.compute.v1.Res" +
+      "ourcesSpec\022N\n\010metadata\030\010 \003(\0132<.yandex.cl" +
+      "oud.compute.v1.UpdateInstanceRequest.Met" +
+      "adataEntry\022\032\n\022service_account_id\030\t \001(\t\022B" +
+      "\n\020network_settings\030\n \001(\0132(.yandex.cloud." +
+      "compute.v1.NetworkSettings\022B\n\020placement_" +
+      "policy\030\013 \001(\0132(.yandex.cloud.compute.v1.P" +
+      "lacementPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026Update" +
+      "InstanceMetadata\022\023\n\013instance_id\030\001 \001(\t\":\n" +
+      "\025DeleteInstanceRequest\022!\n\013instance_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteInstanceMetad" +
+      "ata\022\023\n\013instance_id\030\001 \001(\t\"\307\001\n\035UpdateInsta" +
+      "nceMetadataRequest\022\023\n\013instance_id\030\001 \001(\t\022" +
+      "\016\n\006delete\030\002 \003(\t\022R\n\006upsert\030\003 \003(\0132B.yandex" +
+      ".cloud.compute.v1.UpdateInstanceMetadata" +
+      "Request.UpsertEntry\032-\n\013UpsertEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"5\n\036UpdateInst" +
+      "anceMetadataMetadata\022\023\n\013instance_id\030\001 \001(" +
+      "\t\"b\n\"GetInstanceSerialPortOutputRequest\022" +
+      "!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\004po" +
+      "rt\030\002 \001(\003B\013\372\3071\0071,2,3,4\"7\n#GetInstanceSeri" +
+      "alPortOutputResponse\022\020\n\010contents\030\001 \001(\t\"8" +
+      "\n\023StopInstanceRequest\022!\n\013instance_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"+\n\024StopInstanceMetadata" +
+      "\022\023\n\013instance_id\030\001 \001(\t\"9\n\024StartInstanceRe" +
+      "quest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\",\n\025StartInstanceMetadata\022\023\n\013instance_id" +
+      "\030\001 \001(\t\";\n\026RestartInstanceRequest\022!\n\013inst" +
+      "ance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\".\n\027RestartIn" +
+      "stanceMetadata\022\023\n\013instance_id\030\001 \001(\t\"\213\001\n\031" +
+      "AttachInstanceDiskRequest\022!\n\013instance_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022K\n\022attached_disk_sp" +
+      "ec\030\002 \001(\0132).yandex.cloud.compute.v1.Attac" +
+      "hedDiskSpecB\004\350\3071\001\"B\n\032AttachInstanceDiskM" +
+      "etadata\022\023\n\013instance_id\030\001 \001(\t\022\017\n\007disk_id\030" +
+      "\002 \001(\t\"\232\001\n\031DetachInstanceDiskRequest\022!\n\013i" +
+      "nstance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\007disk_i" +
+      "d\030\002 \001(\tB\010\212\3101\004<=50H\000\022/\n\013device_name\030\003 \001(\t" +
+      "B\030\362\3071\024[a-z][a-z0-9-_]{,19}H\000B\014\n\004disk\022\004\300\301" +
+      "1\001\"B\n\032DetachInstanceDiskMetadata\022\023\n\013inst" +
+      "ance_id\030\001 \001(\t\022\017\n\007disk_id\030\002 \001(\t\"\235\001\n\037Attac" +
+      "hInstanceFilesystemRequest\022!\n\013instance_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\030attached_filesy" +
+      "stem_spec\030\002 \001(\0132/.yandex.cloud.compute.v" +
+      "1.AttachedFilesystemSpecB\004\350\3071\001\"N\n Attach" +
+      "InstanceFilesystemMetadata\022\023\n\013instance_i" +
+      "d\030\001 \001(\t\022\025\n\rfilesystem_id\030\002 \001(\t\"\254\001\n\037Detac" +
+      "hInstanceFilesystemRequest\022!\n\013instance_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\rfilesystem_id\030\002" +
+      " \001(\tB\010\212\3101\004<=50H\000\022/\n\013device_name\030\003 \001(\tB\030\362" +
+      "\3071\024[a-z][a-z0-9-_]{,19}H\000B\022\n\nfilesystem\022" +
+      "\004\300\3011\001\"N\n DetachInstanceFilesystemMetadat" +
+      "a\022\023\n\013instance_id\030\001 \001(\t\022\025\n\rfilesystem_id\030" +
+      "\002 \001(\t\"\266\001\n\035AddInstanceOneToOneNatRequest\022" +
+      "\023\n\013instance_id\030\001 \001(\t\022\037\n\027network_interfac" +
+      "e_index\030\002 \001(\t\022\030\n\020internal_address\030\003 \001(\t\022" +
+      "E\n\023one_to_one_nat_spec\030\004 \001(\0132(.yandex.cl" +
+      "oud.compute.v1.OneToOneNatSpec\"5\n\036AddIns" +
+      "tanceOneToOneNatMetadata\022\023\n\013instance_id\030" +
+      "\001 \001(\t\"r\n RemoveInstanceOneToOneNatReques" +
+      "t\022\023\n\013instance_id\030\001 \001(\t\022\037\n\027network_interf" +
+      "ace_index\030\002 \001(\t\022\030\n\020internal_address\030\003 \001(" +
+      "\t\"8\n!RemoveInstanceOneToOneNatMetadata\022\023" +
+      "\n\013instance_id\030\001 \001(\t\"\345\002\n%UpdateInstanceNe" +
+      "tworkInterfaceRequest\022\031\n\013instance_id\030\001 \001" +
+      "(\tB\004\350\3071\001\022%\n\027network_interface_index\030\002 \001(" +
+      "\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.google.pr" +
+      "otobuf.FieldMask\022\021\n\tsubnet_id\030\004 \001(\t\022L\n\027p" +
+      "rimary_v4_address_spec\030\005 \001(\0132+.yandex.cl" +
+      "oud.compute.v1.PrimaryAddressSpec\022L\n\027pri" +
+      "mary_v6_address_spec\030\006 \001(\0132+.yandex.clou" +
+      "d.compute.v1.PrimaryAddressSpec\022\032\n\022secur" +
+      "ity_group_ids\030\007 \003(\t\"^\n&UpdateInstanceNet" +
+      "workInterfaceMetadata\022\023\n\013instance_id\030\001 \001" +
+      "(\t\022\037\n\027network_interface_index\030\002 \001(\t\"\200\001\n\035" +
+      "ListInstanceOperationsRequest\022!\n\013instanc" +
+      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
+      "\005<=100\"p\n\036ListInstanceOperationsResponse" +
+      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
+      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
+      "\"\347\001\n\rResourcesSpec\022&\n\006memory\030\001 \001(\003B\026\350\3071\001" +
+      "\372\3071\016<=274877906944\022i\n\005cores\030\002 \001(\003BZ\350\3071\001\372" +
+      "\3071R2,4,6,8,10,12,14,16,18,20,22,24,26,28" +
+      ",30,32,34,36,40,44,48,52,56,60,64,68,72," +
+      "76,80\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r0,5,20" +
+      ",50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\230\005\n\020A" +
+      "ttachedDiskSpec\022<\n\004mode\030\001 \001(\0162..yandex.c" +
+      "loud.compute.v1.AttachedDiskSpec.Mode\022-\n" +
+      "\013device_name\030\002 \001(\tB\030\362\3071\024[a-z][a-z0-9-_]{" +
+      ",19}\022\023\n\013auto_delete\030\003 \001(\010\022G\n\tdisk_spec\030\004" +
+      " \001(\01322.yandex.cloud.compute.v1.AttachedD" +
+      "iskSpec.DiskSpecH\000\022\033\n\007disk_id\030\005 \001(\tB\010\212\3101" +
+      "\004<=50H\000\032\320\002\n\010DiskSpec\0222\n\004name\030\001 \001(\tB$\362\3071 " +
+      "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013desc" +
+      "ription\030\002 \001(\tB\t\212\3101\005<=256\022\031\n\007type_id\030\003 \001(" +
+      "\tB\010\212\3101\004<=50\022+\n\004size\030\004 \001(\003B\035\350\3071\001\372\3071\02541943" +
+      "04-4398046511104\022\022\n\nblock_size\030\010 \001(\003\022K\n\025" +
+      "disk_placement_policy\030\007 \001(\0132,.yandex.clo" +
+      "ud.compute.v1.DiskPlacementPolicy\022\034\n\010ima" +
+      "ge_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\006" +
+      " \001(\tB\010\212\3101\004<=50H\000B\010\n\006source\";\n\004Mode\022\024\n\020MO" +
+      "DE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_" +
+      "WRITE\020\002B\014\n\004disk\022\004\300\3011\001\"\351\001\n\026AttachedFilesy" +
+      "stemSpec\022B\n\004mode\030\001 \001(\01624.yandex.cloud.co" +
+      "mpute.v1.AttachedFilesystemSpec.Mode\022-\n\013" +
+      "device_name\030\002 \001(\tB\030\362\3071\024[a-z][a-z0-9-_]{," +
+      "19}\022\037\n\rfilesystem_id\030\003 \001(\tB\010\212\3101\004<=50\";\n\004" +
+      "Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020" +
+      "\001\022\016\n\nREAD_WRITE\020\002\"\357\001\n\024NetworkInterfaceSp" +
+      "ec\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022L\n\027p" +
+      "rimary_v4_address_spec\030\002 \001(\0132+.yandex.cl" +
+      "oud.compute.v1.PrimaryAddressSpec\022L\n\027pri" +
+      "mary_v6_address_spec\030\003 \001(\0132+.yandex.clou" +
+      "d.compute.v1.PrimaryAddressSpec\022\032\n\022secur" +
+      "ity_group_ids\030\006 \003(\t\"\256\001\n\022PrimaryAddressSp" +
+      "ec\022\017\n\007address\030\001 \001(\t\022E\n\023one_to_one_nat_sp" +
+      "ec\030\002 \001(\0132(.yandex.cloud.compute.v1.OneTo" +
+      "OneNatSpec\022@\n\020dns_record_specs\030\003 \003(\0132&.y" +
+      "andex.cloud.compute.v1.DnsRecordSpec\"\234\001\n" +
+      "\017OneToOneNatSpec\0226\n\nip_version\030\001 \001(\0162\".y" +
+      "andex.cloud.compute.v1.IpVersion\022\017\n\007addr" +
+      "ess\030\002 \001(\t\022@\n\020dns_record_specs\030\003 \003(\0132&.ya" +
+      "ndex.cloud.compute.v1.DnsRecordSpec\"_\n\rD" +
+      "nsRecordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_" +
+      "zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022" +
+      "\013\n\003ptr\030\004 \001(\010*#\n\014InstanceView\022\t\n\005BASIC\020\000\022" +
+      "\010\n\004FULL\020\0012\360\033\n\017InstanceService\022\202\001\n\003Get\022+." +
+      "yandex.cloud.compute.v1.GetInstanceReque" +
+      "st\032!.yandex.cloud.compute.v1.Instance\"+\202" +
+      "\323\344\223\002%\022#/compute/v1/instances/{instance_i" +
+      "d}\022\204\001\n\004List\022-.yandex.cloud.compute.v1.Li" +
+      "stInstancesRequest\032..yandex.cloud.comput" +
+      "e.v1.ListInstancesResponse\"\035\202\323\344\223\002\027\022\025/com" +
+      "pute/v1/instances\022\243\001\n\006Create\022..yandex.cl" +
+      "oud.compute.v1.CreateInstanceRequest\032!.y" +
+      "andex.cloud.operation.Operation\"F\202\323\344\223\002\032\"" +
+      "\025/compute/v1/instances:\001*\262\322*\"\n\026CreateIns" +
+      "tanceMetadata\022\010Instance\022\261\001\n\006Update\022..yan" +
+      "dex.cloud.compute.v1.UpdateInstanceReque" +
+      "st\032!.yandex.cloud.operation.Operation\"T\202" +
+      "\323\344\223\002(2#/compute/v1/instances/{instance_i" +
+      "d}:\001*\262\322*\"\n\026UpdateInstanceMetadata\022\010Insta" +
+      "nce\022\273\001\n\006Delete\022..yandex.cloud.compute.v1" +
+      ".DeleteInstanceRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"^\202\323\344\223\002%*#/compute/v1/i" +
+      "nstances/{instance_id}\262\322*/\n\026DeleteInstan" +
+      "ceMetadata\022\025google.protobuf.Empty\022\330\001\n\016Up" +
+      "dateMetadata\0226.yandex.cloud.compute.v1.U" +
+      "pdateInstanceMetadataRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"k\202\323\344\223\0027\"2/comput" +
+      "e/v1/instances/{instance_id}/updateMetad" +
+      "ata:\001*\262\322**\n\036UpdateInstanceMetadataMetada" +
+      "ta\022\010Instance\022\316\001\n\023GetSerialPortOutput\022;.y" +
+      "andex.cloud.compute.v1.GetInstanceSerial" +
+      "PortOutputRequest\032<.yandex.cloud.compute" +
+      ".v1.GetInstanceSerialPortOutputResponse\"" +
+      "<\202\323\344\223\0026\0224/compute/v1/instances/{instance" +
+      "_id}:serialPortOutput\022\272\001\n\004Stop\022,.yandex." +
+      "cloud.compute.v1.StopInstanceRequest\032!.y" +
+      "andex.cloud.operation.Operation\"a\202\323\344\223\002*\"" +
+      "(/compute/v1/instances/{instance_id}:sto" +
+      "p\262\322*-\n\024StopInstanceMetadata\022\025google.prot" +
+      "obuf.Empty\022\261\001\n\005Start\022-.yandex.cloud.comp" +
+      "ute.v1.StartInstanceRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"V\202\323\344\223\002+\")/compute" +
+      "/v1/instances/{instance_id}:start\262\322*!\n\025S" +
+      "tartInstanceMetadata\022\010Instance\022\306\001\n\007Resta" +
+      "rt\022/.yandex.cloud.compute.v1.RestartInst" +
+      "anceRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"g\202\323\344\223\002-\"+/compute/v1/instances/{i" +
+      "nstance_id}:restart\262\322*0\n\027RestartInstance" +
+      "Metadata\022\025google.protobuf.Empty\022\310\001\n\nAtta" +
+      "chDisk\0222.yandex.cloud.compute.v1.AttachI" +
+      "nstanceDiskRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"c\202\323\344\223\0023\"./compute/v1/insta" +
+      "nces/{instance_id}:attachDisk:\001*\262\322*&\n\032At" +
+      "tachInstanceDiskMetadata\022\010Instance\022\310\001\n\nD" +
+      "etachDisk\0222.yandex.cloud.compute.v1.Deta" +
+      "chInstanceDiskRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"c\202\323\344\223\0023\"./compute/v1/in" +
+      "stances/{instance_id}:detachDisk:\001*\262\322*&\n" +
+      "\032DetachInstanceDiskMetadata\022\010Instance\022\340\001" +
+      "\n\020AttachFilesystem\0228.yandex.cloud.comput" +
+      "e.v1.AttachInstanceFilesystemRequest\032!.y" +
+      "andex.cloud.operation.Operation\"o\202\323\344\223\0029\"" +
+      "4/compute/v1/instances/{instance_id}:att" +
+      "achFilesystem:\001*\262\322*,\n AttachInstanceFile" +
+      "systemMetadata\022\010Instance\022\340\001\n\020DetachFiles" +
+      "ystem\0228.yandex.cloud.compute.v1.DetachIn" +
+      "stanceFilesystemRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"o\202\323\344\223\0029\"4/compute/v1/" +
+      "instances/{instance_id}:detachFilesystem" +
+      ":\001*\262\322*,\n DetachInstanceFilesystemMetadat" +
+      "a\022\010Instance\022\330\001\n\016AddOneToOneNat\0226.yandex." +
+      "cloud.compute.v1.AddInstanceOneToOneNatR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"k\202\323\344\223\0027\"2/compute/v1/instances/{instan" +
+      "ce_id}/addOneToOneNat:\001*\262\322**\n\036AddInstanc" +
+      "eOneToOneNatMetadata\022\010Instance\022\344\001\n\021Remov" +
+      "eOneToOneNat\0229.yandex.cloud.compute.v1.R" +
+      "emoveInstanceOneToOneNatRequest\032!.yandex" +
+      ".cloud.operation.Operation\"q\202\323\344\223\002:\"5/com" +
+      "pute/v1/instances/{instance_id}/removeOn" +
+      "eToOneNat:\001*\262\322*-\n!RemoveInstanceOneToOne" +
+      "NatMetadata\022\010Instance\022\370\001\n\026UpdateNetworkI" +
+      "nterface\022>.yandex.cloud.compute.v1.Updat" +
+      "eInstanceNetworkInterfaceRequest\032!.yande" +
+      "x.cloud.operation.Operation\"{\202\323\344\223\002?2:/co" +
+      "mpute/v1/instances/{instance_id}/updateN" +
+      "etworkInterface:\001*\262\322*2\n&UpdateInstanceNe" +
+      "tworkInterfaceMetadata\022\010Instance\022\271\001\n\016Lis" +
+      "tOperations\0226.yandex.cloud.compute.v1.Li" +
+      "stInstanceOperationsRequest\0327.yandex.clo" +
+      "ud.compute.v1.ListInstanceOperationsResp" +
+      "onse\"6\202\323\344\223\0020\022./compute/v1/instances/{ins" +
+      "tance_id}/operationsBb\n\033yandex.cloud.api" +
+      ".compute.v1ZCgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/compute/v1;compute" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -40911,7 +45900,7 @@ public final class InstanceServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "ZoneId", "PlatformId", "ResourcesSpec", "Metadata", "BootDiskSpec", "SecondaryDiskSpecs", "NetworkInterfaceSpecs", "Hostname", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "ZoneId", "PlatformId", "ResourcesSpec", "Metadata", "BootDiskSpec", "SecondaryDiskSpecs", "FilesystemSpecs", "NetworkInterfaceSpecs", "Hostname", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", });
     internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_LabelsEntry_fieldAccessorTable = new
@@ -41056,62 +46045,86 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_DetachInstanceDiskMetadata_descriptor,
         new java.lang.String[] { "InstanceId", "DiskId", });
-    internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatRequest_descriptor =
+    internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemRequest_descriptor =
       getDescriptor().getMessageTypes().get(23);
+    internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemRequest_descriptor,
+        new java.lang.String[] { "InstanceId", "AttachedFilesystemSpec", });
+    internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_AttachInstanceFilesystemMetadata_descriptor,
+        new java.lang.String[] { "InstanceId", "FilesystemId", });
+    internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemRequest_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemRequest_descriptor,
+        new java.lang.String[] { "InstanceId", "FilesystemId", "DeviceName", "Filesystem", });
+    internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_DetachInstanceFilesystemMetadata_descriptor,
+        new java.lang.String[] { "InstanceId", "FilesystemId", });
+    internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatRequest_descriptor =
+      getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatRequest_descriptor,
         new java.lang.String[] { "InstanceId", "NetworkInterfaceIndex", "InternalAddress", "OneToOneNatSpec", });
     internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_AddInstanceOneToOneNatMetadata_descriptor,
         new java.lang.String[] { "InstanceId", });
     internal_static_yandex_cloud_compute_v1_RemoveInstanceOneToOneNatRequest_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_yandex_cloud_compute_v1_RemoveInstanceOneToOneNatRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_RemoveInstanceOneToOneNatRequest_descriptor,
         new java.lang.String[] { "InstanceId", "NetworkInterfaceIndex", "InternalAddress", });
     internal_static_yandex_cloud_compute_v1_RemoveInstanceOneToOneNatMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_yandex_cloud_compute_v1_RemoveInstanceOneToOneNatMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_RemoveInstanceOneToOneNatMetadata_descriptor,
         new java.lang.String[] { "InstanceId", });
     internal_static_yandex_cloud_compute_v1_UpdateInstanceNetworkInterfaceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_yandex_cloud_compute_v1_UpdateInstanceNetworkInterfaceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_UpdateInstanceNetworkInterfaceRequest_descriptor,
         new java.lang.String[] { "InstanceId", "NetworkInterfaceIndex", "UpdateMask", "SubnetId", "PrimaryV4AddressSpec", "PrimaryV6AddressSpec", "SecurityGroupIds", });
     internal_static_yandex_cloud_compute_v1_UpdateInstanceNetworkInterfaceMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_yandex_cloud_compute_v1_UpdateInstanceNetworkInterfaceMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_UpdateInstanceNetworkInterfaceMetadata_descriptor,
         new java.lang.String[] { "InstanceId", "NetworkInterfaceIndex", });
     internal_static_yandex_cloud_compute_v1_ListInstanceOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_yandex_cloud_compute_v1_ListInstanceOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ListInstanceOperationsRequest_descriptor,
         new java.lang.String[] { "InstanceId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_compute_v1_ListInstanceOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_yandex_cloud_compute_v1_ListInstanceOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ListInstanceOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_compute_v1_ResourcesSpec_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_yandex_cloud_compute_v1_ResourcesSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ResourcesSpec_descriptor,
         new java.lang.String[] { "Memory", "Cores", "CoreFraction", "Gpus", });
     internal_static_yandex_cloud_compute_v1_AttachedDiskSpec_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_yandex_cloud_compute_v1_AttachedDiskSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_AttachedDiskSpec_descriptor,
@@ -41122,26 +46135,32 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_AttachedDiskSpec_DiskSpec_descriptor,
         new java.lang.String[] { "Name", "Description", "TypeId", "Size", "BlockSize", "DiskPlacementPolicy", "ImageId", "SnapshotId", "Source", });
+    internal_static_yandex_cloud_compute_v1_AttachedFilesystemSpec_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_yandex_cloud_compute_v1_AttachedFilesystemSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_AttachedFilesystemSpec_descriptor,
+        new java.lang.String[] { "Mode", "DeviceName", "FilesystemId", });
     internal_static_yandex_cloud_compute_v1_NetworkInterfaceSpec_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_yandex_cloud_compute_v1_NetworkInterfaceSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_NetworkInterfaceSpec_descriptor,
         new java.lang.String[] { "SubnetId", "PrimaryV4AddressSpec", "PrimaryV6AddressSpec", "SecurityGroupIds", });
     internal_static_yandex_cloud_compute_v1_PrimaryAddressSpec_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_yandex_cloud_compute_v1_PrimaryAddressSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_PrimaryAddressSpec_descriptor,
         new java.lang.String[] { "Address", "OneToOneNatSpec", "DnsRecordSpecs", });
     internal_static_yandex_cloud_compute_v1_OneToOneNatSpec_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_yandex_cloud_compute_v1_OneToOneNatSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_OneToOneNatSpec_descriptor,
         new java.lang.String[] { "IpVersion", "Address", "DnsRecordSpecs", });
     internal_static_yandex_cloud_compute_v1_DnsRecordSpec_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_yandex_cloud_compute_v1_DnsRecordSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_DnsRecordSpec_descriptor,

@@ -80,6 +80,14 @@ public final class TriggerOuterClass {
      * <code>BILLING_BUDGET = 9;</code>
      */
     BILLING_BUDGET(9),
+    /**
+     * <pre>
+     * The trigger is activated by YDS events
+     * </pre>
+     *
+     * <code>YDS = 10;</code>
+     */
+    YDS(10),
     UNRECOGNIZED(-1),
     ;
 
@@ -144,6 +152,14 @@ public final class TriggerOuterClass {
      * <code>BILLING_BUDGET = 9;</code>
      */
     public static final int BILLING_BUDGET_VALUE = 9;
+    /**
+     * <pre>
+     * The trigger is activated by YDS events
+     * </pre>
+     *
+     * <code>YDS = 10;</code>
+     */
+    public static final int YDS_VALUE = 10;
 
 
     public final int getNumber() {
@@ -173,6 +189,7 @@ public final class TriggerOuterClass {
         case 7: return CLOUD_LOGS;
         case 8: return LOGGING;
         case 9: return BILLING_BUDGET;
+        case 10: return YDS;
         default: return null;
       }
     }
@@ -1075,6 +1092,19 @@ public final class TriggerOuterClass {
        */
       yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudgetOrBuilder getBillingBudgetOrBuilder();
 
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+       */
+      boolean hasDataStream();
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream getDataStream();
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamOrBuilder getDataStreamOrBuilder();
+
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.RuleCase getRuleCase();
     }
     /**
@@ -1232,6 +1262,20 @@ public final class TriggerOuterClass {
                 ruleCase_ = 11;
                 break;
               }
+              case 98: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.Builder subBuilder = null;
+                if (ruleCase_ == 12) {
+                  subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) rule_).toBuilder();
+                }
+                rule_ =
+                    input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) rule_);
+                  rule_ = subBuilder.buildPartial();
+                }
+                ruleCase_ = 12;
+                break;
+              }
               default: {
                 if (!parseUnknownFieldProto3(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -1276,6 +1320,7 @@ public final class TriggerOuterClass {
         CLOUD_LOGS(9),
         LOGGING(10),
         BILLING_BUDGET(11),
+        DATA_STREAM(12),
         RULE_NOT_SET(0);
         private final int value;
         private RuleCase(int value) {
@@ -1299,6 +1344,7 @@ public final class TriggerOuterClass {
             case 9: return CLOUD_LOGS;
             case 10: return LOGGING;
             case 11: return BILLING_BUDGET;
+            case 12: return DATA_STREAM;
             case 0: return RULE_NOT_SET;
             default: return null;
           }
@@ -1558,6 +1604,32 @@ public final class TriggerOuterClass {
         return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget.getDefaultInstance();
       }
 
+      public static final int DATA_STREAM_FIELD_NUMBER = 12;
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+       */
+      public boolean hasDataStream() {
+        return ruleCase_ == 12;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream getDataStream() {
+        if (ruleCase_ == 12) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) rule_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.getDefaultInstance();
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamOrBuilder getDataStreamOrBuilder() {
+        if (ruleCase_ == 12) {
+           return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) rule_;
+        }
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.getDefaultInstance();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -1595,6 +1667,9 @@ public final class TriggerOuterClass {
         }
         if (ruleCase_ == 11) {
           output.writeMessage(11, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget) rule_);
+        }
+        if (ruleCase_ == 12) {
+          output.writeMessage(12, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) rule_);
         }
         unknownFields.writeTo(output);
       }
@@ -1636,6 +1711,10 @@ public final class TriggerOuterClass {
         if (ruleCase_ == 11) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(11, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BillingBudget) rule_);
+        }
+        if (ruleCase_ == 12) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(12, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) rule_);
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -1689,6 +1768,10 @@ public final class TriggerOuterClass {
             result = result && getBillingBudget()
                 .equals(other.getBillingBudget());
             break;
+          case 12:
+            result = result && getDataStream()
+                .equals(other.getDataStream());
+            break;
           case 0:
           default:
         }
@@ -1735,6 +1818,10 @@ public final class TriggerOuterClass {
           case 11:
             hash = (37 * hash) + BILLING_BUDGET_FIELD_NUMBER;
             hash = (53 * hash) + getBillingBudget().hashCode();
+            break;
+          case 12:
+            hash = (37 * hash) + DATA_STREAM_FIELD_NUMBER;
+            hash = (53 * hash) + getDataStream().hashCode();
             break;
           case 0:
           default:
@@ -1960,6 +2047,13 @@ public final class TriggerOuterClass {
               result.rule_ = billingBudgetBuilder_.build();
             }
           }
+          if (ruleCase_ == 12) {
+            if (dataStreamBuilder_ == null) {
+              result.rule_ = rule_;
+            } else {
+              result.rule_ = dataStreamBuilder_.build();
+            }
+          }
           result.ruleCase_ = ruleCase_;
           onBuilt();
           return result;
@@ -2040,6 +2134,10 @@ public final class TriggerOuterClass {
             }
             case BILLING_BUDGET: {
               mergeBillingBudget(other.getBillingBudget());
+              break;
+            }
+            case DATA_STREAM: {
+              mergeDataStream(other.getDataStream());
               break;
             }
             case RULE_NOT_SET: {
@@ -3284,6 +3382,142 @@ public final class TriggerOuterClass {
           ruleCase_ = 11;
           onChanged();;
           return billingBudgetBuilder_;
+        }
+
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamOrBuilder> dataStreamBuilder_;
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+         */
+        public boolean hasDataStream() {
+          return ruleCase_ == 12;
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream getDataStream() {
+          if (dataStreamBuilder_ == null) {
+            if (ruleCase_ == 12) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) rule_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.getDefaultInstance();
+          } else {
+            if (ruleCase_ == 12) {
+              return dataStreamBuilder_.getMessage();
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+         */
+        public Builder setDataStream(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream value) {
+          if (dataStreamBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            rule_ = value;
+            onChanged();
+          } else {
+            dataStreamBuilder_.setMessage(value);
+          }
+          ruleCase_ = 12;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+         */
+        public Builder setDataStream(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.Builder builderForValue) {
+          if (dataStreamBuilder_ == null) {
+            rule_ = builderForValue.build();
+            onChanged();
+          } else {
+            dataStreamBuilder_.setMessage(builderForValue.build());
+          }
+          ruleCase_ = 12;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+         */
+        public Builder mergeDataStream(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream value) {
+          if (dataStreamBuilder_ == null) {
+            if (ruleCase_ == 12 &&
+                rule_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.getDefaultInstance()) {
+              rule_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) rule_)
+                  .mergeFrom(value).buildPartial();
+            } else {
+              rule_ = value;
+            }
+            onChanged();
+          } else {
+            if (ruleCase_ == 12) {
+              dataStreamBuilder_.mergeFrom(value);
+            }
+            dataStreamBuilder_.setMessage(value);
+          }
+          ruleCase_ = 12;
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+         */
+        public Builder clearDataStream() {
+          if (dataStreamBuilder_ == null) {
+            if (ruleCase_ == 12) {
+              ruleCase_ = 0;
+              rule_ = null;
+              onChanged();
+            }
+          } else {
+            if (ruleCase_ == 12) {
+              ruleCase_ = 0;
+              rule_ = null;
+            }
+            dataStreamBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.Builder getDataStreamBuilder() {
+          return getDataStreamFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamOrBuilder getDataStreamOrBuilder() {
+          if ((ruleCase_ == 12) && (dataStreamBuilder_ != null)) {
+            return dataStreamBuilder_.getMessageOrBuilder();
+          } else {
+            if (ruleCase_ == 12) {
+              return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) rule_;
+            }
+            return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.getDefaultInstance();
+          }
+        }
+        /**
+         * <code>.yandex.cloud.serverless.triggers.v1.DataStream data_stream = 12;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamOrBuilder> 
+            getDataStreamFieldBuilder() {
+          if (dataStreamBuilder_ == null) {
+            if (!(ruleCase_ == 12)) {
+              rule_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.getDefaultInstance();
+            }
+            dataStreamBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamOrBuilder>(
+                    (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) rule_,
+                    getParentForChildren(),
+                    isClean());
+            rule_ = null;
+          }
+          ruleCase_ = 12;
+          onChanged();;
+          return dataStreamBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -27334,6 +27568,2640 @@ public final class TriggerOuterClass {
 
   }
 
+  public interface DataStreamBatchSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Batch size in bytes. Trigger will send the batch of messages to the associated function
+     * when size of log events reaches this value, or the [cutoff] time has passed.
+     * </pre>
+     *
+     * <code>int64 size = 1 [(.yandex.cloud.value) = "1-65536"];</code>
+     */
+    long getSize();
+
+    /**
+     * <pre>
+     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+     * exceeds the `cutoff` value, regardless of the amount of log events.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     */
+    boolean hasCutoff();
+    /**
+     * <pre>
+     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+     * exceeds the `cutoff` value, regardless of the amount of log events.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     */
+    com.google.protobuf.Duration getCutoff();
+    /**
+     * <pre>
+     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+     * exceeds the `cutoff` value, regardless of the amount of log events.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getCutoffOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings}
+   */
+  public  static final class DataStreamBatchSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings)
+      DataStreamBatchSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataStreamBatchSettings.newBuilder() to construct.
+    private DataStreamBatchSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataStreamBatchSettings() {
+      size_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DataStreamBatchSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              size_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (cutoff_ != null) {
+                subBuilder = cutoff_.toBuilder();
+              }
+              cutoff_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cutoff_);
+                cutoff_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.Builder.class);
+    }
+
+    public static final int SIZE_FIELD_NUMBER = 1;
+    private long size_;
+    /**
+     * <pre>
+     * Batch size in bytes. Trigger will send the batch of messages to the associated function
+     * when size of log events reaches this value, or the [cutoff] time has passed.
+     * </pre>
+     *
+     * <code>int64 size = 1 [(.yandex.cloud.value) = "1-65536"];</code>
+     */
+    public long getSize() {
+      return size_;
+    }
+
+    public static final int CUTOFF_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration cutoff_;
+    /**
+     * <pre>
+     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+     * exceeds the `cutoff` value, regardless of the amount of log events.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     */
+    public boolean hasCutoff() {
+      return cutoff_ != null;
+    }
+    /**
+     * <pre>
+     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+     * exceeds the `cutoff` value, regardless of the amount of log events.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     */
+    public com.google.protobuf.Duration getCutoff() {
+      return cutoff_ == null ? com.google.protobuf.Duration.getDefaultInstance() : cutoff_;
+    }
+    /**
+     * <pre>
+     * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+     * exceeds the `cutoff` value, regardless of the amount of log events.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+     */
+    public com.google.protobuf.DurationOrBuilder getCutoffOrBuilder() {
+      return getCutoff();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (size_ != 0L) {
+        output.writeInt64(1, size_);
+      }
+      if (cutoff_ != null) {
+        output.writeMessage(2, getCutoff());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (size_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, size_);
+      }
+      if (cutoff_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCutoff());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings) obj;
+
+      boolean result = true;
+      result = result && (getSize()
+          == other.getSize());
+      result = result && (hasCutoff() == other.hasCutoff());
+      if (hasCutoff()) {
+        result = result && getCutoff()
+            .equals(other.getCutoff());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSize());
+      if (hasCutoff()) {
+        hash = (37 * hash) + CUTOFF_FIELD_NUMBER;
+        hash = (53 * hash) + getCutoff().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings)
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        size_ = 0L;
+
+        if (cutoffBuilder_ == null) {
+          cutoff_ = null;
+        } else {
+          cutoff_ = null;
+          cutoffBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings build() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings buildPartial() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings result = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings(this);
+        result.size_ = size_;
+        if (cutoffBuilder_ == null) {
+          result.cutoff_ = cutoff_;
+        } else {
+          result.cutoff_ = cutoffBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings) {
+          return mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings other) {
+        if (other == yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.getDefaultInstance()) return this;
+        if (other.getSize() != 0L) {
+          setSize(other.getSize());
+        }
+        if (other.hasCutoff()) {
+          mergeCutoff(other.getCutoff());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long size_ ;
+      /**
+       * <pre>
+       * Batch size in bytes. Trigger will send the batch of messages to the associated function
+       * when size of log events reaches this value, or the [cutoff] time has passed.
+       * </pre>
+       *
+       * <code>int64 size = 1 [(.yandex.cloud.value) = "1-65536"];</code>
+       */
+      public long getSize() {
+        return size_;
+      }
+      /**
+       * <pre>
+       * Batch size in bytes. Trigger will send the batch of messages to the associated function
+       * when size of log events reaches this value, or the [cutoff] time has passed.
+       * </pre>
+       *
+       * <code>int64 size = 1 [(.yandex.cloud.value) = "1-65536"];</code>
+       */
+      public Builder setSize(long value) {
+        
+        size_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Batch size in bytes. Trigger will send the batch of messages to the associated function
+       * when size of log events reaches this value, or the [cutoff] time has passed.
+       * </pre>
+       *
+       * <code>int64 size = 1 [(.yandex.cloud.value) = "1-65536"];</code>
+       */
+      public Builder clearSize() {
+        
+        size_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration cutoff_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> cutoffBuilder_;
+      /**
+       * <pre>
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       */
+      public boolean hasCutoff() {
+        return cutoffBuilder_ != null || cutoff_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       */
+      public com.google.protobuf.Duration getCutoff() {
+        if (cutoffBuilder_ == null) {
+          return cutoff_ == null ? com.google.protobuf.Duration.getDefaultInstance() : cutoff_;
+        } else {
+          return cutoffBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       */
+      public Builder setCutoff(com.google.protobuf.Duration value) {
+        if (cutoffBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cutoff_ = value;
+          onChanged();
+        } else {
+          cutoffBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       */
+      public Builder setCutoff(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (cutoffBuilder_ == null) {
+          cutoff_ = builderForValue.build();
+          onChanged();
+        } else {
+          cutoffBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       */
+      public Builder mergeCutoff(com.google.protobuf.Duration value) {
+        if (cutoffBuilder_ == null) {
+          if (cutoff_ != null) {
+            cutoff_ =
+              com.google.protobuf.Duration.newBuilder(cutoff_).mergeFrom(value).buildPartial();
+          } else {
+            cutoff_ = value;
+          }
+          onChanged();
+        } else {
+          cutoffBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       */
+      public Builder clearCutoff() {
+        if (cutoffBuilder_ == null) {
+          cutoff_ = null;
+          onChanged();
+        } else {
+          cutoff_ = null;
+          cutoffBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getCutoffBuilder() {
+        
+        onChanged();
+        return getCutoffFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getCutoffOrBuilder() {
+        if (cutoffBuilder_ != null) {
+          return cutoffBuilder_.getMessageOrBuilder();
+        } else {
+          return cutoff_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : cutoff_;
+        }
+      }
+      /**
+       * <pre>
+       * Maximum wait time. Trigger will send the batch of messages the time since the last batch
+       * exceeds the `cutoff` value, regardless of the amount of log events.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration cutoff = 2 [(.yandex.cloud.value) = "1s-1m"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getCutoffFieldBuilder() {
+        if (cutoffBuilder_ == null) {
+          cutoffBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getCutoff(),
+                  getParentForChildren(),
+                  isClean());
+          cutoff_ = null;
+        }
+        return cutoffBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings)
+    private static final yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings();
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataStreamBatchSettings>
+        PARSER = new com.google.protobuf.AbstractParser<DataStreamBatchSettings>() {
+      @java.lang.Override
+      public DataStreamBatchSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DataStreamBatchSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataStreamBatchSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataStreamBatchSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DataStreamOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.DataStream)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Data stream endpoint.
+     * </pre>
+     *
+     * <code>string endpoint = 1;</code>
+     */
+    java.lang.String getEndpoint();
+    /**
+     * <pre>
+     * Data stream endpoint.
+     * </pre>
+     *
+     * <code>string endpoint = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getEndpointBytes();
+
+    /**
+     * <pre>
+     * Data stream database.
+     * </pre>
+     *
+     * <code>string database = 2;</code>
+     */
+    java.lang.String getDatabase();
+    /**
+     * <pre>
+     * Data stream database.
+     * </pre>
+     *
+     * <code>string database = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getDatabaseBytes();
+
+    /**
+     * <pre>
+     * Stream name.
+     * </pre>
+     *
+     * <code>string stream = 3;</code>
+     */
+    java.lang.String getStream();
+    /**
+     * <pre>
+     * Stream name.
+     * </pre>
+     *
+     * <code>string stream = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getStreamBytes();
+
+    /**
+     * <pre>
+     * ID of the service account which has permission to read data stream.
+     * </pre>
+     *
+     * <code>string service_account_id = 4;</code>
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * ID of the service account which has permission to read data stream.
+     * </pre>
+     *
+     * <code>string service_account_id = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+
+    /**
+     * <pre>
+     * Batch settings for processing events.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+     */
+    boolean hasBatchSettings();
+    /**
+     * <pre>
+     * Batch settings for processing events.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings getBatchSettings();
+    /**
+     * <pre>
+     * Batch settings for processing events.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettingsOrBuilder getBatchSettingsOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+     */
+    boolean hasInvokeFunction();
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction();
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+     */
+    boolean hasInvokeContainer();
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer();
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder();
+
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.ActionCase getActionCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.triggers.v1.DataStream}
+   */
+  public  static final class DataStream extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.DataStream)
+      DataStreamOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataStream.newBuilder() to construct.
+    private DataStream(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataStream() {
+      endpoint_ = "";
+      database_ = "";
+      stream_ = "";
+      serviceAccountId_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DataStream(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              endpoint_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              database_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              stream_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.Builder subBuilder = null;
+              if (batchSettings_ != null) {
+                subBuilder = batchSettings_.toBuilder();
+              }
+              batchSettings_ = input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(batchSettings_);
+                batchSettings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder subBuilder = null;
+              if (actionCase_ == 13) {
+                subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_).toBuilder();
+              }
+              action_ =
+                  input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
+                action_ = subBuilder.buildPartial();
+              }
+              actionCase_ = 13;
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder subBuilder = null;
+              if (actionCase_ == 15) {
+                subBuilder = ((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_).toBuilder();
+              }
+              action_ =
+                  input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
+                action_ = subBuilder.buildPartial();
+              }
+              actionCase_ = 15;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_DataStream_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_DataStream_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.Builder.class);
+    }
+
+    private int actionCase_ = 0;
+    private java.lang.Object action_;
+    public enum ActionCase
+        implements com.google.protobuf.Internal.EnumLite {
+      INVOKE_FUNCTION(13),
+      INVOKE_CONTAINER(15),
+      ACTION_NOT_SET(0);
+      private final int value;
+      private ActionCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ActionCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ActionCase forNumber(int value) {
+        switch (value) {
+          case 13: return INVOKE_FUNCTION;
+          case 15: return INVOKE_CONTAINER;
+          case 0: return ACTION_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ActionCase
+    getActionCase() {
+      return ActionCase.forNumber(
+          actionCase_);
+    }
+
+    public static final int ENDPOINT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object endpoint_;
+    /**
+     * <pre>
+     * Data stream endpoint.
+     * </pre>
+     *
+     * <code>string endpoint = 1;</code>
+     */
+    public java.lang.String getEndpoint() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Data stream endpoint.
+     * </pre>
+     *
+     * <code>string endpoint = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEndpointBytes() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        endpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATABASE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object database_;
+    /**
+     * <pre>
+     * Data stream database.
+     * </pre>
+     *
+     * <code>string database = 2;</code>
+     */
+    public java.lang.String getDatabase() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        database_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Data stream database.
+     * </pre>
+     *
+     * <code>string database = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDatabaseBytes() {
+      java.lang.Object ref = database_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        database_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STREAM_FIELD_NUMBER = 3;
+    private volatile java.lang.Object stream_;
+    /**
+     * <pre>
+     * Stream name.
+     * </pre>
+     *
+     * <code>string stream = 3;</code>
+     */
+    public java.lang.String getStream() {
+      java.lang.Object ref = stream_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stream_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Stream name.
+     * </pre>
+     *
+     * <code>string stream = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getStreamBytes() {
+      java.lang.Object ref = stream_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stream_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * ID of the service account which has permission to read data stream.
+     * </pre>
+     *
+     * <code>string service_account_id = 4;</code>
+     */
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the service account which has permission to read data stream.
+     * </pre>
+     *
+     * <code>string service_account_id = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BATCH_SETTINGS_FIELD_NUMBER = 5;
+    private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings batchSettings_;
+    /**
+     * <pre>
+     * Batch settings for processing events.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+     */
+    public boolean hasBatchSettings() {
+      return batchSettings_ != null;
+    }
+    /**
+     * <pre>
+     * Batch settings for processing events.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+     */
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings getBatchSettings() {
+      return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.getDefaultInstance() : batchSettings_;
+    }
+    /**
+     * <pre>
+     * Batch settings for processing events.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+     */
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettingsOrBuilder getBatchSettingsOrBuilder() {
+      return getBatchSettings();
+    }
+
+    public static final int INVOKE_FUNCTION_FIELD_NUMBER = 13;
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+     */
+    public boolean hasInvokeFunction() {
+      return actionCase_ == 13;
+    }
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+     */
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
+      if (actionCase_ == 13) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+     */
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
+      if (actionCase_ == 13) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.getDefaultInstance();
+    }
+
+    public static final int INVOKE_CONTAINER_FIELD_NUMBER = 15;
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+     */
+    public boolean hasInvokeContainer() {
+      return actionCase_ == 15;
+    }
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+     */
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
+      if (actionCase_ == 15) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+     */
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
+      if (actionCase_ == 15) {
+         return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
+      }
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getEndpointBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, endpoint_);
+      }
+      if (!getDatabaseBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, database_);
+      }
+      if (!getStreamBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, stream_);
+      }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, serviceAccountId_);
+      }
+      if (batchSettings_ != null) {
+        output.writeMessage(5, getBatchSettings());
+      }
+      if (actionCase_ == 13) {
+        output.writeMessage(13, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
+      }
+      if (actionCase_ == 15) {
+        output.writeMessage(15, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getEndpointBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, endpoint_);
+      }
+      if (!getDatabaseBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, database_);
+      }
+      if (!getStreamBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, stream_);
+      }
+      if (!getServiceAccountIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, serviceAccountId_);
+      }
+      if (batchSettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getBatchSettings());
+      }
+      if (actionCase_ == 13) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
+      }
+      if (actionCase_ == 15) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) obj;
+
+      boolean result = true;
+      result = result && getEndpoint()
+          .equals(other.getEndpoint());
+      result = result && getDatabase()
+          .equals(other.getDatabase());
+      result = result && getStream()
+          .equals(other.getStream());
+      result = result && getServiceAccountId()
+          .equals(other.getServiceAccountId());
+      result = result && (hasBatchSettings() == other.hasBatchSettings());
+      if (hasBatchSettings()) {
+        result = result && getBatchSettings()
+            .equals(other.getBatchSettings());
+      }
+      result = result && getActionCase().equals(
+          other.getActionCase());
+      if (!result) return false;
+      switch (actionCase_) {
+        case 13:
+          result = result && getInvokeFunction()
+              .equals(other.getInvokeFunction());
+          break;
+        case 15:
+          result = result && getInvokeContainer()
+              .equals(other.getInvokeContainer());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getEndpoint().hashCode();
+      hash = (37 * hash) + DATABASE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabase().hashCode();
+      hash = (37 * hash) + STREAM_FIELD_NUMBER;
+      hash = (53 * hash) + getStream().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
+      if (hasBatchSettings()) {
+        hash = (37 * hash) + BATCH_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getBatchSettings().hashCode();
+      }
+      switch (actionCase_) {
+        case 13:
+          hash = (37 * hash) + INVOKE_FUNCTION_FIELD_NUMBER;
+          hash = (53 * hash) + getInvokeFunction().hashCode();
+          break;
+        case 15:
+          hash = (37 * hash) + INVOKE_CONTAINER_FIELD_NUMBER;
+          hash = (53 * hash) + getInvokeContainer().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.triggers.v1.DataStream}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.triggers.v1.DataStream)
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_DataStream_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_DataStream_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        endpoint_ = "";
+
+        database_ = "";
+
+        stream_ = "";
+
+        serviceAccountId_ = "";
+
+        if (batchSettingsBuilder_ == null) {
+          batchSettings_ = null;
+        } else {
+          batchSettings_ = null;
+          batchSettingsBuilder_ = null;
+        }
+        actionCase_ = 0;
+        action_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_DataStream_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream build() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream buildPartial() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream result = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream(this);
+        result.endpoint_ = endpoint_;
+        result.database_ = database_;
+        result.stream_ = stream_;
+        result.serviceAccountId_ = serviceAccountId_;
+        if (batchSettingsBuilder_ == null) {
+          result.batchSettings_ = batchSettings_;
+        } else {
+          result.batchSettings_ = batchSettingsBuilder_.build();
+        }
+        if (actionCase_ == 13) {
+          if (invokeFunctionBuilder_ == null) {
+            result.action_ = action_;
+          } else {
+            result.action_ = invokeFunctionBuilder_.build();
+          }
+        }
+        if (actionCase_ == 15) {
+          if (invokeContainerBuilder_ == null) {
+            result.action_ = action_;
+          } else {
+            result.action_ = invokeContainerBuilder_.build();
+          }
+        }
+        result.actionCase_ = actionCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) {
+          return mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream other) {
+        if (other == yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream.getDefaultInstance()) return this;
+        if (!other.getEndpoint().isEmpty()) {
+          endpoint_ = other.endpoint_;
+          onChanged();
+        }
+        if (!other.getDatabase().isEmpty()) {
+          database_ = other.database_;
+          onChanged();
+        }
+        if (!other.getStream().isEmpty()) {
+          stream_ = other.stream_;
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        if (other.hasBatchSettings()) {
+          mergeBatchSettings(other.getBatchSettings());
+        }
+        switch (other.getActionCase()) {
+          case INVOKE_FUNCTION: {
+            mergeInvokeFunction(other.getInvokeFunction());
+            break;
+          }
+          case INVOKE_CONTAINER: {
+            mergeInvokeContainer(other.getInvokeContainer());
+            break;
+          }
+          case ACTION_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int actionCase_ = 0;
+      private java.lang.Object action_;
+      public ActionCase
+          getActionCase() {
+        return ActionCase.forNumber(
+            actionCase_);
+      }
+
+      public Builder clearAction() {
+        actionCase_ = 0;
+        action_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object endpoint_ = "";
+      /**
+       * <pre>
+       * Data stream endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 1;</code>
+       */
+      public java.lang.String getEndpoint() {
+        java.lang.Object ref = endpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Data stream endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEndpointBytes() {
+        java.lang.Object ref = endpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Data stream endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 1;</code>
+       */
+      public Builder setEndpoint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        endpoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Data stream endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 1;</code>
+       */
+      public Builder clearEndpoint() {
+        
+        endpoint_ = getDefaultInstance().getEndpoint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Data stream endpoint.
+       * </pre>
+       *
+       * <code>string endpoint = 1;</code>
+       */
+      public Builder setEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        endpoint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object database_ = "";
+      /**
+       * <pre>
+       * Data stream database.
+       * </pre>
+       *
+       * <code>string database = 2;</code>
+       */
+      public java.lang.String getDatabase() {
+        java.lang.Object ref = database_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          database_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Data stream database.
+       * </pre>
+       *
+       * <code>string database = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDatabaseBytes() {
+        java.lang.Object ref = database_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          database_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Data stream database.
+       * </pre>
+       *
+       * <code>string database = 2;</code>
+       */
+      public Builder setDatabase(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        database_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Data stream database.
+       * </pre>
+       *
+       * <code>string database = 2;</code>
+       */
+      public Builder clearDatabase() {
+        
+        database_ = getDefaultInstance().getDatabase();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Data stream database.
+       * </pre>
+       *
+       * <code>string database = 2;</code>
+       */
+      public Builder setDatabaseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        database_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stream_ = "";
+      /**
+       * <pre>
+       * Stream name.
+       * </pre>
+       *
+       * <code>string stream = 3;</code>
+       */
+      public java.lang.String getStream() {
+        java.lang.Object ref = stream_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stream_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Stream name.
+       * </pre>
+       *
+       * <code>string stream = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getStreamBytes() {
+        java.lang.Object ref = stream_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stream_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Stream name.
+       * </pre>
+       *
+       * <code>string stream = 3;</code>
+       */
+      public Builder setStream(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        stream_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Stream name.
+       * </pre>
+       *
+       * <code>string stream = 3;</code>
+       */
+      public Builder clearStream() {
+        
+        stream_ = getDefaultInstance().getStream();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Stream name.
+       * </pre>
+       *
+       * <code>string stream = 3;</code>
+       */
+      public Builder setStreamBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        stream_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * ID of the service account which has permission to read data stream.
+       * </pre>
+       *
+       * <code>string service_account_id = 4;</code>
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to read data stream.
+       * </pre>
+       *
+       * <code>string service_account_id = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to read data stream.
+       * </pre>
+       *
+       * <code>string service_account_id = 4;</code>
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to read data stream.
+       * </pre>
+       *
+       * <code>string service_account_id = 4;</code>
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the service account which has permission to read data stream.
+       * </pre>
+       *
+       * <code>string service_account_id = 4;</code>
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings batchSettings_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettingsOrBuilder> batchSettingsBuilder_;
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+       */
+      public boolean hasBatchSettings() {
+        return batchSettingsBuilder_ != null || batchSettings_ != null;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings getBatchSettings() {
+        if (batchSettingsBuilder_ == null) {
+          return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.getDefaultInstance() : batchSettings_;
+        } else {
+          return batchSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+       */
+      public Builder setBatchSettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings value) {
+        if (batchSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          batchSettings_ = value;
+          onChanged();
+        } else {
+          batchSettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+       */
+      public Builder setBatchSettings(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.Builder builderForValue) {
+        if (batchSettingsBuilder_ == null) {
+          batchSettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          batchSettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+       */
+      public Builder mergeBatchSettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings value) {
+        if (batchSettingsBuilder_ == null) {
+          if (batchSettings_ != null) {
+            batchSettings_ =
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.newBuilder(batchSettings_).mergeFrom(value).buildPartial();
+          } else {
+            batchSettings_ = value;
+          }
+          onChanged();
+        } else {
+          batchSettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+       */
+      public Builder clearBatchSettings() {
+        if (batchSettingsBuilder_ == null) {
+          batchSettings_ = null;
+          onChanged();
+        } else {
+          batchSettings_ = null;
+          batchSettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.Builder getBatchSettingsBuilder() {
+        
+        onChanged();
+        return getBatchSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettingsOrBuilder getBatchSettingsOrBuilder() {
+        if (batchSettingsBuilder_ != null) {
+          return batchSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return batchSettings_ == null ?
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.getDefaultInstance() : batchSettings_;
+        }
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.DataStreamBatchSettings batch_settings = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettingsOrBuilder> 
+          getBatchSettingsFieldBuilder() {
+        if (batchSettingsBuilder_ == null) {
+          batchSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStreamBatchSettingsOrBuilder>(
+                  getBatchSettings(),
+                  getParentForChildren(),
+                  isClean());
+          batchSettings_ = null;
+        }
+        return batchSettingsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder> invokeFunctionBuilder_;
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+       */
+      public boolean hasInvokeFunction() {
+        return actionCase_ == 13;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry getInvokeFunction() {
+        if (invokeFunctionBuilder_ == null) {
+          if (actionCase_ == 13) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.getDefaultInstance();
+        } else {
+          if (actionCase_ == 13) {
+            return invokeFunctionBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+       */
+      public Builder setInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry value) {
+        if (invokeFunctionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          action_ = value;
+          onChanged();
+        } else {
+          invokeFunctionBuilder_.setMessage(value);
+        }
+        actionCase_ = 13;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+       */
+      public Builder setInvokeFunction(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder builderForValue) {
+        if (invokeFunctionBuilder_ == null) {
+          action_ = builderForValue.build();
+          onChanged();
+        } else {
+          invokeFunctionBuilder_.setMessage(builderForValue.build());
+        }
+        actionCase_ = 13;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+       */
+      public Builder mergeInvokeFunction(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry value) {
+        if (invokeFunctionBuilder_ == null) {
+          if (actionCase_ == 13 &&
+              action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.getDefaultInstance()) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            action_ = value;
+          }
+          onChanged();
+        } else {
+          if (actionCase_ == 13) {
+            invokeFunctionBuilder_.mergeFrom(value);
+          }
+          invokeFunctionBuilder_.setMessage(value);
+        }
+        actionCase_ = 13;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+       */
+      public Builder clearInvokeFunction() {
+        if (invokeFunctionBuilder_ == null) {
+          if (actionCase_ == 13) {
+            actionCase_ = 0;
+            action_ = null;
+            onChanged();
+          }
+        } else {
+          if (actionCase_ == 13) {
+            actionCase_ = 0;
+            action_ = null;
+          }
+          invokeFunctionBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder getInvokeFunctionBuilder() {
+        return getInvokeFunctionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder getInvokeFunctionOrBuilder() {
+        if ((actionCase_ == 13) && (invokeFunctionBuilder_ != null)) {
+          return invokeFunctionBuilder_.getMessageOrBuilder();
+        } else {
+          if (actionCase_ == 13) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder> 
+          getInvokeFunctionFieldBuilder() {
+        if (invokeFunctionBuilder_ == null) {
+          if (!(actionCase_ == 13)) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.getDefaultInstance();
+          }
+          invokeFunctionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder>(
+                  (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_,
+                  getParentForChildren(),
+                  isClean());
+          action_ = null;
+        }
+        actionCase_ = 13;
+        onChanged();;
+        return invokeFunctionBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder> invokeContainerBuilder_;
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+       */
+      public boolean hasInvokeContainer() {
+        return actionCase_ == 15;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry getInvokeContainer() {
+        if (invokeContainerBuilder_ == null) {
+          if (actionCase_ == 15) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
+        } else {
+          if (actionCase_ == 15) {
+            return invokeContainerBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+       */
+      public Builder setInvokeContainer(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry value) {
+        if (invokeContainerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          action_ = value;
+          onChanged();
+        } else {
+          invokeContainerBuilder_.setMessage(value);
+        }
+        actionCase_ = 15;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+       */
+      public Builder setInvokeContainer(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder builderForValue) {
+        if (invokeContainerBuilder_ == null) {
+          action_ = builderForValue.build();
+          onChanged();
+        } else {
+          invokeContainerBuilder_.setMessage(builderForValue.build());
+        }
+        actionCase_ = 15;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+       */
+      public Builder mergeInvokeContainer(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry value) {
+        if (invokeContainerBuilder_ == null) {
+          if (actionCase_ == 15 &&
+              action_ != yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance()) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.newBuilder((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            action_ = value;
+          }
+          onChanged();
+        } else {
+          if (actionCase_ == 15) {
+            invokeContainerBuilder_.mergeFrom(value);
+          }
+          invokeContainerBuilder_.setMessage(value);
+        }
+        actionCase_ = 15;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+       */
+      public Builder clearInvokeContainer() {
+        if (invokeContainerBuilder_ == null) {
+          if (actionCase_ == 15) {
+            actionCase_ = 0;
+            action_ = null;
+            onChanged();
+          }
+        } else {
+          if (actionCase_ == 15) {
+            actionCase_ = 0;
+            action_ = null;
+          }
+          invokeContainerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder getInvokeContainerBuilder() {
+        return getInvokeContainerFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder getInvokeContainerOrBuilder() {
+        if ((actionCase_ == 15) && (invokeContainerBuilder_ != null)) {
+          return invokeContainerBuilder_.getMessageOrBuilder();
+        } else {
+          if (actionCase_ == 15) {
+            return (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_;
+          }
+          return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.serverless.triggers.v1.InvokeContainerWithRetry invoke_container = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder> 
+          getInvokeContainerFieldBuilder() {
+        if (invokeContainerBuilder_ == null) {
+          if (!(actionCase_ == 15)) {
+            action_ = yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.getDefaultInstance();
+          }
+          invokeContainerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetryOrBuilder>(
+                  (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeContainerWithRetry) action_,
+                  getParentForChildren(),
+                  isClean());
+          action_ = null;
+        }
+        actionCase_ = 15;
+        onChanged();;
+        return invokeContainerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.triggers.v1.DataStream)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.triggers.v1.DataStream)
+    private static final yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream();
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataStream>
+        PARSER = new com.google.protobuf.AbstractParser<DataStream>() {
+      @java.lang.Override
+      public DataStream parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DataStream(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataStream> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataStream> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.DataStream getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor;
   private static final 
@@ -27434,6 +30302,16 @@ public final class TriggerOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_triggers_v1_BillingBudget_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_triggers_v1_DataStream_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_triggers_v1_DataStream_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -27448,7 +30326,7 @@ public final class TriggerOuterClass {
       "ggers.v1\032\036google/protobuf/duration.proto" +
       "\032\037google/protobuf/timestamp.proto\032\'yande" +
       "x/cloud/logging/v1/log_entry.proto\032\035yand" +
-      "ex/cloud/validation.proto\"\237!\n\007Trigger\022\n\n" +
+      "ex/cloud/validation.proto\"\347!\n\007Trigger\022\n\n" +
       "\002id\030\001 \001(\t\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
       "50\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf" +
       ".Timestamp\022\026\n\004name\030\004 \001(\tB\010\212\3101\0043-63\022\036\n\013de" +
@@ -27459,7 +30337,7 @@ public final class TriggerOuterClass {
       ".RuleB\004\350\3071\001\022C\n\006status\030\t \001(\01623.yandex.clo" +
       "ud.serverless.triggers.v1.Trigger.Status" +
       "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\032\226\005\n\004Rule\022C\n\005timer\030\002 \001(\01322.yandex" +
+      "\001(\t:\0028\001\032\336\005\n\004Rule\022C\n\005timer\030\002 \001(\01322.yandex" +
       ".cloud.serverless.triggers.v1.Trigger.Ti" +
       "merH\000\022R\n\rmessage_queue\030\003 \001(\01329.yandex.cl" +
       "oud.serverless.triggers.v1.Trigger.Messa" +
@@ -27475,132 +30353,146 @@ public final class TriggerOuterClass {
       " \001(\01324.yandex.cloud.serverless.triggers." +
       "v1.Trigger.LoggingH\000\022L\n\016billing_budget\030\013" +
       " \001(\01322.yandex.cloud.serverless.triggers." +
-      "v1.BillingBudgetH\000B\014\n\004rule\022\004\300\3011\001\032\335\002\n\005Tim" +
-      "er\022&\n\017cron_expression\030\001 \001(\tB\r\350\3071\001\212\3101\005<=1" +
-      "00\022R\n\017invoke_function\030e \001(\01327.yandex.clo" +
-      "ud.serverless.triggers.v1.InvokeFunction" +
-      "OnceH\000\022b\n\032invoke_function_with_retry\030g \001" +
-      "(\0132<.yandex.cloud.serverless.triggers.v1" +
-      ".InvokeFunctionWithRetryH\000\022d\n\033invoke_con" +
-      "tainer_with_retry\030h \001(\0132=.yandex.cloud.s" +
-      "erverless.triggers.v1.InvokeContainerWit" +
-      "hRetryH\000B\016\n\006action\022\004\300\3011\001\032\236\003\n\014MessageQueu" +
-      "e\022\026\n\010queue_id\030\013 \001(\tB\004\350\3071\001\022(\n\022service_acc" +
-      "ount_id\030\003 \001(\tB\014\350\3071\001\212\3101\004<=50\022P\n\016batch_set" +
-      "tings\030\004 \001(\01322.yandex.cloud.serverless.tr" +
-      "iggers.v1.BatchSettingsB\004\350\3071\001\022@\n\022visibil" +
-      "ity_timeout\030\005 \001(\0132\031.google.protobuf.Dura" +
-      "tionB\t\372\3071\005<=12h\022R\n\017invoke_function\030e \001(\013" +
-      "27.yandex.cloud.serverless.triggers.v1.I" +
-      "nvokeFunctionOnceH\000\022T\n\020invoke_container\030" +
-      "f \001(\01328.yandex.cloud.serverless.triggers" +
-      ".v1.InvokeContainerOnceH\000B\016\n\006action\022\004\300\3011" +
-      "\001\032\222\002\n\nIoTMessage\022\031\n\013registry_id\030\001 \001(\tB\004\350" +
-      "\3071\001\022\021\n\tdevice_id\030\002 \001(\t\022\022\n\nmqtt_topic\030\003 \001" +
-      "(\t\022W\n\017invoke_function\030e \001(\0132<.yandex.clo" +
-      "ud.serverless.triggers.v1.InvokeFunction" +
-      "WithRetryH\000\022Y\n\020invoke_container\030f \001(\0132=." +
-      "yandex.cloud.serverless.triggers.v1.Invo" +
-      "keContainerWithRetryH\000B\016\n\006action\022\004\300\3011\001\032\347" +
-      "\002\n\rObjectStorage\022_\n\nevent_type\030\003 \003(\0162C.y" +
-      "andex.cloud.serverless.triggers.v1.Trigg" +
-      "er.ObjectStorageEventTypeB\006\202\3101\002>0\022\021\n\tbuc" +
-      "ket_id\030\004 \001(\t\022\016\n\006prefix\030\006 \001(\t\022\016\n\006suffix\030\007" +
-      " \001(\t\022W\n\017invoke_function\030e \001(\0132<.yandex.c" +
-      "loud.serverless.triggers.v1.InvokeFuncti" +
-      "onWithRetryH\000\022Y\n\020invoke_container\030f \001(\0132" +
-      "=.yandex.cloud.serverless.triggers.v1.In" +
-      "vokeContainerWithRetryH\000B\016\n\006action\022\004\300\3011\001" +
-      "\032\362\002\n\021ContainerRegistry\022c\n\nevent_type\030\003 \003" +
-      "(\0162G.yandex.cloud.serverless.triggers.v1" +
-      ".Trigger.ContainerRegistryEventTypeB\006\202\3101" +
-      "\002>0\022\023\n\013registry_id\030\004 \001(\t\022\022\n\nimage_name\030\005" +
-      " \001(\t\022\013\n\003tag\030\006 \001(\t\022W\n\017invoke_function\030e \001" +
-      "(\0132<.yandex.cloud.serverless.triggers.v1" +
-      ".InvokeFunctionWithRetryH\000\022Y\n\020invoke_con" +
-      "tainer\030f \001(\0132=.yandex.cloud.serverless.t" +
-      "riggers.v1.InvokeContainerWithRetryH\000B\016\n" +
-      "\006action\022\004\300\3011\001\032\300\002\n\tCloudLogs\022\024\n\014log_group" +
-      "_id\030\001 \003(\t\022Y\n\016batch_settings\030\002 \001(\0132;.yand" +
-      "ex.cloud.serverless.triggers.v1.CloudLog" +
-      "sBatchSettingsB\004\350\3071\001\022W\n\017invoke_function\030" +
-      "e \001(\0132<.yandex.cloud.serverless.triggers" +
-      ".v1.InvokeFunctionWithRetryH\000\022Y\n\020invoke_" +
-      "container\030f \001(\0132=.yandex.cloud.serverles" +
+      "v1.BillingBudgetH\000\022F\n\013data_stream\030\014 \001(\0132" +
+      "/.yandex.cloud.serverless.triggers.v1.Da" +
+      "taStreamH\000B\014\n\004rule\022\004\300\3011\001\032\335\002\n\005Timer\022&\n\017cr" +
+      "on_expression\030\001 \001(\tB\r\350\3071\001\212\3101\005<=100\022R\n\017in" +
+      "voke_function\030e \001(\01327.yandex.cloud.serve" +
+      "rless.triggers.v1.InvokeFunctionOnceH\000\022b" +
+      "\n\032invoke_function_with_retry\030g \001(\0132<.yan" +
+      "dex.cloud.serverless.triggers.v1.InvokeF" +
+      "unctionWithRetryH\000\022d\n\033invoke_container_w" +
+      "ith_retry\030h \001(\0132=.yandex.cloud.serverles" +
       "s.triggers.v1.InvokeContainerWithRetryH\000" +
-      "B\016\n\006action\022\004\300\3011\001\032\213\004\n\007Logging\022\036\n\014log_grou" +
-      "p_id\030\001 \001(\tB\010\212\3101\004<=50\022@\n\rresource_type\030\003 " +
-      "\003(\tB)\362\3071\034[a-zA-Z][-a-zA-Z0-9_.]{1,62}\202\3101" +
-      "\005<=100\022>\n\013resource_id\030\004 \003(\tB)\362\3071\034[a-zA-Z" +
-      "][-a-zA-Z0-9_.]{1,62}\202\3101\005<=100\022A\n\006levels" +
-      "\030\005 \003(\0162\'.yandex.cloud.logging.v1.LogLeve" +
-      "l.LevelB\010\202\3101\004<=10\022W\n\016batch_settings\030\006 \001(" +
-      "\01329.yandex.cloud.serverless.triggers.v1." +
-      "LoggingBatchSettingsB\004\350\3071\001\022W\n\017invoke_fun" +
-      "ction\030e \001(\0132<.yandex.cloud.serverless.tr" +
-      "iggers.v1.InvokeFunctionWithRetryH\000\022Y\n\020i" +
-      "nvoke_container\030g \001(\0132=.yandex.cloud.ser" +
-      "verless.triggers.v1.InvokeContainerWithR" +
-      "etryH\000B\016\n\006action\022\004\300\3011\001\"\312\001\n\026ObjectStorage" +
-      "EventType\022)\n%OBJECT_STORAGE_EVENT_TYPE_U" +
-      "NSPECIFIED\020\000\022+\n\'OBJECT_STORAGE_EVENT_TYP" +
-      "E_CREATE_OBJECT\020\001\022+\n\'OBJECT_STORAGE_EVEN" +
-      "T_TYPE_UPDATE_OBJECT\020\002\022+\n\'OBJECT_STORAGE" +
-      "_EVENT_TYPE_DELETE_OBJECT\020\003\"\223\002\n\032Containe" +
-      "rRegistryEventType\022-\n)CONTAINER_REGISTRY" +
-      "_EVENT_TYPE_UNSPECIFIED\020\000\022.\n*CONTAINER_R" +
-      "EGISTRY_EVENT_TYPE_CREATE_IMAGE\020\001\022.\n*CON" +
-      "TAINER_REGISTRY_EVENT_TYPE_DELETE_IMAGE\020" +
-      "\002\0222\n.CONTAINER_REGISTRY_EVENT_TYPE_CREAT" +
-      "E_IMAGE_TAG\020\003\0222\n.CONTAINER_REGISTRY_EVEN" +
-      "T_TYPE_DELETE_IMAGE_TAG\020\004\"8\n\006Status\022\026\n\022S" +
-      "TATUS_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\n\n\006PAUSE" +
-      "D\020\002\"i\n\022InvokeFunctionOnce\022!\n\013function_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag\030\002 \001" +
-      "(\t\022\032\n\022service_account_id\030\003 \001(\t\"\213\002\n\027Invok" +
-      "eFunctionWithRetry\022!\n\013function_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag\030\002 \001(\t\022\032\n\022s" +
-      "ervice_account_id\030\003 \001(\t\022J\n\016retry_setting" +
-      "s\030\004 \001(\01322.yandex.cloud.serverless.trigge" +
-      "rs.v1.RetrySettings\022O\n\021dead_letter_queue" +
-      "\030\005 \001(\01324.yandex.cloud.serverless.trigger" +
-      "s.v1.PutQueueMessage\"c\n\023InvokeContainerO" +
-      "nce\022\"\n\014container_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\014\n\004path\030\003 \001(\t\022\032\n\022service_account_id\030\004 \001(" +
-      "\t\"\205\002\n\030InvokeContainerWithRetry\022\"\n\014contai" +
-      "ner_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004path\030\003 \001(\t" +
-      "\022\032\n\022service_account_id\030\004 \001(\t\022J\n\016retry_se" +
-      "ttings\030\005 \001(\01322.yandex.cloud.serverless.t" +
-      "riggers.v1.RetrySettings\022O\n\021dead_letter_" +
-      "queue\030\006 \001(\01324.yandex.cloud.serverless.tr" +
-      "iggers.v1.PutQueueMessage\"M\n\017PutQueueMes" +
-      "sage\022\020\n\010queue_id\030\013 \001(\t\022(\n\022service_accoun" +
-      "t_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"X\n\rBatchSetting" +
-      "s\022\026\n\004size\030\001 \001(\003B\010\372\3071\0040-10\022/\n\006cutoff\030\002 \001(" +
-      "\0132\031.google.protobuf.DurationB\004\350\3071\001\"g\n\026Cl" +
-      "oudLogsBatchSettings\022\027\n\004size\030\001 \001(\003B\t\372\3071\005" +
-      "0-100\0224\n\006cutoff\030\002 \001(\0132\031.google.protobuf." +
-      "DurationB\t\372\3071\0051s-1m\"e\n\024LoggingBatchSetti" +
-      "ngs\022\027\n\004size\030\001 \001(\003B\t\372\3071\0051-100\0224\n\006cutoff\030\002" +
-      " \001(\0132\031.google.protobuf.DurationB\t\372\3071\0051s-" +
-      "1m\"c\n\rRetrySettings\022\037\n\016retry_attempts\030\001 " +
-      "\001(\003B\007\372\3071\0031-5\0221\n\010interval\030\002 \001(\0132\031.google." +
-      "protobuf.DurationB\004\350\3071\001\"\232\002\n\rBillingBudge" +
-      "t\022(\n\022billing_account_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022\033\n\tbudget_id\030\002 \001(\tB\010\212\3101\004<=50\022W\n\017invo" +
-      "ke_function\030e \001(\0132<.yandex.cloud.serverl" +
-      "ess.triggers.v1.InvokeFunctionWithRetryH" +
-      "\000\022Y\n\020invoke_container\030g \001(\0132=.yandex.clo" +
-      "ud.serverless.triggers.v1.InvokeContaine" +
-      "rWithRetryH\000B\016\n\006action\022\004\300\3011\001*\267\001\n\013Trigger" +
-      "Type\022\034\n\030TRIGGER_TYPE_UNSPECIFIED\020\000\022\t\n\005TI" +
-      "MER\020\002\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013IOT_MESSAGE\020" +
-      "\004\022\022\n\016OBJECT_STORAGE\020\005\022\026\n\022CONTAINER_REGIS" +
-      "TRY\020\006\022\016\n\nCLOUD_LOGS\020\007\022\013\n\007LOGGING\020\010\022\022\n\016BI" +
-      "LLING_BUDGET\020\tB{\n\'yandex.cloud.api.serve" +
-      "rless.triggers.v1ZPgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/serverless/t" +
-      "riggers/v1;triggersb\006proto3"
+      "B\016\n\006action\022\004\300\3011\001\032\236\003\n\014MessageQueue\022\026\n\010que" +
+      "ue_id\030\013 \001(\tB\004\350\3071\001\022(\n\022service_account_id\030" +
+      "\003 \001(\tB\014\350\3071\001\212\3101\004<=50\022P\n\016batch_settings\030\004 " +
+      "\001(\01322.yandex.cloud.serverless.triggers.v" +
+      "1.BatchSettingsB\004\350\3071\001\022@\n\022visibility_time" +
+      "out\030\005 \001(\0132\031.google.protobuf.DurationB\t\372\307" +
+      "1\005<=12h\022R\n\017invoke_function\030e \001(\01327.yande" +
+      "x.cloud.serverless.triggers.v1.InvokeFun" +
+      "ctionOnceH\000\022T\n\020invoke_container\030f \001(\01328." +
+      "yandex.cloud.serverless.triggers.v1.Invo" +
+      "keContainerOnceH\000B\016\n\006action\022\004\300\3011\001\032\222\002\n\nIo" +
+      "TMessage\022\031\n\013registry_id\030\001 \001(\tB\004\350\3071\001\022\021\n\td" +
+      "evice_id\030\002 \001(\t\022\022\n\nmqtt_topic\030\003 \001(\t\022W\n\017in" +
+      "voke_function\030e \001(\0132<.yandex.cloud.serve" +
+      "rless.triggers.v1.InvokeFunctionWithRetr" +
+      "yH\000\022Y\n\020invoke_container\030f \001(\0132=.yandex.c" +
+      "loud.serverless.triggers.v1.InvokeContai" +
+      "nerWithRetryH\000B\016\n\006action\022\004\300\3011\001\032\347\002\n\rObjec" +
+      "tStorage\022_\n\nevent_type\030\003 \003(\0162C.yandex.cl" +
+      "oud.serverless.triggers.v1.Trigger.Objec" +
+      "tStorageEventTypeB\006\202\3101\002>0\022\021\n\tbucket_id\030\004" +
+      " \001(\t\022\016\n\006prefix\030\006 \001(\t\022\016\n\006suffix\030\007 \001(\t\022W\n\017" +
+      "invoke_function\030e \001(\0132<.yandex.cloud.ser" +
+      "verless.triggers.v1.InvokeFunctionWithRe" +
+      "tryH\000\022Y\n\020invoke_container\030f \001(\0132=.yandex" +
+      ".cloud.serverless.triggers.v1.InvokeCont" +
+      "ainerWithRetryH\000B\016\n\006action\022\004\300\3011\001\032\362\002\n\021Con" +
+      "tainerRegistry\022c\n\nevent_type\030\003 \003(\0162G.yan" +
+      "dex.cloud.serverless.triggers.v1.Trigger" +
+      ".ContainerRegistryEventTypeB\006\202\3101\002>0\022\023\n\013r" +
+      "egistry_id\030\004 \001(\t\022\022\n\nimage_name\030\005 \001(\t\022\013\n\003" +
+      "tag\030\006 \001(\t\022W\n\017invoke_function\030e \001(\0132<.yan" +
+      "dex.cloud.serverless.triggers.v1.InvokeF" +
+      "unctionWithRetryH\000\022Y\n\020invoke_container\030f" +
+      " \001(\0132=.yandex.cloud.serverless.triggers." +
+      "v1.InvokeContainerWithRetryH\000B\016\n\006action\022" +
+      "\004\300\3011\001\032\300\002\n\tCloudLogs\022\024\n\014log_group_id\030\001 \003(" +
+      "\t\022Y\n\016batch_settings\030\002 \001(\0132;.yandex.cloud" +
+      ".serverless.triggers.v1.CloudLogsBatchSe" +
+      "ttingsB\004\350\3071\001\022W\n\017invoke_function\030e \001(\0132<." +
+      "yandex.cloud.serverless.triggers.v1.Invo" +
+      "keFunctionWithRetryH\000\022Y\n\020invoke_containe" +
+      "r\030f \001(\0132=.yandex.cloud.serverless.trigge" +
+      "rs.v1.InvokeContainerWithRetryH\000B\016\n\006acti" +
+      "on\022\004\300\3011\001\032\213\004\n\007Logging\022\036\n\014log_group_id\030\001 \001" +
+      "(\tB\010\212\3101\004<=50\022@\n\rresource_type\030\003 \003(\tB)\362\3071" +
+      "\034[a-zA-Z][-a-zA-Z0-9_.]{1,62}\202\3101\005<=100\022>" +
+      "\n\013resource_id\030\004 \003(\tB)\362\3071\034[a-zA-Z][-a-zA-" +
+      "Z0-9_.]{1,62}\202\3101\005<=100\022A\n\006levels\030\005 \003(\0162\'" +
+      ".yandex.cloud.logging.v1.LogLevel.LevelB" +
+      "\010\202\3101\004<=10\022W\n\016batch_settings\030\006 \001(\01329.yand" +
+      "ex.cloud.serverless.triggers.v1.LoggingB" +
+      "atchSettingsB\004\350\3071\001\022W\n\017invoke_function\030e " +
+      "\001(\0132<.yandex.cloud.serverless.triggers.v" +
+      "1.InvokeFunctionWithRetryH\000\022Y\n\020invoke_co" +
+      "ntainer\030g \001(\0132=.yandex.cloud.serverless." +
+      "triggers.v1.InvokeContainerWithRetryH\000B\016" +
+      "\n\006action\022\004\300\3011\001\"\312\001\n\026ObjectStorageEventTyp" +
+      "e\022)\n%OBJECT_STORAGE_EVENT_TYPE_UNSPECIFI" +
+      "ED\020\000\022+\n\'OBJECT_STORAGE_EVENT_TYPE_CREATE" +
+      "_OBJECT\020\001\022+\n\'OBJECT_STORAGE_EVENT_TYPE_U" +
+      "PDATE_OBJECT\020\002\022+\n\'OBJECT_STORAGE_EVENT_T" +
+      "YPE_DELETE_OBJECT\020\003\"\223\002\n\032ContainerRegistr" +
+      "yEventType\022-\n)CONTAINER_REGISTRY_EVENT_T" +
+      "YPE_UNSPECIFIED\020\000\022.\n*CONTAINER_REGISTRY_" +
+      "EVENT_TYPE_CREATE_IMAGE\020\001\022.\n*CONTAINER_R" +
+      "EGISTRY_EVENT_TYPE_DELETE_IMAGE\020\002\0222\n.CON" +
+      "TAINER_REGISTRY_EVENT_TYPE_CREATE_IMAGE_" +
+      "TAG\020\003\0222\n.CONTAINER_REGISTRY_EVENT_TYPE_D" +
+      "ELETE_IMAGE_TAG\020\004\"8\n\006Status\022\026\n\022STATUS_UN" +
+      "SPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\n\n\006PAUSED\020\002\"i\n\022I" +
+      "nvokeFunctionOnce\022!\n\013function_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022\024\n\014function_tag\030\002 \001(\t\022\032\n\022se" +
+      "rvice_account_id\030\003 \001(\t\"\213\002\n\027InvokeFunctio" +
+      "nWithRetry\022!\n\013function_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\022\024\n\014function_tag\030\002 \001(\t\022\032\n\022service_a" +
+      "ccount_id\030\003 \001(\t\022J\n\016retry_settings\030\004 \001(\0132" +
+      "2.yandex.cloud.serverless.triggers.v1.Re" +
+      "trySettings\022O\n\021dead_letter_queue\030\005 \001(\01324" +
+      ".yandex.cloud.serverless.triggers.v1.Put" +
+      "QueueMessage\"c\n\023InvokeContainerOnce\022\"\n\014c" +
+      "ontainer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004path\030" +
+      "\003 \001(\t\022\032\n\022service_account_id\030\004 \001(\t\"\205\002\n\030In" +
+      "vokeContainerWithRetry\022\"\n\014container_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004path\030\003 \001(\t\022\032\n\022serv" +
+      "ice_account_id\030\004 \001(\t\022J\n\016retry_settings\030\005" +
+      " \001(\01322.yandex.cloud.serverless.triggers." +
+      "v1.RetrySettings\022O\n\021dead_letter_queue\030\006 " +
+      "\001(\01324.yandex.cloud.serverless.triggers.v" +
+      "1.PutQueueMessage\"M\n\017PutQueueMessage\022\020\n\010" +
+      "queue_id\030\013 \001(\t\022(\n\022service_account_id\030\002 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"X\n\rBatchSettings\022\026\n\004siz" +
+      "e\030\001 \001(\003B\010\372\3071\0040-10\022/\n\006cutoff\030\002 \001(\0132\031.goog" +
+      "le.protobuf.DurationB\004\350\3071\001\"g\n\026CloudLogsB" +
+      "atchSettings\022\027\n\004size\030\001 \001(\003B\t\372\3071\0050-100\0224\n" +
+      "\006cutoff\030\002 \001(\0132\031.google.protobuf.Duration" +
+      "B\t\372\3071\0051s-1m\"e\n\024LoggingBatchSettings\022\027\n\004s" +
+      "ize\030\001 \001(\003B\t\372\3071\0051-100\0224\n\006cutoff\030\002 \001(\0132\031.g" +
+      "oogle.protobuf.DurationB\t\372\3071\0051s-1m\"c\n\rRe" +
+      "trySettings\022\037\n\016retry_attempts\030\001 \001(\003B\007\372\3071" +
+      "\0031-5\0221\n\010interval\030\002 \001(\0132\031.google.protobuf" +
+      ".DurationB\004\350\3071\001\"\232\002\n\rBillingBudget\022(\n\022bil" +
+      "ling_account_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tb" +
+      "udget_id\030\002 \001(\tB\010\212\3101\004<=50\022W\n\017invoke_funct" +
+      "ion\030e \001(\0132<.yandex.cloud.serverless.trig" +
+      "gers.v1.InvokeFunctionWithRetryH\000\022Y\n\020inv" +
+      "oke_container\030g \001(\0132=.yandex.cloud.serve" +
+      "rless.triggers.v1.InvokeContainerWithRet" +
+      "ryH\000B\016\n\006action\022\004\300\3011\001\"j\n\027DataStreamBatchS" +
+      "ettings\022\031\n\004size\030\001 \001(\003B\013\372\3071\0071-65536\0224\n\006cu" +
+      "toff\030\002 \001(\0132\031.google.protobuf.DurationB\t\372" +
+      "\3071\0051s-1m\"\366\002\n\nDataStream\022\020\n\010endpoint\030\001 \001(" +
+      "\t\022\020\n\010database\030\002 \001(\t\022\016\n\006stream\030\003 \001(\t\022\032\n\022s" +
+      "ervice_account_id\030\004 \001(\t\022T\n\016batch_setting" +
+      "s\030\005 \001(\0132<.yandex.cloud.serverless.trigge" +
+      "rs.v1.DataStreamBatchSettings\022W\n\017invoke_" +
+      "function\030\r \001(\0132<.yandex.cloud.serverless" +
+      ".triggers.v1.InvokeFunctionWithRetryH\000\022Y" +
+      "\n\020invoke_container\030\017 \001(\0132=.yandex.cloud." +
+      "serverless.triggers.v1.InvokeContainerWi" +
+      "thRetryH\000B\016\n\006action\022\004\300\3011\001*\300\001\n\013TriggerTyp" +
+      "e\022\034\n\030TRIGGER_TYPE_UNSPECIFIED\020\000\022\t\n\005TIMER" +
+      "\020\002\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013IOT_MESSAGE\020\004\022\022" +
+      "\n\016OBJECT_STORAGE\020\005\022\026\n\022CONTAINER_REGISTRY" +
+      "\020\006\022\016\n\nCLOUD_LOGS\020\007\022\013\n\007LOGGING\020\010\022\022\n\016BILLI" +
+      "NG_BUDGET\020\t\022\007\n\003YDS\020\nB{\n\'yandex.cloud.api" +
+      ".serverless.triggers.v1ZPgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/server" +
+      "less/triggers/v1;triggersb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -27635,7 +30527,7 @@ public final class TriggerOuterClass {
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Rule_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Rule_descriptor,
-        new java.lang.String[] { "Timer", "MessageQueue", "IotMessage", "ObjectStorage", "ContainerRegistry", "CloudLogs", "Logging", "BillingBudget", "Rule", });
+        new java.lang.String[] { "Timer", "MessageQueue", "IotMessage", "ObjectStorage", "ContainerRegistry", "CloudLogs", "Logging", "BillingBudget", "DataStream", "Rule", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Timer_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_Timer_fieldAccessorTable = new
@@ -27738,6 +30630,18 @@ public final class TriggerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_BillingBudget_descriptor,
         new java.lang.String[] { "BillingAccountId", "BudgetId", "InvokeFunction", "InvokeContainer", "Action", });
+    internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_triggers_v1_DataStreamBatchSettings_descriptor,
+        new java.lang.String[] { "Size", "Cutoff", });
+    internal_static_yandex_cloud_serverless_triggers_v1_DataStream_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_serverless_triggers_v1_DataStream_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_triggers_v1_DataStream_descriptor,
+        new java.lang.String[] { "Endpoint", "Database", "Stream", "ServiceAccountId", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

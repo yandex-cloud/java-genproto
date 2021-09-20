@@ -414,6 +414,70 @@ public final class InstanceServiceGrpc {
      return getDetachDiskMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAttachFilesystemMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AttachFilesystem",
+      requestType = yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAttachFilesystemMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getAttachFilesystemMethod;
+    if ((getAttachFilesystemMethod = InstanceServiceGrpc.getAttachFilesystemMethod) == null) {
+      synchronized (InstanceServiceGrpc.class) {
+        if ((getAttachFilesystemMethod = InstanceServiceGrpc.getAttachFilesystemMethod) == null) {
+          InstanceServiceGrpc.getAttachFilesystemMethod = getAttachFilesystemMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.compute.v1.InstanceService", "AttachFilesystem"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new InstanceServiceMethodDescriptorSupplier("AttachFilesystem"))
+                  .build();
+          }
+        }
+     }
+     return getAttachFilesystemMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDetachFilesystemMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DetachFilesystem",
+      requestType = yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDetachFilesystemMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDetachFilesystemMethod;
+    if ((getDetachFilesystemMethod = InstanceServiceGrpc.getDetachFilesystemMethod) == null) {
+      synchronized (InstanceServiceGrpc.class) {
+        if ((getDetachFilesystemMethod = InstanceServiceGrpc.getDetachFilesystemMethod) == null) {
+          InstanceServiceGrpc.getDetachFilesystemMethod = getDetachFilesystemMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.compute.v1.InstanceService", "DetachFilesystem"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new InstanceServiceMethodDescriptorSupplier("DetachFilesystem"))
+                  .build();
+          }
+        }
+     }
+     return getDetachFilesystemMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AddInstanceOneToOneNatRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getAddOneToOneNatMethod;
 
@@ -697,6 +761,26 @@ public final class InstanceServiceGrpc {
 
     /**
      * <pre>
+     * Attaches the disk to the instance.
+     * </pre>
+     */
+    public void attachFilesystem(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getAttachFilesystemMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Detaches the disk from the instance.
+     * </pre>
+     */
+    public void detachFilesystem(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getDetachFilesystemMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Enables One-to-one NAT on the network interface.
      * </pre>
      */
@@ -821,6 +905,20 @@ public final class InstanceServiceGrpc {
                 yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceDiskRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DETACH_DISK)))
+          .addMethod(
+            getAttachFilesystemMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ATTACH_FILESYSTEM)))
+          .addMethod(
+            getDetachFilesystemMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DETACH_FILESYSTEM)))
           .addMethod(
             getAddOneToOneNatMethod(),
             asyncUnaryCall(
@@ -1011,6 +1109,28 @@ public final class InstanceServiceGrpc {
 
     /**
      * <pre>
+     * Attaches the disk to the instance.
+     * </pre>
+     */
+    public void attachFilesystem(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getAttachFilesystemMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Detaches the disk from the instance.
+     * </pre>
+     */
+    public void detachFilesystem(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getDetachFilesystemMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Enables One-to-one NAT on the network interface.
      * </pre>
      */
@@ -1196,6 +1316,26 @@ public final class InstanceServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation detachDisk(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceDiskRequest request) {
       return blockingUnaryCall(
           getChannel(), getDetachDiskMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Attaches the disk to the instance.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation attachFilesystem(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getAttachFilesystemMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Detaches the disk from the instance.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation detachFilesystem(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getDetachFilesystemMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1397,6 +1537,28 @@ public final class InstanceServiceGrpc {
 
     /**
      * <pre>
+     * Attaches the disk to the instance.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> attachFilesystem(
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getAttachFilesystemMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Detaches the disk from the instance.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> detachFilesystem(
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getDetachFilesystemMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Enables One-to-one NAT on the network interface.
      * </pre>
      */
@@ -1452,10 +1614,12 @@ public final class InstanceServiceGrpc {
   private static final int METHODID_RESTART = 9;
   private static final int METHODID_ATTACH_DISK = 10;
   private static final int METHODID_DETACH_DISK = 11;
-  private static final int METHODID_ADD_ONE_TO_ONE_NAT = 12;
-  private static final int METHODID_REMOVE_ONE_TO_ONE_NAT = 13;
-  private static final int METHODID_UPDATE_NETWORK_INTERFACE = 14;
-  private static final int METHODID_LIST_OPERATIONS = 15;
+  private static final int METHODID_ATTACH_FILESYSTEM = 12;
+  private static final int METHODID_DETACH_FILESYSTEM = 13;
+  private static final int METHODID_ADD_ONE_TO_ONE_NAT = 14;
+  private static final int METHODID_REMOVE_ONE_TO_ONE_NAT = 15;
+  private static final int METHODID_UPDATE_NETWORK_INTERFACE = 16;
+  private static final int METHODID_LIST_OPERATIONS = 17;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1520,6 +1684,14 @@ public final class InstanceServiceGrpc {
           break;
         case METHODID_DETACH_DISK:
           serviceImpl.detachDisk((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceDiskRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ATTACH_FILESYSTEM:
+          serviceImpl.attachFilesystem((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachInstanceFilesystemRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_DETACH_FILESYSTEM:
+          serviceImpl.detachFilesystem((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.DetachInstanceFilesystemRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_ADD_ONE_TO_ONE_NAT:
@@ -1611,6 +1783,8 @@ public final class InstanceServiceGrpc {
               .addMethod(getRestartMethod())
               .addMethod(getAttachDiskMethod())
               .addMethod(getDetachDiskMethod())
+              .addMethod(getAttachFilesystemMethod())
+              .addMethod(getDetachFilesystemMethod())
               .addMethod(getAddOneToOneNatMethod())
               .addMethod(getRemoveOneToOneNatMethod())
               .addMethod(getUpdateNetworkInterfaceMethod())

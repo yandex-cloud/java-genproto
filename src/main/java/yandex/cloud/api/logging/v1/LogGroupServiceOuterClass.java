@@ -1204,601 +1204,6 @@ public final class LogGroupServiceOuterClass {
 
   }
 
-  public interface GetDefaultLogGroupRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.GetDefaultLogGroupRequest)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Folder ID of the default log group to return.
-     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
-     * </pre>
-     *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
-     */
-    java.lang.String getFolderId();
-    /**
-     * <pre>
-     * Folder ID of the default log group to return.
-     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
-     * </pre>
-     *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
-     */
-    com.google.protobuf.ByteString
-        getFolderIdBytes();
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.logging.v1.GetDefaultLogGroupRequest}
-   */
-  public  static final class GetDefaultLogGroupRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.GetDefaultLogGroupRequest)
-      GetDefaultLogGroupRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetDefaultLogGroupRequest.newBuilder() to construct.
-    private GetDefaultLogGroupRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private GetDefaultLogGroupRequest() {
-      folderId_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private GetDefaultLogGroupRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              folderId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.internal_static_yandex_cloud_logging_v1_GetDefaultLogGroupRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.internal_static_yandex_cloud_logging_v1_GetDefaultLogGroupRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest.class, yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest.Builder.class);
-    }
-
-    public static final int FOLDER_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object folderId_;
-    /**
-     * <pre>
-     * Folder ID of the default log group to return.
-     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
-     * </pre>
-     *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
-     */
-    public java.lang.String getFolderId() {
-      java.lang.Object ref = folderId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        folderId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Folder ID of the default log group to return.
-     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
-     * </pre>
-     *
-     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
-     */
-    public com.google.protobuf.ByteString
-        getFolderIdBytes() {
-      java.lang.Object ref = folderId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        folderId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getFolderIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getFolderIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest other = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest) obj;
-
-      boolean result = true;
-      result = result && getFolderId()
-          .equals(other.getFolderId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getFolderId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.logging.v1.GetDefaultLogGroupRequest}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.logging.v1.GetDefaultLogGroupRequest)
-        yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.internal_static_yandex_cloud_logging_v1_GetDefaultLogGroupRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.internal_static_yandex_cloud_logging_v1_GetDefaultLogGroupRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest.class, yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        folderId_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.internal_static_yandex_cloud_logging_v1_GetDefaultLogGroupRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest getDefaultInstanceForType() {
-        return yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest build() {
-        yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest buildPartial() {
-        yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest result = new yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest(this);
-        result.folderId_ = folderId_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest) {
-          return mergeFrom((yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest other) {
-        if (other == yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest.getDefaultInstance()) return this;
-        if (!other.getFolderId().isEmpty()) {
-          folderId_ = other.folderId_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object folderId_ = "";
-      /**
-       * <pre>
-       * Folder ID of the default log group to return.
-       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
-       * </pre>
-       *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
-       */
-      public java.lang.String getFolderId() {
-        java.lang.Object ref = folderId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          folderId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Folder ID of the default log group to return.
-       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
-       * </pre>
-       *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
-       */
-      public com.google.protobuf.ByteString
-          getFolderIdBytes() {
-        java.lang.Object ref = folderId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          folderId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Folder ID of the default log group to return.
-       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
-       * </pre>
-       *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
-       */
-      public Builder setFolderId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        folderId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Folder ID of the default log group to return.
-       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
-       * </pre>
-       *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
-       */
-      public Builder clearFolderId() {
-        
-        folderId_ = getDefaultInstance().getFolderId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Folder ID of the default log group to return.
-       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
-       * </pre>
-       *
-       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
-       */
-      public Builder setFolderIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        folderId_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.logging.v1.GetDefaultLogGroupRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.logging.v1.GetDefaultLogGroupRequest)
-    private static final yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest();
-    }
-
-    public static yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<GetDefaultLogGroupRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetDefaultLogGroupRequest>() {
-      @java.lang.Override
-      public GetDefaultLogGroupRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetDefaultLogGroupRequest(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<GetDefaultLogGroupRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetDefaultLogGroupRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.logging.v1.LogGroupServiceOuterClass.GetDefaultLogGroupRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface ListLogGroupsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.ListLogGroupsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -4110,30 +3515,33 @@ public final class LogGroupServiceOuterClass {
      * <pre>
      * Log group entry retention period.
      * Entries will be present in group during this period.
-     * Must be at least `1h`.
+     * If specified, must be non-negative.
+     * Empty or zero value is treated as no limit.
      * </pre>
      *
-     * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+     * <code>.google.protobuf.Duration retention_period = 5;</code>
      */
     boolean hasRetentionPeriod();
     /**
      * <pre>
      * Log group entry retention period.
      * Entries will be present in group during this period.
-     * Must be at least `1h`.
+     * If specified, must be non-negative.
+     * Empty or zero value is treated as no limit.
      * </pre>
      *
-     * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+     * <code>.google.protobuf.Duration retention_period = 5;</code>
      */
     com.google.protobuf.Duration getRetentionPeriod();
     /**
      * <pre>
      * Log group entry retention period.
      * Entries will be present in group during this period.
-     * Must be at least `1h`.
+     * If specified, must be non-negative.
+     * Empty or zero value is treated as no limit.
      * </pre>
      *
-     * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+     * <code>.google.protobuf.Duration retention_period = 5;</code>
      */
     com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder();
   }
@@ -4496,10 +3904,11 @@ public final class LogGroupServiceOuterClass {
      * <pre>
      * Log group entry retention period.
      * Entries will be present in group during this period.
-     * Must be at least `1h`.
+     * If specified, must be non-negative.
+     * Empty or zero value is treated as no limit.
      * </pre>
      *
-     * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+     * <code>.google.protobuf.Duration retention_period = 5;</code>
      */
     public boolean hasRetentionPeriod() {
       return retentionPeriod_ != null;
@@ -4508,10 +3917,11 @@ public final class LogGroupServiceOuterClass {
      * <pre>
      * Log group entry retention period.
      * Entries will be present in group during this period.
-     * Must be at least `1h`.
+     * If specified, must be non-negative.
+     * Empty or zero value is treated as no limit.
      * </pre>
      *
-     * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+     * <code>.google.protobuf.Duration retention_period = 5;</code>
      */
     public com.google.protobuf.Duration getRetentionPeriod() {
       return retentionPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : retentionPeriod_;
@@ -4520,10 +3930,11 @@ public final class LogGroupServiceOuterClass {
      * <pre>
      * Log group entry retention period.
      * Entries will be present in group during this period.
-     * Must be at least `1h`.
+     * If specified, must be non-negative.
+     * Empty or zero value is treated as no limit.
      * </pre>
      *
-     * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+     * <code>.google.protobuf.Duration retention_period = 5;</code>
      */
     public com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder() {
       return getRetentionPeriod();
@@ -5384,10 +4795,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * Log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 5;</code>
        */
       public boolean hasRetentionPeriod() {
         return retentionPeriodBuilder_ != null || retentionPeriod_ != null;
@@ -5396,10 +4808,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * Log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 5;</code>
        */
       public com.google.protobuf.Duration getRetentionPeriod() {
         if (retentionPeriodBuilder_ == null) {
@@ -5412,10 +4825,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * Log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 5;</code>
        */
       public Builder setRetentionPeriod(com.google.protobuf.Duration value) {
         if (retentionPeriodBuilder_ == null) {
@@ -5434,10 +4848,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * Log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 5;</code>
        */
       public Builder setRetentionPeriod(
           com.google.protobuf.Duration.Builder builderForValue) {
@@ -5454,10 +4869,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * Log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 5;</code>
        */
       public Builder mergeRetentionPeriod(com.google.protobuf.Duration value) {
         if (retentionPeriodBuilder_ == null) {
@@ -5478,10 +4894,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * Log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 5;</code>
        */
       public Builder clearRetentionPeriod() {
         if (retentionPeriodBuilder_ == null) {
@@ -5498,10 +4915,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * Log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 5;</code>
        */
       public com.google.protobuf.Duration.Builder getRetentionPeriodBuilder() {
         
@@ -5512,10 +4930,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * Log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 5;</code>
        */
       public com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder() {
         if (retentionPeriodBuilder_ != null) {
@@ -5529,10 +4948,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * Log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 5 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
@@ -6331,30 +5751,33 @@ public final class LogGroupServiceOuterClass {
      * <pre>
      * New log group entry retention period.
      * Entries will be present in group during this period.
-     * Must be at least `1h`.
+     * If specified, must be non-negative.
+     * Empty or zero value is treated as no limit.
      * </pre>
      *
-     * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+     * <code>.google.protobuf.Duration retention_period = 6;</code>
      */
     boolean hasRetentionPeriod();
     /**
      * <pre>
      * New log group entry retention period.
      * Entries will be present in group during this period.
-     * Must be at least `1h`.
+     * If specified, must be non-negative.
+     * Empty or zero value is treated as no limit.
      * </pre>
      *
-     * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+     * <code>.google.protobuf.Duration retention_period = 6;</code>
      */
     com.google.protobuf.Duration getRetentionPeriod();
     /**
      * <pre>
      * New log group entry retention period.
      * Entries will be present in group during this period.
-     * Must be at least `1h`.
+     * If specified, must be non-negative.
+     * Empty or zero value is treated as no limit.
      * </pre>
      *
-     * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+     * <code>.google.protobuf.Duration retention_period = 6;</code>
      */
     com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder();
   }
@@ -6763,10 +6186,11 @@ public final class LogGroupServiceOuterClass {
      * <pre>
      * New log group entry retention period.
      * Entries will be present in group during this period.
-     * Must be at least `1h`.
+     * If specified, must be non-negative.
+     * Empty or zero value is treated as no limit.
      * </pre>
      *
-     * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+     * <code>.google.protobuf.Duration retention_period = 6;</code>
      */
     public boolean hasRetentionPeriod() {
       return retentionPeriod_ != null;
@@ -6775,10 +6199,11 @@ public final class LogGroupServiceOuterClass {
      * <pre>
      * New log group entry retention period.
      * Entries will be present in group during this period.
-     * Must be at least `1h`.
+     * If specified, must be non-negative.
+     * Empty or zero value is treated as no limit.
      * </pre>
      *
-     * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+     * <code>.google.protobuf.Duration retention_period = 6;</code>
      */
     public com.google.protobuf.Duration getRetentionPeriod() {
       return retentionPeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : retentionPeriod_;
@@ -6787,10 +6212,11 @@ public final class LogGroupServiceOuterClass {
      * <pre>
      * New log group entry retention period.
      * Entries will be present in group during this period.
-     * Must be at least `1h`.
+     * If specified, must be non-negative.
+     * Empty or zero value is treated as no limit.
      * </pre>
      *
-     * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+     * <code>.google.protobuf.Duration retention_period = 6;</code>
      */
     public com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder() {
       return getRetentionPeriod();
@@ -7834,10 +7260,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * New log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       public boolean hasRetentionPeriod() {
         return retentionPeriodBuilder_ != null || retentionPeriod_ != null;
@@ -7846,10 +7273,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * New log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       public com.google.protobuf.Duration getRetentionPeriod() {
         if (retentionPeriodBuilder_ == null) {
@@ -7862,10 +7290,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * New log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       public Builder setRetentionPeriod(com.google.protobuf.Duration value) {
         if (retentionPeriodBuilder_ == null) {
@@ -7884,10 +7313,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * New log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       public Builder setRetentionPeriod(
           com.google.protobuf.Duration.Builder builderForValue) {
@@ -7904,10 +7334,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * New log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       public Builder mergeRetentionPeriod(com.google.protobuf.Duration value) {
         if (retentionPeriodBuilder_ == null) {
@@ -7928,10 +7359,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * New log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       public Builder clearRetentionPeriod() {
         if (retentionPeriodBuilder_ == null) {
@@ -7948,10 +7380,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * New log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       public com.google.protobuf.Duration.Builder getRetentionPeriodBuilder() {
         
@@ -7962,10 +7395,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * New log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       public com.google.protobuf.DurationOrBuilder getRetentionPeriodOrBuilder() {
         if (retentionPeriodBuilder_ != null) {
@@ -7979,10 +7413,11 @@ public final class LogGroupServiceOuterClass {
        * <pre>
        * New log group entry retention period.
        * Entries will be present in group during this period.
-       * Must be at least `1h`.
+       * If specified, must be non-negative.
+       * Empty or zero value is treated as no limit.
        * </pre>
        *
-       * <code>.google.protobuf.Duration retention_period = 6 [(.yandex.cloud.value) = "1h-168h"];</code>
+       * <code>.google.protobuf.Duration retention_period = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
@@ -14444,11 +13879,6 @@ public final class LogGroupServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_logging_v1_GetLogGroupStatsRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_logging_v1_GetDefaultLogGroupRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_logging_v1_GetDefaultLogGroupRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_logging_v1_ListLogGroupsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14544,110 +13974,104 @@ public final class LogGroupServiceOuterClass {
       "oto\032\035yandex/cloud/validation.proto\"8\n\022Ge" +
       "tLogGroupRequest\022\"\n\014log_group_id\030\001 \001(\tB\014" +
       "\350\3071\001\212\3101\004<=64\"=\n\027GetLogGroupStatsRequest\022" +
-      "\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\"<\n\031G" +
-      "etDefaultLogGroupRequest\022\037\n\tfolder_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=64\"\205\001\n\024ListLogGroupsReque" +
-      "st\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022\021\n\tp" +
-      "age_size\030\002 \001(\003\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
-      "<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"c\n\025Lis" +
-      "tLogGroupsResponse\0221\n\006groups\030\001 \003(\0132!.yan" +
-      "dex.cloud.logging.v1.LogGroup\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"\215\003\n\025CreateLogGroupRequest" +
-      "\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\0224\n\004nam" +
-      "e\030\002 \001(\tB&\362\3071\"([a-z]([-a-z0-9]{1,61}[a-z0" +
-      "-9])?)?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022" +
-      "\213\001\n\006labels\030\004 \003(\0132:.yandex.cloud.logging." +
-      "v1.CreateLogGroupRequest.LabelsEntryB?\202\310" +
-      "1\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262" +
-      "\3101\022\022\020[a-z][-_0-9a-z]*\022@\n\020retention_perio" +
-      "d\030\005 \001(\0132\031.google.protobuf.DurationB\013\372\3071\007" +
-      "1h-168h\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\".\n\026CreateLogGroupMetadata" +
-      "\022\024\n\014log_group_id\030\001 \001(\t\"\301\003\n\025UpdateLogGrou" +
-      "pRequest\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=64\022/\n\013update_mask\030\002 \001(\0132\032.google.proto" +
-      "buf.FieldMask\0224\n\004name\030\003 \001(\tB&\362\3071\"([a-z](" +
-      "[-a-z0-9]{1,61}[a-z0-9])?)?\022\036\n\013descripti" +
-      "on\030\004 \001(\tB\t\212\3101\005<=256\022\213\001\n\006labels\030\005 \003(\0132:.y" +
-      "andex.cloud.logging.v1.UpdateLogGroupReq" +
-      "uest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-" +
-      "_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]" +
-      "*\022@\n\020retention_period\030\006 \001(\0132\031.google.pro" +
-      "tobuf.DurationB\013\372\3071\0071h-168h\032-\n\013LabelsEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\".\n\026Up" +
-      "dateLogGroupMetadata\022\024\n\014log_group_id\030\001 \001" +
-      "(\t\";\n\025DeleteLogGroupRequest\022\"\n\014log_group" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\".\n\026DeleteLogGrou" +
-      "pMetadata\022\024\n\014log_group_id\030\001 \001(\t\"S\n\024ListR" +
-      "esourcesRequest\022\"\n\014log_group_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=64\022\027\n\004type\030\002 \001(\tB\t\212\3101\005<=256\"U\n\025" +
-      "ListResourcesResponse\022<\n\tresources\030\001 \003(\013" +
-      "2).yandex.cloud.logging.v1.LogGroupResou" +
-      "rce\"\225\001\n\025ListOperationsRequest\022\"\n\014log_gro" +
-      "up_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022\035\n\tpage_size\030\002" +
-      " \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\310" +
-      "1\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"h\n\026L" +
-      "istOperationsResponse\0225\n\noperations\030\001 \003(" +
-      "\0132!.yandex.cloud.operation.Operation\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"P\n\030GetLogGroupStat" +
-      "sResponse\022\024\n\014log_group_id\030\001 \001(\t\022\r\n\005bytes" +
-      "\030\002 \001(\003\022\017\n\007records\030\003 \001(\0032\325\020\n\017LogGroupServ" +
-      "ice\022\203\001\n\003Get\022+.yandex.cloud.logging.v1.Ge" +
-      "tLogGroupRequest\032!.yandex.cloud.logging." +
-      "v1.LogGroup\",\202\323\344\223\002&\022$/logging/v1/logGrou" +
-      "ps/{log_group_id}\022\212\001\n\nGetDefault\0222.yande" +
-      "x.cloud.logging.v1.GetDefaultLogGroupReq" +
-      "uest\032!.yandex.cloud.logging.v1.LogGroup\"" +
-      "%\202\323\344\223\002\037\022\035/logging/v1/logGroups/default\022\240" +
-      "\001\n\005Stats\0220.yandex.cloud.logging.v1.GetLo" +
-      "gGroupStatsRequest\0321.yandex.cloud.loggin" +
-      "g.v1.GetLogGroupStatsResponse\"2\202\323\344\223\002,\022*/" +
-      "logging/v1/logGroups/{log_group_id}/stat" +
-      "s\022\204\001\n\004List\022-.yandex.cloud.logging.v1.Lis" +
-      "tLogGroupsRequest\032..yandex.cloud.logging" +
-      ".v1.ListLogGroupsResponse\"\035\202\323\344\223\002\027\022\025/logg" +
-      "ing/v1/logGroups\022\243\001\n\006Create\022..yandex.clo" +
-      "ud.logging.v1.CreateLogGroupRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"F\202\323\344\223\002\032\"\025" +
-      "/logging/v1/logGroups:\001*\262\322*\"\n\026CreateLogG" +
-      "roupMetadata\022\010LogGroup\022\262\001\n\006Update\022..yand" +
-      "ex.cloud.logging.v1.UpdateLogGroupReques" +
-      "t\032!.yandex.cloud.operation.Operation\"U\202\323" +
-      "\344\223\002)2$/logging/v1/logGroups/{log_group_i" +
-      "d}:\001*\262\322*\"\n\026UpdateLogGroupMetadata\022\010LogGr" +
-      "oup\022\274\001\n\006Delete\022..yandex.cloud.logging.v1" +
-      ".DeleteLogGroupRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"_\202\323\344\223\002&*$/logging/v1/l" +
-      "ogGroups/{log_group_id}\262\322*/\n\026DeleteLogGr" +
-      "oupMetadata\022\025google.protobuf.Empty\022\252\001\n\rL" +
-      "istResources\022-.yandex.cloud.logging.v1.L" +
-      "istResourcesRequest\032..yandex.cloud.loggi" +
-      "ng.v1.ListResourcesResponse\":\202\323\344\223\0024\0222/lo" +
-      "gging/v1/logGroups/{log_group_id}:listRe" +
-      "sources\022\252\001\n\016ListOperations\022..yandex.clou" +
-      "d.logging.v1.ListOperationsRequest\032/.yan" +
-      "dex.cloud.logging.v1.ListOperationsRespo" +
-      "nse\"7\202\323\344\223\0021\022//logging/v1/logGroups/{log_" +
-      "group_id}/operations\022\265\001\n\022ListAccessBindi" +
-      "ngs\022..yandex.cloud.access.ListAccessBind" +
-      "ingsRequest\032/.yandex.cloud.access.ListAc" +
-      "cessBindingsResponse\">\202\323\344\223\0028\0226/logging/v" +
-      "1/logGroups/{resource_id}:listAccessBind" +
-      "ings\022\344\001\n\021SetAccessBindings\022-.yandex.clou" +
-      "d.access.SetAccessBindingsRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"}\202\323\344\223\002:\"5/l" +
-      "ogging/v1/logGroups/{resource_id}:setAcc" +
-      "essBindings:\001*\262\322*9\n access.SetAccessBind" +
-      "ingsMetadata\022\025google.protobuf.Empty\022\361\001\n\024" +
-      "UpdateAccessBindings\0220.yandex.cloud.acce" +
-      "ss.UpdateAccessBindingsRequest\032!.yandex." +
-      "cloud.operation.Operation\"\203\001\202\323\344\223\002=28/log" +
-      "ging/v1/logGroups/{resource_id}:updateAc" +
-      "cessBindings:\001*\262\322*<\n#access.UpdateAccess" +
-      "BindingsMetadata\022\025google.protobuf.EmptyB" +
-      "b\n\033yandex.cloud.api.logging.v1ZCgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/logging/v1;loggingb\006proto3"
+      "\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\"\205\001\n\024" +
+      "ListLogGroupsRequest\022\037\n\tfolder_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=64\022\021\n\tpage_size\030\002 \001(\003\022\035\n\npage" +
+      "_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB" +
+      "\n\212\3101\006<=1000\"c\n\025ListLogGroupsResponse\0221\n\006" +
+      "groups\030\001 \003(\0132!.yandex.cloud.logging.v1.L" +
+      "ogGroup\022\027\n\017next_page_token\030\002 \001(\t\"\200\003\n\025Cre" +
+      "ateLogGroupRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=64\0224\n\004name\030\002 \001(\tB&\362\3071\"([a-z]([-" +
+      "a-z0-9]{1,61}[a-z0-9])?)?\022\036\n\013description" +
+      "\030\003 \001(\tB\t\212\3101\005<=256\022\213\001\n\006labels\030\004 \003(\0132:.yan" +
+      "dex.cloud.logging.v1.CreateLogGroupReque" +
+      "st.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0" +
+      "-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022" +
+      "3\n\020retention_period\030\005 \001(\0132\031.google.proto" +
+      "buf.Duration\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\".\n\026CreateLogGroupMet" +
+      "adata\022\024\n\014log_group_id\030\001 \001(\t\"\264\003\n\025UpdateLo" +
+      "gGroupRequest\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=64\022/\n\013update_mask\030\002 \001(\0132\032.google." +
+      "protobuf.FieldMask\0224\n\004name\030\003 \001(\tB&\362\3071\"([" +
+      "a-z]([-a-z0-9]{1,61}[a-z0-9])?)?\022\036\n\013desc" +
+      "ription\030\004 \001(\tB\t\212\3101\005<=256\022\213\001\n\006labels\030\005 \003(" +
+      "\0132:.yandex.cloud.logging.v1.UpdateLogGro" +
+      "upRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362" +
+      "\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-" +
+      "9a-z]*\0223\n\020retention_period\030\006 \001(\0132\031.googl" +
+      "e.protobuf.Duration\032-\n\013LabelsEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\".\n\026UpdateLogG" +
+      "roupMetadata\022\024\n\014log_group_id\030\001 \001(\t\";\n\025De" +
+      "leteLogGroupRequest\022\"\n\014log_group_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=64\".\n\026DeleteLogGroupMetadat" +
+      "a\022\024\n\014log_group_id\030\001 \001(\t\"S\n\024ListResources" +
+      "Request\022\"\n\014log_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=64\022\027\n\004type\030\002 \001(\tB\t\212\3101\005<=256\"U\n\025ListReso" +
+      "urcesResponse\022<\n\tresources\030\001 \003(\0132).yande" +
+      "x.cloud.logging.v1.LogGroupResource\"\225\001\n\025" +
+      "ListOperationsRequest\022\"\n\014log_group_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=64\022\035\n\tpage_size\030\002 \001(\003B\n\372\307" +
+      "1\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022" +
+      "\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"h\n\026ListOpera" +
+      "tionsResponse\0225\n\noperations\030\001 \003(\0132!.yand" +
+      "ex.cloud.operation.Operation\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t\"P\n\030GetLogGroupStatsRespons" +
+      "e\022\024\n\014log_group_id\030\001 \001(\t\022\r\n\005bytes\030\002 \001(\003\022\017" +
+      "\n\007records\030\003 \001(\0032\310\017\n\017LogGroupService\022\203\001\n\003" +
+      "Get\022+.yandex.cloud.logging.v1.GetLogGrou" +
+      "pRequest\032!.yandex.cloud.logging.v1.LogGr" +
+      "oup\",\202\323\344\223\002&\022$/logging/v1/logGroups/{log_" +
+      "group_id}\022\240\001\n\005Stats\0220.yandex.cloud.loggi" +
+      "ng.v1.GetLogGroupStatsRequest\0321.yandex.c" +
+      "loud.logging.v1.GetLogGroupStatsResponse" +
+      "\"2\202\323\344\223\002,\022*/logging/v1/logGroups/{log_gro" +
+      "up_id}/stats\022\204\001\n\004List\022-.yandex.cloud.log" +
+      "ging.v1.ListLogGroupsRequest\032..yandex.cl" +
+      "oud.logging.v1.ListLogGroupsResponse\"\035\202\323" +
+      "\344\223\002\027\022\025/logging/v1/logGroups\022\243\001\n\006Create\022." +
+      ".yandex.cloud.logging.v1.CreateLogGroupR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"F\202\323\344\223\002\032\"\025/logging/v1/logGroups:\001*\262\322*\"\n" +
+      "\026CreateLogGroupMetadata\022\010LogGroup\022\262\001\n\006Up" +
+      "date\022..yandex.cloud.logging.v1.UpdateLog" +
+      "GroupRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"U\202\323\344\223\002)2$/logging/v1/logGroups/{" +
+      "log_group_id}:\001*\262\322*\"\n\026UpdateLogGroupMeta" +
+      "data\022\010LogGroup\022\274\001\n\006Delete\022..yandex.cloud" +
+      ".logging.v1.DeleteLogGroupRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"_\202\323\344\223\002&*$/l" +
+      "ogging/v1/logGroups/{log_group_id}\262\322*/\n\026" +
+      "DeleteLogGroupMetadata\022\025google.protobuf." +
+      "Empty\022\252\001\n\rListResources\022-.yandex.cloud.l" +
+      "ogging.v1.ListResourcesRequest\032..yandex." +
+      "cloud.logging.v1.ListResourcesResponse\":" +
+      "\202\323\344\223\0024\0222/logging/v1/logGroups/{log_group" +
+      "_id}:listResources\022\252\001\n\016ListOperations\022.." +
+      "yandex.cloud.logging.v1.ListOperationsRe" +
+      "quest\032/.yandex.cloud.logging.v1.ListOper" +
+      "ationsResponse\"7\202\323\344\223\0021\022//logging/v1/logG" +
+      "roups/{log_group_id}/operations\022\265\001\n\022List" +
+      "AccessBindings\022..yandex.cloud.access.Lis" +
+      "tAccessBindingsRequest\032/.yandex.cloud.ac" +
+      "cess.ListAccessBindingsResponse\">\202\323\344\223\0028\022" +
+      "6/logging/v1/logGroups/{resource_id}:lis" +
+      "tAccessBindings\022\344\001\n\021SetAccessBindings\022-." +
+      "yandex.cloud.access.SetAccessBindingsReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "}\202\323\344\223\002:\"5/logging/v1/logGroups/{resource" +
+      "_id}:setAccessBindings:\001*\262\322*9\n access.Se" +
+      "tAccessBindingsMetadata\022\025google.protobuf" +
+      ".Empty\022\361\001\n\024UpdateAccessBindings\0220.yandex" +
+      ".cloud.access.UpdateAccessBindingsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\203\001\202" +
+      "\323\344\223\002=28/logging/v1/logGroups/{resource_i" +
+      "d}:updateAccessBindings:\001*\262\322*<\n#access.U" +
+      "pdateAccessBindingsMetadata\022\025google.prot" +
+      "obuf.EmptyBb\n\033yandex.cloud.api.logging.v" +
+      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/logging/v1;loggingb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14682,26 +14106,20 @@ public final class LogGroupServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_GetLogGroupStatsRequest_descriptor,
         new java.lang.String[] { "LogGroupId", });
-    internal_static_yandex_cloud_logging_v1_GetDefaultLogGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_yandex_cloud_logging_v1_GetDefaultLogGroupRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_logging_v1_GetDefaultLogGroupRequest_descriptor,
-        new java.lang.String[] { "FolderId", });
     internal_static_yandex_cloud_logging_v1_ListLogGroupsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_logging_v1_ListLogGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_ListLogGroupsRequest_descriptor,
         new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_logging_v1_ListLogGroupsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_logging_v1_ListLogGroupsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_ListLogGroupsResponse_descriptor,
         new java.lang.String[] { "Groups", "NextPageToken", });
     internal_static_yandex_cloud_logging_v1_CreateLogGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_logging_v1_CreateLogGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_CreateLogGroupRequest_descriptor,
@@ -14713,13 +14131,13 @@ public final class LogGroupServiceOuterClass {
         internal_static_yandex_cloud_logging_v1_CreateLogGroupRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_logging_v1_CreateLogGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_logging_v1_CreateLogGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_CreateLogGroupMetadata_descriptor,
         new java.lang.String[] { "LogGroupId", });
     internal_static_yandex_cloud_logging_v1_UpdateLogGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_logging_v1_UpdateLogGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_UpdateLogGroupRequest_descriptor,
@@ -14731,49 +14149,49 @@ public final class LogGroupServiceOuterClass {
         internal_static_yandex_cloud_logging_v1_UpdateLogGroupRequest_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_logging_v1_UpdateLogGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_logging_v1_UpdateLogGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_UpdateLogGroupMetadata_descriptor,
         new java.lang.String[] { "LogGroupId", });
     internal_static_yandex_cloud_logging_v1_DeleteLogGroupRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_logging_v1_DeleteLogGroupRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_DeleteLogGroupRequest_descriptor,
         new java.lang.String[] { "LogGroupId", });
     internal_static_yandex_cloud_logging_v1_DeleteLogGroupMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_logging_v1_DeleteLogGroupMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_DeleteLogGroupMetadata_descriptor,
         new java.lang.String[] { "LogGroupId", });
     internal_static_yandex_cloud_logging_v1_ListResourcesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_logging_v1_ListResourcesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_ListResourcesRequest_descriptor,
         new java.lang.String[] { "LogGroupId", "Type", });
     internal_static_yandex_cloud_logging_v1_ListResourcesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_logging_v1_ListResourcesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_ListResourcesResponse_descriptor,
         new java.lang.String[] { "Resources", });
     internal_static_yandex_cloud_logging_v1_ListOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_logging_v1_ListOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_ListOperationsRequest_descriptor,
         new java.lang.String[] { "LogGroupId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_logging_v1_ListOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_logging_v1_ListOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_ListOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_logging_v1_GetLogGroupStatsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_logging_v1_GetLogGroupStatsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_GetLogGroupStatsResponse_descriptor,

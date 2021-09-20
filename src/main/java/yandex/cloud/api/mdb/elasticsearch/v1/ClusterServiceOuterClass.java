@@ -6859,7 +6859,7 @@ public final class ClusterServiceOuterClass {
      * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
      */
     boolean hasConfigSpec();
     /**
@@ -6868,18 +6868,18 @@ public final class ClusterServiceOuterClass {
      * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
      */
-    yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec getConfigSpec();
+    yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate getConfigSpec();
     /**
      * <pre>
      * New configuration and resources for hosts in the Elasticsearch cluster.
      * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
      */
-    yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder getConfigSpecOrBuilder();
+    yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdateOrBuilder getConfigSpecOrBuilder();
 
     /**
      * <pre>
@@ -7045,11 +7045,11 @@ public final class ClusterServiceOuterClass {
               break;
             }
             case 42: {
-              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.Builder subBuilder = null;
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.Builder subBuilder = null;
               if (configSpec_ != null) {
                 subBuilder = configSpec_.toBuilder();
               }
-              configSpec_ = input.readMessage(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.parser(), extensionRegistry);
+              configSpec_ = input.readMessage(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(configSpec_);
                 configSpec_ = subBuilder.buildPartial();
@@ -7343,14 +7343,14 @@ public final class ClusterServiceOuterClass {
     }
 
     public static final int CONFIG_SPEC_FIELD_NUMBER = 5;
-    private yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec configSpec_;
+    private yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate configSpec_;
     /**
      * <pre>
      * New configuration and resources for hosts in the Elasticsearch cluster.
      * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
      */
     public boolean hasConfigSpec() {
       return configSpec_ != null;
@@ -7361,10 +7361,10 @@ public final class ClusterServiceOuterClass {
      * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
      */
-    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec getConfigSpec() {
-      return configSpec_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.getDefaultInstance() : configSpec_;
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate getConfigSpec() {
+      return configSpec_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.getDefaultInstance() : configSpec_;
     }
     /**
      * <pre>
@@ -7372,9 +7372,9 @@ public final class ClusterServiceOuterClass {
      * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
      * </pre>
      *
-     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
      */
-    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder getConfigSpecOrBuilder() {
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdateOrBuilder getConfigSpecOrBuilder() {
       return getConfigSpec();
     }
 
@@ -8511,16 +8511,16 @@ public final class ClusterServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec configSpec_ = null;
+      private yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate configSpec_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder> configSpecBuilder_;
+          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdateOrBuilder> configSpecBuilder_;
       /**
        * <pre>
        * New configuration and resources for hosts in the Elasticsearch cluster.
        * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
        */
       public boolean hasConfigSpec() {
         return configSpecBuilder_ != null || configSpec_ != null;
@@ -8531,11 +8531,11 @@ public final class ClusterServiceOuterClass {
        * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
        */
-      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec getConfigSpec() {
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate getConfigSpec() {
         if (configSpecBuilder_ == null) {
-          return configSpec_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.getDefaultInstance() : configSpec_;
+          return configSpec_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.getDefaultInstance() : configSpec_;
         } else {
           return configSpecBuilder_.getMessage();
         }
@@ -8546,9 +8546,9 @@ public final class ClusterServiceOuterClass {
        * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
        */
-      public Builder setConfigSpec(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec value) {
+      public Builder setConfigSpec(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate value) {
         if (configSpecBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8567,10 +8567,10 @@ public final class ClusterServiceOuterClass {
        * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
        */
       public Builder setConfigSpec(
-          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.Builder builderForValue) {
+          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.Builder builderForValue) {
         if (configSpecBuilder_ == null) {
           configSpec_ = builderForValue.build();
           onChanged();
@@ -8586,13 +8586,13 @@ public final class ClusterServiceOuterClass {
        * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
        */
-      public Builder mergeConfigSpec(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec value) {
+      public Builder mergeConfigSpec(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate value) {
         if (configSpecBuilder_ == null) {
           if (configSpec_ != null) {
             configSpec_ =
-              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.newBuilder(configSpec_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.newBuilder(configSpec_).mergeFrom(value).buildPartial();
           } else {
             configSpec_ = value;
           }
@@ -8609,7 +8609,7 @@ public final class ClusterServiceOuterClass {
        * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
        */
       public Builder clearConfigSpec() {
         if (configSpecBuilder_ == null) {
@@ -8628,9 +8628,9 @@ public final class ClusterServiceOuterClass {
        * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
        */
-      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.Builder getConfigSpecBuilder() {
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.Builder getConfigSpecBuilder() {
         
         onChanged();
         return getConfigSpecFieldBuilder().getBuilder();
@@ -8641,14 +8641,14 @@ public final class ClusterServiceOuterClass {
        * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
        */
-      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder getConfigSpecOrBuilder() {
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdateOrBuilder getConfigSpecOrBuilder() {
         if (configSpecBuilder_ != null) {
           return configSpecBuilder_.getMessageOrBuilder();
         } else {
           return configSpec_ == null ?
-              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.getDefaultInstance() : configSpec_;
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.getDefaultInstance() : configSpec_;
         }
       }
       /**
@@ -8657,14 +8657,14 @@ public final class ClusterServiceOuterClass {
        * Use [update_mask] to prevent reverting all cluster settings that are not listed in `config_spec` to their default values.
        * </pre>
        *
-       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpec config_spec = 5;</code>
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate config_spec = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder> 
+          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdateOrBuilder> 
           getConfigSpecFieldBuilder() {
         if (configSpecBuilder_ == null) {
           configSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecOrBuilder>(
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdateOrBuilder>(
                   getConfigSpec(),
                   getParentForChildren(),
                   isClean());
@@ -30085,7 +30085,7 @@ public final class ClusterServiceOuterClass {
      * ElasticSearch admin password.
      * </pre>
      *
-     * <code>string admin_password = 4;</code>
+     * <code>string admin_password = 4 [(.yandex.cloud.required) = true];</code>
      */
     java.lang.String getAdminPassword();
     /**
@@ -30093,7 +30093,7 @@ public final class ClusterServiceOuterClass {
      * ElasticSearch admin password.
      * </pre>
      *
-     * <code>string admin_password = 4;</code>
+     * <code>string admin_password = 4 [(.yandex.cloud.required) = true];</code>
      */
     com.google.protobuf.ByteString
         getAdminPasswordBytes();
@@ -30327,7 +30327,7 @@ public final class ClusterServiceOuterClass {
      * ElasticSearch admin password.
      * </pre>
      *
-     * <code>string admin_password = 4;</code>
+     * <code>string admin_password = 4 [(.yandex.cloud.required) = true];</code>
      */
     public java.lang.String getAdminPassword() {
       java.lang.Object ref = adminPassword_;
@@ -30346,7 +30346,7 @@ public final class ClusterServiceOuterClass {
      * ElasticSearch admin password.
      * </pre>
      *
-     * <code>string admin_password = 4;</code>
+     * <code>string admin_password = 4 [(.yandex.cloud.required) = true];</code>
      */
     public com.google.protobuf.ByteString
         getAdminPasswordBytes() {
@@ -31066,6 +31066,1192 @@ public final class ClusterServiceOuterClass {
        * ElasticSearch admin password.
        * </pre>
        *
+       * <code>string admin_password = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public java.lang.String getAdminPassword() {
+        java.lang.Object ref = adminPassword_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          adminPassword_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ElasticSearch admin password.
+       * </pre>
+       *
+       * <code>string admin_password = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public com.google.protobuf.ByteString
+          getAdminPasswordBytes() {
+        java.lang.Object ref = adminPassword_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          adminPassword_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ElasticSearch admin password.
+       * </pre>
+       *
+       * <code>string admin_password = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setAdminPassword(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        adminPassword_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ElasticSearch admin password.
+       * </pre>
+       *
+       * <code>string admin_password = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearAdminPassword() {
+        
+        adminPassword_ = getDefaultInstance().getAdminPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ElasticSearch admin password.
+       * </pre>
+       *
+       * <code>string admin_password = 4 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setAdminPasswordBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        adminPassword_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.elasticsearch.v1.ConfigSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.elasticsearch.v1.ConfigSpec)
+    private static final yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec();
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConfigSpec>
+        PARSER = new com.google.protobuf.AbstractParser<ConfigSpec>() {
+      @java.lang.Override
+      public ConfigSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConfigSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConfigSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConfigSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ConfigSpecUpdateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Elasticsearch version.
+     * </pre>
+     *
+     * <code>string version = 1;</code>
+     */
+    java.lang.String getVersion();
+    /**
+     * <pre>
+     * Elasticsearch version.
+     * </pre>
+     *
+     * <code>string version = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
+
+    /**
+     * <pre>
+     * Configuration and resource allocation for Elasticsearch nodes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+     */
+    boolean hasElasticsearchSpec();
+    /**
+     * <pre>
+     * Configuration and resource allocation for Elasticsearch nodes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+     */
+    yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec getElasticsearchSpec();
+    /**
+     * <pre>
+     * Configuration and resource allocation for Elasticsearch nodes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+     */
+    yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpecOrBuilder getElasticsearchSpecOrBuilder();
+
+    /**
+     * <pre>
+     * ElasticSearch edition.
+     * </pre>
+     *
+     * <code>string edition = 3;</code>
+     */
+    java.lang.String getEdition();
+    /**
+     * <pre>
+     * ElasticSearch edition.
+     * </pre>
+     *
+     * <code>string edition = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getEditionBytes();
+
+    /**
+     * <pre>
+     * ElasticSearch admin password.
+     * </pre>
+     *
+     * <code>string admin_password = 4;</code>
+     */
+    java.lang.String getAdminPassword();
+    /**
+     * <pre>
+     * ElasticSearch admin password.
+     * </pre>
+     *
+     * <code>string admin_password = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getAdminPasswordBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate}
+   */
+  public  static final class ConfigSpecUpdate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate)
+      ConfigSpecUpdateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConfigSpecUpdate.newBuilder() to construct.
+    private ConfigSpecUpdate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConfigSpecUpdate() {
+      version_ = "";
+      edition_ = "";
+      adminPassword_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConfigSpecUpdate(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              version_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec.Builder subBuilder = null;
+              if (elasticsearchSpec_ != null) {
+                subBuilder = elasticsearchSpec_.toBuilder();
+              }
+              elasticsearchSpec_ = input.readMessage(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(elasticsearchSpec_);
+                elasticsearchSpec_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              edition_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              adminPassword_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ConfigSpecUpdate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ConfigSpecUpdate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.Builder.class);
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 1;
+    private volatile java.lang.Object version_;
+    /**
+     * <pre>
+     * Elasticsearch version.
+     * </pre>
+     *
+     * <code>string version = 1;</code>
+     */
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        version_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Elasticsearch version.
+     * </pre>
+     *
+     * <code>string version = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ELASTICSEARCH_SPEC_FIELD_NUMBER = 2;
+    private yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec elasticsearchSpec_;
+    /**
+     * <pre>
+     * Configuration and resource allocation for Elasticsearch nodes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+     */
+    public boolean hasElasticsearchSpec() {
+      return elasticsearchSpec_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for Elasticsearch nodes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+     */
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec getElasticsearchSpec() {
+      return elasticsearchSpec_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec.getDefaultInstance() : elasticsearchSpec_;
+    }
+    /**
+     * <pre>
+     * Configuration and resource allocation for Elasticsearch nodes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+     */
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpecOrBuilder getElasticsearchSpecOrBuilder() {
+      return getElasticsearchSpec();
+    }
+
+    public static final int EDITION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object edition_;
+    /**
+     * <pre>
+     * ElasticSearch edition.
+     * </pre>
+     *
+     * <code>string edition = 3;</code>
+     */
+    public java.lang.String getEdition() {
+      java.lang.Object ref = edition_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        edition_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ElasticSearch edition.
+     * </pre>
+     *
+     * <code>string edition = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEditionBytes() {
+      java.lang.Object ref = edition_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        edition_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADMIN_PASSWORD_FIELD_NUMBER = 4;
+    private volatile java.lang.Object adminPassword_;
+    /**
+     * <pre>
+     * ElasticSearch admin password.
+     * </pre>
+     *
+     * <code>string admin_password = 4;</code>
+     */
+    public java.lang.String getAdminPassword() {
+      java.lang.Object ref = adminPassword_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        adminPassword_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ElasticSearch admin password.
+     * </pre>
+     *
+     * <code>string admin_password = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAdminPasswordBytes() {
+      java.lang.Object ref = adminPassword_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        adminPassword_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getVersionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, version_);
+      }
+      if (elasticsearchSpec_ != null) {
+        output.writeMessage(2, getElasticsearchSpec());
+      }
+      if (!getEditionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, edition_);
+      }
+      if (!getAdminPasswordBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, adminPassword_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getVersionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, version_);
+      }
+      if (elasticsearchSpec_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getElasticsearchSpec());
+      }
+      if (!getEditionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, edition_);
+      }
+      if (!getAdminPasswordBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, adminPassword_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate other = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate) obj;
+
+      boolean result = true;
+      result = result && getVersion()
+          .equals(other.getVersion());
+      result = result && (hasElasticsearchSpec() == other.hasElasticsearchSpec());
+      if (hasElasticsearchSpec()) {
+        result = result && getElasticsearchSpec()
+            .equals(other.getElasticsearchSpec());
+      }
+      result = result && getEdition()
+          .equals(other.getEdition());
+      result = result && getAdminPassword()
+          .equals(other.getAdminPassword());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getVersion().hashCode();
+      if (hasElasticsearchSpec()) {
+        hash = (37 * hash) + ELASTICSEARCH_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getElasticsearchSpec().hashCode();
+      }
+      hash = (37 * hash) + EDITION_FIELD_NUMBER;
+      hash = (53 * hash) + getEdition().hashCode();
+      hash = (37 * hash) + ADMIN_PASSWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getAdminPassword().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate)
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ConfigSpecUpdate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ConfigSpecUpdate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.class, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        version_ = "";
+
+        if (elasticsearchSpecBuilder_ == null) {
+          elasticsearchSpec_ = null;
+        } else {
+          elasticsearchSpec_ = null;
+          elasticsearchSpecBuilder_ = null;
+        }
+        edition_ = "";
+
+        adminPassword_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_mdb_elasticsearch_v1_ConfigSpecUpdate_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate build() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate buildPartial() {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate result = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate(this);
+        result.version_ = version_;
+        if (elasticsearchSpecBuilder_ == null) {
+          result.elasticsearchSpec_ = elasticsearchSpec_;
+        } else {
+          result.elasticsearchSpec_ = elasticsearchSpecBuilder_.build();
+        }
+        result.edition_ = edition_;
+        result.adminPassword_ = adminPassword_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate) {
+          return mergeFrom((yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate other) {
+        if (other == yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate.getDefaultInstance()) return this;
+        if (!other.getVersion().isEmpty()) {
+          version_ = other.version_;
+          onChanged();
+        }
+        if (other.hasElasticsearchSpec()) {
+          mergeElasticsearchSpec(other.getElasticsearchSpec());
+        }
+        if (!other.getEdition().isEmpty()) {
+          edition_ = other.edition_;
+          onChanged();
+        }
+        if (!other.getAdminPassword().isEmpty()) {
+          adminPassword_ = other.adminPassword_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object version_ = "";
+      /**
+       * <pre>
+       * Elasticsearch version.
+       * </pre>
+       *
+       * <code>string version = 1;</code>
+       */
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          version_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Elasticsearch version.
+       * </pre>
+       *
+       * <code>string version = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Elasticsearch version.
+       * </pre>
+       *
+       * <code>string version = 1;</code>
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        version_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Elasticsearch version.
+       * </pre>
+       *
+       * <code>string version = 1;</code>
+       */
+      public Builder clearVersion() {
+        
+        version_ = getDefaultInstance().getVersion();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Elasticsearch version.
+       * </pre>
+       *
+       * <code>string version = 1;</code>
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        version_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec elasticsearchSpec_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpecOrBuilder> elasticsearchSpecBuilder_;
+      /**
+       * <pre>
+       * Configuration and resource allocation for Elasticsearch nodes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+       */
+      public boolean hasElasticsearchSpec() {
+        return elasticsearchSpecBuilder_ != null || elasticsearchSpec_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for Elasticsearch nodes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec getElasticsearchSpec() {
+        if (elasticsearchSpecBuilder_ == null) {
+          return elasticsearchSpec_ == null ? yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec.getDefaultInstance() : elasticsearchSpec_;
+        } else {
+          return elasticsearchSpecBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for Elasticsearch nodes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+       */
+      public Builder setElasticsearchSpec(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec value) {
+        if (elasticsearchSpecBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          elasticsearchSpec_ = value;
+          onChanged();
+        } else {
+          elasticsearchSpecBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for Elasticsearch nodes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+       */
+      public Builder setElasticsearchSpec(
+          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec.Builder builderForValue) {
+        if (elasticsearchSpecBuilder_ == null) {
+          elasticsearchSpec_ = builderForValue.build();
+          onChanged();
+        } else {
+          elasticsearchSpecBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for Elasticsearch nodes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+       */
+      public Builder mergeElasticsearchSpec(yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec value) {
+        if (elasticsearchSpecBuilder_ == null) {
+          if (elasticsearchSpec_ != null) {
+            elasticsearchSpec_ =
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec.newBuilder(elasticsearchSpec_).mergeFrom(value).buildPartial();
+          } else {
+            elasticsearchSpec_ = value;
+          }
+          onChanged();
+        } else {
+          elasticsearchSpecBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for Elasticsearch nodes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+       */
+      public Builder clearElasticsearchSpec() {
+        if (elasticsearchSpecBuilder_ == null) {
+          elasticsearchSpec_ = null;
+          onChanged();
+        } else {
+          elasticsearchSpec_ = null;
+          elasticsearchSpecBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for Elasticsearch nodes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec.Builder getElasticsearchSpecBuilder() {
+        
+        onChanged();
+        return getElasticsearchSpecFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for Elasticsearch nodes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+       */
+      public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpecOrBuilder getElasticsearchSpecOrBuilder() {
+        if (elasticsearchSpecBuilder_ != null) {
+          return elasticsearchSpecBuilder_.getMessageOrBuilder();
+        } else {
+          return elasticsearchSpec_ == null ?
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec.getDefaultInstance() : elasticsearchSpec_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration and resource allocation for Elasticsearch nodes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.elasticsearch.v1.ElasticsearchSpec elasticsearch_spec = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpecOrBuilder> 
+          getElasticsearchSpecFieldBuilder() {
+        if (elasticsearchSpecBuilder_ == null) {
+          elasticsearchSpecBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpec.Builder, yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ElasticsearchSpecOrBuilder>(
+                  getElasticsearchSpec(),
+                  getParentForChildren(),
+                  isClean());
+          elasticsearchSpec_ = null;
+        }
+        return elasticsearchSpecBuilder_;
+      }
+
+      private java.lang.Object edition_ = "";
+      /**
+       * <pre>
+       * ElasticSearch edition.
+       * </pre>
+       *
+       * <code>string edition = 3;</code>
+       */
+      public java.lang.String getEdition() {
+        java.lang.Object ref = edition_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          edition_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ElasticSearch edition.
+       * </pre>
+       *
+       * <code>string edition = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEditionBytes() {
+        java.lang.Object ref = edition_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          edition_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ElasticSearch edition.
+       * </pre>
+       *
+       * <code>string edition = 3;</code>
+       */
+      public Builder setEdition(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        edition_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ElasticSearch edition.
+       * </pre>
+       *
+       * <code>string edition = 3;</code>
+       */
+      public Builder clearEdition() {
+        
+        edition_ = getDefaultInstance().getEdition();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ElasticSearch edition.
+       * </pre>
+       *
+       * <code>string edition = 3;</code>
+       */
+      public Builder setEditionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        edition_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object adminPassword_ = "";
+      /**
+       * <pre>
+       * ElasticSearch admin password.
+       * </pre>
+       *
        * <code>string admin_password = 4;</code>
        */
       public java.lang.String getAdminPassword() {
@@ -31161,41 +32347,41 @@ public final class ClusterServiceOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.elasticsearch.v1.ConfigSpec)
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate)
     }
 
-    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.elasticsearch.v1.ConfigSpec)
-    private static final yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.elasticsearch.v1.ConfigSpecUpdate)
+    private static final yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec();
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate();
     }
 
-    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec getDefaultInstance() {
+    public static yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ConfigSpec>
-        PARSER = new com.google.protobuf.AbstractParser<ConfigSpec>() {
+    private static final com.google.protobuf.Parser<ConfigSpecUpdate>
+        PARSER = new com.google.protobuf.AbstractParser<ConfigSpecUpdate>() {
       @java.lang.Override
-      public ConfigSpec parsePartialFrom(
+      public ConfigSpecUpdate parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ConfigSpec(input, extensionRegistry);
+        return new ConfigSpecUpdate(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<ConfigSpec> parser() {
+    public static com.google.protobuf.Parser<ConfigSpecUpdate> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ConfigSpec> getParserForType() {
+    public com.google.protobuf.Parser<ConfigSpecUpdate> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpec getDefaultInstanceForType() {
+    public yandex.cloud.api.mdb.elasticsearch.v1.ClusterServiceOuterClass.ConfigSpecUpdate getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -34994,6 +36180,11 @@ public final class ClusterServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_elasticsearch_v1_ConfigSpec_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_ConfigSpecUpdate_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_elasticsearch_v1_ConfigSpecUpdate_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_elasticsearch_v1_AddClusterHostsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -35060,7 +36251,7 @@ public final class ClusterServiceOuterClass {
       "(\t\022\032\n\022service_account_id\030\014 \001(\t\022\033\n\023deleti" +
       "on_protection\030\r \001(\010\032-\n\013LabelsEntry\022\013\n\003ke" +
       "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateClus" +
-      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\222\004\n\024Upda" +
+      "terMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\230\004\n\024Upda" +
       "teClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
       "1\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google" +
       ".protobuf.FieldMask\022\036\n\013description\030\003 \001(\t" +
@@ -35068,175 +36259,180 @@ public final class ClusterServiceOuterClass {
       "oud.mdb.elasticsearch.v1.UpdateClusterRe" +
       "quest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[" +
       "-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z" +
-      "]*\022B\n\013config_spec\030\005 \001(\0132-.yandex.cloud.m" +
-      "db.elasticsearch.v1.ConfigSpec\022(\n\004name\030\006" +
-      " \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\032\n\022secu" +
-      "rity_group_ids\030\007 \003(\t\022\032\n\022service_account_" +
-      "id\030\010 \001(\t\022\033\n\023deletion_protection\030\t \001(\010\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022 \n\nclu" +
-      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025DeleteClu" +
-      "sterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\320\003\n\026Lis" +
-      "tClusterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "]*\022H\n\013config_spec\030\005 \001(\01323.yandex.cloud.m" +
+      "db.elasticsearch.v1.ConfigSpecUpdate\022(\n\004" +
+      "name\030\006 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\032" +
+      "\n\022security_group_ids\030\007 \003(\t\022\032\n\022service_ac" +
+      "count_id\030\010 \001(\t\022\033\n\023deletion_protection\030\t " +
+      "\001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"+\n\025UpdateClusterMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\"8\n\024DeleteClusterRequest\022" +
+      " \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Del" +
+      "eteClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\320" +
+      "\003\n\026ListClusterLogsRequest\022 \n\ncluster_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003" +
+      "(\t\022-\n\tfrom_time\030\003 \001(\0132\032.google.protobuf." +
+      "Timestamp\022+\n\007to_time\030\004 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\035\n\tpage_size\030\005 \001(\003B\n\372\3071\006<" +
+      "=1000\022\035\n\npage_token\030\006 \001(\tB\t\212\3101\005<=100\022\036\n\026" +
+      "always_next_page_token\030\007 \001(\010\022\032\n\006filter\030\010" +
+      " \001(\tB\n\212\3101\006<=1000\022[\n\014service_type\030\t \001(\0162E" +
+      ".yandex.cloud.mdb.elasticsearch.v1.ListC" +
+      "lusterLogsRequest.ServiceType\"J\n\013Service" +
+      "Type\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\021\n\rEL" +
+      "ASTICSEARCH\020\001\022\n\n\006KIBANA\020\002\"\266\001\n\tLogRecord\022" +
+      "-\n\ttimestamp\030\001 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022J\n\007message\030\002 \003(\01329.yandex.cloud.m" +
+      "db.elasticsearch.v1.LogRecord.MessageEnt" +
+      "ry\032.\n\014MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"n\n\027ListClusterLogsResponse\022:\n" +
+      "\004logs\030\001 \003(\0132,.yandex.cloud.mdb.elasticse" +
+      "arch.v1.LogRecord\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\"j\n\017StreamLogRecord\022<\n\006record\030\001 \001(\0132,." +
+      "yandex.cloud.mdb.elasticsearch.v1.LogRec" +
+      "ord\022\031\n\021next_record_token\030\002 \001(\t\"\227\003\n\030Strea" +
+      "mClusterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
       "\014\350\3071\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n\t" +
       "from_time\030\003 \001(\0132\032.google.protobuf.Timest" +
       "amp\022+\n\007to_time\030\004 \001(\0132\032.google.protobuf.T" +
-      "imestamp\022\035\n\tpage_size\030\005 \001(\003B\n\372\3071\006<=1000\022" +
-      "\035\n\npage_token\030\006 \001(\tB\t\212\3101\005<=100\022\036\n\026always" +
-      "_next_page_token\030\007 \001(\010\022\032\n\006filter\030\010 \001(\tB\n" +
-      "\212\3101\006<=1000\022[\n\014service_type\030\t \001(\0162E.yande" +
+      "imestamp\022\037\n\014record_token\030\005 \001(\tB\t\212\3101\005<=10" +
+      "0\022\032\n\006filter\030\006 \001(\tB\n\212\3101\006<=1000\022]\n\014service" +
+      "_type\030\007 \001(\0162G.yandex.cloud.mdb.elasticse" +
+      "arch.v1.StreamClusterLogsRequest.Service" +
+      "Type\"J\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSP" +
+      "ECIFIED\020\000\022\021\n\rELASTICSEARCH\020\001\022\n\n\006KIBANA\020\002" +
+      "\"~\n\034ListClusterOperationsRequest\022 \n\nclus" +
+      "ter_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
+      "\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
+      "\3101\005<=100\"o\n\035ListClusterOperationsRespons" +
+      "e\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.ope" +
+      "ration.Operation\022\027\n\017next_page_token\030\002 \001(" +
+      "\t\"y\n\027ListClusterHostsRequest\022 \n\ncluster_" +
+      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
+      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
+      "=100\"k\n\030ListClusterHostsResponse\0226\n\005host" +
+      "s\030\001 \003(\0132\'.yandex.cloud.mdb.elasticsearch" +
+      ".v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"c\n\022Mov" +
+      "eClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022+\n\025destination_folder_id\030\002 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\"b\n\023MoveClusterMetadata\022\022\n" +
+      "\ncluster_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 " +
+      "\001(\t\022\035\n\025destination_folder_id\030\003 \001(\t\"7\n\023St" +
+      "artClusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\"*\n\024StartClusterMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t\"6\n\022StopClusterRequest\022 \n" +
+      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopC" +
+      "lusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\316\001\n\010H" +
+      "ostSpec\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022\033\n\tsu" +
+      "bnet_id\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public" +
+      "_ip\030\003 \001(\010\022@\n\004type\030\004 \001(\0162,.yandex.cloud.m" +
+      "db.elasticsearch.v1.Host.TypeB\004\350\3071\001\022.\n\ns" +
+      "hard_name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_" +
+      "-]*\"\366\003\n\021ElasticsearchSpec\022P\n\tdata_node\030\001" +
+      " \001(\0132=.yandex.cloud.mdb.elasticsearch.v1" +
+      ".ElasticsearchSpec.DataNode\022T\n\013master_no" +
+      "de\030\002 \001(\0132?.yandex.cloud.mdb.elasticsearc" +
+      "h.v1.ElasticsearchSpec.MasterNode\022\031\n\007plu" +
+      "gins\030\003 \003(\tB\010\212\3101\004<=50\032\316\001\n\010DataNode\022w\n\026ela" +
+      "sticsearch_config_7\030\001 \001(\0132>.yandex.cloud" +
+      ".mdb.elasticsearch.v1.config.Elasticsear" +
+      "chConfig7H\000R\025elasticsearchConfig_7\022?\n\tre" +
+      "sources\030\002 \001(\0132,.yandex.cloud.mdb.elastic" +
+      "search.v1.ResourcesB\010\n\006config\032M\n\nMasterN" +
+      "ode\022?\n\tresources\030\001 \001(\0132,.yandex.cloud.md" +
+      "b.elasticsearch.v1.Resources\"\236\001\n\nConfigS" +
+      "pec\022\017\n\007version\030\001 \001(\t\022P\n\022elasticsearch_sp" +
+      "ec\030\002 \001(\01324.yandex.cloud.mdb.elasticsearc" +
+      "h.v1.ElasticsearchSpec\022\017\n\007edition\030\003 \001(\t\022" +
+      "\034\n\016admin_password\030\004 \001(\tB\004\350\3071\001\"\236\001\n\020Config" +
+      "SpecUpdate\022\017\n\007version\030\001 \001(\t\022P\n\022elasticse" +
+      "arch_spec\030\002 \001(\01324.yandex.cloud.mdb.elast" +
+      "icsearch.v1.ElasticsearchSpec\022\017\n\007edition" +
+      "\030\003 \001(\t\022\026\n\016admin_password\030\004 \001(\t\"\203\001\n\026AddCl" +
+      "usterHostsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022G\n\nhost_specs\030\002 \003(\0132+.yandex" +
+      ".cloud.mdb.elasticsearch.v1.HostSpecB\006\202\310" +
+      "1\002>0\"A\n\027AddClusterHostsMetadata\022\022\n\nclust" +
+      "er_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t\"b\n\031Delet" +
+      "eClusterHostsRequest\022 \n\ncluster_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002" +
+      ">0\212\3101\005<=253\"D\n\032DeleteClusterHostsMetadat" +
+      "a\022\022\n\ncluster_id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(" +
+      "\t2\212\026\n\016ClusterService\022\240\001\n\003Get\0224.yandex.cl" +
+      "oud.mdb.elasticsearch.v1.GetClusterReque" +
+      "st\032*.yandex.cloud.mdb.elasticsearch.v1.C" +
+      "luster\"7\202\323\344\223\0021\022//managed-elasticsearch/v" +
+      "1/clusters/{cluster_id}\022\243\001\n\004List\0226.yande" +
       "x.cloud.mdb.elasticsearch.v1.ListCluster" +
-      "LogsRequest.ServiceType\"J\n\013ServiceType\022\034" +
-      "\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\021\n\rELASTICS" +
-      "EARCH\020\001\022\n\n\006KIBANA\020\002\"\266\001\n\tLogRecord\022-\n\ttim" +
-      "estamp\030\001 \001(\0132\032.google.protobuf.Timestamp" +
-      "\022J\n\007message\030\002 \003(\01329.yandex.cloud.mdb.ela" +
-      "sticsearch.v1.LogRecord.MessageEntry\032.\n\014" +
-      "MessageEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"n\n\027ListClusterLogsResponse\022:\n\004logs\030" +
-      "\001 \003(\0132,.yandex.cloud.mdb.elasticsearch.v" +
-      "1.LogRecord\022\027\n\017next_page_token\030\002 \001(\t\"j\n\017" +
-      "StreamLogRecord\022<\n\006record\030\001 \001(\0132,.yandex" +
-      ".cloud.mdb.elasticsearch.v1.LogRecord\022\031\n" +
-      "\021next_record_token\030\002 \001(\t\"\227\003\n\030StreamClust" +
-      "erLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022-\n\tfrom_t" +
-      "ime\030\003 \001(\0132\032.google.protobuf.Timestamp\022+\n" +
-      "\007to_time\030\004 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022\037\n\014record_token\030\005 \001(\tB\t\212\3101\005<=100\022\032\n\006f" +
-      "ilter\030\006 \001(\tB\n\212\3101\006<=1000\022]\n\014service_type\030" +
-      "\007 \001(\0162G.yandex.cloud.mdb.elasticsearch.v" +
-      "1.StreamClusterLogsRequest.ServiceType\"J" +
-      "\n\013ServiceType\022\034\n\030SERVICE_TYPE_UNSPECIFIE" +
-      "D\020\000\022\021\n\rELASTICSEARCH\020\001\022\n\n\006KIBANA\020\002\"~\n\034Li" +
-      "stClusterOperationsRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
-      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
-      "00\"o\n\035ListClusterOperationsResponse\0225\n\no" +
-      "perations\030\001 \003(\0132!.yandex.cloud.operation" +
-      ".Operation\022\027\n\017next_page_token\030\002 \001(\t\"y\n\027L" +
-      "istClusterHostsRequest\022 \n\ncluster_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
-      "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"k" +
-      "\n\030ListClusterHostsResponse\0226\n\005hosts\030\001 \003(" +
-      "\0132\'.yandex.cloud.mdb.elasticsearch.v1.Ho" +
-      "st\022\027\n\017next_page_token\030\002 \001(\t\"c\n\022MoveClust" +
-      "erRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022+\n\025destination_folder_id\030\002 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\"b\n\023MoveClusterMetadata\022\022\n\nclust" +
-      "er_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n" +
-      "\025destination_folder_id\030\003 \001(\t\"7\n\023StartClu" +
-      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\"*\n\024StartClusterMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\"6\n\022StopClusterRequest\022 \n\nclust" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\023StopCluster" +
-      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\"\316\001\n\010HostSpe" +
-      "c\022\031\n\007zone_id\030\001 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_i" +
-      "d\030\002 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip\030\003 " +
-      "\001(\010\022@\n\004type\030\004 \001(\0162,.yandex.cloud.mdb.ela" +
-      "sticsearch.v1.Host.TypeB\004\350\3071\001\022.\n\nshard_n" +
-      "ame\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\"\366\003" +
-      "\n\021ElasticsearchSpec\022P\n\tdata_node\030\001 \001(\0132=" +
-      ".yandex.cloud.mdb.elasticsearch.v1.Elast" +
-      "icsearchSpec.DataNode\022T\n\013master_node\030\002 \001" +
-      "(\0132?.yandex.cloud.mdb.elasticsearch.v1.E" +
-      "lasticsearchSpec.MasterNode\022\031\n\007plugins\030\003" +
-      " \003(\tB\010\212\3101\004<=50\032\316\001\n\010DataNode\022w\n\026elasticse" +
-      "arch_config_7\030\001 \001(\0132>.yandex.cloud.mdb.e" +
-      "lasticsearch.v1.config.ElasticsearchConf" +
-      "ig7H\000R\025elasticsearchConfig_7\022?\n\tresource" +
-      "s\030\002 \001(\0132,.yandex.cloud.mdb.elasticsearch" +
-      ".v1.ResourcesB\010\n\006config\032M\n\nMasterNode\022?\n" +
-      "\tresources\030\001 \001(\0132,.yandex.cloud.mdb.elas" +
-      "ticsearch.v1.Resources\"\230\001\n\nConfigSpec\022\017\n" +
-      "\007version\030\001 \001(\t\022P\n\022elasticsearch_spec\030\002 \001" +
-      "(\01324.yandex.cloud.mdb.elasticsearch.v1.E" +
-      "lasticsearchSpec\022\017\n\007edition\030\003 \001(\t\022\026\n\016adm" +
-      "in_password\030\004 \001(\t\"\203\001\n\026AddClusterHostsReq" +
-      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022G" +
-      "\n\nhost_specs\030\002 \003(\0132+.yandex.cloud.mdb.el" +
-      "asticsearch.v1.HostSpecB\006\202\3101\002>0\"A\n\027AddCl" +
-      "usterHostsMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\022" +
-      "\n\nhost_names\030\002 \003(\t\"b\n\031DeleteClusterHosts" +
-      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022#\n\nhost_names\030\002 \003(\tB\017\202\3101\002>0\212\3101\005<=253\"D" +
-      "\n\032DeleteClusterHostsMetadata\022\022\n\ncluster_" +
-      "id\030\001 \001(\t\022\022\n\nhost_names\030\002 \003(\t2\212\026\n\016Cluster" +
-      "Service\022\240\001\n\003Get\0224.yandex.cloud.mdb.elast" +
-      "icsearch.v1.GetClusterRequest\032*.yandex.c" +
-      "loud.mdb.elasticsearch.v1.Cluster\"7\202\323\344\223\002" +
-      "1\022//managed-elasticsearch/v1/clusters/{c" +
-      "luster_id}\022\243\001\n\004List\0226.yandex.cloud.mdb.e" +
-      "lasticsearch.v1.ListClustersRequest\0327.ya" +
-      "ndex.cloud.mdb.elasticsearch.v1.ListClus" +
-      "tersResponse\"*\202\323\344\223\002$\022\"/managed-elasticse" +
-      "arch/v1/clusters\022\267\001\n\006Create\0227.yandex.clo" +
-      "ud.mdb.elasticsearch.v1.CreateClusterReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "Q\202\323\344\223\002\'\"\"/managed-elasticsearch/v1/clust" +
-      "ers:\001*\262\322* \n\025CreateClusterMetadata\022\007Clust" +
-      "er\022\304\001\n\006Update\0227.yandex.cloud.mdb.elastic" +
-      "search.v1.UpdateClusterRequest\032!.yandex." +
-      "cloud.operation.Operation\"^\202\323\344\223\00242//mana" +
-      "ged-elasticsearch/v1/clusters/{cluster_i" +
-      "d}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluste" +
-      "r\022\317\001\n\006Delete\0227.yandex.cloud.mdb.elastics" +
-      "earch.v1.DeleteClusterRequest\032!.yandex.c" +
-      "loud.operation.Operation\"i\202\323\344\223\0021*//manag" +
-      "ed-elasticsearch/v1/clusters/{cluster_id" +
-      "}\262\322*.\n\025DeleteClusterMetadata\022\025google.pro" +
-      "tobuf.Empty\022\303\001\n\004Move\0225.yandex.cloud.mdb." +
-      "elasticsearch.v1.MoveClusterRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"a\202\323\344\223\0029\"4" +
-      "/managed-elasticsearch/v1/clusters/{clus" +
-      "ter_id}:move:\001*\262\322*\036\n\023MoveClusterMetadata" +
-      "\022\007Cluster\022\304\001\n\005Start\0226.yandex.cloud.mdb.e" +
-      "lasticsearch.v1.StartClusterRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"`\202\323\344\223\0027\"5" +
-      "/managed-elasticsearch/v1/clusters/{clus" +
-      "ter_id}:start\262\322*\037\n\024StartClusterMetadata\022" +
-      "\007Cluster\022\300\001\n\004Stop\0225.yandex.cloud.mdb.ela" +
-      "sticsearch.v1.StopClusterRequest\032!.yande" +
-      "x.cloud.operation.Operation\"^\202\323\344\223\0026\"4/ma" +
-      "naged-elasticsearch/v1/clusters/{cluster" +
-      "_id}:stop\262\322*\036\n\023StopClusterMetadata\022\007Clus" +
-      "ter\022\277\001\n\010ListLogs\0229.yandex.cloud.mdb.elas" +
-      "ticsearch.v1.ListClusterLogsRequest\032:.ya" +
-      "ndex.cloud.mdb.elasticsearch.v1.ListClus" +
-      "terLogsResponse\"<\202\323\344\223\0026\0224/managed-elasti" +
-      "csearch/v1/clusters/{cluster_id}:logs\022\304\001" +
-      "\n\nStreamLogs\022;.yandex.cloud.mdb.elastics" +
-      "earch.v1.StreamClusterLogsRequest\0322.yand" +
-      "ex.cloud.mdb.elasticsearch.v1.StreamLogR" +
-      "ecord\"C\202\323\344\223\002=\022;/managed-elasticsearch/v1" +
-      "/clusters/{cluster_id}:stream_logs0\001\022\327\001\n" +
-      "\016ListOperations\022?.yandex.cloud.mdb.elast" +
-      "icsearch.v1.ListClusterOperationsRequest" +
-      "\032@.yandex.cloud.mdb.elasticsearch.v1.Lis" +
-      "tClusterOperationsResponse\"B\202\323\344\223\002<\022:/man" +
-      "aged-elasticsearch/v1/clusters/{cluster_" +
-      "id}/operations\022\303\001\n\tListHosts\022:.yandex.cl" +
-      "oud.mdb.elasticsearch.v1.ListClusterHost" +
-      "sRequest\032;.yandex.cloud.mdb.elasticsearc" +
-      "h.v1.ListClusterHostsResponse\"=\202\323\344\223\0027\0225/" +
-      "managed-elasticsearch/v1/clusters/{clust" +
-      "er_id}/hosts\022\353\001\n\010AddHosts\0229.yandex.cloud" +
-      ".mdb.elasticsearch.v1.AddClusterHostsReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "\200\001\202\323\344\223\002F\"A/managed-elasticsearch/v1/clus" +
-      "ters/{cluster_id}/hosts:batchCreate:\001*\262\322" +
-      "*0\n\027AddClusterHostsMetadata\022\025google.prot" +
-      "obuf.Empty\022\364\001\n\013DeleteHosts\022<.yandex.clou" +
-      "d.mdb.elasticsearch.v1.DeleteClusterHost" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\203\001\202\323\344\223\002F\"A/managed-elasticsearch/v1/" +
-      "clusters/{cluster_id}/hosts:batchDelete:" +
-      "\001*\262\322*3\n\032DeleteClusterHostsMetadata\022\025goog" +
-      "le.protobuf.EmptyB|\n%yandex.cloud.api.md" +
-      "b.elasticsearch.v1ZSgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/mdb/elastic" +
-      "search/v1;elasticsearchb\006proto3"
+      "sRequest\0327.yandex.cloud.mdb.elasticsearc" +
+      "h.v1.ListClustersResponse\"*\202\323\344\223\002$\022\"/mana" +
+      "ged-elasticsearch/v1/clusters\022\267\001\n\006Create" +
+      "\0227.yandex.cloud.mdb.elasticsearch.v1.Cre" +
+      "ateClusterRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"Q\202\323\344\223\002\'\"\"/managed-elasticse" +
+      "arch/v1/clusters:\001*\262\322* \n\025CreateClusterMe" +
+      "tadata\022\007Cluster\022\304\001\n\006Update\0227.yandex.clou" +
+      "d.mdb.elasticsearch.v1.UpdateClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"^" +
+      "\202\323\344\223\00242//managed-elasticsearch/v1/cluste" +
+      "rs/{cluster_id}:\001*\262\322* \n\025UpdateClusterMet" +
+      "adata\022\007Cluster\022\317\001\n\006Delete\0227.yandex.cloud" +
+      ".mdb.elasticsearch.v1.DeleteClusterReque" +
+      "st\032!.yandex.cloud.operation.Operation\"i\202" +
+      "\323\344\223\0021*//managed-elasticsearch/v1/cluster" +
+      "s/{cluster_id}\262\322*.\n\025DeleteClusterMetadat" +
+      "a\022\025google.protobuf.Empty\022\303\001\n\004Move\0225.yand" +
+      "ex.cloud.mdb.elasticsearch.v1.MoveCluste" +
+      "rRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"a\202\323\344\223\0029\"4/managed-elasticsearch/v1/c" +
+      "lusters/{cluster_id}:move:\001*\262\322*\036\n\023MoveCl" +
+      "usterMetadata\022\007Cluster\022\304\001\n\005Start\0226.yande" +
+      "x.cloud.mdb.elasticsearch.v1.StartCluste" +
+      "rRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"`\202\323\344\223\0027\"5/managed-elasticsearch/v1/c" +
+      "lusters/{cluster_id}:start\262\322*\037\n\024StartClu" +
+      "sterMetadata\022\007Cluster\022\300\001\n\004Stop\0225.yandex." +
+      "cloud.mdb.elasticsearch.v1.StopClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"^\202\323\344\223\0026\"4/managed-elasticsearch/v1/clus" +
+      "ters/{cluster_id}:stop\262\322*\036\n\023StopClusterM" +
+      "etadata\022\007Cluster\022\277\001\n\010ListLogs\0229.yandex.c" +
+      "loud.mdb.elasticsearch.v1.ListClusterLog" +
+      "sRequest\032:.yandex.cloud.mdb.elasticsearc" +
+      "h.v1.ListClusterLogsResponse\"<\202\323\344\223\0026\0224/m" +
+      "anaged-elasticsearch/v1/clusters/{cluste" +
+      "r_id}:logs\022\304\001\n\nStreamLogs\022;.yandex.cloud" +
+      ".mdb.elasticsearch.v1.StreamClusterLogsR" +
+      "equest\0322.yandex.cloud.mdb.elasticsearch." +
+      "v1.StreamLogRecord\"C\202\323\344\223\002=\022;/managed-ela" +
+      "sticsearch/v1/clusters/{cluster_id}:stre" +
+      "am_logs0\001\022\327\001\n\016ListOperations\022?.yandex.cl" +
+      "oud.mdb.elasticsearch.v1.ListClusterOper" +
+      "ationsRequest\032@.yandex.cloud.mdb.elastic" +
+      "search.v1.ListClusterOperationsResponse\"" +
+      "B\202\323\344\223\002<\022:/managed-elasticsearch/v1/clust" +
+      "ers/{cluster_id}/operations\022\303\001\n\tListHost" +
+      "s\022:.yandex.cloud.mdb.elasticsearch.v1.Li" +
+      "stClusterHostsRequest\032;.yandex.cloud.mdb" +
+      ".elasticsearch.v1.ListClusterHostsRespon" +
+      "se\"=\202\323\344\223\0027\0225/managed-elasticsearch/v1/cl" +
+      "usters/{cluster_id}/hosts\022\353\001\n\010AddHosts\0229" +
+      ".yandex.cloud.mdb.elasticsearch.v1.AddCl" +
+      "usterHostsRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"\200\001\202\323\344\223\002F\"A/managed-elastics" +
+      "earch/v1/clusters/{cluster_id}/hosts:bat" +
+      "chCreate:\001*\262\322*0\n\027AddClusterHostsMetadata" +
+      "\022\025google.protobuf.Empty\022\364\001\n\013DeleteHosts\022" +
+      "<.yandex.cloud.mdb.elasticsearch.v1.Dele" +
+      "teClusterHostsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\203\001\202\323\344\223\002F\"A/managed-elas" +
+      "ticsearch/v1/clusters/{cluster_id}/hosts" +
+      ":batchDelete:\001*\262\322*3\n\032DeleteClusterHostsM" +
+      "etadata\022\025google.protobuf.EmptyB|\n%yandex" +
+      ".cloud.api.mdb.elasticsearch.v1ZSgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/mdb/elasticsearch/v1;elasticsearchb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -35451,26 +36647,32 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_elasticsearch_v1_ConfigSpec_descriptor,
         new java.lang.String[] { "Version", "ElasticsearchSpec", "Edition", "AdminPassword", });
-    internal_static_yandex_cloud_mdb_elasticsearch_v1_AddClusterHostsRequest_descriptor =
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_ConfigSpecUpdate_descriptor =
       getDescriptor().getMessageTypes().get(27);
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_ConfigSpecUpdate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_elasticsearch_v1_ConfigSpecUpdate_descriptor,
+        new java.lang.String[] { "Version", "ElasticsearchSpec", "Edition", "AdminPassword", });
+    internal_static_yandex_cloud_mdb_elasticsearch_v1_AddClusterHostsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(28);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_AddClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_elasticsearch_v1_AddClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostSpecs", });
     internal_static_yandex_cloud_mdb_elasticsearch_v1_AddClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_AddClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_elasticsearch_v1_AddClusterHostsMetadata_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_elasticsearch_v1_DeleteClusterHostsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_DeleteClusterHostsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_elasticsearch_v1_DeleteClusterHostsRequest_descriptor,
         new java.lang.String[] { "ClusterId", "HostNames", });
     internal_static_yandex_cloud_mdb_elasticsearch_v1_DeleteClusterHostsMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_yandex_cloud_mdb_elasticsearch_v1_DeleteClusterHostsMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_elasticsearch_v1_DeleteClusterHostsMetadata_descriptor,

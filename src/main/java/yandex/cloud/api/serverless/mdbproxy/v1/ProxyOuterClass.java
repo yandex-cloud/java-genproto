@@ -2009,6 +2009,31 @@ public final class ProxyOuterClass {
 
     /**
      * <pre>
+     * Clickhouse settings for proxy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+     */
+    boolean hasClickhouse();
+    /**
+     * <pre>
+     * Clickhouse settings for proxy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+     */
+    yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse getClickhouse();
+    /**
+     * <pre>
+     * Clickhouse settings for proxy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+     */
+    yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouseOrBuilder getClickhouseOrBuilder();
+
+    /**
+     * <pre>
      * PostgreSQL settings for proxy.
      * </pre>
      *
@@ -2073,6 +2098,20 @@ public final class ProxyOuterClass {
             case 0:
               done = true;
               break;
+            case 10: {
+              yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.Builder subBuilder = null;
+              if (mdbCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse) mdb_).toBuilder();
+              }
+              mdb_ =
+                  input.readMessage(yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse) mdb_);
+                mdb_ = subBuilder.buildPartial();
+              }
+              mdbCase_ = 1;
+              break;
+            }
             case 18: {
               yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.PostgreSQL.Builder subBuilder = null;
               if (mdbCase_ == 2) {
@@ -3397,10 +3436,1289 @@ public final class ProxyOuterClass {
 
     }
 
+    public interface ClickHouseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Cluster identifier for clickhouse.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      java.lang.String getClusterId();
+      /**
+       * <pre>
+       * Cluster identifier for clickhouse.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      com.google.protobuf.ByteString
+          getClusterIdBytes();
+
+      /**
+       * <pre>
+       * Clickhouse user.
+       * </pre>
+       *
+       * <code>string user = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      java.lang.String getUser();
+      /**
+       * <pre>
+       * Clickhouse user.
+       * </pre>
+       *
+       * <code>string user = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      com.google.protobuf.ByteString
+          getUserBytes();
+
+      /**
+       * <pre>
+       * Clickhouse password, input only field.
+       * </pre>
+       *
+       * <code>string password = 3;</code>
+       */
+      java.lang.String getPassword();
+      /**
+       * <pre>
+       * Clickhouse password, input only field.
+       * </pre>
+       *
+       * <code>string password = 3;</code>
+       */
+      com.google.protobuf.ByteString
+          getPasswordBytes();
+
+      /**
+       * <pre>
+       * Clickhouse database name.
+       * </pre>
+       *
+       * <code>string db = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      java.lang.String getDb();
+      /**
+       * <pre>
+       * Clickhouse database name.
+       * </pre>
+       *
+       * <code>string db = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      com.google.protobuf.ByteString
+          getDbBytes();
+
+      /**
+       * <pre>
+       * Clickhouse proxy-host for connection, output only field.
+       * </pre>
+       *
+       * <code>string endpoint = 5;</code>
+       */
+      java.lang.String getEndpoint();
+      /**
+       * <pre>
+       * Clickhouse proxy-host for connection, output only field.
+       * </pre>
+       *
+       * <code>string endpoint = 5;</code>
+       */
+      com.google.protobuf.ByteString
+          getEndpointBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse}
+     */
+    public  static final class ClickHouse extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse)
+        ClickHouseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use ClickHouse.newBuilder() to construct.
+      private ClickHouse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private ClickHouse() {
+        clusterId_ = "";
+        user_ = "";
+        password_ = "";
+        db_ = "";
+        endpoint_ = "";
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ClickHouse(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                clusterId_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                user_ = s;
+                break;
+              }
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                password_ = s;
+                break;
+              }
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                db_ = s;
+                break;
+              }
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                endpoint_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_ClickHouse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_ClickHouse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.class, yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.Builder.class);
+      }
+
+      public static final int CLUSTER_ID_FIELD_NUMBER = 1;
+      private volatile java.lang.Object clusterId_;
+      /**
+       * <pre>
+       * Cluster identifier for clickhouse.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Cluster identifier for clickhouse.
+       * </pre>
+       *
+       * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int USER_FIELD_NUMBER = 2;
+      private volatile java.lang.Object user_;
+      /**
+       * <pre>
+       * Clickhouse user.
+       * </pre>
+       *
+       * <code>string user = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public java.lang.String getUser() {
+        java.lang.Object ref = user_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          user_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Clickhouse user.
+       * </pre>
+       *
+       * <code>string user = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getUserBytes() {
+        java.lang.Object ref = user_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          user_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PASSWORD_FIELD_NUMBER = 3;
+      private volatile java.lang.Object password_;
+      /**
+       * <pre>
+       * Clickhouse password, input only field.
+       * </pre>
+       *
+       * <code>string password = 3;</code>
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Clickhouse password, input only field.
+       * </pre>
+       *
+       * <code>string password = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int DB_FIELD_NUMBER = 4;
+      private volatile java.lang.Object db_;
+      /**
+       * <pre>
+       * Clickhouse database name.
+       * </pre>
+       *
+       * <code>string db = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public java.lang.String getDb() {
+        java.lang.Object ref = db_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          db_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Clickhouse database name.
+       * </pre>
+       *
+       * <code>string db = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       */
+      public com.google.protobuf.ByteString
+          getDbBytes() {
+        java.lang.Object ref = db_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          db_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int ENDPOINT_FIELD_NUMBER = 5;
+      private volatile java.lang.Object endpoint_;
+      /**
+       * <pre>
+       * Clickhouse proxy-host for connection, output only field.
+       * </pre>
+       *
+       * <code>string endpoint = 5;</code>
+       */
+      public java.lang.String getEndpoint() {
+        java.lang.Object ref = endpoint_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endpoint_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Clickhouse proxy-host for connection, output only field.
+       * </pre>
+       *
+       * <code>string endpoint = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEndpointBytes() {
+        java.lang.Object ref = endpoint_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getClusterIdBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clusterId_);
+        }
+        if (!getUserBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, user_);
+        }
+        if (!getPasswordBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, password_);
+        }
+        if (!getDbBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 4, db_);
+        }
+        if (!getEndpointBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 5, endpoint_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getClusterIdBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clusterId_);
+        }
+        if (!getUserBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, user_);
+        }
+        if (!getPasswordBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, password_);
+        }
+        if (!getDbBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, db_);
+        }
+        if (!getEndpointBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, endpoint_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse other = (yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse) obj;
+
+        boolean result = true;
+        result = result && getClusterId()
+            .equals(other.getClusterId());
+        result = result && getUser()
+            .equals(other.getUser());
+        result = result && getPassword()
+            .equals(other.getPassword());
+        result = result && getDb()
+            .equals(other.getDb());
+        result = result && getEndpoint()
+            .equals(other.getEndpoint());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getClusterId().hashCode();
+        hash = (37 * hash) + USER_FIELD_NUMBER;
+        hash = (53 * hash) + getUser().hashCode();
+        hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+        hash = (53 * hash) + getPassword().hashCode();
+        hash = (37 * hash) + DB_FIELD_NUMBER;
+        hash = (53 * hash) + getDb().hashCode();
+        hash = (37 * hash) + ENDPOINT_FIELD_NUMBER;
+        hash = (53 * hash) + getEndpoint().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse)
+          yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_ClickHouse_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_ClickHouse_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.class, yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          clusterId_ = "";
+
+          user_ = "";
+
+          password_ = "";
+
+          db_ = "";
+
+          endpoint_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_ClickHouse_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse getDefaultInstanceForType() {
+          return yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse build() {
+          yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse buildPartial() {
+          yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse result = new yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse(this);
+          result.clusterId_ = clusterId_;
+          result.user_ = user_;
+          result.password_ = password_;
+          result.db_ = db_;
+          result.endpoint_ = endpoint_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse) {
+            return mergeFrom((yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse other) {
+          if (other == yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.getDefaultInstance()) return this;
+          if (!other.getClusterId().isEmpty()) {
+            clusterId_ = other.clusterId_;
+            onChanged();
+          }
+          if (!other.getUser().isEmpty()) {
+            user_ = other.user_;
+            onChanged();
+          }
+          if (!other.getPassword().isEmpty()) {
+            password_ = other.password_;
+            onChanged();
+          }
+          if (!other.getDb().isEmpty()) {
+            db_ = other.db_;
+            onChanged();
+          }
+          if (!other.getEndpoint().isEmpty()) {
+            endpoint_ = other.endpoint_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object clusterId_ = "";
+        /**
+         * <pre>
+         * Cluster identifier for clickhouse.
+         * </pre>
+         *
+         * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         */
+        public java.lang.String getClusterId() {
+          java.lang.Object ref = clusterId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            clusterId_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Cluster identifier for clickhouse.
+         * </pre>
+         *
+         * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         */
+        public com.google.protobuf.ByteString
+            getClusterIdBytes() {
+          java.lang.Object ref = clusterId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            clusterId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Cluster identifier for clickhouse.
+         * </pre>
+         *
+         * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         */
+        public Builder setClusterId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          clusterId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Cluster identifier for clickhouse.
+         * </pre>
+         *
+         * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         */
+        public Builder clearClusterId() {
+          
+          clusterId_ = getDefaultInstance().getClusterId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Cluster identifier for clickhouse.
+         * </pre>
+         *
+         * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+         */
+        public Builder setClusterIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          clusterId_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object user_ = "";
+        /**
+         * <pre>
+         * Clickhouse user.
+         * </pre>
+         *
+         * <code>string user = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         */
+        public java.lang.String getUser() {
+          java.lang.Object ref = user_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            user_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Clickhouse user.
+         * </pre>
+         *
+         * <code>string user = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         */
+        public com.google.protobuf.ByteString
+            getUserBytes() {
+          java.lang.Object ref = user_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            user_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Clickhouse user.
+         * </pre>
+         *
+         * <code>string user = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         */
+        public Builder setUser(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          user_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Clickhouse user.
+         * </pre>
+         *
+         * <code>string user = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         */
+        public Builder clearUser() {
+          
+          user_ = getDefaultInstance().getUser();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Clickhouse user.
+         * </pre>
+         *
+         * <code>string user = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         */
+        public Builder setUserBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          user_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object password_ = "";
+        /**
+         * <pre>
+         * Clickhouse password, input only field.
+         * </pre>
+         *
+         * <code>string password = 3;</code>
+         */
+        public java.lang.String getPassword() {
+          java.lang.Object ref = password_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            password_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Clickhouse password, input only field.
+         * </pre>
+         *
+         * <code>string password = 3;</code>
+         */
+        public com.google.protobuf.ByteString
+            getPasswordBytes() {
+          java.lang.Object ref = password_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            password_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Clickhouse password, input only field.
+         * </pre>
+         *
+         * <code>string password = 3;</code>
+         */
+        public Builder setPassword(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          password_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Clickhouse password, input only field.
+         * </pre>
+         *
+         * <code>string password = 3;</code>
+         */
+        public Builder clearPassword() {
+          
+          password_ = getDefaultInstance().getPassword();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Clickhouse password, input only field.
+         * </pre>
+         *
+         * <code>string password = 3;</code>
+         */
+        public Builder setPasswordBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          password_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object db_ = "";
+        /**
+         * <pre>
+         * Clickhouse database name.
+         * </pre>
+         *
+         * <code>string db = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         */
+        public java.lang.String getDb() {
+          java.lang.Object ref = db_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            db_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Clickhouse database name.
+         * </pre>
+         *
+         * <code>string db = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         */
+        public com.google.protobuf.ByteString
+            getDbBytes() {
+          java.lang.Object ref = db_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            db_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Clickhouse database name.
+         * </pre>
+         *
+         * <code>string db = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         */
+        public Builder setDb(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          db_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Clickhouse database name.
+         * </pre>
+         *
+         * <code>string db = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         */
+        public Builder clearDb() {
+          
+          db_ = getDefaultInstance().getDb();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Clickhouse database name.
+         * </pre>
+         *
+         * <code>string db = 4 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+         */
+        public Builder setDbBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          db_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object endpoint_ = "";
+        /**
+         * <pre>
+         * Clickhouse proxy-host for connection, output only field.
+         * </pre>
+         *
+         * <code>string endpoint = 5;</code>
+         */
+        public java.lang.String getEndpoint() {
+          java.lang.Object ref = endpoint_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            endpoint_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Clickhouse proxy-host for connection, output only field.
+         * </pre>
+         *
+         * <code>string endpoint = 5;</code>
+         */
+        public com.google.protobuf.ByteString
+            getEndpointBytes() {
+          java.lang.Object ref = endpoint_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            endpoint_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Clickhouse proxy-host for connection, output only field.
+         * </pre>
+         *
+         * <code>string endpoint = 5;</code>
+         */
+        public Builder setEndpoint(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          endpoint_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Clickhouse proxy-host for connection, output only field.
+         * </pre>
+         *
+         * <code>string endpoint = 5;</code>
+         */
+        public Builder clearEndpoint() {
+          
+          endpoint_ = getDefaultInstance().getEndpoint();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Clickhouse proxy-host for connection, output only field.
+         * </pre>
+         *
+         * <code>string endpoint = 5;</code>
+         */
+        public Builder setEndpointBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          endpoint_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse)
+      private static final yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse();
+      }
+
+      public static yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<ClickHouse>
+          PARSER = new com.google.protobuf.AbstractParser<ClickHouse>() {
+        @java.lang.Override
+        public ClickHouse parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ClickHouse(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<ClickHouse> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ClickHouse> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     private int mdbCase_ = 0;
     private java.lang.Object mdb_;
     public enum MdbCase
         implements com.google.protobuf.Internal.EnumLite {
+      CLICKHOUSE(1),
       POSTGRESQL(2),
       MDB_NOT_SET(0);
       private final int value;
@@ -3417,6 +4735,7 @@ public final class ProxyOuterClass {
 
       public static MdbCase forNumber(int value) {
         switch (value) {
+          case 1: return CLICKHOUSE;
           case 2: return POSTGRESQL;
           case 0: return MDB_NOT_SET;
           default: return null;
@@ -3431,6 +4750,44 @@ public final class ProxyOuterClass {
     getMdbCase() {
       return MdbCase.forNumber(
           mdbCase_);
+    }
+
+    public static final int CLICKHOUSE_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Clickhouse settings for proxy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+     */
+    public boolean hasClickhouse() {
+      return mdbCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Clickhouse settings for proxy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+     */
+    public yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse getClickhouse() {
+      if (mdbCase_ == 1) {
+         return (yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse) mdb_;
+      }
+      return yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Clickhouse settings for proxy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+     */
+    public yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouseOrBuilder getClickhouseOrBuilder() {
+      if (mdbCase_ == 1) {
+         return (yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse) mdb_;
+      }
+      return yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.getDefaultInstance();
     }
 
     public static final int POSTGRESQL_FIELD_NUMBER = 2;
@@ -3485,6 +4842,9 @@ public final class ProxyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (mdbCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse) mdb_);
+      }
       if (mdbCase_ == 2) {
         output.writeMessage(2, (yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.PostgreSQL) mdb_);
       }
@@ -3497,6 +4857,10 @@ public final class ProxyOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (mdbCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse) mdb_);
+      }
       if (mdbCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.PostgreSQL) mdb_);
@@ -3521,6 +4885,10 @@ public final class ProxyOuterClass {
           other.getMdbCase());
       if (!result) return false;
       switch (mdbCase_) {
+        case 1:
+          result = result && getClickhouse()
+              .equals(other.getClickhouse());
+          break;
         case 2:
           result = result && getPostgresql()
               .equals(other.getPostgresql());
@@ -3540,6 +4908,10 @@ public final class ProxyOuterClass {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       switch (mdbCase_) {
+        case 1:
+          hash = (37 * hash) + CLICKHOUSE_FIELD_NUMBER;
+          hash = (53 * hash) + getClickhouse().hashCode();
+          break;
         case 2:
           hash = (37 * hash) + POSTGRESQL_FIELD_NUMBER;
           hash = (53 * hash) + getPostgresql().hashCode();
@@ -3708,6 +5080,13 @@ public final class ProxyOuterClass {
       @java.lang.Override
       public yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target buildPartial() {
         yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target result = new yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target(this);
+        if (mdbCase_ == 1) {
+          if (clickhouseBuilder_ == null) {
+            result.mdb_ = mdb_;
+          } else {
+            result.mdb_ = clickhouseBuilder_.build();
+          }
+        }
         if (mdbCase_ == 2) {
           if (postgresqlBuilder_ == null) {
             result.mdb_ = mdb_;
@@ -3765,6 +5144,10 @@ public final class ProxyOuterClass {
       public Builder mergeFrom(yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target other) {
         if (other == yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.getDefaultInstance()) return this;
         switch (other.getMdbCase()) {
+          case CLICKHOUSE: {
+            mergeClickhouse(other.getClickhouse());
+            break;
+          }
           case POSTGRESQL: {
             mergePostgresql(other.getPostgresql());
             break;
@@ -3816,6 +5199,178 @@ public final class ProxyOuterClass {
         return this;
       }
 
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse, yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.Builder, yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouseOrBuilder> clickhouseBuilder_;
+      /**
+       * <pre>
+       * Clickhouse settings for proxy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+       */
+      public boolean hasClickhouse() {
+        return mdbCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Clickhouse settings for proxy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+       */
+      public yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse getClickhouse() {
+        if (clickhouseBuilder_ == null) {
+          if (mdbCase_ == 1) {
+            return (yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse) mdb_;
+          }
+          return yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.getDefaultInstance();
+        } else {
+          if (mdbCase_ == 1) {
+            return clickhouseBuilder_.getMessage();
+          }
+          return yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Clickhouse settings for proxy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+       */
+      public Builder setClickhouse(yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse value) {
+        if (clickhouseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mdb_ = value;
+          onChanged();
+        } else {
+          clickhouseBuilder_.setMessage(value);
+        }
+        mdbCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Clickhouse settings for proxy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+       */
+      public Builder setClickhouse(
+          yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.Builder builderForValue) {
+        if (clickhouseBuilder_ == null) {
+          mdb_ = builderForValue.build();
+          onChanged();
+        } else {
+          clickhouseBuilder_.setMessage(builderForValue.build());
+        }
+        mdbCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Clickhouse settings for proxy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+       */
+      public Builder mergeClickhouse(yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse value) {
+        if (clickhouseBuilder_ == null) {
+          if (mdbCase_ == 1 &&
+              mdb_ != yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.getDefaultInstance()) {
+            mdb_ = yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.newBuilder((yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse) mdb_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            mdb_ = value;
+          }
+          onChanged();
+        } else {
+          if (mdbCase_ == 1) {
+            clickhouseBuilder_.mergeFrom(value);
+          }
+          clickhouseBuilder_.setMessage(value);
+        }
+        mdbCase_ = 1;
+        return this;
+      }
+      /**
+       * <pre>
+       * Clickhouse settings for proxy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+       */
+      public Builder clearClickhouse() {
+        if (clickhouseBuilder_ == null) {
+          if (mdbCase_ == 1) {
+            mdbCase_ = 0;
+            mdb_ = null;
+            onChanged();
+          }
+        } else {
+          if (mdbCase_ == 1) {
+            mdbCase_ = 0;
+            mdb_ = null;
+          }
+          clickhouseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Clickhouse settings for proxy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+       */
+      public yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.Builder getClickhouseBuilder() {
+        return getClickhouseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Clickhouse settings for proxy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+       */
+      public yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouseOrBuilder getClickhouseOrBuilder() {
+        if ((mdbCase_ == 1) && (clickhouseBuilder_ != null)) {
+          return clickhouseBuilder_.getMessageOrBuilder();
+        } else {
+          if (mdbCase_ == 1) {
+            return (yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse) mdb_;
+          }
+          return yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Clickhouse settings for proxy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.mdbproxy.v1.Target.ClickHouse clickhouse = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse, yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.Builder, yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouseOrBuilder> 
+          getClickhouseFieldBuilder() {
+        if (clickhouseBuilder_ == null) {
+          if (!(mdbCase_ == 1)) {
+            mdb_ = yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.getDefaultInstance();
+          }
+          clickhouseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse, yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse.Builder, yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouseOrBuilder>(
+                  (yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.ClickHouse) mdb_,
+                  getParentForChildren(),
+                  isClean());
+          mdb_ = null;
+        }
+        mdbCase_ = 1;
+        onChanged();;
+        return clickhouseBuilder_;
+      }
 
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.PostgreSQL, yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.PostgreSQL.Builder, yandex.cloud.api.serverless.mdbproxy.v1.ProxyOuterClass.Target.PostgreSQLOrBuilder> postgresqlBuilder_;
@@ -4061,6 +5616,11 @@ public final class ProxyOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_PostgreSQL_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_ClickHouse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_ClickHouse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4084,17 +5644,23 @@ public final class ProxyOuterClass {
       "\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022;\n\006tar" +
       "get\030\007 \001(\0132+.yandex.cloud.serverless.mdbp" +
       "roxy.v1.Target\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
-      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\222\002\n\006Target\022L\n\npost" +
-      "gresql\030\002 \001(\01326.yandex.cloud.serverless.m" +
-      "dbproxy.v1.Target.PostgreSQLH\000\032\254\001\n\nPostg" +
-      "reSQL\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      ",\n\004user\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-" +
-      "9_-]*\022\020\n\010password\030\003 \001(\t\022*\n\002db\030\004 \001(\tB\036\350\3071" +
-      "\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\020\n\010endpoint\030" +
-      "\005 \001(\tB\013\n\003mdb\022\004\300\3011\001Bx\n\'yandex.cloud.api.s" +
-      "erverless.mdbproxy.v1ZMgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/serverle" +
-      "ss/mdbproxy/v1;proxyb\006proto3"
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\216\004\n\006Target\022L\n\nclic" +
+      "khouse\030\001 \001(\01326.yandex.cloud.serverless.m" +
+      "dbproxy.v1.Target.ClickHouseH\000\022L\n\npostgr" +
+      "esql\030\002 \001(\01326.yandex.cloud.serverless.mdb" +
+      "proxy.v1.Target.PostgreSQLH\000\032\254\001\n\nPostgre" +
+      "SQL\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n" +
+      "\004user\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_" +
+      "-]*\022\020\n\010password\030\003 \001(\t\022*\n\002db\030\004 \001(\tB\036\350\3071\001\212" +
+      "\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022\020\n\010endpoint\030\005 " +
+      "\001(\t\032\253\001\n\nClickHouse\022 \n\ncluster_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\022+\n\004user\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63" +
+      "\362\3071\r[a-zA-Z0-9_]*\022\020\n\010password\030\003 \001(\t\022*\n\002d" +
+      "b\030\004 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022" +
+      "\020\n\010endpoint\030\005 \001(\tB\013\n\003mdb\022\004\300\3011\001Bx\n\'yandex" +
+      ".cloud.api.serverless.mdbproxy.v1ZMgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/serverless/mdbproxy/v1;proxyb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4127,12 +5693,18 @@ public final class ProxyOuterClass {
     internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_descriptor,
-        new java.lang.String[] { "Postgresql", "Mdb", });
+        new java.lang.String[] { "Clickhouse", "Postgresql", "Mdb", });
     internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_PostgreSQL_descriptor =
       internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_PostgreSQL_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_PostgreSQL_descriptor,
+        new java.lang.String[] { "ClusterId", "User", "Password", "Db", "Endpoint", });
+    internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_ClickHouse_descriptor =
+      internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_ClickHouse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_mdbproxy_v1_Target_ClickHouse_descriptor,
         new java.lang.String[] { "ClusterId", "User", "Password", "Db", "Endpoint", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

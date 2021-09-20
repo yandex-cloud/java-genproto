@@ -9730,6 +9730,23 @@ public final class Tts {
      */
     yandex.cloud.api.ai.tts.v3.Tts.AudioFormatOptionsOrBuilder getOutputAudioSpecOrBuilder();
 
+    /**
+     * <pre>
+     * Optional. Default: MAX_PEAK, type of loudness normalization.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+     */
+    int getLoudnessNormalizationTypeValue();
+    /**
+     * <pre>
+     * Optional. Default: MAX_PEAK, type of loudness normalization.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+     */
+    yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType getLoudnessNormalizationType();
+
     public yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.UtteranceCase getUtteranceCase();
   }
   /**
@@ -9747,6 +9764,7 @@ public final class Tts {
     private UtteranceSynthesisRequest() {
       model_ = "";
       hints_ = java.util.Collections.emptyList();
+      loudnessNormalizationType_ = 0;
     }
 
     @java.lang.Override
@@ -9821,6 +9839,12 @@ public final class Tts {
 
               break;
             }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              loudnessNormalizationType_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9854,6 +9878,117 @@ public final class Tts {
       return yandex.cloud.api.ai.tts.v3.Tts.internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.class, yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * Normalization type
+     * </pre>
+     *
+     * Protobuf enum {@code speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType}
+     */
+    public enum LoudnessNormalizationType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED = 0;</code>
+       */
+      LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED(0),
+      /**
+       * <code>MAX_PEAK = 1;</code>
+       */
+      MAX_PEAK(1),
+      /**
+       * <code>LUFS = 2;</code>
+       */
+      LUFS(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>MAX_PEAK = 1;</code>
+       */
+      public static final int MAX_PEAK_VALUE = 1;
+      /**
+       * <code>LUFS = 2;</code>
+       */
+      public static final int LUFS_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static LoudnessNormalizationType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static LoudnessNormalizationType forNumber(int value) {
+        switch (value) {
+          case 0: return LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED;
+          case 1: return MAX_PEAK;
+          case 2: return LUFS;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<LoudnessNormalizationType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          LoudnessNormalizationType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<LoudnessNormalizationType>() {
+              public LoudnessNormalizationType findValueByNumber(int number) {
+                return LoudnessNormalizationType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final LoudnessNormalizationType[] VALUES = values();
+
+      public static LoudnessNormalizationType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private LoudnessNormalizationType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType)
     }
 
     private int bitField0_;
@@ -10116,6 +10251,31 @@ public final class Tts {
       return getOutputAudioSpec();
     }
 
+    public static final int LOUDNESS_NORMALIZATION_TYPE_FIELD_NUMBER = 6;
+    private int loudnessNormalizationType_;
+    /**
+     * <pre>
+     * Optional. Default: MAX_PEAK, type of loudness normalization.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+     */
+    public int getLoudnessNormalizationTypeValue() {
+      return loudnessNormalizationType_;
+    }
+    /**
+     * <pre>
+     * Optional. Default: MAX_PEAK, type of loudness normalization.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+     */
+    public yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType getLoudnessNormalizationType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType result = yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType.valueOf(loudnessNormalizationType_);
+      return result == null ? yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10145,6 +10305,9 @@ public final class Tts {
       if (outputAudioSpec_ != null) {
         output.writeMessage(5, getOutputAudioSpec());
       }
+      if (loudnessNormalizationType_ != yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType.LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(6, loudnessNormalizationType_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10172,6 +10335,10 @@ public final class Tts {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getOutputAudioSpec());
       }
+      if (loudnessNormalizationType_ != yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType.LOUDNESS_NORMALIZATION_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, loudnessNormalizationType_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10197,6 +10364,7 @@ public final class Tts {
         result = result && getOutputAudioSpec()
             .equals(other.getOutputAudioSpec());
       }
+      result = result && loudnessNormalizationType_ == other.loudnessNormalizationType_;
       result = result && getUtteranceCase().equals(
           other.getUtteranceCase());
       if (!result) return false;
@@ -10233,6 +10401,8 @@ public final class Tts {
         hash = (37 * hash) + OUTPUT_AUDIO_SPEC_FIELD_NUMBER;
         hash = (53 * hash) + getOutputAudioSpec().hashCode();
       }
+      hash = (37 * hash) + LOUDNESS_NORMALIZATION_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + loudnessNormalizationType_;
       switch (utteranceCase_) {
         case 2:
           hash = (37 * hash) + TEXT_FIELD_NUMBER;
@@ -10393,6 +10563,8 @@ public final class Tts {
           outputAudioSpec_ = null;
           outputAudioSpecBuilder_ = null;
         }
+        loudnessNormalizationType_ = 0;
+
         utteranceCase_ = 0;
         utterance_ = null;
         return this;
@@ -10448,6 +10620,7 @@ public final class Tts {
         } else {
           result.outputAudioSpec_ = outputAudioSpecBuilder_.build();
         }
+        result.loudnessNormalizationType_ = loudnessNormalizationType_;
         result.bitField0_ = to_bitField0_;
         result.utteranceCase_ = utteranceCase_;
         onBuilt();
@@ -10530,6 +10703,9 @@ public final class Tts {
         }
         if (other.hasOutputAudioSpec()) {
           mergeOutputAudioSpec(other.getOutputAudioSpec());
+        }
+        if (other.loudnessNormalizationType_ != 0) {
+          setLoudnessNormalizationTypeValue(other.getLoudnessNormalizationTypeValue());
         }
         switch (other.getUtteranceCase()) {
           case TEXT: {
@@ -11421,6 +11597,71 @@ public final class Tts {
         }
         return outputAudioSpecBuilder_;
       }
+
+      private int loudnessNormalizationType_ = 0;
+      /**
+       * <pre>
+       * Optional. Default: MAX_PEAK, type of loudness normalization.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+       */
+      public int getLoudnessNormalizationTypeValue() {
+        return loudnessNormalizationType_;
+      }
+      /**
+       * <pre>
+       * Optional. Default: MAX_PEAK, type of loudness normalization.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+       */
+      public Builder setLoudnessNormalizationTypeValue(int value) {
+        loudnessNormalizationType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Default: MAX_PEAK, type of loudness normalization.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+       */
+      public yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType getLoudnessNormalizationType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType result = yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType.valueOf(loudnessNormalizationType_);
+        return result == null ? yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Optional. Default: MAX_PEAK, type of loudness normalization.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+       */
+      public Builder setLoudnessNormalizationType(yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisRequest.LoudnessNormalizationType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        loudnessNormalizationType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Default: MAX_PEAK, type of loudness normalization.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.UtteranceSynthesisRequest.LoudnessNormalizationType loudness_normalization_type = 6;</code>
+       */
+      public Builder clearLoudnessNormalizationType() {
+        
+        loudnessNormalizationType_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11576,15 +11817,20 @@ public final class Tts {
       "ints\022\017\n\005voice\030\001 \001(\tH\000\0229\n\016audio_template\030" +
       "\002 \001(\0132\037.speechkit.tts.v3.AudioTemplateH\000" +
       "\022\017\n\005speed\030\003 \001(\001H\000\022\020\n\006volume\030\004 \001(\001H\000B\006\n\004H" +
-      "int\"\351\001\n\031UtteranceSynthesisRequest\022\r\n\005mod" +
+      "int\"\267\003\n\031UtteranceSynthesisRequest\022\r\n\005mod" +
       "el\030\001 \001(\t\022\016\n\004text\030\002 \001(\tH\000\0227\n\rtext_templat" +
       "e\030\003 \001(\0132\036.speechkit.tts.v3.TextTemplateH" +
       "\000\022&\n\005hints\030\004 \003(\0132\027.speechkit.tts.v3.Hint" +
       "s\022?\n\021output_audio_spec\030\005 \001(\0132$.speechkit" +
-      ".tts.v3.AudioFormatOptionsB\013\n\tUtteranceB" +
-      "\\\n\032yandex.cloud.api.ai.tts.v3Z>github.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "ai/tts/v3;ttsb\006proto3"
+      ".tts.v3.AudioFormatOptions\022j\n\033loudness_n" +
+      "ormalization_type\030\006 \001(\0162E.speechkit.tts." +
+      "v3.UtteranceSynthesisRequest.LoudnessNor" +
+      "malizationType\"`\n\031LoudnessNormalizationT" +
+      "ype\022+\n\'LOUDNESS_NORMALIZATION_TYPE_UNSPE" +
+      "CIFIED\020\000\022\014\n\010MAX_PEAK\020\001\022\010\n\004LUFS\020\002B\013\n\tUtte" +
+      "ranceB\\\n\032yandex.cloud.api.ai.tts.v3Z>git" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/ai/tts/v3;ttsb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11669,7 +11915,7 @@ public final class Tts {
     internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_descriptor,
-        new java.lang.String[] { "Model", "Text", "TextTemplate", "Hints", "OutputAudioSpec", "Utterance", });
+        new java.lang.String[] { "Model", "Text", "TextTemplate", "Hints", "OutputAudioSpec", "LoudnessNormalizationType", "Utterance", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
