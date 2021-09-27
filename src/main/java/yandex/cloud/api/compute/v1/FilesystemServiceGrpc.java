@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * A set of methods for managing Filesystem resources.
+ * A set of methods for managing filesystems.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -247,15 +247,15 @@ public final class FilesystemServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Filesystem resources.
+   * A set of methods for managing filesystems.
    * </pre>
    */
   public static abstract class FilesystemServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Returns the specified Filesystem resource.
-     * To get the list of available Filesystem resources, make a [List] request.
+     * Returns the specified filesystem.
+     * To get the list of available filesystems, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.GetFilesystemRequest request,
@@ -265,7 +265,7 @@ public final class FilesystemServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Filesystem resources in the specified folder.
+     * Lists filesystems in the specified folder.
      * </pre>
      */
     public void list(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsRequest request,
@@ -276,8 +276,6 @@ public final class FilesystemServiceGrpc {
     /**
      * <pre>
      * Creates a filesystem in the specified folder.
-     * You can create an empty filesystem or restore it from a snapshot or an image.
-     * Method starts an asynchronous operation that can be cancelled while it is in progress.
      * </pre>
      */
     public void create(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest request,
@@ -367,7 +365,7 @@ public final class FilesystemServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Filesystem resources.
+   * A set of methods for managing filesystems.
    * </pre>
    */
   public static final class FilesystemServiceStub extends io.grpc.stub.AbstractStub<FilesystemServiceStub> {
@@ -388,8 +386,8 @@ public final class FilesystemServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Filesystem resource.
-     * To get the list of available Filesystem resources, make a [List] request.
+     * Returns the specified filesystem.
+     * To get the list of available filesystems, make a [List] request.
      * </pre>
      */
     public void get(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.GetFilesystemRequest request,
@@ -400,7 +398,7 @@ public final class FilesystemServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Filesystem resources in the specified folder.
+     * Lists filesystems in the specified folder.
      * </pre>
      */
     public void list(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsRequest request,
@@ -412,8 +410,6 @@ public final class FilesystemServiceGrpc {
     /**
      * <pre>
      * Creates a filesystem in the specified folder.
-     * You can create an empty filesystem or restore it from a snapshot or an image.
-     * Method starts an asynchronous operation that can be cancelled while it is in progress.
      * </pre>
      */
     public void create(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest request,
@@ -460,7 +456,7 @@ public final class FilesystemServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Filesystem resources.
+   * A set of methods for managing filesystems.
    * </pre>
    */
   public static final class FilesystemServiceBlockingStub extends io.grpc.stub.AbstractStub<FilesystemServiceBlockingStub> {
@@ -481,8 +477,8 @@ public final class FilesystemServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Filesystem resource.
-     * To get the list of available Filesystem resources, make a [List] request.
+     * Returns the specified filesystem.
+     * To get the list of available filesystems, make a [List] request.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem get(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.GetFilesystemRequest request) {
@@ -492,7 +488,7 @@ public final class FilesystemServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Filesystem resources in the specified folder.
+     * Lists filesystems in the specified folder.
      * </pre>
      */
     public yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse list(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsRequest request) {
@@ -503,8 +499,6 @@ public final class FilesystemServiceGrpc {
     /**
      * <pre>
      * Creates a filesystem in the specified folder.
-     * You can create an empty filesystem or restore it from a snapshot or an image.
-     * Method starts an asynchronous operation that can be cancelled while it is in progress.
      * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.CreateFilesystemRequest request) {
@@ -547,7 +541,7 @@ public final class FilesystemServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Filesystem resources.
+   * A set of methods for managing filesystems.
    * </pre>
    */
   public static final class FilesystemServiceFutureStub extends io.grpc.stub.AbstractStub<FilesystemServiceFutureStub> {
@@ -568,8 +562,8 @@ public final class FilesystemServiceGrpc {
 
     /**
      * <pre>
-     * Returns the specified Filesystem resource.
-     * To get the list of available Filesystem resources, make a [List] request.
+     * Returns the specified filesystem.
+     * To get the list of available filesystems, make a [List] request.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem> get(
@@ -580,7 +574,7 @@ public final class FilesystemServiceGrpc {
 
     /**
      * <pre>
-     * Retrieves the list of Filesystem resources in the specified folder.
+     * Lists filesystems in the specified folder.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.compute.v1.FilesystemServiceOuterClass.ListFilesystemsResponse> list(
@@ -592,8 +586,6 @@ public final class FilesystemServiceGrpc {
     /**
      * <pre>
      * Creates a filesystem in the specified folder.
-     * You can create an empty filesystem or restore it from a snapshot or an image.
-     * Method starts an asynchronous operation that can be cancelled while it is in progress.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(

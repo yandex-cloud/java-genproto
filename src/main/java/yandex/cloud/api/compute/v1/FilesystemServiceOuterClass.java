@@ -20,8 +20,8 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Filesystem resource to return.
-     * To get the filesystem ID use a [FilesystemService.List] request.
+     * ID of the filesystem to return.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29,8 +29,8 @@ public final class FilesystemServiceOuterClass {
     java.lang.String getFilesystemId();
     /**
      * <pre>
-     * ID of the Filesystem resource to return.
-     * To get the filesystem ID use a [FilesystemService.List] request.
+     * ID of the filesystem to return.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -120,8 +120,8 @@ public final class FilesystemServiceOuterClass {
     private volatile java.lang.Object filesystemId_;
     /**
      * <pre>
-     * ID of the Filesystem resource to return.
-     * To get the filesystem ID use a [FilesystemService.List] request.
+     * ID of the filesystem to return.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -140,8 +140,8 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Filesystem resource to return.
-     * To get the filesystem ID use a [FilesystemService.List] request.
+     * ID of the filesystem to return.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -466,8 +466,8 @@ public final class FilesystemServiceOuterClass {
       private java.lang.Object filesystemId_ = "";
       /**
        * <pre>
-       * ID of the Filesystem resource to return.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * ID of the filesystem to return.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -486,8 +486,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource to return.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * ID of the filesystem to return.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -507,8 +507,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource to return.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * ID of the filesystem to return.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -525,8 +525,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource to return.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * ID of the filesystem to return.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -539,8 +539,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource to return.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * ID of the filesystem to return.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -616,7 +616,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list filesystems in.
-     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -625,7 +625,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list filesystems in.
-     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -636,7 +636,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size],
+     * results is larger than `page_size`,
      * the service returns a [ListFilesystemsResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
@@ -647,7 +647,7 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListFilesystemsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -656,7 +656,7 @@ public final class FilesystemServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListFilesystemsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -667,11 +667,12 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that filters filesystems listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on the [Filesystem.name] field.
      * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
+     * Example of a filter: `name=my-filesystem`.
      * </pre>
      *
      * <code>string filter = 4;</code>
@@ -679,11 +680,12 @@ public final class FilesystemServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that filters filesystems listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on the [Filesystem.name] field.
      * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
+     * Example of a filter: `name=my-filesystem`.
      * </pre>
      *
      * <code>string filter = 4;</code>
@@ -794,7 +796,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list filesystems in.
-     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -814,7 +816,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to list filesystems in.
-     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -838,7 +840,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size],
+     * results is larger than `page_size`,
      * the service returns a [ListFilesystemsResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
@@ -853,7 +855,7 @@ public final class FilesystemServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListFilesystemsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -873,7 +875,7 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListFilesystemsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -897,11 +899,12 @@ public final class FilesystemServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that filters filesystems listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on the [Filesystem.name] field.
      * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
+     * Example of a filter: `name=my-filesystem`.
      * </pre>
      *
      * <code>string filter = 4;</code>
@@ -920,11 +923,12 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
+     * A filter expression that filters filesystems listed in the response.
      * The expression must specify:
      * 1. The field name. Currently you can use filtering only on the [Filesystem.name] field.
      * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
      * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
+     * Example of a filter: `name=my-filesystem`.
      * </pre>
      *
      * <code>string filter = 4;</code>
@@ -1302,7 +1306,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list filesystems in.
-       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1322,7 +1326,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list filesystems in.
-       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1343,7 +1347,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list filesystems in.
-       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1361,7 +1365,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list filesystems in.
-       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1375,7 +1379,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to list filesystems in.
-       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1396,7 +1400,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size],
+       * results is larger than `page_size`,
        * the service returns a [ListFilesystemsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
@@ -1409,7 +1413,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size],
+       * results is larger than `page_size`,
        * the service returns a [ListFilesystemsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
@@ -1425,7 +1429,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size],
+       * results is larger than `page_size`,
        * the service returns a [ListFilesystemsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
@@ -1442,7 +1446,7 @@ public final class FilesystemServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListFilesystemsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1462,7 +1466,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListFilesystemsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1483,7 +1487,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListFilesystemsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1501,7 +1505,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListFilesystemsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1515,7 +1519,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListFilesystemsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -1536,11 +1540,12 @@ public final class FilesystemServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that filters filesystems listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on the [Filesystem.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
+       * Example of a filter: `name=my-filesystem`.
        * </pre>
        *
        * <code>string filter = 4;</code>
@@ -1559,11 +1564,12 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that filters filesystems listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on the [Filesystem.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
+       * Example of a filter: `name=my-filesystem`.
        * </pre>
        *
        * <code>string filter = 4;</code>
@@ -1583,11 +1589,12 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that filters filesystems listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on the [Filesystem.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
+       * Example of a filter: `name=my-filesystem`.
        * </pre>
        *
        * <code>string filter = 4;</code>
@@ -1604,11 +1611,12 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that filters filesystems listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on the [Filesystem.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
+       * Example of a filter: `name=my-filesystem`.
        * </pre>
        *
        * <code>string filter = 4;</code>
@@ -1621,11 +1629,12 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
+       * A filter expression that filters filesystems listed in the response.
        * The expression must specify:
        * 1. The field name. Currently you can use filtering only on the [Filesystem.name] field.
        * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
        * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z]([-a-z0-9]{,61}[a-z0-9])?$`.
+       * Example of a filter: `name=my-filesystem`.
        * </pre>
        *
        * <code>string filter = 4;</code>
@@ -1700,7 +1709,7 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * List of Filesystem resources.
+     * List of filesystems in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -1709,7 +1718,7 @@ public final class FilesystemServiceOuterClass {
         getFilesystemsList();
     /**
      * <pre>
-     * List of Filesystem resources.
+     * List of filesystems in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -1717,7 +1726,7 @@ public final class FilesystemServiceOuterClass {
     yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem getFilesystems(int index);
     /**
      * <pre>
-     * List of Filesystem resources.
+     * List of filesystems in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -1725,7 +1734,7 @@ public final class FilesystemServiceOuterClass {
     int getFilesystemsCount();
     /**
      * <pre>
-     * List of Filesystem resources.
+     * List of filesystems in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -1734,7 +1743,7 @@ public final class FilesystemServiceOuterClass {
         getFilesystemsOrBuilderList();
     /**
      * <pre>
-     * List of Filesystem resources.
+     * List of filesystems in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -1744,12 +1753,10 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListFilesystemsRequest.page_size], use
-     * the [next_page_token] as the value
-     * for the [ListFilesystemsRequest.page_token] query parameter
-     * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFilesystemsRequest.page_size], use `next_page_token` as the value
+     * for the [ListFilesystemsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1757,12 +1764,10 @@ public final class FilesystemServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListFilesystemsRequest.page_size], use
-     * the [next_page_token] as the value
-     * for the [ListFilesystemsRequest.page_token] query parameter
-     * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFilesystemsRequest.page_size], use `next_page_token` as the value
+     * for the [ListFilesystemsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1866,7 +1871,7 @@ public final class FilesystemServiceOuterClass {
     private java.util.List<yandex.cloud.api.compute.v1.FilesystemOuterClass.Filesystem> filesystems_;
     /**
      * <pre>
-     * List of Filesystem resources.
+     * List of filesystems in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -1876,7 +1881,7 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Filesystem resources.
+     * List of filesystems in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -1887,7 +1892,7 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Filesystem resources.
+     * List of filesystems in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -1897,7 +1902,7 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Filesystem resources.
+     * List of filesystems in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -1907,7 +1912,7 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * List of Filesystem resources.
+     * List of filesystems in the specified folder.
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -1921,12 +1926,10 @@ public final class FilesystemServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListFilesystemsRequest.page_size], use
-     * the [next_page_token] as the value
-     * for the [ListFilesystemsRequest.page_token] query parameter
-     * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFilesystemsRequest.page_size], use `next_page_token` as the value
+     * for the [ListFilesystemsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -1945,12 +1948,10 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListFilesystemsRequest.page_size], use
-     * the [next_page_token] as the value
-     * for the [ListFilesystemsRequest.page_token] query parameter
-     * in the next list request. Each subsequent list request will have its own
-     * [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFilesystemsRequest.page_size], use `next_page_token` as the value
+     * for the [ListFilesystemsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2345,7 +2346,7 @@ public final class FilesystemServiceOuterClass {
 
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2359,7 +2360,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2373,7 +2374,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2387,7 +2388,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2408,7 +2409,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2426,7 +2427,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2446,7 +2447,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2467,7 +2468,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2485,7 +2486,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2503,7 +2504,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2522,7 +2523,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2539,7 +2540,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2556,7 +2557,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2567,7 +2568,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2581,7 +2582,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2596,7 +2597,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2607,7 +2608,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2619,7 +2620,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * List of Filesystem resources.
+       * List of filesystems in the specified folder.
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.Filesystem filesystems = 1;</code>
@@ -2646,12 +2647,10 @@ public final class FilesystemServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListFilesystemsRequest.page_size], use
-       * the [next_page_token] as the value
-       * for the [ListFilesystemsRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFilesystemsRequest.page_size], use `next_page_token` as the value
+       * for the [ListFilesystemsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2670,12 +2669,10 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListFilesystemsRequest.page_size], use
-       * the [next_page_token] as the value
-       * for the [ListFilesystemsRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFilesystemsRequest.page_size], use `next_page_token` as the value
+       * for the [ListFilesystemsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2695,12 +2692,10 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListFilesystemsRequest.page_size], use
-       * the [next_page_token] as the value
-       * for the [ListFilesystemsRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFilesystemsRequest.page_size], use `next_page_token` as the value
+       * for the [ListFilesystemsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2717,12 +2712,10 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListFilesystemsRequest.page_size], use
-       * the [next_page_token] as the value
-       * for the [ListFilesystemsRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFilesystemsRequest.page_size], use `next_page_token` as the value
+       * for the [ListFilesystemsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2735,12 +2728,10 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListFilesystemsRequest.page_size], use
-       * the [next_page_token] as the value
-       * for the [ListFilesystemsRequest.page_token] query parameter
-       * in the next list request. Each subsequent list request will have its own
-       * [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFilesystemsRequest.page_size], use `next_page_token` as the value
+       * for the [ListFilesystemsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -2816,7 +2807,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to create a filesystem in.
-     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2825,7 +2816,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to create a filesystem in.
-     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2835,7 +2826,7 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the filesystem.
+     * Name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -2843,7 +2834,7 @@ public final class FilesystemServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the filesystem.
+     * Name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -2871,7 +2862,8 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2879,7 +2871,8 @@ public final class FilesystemServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2894,7 +2887,8 @@ public final class FilesystemServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2903,7 +2897,8 @@ public final class FilesystemServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2914,7 +2909,8 @@ public final class FilesystemServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -2926,7 +2922,8 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the filesystem type.
-     * To get a list of available filesystem types use the [yandex.cloud.compute.v1.DiskTypeService.List] request.
+     * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
+     * The filesystem type cannot be updated after the filesystem creation.
      * </pre>
      *
      * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2935,7 +2932,8 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the filesystem type.
-     * To get a list of available filesystem types use the [yandex.cloud.compute.v1.DiskTypeService.List] request.
+     * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
+     * The filesystem type cannot be updated after the filesystem creation.
      * </pre>
      *
      * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2946,7 +2944,9 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the filesystem resides.
-     * To get a list of available zones use the [yandex.cloud.compute.v1.ZoneService.List] request.
+     * To get a list of available zones, make a [yandex.cloud.compute.v1.ZoneService.List] request.
+     * A filesystem can be attached only to virtual machines residing in the same availability zone.
+     * The filesystem availability zone cannot be updated after the filesystem creation.
      * </pre>
      *
      * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2955,7 +2955,9 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the filesystem resides.
-     * To get a list of available zones use the [yandex.cloud.compute.v1.ZoneService.List] request.
+     * To get a list of available zones, make a [yandex.cloud.compute.v1.ZoneService.List] request.
+     * A filesystem can be attached only to virtual machines residing in the same availability zone.
+     * The filesystem availability zone cannot be updated after the filesystem creation.
      * </pre>
      *
      * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2966,6 +2968,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * Size of the filesystem, specified in bytes.
+     * The size of the filesystem cannot be updated after the filesystem creation.
      * </pre>
      *
      * <code>int64 size = 7 [(.yandex.cloud.required) = true];</code>
@@ -2974,7 +2977,9 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * Block size used for filesystem, specified in bytes. The default is 4096.
+     * Block size used for the filesystem, specified in bytes.
+     * The block size cannot be updated after the filesystem creation.
+     * Default value: 4096.
      * </pre>
      *
      * <code>int64 block_size = 8;</code>
@@ -3130,7 +3135,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to create a filesystem in.
-     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3150,7 +3155,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the folder to create a filesystem in.
-     * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3173,7 +3178,7 @@ public final class FilesystemServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the filesystem.
+     * Name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -3192,7 +3197,7 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the filesystem.
+     * Name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -3281,7 +3286,8 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3301,7 +3307,8 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3312,7 +3319,8 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3328,7 +3336,8 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -3350,7 +3359,8 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the filesystem type.
-     * To get a list of available filesystem types use the [yandex.cloud.compute.v1.DiskTypeService.List] request.
+     * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
+     * The filesystem type cannot be updated after the filesystem creation.
      * </pre>
      *
      * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3370,7 +3380,8 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the filesystem type.
-     * To get a list of available filesystem types use the [yandex.cloud.compute.v1.DiskTypeService.List] request.
+     * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
+     * The filesystem type cannot be updated after the filesystem creation.
      * </pre>
      *
      * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3394,7 +3405,9 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the filesystem resides.
-     * To get a list of available zones use the [yandex.cloud.compute.v1.ZoneService.List] request.
+     * To get a list of available zones, make a [yandex.cloud.compute.v1.ZoneService.List] request.
+     * A filesystem can be attached only to virtual machines residing in the same availability zone.
+     * The filesystem availability zone cannot be updated after the filesystem creation.
      * </pre>
      *
      * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3414,7 +3427,9 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the filesystem resides.
-     * To get a list of available zones use the [yandex.cloud.compute.v1.ZoneService.List] request.
+     * To get a list of available zones, make a [yandex.cloud.compute.v1.ZoneService.List] request.
+     * A filesystem can be attached only to virtual machines residing in the same availability zone.
+     * The filesystem availability zone cannot be updated after the filesystem creation.
      * </pre>
      *
      * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3438,6 +3453,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * Size of the filesystem, specified in bytes.
+     * The size of the filesystem cannot be updated after the filesystem creation.
      * </pre>
      *
      * <code>int64 size = 7 [(.yandex.cloud.required) = true];</code>
@@ -3450,7 +3466,9 @@ public final class FilesystemServiceOuterClass {
     private long blockSize_;
     /**
      * <pre>
-     * Block size used for filesystem, specified in bytes. The default is 4096.
+     * Block size used for the filesystem, specified in bytes.
+     * The block size cannot be updated after the filesystem creation.
+     * Default value: 4096.
      * </pre>
      *
      * <code>int64 block_size = 8;</code>
@@ -3923,7 +3941,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a filesystem in.
-       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3943,7 +3961,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a filesystem in.
-       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3964,7 +3982,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a filesystem in.
-       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3982,7 +4000,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a filesystem in.
-       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -3996,7 +4014,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the folder to create a filesystem in.
-       * To get the folder ID use a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4016,7 +4034,7 @@ public final class FilesystemServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the filesystem.
+       * Name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -4035,7 +4053,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the filesystem.
+       * Name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -4055,7 +4073,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the filesystem.
+       * Name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -4072,7 +4090,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the filesystem.
+       * Name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -4085,7 +4103,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the filesystem.
+       * Name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -4219,7 +4237,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4239,7 +4258,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4250,7 +4270,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4266,7 +4287,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4290,7 +4312,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4313,7 +4336,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4329,7 +4353,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -4346,7 +4371,8 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the filesystem type.
-       * To get a list of available filesystem types use the [yandex.cloud.compute.v1.DiskTypeService.List] request.
+       * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
+       * The filesystem type cannot be updated after the filesystem creation.
        * </pre>
        *
        * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4366,7 +4392,8 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the filesystem type.
-       * To get a list of available filesystem types use the [yandex.cloud.compute.v1.DiskTypeService.List] request.
+       * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
+       * The filesystem type cannot be updated after the filesystem creation.
        * </pre>
        *
        * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4387,7 +4414,8 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the filesystem type.
-       * To get a list of available filesystem types use the [yandex.cloud.compute.v1.DiskTypeService.List] request.
+       * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
+       * The filesystem type cannot be updated after the filesystem creation.
        * </pre>
        *
        * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4405,7 +4433,8 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the filesystem type.
-       * To get a list of available filesystem types use the [yandex.cloud.compute.v1.DiskTypeService.List] request.
+       * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
+       * The filesystem type cannot be updated after the filesystem creation.
        * </pre>
        *
        * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4419,7 +4448,8 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the filesystem type.
-       * To get a list of available filesystem types use the [yandex.cloud.compute.v1.DiskTypeService.List] request.
+       * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
+       * The filesystem type cannot be updated after the filesystem creation.
        * </pre>
        *
        * <code>string type_id = 5 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4440,7 +4470,9 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the filesystem resides.
-       * To get a list of available zones use the [yandex.cloud.compute.v1.ZoneService.List] request.
+       * To get a list of available zones, make a [yandex.cloud.compute.v1.ZoneService.List] request.
+       * A filesystem can be attached only to virtual machines residing in the same availability zone.
+       * The filesystem availability zone cannot be updated after the filesystem creation.
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4460,7 +4492,9 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the filesystem resides.
-       * To get a list of available zones use the [yandex.cloud.compute.v1.ZoneService.List] request.
+       * To get a list of available zones, make a [yandex.cloud.compute.v1.ZoneService.List] request.
+       * A filesystem can be attached only to virtual machines residing in the same availability zone.
+       * The filesystem availability zone cannot be updated after the filesystem creation.
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4481,7 +4515,9 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the filesystem resides.
-       * To get a list of available zones use the [yandex.cloud.compute.v1.ZoneService.List] request.
+       * To get a list of available zones, make a [yandex.cloud.compute.v1.ZoneService.List] request.
+       * A filesystem can be attached only to virtual machines residing in the same availability zone.
+       * The filesystem availability zone cannot be updated after the filesystem creation.
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4499,7 +4535,9 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the filesystem resides.
-       * To get a list of available zones use the [yandex.cloud.compute.v1.ZoneService.List] request.
+       * To get a list of available zones, make a [yandex.cloud.compute.v1.ZoneService.List] request.
+       * A filesystem can be attached only to virtual machines residing in the same availability zone.
+       * The filesystem availability zone cannot be updated after the filesystem creation.
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4513,7 +4551,9 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the filesystem resides.
-       * To get a list of available zones use the [yandex.cloud.compute.v1.ZoneService.List] request.
+       * To get a list of available zones, make a [yandex.cloud.compute.v1.ZoneService.List] request.
+       * A filesystem can be attached only to virtual machines residing in the same availability zone.
+       * The filesystem availability zone cannot be updated after the filesystem creation.
        * </pre>
        *
        * <code>string zone_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4534,6 +4574,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * Size of the filesystem, specified in bytes.
+       * The size of the filesystem cannot be updated after the filesystem creation.
        * </pre>
        *
        * <code>int64 size = 7 [(.yandex.cloud.required) = true];</code>
@@ -4544,6 +4585,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * Size of the filesystem, specified in bytes.
+       * The size of the filesystem cannot be updated after the filesystem creation.
        * </pre>
        *
        * <code>int64 size = 7 [(.yandex.cloud.required) = true];</code>
@@ -4557,6 +4599,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * Size of the filesystem, specified in bytes.
+       * The size of the filesystem cannot be updated after the filesystem creation.
        * </pre>
        *
        * <code>int64 size = 7 [(.yandex.cloud.required) = true];</code>
@@ -4571,7 +4614,9 @@ public final class FilesystemServiceOuterClass {
       private long blockSize_ ;
       /**
        * <pre>
-       * Block size used for filesystem, specified in bytes. The default is 4096.
+       * Block size used for the filesystem, specified in bytes.
+       * The block size cannot be updated after the filesystem creation.
+       * Default value: 4096.
        * </pre>
        *
        * <code>int64 block_size = 8;</code>
@@ -4581,7 +4626,9 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Block size used for filesystem, specified in bytes. The default is 4096.
+       * Block size used for the filesystem, specified in bytes.
+       * The block size cannot be updated after the filesystem creation.
+       * Default value: 4096.
        * </pre>
        *
        * <code>int64 block_size = 8;</code>
@@ -4594,7 +4641,9 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Block size used for filesystem, specified in bytes. The default is 4096.
+       * Block size used for the filesystem, specified in bytes.
+       * The block size cannot be updated after the filesystem creation.
+       * Default value: 4096.
        * </pre>
        *
        * <code>int64 block_size = 8;</code>
@@ -5250,8 +5299,8 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Filesystem resource to update.
-     * To get the filesystem ID use a [FilesystemService.List] request.
+     * ID of the filesystem to update.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5259,8 +5308,8 @@ public final class FilesystemServiceOuterClass {
     java.lang.String getFilesystemId();
     /**
      * <pre>
-     * ID of the Filesystem resource to update.
-     * To get the filesystem ID use a [FilesystemService.List] request.
+     * ID of the filesystem to update.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5270,7 +5319,7 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+     * Field mask that specifies which attributes of the filesystem should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5278,7 +5327,7 @@ public final class FilesystemServiceOuterClass {
     boolean hasUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+     * Field mask that specifies which attributes of the filesystem should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5286,7 +5335,7 @@ public final class FilesystemServiceOuterClass {
     com.google.protobuf.FieldMask getUpdateMask();
     /**
      * <pre>
-     * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+     * Field mask that specifies which attributes of the filesystem should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5295,7 +5344,7 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * Name of the filesystem.
+     * New name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -5303,7 +5352,7 @@ public final class FilesystemServiceOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the filesystem.
+     * New name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -5313,7 +5362,7 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * Description of the filesystem.
+     * New description of the filesystem.
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -5321,7 +5370,7 @@ public final class FilesystemServiceOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the filesystem.
+     * New description of the filesystem.
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -5331,8 +5380,13 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
-     * Existing set of `labels` is completely replaced by the provided set.
+     * New filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [FilesystemService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5340,8 +5394,13 @@ public final class FilesystemServiceOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
-     * Existing set of `labels` is completely replaced by the provided set.
+     * New filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [FilesystemService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5356,8 +5415,13 @@ public final class FilesystemServiceOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
-     * Existing set of `labels` is completely replaced by the provided set.
+     * New filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [FilesystemService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5366,8 +5430,13 @@ public final class FilesystemServiceOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
-     * Existing set of `labels` is completely replaced by the provided set.
+     * New filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [FilesystemService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5378,8 +5447,13 @@ public final class FilesystemServiceOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
-     * Existing set of `labels` is completely replaced by the provided set.
+     * New filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [FilesystemService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5523,8 +5597,8 @@ public final class FilesystemServiceOuterClass {
     private volatile java.lang.Object filesystemId_;
     /**
      * <pre>
-     * ID of the Filesystem resource to update.
-     * To get the filesystem ID use a [FilesystemService.List] request.
+     * ID of the filesystem to update.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5543,8 +5617,8 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Filesystem resource to update.
-     * To get the filesystem ID use a [FilesystemService.List] request.
+     * ID of the filesystem to update.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5567,7 +5641,7 @@ public final class FilesystemServiceOuterClass {
     private com.google.protobuf.FieldMask updateMask_;
     /**
      * <pre>
-     * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+     * Field mask that specifies which attributes of the filesystem should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5577,7 +5651,7 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+     * Field mask that specifies which attributes of the filesystem should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5587,7 +5661,7 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+     * Field mask that specifies which attributes of the filesystem should be updated.
      * </pre>
      *
      * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -5600,7 +5674,7 @@ public final class FilesystemServiceOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the filesystem.
+     * New name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -5619,7 +5693,7 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Name of the filesystem.
+     * New name of the filesystem. The name must be unique within the folder.
      * </pre>
      *
      * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -5642,7 +5716,7 @@ public final class FilesystemServiceOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the filesystem.
+     * New description of the filesystem.
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -5661,7 +5735,7 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Description of the filesystem.
+     * New description of the filesystem.
      * </pre>
      *
      * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -5708,8 +5782,13 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
-     * Existing set of `labels` is completely replaced by the provided set.
+     * New filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [FilesystemService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5729,8 +5808,13 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
-     * Existing set of `labels` is completely replaced by the provided set.
+     * New filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [FilesystemService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5741,8 +5825,13 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
-     * Existing set of `labels` is completely replaced by the provided set.
+     * New filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [FilesystemService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -5758,8 +5847,13 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs.
-     * Existing set of `labels` is completely replaced by the provided set.
+     * New filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+     * Existing set of labels is completely replaced by the provided set, so if you just want
+     * to add or remove a label:
+     * 1. Get the current set of labels with a [FilesystemService.Get] request.
+     * 2. Add or remove a label in this set.
+     * 3. Send the new set in this field.
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -6199,8 +6293,8 @@ public final class FilesystemServiceOuterClass {
       private java.lang.Object filesystemId_ = "";
       /**
        * <pre>
-       * ID of the Filesystem resource to update.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * ID of the filesystem to update.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6219,8 +6313,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource to update.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * ID of the filesystem to update.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6240,8 +6334,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource to update.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * ID of the filesystem to update.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6258,8 +6352,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource to update.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * ID of the filesystem to update.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6272,8 +6366,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource to update.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * ID of the filesystem to update.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -6295,7 +6389,7 @@ public final class FilesystemServiceOuterClass {
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <pre>
-       * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+       * Field mask that specifies which attributes of the filesystem should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6305,7 +6399,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+       * Field mask that specifies which attributes of the filesystem should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6319,7 +6413,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+       * Field mask that specifies which attributes of the filesystem should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6339,7 +6433,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+       * Field mask that specifies which attributes of the filesystem should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6357,7 +6451,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+       * Field mask that specifies which attributes of the filesystem should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6379,7 +6473,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+       * Field mask that specifies which attributes of the filesystem should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6397,7 +6491,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+       * Field mask that specifies which attributes of the filesystem should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6409,7 +6503,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+       * Field mask that specifies which attributes of the filesystem should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6424,7 +6518,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Field mask that specifies which fields of the Filesystem resource are going to be updated.
+       * Field mask that specifies which attributes of the filesystem should be updated.
        * </pre>
        *
        * <code>.google.protobuf.FieldMask update_mask = 2;</code>
@@ -6446,7 +6540,7 @@ public final class FilesystemServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the filesystem.
+       * New name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -6465,7 +6559,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the filesystem.
+       * New name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -6485,7 +6579,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the filesystem.
+       * New name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -6502,7 +6596,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the filesystem.
+       * New name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -6515,7 +6609,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Name of the filesystem.
+       * New name of the filesystem. The name must be unique within the folder.
        * </pre>
        *
        * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
@@ -6535,7 +6629,7 @@ public final class FilesystemServiceOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the filesystem.
+       * New description of the filesystem.
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -6554,7 +6648,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the filesystem.
+       * New description of the filesystem.
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -6574,7 +6668,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the filesystem.
+       * New description of the filesystem.
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -6591,7 +6685,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the filesystem.
+       * New description of the filesystem.
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -6604,7 +6698,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Description of the filesystem.
+       * New description of the filesystem.
        * </pre>
        *
        * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
@@ -6649,8 +6743,13 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
-       * Existing set of `labels` is completely replaced by the provided set.
+       * New filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [FilesystemService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -6670,8 +6769,13 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
-       * Existing set of `labels` is completely replaced by the provided set.
+       * New filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [FilesystemService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -6682,8 +6786,13 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
-       * Existing set of `labels` is completely replaced by the provided set.
+       * New filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [FilesystemService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -6699,8 +6808,13 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
-       * Existing set of `labels` is completely replaced by the provided set.
+       * New filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [FilesystemService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -6724,8 +6838,13 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
-       * Existing set of `labels` is completely replaced by the provided set.
+       * New filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [FilesystemService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -6748,8 +6867,13 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
-       * Existing set of `labels` is completely replaced by the provided set.
+       * New filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [FilesystemService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -6765,8 +6889,13 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs.
-       * Existing set of `labels` is completely replaced by the provided set.
+       * New filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
+       * Existing set of labels is completely replaced by the provided set, so if you just want
+       * to add or remove a label:
+       * 1. Get the current set of labels with a [FilesystemService.Get] request.
+       * 2. Add or remove a label in this set.
+       * 3. Send the new set in this field.
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_./&#92;&#92;&#64;0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
@@ -6837,7 +6966,7 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Filesystem resource that is being updated.
+     * ID of the filesystem that is being updated.
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
@@ -6845,7 +6974,7 @@ public final class FilesystemServiceOuterClass {
     java.lang.String getFilesystemId();
     /**
      * <pre>
-     * ID of the Filesystem resource that is being updated.
+     * ID of the filesystem that is being updated.
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
@@ -6935,7 +7064,7 @@ public final class FilesystemServiceOuterClass {
     private volatile java.lang.Object filesystemId_;
     /**
      * <pre>
-     * ID of the Filesystem resource that is being updated.
+     * ID of the filesystem that is being updated.
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
@@ -6954,7 +7083,7 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Filesystem resource that is being updated.
+     * ID of the filesystem that is being updated.
      * </pre>
      *
      * <code>string filesystem_id = 1;</code>
@@ -7279,7 +7408,7 @@ public final class FilesystemServiceOuterClass {
       private java.lang.Object filesystemId_ = "";
       /**
        * <pre>
-       * ID of the Filesystem resource that is being updated.
+       * ID of the filesystem that is being updated.
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
@@ -7298,7 +7427,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource that is being updated.
+       * ID of the filesystem that is being updated.
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
@@ -7318,7 +7447,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource that is being updated.
+       * ID of the filesystem that is being updated.
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
@@ -7335,7 +7464,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource that is being updated.
+       * ID of the filesystem that is being updated.
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
@@ -7348,7 +7477,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource that is being updated.
+       * ID of the filesystem that is being updated.
        * </pre>
        *
        * <code>string filesystem_id = 1;</code>
@@ -7424,7 +7553,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the filesystem to delete.
-     * To get the filesystem ID use a [FilesystemService.List] request.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7433,7 +7562,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the filesystem to delete.
-     * To get the filesystem ID use a [FilesystemService.List] request.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7524,7 +7653,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the filesystem to delete.
-     * To get the filesystem ID use a [FilesystemService.List] request.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7544,7 +7673,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * ID of the filesystem to delete.
-     * To get the filesystem ID use a [FilesystemService.List] request.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7870,7 +7999,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the filesystem to delete.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7890,7 +8019,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the filesystem to delete.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7911,7 +8040,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the filesystem to delete.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7929,7 +8058,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the filesystem to delete.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -7943,7 +8072,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * ID of the filesystem to delete.
-       * To get the filesystem ID use a [FilesystemService.List] request.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8604,7 +8733,8 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the Filesystem resource to list operations for.
+     * ID of the filesystem to list operations for.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8612,7 +8742,8 @@ public final class FilesystemServiceOuterClass {
     java.lang.String getFilesystemId();
     /**
      * <pre>
-     * ID of the Filesystem resource to list operations for.
+     * ID of the filesystem to list operations for.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8623,7 +8754,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListFilesystemOperationsResponse.next_page_token]
+     * results is larger than `page_size`, the service returns a [ListFilesystemOperationsResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
@@ -8633,7 +8764,7 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListFilesystemOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -8642,7 +8773,7 @@ public final class FilesystemServiceOuterClass {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListFilesystemOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -8746,7 +8877,8 @@ public final class FilesystemServiceOuterClass {
     private volatile java.lang.Object filesystemId_;
     /**
      * <pre>
-     * ID of the Filesystem resource to list operations for.
+     * ID of the filesystem to list operations for.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8765,7 +8897,8 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the Filesystem resource to list operations for.
+     * ID of the filesystem to list operations for.
+     * To get the filesystem ID, make a [FilesystemService.List] request.
      * </pre>
      *
      * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -8789,7 +8922,7 @@ public final class FilesystemServiceOuterClass {
     /**
      * <pre>
      * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListFilesystemOperationsResponse.next_page_token]
+     * results is larger than `page_size`, the service returns a [ListFilesystemOperationsResponse.next_page_token]
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
@@ -8803,7 +8936,7 @@ public final class FilesystemServiceOuterClass {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListFilesystemOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -8823,7 +8956,7 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
+     * Page token. To get the next page of results, set `page_token` to the
      * [ListFilesystemOperationsResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
@@ -9184,7 +9317,8 @@ public final class FilesystemServiceOuterClass {
       private java.lang.Object filesystemId_ = "";
       /**
        * <pre>
-       * ID of the Filesystem resource to list operations for.
+       * ID of the filesystem to list operations for.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9203,7 +9337,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource to list operations for.
+       * ID of the filesystem to list operations for.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9223,7 +9358,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource to list operations for.
+       * ID of the filesystem to list operations for.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9240,7 +9376,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource to list operations for.
+       * ID of the filesystem to list operations for.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9253,7 +9390,8 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the Filesystem resource to list operations for.
+       * ID of the filesystem to list operations for.
+       * To get the filesystem ID, make a [FilesystemService.List] request.
        * </pre>
        *
        * <code>string filesystem_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -9274,7 +9412,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListFilesystemOperationsResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListFilesystemOperationsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
@@ -9286,7 +9424,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListFilesystemOperationsResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListFilesystemOperationsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
@@ -9301,7 +9439,7 @@ public final class FilesystemServiceOuterClass {
       /**
        * <pre>
        * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListFilesystemOperationsResponse.next_page_token]
+       * results is larger than `page_size`, the service returns a [ListFilesystemOperationsResponse.next_page_token]
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
@@ -9317,7 +9455,7 @@ public final class FilesystemServiceOuterClass {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListFilesystemOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -9337,7 +9475,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListFilesystemOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -9358,7 +9496,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListFilesystemOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -9376,7 +9514,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListFilesystemOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -9390,7 +9528,7 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
+       * Page token. To get the next page of results, set `page_token` to the
        * [ListFilesystemOperationsResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
@@ -9510,10 +9648,10 @@ public final class FilesystemServiceOuterClass {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListFilesystemOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListFilesystemOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFilesystemOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListFilesystemOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -9521,10 +9659,10 @@ public final class FilesystemServiceOuterClass {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListFilesystemOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListFilesystemOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFilesystemOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListFilesystemOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -9683,10 +9821,10 @@ public final class FilesystemServiceOuterClass {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListFilesystemOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListFilesystemOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFilesystemOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListFilesystemOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -9705,10 +9843,10 @@ public final class FilesystemServiceOuterClass {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListFilesystemOperationsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListFilesystemOperationsRequest.page_token] query parameter in the next list request.
-     * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListFilesystemOperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListFilesystemOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -10404,10 +10542,10 @@ public final class FilesystemServiceOuterClass {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListFilesystemOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListFilesystemOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFilesystemOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListFilesystemOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -10426,10 +10564,10 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListFilesystemOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListFilesystemOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFilesystemOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListFilesystemOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -10449,10 +10587,10 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListFilesystemOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListFilesystemOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFilesystemOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListFilesystemOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -10469,10 +10607,10 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListFilesystemOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListFilesystemOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFilesystemOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListFilesystemOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -10485,10 +10623,10 @@ public final class FilesystemServiceOuterClass {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListFilesystemOperationsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListFilesystemOperationsRequest.page_token] query parameter in the next list request.
-       * Each subsequent list request will have its own [next_page_token] to continue paging through the results.
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListFilesystemOperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListFilesystemOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>

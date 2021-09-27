@@ -471,6 +471,14 @@ public final class GPH {
        * <code>DEGRADED = 3;</code>
        */
       DEGRADED(3),
+      /**
+       * <pre>
+       * One or more segments are not in prefer role.
+       * </pre>
+       *
+       * <code>UNBALANCED = 4;</code>
+       */
+      UNBALANCED(4),
       UNRECOGNIZED(-1),
       ;
 
@@ -506,6 +514,14 @@ public final class GPH {
        * <code>DEGRADED = 3;</code>
        */
       public static final int DEGRADED_VALUE = 3;
+      /**
+       * <pre>
+       * One or more segments are not in prefer role.
+       * </pre>
+       *
+       * <code>UNBALANCED = 4;</code>
+       */
+      public static final int UNBALANCED_VALUE = 4;
 
 
       public final int getNumber() {
@@ -530,6 +546,7 @@ public final class GPH {
           case 1: return ALIVE;
           case 2: return DEAD;
           case 3: return DEGRADED;
+          case 4: return UNBALANCED;
           default: return null;
         }
       }
@@ -2040,7 +2057,7 @@ public final class GPH {
       "\n(yandex/cloud/mdb/greenplum/v1/host.pro" +
       "to\022\035yandex.cloud.mdb.greenplum.v1\032*yande" +
       "x/cloud/mdb/greenplum/v1/config.proto\032\035y" +
-      "andex/cloud/validation.proto\"\243\003\n\004Host\022\032\n" +
+      "andex/cloud/validation.proto\"\263\003\n\004Host\022\032\n" +
       "\004name\030\001 \001(\tB\014\350\3071\001\212\3101\004<=63\022\022\n\ncluster_id\030" +
       "\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0226\n\004type\030\004 \001(\0162(.y" +
       "andex.cloud.mdb.greenplum.v1.Host.Type\022;" +
@@ -2049,12 +2066,12 @@ public final class GPH {
       "ndex.cloud.mdb.greenplum.v1.Host.Health\022" +
       "\021\n\tsubnet_id\030\007 \001(\t\022\030\n\020assign_public_ip\030\010" +
       " \001(\010\"B\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006MA" +
-      "STER\020\001\022\013\n\007REPLICA\020\002\022\013\n\007SEGMENT\020\003\"8\n\006Heal" +
+      "STER\020\001\022\013\n\007REPLICA\020\002\022\013\n\007SEGMENT\020\003\"H\n\006Heal" +
       "th\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010" +
-      "DEGRADED\020\003Bu\n!yandex.cloud.api.mdb.green" +
-      "plum.v1B\003GPHZKgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/mdb/greenplum/v1;" +
-      "greenplumb\006proto3"
+      "DEGRADED\020\003\022\016\n\nUNBALANCED\020\004Bu\n!yandex.clo" +
+      "ud.api.mdb.greenplum.v1B\003GPHZKgithub.com" +
+      "/yandex-cloud/go-genproto/yandex/cloud/m" +
+      "db/greenplum/v1;greenplumb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

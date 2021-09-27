@@ -103,7 +103,7 @@ public final class GPC {
 
     /**
      * <pre>
-     * Green plum cluster config
+     * Greenplum cluster config
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -111,7 +111,7 @@ public final class GPC {
     boolean hasConfig();
     /**
      * <pre>
-     * Green plum cluster config
+     * Greenplum cluster config
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -119,7 +119,7 @@ public final class GPC {
     yandex.cloud.api.mdb.greenplum.v1.GPC.GreenplumConfig getConfig();
     /**
      * <pre>
-     * Green plum cluster config
+     * Greenplum cluster config
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -1007,6 +1007,14 @@ public final class GPC {
        * <code>DEGRADED = 3;</code>
        */
       DEGRADED(3),
+      /**
+       * <pre>
+       * Cluster is working below capacity ([Host.health] for at least one host in the cluster is UNBALANCED).
+       * </pre>
+       *
+       * <code>UNBALANCED = 4;</code>
+       */
+      UNBALANCED(4),
       UNRECOGNIZED(-1),
       ;
 
@@ -1042,6 +1050,14 @@ public final class GPC {
        * <code>DEGRADED = 3;</code>
        */
       public static final int DEGRADED_VALUE = 3;
+      /**
+       * <pre>
+       * Cluster is working below capacity ([Host.health] for at least one host in the cluster is UNBALANCED).
+       * </pre>
+       *
+       * <code>UNBALANCED = 4;</code>
+       */
+      public static final int UNBALANCED_VALUE = 4;
 
 
       public final int getNumber() {
@@ -1066,6 +1082,7 @@ public final class GPC {
           case 1: return ALIVE;
           case 2: return DEAD;
           case 3: return DEGRADED;
+          case 4: return UNBALANCED;
           default: return null;
         }
       }
@@ -1502,7 +1519,7 @@ public final class GPC {
     private yandex.cloud.api.mdb.greenplum.v1.GPC.GreenplumConfig config_;
     /**
      * <pre>
-     * Green plum cluster config
+     * Greenplum cluster config
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -1512,7 +1529,7 @@ public final class GPC {
     }
     /**
      * <pre>
-     * Green plum cluster config
+     * Greenplum cluster config
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -1522,7 +1539,7 @@ public final class GPC {
     }
     /**
      * <pre>
-     * Green plum cluster config
+     * Greenplum cluster config
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -3456,7 +3473,7 @@ public final class GPC {
           yandex.cloud.api.mdb.greenplum.v1.GPC.GreenplumConfig, yandex.cloud.api.mdb.greenplum.v1.GPC.GreenplumConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.GPC.GreenplumConfigOrBuilder> configBuilder_;
       /**
        * <pre>
-       * Green plum cluster config
+       * Greenplum cluster config
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -3466,7 +3483,7 @@ public final class GPC {
       }
       /**
        * <pre>
-       * Green plum cluster config
+       * Greenplum cluster config
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -3480,7 +3497,7 @@ public final class GPC {
       }
       /**
        * <pre>
-       * Green plum cluster config
+       * Greenplum cluster config
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -3500,7 +3517,7 @@ public final class GPC {
       }
       /**
        * <pre>
-       * Green plum cluster config
+       * Greenplum cluster config
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -3518,7 +3535,7 @@ public final class GPC {
       }
       /**
        * <pre>
-       * Green plum cluster config
+       * Greenplum cluster config
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -3540,7 +3557,7 @@ public final class GPC {
       }
       /**
        * <pre>
-       * Green plum cluster config
+       * Greenplum cluster config
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -3558,7 +3575,7 @@ public final class GPC {
       }
       /**
        * <pre>
-       * Green plum cluster config
+       * Greenplum cluster config
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -3570,7 +3587,7 @@ public final class GPC {
       }
       /**
        * <pre>
-       * Green plum cluster config
+       * Greenplum cluster config
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -3585,7 +3602,7 @@ public final class GPC {
       }
       /**
        * <pre>
-       * Green plum cluster config
+       * Greenplum cluster config
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig config = 5;</code>
@@ -8742,7 +8759,7 @@ public final class GPC {
       "pe/timeofday.proto\032\035yandex/cloud/validat" +
       "ion.proto\032*yandex/cloud/mdb/greenplum/v1" +
       "/config.proto\032/yandex/cloud/mdb/greenplu" +
-      "m/v1/maintenance.proto\"\315\n\n\007Cluster\022\n\n\002id" +
+      "m/v1/maintenance.proto\"\335\n\n\007Cluster\022\n\n\002id" +
       "\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030" +
       "\003 \001(\0132\032.google.protobuf.Timestamp\022\032\n\004nam" +
       "e\030\004 \001(\tB\014\350\3071\001\212\3101\004<=63\022>\n\006config\030\005 \001(\0132.." +
@@ -8771,24 +8788,24 @@ public final class GPC {
       "on\030\026 \001(\010\022\026\n\016host_group_ids\030\027 \003(\t\032-\n\013Labe" +
       "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
       "I\n\013Environment\022\033\n\027ENVIRONMENT_UNSPECIFIE" +
-      "D\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"?\n\006He" +
+      "D\020\000\022\016\n\nPRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"O\n\006He" +
       "alth\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004D" +
-      "EAD\020\002\022\014\n\010DEGRADED\020\003\"y\n\006Status\022\022\n\016STATUS_" +
-      "UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n\005" +
-      "ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007S" +
-      "TOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004" +
-      "name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030" +
-      "\003 \001(\t\"\340\001\n\017GreenplumConfig\022\017\n\007version\030\001 \001" +
-      "(\t\0223\n\023backup_window_start\030\002 \001(\0132\026.google" +
-      ".type.TimeOfDay\0225\n\006access\030\003 \001(\0132%.yandex" +
-      ".cloud.mdb.greenplum.v1.Access\022\031\n\007zone_i" +
-      "d\030\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\005 \001(\tB\010\212\310" +
-      "1\004<=50\022\030\n\020assign_public_ip\030\006 \001(\010\",\n\006Acce" +
-      "ss\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010Bu" +
-      "\n!yandex.cloud.api.mdb.greenplum.v1B\003GPC" +
-      "ZKgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/mdb/greenplum/v1;greenplumb\006p" +
-      "roto3"
+      "EAD\020\002\022\014\n\010DEGRADED\020\003\022\016\n\nUNBALANCED\020\004\"y\n\006S" +
+      "tatus\022\022\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022" +
+      "\013\n\007RUNNING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n" +
+      "\010STOPPING\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=" +
+      "\n\nMonitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013descriptio" +
+      "n\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"\340\001\n\017GreenplumConfi" +
+      "g\022\017\n\007version\030\001 \001(\t\0223\n\023backup_window_star" +
+      "t\030\002 \001(\0132\026.google.type.TimeOfDay\0225\n\006acces" +
+      "s\030\003 \001(\0132%.yandex.cloud.mdb.greenplum.v1." +
+      "Access\022\031\n\007zone_id\030\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsub" +
+      "net_id\030\005 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_" +
+      "ip\030\006 \001(\010\",\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n" +
+      "\007web_sql\030\002 \001(\010Bu\n!yandex.cloud.api.mdb.g" +
+      "reenplum.v1B\003GPCZKgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/mdb/greenplum" +
+      "/v1;greenplumb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

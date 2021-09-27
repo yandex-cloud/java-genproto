@@ -3401,6 +3401,9 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * Array of filesystems to attach to the instance.
+     * The filesystems must reside in the same availability zone as the instance.
+     * To use the instance with an attached filesystem, the latter must be mounted.
+     * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -3410,6 +3413,9 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * Array of filesystems to attach to the instance.
+     * The filesystems must reside in the same availability zone as the instance.
+     * To use the instance with an attached filesystem, the latter must be mounted.
+     * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -3418,6 +3424,9 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * Array of filesystems to attach to the instance.
+     * The filesystems must reside in the same availability zone as the instance.
+     * To use the instance with an attached filesystem, the latter must be mounted.
+     * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -3426,6 +3435,9 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * Array of filesystems to attach to the instance.
+     * The filesystems must reside in the same availability zone as the instance.
+     * To use the instance with an attached filesystem, the latter must be mounted.
+     * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -3435,6 +3447,9 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * Array of filesystems to attach to the instance.
+     * The filesystems must reside in the same availability zone as the instance.
+     * To use the instance with an attached filesystem, the latter must be mounted.
+     * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -4437,6 +4452,9 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * Array of filesystems to attach to the instance.
+     * The filesystems must reside in the same availability zone as the instance.
+     * To use the instance with an attached filesystem, the latter must be mounted.
+     * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -4447,6 +4465,9 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * Array of filesystems to attach to the instance.
+     * The filesystems must reside in the same availability zone as the instance.
+     * To use the instance with an attached filesystem, the latter must be mounted.
+     * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -4458,6 +4479,9 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * Array of filesystems to attach to the instance.
+     * The filesystems must reside in the same availability zone as the instance.
+     * To use the instance with an attached filesystem, the latter must be mounted.
+     * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -4468,6 +4492,9 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * Array of filesystems to attach to the instance.
+     * The filesystems must reside in the same availability zone as the instance.
+     * To use the instance with an attached filesystem, the latter must be mounted.
+     * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -4478,6 +4505,9 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * Array of filesystems to attach to the instance.
+     * The filesystems must reside in the same availability zone as the instance.
+     * To use the instance with an attached filesystem, the latter must be mounted.
+     * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
      * </pre>
      *
      * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7003,6 +7033,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7017,6 +7050,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7031,6 +7067,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7045,6 +7084,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7066,6 +7108,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7084,6 +7129,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7104,6 +7152,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7125,6 +7176,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7143,6 +7197,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7161,6 +7218,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7180,6 +7240,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7197,6 +7260,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7214,6 +7280,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7225,6 +7294,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7239,6 +7311,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7254,6 +7329,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7265,6 +7343,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -7277,6 +7358,9 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * Array of filesystems to attach to the instance.
+       * The filesystems must reside in the same availability zone as the instance.
+       * To use the instance with an attached filesystem, the latter must be mounted.
+       * For details, see [documentation](/docs/compute/operations/filesystem/attach-to-vm).
        * </pre>
        *
        * <code>repeated .yandex.cloud.compute.v1.AttachedFilesystemSpec filesystem_specs = 17;</code>
@@ -23970,7 +24054,7 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * ID of the instance to attach the filesystem to.
-     * To get the instance ID, use a [InstanceService.List] request.
+     * To get the instance ID, make a [InstanceService.List] request.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23979,7 +24063,7 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * ID of the instance to attach the filesystem to.
-     * To get the instance ID, use a [InstanceService.List] request.
+     * To get the instance ID, make a [InstanceService.List] request.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -23989,7 +24073,7 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * Filesystem that should be attached.
+     * Filesystem to attach to the instance.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -23997,7 +24081,7 @@ public final class InstanceServiceOuterClass {
     boolean hasAttachedFilesystemSpec();
     /**
      * <pre>
-     * Filesystem that should be attached.
+     * Filesystem to attach to the instance.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24005,7 +24089,7 @@ public final class InstanceServiceOuterClass {
     yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec getAttachedFilesystemSpec();
     /**
      * <pre>
-     * Filesystem that should be attached.
+     * Filesystem to attach to the instance.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24108,7 +24192,7 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * ID of the instance to attach the filesystem to.
-     * To get the instance ID, use a [InstanceService.List] request.
+     * To get the instance ID, make a [InstanceService.List] request.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24128,7 +24212,7 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * ID of the instance to attach the filesystem to.
-     * To get the instance ID, use a [InstanceService.List] request.
+     * To get the instance ID, make a [InstanceService.List] request.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24151,7 +24235,7 @@ public final class InstanceServiceOuterClass {
     private yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec attachedFilesystemSpec_;
     /**
      * <pre>
-     * Filesystem that should be attached.
+     * Filesystem to attach to the instance.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24161,7 +24245,7 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * Filesystem that should be attached.
+     * Filesystem to attach to the instance.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24171,7 +24255,7 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * Filesystem that should be attached.
+     * Filesystem to attach to the instance.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24517,7 +24601,7 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * ID of the instance to attach the filesystem to.
-       * To get the instance ID, use a [InstanceService.List] request.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24537,7 +24621,7 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * ID of the instance to attach the filesystem to.
-       * To get the instance ID, use a [InstanceService.List] request.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24558,7 +24642,7 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * ID of the instance to attach the filesystem to.
-       * To get the instance ID, use a [InstanceService.List] request.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24576,7 +24660,7 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * ID of the instance to attach the filesystem to.
-       * To get the instance ID, use a [InstanceService.List] request.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24590,7 +24674,7 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * ID of the instance to attach the filesystem to.
-       * To get the instance ID, use a [InstanceService.List] request.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -24612,7 +24696,7 @@ public final class InstanceServiceOuterClass {
           yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpec.Builder, yandex.cloud.api.compute.v1.InstanceServiceOuterClass.AttachedFilesystemSpecOrBuilder> attachedFilesystemSpecBuilder_;
       /**
        * <pre>
-       * Filesystem that should be attached.
+       * Filesystem to attach to the instance.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24622,7 +24706,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * Filesystem that should be attached.
+       * Filesystem to attach to the instance.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24636,7 +24720,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * Filesystem that should be attached.
+       * Filesystem to attach to the instance.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24656,7 +24740,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * Filesystem that should be attached.
+       * Filesystem to attach to the instance.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24674,7 +24758,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * Filesystem that should be attached.
+       * Filesystem to attach to the instance.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24696,7 +24780,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * Filesystem that should be attached.
+       * Filesystem to attach to the instance.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24714,7 +24798,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * Filesystem that should be attached.
+       * Filesystem to attach to the instance.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24726,7 +24810,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * Filesystem that should be attached.
+       * Filesystem to attach to the instance.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24741,7 +24825,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * Filesystem that should be attached.
+       * Filesystem to attach to the instance.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec attached_filesystem_spec = 2 [(.yandex.cloud.required) = true];</code>
@@ -24818,7 +24902,7 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the instance.
+     * ID of the instance that the filesystem is being attached to.
      * </pre>
      *
      * <code>string instance_id = 1;</code>
@@ -24826,7 +24910,7 @@ public final class InstanceServiceOuterClass {
     java.lang.String getInstanceId();
     /**
      * <pre>
-     * ID of the instance.
+     * ID of the instance that the filesystem is being attached to.
      * </pre>
      *
      * <code>string instance_id = 1;</code>
@@ -24836,7 +24920,7 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the filesystem.
+     * ID of the filesystem that is being attached to the instance.
      * </pre>
      *
      * <code>string filesystem_id = 2;</code>
@@ -24844,7 +24928,7 @@ public final class InstanceServiceOuterClass {
     java.lang.String getFilesystemId();
     /**
      * <pre>
-     * ID of the filesystem.
+     * ID of the filesystem that is being attached to the instance.
      * </pre>
      *
      * <code>string filesystem_id = 2;</code>
@@ -24941,7 +25025,7 @@ public final class InstanceServiceOuterClass {
     private volatile java.lang.Object instanceId_;
     /**
      * <pre>
-     * ID of the instance.
+     * ID of the instance that the filesystem is being attached to.
      * </pre>
      *
      * <code>string instance_id = 1;</code>
@@ -24960,7 +25044,7 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the instance.
+     * ID of the instance that the filesystem is being attached to.
      * </pre>
      *
      * <code>string instance_id = 1;</code>
@@ -24983,7 +25067,7 @@ public final class InstanceServiceOuterClass {
     private volatile java.lang.Object filesystemId_;
     /**
      * <pre>
-     * ID of the filesystem.
+     * ID of the filesystem that is being attached to the instance.
      * </pre>
      *
      * <code>string filesystem_id = 2;</code>
@@ -25002,7 +25086,7 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the filesystem.
+     * ID of the filesystem that is being attached to the instance.
      * </pre>
      *
      * <code>string filesystem_id = 2;</code>
@@ -25344,7 +25428,7 @@ public final class InstanceServiceOuterClass {
       private java.lang.Object instanceId_ = "";
       /**
        * <pre>
-       * ID of the instance.
+       * ID of the instance that the filesystem is being attached to.
        * </pre>
        *
        * <code>string instance_id = 1;</code>
@@ -25363,7 +25447,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the instance.
+       * ID of the instance that the filesystem is being attached to.
        * </pre>
        *
        * <code>string instance_id = 1;</code>
@@ -25383,7 +25467,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the instance.
+       * ID of the instance that the filesystem is being attached to.
        * </pre>
        *
        * <code>string instance_id = 1;</code>
@@ -25400,7 +25484,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the instance.
+       * ID of the instance that the filesystem is being attached to.
        * </pre>
        *
        * <code>string instance_id = 1;</code>
@@ -25413,7 +25497,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the instance.
+       * ID of the instance that the filesystem is being attached to.
        * </pre>
        *
        * <code>string instance_id = 1;</code>
@@ -25433,7 +25517,7 @@ public final class InstanceServiceOuterClass {
       private java.lang.Object filesystemId_ = "";
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem that is being attached to the instance.
        * </pre>
        *
        * <code>string filesystem_id = 2;</code>
@@ -25452,7 +25536,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem that is being attached to the instance.
        * </pre>
        *
        * <code>string filesystem_id = 2;</code>
@@ -25472,7 +25556,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem that is being attached to the instance.
        * </pre>
        *
        * <code>string filesystem_id = 2;</code>
@@ -25489,7 +25573,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem that is being attached to the instance.
        * </pre>
        *
        * <code>string filesystem_id = 2;</code>
@@ -25502,7 +25586,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem that is being attached to the instance.
        * </pre>
        *
        * <code>string filesystem_id = 2;</code>
@@ -25578,7 +25662,7 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * ID of the instance to detach the filesystem from.
-     * To get the instance ID, use a [InstanceService.List] request.
+     * To get the instance ID, make a [InstanceService.List] request.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25587,7 +25671,7 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * ID of the instance to detach the filesystem from.
-     * To get the instance ID, use a [InstanceService.List] request.
+     * To get the instance ID, make a [InstanceService.List] request.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25615,7 +25699,7 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * Tag of the filesystem that should be detached.
+     * Name of the device used for mounting the filesystem that should be detached.
      * </pre>
      *
      * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
@@ -25623,7 +25707,7 @@ public final class InstanceServiceOuterClass {
     java.lang.String getDeviceName();
     /**
      * <pre>
-     * Tag of the filesystem that should be detached.
+     * Name of the device used for mounting the filesystem that should be detached.
      * </pre>
      *
      * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
@@ -25766,7 +25850,7 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * ID of the instance to detach the filesystem from.
-     * To get the instance ID, use a [InstanceService.List] request.
+     * To get the instance ID, make a [InstanceService.List] request.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25786,7 +25870,7 @@ public final class InstanceServiceOuterClass {
     /**
      * <pre>
      * ID of the instance to detach the filesystem from.
-     * To get the instance ID, use a [InstanceService.List] request.
+     * To get the instance ID, make a [InstanceService.List] request.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -25859,7 +25943,7 @@ public final class InstanceServiceOuterClass {
     public static final int DEVICE_NAME_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * Tag of the filesystem that should be detached.
+     * Name of the device used for mounting the filesystem that should be detached.
      * </pre>
      *
      * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
@@ -25883,7 +25967,7 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * Tag of the filesystem that should be detached.
+     * Name of the device used for mounting the filesystem that should be detached.
      * </pre>
      *
      * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
@@ -26294,7 +26378,7 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * ID of the instance to detach the filesystem from.
-       * To get the instance ID, use a [InstanceService.List] request.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26314,7 +26398,7 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * ID of the instance to detach the filesystem from.
-       * To get the instance ID, use a [InstanceService.List] request.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26335,7 +26419,7 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * ID of the instance to detach the filesystem from.
-       * To get the instance ID, use a [InstanceService.List] request.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26353,7 +26437,7 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * ID of the instance to detach the filesystem from.
-       * To get the instance ID, use a [InstanceService.List] request.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26367,7 +26451,7 @@ public final class InstanceServiceOuterClass {
       /**
        * <pre>
        * ID of the instance to detach the filesystem from.
-       * To get the instance ID, use a [InstanceService.List] request.
+       * To get the instance ID, make a [InstanceService.List] request.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -26486,7 +26570,7 @@ public final class InstanceServiceOuterClass {
 
       /**
        * <pre>
-       * Tag of the filesystem that should be detached.
+       * Name of the device used for mounting the filesystem that should be detached.
        * </pre>
        *
        * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
@@ -26510,7 +26594,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * Tag of the filesystem that should be detached.
+       * Name of the device used for mounting the filesystem that should be detached.
        * </pre>
        *
        * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
@@ -26535,7 +26619,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * Tag of the filesystem that should be detached.
+       * Name of the device used for mounting the filesystem that should be detached.
        * </pre>
        *
        * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
@@ -26552,7 +26636,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * Tag of the filesystem that should be detached.
+       * Name of the device used for mounting the filesystem that should be detached.
        * </pre>
        *
        * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
@@ -26567,7 +26651,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * Tag of the filesystem that should be detached.
+       * Name of the device used for mounting the filesystem that should be detached.
        * </pre>
        *
        * <code>string device_name = 3 [(.yandex.cloud.pattern) = "[a-z][a-z0-9-_]{,19}"];</code>
@@ -26642,7 +26726,7 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the instance.
+     * ID of the instance that the filesystem is being detached from.
      * </pre>
      *
      * <code>string instance_id = 1;</code>
@@ -26650,7 +26734,7 @@ public final class InstanceServiceOuterClass {
     java.lang.String getInstanceId();
     /**
      * <pre>
-     * ID of the instance.
+     * ID of the instance that the filesystem is being detached from.
      * </pre>
      *
      * <code>string instance_id = 1;</code>
@@ -26660,7 +26744,7 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the filesystem.
+     * ID of the filesystem that is being detached from the instance.
      * </pre>
      *
      * <code>string filesystem_id = 2;</code>
@@ -26668,7 +26752,7 @@ public final class InstanceServiceOuterClass {
     java.lang.String getFilesystemId();
     /**
      * <pre>
-     * ID of the filesystem.
+     * ID of the filesystem that is being detached from the instance.
      * </pre>
      *
      * <code>string filesystem_id = 2;</code>
@@ -26765,7 +26849,7 @@ public final class InstanceServiceOuterClass {
     private volatile java.lang.Object instanceId_;
     /**
      * <pre>
-     * ID of the instance.
+     * ID of the instance that the filesystem is being detached from.
      * </pre>
      *
      * <code>string instance_id = 1;</code>
@@ -26784,7 +26868,7 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the instance.
+     * ID of the instance that the filesystem is being detached from.
      * </pre>
      *
      * <code>string instance_id = 1;</code>
@@ -26807,7 +26891,7 @@ public final class InstanceServiceOuterClass {
     private volatile java.lang.Object filesystemId_;
     /**
      * <pre>
-     * ID of the filesystem.
+     * ID of the filesystem that is being detached from the instance.
      * </pre>
      *
      * <code>string filesystem_id = 2;</code>
@@ -26826,7 +26910,7 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the filesystem.
+     * ID of the filesystem that is being detached from the instance.
      * </pre>
      *
      * <code>string filesystem_id = 2;</code>
@@ -27168,7 +27252,7 @@ public final class InstanceServiceOuterClass {
       private java.lang.Object instanceId_ = "";
       /**
        * <pre>
-       * ID of the instance.
+       * ID of the instance that the filesystem is being detached from.
        * </pre>
        *
        * <code>string instance_id = 1;</code>
@@ -27187,7 +27271,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the instance.
+       * ID of the instance that the filesystem is being detached from.
        * </pre>
        *
        * <code>string instance_id = 1;</code>
@@ -27207,7 +27291,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the instance.
+       * ID of the instance that the filesystem is being detached from.
        * </pre>
        *
        * <code>string instance_id = 1;</code>
@@ -27224,7 +27308,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the instance.
+       * ID of the instance that the filesystem is being detached from.
        * </pre>
        *
        * <code>string instance_id = 1;</code>
@@ -27237,7 +27321,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the instance.
+       * ID of the instance that the filesystem is being detached from.
        * </pre>
        *
        * <code>string instance_id = 1;</code>
@@ -27257,7 +27341,7 @@ public final class InstanceServiceOuterClass {
       private java.lang.Object filesystemId_ = "";
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem that is being detached from the instance.
        * </pre>
        *
        * <code>string filesystem_id = 2;</code>
@@ -27276,7 +27360,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem that is being detached from the instance.
        * </pre>
        *
        * <code>string filesystem_id = 2;</code>
@@ -27296,7 +27380,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem that is being detached from the instance.
        * </pre>
        *
        * <code>string filesystem_id = 2;</code>
@@ -27313,7 +27397,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem that is being detached from the instance.
        * </pre>
        *
        * <code>string filesystem_id = 2;</code>
@@ -27326,7 +27410,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem that is being detached from the instance.
        * </pre>
        *
        * <code>string filesystem_id = 2;</code>
@@ -39482,7 +39566,7 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * The mode in which to attach this disk.
+     * Mode of access to the filesystem that should be attached.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
@@ -39490,7 +39574,7 @@ public final class InstanceServiceOuterClass {
     int getModeValue();
     /**
      * <pre>
-     * The mode in which to attach this disk.
+     * Mode of access to the filesystem that should be attached.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
@@ -39499,7 +39583,9 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+     * Name of the device representing the filesystem on the instance.
+     * The name should be used for referencing the filesystem from within the instance
+     * when it's being mounted, resized etc.
      * If not specified, a random value will be generated.
      * </pre>
      *
@@ -39508,7 +39594,9 @@ public final class InstanceServiceOuterClass {
     java.lang.String getDeviceName();
     /**
      * <pre>
-     * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+     * Name of the device representing the filesystem on the instance.
+     * The name should be used for referencing the filesystem from within the instance
+     * when it's being mounted, resized etc.
      * If not specified, a random value will be generated.
      * </pre>
      *
@@ -39754,7 +39842,7 @@ public final class InstanceServiceOuterClass {
     private int mode_;
     /**
      * <pre>
-     * The mode in which to attach this disk.
+     * Mode of access to the filesystem that should be attached.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
@@ -39764,7 +39852,7 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * The mode in which to attach this disk.
+     * Mode of access to the filesystem that should be attached.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
@@ -39779,7 +39867,9 @@ public final class InstanceServiceOuterClass {
     private volatile java.lang.Object deviceName_;
     /**
      * <pre>
-     * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+     * Name of the device representing the filesystem on the instance.
+     * The name should be used for referencing the filesystem from within the instance
+     * when it's being mounted, resized etc.
      * If not specified, a random value will be generated.
      * </pre>
      *
@@ -39799,7 +39889,9 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+     * Name of the device representing the filesystem on the instance.
+     * The name should be used for referencing the filesystem from within the instance
+     * when it's being mounted, resized etc.
      * If not specified, a random value will be generated.
      * </pre>
      *
@@ -40200,7 +40292,7 @@ public final class InstanceServiceOuterClass {
       private int mode_ = 0;
       /**
        * <pre>
-       * The mode in which to attach this disk.
+       * Mode of access to the filesystem that should be attached.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
@@ -40210,7 +40302,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * The mode in which to attach this disk.
+       * Mode of access to the filesystem that should be attached.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
@@ -40222,7 +40314,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * The mode in which to attach this disk.
+       * Mode of access to the filesystem that should be attached.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
@@ -40234,7 +40326,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * The mode in which to attach this disk.
+       * Mode of access to the filesystem that should be attached.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
@@ -40250,7 +40342,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * The mode in which to attach this disk.
+       * Mode of access to the filesystem that should be attached.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystemSpec.Mode mode = 1;</code>
@@ -40265,7 +40357,9 @@ public final class InstanceServiceOuterClass {
       private java.lang.Object deviceName_ = "";
       /**
        * <pre>
-       * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+       * Name of the device representing the filesystem on the instance.
+       * The name should be used for referencing the filesystem from within the instance
+       * when it's being mounted, resized etc.
        * If not specified, a random value will be generated.
        * </pre>
        *
@@ -40285,7 +40379,9 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+       * Name of the device representing the filesystem on the instance.
+       * The name should be used for referencing the filesystem from within the instance
+       * when it's being mounted, resized etc.
        * If not specified, a random value will be generated.
        * </pre>
        *
@@ -40306,7 +40402,9 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+       * Name of the device representing the filesystem on the instance.
+       * The name should be used for referencing the filesystem from within the instance
+       * when it's being mounted, resized etc.
        * If not specified, a random value will be generated.
        * </pre>
        *
@@ -40324,7 +40422,9 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+       * Name of the device representing the filesystem on the instance.
+       * The name should be used for referencing the filesystem from within the instance
+       * when it's being mounted, resized etc.
        * If not specified, a random value will be generated.
        * </pre>
        *
@@ -40338,7 +40438,9 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * This value can be used to reference the device for mounting, resizing, and so on, from within the instance.
+       * Name of the device representing the filesystem on the instance.
+       * The name should be used for referencing the filesystem from within the instance
+       * when it's being mounted, resized etc.
        * If not specified, a random value will be generated.
        * </pre>
        *

@@ -20,7 +20,7 @@ public final class FilesystemOuterClass {
 
     /**
      * <pre>
-     * ID of the filesystem.
+     * ID of the filesystem. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -28,7 +28,7 @@ public final class FilesystemOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * ID of the filesystem.
+     * ID of the filesystem. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -55,21 +55,33 @@ public final class FilesystemOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
      * <pre>
-     * Name of the filesystem. 1-63 characters long.
+     * Name of the filesystem. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -77,7 +89,7 @@ public final class FilesystemOuterClass {
     java.lang.String getName();
     /**
      * <pre>
-     * Name of the filesystem. 1-63 characters long.
+     * Name of the filesystem. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -87,7 +99,7 @@ public final class FilesystemOuterClass {
 
     /**
      * <pre>
-     * Description of the filesystem. 0-256 characters long.
+     * Description of the filesystem.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -95,7 +107,7 @@ public final class FilesystemOuterClass {
     java.lang.String getDescription();
     /**
      * <pre>
-     * Description of the filesystem. 0-256 characters long.
+     * Description of the filesystem.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -105,7 +117,8 @@ public final class FilesystemOuterClass {
 
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -113,7 +126,8 @@ public final class FilesystemOuterClass {
     int getLabelsCount();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -128,7 +142,8 @@ public final class FilesystemOuterClass {
     getLabels();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -137,7 +152,8 @@ public final class FilesystemOuterClass {
     getLabelsMap();
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -148,7 +164,8 @@ public final class FilesystemOuterClass {
         java.lang.String defaultValue);
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -160,6 +177,7 @@ public final class FilesystemOuterClass {
     /**
      * <pre>
      * ID of the filesystem type.
+     * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
      * </pre>
      *
      * <code>string type_id = 7;</code>
@@ -168,6 +186,7 @@ public final class FilesystemOuterClass {
     /**
      * <pre>
      * ID of the filesystem type.
+     * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
      * </pre>
      *
      * <code>string type_id = 7;</code>
@@ -178,6 +197,7 @@ public final class FilesystemOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the filesystem resides.
+     * A filesystem can be attached only to instances residing in the same availability zone.
      * </pre>
      *
      * <code>string zone_id = 8;</code>
@@ -186,6 +206,7 @@ public final class FilesystemOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the filesystem resides.
+     * A filesystem can be attached only to instances residing in the same availability zone.
      * </pre>
      *
      * <code>string zone_id = 8;</code>
@@ -204,7 +225,7 @@ public final class FilesystemOuterClass {
 
     /**
      * <pre>
-     * Block size of the filesystem, specifiedin bytes.
+     * Block size used for the filesystem, specified in bytes.
      * </pre>
      *
      * <code>int64 block_size = 10;</code>
@@ -230,7 +251,8 @@ public final class FilesystemOuterClass {
   }
   /**
    * <pre>
-   * A Filesystem resource. For more information, see [Filesystems](/docs/compute/concepts/filesystem).
+   * A filesystem resource.
+   * For details about the concept, see [documentation](/docs/compute/concepts/filesystem).
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.compute.v1.Filesystem}
@@ -413,7 +435,7 @@ public final class FilesystemOuterClass {
       STATUS_UNSPECIFIED(0),
       /**
        * <pre>
-       * Filesystem is being created.
+       * The filesystem is being created.
        * </pre>
        *
        * <code>CREATING = 1;</code>
@@ -421,7 +443,7 @@ public final class FilesystemOuterClass {
       CREATING(1),
       /**
        * <pre>
-       * Filesystem is ready to use.
+       * The filesystem is ready to use.
        * </pre>
        *
        * <code>READY = 2;</code>
@@ -429,7 +451,7 @@ public final class FilesystemOuterClass {
       READY(2),
       /**
        * <pre>
-       * Filesystem encountered a problem and cannot operate.
+       * The filesystem encountered a problem and cannot operate.
        * </pre>
        *
        * <code>ERROR = 3;</code>
@@ -437,7 +459,7 @@ public final class FilesystemOuterClass {
       ERROR(3),
       /**
        * <pre>
-       * Filesystem is being deleted.
+       * The filesystem is being deleted.
        * </pre>
        *
        * <code>DELETING = 4;</code>
@@ -452,7 +474,7 @@ public final class FilesystemOuterClass {
       public static final int STATUS_UNSPECIFIED_VALUE = 0;
       /**
        * <pre>
-       * Filesystem is being created.
+       * The filesystem is being created.
        * </pre>
        *
        * <code>CREATING = 1;</code>
@@ -460,7 +482,7 @@ public final class FilesystemOuterClass {
       public static final int CREATING_VALUE = 1;
       /**
        * <pre>
-       * Filesystem is ready to use.
+       * The filesystem is ready to use.
        * </pre>
        *
        * <code>READY = 2;</code>
@@ -468,7 +490,7 @@ public final class FilesystemOuterClass {
       public static final int READY_VALUE = 2;
       /**
        * <pre>
-       * Filesystem encountered a problem and cannot operate.
+       * The filesystem encountered a problem and cannot operate.
        * </pre>
        *
        * <code>ERROR = 3;</code>
@@ -476,7 +498,7 @@ public final class FilesystemOuterClass {
       public static final int ERROR_VALUE = 3;
       /**
        * <pre>
-       * Filesystem is being deleted.
+       * The filesystem is being deleted.
        * </pre>
        *
        * <code>DELETING = 4;</code>
@@ -564,7 +586,7 @@ public final class FilesystemOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * ID of the filesystem.
+     * ID of the filesystem. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -583,7 +605,7 @@ public final class FilesystemOuterClass {
     }
     /**
      * <pre>
-     * ID of the filesystem.
+     * ID of the filesystem. Generated at creation time.
      * </pre>
      *
      * <code>string id = 1;</code>
@@ -647,18 +669,30 @@ public final class FilesystemOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 3;</code>
      */
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -669,7 +703,7 @@ public final class FilesystemOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Name of the filesystem. 1-63 characters long.
+     * Name of the filesystem. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -688,7 +722,7 @@ public final class FilesystemOuterClass {
     }
     /**
      * <pre>
-     * Name of the filesystem. 1-63 characters long.
+     * Name of the filesystem. The name is unique within the folder.
      * </pre>
      *
      * <code>string name = 4;</code>
@@ -711,7 +745,7 @@ public final class FilesystemOuterClass {
     private volatile java.lang.Object description_;
     /**
      * <pre>
-     * Description of the filesystem. 0-256 characters long.
+     * Description of the filesystem.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -730,7 +764,7 @@ public final class FilesystemOuterClass {
     }
     /**
      * <pre>
-     * Description of the filesystem. 0-256 characters long.
+     * Description of the filesystem.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -777,7 +811,8 @@ public final class FilesystemOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -797,7 +832,8 @@ public final class FilesystemOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -808,7 +844,8 @@ public final class FilesystemOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -824,7 +861,8 @@ public final class FilesystemOuterClass {
     }
     /**
      * <pre>
-     * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+     * Filesystem labels as `key:value` pairs.
+     * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
      * </pre>
      *
      * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -846,6 +884,7 @@ public final class FilesystemOuterClass {
     /**
      * <pre>
      * ID of the filesystem type.
+     * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
      * </pre>
      *
      * <code>string type_id = 7;</code>
@@ -865,6 +904,7 @@ public final class FilesystemOuterClass {
     /**
      * <pre>
      * ID of the filesystem type.
+     * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
      * </pre>
      *
      * <code>string type_id = 7;</code>
@@ -888,6 +928,7 @@ public final class FilesystemOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the filesystem resides.
+     * A filesystem can be attached only to instances residing in the same availability zone.
      * </pre>
      *
      * <code>string zone_id = 8;</code>
@@ -907,6 +948,7 @@ public final class FilesystemOuterClass {
     /**
      * <pre>
      * ID of the availability zone where the filesystem resides.
+     * A filesystem can be attached only to instances residing in the same availability zone.
      * </pre>
      *
      * <code>string zone_id = 8;</code>
@@ -942,7 +984,7 @@ public final class FilesystemOuterClass {
     private long blockSize_;
     /**
      * <pre>
-     * Block size of the filesystem, specifiedin bytes.
+     * Block size used for the filesystem, specified in bytes.
      * </pre>
      *
      * <code>int64 block_size = 10;</code>
@@ -1255,7 +1297,8 @@ public final class FilesystemOuterClass {
     }
     /**
      * <pre>
-     * A Filesystem resource. For more information, see [Filesystems](/docs/compute/concepts/filesystem).
+     * A filesystem resource.
+     * For details about the concept, see [documentation](/docs/compute/concepts/filesystem).
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.compute.v1.Filesystem}
@@ -1506,7 +1549,7 @@ public final class FilesystemOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1525,7 +1568,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1545,7 +1588,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1562,7 +1605,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1575,7 +1618,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * ID of the filesystem.
+       * ID of the filesystem. Generated at creation time.
        * </pre>
        *
        * <code>string id = 1;</code>
@@ -1685,12 +1728,20 @@ public final class FilesystemOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
@@ -1701,6 +1752,10 @@ public final class FilesystemOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1717,6 +1772,10 @@ public final class FilesystemOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder setCreatedAt(
@@ -1731,6 +1790,10 @@ public final class FilesystemOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1749,6 +1812,10 @@ public final class FilesystemOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public Builder clearCreatedAt() {
@@ -1763,6 +1830,10 @@ public final class FilesystemOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1771,6 +1842,10 @@ public final class FilesystemOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1782,6 +1857,10 @@ public final class FilesystemOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1801,7 +1880,7 @@ public final class FilesystemOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Name of the filesystem. 1-63 characters long.
+       * Name of the filesystem. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1820,7 +1899,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Name of the filesystem. 1-63 characters long.
+       * Name of the filesystem. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1840,7 +1919,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Name of the filesystem. 1-63 characters long.
+       * Name of the filesystem. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1857,7 +1936,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Name of the filesystem. 1-63 characters long.
+       * Name of the filesystem. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1870,7 +1949,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Name of the filesystem. 1-63 characters long.
+       * Name of the filesystem. The name is unique within the folder.
        * </pre>
        *
        * <code>string name = 4;</code>
@@ -1890,7 +1969,7 @@ public final class FilesystemOuterClass {
       private java.lang.Object description_ = "";
       /**
        * <pre>
-       * Description of the filesystem. 0-256 characters long.
+       * Description of the filesystem.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1909,7 +1988,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Description of the filesystem. 0-256 characters long.
+       * Description of the filesystem.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1929,7 +2008,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Description of the filesystem. 0-256 characters long.
+       * Description of the filesystem.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1946,7 +2025,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Description of the filesystem. 0-256 characters long.
+       * Description of the filesystem.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -1959,7 +2038,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Description of the filesystem. 0-256 characters long.
+       * Description of the filesystem.
        * </pre>
        *
        * <code>string description = 5;</code>
@@ -2004,7 +2083,8 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2024,7 +2104,8 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2035,7 +2116,8 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2051,7 +2133,8 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2075,7 +2158,8 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2098,7 +2182,8 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2114,7 +2199,8 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Resource labels as `key:value` pairs. Maximum of 64 per resource.
+       * Filesystem labels as `key:value` pairs.
+       * For details about the concept, see [documentation](/docs/overview/concepts/services#labels).
        * </pre>
        *
        * <code>map&lt;string, string&gt; labels = 6;</code>
@@ -2131,6 +2217,7 @@ public final class FilesystemOuterClass {
       /**
        * <pre>
        * ID of the filesystem type.
+       * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
        * </pre>
        *
        * <code>string type_id = 7;</code>
@@ -2150,6 +2237,7 @@ public final class FilesystemOuterClass {
       /**
        * <pre>
        * ID of the filesystem type.
+       * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
        * </pre>
        *
        * <code>string type_id = 7;</code>
@@ -2170,6 +2258,7 @@ public final class FilesystemOuterClass {
       /**
        * <pre>
        * ID of the filesystem type.
+       * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
        * </pre>
        *
        * <code>string type_id = 7;</code>
@@ -2187,6 +2276,7 @@ public final class FilesystemOuterClass {
       /**
        * <pre>
        * ID of the filesystem type.
+       * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
        * </pre>
        *
        * <code>string type_id = 7;</code>
@@ -2200,6 +2290,7 @@ public final class FilesystemOuterClass {
       /**
        * <pre>
        * ID of the filesystem type.
+       * To get a list of available filesystem types, make a [yandex.cloud.compute.v1.DiskTypeService.List] request.
        * </pre>
        *
        * <code>string type_id = 7;</code>
@@ -2220,6 +2311,7 @@ public final class FilesystemOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the filesystem resides.
+       * A filesystem can be attached only to instances residing in the same availability zone.
        * </pre>
        *
        * <code>string zone_id = 8;</code>
@@ -2239,6 +2331,7 @@ public final class FilesystemOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the filesystem resides.
+       * A filesystem can be attached only to instances residing in the same availability zone.
        * </pre>
        *
        * <code>string zone_id = 8;</code>
@@ -2259,6 +2352,7 @@ public final class FilesystemOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the filesystem resides.
+       * A filesystem can be attached only to instances residing in the same availability zone.
        * </pre>
        *
        * <code>string zone_id = 8;</code>
@@ -2276,6 +2370,7 @@ public final class FilesystemOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the filesystem resides.
+       * A filesystem can be attached only to instances residing in the same availability zone.
        * </pre>
        *
        * <code>string zone_id = 8;</code>
@@ -2289,6 +2384,7 @@ public final class FilesystemOuterClass {
       /**
        * <pre>
        * ID of the availability zone where the filesystem resides.
+       * A filesystem can be attached only to instances residing in the same availability zone.
        * </pre>
        *
        * <code>string zone_id = 8;</code>
@@ -2346,7 +2442,7 @@ public final class FilesystemOuterClass {
       private long blockSize_ ;
       /**
        * <pre>
-       * Block size of the filesystem, specifiedin bytes.
+       * Block size used for the filesystem, specified in bytes.
        * </pre>
        *
        * <code>int64 block_size = 10;</code>
@@ -2356,7 +2452,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Block size of the filesystem, specifiedin bytes.
+       * Block size used for the filesystem, specified in bytes.
        * </pre>
        *
        * <code>int64 block_size = 10;</code>
@@ -2369,7 +2465,7 @@ public final class FilesystemOuterClass {
       }
       /**
        * <pre>
-       * Block size of the filesystem, specifiedin bytes.
+       * Block size used for the filesystem, specified in bytes.
        * </pre>
        *
        * <code>int64 block_size = 10;</code>

@@ -14,6 +14,140 @@ public final class DatabaseOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.ydb.v1.AlertEvaluationStatus}
+   */
+  public enum AlertEvaluationStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>ALERT_EVALUATION_STATUS_UNSPECIFIED = 0;</code>
+     */
+    ALERT_EVALUATION_STATUS_UNSPECIFIED(0),
+    /**
+     * <code>OK = 1;</code>
+     */
+    OK(1),
+    /**
+     * <code>NO_DATA = 2;</code>
+     */
+    NO_DATA(2),
+    /**
+     * <code>ERROR = 3;</code>
+     */
+    ERROR(3),
+    /**
+     * <code>ALARM = 4;</code>
+     */
+    ALARM(4),
+    /**
+     * <code>WARN = 5;</code>
+     */
+    WARN(5),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>ALERT_EVALUATION_STATUS_UNSPECIFIED = 0;</code>
+     */
+    public static final int ALERT_EVALUATION_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>OK = 1;</code>
+     */
+    public static final int OK_VALUE = 1;
+    /**
+     * <code>NO_DATA = 2;</code>
+     */
+    public static final int NO_DATA_VALUE = 2;
+    /**
+     * <code>ERROR = 3;</code>
+     */
+    public static final int ERROR_VALUE = 3;
+    /**
+     * <code>ALARM = 4;</code>
+     */
+    public static final int ALARM_VALUE = 4;
+    /**
+     * <code>WARN = 5;</code>
+     */
+    public static final int WARN_VALUE = 5;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static AlertEvaluationStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static AlertEvaluationStatus forNumber(int value) {
+      switch (value) {
+        case 0: return ALERT_EVALUATION_STATUS_UNSPECIFIED;
+        case 1: return OK;
+        case 2: return NO_DATA;
+        case 3: return ERROR;
+        case 4: return ALARM;
+        case 5: return WARN;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<AlertEvaluationStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        AlertEvaluationStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<AlertEvaluationStatus>() {
+            public AlertEvaluationStatus findValueByNumber(int number) {
+              return AlertEvaluationStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final AlertEvaluationStatus[] VALUES = values();
+
+    public static AlertEvaluationStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private AlertEvaluationStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.ydb.v1.AlertEvaluationStatus)
+  }
+
   public interface DatabaseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.Database)
       com.google.protobuf.MessageOrBuilder {
@@ -313,6 +447,19 @@ public final class DatabaseOuterClass {
     com.google.protobuf.ByteString
         getKinesisApiEndpointBytes();
 
+    /**
+     * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+     */
+    boolean hasMonitoringConfig();
+    /**
+     * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig getMonitoringConfig();
+    /**
+     * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfigOrBuilder getMonitoringConfigOrBuilder();
+
     public yandex.cloud.api.ydb.v1.DatabaseOuterClass.Database.DatabaseTypeCase getDatabaseTypeCase();
   }
   /**
@@ -570,6 +717,19 @@ public final class DatabaseOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               kinesisApiEndpoint_ = s;
+              break;
+            }
+            case 194: {
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.Builder subBuilder = null;
+              if (monitoringConfig_ != null) {
+                subBuilder = monitoringConfig_.toBuilder();
+              }
+              monitoringConfig_ = input.readMessage(yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(monitoringConfig_);
+                monitoringConfig_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -1497,6 +1657,27 @@ public final class DatabaseOuterClass {
       }
     }
 
+    public static final int MONITORING_CONFIG_FIELD_NUMBER = 24;
+    private yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig monitoringConfig_;
+    /**
+     * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+     */
+    public boolean hasMonitoringConfig() {
+      return monitoringConfig_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig getMonitoringConfig() {
+      return monitoringConfig_ == null ? yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.getDefaultInstance() : monitoringConfig_;
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfigOrBuilder getMonitoringConfigOrBuilder() {
+      return getMonitoringConfig();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1579,6 +1760,9 @@ public final class DatabaseOuterClass {
       }
       if (!getKinesisApiEndpointBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 23, kinesisApiEndpoint_);
+      }
+      if (monitoringConfig_ != null) {
+        output.writeMessage(24, getMonitoringConfig());
       }
       unknownFields.writeTo(output);
     }
@@ -1677,6 +1861,10 @@ public final class DatabaseOuterClass {
       if (!getKinesisApiEndpointBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, kinesisApiEndpoint_);
       }
+      if (monitoringConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, getMonitoringConfig());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1740,6 +1928,11 @@ public final class DatabaseOuterClass {
           .equals(other.getDocumentApiEndpoint());
       result = result && getKinesisApiEndpoint()
           .equals(other.getKinesisApiEndpoint());
+      result = result && (hasMonitoringConfig() == other.hasMonitoringConfig());
+      if (hasMonitoringConfig()) {
+        result = result && getMonitoringConfig()
+            .equals(other.getMonitoringConfig());
+      }
       result = result && getDatabaseTypeCase().equals(
           other.getDatabaseTypeCase());
       if (!result) return false;
@@ -1823,6 +2016,10 @@ public final class DatabaseOuterClass {
       hash = (53 * hash) + getDocumentApiEndpoint().hashCode();
       hash = (37 * hash) + KINESIS_API_ENDPOINT_FIELD_NUMBER;
       hash = (53 * hash) + getKinesisApiEndpoint().hashCode();
+      if (hasMonitoringConfig()) {
+        hash = (37 * hash) + MONITORING_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getMonitoringConfig().hashCode();
+      }
       switch (databaseTypeCase_) {
         case 14:
           hash = (37 * hash) + ZONAL_DATABASE_FIELD_NUMBER;
@@ -2053,6 +2250,12 @@ public final class DatabaseOuterClass {
 
         kinesisApiEndpoint_ = "";
 
+        if (monitoringConfigBuilder_ == null) {
+          monitoringConfig_ = null;
+        } else {
+          monitoringConfig_ = null;
+          monitoringConfigBuilder_ = null;
+        }
         databaseTypeCase_ = 0;
         databaseType_ = null;
         return this;
@@ -2150,6 +2353,11 @@ public final class DatabaseOuterClass {
         }
         result.documentApiEndpoint_ = documentApiEndpoint_;
         result.kinesisApiEndpoint_ = kinesisApiEndpoint_;
+        if (monitoringConfigBuilder_ == null) {
+          result.monitoringConfig_ = monitoringConfig_;
+        } else {
+          result.monitoringConfig_ = monitoringConfigBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.databaseTypeCase_ = databaseTypeCase_;
         onBuilt();
@@ -2269,6 +2477,9 @@ public final class DatabaseOuterClass {
         if (!other.getKinesisApiEndpoint().isEmpty()) {
           kinesisApiEndpoint_ = other.kinesisApiEndpoint_;
           onChanged();
+        }
+        if (other.hasMonitoringConfig()) {
+          mergeMonitoringConfig(other.getMonitoringConfig());
         }
         switch (other.getDatabaseTypeCase()) {
           case ZONAL_DATABASE: {
@@ -4397,6 +4608,123 @@ public final class DatabaseOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig monitoringConfig_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig, yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfigOrBuilder> monitoringConfigBuilder_;
+      /**
+       * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+       */
+      public boolean hasMonitoringConfig() {
+        return monitoringConfigBuilder_ != null || monitoringConfig_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig getMonitoringConfig() {
+        if (monitoringConfigBuilder_ == null) {
+          return monitoringConfig_ == null ? yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.getDefaultInstance() : monitoringConfig_;
+        } else {
+          return monitoringConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+       */
+      public Builder setMonitoringConfig(yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig value) {
+        if (monitoringConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          monitoringConfig_ = value;
+          onChanged();
+        } else {
+          monitoringConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+       */
+      public Builder setMonitoringConfig(
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.Builder builderForValue) {
+        if (monitoringConfigBuilder_ == null) {
+          monitoringConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          monitoringConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+       */
+      public Builder mergeMonitoringConfig(yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig value) {
+        if (monitoringConfigBuilder_ == null) {
+          if (monitoringConfig_ != null) {
+            monitoringConfig_ =
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.newBuilder(monitoringConfig_).mergeFrom(value).buildPartial();
+          } else {
+            monitoringConfig_ = value;
+          }
+          onChanged();
+        } else {
+          monitoringConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+       */
+      public Builder clearMonitoringConfig() {
+        if (monitoringConfigBuilder_ == null) {
+          monitoringConfig_ = null;
+          onChanged();
+        } else {
+          monitoringConfig_ = null;
+          monitoringConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.Builder getMonitoringConfigBuilder() {
+        
+        onChanged();
+        return getMonitoringConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfigOrBuilder getMonitoringConfigOrBuilder() {
+        if (monitoringConfigBuilder_ != null) {
+          return monitoringConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return monitoringConfig_ == null ?
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.getDefaultInstance() : monitoringConfig_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig, yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfigOrBuilder> 
+          getMonitoringConfigFieldBuilder() {
+        if (monitoringConfigBuilder_ == null) {
+          monitoringConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig, yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfigOrBuilder>(
+                  getMonitoringConfig(),
+                  getParentForChildren(),
+                  isClean());
+          monitoringConfig_ = null;
+        }
+        return monitoringConfigBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -4445,6 +4773,9574 @@ public final class DatabaseOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.ydb.v1.DatabaseOuterClass.Database getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AlertParameterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.AlertParameter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+     */
+    boolean hasDoubleParameterValue();
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue getDoubleParameterValue();
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValueOrBuilder getDoubleParameterValueOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+     */
+    boolean hasIntegerParameterValue();
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue getIntegerParameterValue();
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValueOrBuilder getIntegerParameterValueOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+     */
+    boolean hasTextParameterValue();
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue getTextParameterValue();
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValueOrBuilder getTextParameterValueOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+     */
+    boolean hasTextListParameterValue();
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue getTextListParameterValue();
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValueOrBuilder getTextListParameterValueOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+     */
+    boolean hasLabelListParameterValue();
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue getLabelListParameterValue();
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValueOrBuilder getLabelListParameterValueOrBuilder();
+
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.ParameterCase getParameterCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ydb.v1.AlertParameter}
+   */
+  public  static final class AlertParameter extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.AlertParameter)
+      AlertParameterOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AlertParameter.newBuilder() to construct.
+    private AlertParameter(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AlertParameter() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AlertParameter(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.Builder subBuilder = null;
+              if (parameterCase_ == 1) {
+                subBuilder = ((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue) parameter_).toBuilder();
+              }
+              parameter_ =
+                  input.readMessage(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue) parameter_);
+                parameter_ = subBuilder.buildPartial();
+              }
+              parameterCase_ = 1;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.Builder subBuilder = null;
+              if (parameterCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue) parameter_).toBuilder();
+              }
+              parameter_ =
+                  input.readMessage(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue) parameter_);
+                parameter_ = subBuilder.buildPartial();
+              }
+              parameterCase_ = 2;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.Builder subBuilder = null;
+              if (parameterCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue) parameter_).toBuilder();
+              }
+              parameter_ =
+                  input.readMessage(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue) parameter_);
+                parameter_ = subBuilder.buildPartial();
+              }
+              parameterCase_ = 3;
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.Builder subBuilder = null;
+              if (parameterCase_ == 4) {
+                subBuilder = ((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue) parameter_).toBuilder();
+              }
+              parameter_ =
+                  input.readMessage(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue) parameter_);
+                parameter_ = subBuilder.buildPartial();
+              }
+              parameterCase_ = 4;
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.Builder subBuilder = null;
+              if (parameterCase_ == 5) {
+                subBuilder = ((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue) parameter_).toBuilder();
+              }
+              parameter_ =
+                  input.readMessage(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue) parameter_);
+                parameter_ = subBuilder.buildPartial();
+              }
+              parameterCase_ = 5;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder.class);
+    }
+
+    public interface DoubleParameterValueOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      java.lang.String getName();
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>double value = 2;</code>
+       */
+      double getValue();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue}
+     */
+    public  static final class DoubleParameterValue extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue)
+        DoubleParameterValueOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use DoubleParameterValue.newBuilder() to construct.
+      private DoubleParameterValue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private DoubleParameterValue() {
+        name_ = "";
+        value_ = 0D;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private DoubleParameterValue(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              case 17: {
+
+                value_ = input.readDouble();
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_DoubleParameterValue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_DoubleParameterValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.Builder.class);
+      }
+
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int VALUE_FIELD_NUMBER = 2;
+      private double value_;
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>double value = 2;</code>
+       */
+      public double getValue() {
+        return value_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getNameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (value_ != 0D) {
+          output.writeDouble(2, value_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getNameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (value_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(2, value_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue other = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue) obj;
+
+        boolean result = true;
+        result = result && getName()
+            .equals(other.getName());
+        result = result && (
+            java.lang.Double.doubleToLongBits(getValue())
+            == java.lang.Double.doubleToLongBits(
+                other.getValue()));
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getValue()));
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue)
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValueOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_DoubleParameterValue_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_DoubleParameterValue_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+
+          value_ = 0D;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_DoubleParameterValue_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue getDefaultInstanceForType() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue build() {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue buildPartial() {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue(this);
+          result.name_ = name_;
+          result.value_ = value_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue) {
+            return mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue other) {
+          if (other == yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.getDefaultInstance()) return this;
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.getValue() != 0D) {
+            setValue(other.getValue());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private double value_ ;
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>double value = 2;</code>
+         */
+        public double getValue() {
+          return value_;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>double value = 2;</code>
+         */
+        public Builder setValue(double value) {
+          
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>double value = 2;</code>
+         */
+        public Builder clearValue() {
+          
+          value_ = 0D;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue)
+      private static final yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue();
+      }
+
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<DoubleParameterValue>
+          PARSER = new com.google.protobuf.AbstractParser<DoubleParameterValue>() {
+        @java.lang.Override
+        public DoubleParameterValue parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DoubleParameterValue(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<DoubleParameterValue> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DoubleParameterValue> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface IntegerParameterValueOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      java.lang.String getName();
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>int64 value = 2;</code>
+       */
+      long getValue();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue}
+     */
+    public  static final class IntegerParameterValue extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue)
+        IntegerParameterValueOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use IntegerParameterValue.newBuilder() to construct.
+      private IntegerParameterValue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private IntegerParameterValue() {
+        name_ = "";
+        value_ = 0L;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private IntegerParameterValue(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              case 16: {
+
+                value_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_IntegerParameterValue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_IntegerParameterValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.Builder.class);
+      }
+
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int VALUE_FIELD_NUMBER = 2;
+      private long value_;
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>int64 value = 2;</code>
+       */
+      public long getValue() {
+        return value_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getNameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (value_ != 0L) {
+          output.writeInt64(2, value_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getNameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (value_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(2, value_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue other = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue) obj;
+
+        boolean result = true;
+        result = result && getName()
+            .equals(other.getName());
+        result = result && (getValue()
+            == other.getValue());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getValue());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue)
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValueOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_IntegerParameterValue_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_IntegerParameterValue_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+
+          value_ = 0L;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_IntegerParameterValue_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue getDefaultInstanceForType() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue build() {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue buildPartial() {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue(this);
+          result.name_ = name_;
+          result.value_ = value_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue) {
+            return mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue other) {
+          if (other == yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.getDefaultInstance()) return this;
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          if (other.getValue() != 0L) {
+            setValue(other.getValue());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private long value_ ;
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>int64 value = 2;</code>
+         */
+        public long getValue() {
+          return value_;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>int64 value = 2;</code>
+         */
+        public Builder setValue(long value) {
+          
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>int64 value = 2;</code>
+         */
+        public Builder clearValue() {
+          
+          value_ = 0L;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue)
+      private static final yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue();
+      }
+
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<IntegerParameterValue>
+          PARSER = new com.google.protobuf.AbstractParser<IntegerParameterValue>() {
+        @java.lang.Override
+        public IntegerParameterValue parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new IntegerParameterValue(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<IntegerParameterValue> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<IntegerParameterValue> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface TextParameterValueOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.AlertParameter.TextParameterValue)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      java.lang.String getName();
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>string value = 2;</code>
+       */
+      java.lang.String getValue();
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>string value = 2;</code>
+       */
+      com.google.protobuf.ByteString
+          getValueBytes();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ydb.v1.AlertParameter.TextParameterValue}
+     */
+    public  static final class TextParameterValue extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.AlertParameter.TextParameterValue)
+        TextParameterValueOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use TextParameterValue.newBuilder() to construct.
+      private TextParameterValue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private TextParameterValue() {
+        name_ = "";
+        value_ = "";
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private TextParameterValue(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                value_ = s;
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_TextParameterValue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_TextParameterValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.Builder.class);
+      }
+
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int VALUE_FIELD_NUMBER = 2;
+      private volatile java.lang.Object value_;
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>string value = 2;</code>
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>string value = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getNameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        if (!getValueBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getNameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        if (!getValueBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue other = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue) obj;
+
+        boolean result = true;
+        result = result && getName()
+            .equals(other.getName());
+        result = result && getValue()
+            .equals(other.getValue());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.ydb.v1.AlertParameter.TextParameterValue}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.AlertParameter.TextParameterValue)
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValueOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_TextParameterValue_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_TextParameterValue_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+
+          value_ = "";
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_TextParameterValue_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue getDefaultInstanceForType() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue build() {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue buildPartial() {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue(this);
+          result.name_ = name_;
+          result.value_ = value_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue) {
+            return mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue other) {
+          if (other == yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.getDefaultInstance()) return this;
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          if (!other.getValue().isEmpty()) {
+            value_ = other.value_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object name_ = "";
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object value_ = "";
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>string value = 2;</code>
+         */
+        public java.lang.String getValue() {
+          java.lang.Object ref = value_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            value_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>string value = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+            getValueBytes() {
+          java.lang.Object ref = value_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            value_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>string value = 2;</code>
+         */
+        public Builder setValue(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>string value = 2;</code>
+         */
+        public Builder clearValue() {
+          
+          value_ = getDefaultInstance().getValue();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>string value = 2;</code>
+         */
+        public Builder setValueBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.AlertParameter.TextParameterValue)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.AlertParameter.TextParameterValue)
+      private static final yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue();
+      }
+
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<TextParameterValue>
+          PARSER = new com.google.protobuf.AbstractParser<TextParameterValue>() {
+        @java.lang.Override
+        public TextParameterValue parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new TextParameterValue(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<TextParameterValue> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<TextParameterValue> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface TextListParameterValueOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      java.lang.String getName();
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      java.util.List<java.lang.String>
+          getValuesList();
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      int getValuesCount();
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      java.lang.String getValues(int index);
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      com.google.protobuf.ByteString
+          getValuesBytes(int index);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue}
+     */
+    public  static final class TextListParameterValue extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue)
+        TextListParameterValueOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use TextListParameterValue.newBuilder() to construct.
+      private TextListParameterValue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private TextListParameterValue() {
+        name_ = "";
+        values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private TextListParameterValue(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                  values_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                values_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            values_ = values_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_TextListParameterValue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_TextListParameterValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int VALUES_FIELD_NUMBER = 2;
+      private com.google.protobuf.LazyStringList values_;
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getValuesList() {
+        return values_;
+      }
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      public int getValuesCount() {
+        return values_.size();
+      }
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      public java.lang.String getValues(int index) {
+        return values_.get(index);
+      }
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValuesBytes(int index) {
+        return values_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getNameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        for (int i = 0; i < values_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, values_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getNameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < values_.size(); i++) {
+            dataSize += computeStringSizeNoTag(values_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getValuesList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue other = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue) obj;
+
+        boolean result = true;
+        result = result && getName()
+            .equals(other.getName());
+        result = result && getValuesList()
+            .equals(other.getValuesList());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        if (getValuesCount() > 0) {
+          hash = (37 * hash) + VALUES_FIELD_NUMBER;
+          hash = (53 * hash) + getValuesList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue)
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValueOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_TextListParameterValue_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_TextListParameterValue_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+
+          values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_TextListParameterValue_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue getDefaultInstanceForType() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue build() {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue buildPartial() {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          result.name_ = name_;
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            values_ = values_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.values_ = values_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue) {
+            return mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue other) {
+          if (other == yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.getDefaultInstance()) return this;
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          if (!other.values_.isEmpty()) {
+            if (values_.isEmpty()) {
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureValuesIsMutable();
+              values_.addAll(other.values_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object name_ = "";
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.LazyStringList values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureValuesIsMutable() {
+          if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+            values_ = new com.google.protobuf.LazyStringArrayList(values_);
+            bitField0_ |= 0x00000002;
+           }
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public com.google.protobuf.ProtocolStringList
+            getValuesList() {
+          return values_.getUnmodifiableView();
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public int getValuesCount() {
+          return values_.size();
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public java.lang.String getValues(int index) {
+          return values_.get(index);
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+            getValuesBytes(int index) {
+          return values_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public Builder setValues(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureValuesIsMutable();
+          values_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public Builder addValues(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public Builder addAllValues(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, values_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public Builder clearValues() {
+          values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public Builder addValuesBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue)
+      private static final yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue();
+      }
+
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<TextListParameterValue>
+          PARSER = new com.google.protobuf.AbstractParser<TextListParameterValue>() {
+        @java.lang.Override
+        public TextListParameterValue parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new TextListParameterValue(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<TextListParameterValue> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<TextListParameterValue> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface LabelListParameterValueOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      java.lang.String getName();
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getNameBytes();
+
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      java.util.List<java.lang.String>
+          getValuesList();
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      int getValuesCount();
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      java.lang.String getValues(int index);
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      com.google.protobuf.ByteString
+          getValuesBytes(int index);
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue}
+     */
+    public  static final class LabelListParameterValue extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue)
+        LabelListParameterValueOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use LabelListParameterValue.newBuilder() to construct.
+      private LabelListParameterValue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private LabelListParameterValue() {
+        name_ = "";
+        values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private LabelListParameterValue(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                name_ = s;
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                  values_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                values_.add(s);
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            values_ = values_.getUnmodifiableView();
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_LabelListParameterValue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_LabelListParameterValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int NAME_FIELD_NUMBER = 1;
+      private volatile java.lang.Object name_;
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Parameter name
+       * </pre>
+       *
+       * <code>string name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int VALUES_FIELD_NUMBER = 2;
+      private com.google.protobuf.LazyStringList values_;
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getValuesList() {
+        return values_;
+      }
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      public int getValuesCount() {
+        return values_.size();
+      }
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      public java.lang.String getValues(int index) {
+        return values_.get(index);
+      }
+      /**
+       * <pre>
+       * Required. Parameter value
+       * </pre>
+       *
+       * <code>repeated string values = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getValuesBytes(int index) {
+        return values_.getByteString(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getNameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+        }
+        for (int i = 0; i < values_.size(); i++) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, values_.getRaw(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getNameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < values_.size(); i++) {
+            dataSize += computeStringSizeNoTag(values_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getValuesList().size();
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue other = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue) obj;
+
+        boolean result = true;
+        result = result && getName()
+            .equals(other.getName());
+        result = result && getValuesList()
+            .equals(other.getValuesList());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+        if (getValuesCount() > 0) {
+          hash = (37 * hash) + VALUES_FIELD_NUMBER;
+          hash = (53 * hash) + getValuesList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue)
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValueOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_LabelListParameterValue_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_LabelListParameterValue_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          name_ = "";
+
+          values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_LabelListParameterValue_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue getDefaultInstanceForType() {
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue build() {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue buildPartial() {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          result.name_ = name_;
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            values_ = values_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.values_ = values_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue) {
+            return mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue other) {
+          if (other == yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.getDefaultInstance()) return this;
+          if (!other.getName().isEmpty()) {
+            name_ = other.name_;
+            onChanged();
+          }
+          if (!other.values_.isEmpty()) {
+            if (values_.isEmpty()) {
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureValuesIsMutable();
+              values_.addAll(other.values_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object name_ = "";
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder setName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          name_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder clearName() {
+          
+          name_ = getDefaultInstance().getName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter name
+         * </pre>
+         *
+         * <code>string name = 1;</code>
+         */
+        public Builder setNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          name_ = value;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.LazyStringList values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureValuesIsMutable() {
+          if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+            values_ = new com.google.protobuf.LazyStringArrayList(values_);
+            bitField0_ |= 0x00000002;
+           }
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public com.google.protobuf.ProtocolStringList
+            getValuesList() {
+          return values_.getUnmodifiableView();
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public int getValuesCount() {
+          return values_.size();
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public java.lang.String getValues(int index) {
+          return values_.get(index);
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+            getValuesBytes(int index) {
+          return values_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public Builder setValues(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureValuesIsMutable();
+          values_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public Builder addValues(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public Builder addAllValues(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, values_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public Builder clearValues() {
+          values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Required. Parameter value
+         * </pre>
+         *
+         * <code>repeated string values = 2;</code>
+         */
+        public Builder addValuesBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue)
+      private static final yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue();
+      }
+
+      public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<LabelListParameterValue>
+          PARSER = new com.google.protobuf.AbstractParser<LabelListParameterValue>() {
+        @java.lang.Override
+        public LabelListParameterValue parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new LabelListParameterValue(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<LabelListParameterValue> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<LabelListParameterValue> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int parameterCase_ = 0;
+    private java.lang.Object parameter_;
+    public enum ParameterCase
+        implements com.google.protobuf.Internal.EnumLite {
+      DOUBLE_PARAMETER_VALUE(1),
+      INTEGER_PARAMETER_VALUE(2),
+      TEXT_PARAMETER_VALUE(3),
+      TEXT_LIST_PARAMETER_VALUE(4),
+      LABEL_LIST_PARAMETER_VALUE(5),
+      PARAMETER_NOT_SET(0);
+      private final int value;
+      private ParameterCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ParameterCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static ParameterCase forNumber(int value) {
+        switch (value) {
+          case 1: return DOUBLE_PARAMETER_VALUE;
+          case 2: return INTEGER_PARAMETER_VALUE;
+          case 3: return TEXT_PARAMETER_VALUE;
+          case 4: return TEXT_LIST_PARAMETER_VALUE;
+          case 5: return LABEL_LIST_PARAMETER_VALUE;
+          case 0: return PARAMETER_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public ParameterCase
+    getParameterCase() {
+      return ParameterCase.forNumber(
+          parameterCase_);
+    }
+
+    public static final int DOUBLE_PARAMETER_VALUE_FIELD_NUMBER = 1;
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+     */
+    public boolean hasDoubleParameterValue() {
+      return parameterCase_ == 1;
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue getDoubleParameterValue() {
+      if (parameterCase_ == 1) {
+         return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue) parameter_;
+      }
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValueOrBuilder getDoubleParameterValueOrBuilder() {
+      if (parameterCase_ == 1) {
+         return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue) parameter_;
+      }
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.getDefaultInstance();
+    }
+
+    public static final int INTEGER_PARAMETER_VALUE_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+     */
+    public boolean hasIntegerParameterValue() {
+      return parameterCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue getIntegerParameterValue() {
+      if (parameterCase_ == 2) {
+         return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue) parameter_;
+      }
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValueOrBuilder getIntegerParameterValueOrBuilder() {
+      if (parameterCase_ == 2) {
+         return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue) parameter_;
+      }
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.getDefaultInstance();
+    }
+
+    public static final int TEXT_PARAMETER_VALUE_FIELD_NUMBER = 3;
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+     */
+    public boolean hasTextParameterValue() {
+      return parameterCase_ == 3;
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue getTextParameterValue() {
+      if (parameterCase_ == 3) {
+         return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue) parameter_;
+      }
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValueOrBuilder getTextParameterValueOrBuilder() {
+      if (parameterCase_ == 3) {
+         return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue) parameter_;
+      }
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.getDefaultInstance();
+    }
+
+    public static final int TEXT_LIST_PARAMETER_VALUE_FIELD_NUMBER = 4;
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+     */
+    public boolean hasTextListParameterValue() {
+      return parameterCase_ == 4;
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue getTextListParameterValue() {
+      if (parameterCase_ == 4) {
+         return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue) parameter_;
+      }
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValueOrBuilder getTextListParameterValueOrBuilder() {
+      if (parameterCase_ == 4) {
+         return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue) parameter_;
+      }
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.getDefaultInstance();
+    }
+
+    public static final int LABEL_LIST_PARAMETER_VALUE_FIELD_NUMBER = 5;
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+     */
+    public boolean hasLabelListParameterValue() {
+      return parameterCase_ == 5;
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue getLabelListParameterValue() {
+      if (parameterCase_ == 5) {
+         return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue) parameter_;
+      }
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValueOrBuilder getLabelListParameterValueOrBuilder() {
+      if (parameterCase_ == 5) {
+         return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue) parameter_;
+      }
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (parameterCase_ == 1) {
+        output.writeMessage(1, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue) parameter_);
+      }
+      if (parameterCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue) parameter_);
+      }
+      if (parameterCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue) parameter_);
+      }
+      if (parameterCase_ == 4) {
+        output.writeMessage(4, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue) parameter_);
+      }
+      if (parameterCase_ == 5) {
+        output.writeMessage(5, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue) parameter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (parameterCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue) parameter_);
+      }
+      if (parameterCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue) parameter_);
+      }
+      if (parameterCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue) parameter_);
+      }
+      if (parameterCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue) parameter_);
+      }
+      if (parameterCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue) parameter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter other = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter) obj;
+
+      boolean result = true;
+      result = result && getParameterCase().equals(
+          other.getParameterCase());
+      if (!result) return false;
+      switch (parameterCase_) {
+        case 1:
+          result = result && getDoubleParameterValue()
+              .equals(other.getDoubleParameterValue());
+          break;
+        case 2:
+          result = result && getIntegerParameterValue()
+              .equals(other.getIntegerParameterValue());
+          break;
+        case 3:
+          result = result && getTextParameterValue()
+              .equals(other.getTextParameterValue());
+          break;
+        case 4:
+          result = result && getTextListParameterValue()
+              .equals(other.getTextListParameterValue());
+          break;
+        case 5:
+          result = result && getLabelListParameterValue()
+              .equals(other.getLabelListParameterValue());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (parameterCase_) {
+        case 1:
+          hash = (37 * hash) + DOUBLE_PARAMETER_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getDoubleParameterValue().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + INTEGER_PARAMETER_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getIntegerParameterValue().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + TEXT_PARAMETER_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getTextParameterValue().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + TEXT_LIST_PARAMETER_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getTextListParameterValue().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + LABEL_LIST_PARAMETER_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getLabelListParameterValue().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ydb.v1.AlertParameter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.AlertParameter)
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        parameterCase_ = 0;
+        parameter_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_AlertParameter_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter getDefaultInstanceForType() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter build() {
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter buildPartial() {
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter(this);
+        if (parameterCase_ == 1) {
+          if (doubleParameterValueBuilder_ == null) {
+            result.parameter_ = parameter_;
+          } else {
+            result.parameter_ = doubleParameterValueBuilder_.build();
+          }
+        }
+        if (parameterCase_ == 2) {
+          if (integerParameterValueBuilder_ == null) {
+            result.parameter_ = parameter_;
+          } else {
+            result.parameter_ = integerParameterValueBuilder_.build();
+          }
+        }
+        if (parameterCase_ == 3) {
+          if (textParameterValueBuilder_ == null) {
+            result.parameter_ = parameter_;
+          } else {
+            result.parameter_ = textParameterValueBuilder_.build();
+          }
+        }
+        if (parameterCase_ == 4) {
+          if (textListParameterValueBuilder_ == null) {
+            result.parameter_ = parameter_;
+          } else {
+            result.parameter_ = textListParameterValueBuilder_.build();
+          }
+        }
+        if (parameterCase_ == 5) {
+          if (labelListParameterValueBuilder_ == null) {
+            result.parameter_ = parameter_;
+          } else {
+            result.parameter_ = labelListParameterValueBuilder_.build();
+          }
+        }
+        result.parameterCase_ = parameterCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter) {
+          return mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter other) {
+        if (other == yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.getDefaultInstance()) return this;
+        switch (other.getParameterCase()) {
+          case DOUBLE_PARAMETER_VALUE: {
+            mergeDoubleParameterValue(other.getDoubleParameterValue());
+            break;
+          }
+          case INTEGER_PARAMETER_VALUE: {
+            mergeIntegerParameterValue(other.getIntegerParameterValue());
+            break;
+          }
+          case TEXT_PARAMETER_VALUE: {
+            mergeTextParameterValue(other.getTextParameterValue());
+            break;
+          }
+          case TEXT_LIST_PARAMETER_VALUE: {
+            mergeTextListParameterValue(other.getTextListParameterValue());
+            break;
+          }
+          case LABEL_LIST_PARAMETER_VALUE: {
+            mergeLabelListParameterValue(other.getLabelListParameterValue());
+            break;
+          }
+          case PARAMETER_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int parameterCase_ = 0;
+      private java.lang.Object parameter_;
+      public ParameterCase
+          getParameterCase() {
+        return ParameterCase.forNumber(
+            parameterCase_);
+      }
+
+      public Builder clearParameter() {
+        parameterCase_ = 0;
+        parameter_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValueOrBuilder> doubleParameterValueBuilder_;
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+       */
+      public boolean hasDoubleParameterValue() {
+        return parameterCase_ == 1;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue getDoubleParameterValue() {
+        if (doubleParameterValueBuilder_ == null) {
+          if (parameterCase_ == 1) {
+            return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue) parameter_;
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.getDefaultInstance();
+        } else {
+          if (parameterCase_ == 1) {
+            return doubleParameterValueBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+       */
+      public Builder setDoubleParameterValue(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue value) {
+        if (doubleParameterValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          parameter_ = value;
+          onChanged();
+        } else {
+          doubleParameterValueBuilder_.setMessage(value);
+        }
+        parameterCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+       */
+      public Builder setDoubleParameterValue(
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.Builder builderForValue) {
+        if (doubleParameterValueBuilder_ == null) {
+          parameter_ = builderForValue.build();
+          onChanged();
+        } else {
+          doubleParameterValueBuilder_.setMessage(builderForValue.build());
+        }
+        parameterCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+       */
+      public Builder mergeDoubleParameterValue(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue value) {
+        if (doubleParameterValueBuilder_ == null) {
+          if (parameterCase_ == 1 &&
+              parameter_ != yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.getDefaultInstance()) {
+            parameter_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.newBuilder((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue) parameter_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            parameter_ = value;
+          }
+          onChanged();
+        } else {
+          if (parameterCase_ == 1) {
+            doubleParameterValueBuilder_.mergeFrom(value);
+          }
+          doubleParameterValueBuilder_.setMessage(value);
+        }
+        parameterCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+       */
+      public Builder clearDoubleParameterValue() {
+        if (doubleParameterValueBuilder_ == null) {
+          if (parameterCase_ == 1) {
+            parameterCase_ = 0;
+            parameter_ = null;
+            onChanged();
+          }
+        } else {
+          if (parameterCase_ == 1) {
+            parameterCase_ = 0;
+            parameter_ = null;
+          }
+          doubleParameterValueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.Builder getDoubleParameterValueBuilder() {
+        return getDoubleParameterValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValueOrBuilder getDoubleParameterValueOrBuilder() {
+        if ((parameterCase_ == 1) && (doubleParameterValueBuilder_ != null)) {
+          return doubleParameterValueBuilder_.getMessageOrBuilder();
+        } else {
+          if (parameterCase_ == 1) {
+            return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue) parameter_;
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.DoubleParameterValue double_parameter_value = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValueOrBuilder> 
+          getDoubleParameterValueFieldBuilder() {
+        if (doubleParameterValueBuilder_ == null) {
+          if (!(parameterCase_ == 1)) {
+            parameter_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.getDefaultInstance();
+          }
+          doubleParameterValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValueOrBuilder>(
+                  (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.DoubleParameterValue) parameter_,
+                  getParentForChildren(),
+                  isClean());
+          parameter_ = null;
+        }
+        parameterCase_ = 1;
+        onChanged();;
+        return doubleParameterValueBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValueOrBuilder> integerParameterValueBuilder_;
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+       */
+      public boolean hasIntegerParameterValue() {
+        return parameterCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue getIntegerParameterValue() {
+        if (integerParameterValueBuilder_ == null) {
+          if (parameterCase_ == 2) {
+            return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue) parameter_;
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.getDefaultInstance();
+        } else {
+          if (parameterCase_ == 2) {
+            return integerParameterValueBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+       */
+      public Builder setIntegerParameterValue(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue value) {
+        if (integerParameterValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          parameter_ = value;
+          onChanged();
+        } else {
+          integerParameterValueBuilder_.setMessage(value);
+        }
+        parameterCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+       */
+      public Builder setIntegerParameterValue(
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.Builder builderForValue) {
+        if (integerParameterValueBuilder_ == null) {
+          parameter_ = builderForValue.build();
+          onChanged();
+        } else {
+          integerParameterValueBuilder_.setMessage(builderForValue.build());
+        }
+        parameterCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+       */
+      public Builder mergeIntegerParameterValue(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue value) {
+        if (integerParameterValueBuilder_ == null) {
+          if (parameterCase_ == 2 &&
+              parameter_ != yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.getDefaultInstance()) {
+            parameter_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.newBuilder((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue) parameter_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            parameter_ = value;
+          }
+          onChanged();
+        } else {
+          if (parameterCase_ == 2) {
+            integerParameterValueBuilder_.mergeFrom(value);
+          }
+          integerParameterValueBuilder_.setMessage(value);
+        }
+        parameterCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+       */
+      public Builder clearIntegerParameterValue() {
+        if (integerParameterValueBuilder_ == null) {
+          if (parameterCase_ == 2) {
+            parameterCase_ = 0;
+            parameter_ = null;
+            onChanged();
+          }
+        } else {
+          if (parameterCase_ == 2) {
+            parameterCase_ = 0;
+            parameter_ = null;
+          }
+          integerParameterValueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.Builder getIntegerParameterValueBuilder() {
+        return getIntegerParameterValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValueOrBuilder getIntegerParameterValueOrBuilder() {
+        if ((parameterCase_ == 2) && (integerParameterValueBuilder_ != null)) {
+          return integerParameterValueBuilder_.getMessageOrBuilder();
+        } else {
+          if (parameterCase_ == 2) {
+            return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue) parameter_;
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.IntegerParameterValue integer_parameter_value = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValueOrBuilder> 
+          getIntegerParameterValueFieldBuilder() {
+        if (integerParameterValueBuilder_ == null) {
+          if (!(parameterCase_ == 2)) {
+            parameter_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.getDefaultInstance();
+          }
+          integerParameterValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValueOrBuilder>(
+                  (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.IntegerParameterValue) parameter_,
+                  getParentForChildren(),
+                  isClean());
+          parameter_ = null;
+        }
+        parameterCase_ = 2;
+        onChanged();;
+        return integerParameterValueBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValueOrBuilder> textParameterValueBuilder_;
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+       */
+      public boolean hasTextParameterValue() {
+        return parameterCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue getTextParameterValue() {
+        if (textParameterValueBuilder_ == null) {
+          if (parameterCase_ == 3) {
+            return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue) parameter_;
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.getDefaultInstance();
+        } else {
+          if (parameterCase_ == 3) {
+            return textParameterValueBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+       */
+      public Builder setTextParameterValue(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue value) {
+        if (textParameterValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          parameter_ = value;
+          onChanged();
+        } else {
+          textParameterValueBuilder_.setMessage(value);
+        }
+        parameterCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+       */
+      public Builder setTextParameterValue(
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.Builder builderForValue) {
+        if (textParameterValueBuilder_ == null) {
+          parameter_ = builderForValue.build();
+          onChanged();
+        } else {
+          textParameterValueBuilder_.setMessage(builderForValue.build());
+        }
+        parameterCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+       */
+      public Builder mergeTextParameterValue(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue value) {
+        if (textParameterValueBuilder_ == null) {
+          if (parameterCase_ == 3 &&
+              parameter_ != yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.getDefaultInstance()) {
+            parameter_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.newBuilder((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue) parameter_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            parameter_ = value;
+          }
+          onChanged();
+        } else {
+          if (parameterCase_ == 3) {
+            textParameterValueBuilder_.mergeFrom(value);
+          }
+          textParameterValueBuilder_.setMessage(value);
+        }
+        parameterCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+       */
+      public Builder clearTextParameterValue() {
+        if (textParameterValueBuilder_ == null) {
+          if (parameterCase_ == 3) {
+            parameterCase_ = 0;
+            parameter_ = null;
+            onChanged();
+          }
+        } else {
+          if (parameterCase_ == 3) {
+            parameterCase_ = 0;
+            parameter_ = null;
+          }
+          textParameterValueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.Builder getTextParameterValueBuilder() {
+        return getTextParameterValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValueOrBuilder getTextParameterValueOrBuilder() {
+        if ((parameterCase_ == 3) && (textParameterValueBuilder_ != null)) {
+          return textParameterValueBuilder_.getMessageOrBuilder();
+        } else {
+          if (parameterCase_ == 3) {
+            return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue) parameter_;
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextParameterValue text_parameter_value = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValueOrBuilder> 
+          getTextParameterValueFieldBuilder() {
+        if (textParameterValueBuilder_ == null) {
+          if (!(parameterCase_ == 3)) {
+            parameter_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.getDefaultInstance();
+          }
+          textParameterValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValueOrBuilder>(
+                  (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextParameterValue) parameter_,
+                  getParentForChildren(),
+                  isClean());
+          parameter_ = null;
+        }
+        parameterCase_ = 3;
+        onChanged();;
+        return textParameterValueBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValueOrBuilder> textListParameterValueBuilder_;
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+       */
+      public boolean hasTextListParameterValue() {
+        return parameterCase_ == 4;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue getTextListParameterValue() {
+        if (textListParameterValueBuilder_ == null) {
+          if (parameterCase_ == 4) {
+            return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue) parameter_;
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.getDefaultInstance();
+        } else {
+          if (parameterCase_ == 4) {
+            return textListParameterValueBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+       */
+      public Builder setTextListParameterValue(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue value) {
+        if (textListParameterValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          parameter_ = value;
+          onChanged();
+        } else {
+          textListParameterValueBuilder_.setMessage(value);
+        }
+        parameterCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+       */
+      public Builder setTextListParameterValue(
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.Builder builderForValue) {
+        if (textListParameterValueBuilder_ == null) {
+          parameter_ = builderForValue.build();
+          onChanged();
+        } else {
+          textListParameterValueBuilder_.setMessage(builderForValue.build());
+        }
+        parameterCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+       */
+      public Builder mergeTextListParameterValue(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue value) {
+        if (textListParameterValueBuilder_ == null) {
+          if (parameterCase_ == 4 &&
+              parameter_ != yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.getDefaultInstance()) {
+            parameter_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.newBuilder((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue) parameter_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            parameter_ = value;
+          }
+          onChanged();
+        } else {
+          if (parameterCase_ == 4) {
+            textListParameterValueBuilder_.mergeFrom(value);
+          }
+          textListParameterValueBuilder_.setMessage(value);
+        }
+        parameterCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+       */
+      public Builder clearTextListParameterValue() {
+        if (textListParameterValueBuilder_ == null) {
+          if (parameterCase_ == 4) {
+            parameterCase_ = 0;
+            parameter_ = null;
+            onChanged();
+          }
+        } else {
+          if (parameterCase_ == 4) {
+            parameterCase_ = 0;
+            parameter_ = null;
+          }
+          textListParameterValueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.Builder getTextListParameterValueBuilder() {
+        return getTextListParameterValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValueOrBuilder getTextListParameterValueOrBuilder() {
+        if ((parameterCase_ == 4) && (textListParameterValueBuilder_ != null)) {
+          return textListParameterValueBuilder_.getMessageOrBuilder();
+        } else {
+          if (parameterCase_ == 4) {
+            return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue) parameter_;
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.TextListParameterValue text_list_parameter_value = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValueOrBuilder> 
+          getTextListParameterValueFieldBuilder() {
+        if (textListParameterValueBuilder_ == null) {
+          if (!(parameterCase_ == 4)) {
+            parameter_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.getDefaultInstance();
+          }
+          textListParameterValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValueOrBuilder>(
+                  (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.TextListParameterValue) parameter_,
+                  getParentForChildren(),
+                  isClean());
+          parameter_ = null;
+        }
+        parameterCase_ = 4;
+        onChanged();;
+        return textListParameterValueBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValueOrBuilder> labelListParameterValueBuilder_;
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+       */
+      public boolean hasLabelListParameterValue() {
+        return parameterCase_ == 5;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue getLabelListParameterValue() {
+        if (labelListParameterValueBuilder_ == null) {
+          if (parameterCase_ == 5) {
+            return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue) parameter_;
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.getDefaultInstance();
+        } else {
+          if (parameterCase_ == 5) {
+            return labelListParameterValueBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+       */
+      public Builder setLabelListParameterValue(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue value) {
+        if (labelListParameterValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          parameter_ = value;
+          onChanged();
+        } else {
+          labelListParameterValueBuilder_.setMessage(value);
+        }
+        parameterCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+       */
+      public Builder setLabelListParameterValue(
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.Builder builderForValue) {
+        if (labelListParameterValueBuilder_ == null) {
+          parameter_ = builderForValue.build();
+          onChanged();
+        } else {
+          labelListParameterValueBuilder_.setMessage(builderForValue.build());
+        }
+        parameterCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+       */
+      public Builder mergeLabelListParameterValue(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue value) {
+        if (labelListParameterValueBuilder_ == null) {
+          if (parameterCase_ == 5 &&
+              parameter_ != yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.getDefaultInstance()) {
+            parameter_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.newBuilder((yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue) parameter_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            parameter_ = value;
+          }
+          onChanged();
+        } else {
+          if (parameterCase_ == 5) {
+            labelListParameterValueBuilder_.mergeFrom(value);
+          }
+          labelListParameterValueBuilder_.setMessage(value);
+        }
+        parameterCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+       */
+      public Builder clearLabelListParameterValue() {
+        if (labelListParameterValueBuilder_ == null) {
+          if (parameterCase_ == 5) {
+            parameterCase_ = 0;
+            parameter_ = null;
+            onChanged();
+          }
+        } else {
+          if (parameterCase_ == 5) {
+            parameterCase_ = 0;
+            parameter_ = null;
+          }
+          labelListParameterValueBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.Builder getLabelListParameterValueBuilder() {
+        return getLabelListParameterValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValueOrBuilder getLabelListParameterValueOrBuilder() {
+        if ((parameterCase_ == 5) && (labelListParameterValueBuilder_ != null)) {
+          return labelListParameterValueBuilder_.getMessageOrBuilder();
+        } else {
+          if (parameterCase_ == 5) {
+            return (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue) parameter_;
+          }
+          return yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.ydb.v1.AlertParameter.LabelListParameterValue label_list_parameter_value = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValueOrBuilder> 
+          getLabelListParameterValueFieldBuilder() {
+        if (labelListParameterValueBuilder_ == null) {
+          if (!(parameterCase_ == 5)) {
+            parameter_ = yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.getDefaultInstance();
+          }
+          labelListParameterValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValueOrBuilder>(
+                  (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.LabelListParameterValue) parameter_,
+                  getParentForChildren(),
+                  isClean());
+          parameter_ = null;
+        }
+        parameterCase_ = 5;
+        onChanged();;
+        return labelListParameterValueBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.AlertParameter)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.AlertParameter)
+    private static final yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter();
+    }
+
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AlertParameter>
+        PARSER = new com.google.protobuf.AbstractParser<AlertParameter>() {
+      @java.lang.Override
+      public AlertParameter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AlertParameter(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AlertParameter> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AlertParameter> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NotificationChannelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.NotificationChannel)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string notification_channel_id = 1;</code>
+     */
+    java.lang.String getNotificationChannelId();
+    /**
+     * <code>string notification_channel_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getNotificationChannelIdBytes();
+
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus> getNotifyAboutStatusesList();
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+     */
+    int getNotifyAboutStatusesCount();
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus getNotifyAboutStatuses(int index);
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+     */
+    java.util.List<java.lang.Integer>
+    getNotifyAboutStatusesValueList();
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+     */
+    int getNotifyAboutStatusesValue(int index);
+
+    /**
+     * <code>int64 repeate_notify_delay_ms = 3;</code>
+     */
+    long getRepeateNotifyDelayMs();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ydb.v1.NotificationChannel}
+   */
+  public  static final class NotificationChannel extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.NotificationChannel)
+      NotificationChannelOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use NotificationChannel.newBuilder() to construct.
+    private NotificationChannel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private NotificationChannel() {
+      notificationChannelId_ = "";
+      notifyAboutStatuses_ = java.util.Collections.emptyList();
+      repeateNotifyDelayMs_ = 0L;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private NotificationChannel(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              notificationChannelId_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                notifyAboutStatuses_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              notifyAboutStatuses_.add(rawValue);
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                  notifyAboutStatuses_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                notifyAboutStatuses_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            case 24: {
+
+              repeateNotifyDelayMs_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          notifyAboutStatuses_ = java.util.Collections.unmodifiableList(notifyAboutStatuses_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_NotificationChannel_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_NotificationChannel_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NOTIFICATION_CHANNEL_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object notificationChannelId_;
+    /**
+     * <code>string notification_channel_id = 1;</code>
+     */
+    public java.lang.String getNotificationChannelId() {
+      java.lang.Object ref = notificationChannelId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        notificationChannelId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string notification_channel_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNotificationChannelIdBytes() {
+      java.lang.Object ref = notificationChannelId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        notificationChannelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOTIFY_ABOUT_STATUSES_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> notifyAboutStatuses_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus> notifyAboutStatuses_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus>() {
+              public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus result = yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus.valueOf(from);
+                return result == null ? yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+     */
+    public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus> getNotifyAboutStatusesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus>(notifyAboutStatuses_, notifyAboutStatuses_converter_);
+    }
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+     */
+    public int getNotifyAboutStatusesCount() {
+      return notifyAboutStatuses_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus getNotifyAboutStatuses(int index) {
+      return notifyAboutStatuses_converter_.convert(notifyAboutStatuses_.get(index));
+    }
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+     */
+    public java.util.List<java.lang.Integer>
+    getNotifyAboutStatusesValueList() {
+      return notifyAboutStatuses_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+     */
+    public int getNotifyAboutStatusesValue(int index) {
+      return notifyAboutStatuses_.get(index);
+    }
+    private int notifyAboutStatusesMemoizedSerializedSize;
+
+    public static final int REPEATE_NOTIFY_DELAY_MS_FIELD_NUMBER = 3;
+    private long repeateNotifyDelayMs_;
+    /**
+     * <code>int64 repeate_notify_delay_ms = 3;</code>
+     */
+    public long getRepeateNotifyDelayMs() {
+      return repeateNotifyDelayMs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!getNotificationChannelIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, notificationChannelId_);
+      }
+      if (getNotifyAboutStatusesList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(notifyAboutStatusesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < notifyAboutStatuses_.size(); i++) {
+        output.writeEnumNoTag(notifyAboutStatuses_.get(i));
+      }
+      if (repeateNotifyDelayMs_ != 0L) {
+        output.writeInt64(3, repeateNotifyDelayMs_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getNotificationChannelIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, notificationChannelId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < notifyAboutStatuses_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(notifyAboutStatuses_.get(i));
+        }
+        size += dataSize;
+        if (!getNotifyAboutStatusesList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }notifyAboutStatusesMemoizedSerializedSize = dataSize;
+      }
+      if (repeateNotifyDelayMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, repeateNotifyDelayMs_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel other = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel) obj;
+
+      boolean result = true;
+      result = result && getNotificationChannelId()
+          .equals(other.getNotificationChannelId());
+      result = result && notifyAboutStatuses_.equals(other.notifyAboutStatuses_);
+      result = result && (getRepeateNotifyDelayMs()
+          == other.getRepeateNotifyDelayMs());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NOTIFICATION_CHANNEL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getNotificationChannelId().hashCode();
+      if (getNotifyAboutStatusesCount() > 0) {
+        hash = (37 * hash) + NOTIFY_ABOUT_STATUSES_FIELD_NUMBER;
+        hash = (53 * hash) + notifyAboutStatuses_.hashCode();
+      }
+      hash = (37 * hash) + REPEATE_NOTIFY_DELAY_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRepeateNotifyDelayMs());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ydb.v1.NotificationChannel}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.NotificationChannel)
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannelOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_NotificationChannel_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_NotificationChannel_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        notificationChannelId_ = "";
+
+        notifyAboutStatuses_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        repeateNotifyDelayMs_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_NotificationChannel_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel getDefaultInstanceForType() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel build() {
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel buildPartial() {
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.notificationChannelId_ = notificationChannelId_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          notifyAboutStatuses_ = java.util.Collections.unmodifiableList(notifyAboutStatuses_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.notifyAboutStatuses_ = notifyAboutStatuses_;
+        result.repeateNotifyDelayMs_ = repeateNotifyDelayMs_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel) {
+          return mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel other) {
+        if (other == yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.getDefaultInstance()) return this;
+        if (!other.getNotificationChannelId().isEmpty()) {
+          notificationChannelId_ = other.notificationChannelId_;
+          onChanged();
+        }
+        if (!other.notifyAboutStatuses_.isEmpty()) {
+          if (notifyAboutStatuses_.isEmpty()) {
+            notifyAboutStatuses_ = other.notifyAboutStatuses_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureNotifyAboutStatusesIsMutable();
+            notifyAboutStatuses_.addAll(other.notifyAboutStatuses_);
+          }
+          onChanged();
+        }
+        if (other.getRepeateNotifyDelayMs() != 0L) {
+          setRepeateNotifyDelayMs(other.getRepeateNotifyDelayMs());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object notificationChannelId_ = "";
+      /**
+       * <code>string notification_channel_id = 1;</code>
+       */
+      public java.lang.String getNotificationChannelId() {
+        java.lang.Object ref = notificationChannelId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          notificationChannelId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string notification_channel_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNotificationChannelIdBytes() {
+        java.lang.Object ref = notificationChannelId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          notificationChannelId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string notification_channel_id = 1;</code>
+       */
+      public Builder setNotificationChannelId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        notificationChannelId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string notification_channel_id = 1;</code>
+       */
+      public Builder clearNotificationChannelId() {
+        
+        notificationChannelId_ = getDefaultInstance().getNotificationChannelId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string notification_channel_id = 1;</code>
+       */
+      public Builder setNotificationChannelIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        notificationChannelId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> notifyAboutStatuses_ =
+        java.util.Collections.emptyList();
+      private void ensureNotifyAboutStatusesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          notifyAboutStatuses_ = new java.util.ArrayList<java.lang.Integer>(notifyAboutStatuses_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus> getNotifyAboutStatusesList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus>(notifyAboutStatuses_, notifyAboutStatuses_converter_);
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+       */
+      public int getNotifyAboutStatusesCount() {
+        return notifyAboutStatuses_.size();
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus getNotifyAboutStatuses(int index) {
+        return notifyAboutStatuses_converter_.convert(notifyAboutStatuses_.get(index));
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+       */
+      public Builder setNotifyAboutStatuses(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureNotifyAboutStatusesIsMutable();
+        notifyAboutStatuses_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+       */
+      public Builder addNotifyAboutStatuses(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureNotifyAboutStatusesIsMutable();
+        notifyAboutStatuses_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+       */
+      public Builder addAllNotifyAboutStatuses(
+          java.lang.Iterable<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus> values) {
+        ensureNotifyAboutStatusesIsMutable();
+        for (yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertEvaluationStatus value : values) {
+          notifyAboutStatuses_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+       */
+      public Builder clearNotifyAboutStatuses() {
+        notifyAboutStatuses_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+       */
+      public java.util.List<java.lang.Integer>
+      getNotifyAboutStatusesValueList() {
+        return java.util.Collections.unmodifiableList(notifyAboutStatuses_);
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+       */
+      public int getNotifyAboutStatusesValue(int index) {
+        return notifyAboutStatuses_.get(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+       */
+      public Builder setNotifyAboutStatusesValue(
+          int index, int value) {
+        ensureNotifyAboutStatusesIsMutable();
+        notifyAboutStatuses_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+       */
+      public Builder addNotifyAboutStatusesValue(int value) {
+        ensureNotifyAboutStatusesIsMutable();
+        notifyAboutStatuses_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.AlertEvaluationStatus notify_about_statuses = 2;</code>
+       */
+      public Builder addAllNotifyAboutStatusesValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureNotifyAboutStatusesIsMutable();
+        for (int value : values) {
+          notifyAboutStatuses_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+
+      private long repeateNotifyDelayMs_ ;
+      /**
+       * <code>int64 repeate_notify_delay_ms = 3;</code>
+       */
+      public long getRepeateNotifyDelayMs() {
+        return repeateNotifyDelayMs_;
+      }
+      /**
+       * <code>int64 repeate_notify_delay_ms = 3;</code>
+       */
+      public Builder setRepeateNotifyDelayMs(long value) {
+        
+        repeateNotifyDelayMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 repeate_notify_delay_ms = 3;</code>
+       */
+      public Builder clearRepeateNotifyDelayMs() {
+        
+        repeateNotifyDelayMs_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.NotificationChannel)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.NotificationChannel)
+    private static final yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel();
+    }
+
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NotificationChannel>
+        PARSER = new com.google.protobuf.AbstractParser<NotificationChannel>() {
+      @java.lang.Override
+      public NotificationChannel parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new NotificationChannel(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<NotificationChannel> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NotificationChannel> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AlertOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.Alert)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * output only field.
+     * </pre>
+     *
+     * <code>string alert_id = 1;</code>
+     */
+    java.lang.String getAlertId();
+    /**
+     * <pre>
+     * output only field.
+     * </pre>
+     *
+     * <code>string alert_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getAlertIdBytes();
+
+    /**
+     * <pre>
+     * template of the alert.
+     * </pre>
+     *
+     * <code>string alert_template_id = 2;</code>
+     */
+    java.lang.String getAlertTemplateId();
+    /**
+     * <pre>
+     * template of the alert.
+     * </pre>
+     *
+     * <code>string alert_template_id = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getAlertTemplateIdBytes();
+
+    /**
+     * <pre>
+     * name of the alert.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name of the alert.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * human readable description of the alert.
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * human readable description of the alert.
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * the notification channels of the alert.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+     */
+    java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel> 
+        getNotificationChannelsList();
+    /**
+     * <pre>
+     * the notification channels of the alert.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel getNotificationChannels(int index);
+    /**
+     * <pre>
+     * the notification channels of the alert.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+     */
+    int getNotificationChannelsCount();
+    /**
+     * <pre>
+     * the notification channels of the alert.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannelOrBuilder> 
+        getNotificationChannelsOrBuilderList();
+    /**
+     * <pre>
+     * the notification channels of the alert.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannelOrBuilder getNotificationChannelsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * alert parameters to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+     */
+    java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter> 
+        getAlertParametersList();
+    /**
+     * <pre>
+     * alert parameters to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter getAlertParameters(int index);
+    /**
+     * <pre>
+     * alert parameters to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+     */
+    int getAlertParametersCount();
+    /**
+     * <pre>
+     * alert parameters to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder> 
+        getAlertParametersOrBuilderList();
+    /**
+     * <pre>
+     * alert parameters to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder getAlertParametersOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * alert paratemers to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+     */
+    java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter> 
+        getAlertThresholdsList();
+    /**
+     * <pre>
+     * alert paratemers to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter getAlertThresholds(int index);
+    /**
+     * <pre>
+     * alert paratemers to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+     */
+    int getAlertThresholdsCount();
+    /**
+     * <pre>
+     * alert paratemers to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder> 
+        getAlertThresholdsOrBuilderList();
+    /**
+     * <pre>
+     * alert paratemers to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder getAlertThresholdsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ydb.v1.Alert}
+   */
+  public  static final class Alert extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.Alert)
+      AlertOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Alert.newBuilder() to construct.
+    private Alert(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Alert() {
+      alertId_ = "";
+      alertTemplateId_ = "";
+      name_ = "";
+      description_ = "";
+      notificationChannels_ = java.util.Collections.emptyList();
+      alertParameters_ = java.util.Collections.emptyList();
+      alertThresholds_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Alert(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              alertId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              alertTemplateId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                notificationChannels_ = new java.util.ArrayList<yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              notificationChannels_.add(
+                  input.readMessage(yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                alertParameters_ = new java.util.ArrayList<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              alertParameters_.add(
+                  input.readMessage(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.parser(), extensionRegistry));
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                alertThresholds_ = new java.util.ArrayList<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              alertThresholds_.add(
+                  input.readMessage(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          notificationChannels_ = java.util.Collections.unmodifiableList(notificationChannels_);
+        }
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          alertParameters_ = java.util.Collections.unmodifiableList(alertParameters_);
+        }
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          alertThresholds_ = java.util.Collections.unmodifiableList(alertThresholds_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_Alert_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_Alert_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int ALERT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object alertId_;
+    /**
+     * <pre>
+     * output only field.
+     * </pre>
+     *
+     * <code>string alert_id = 1;</code>
+     */
+    public java.lang.String getAlertId() {
+      java.lang.Object ref = alertId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        alertId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * output only field.
+     * </pre>
+     *
+     * <code>string alert_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAlertIdBytes() {
+      java.lang.Object ref = alertId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        alertId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ALERT_TEMPLATE_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object alertTemplateId_;
+    /**
+     * <pre>
+     * template of the alert.
+     * </pre>
+     *
+     * <code>string alert_template_id = 2;</code>
+     */
+    public java.lang.String getAlertTemplateId() {
+      java.lang.Object ref = alertTemplateId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        alertTemplateId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * template of the alert.
+     * </pre>
+     *
+     * <code>string alert_template_id = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAlertTemplateIdBytes() {
+      java.lang.Object ref = alertTemplateId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        alertTemplateId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * name of the alert.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name of the alert.
+     * </pre>
+     *
+     * <code>string name = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 4;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * human readable description of the alert.
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * human readable description of the alert.
+     * </pre>
+     *
+     * <code>string description = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOTIFICATION_CHANNELS_FIELD_NUMBER = 5;
+    private java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel> notificationChannels_;
+    /**
+     * <pre>
+     * the notification channels of the alert.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+     */
+    public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel> getNotificationChannelsList() {
+      return notificationChannels_;
+    }
+    /**
+     * <pre>
+     * the notification channels of the alert.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannelOrBuilder> 
+        getNotificationChannelsOrBuilderList() {
+      return notificationChannels_;
+    }
+    /**
+     * <pre>
+     * the notification channels of the alert.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+     */
+    public int getNotificationChannelsCount() {
+      return notificationChannels_.size();
+    }
+    /**
+     * <pre>
+     * the notification channels of the alert.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel getNotificationChannels(int index) {
+      return notificationChannels_.get(index);
+    }
+    /**
+     * <pre>
+     * the notification channels of the alert.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannelOrBuilder getNotificationChannelsOrBuilder(
+        int index) {
+      return notificationChannels_.get(index);
+    }
+
+    public static final int ALERT_PARAMETERS_FIELD_NUMBER = 6;
+    private java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter> alertParameters_;
+    /**
+     * <pre>
+     * alert parameters to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+     */
+    public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter> getAlertParametersList() {
+      return alertParameters_;
+    }
+    /**
+     * <pre>
+     * alert parameters to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder> 
+        getAlertParametersOrBuilderList() {
+      return alertParameters_;
+    }
+    /**
+     * <pre>
+     * alert parameters to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+     */
+    public int getAlertParametersCount() {
+      return alertParameters_.size();
+    }
+    /**
+     * <pre>
+     * alert parameters to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter getAlertParameters(int index) {
+      return alertParameters_.get(index);
+    }
+    /**
+     * <pre>
+     * alert parameters to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder getAlertParametersOrBuilder(
+        int index) {
+      return alertParameters_.get(index);
+    }
+
+    public static final int ALERT_THRESHOLDS_FIELD_NUMBER = 7;
+    private java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter> alertThresholds_;
+    /**
+     * <pre>
+     * alert paratemers to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+     */
+    public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter> getAlertThresholdsList() {
+      return alertThresholds_;
+    }
+    /**
+     * <pre>
+     * alert paratemers to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder> 
+        getAlertThresholdsOrBuilderList() {
+      return alertThresholds_;
+    }
+    /**
+     * <pre>
+     * alert paratemers to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+     */
+    public int getAlertThresholdsCount() {
+      return alertThresholds_.size();
+    }
+    /**
+     * <pre>
+     * alert paratemers to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter getAlertThresholds(int index) {
+      return alertThresholds_.get(index);
+    }
+    /**
+     * <pre>
+     * alert paratemers to override.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder getAlertThresholdsOrBuilder(
+        int index) {
+      return alertThresholds_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAlertIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, alertId_);
+      }
+      if (!getAlertTemplateIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, alertTemplateId_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
+      }
+      for (int i = 0; i < notificationChannels_.size(); i++) {
+        output.writeMessage(5, notificationChannels_.get(i));
+      }
+      for (int i = 0; i < alertParameters_.size(); i++) {
+        output.writeMessage(6, alertParameters_.get(i));
+      }
+      for (int i = 0; i < alertThresholds_.size(); i++) {
+        output.writeMessage(7, alertThresholds_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAlertIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, alertId_);
+      }
+      if (!getAlertTemplateIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, alertTemplateId_);
+      }
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      }
+      for (int i = 0; i < notificationChannels_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, notificationChannels_.get(i));
+      }
+      for (int i = 0; i < alertParameters_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, alertParameters_.get(i));
+      }
+      for (int i = 0; i < alertThresholds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, alertThresholds_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert other = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert) obj;
+
+      boolean result = true;
+      result = result && getAlertId()
+          .equals(other.getAlertId());
+      result = result && getAlertTemplateId()
+          .equals(other.getAlertTemplateId());
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getDescription()
+          .equals(other.getDescription());
+      result = result && getNotificationChannelsList()
+          .equals(other.getNotificationChannelsList());
+      result = result && getAlertParametersList()
+          .equals(other.getAlertParametersList());
+      result = result && getAlertThresholdsList()
+          .equals(other.getAlertThresholdsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ALERT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAlertId().hashCode();
+      hash = (37 * hash) + ALERT_TEMPLATE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAlertTemplateId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getNotificationChannelsCount() > 0) {
+        hash = (37 * hash) + NOTIFICATION_CHANNELS_FIELD_NUMBER;
+        hash = (53 * hash) + getNotificationChannelsList().hashCode();
+      }
+      if (getAlertParametersCount() > 0) {
+        hash = (37 * hash) + ALERT_PARAMETERS_FIELD_NUMBER;
+        hash = (53 * hash) + getAlertParametersList().hashCode();
+      }
+      if (getAlertThresholdsCount() > 0) {
+        hash = (37 * hash) + ALERT_THRESHOLDS_FIELD_NUMBER;
+        hash = (53 * hash) + getAlertThresholdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ydb.v1.Alert}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.Alert)
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_Alert_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_Alert_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getNotificationChannelsFieldBuilder();
+          getAlertParametersFieldBuilder();
+          getAlertThresholdsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        alertId_ = "";
+
+        alertTemplateId_ = "";
+
+        name_ = "";
+
+        description_ = "";
+
+        if (notificationChannelsBuilder_ == null) {
+          notificationChannels_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          notificationChannelsBuilder_.clear();
+        }
+        if (alertParametersBuilder_ == null) {
+          alertParameters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        } else {
+          alertParametersBuilder_.clear();
+        }
+        if (alertThresholdsBuilder_ == null) {
+          alertThresholds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          alertThresholdsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_Alert_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert getDefaultInstanceForType() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert build() {
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert buildPartial() {
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.alertId_ = alertId_;
+        result.alertTemplateId_ = alertTemplateId_;
+        result.name_ = name_;
+        result.description_ = description_;
+        if (notificationChannelsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            notificationChannels_ = java.util.Collections.unmodifiableList(notificationChannels_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.notificationChannels_ = notificationChannels_;
+        } else {
+          result.notificationChannels_ = notificationChannelsBuilder_.build();
+        }
+        if (alertParametersBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+            alertParameters_ = java.util.Collections.unmodifiableList(alertParameters_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.alertParameters_ = alertParameters_;
+        } else {
+          result.alertParameters_ = alertParametersBuilder_.build();
+        }
+        if (alertThresholdsBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+            alertThresholds_ = java.util.Collections.unmodifiableList(alertThresholds_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.alertThresholds_ = alertThresholds_;
+        } else {
+          result.alertThresholds_ = alertThresholdsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert) {
+          return mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert other) {
+        if (other == yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.getDefaultInstance()) return this;
+        if (!other.getAlertId().isEmpty()) {
+          alertId_ = other.alertId_;
+          onChanged();
+        }
+        if (!other.getAlertTemplateId().isEmpty()) {
+          alertTemplateId_ = other.alertTemplateId_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        if (notificationChannelsBuilder_ == null) {
+          if (!other.notificationChannels_.isEmpty()) {
+            if (notificationChannels_.isEmpty()) {
+              notificationChannels_ = other.notificationChannels_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureNotificationChannelsIsMutable();
+              notificationChannels_.addAll(other.notificationChannels_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.notificationChannels_.isEmpty()) {
+            if (notificationChannelsBuilder_.isEmpty()) {
+              notificationChannelsBuilder_.dispose();
+              notificationChannelsBuilder_ = null;
+              notificationChannels_ = other.notificationChannels_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              notificationChannelsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getNotificationChannelsFieldBuilder() : null;
+            } else {
+              notificationChannelsBuilder_.addAllMessages(other.notificationChannels_);
+            }
+          }
+        }
+        if (alertParametersBuilder_ == null) {
+          if (!other.alertParameters_.isEmpty()) {
+            if (alertParameters_.isEmpty()) {
+              alertParameters_ = other.alertParameters_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureAlertParametersIsMutable();
+              alertParameters_.addAll(other.alertParameters_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.alertParameters_.isEmpty()) {
+            if (alertParametersBuilder_.isEmpty()) {
+              alertParametersBuilder_.dispose();
+              alertParametersBuilder_ = null;
+              alertParameters_ = other.alertParameters_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              alertParametersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAlertParametersFieldBuilder() : null;
+            } else {
+              alertParametersBuilder_.addAllMessages(other.alertParameters_);
+            }
+          }
+        }
+        if (alertThresholdsBuilder_ == null) {
+          if (!other.alertThresholds_.isEmpty()) {
+            if (alertThresholds_.isEmpty()) {
+              alertThresholds_ = other.alertThresholds_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureAlertThresholdsIsMutable();
+              alertThresholds_.addAll(other.alertThresholds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.alertThresholds_.isEmpty()) {
+            if (alertThresholdsBuilder_.isEmpty()) {
+              alertThresholdsBuilder_.dispose();
+              alertThresholdsBuilder_ = null;
+              alertThresholds_ = other.alertThresholds_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              alertThresholdsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAlertThresholdsFieldBuilder() : null;
+            } else {
+              alertThresholdsBuilder_.addAllMessages(other.alertThresholds_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object alertId_ = "";
+      /**
+       * <pre>
+       * output only field.
+       * </pre>
+       *
+       * <code>string alert_id = 1;</code>
+       */
+      public java.lang.String getAlertId() {
+        java.lang.Object ref = alertId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          alertId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * output only field.
+       * </pre>
+       *
+       * <code>string alert_id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAlertIdBytes() {
+        java.lang.Object ref = alertId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          alertId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * output only field.
+       * </pre>
+       *
+       * <code>string alert_id = 1;</code>
+       */
+      public Builder setAlertId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        alertId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * output only field.
+       * </pre>
+       *
+       * <code>string alert_id = 1;</code>
+       */
+      public Builder clearAlertId() {
+        
+        alertId_ = getDefaultInstance().getAlertId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * output only field.
+       * </pre>
+       *
+       * <code>string alert_id = 1;</code>
+       */
+      public Builder setAlertIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        alertId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object alertTemplateId_ = "";
+      /**
+       * <pre>
+       * template of the alert.
+       * </pre>
+       *
+       * <code>string alert_template_id = 2;</code>
+       */
+      public java.lang.String getAlertTemplateId() {
+        java.lang.Object ref = alertTemplateId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          alertTemplateId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * template of the alert.
+       * </pre>
+       *
+       * <code>string alert_template_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAlertTemplateIdBytes() {
+        java.lang.Object ref = alertTemplateId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          alertTemplateId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * template of the alert.
+       * </pre>
+       *
+       * <code>string alert_template_id = 2;</code>
+       */
+      public Builder setAlertTemplateId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        alertTemplateId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * template of the alert.
+       * </pre>
+       *
+       * <code>string alert_template_id = 2;</code>
+       */
+      public Builder clearAlertTemplateId() {
+        
+        alertTemplateId_ = getDefaultInstance().getAlertTemplateId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * template of the alert.
+       * </pre>
+       *
+       * <code>string alert_template_id = 2;</code>
+       */
+      public Builder setAlertTemplateIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        alertTemplateId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * name of the alert.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of the alert.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of the alert.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the alert.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the alert.
+       * </pre>
+       *
+       * <code>string name = 3;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * human readable description of the alert.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * human readable description of the alert.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * human readable description of the alert.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * human readable description of the alert.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * human readable description of the alert.
+       * </pre>
+       *
+       * <code>string description = 4;</code>
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel> notificationChannels_ =
+        java.util.Collections.emptyList();
+      private void ensureNotificationChannelsIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          notificationChannels_ = new java.util.ArrayList<yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel>(notificationChannels_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel, yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannelOrBuilder> notificationChannelsBuilder_;
+
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel> getNotificationChannelsList() {
+        if (notificationChannelsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(notificationChannels_);
+        } else {
+          return notificationChannelsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public int getNotificationChannelsCount() {
+        if (notificationChannelsBuilder_ == null) {
+          return notificationChannels_.size();
+        } else {
+          return notificationChannelsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel getNotificationChannels(int index) {
+        if (notificationChannelsBuilder_ == null) {
+          return notificationChannels_.get(index);
+        } else {
+          return notificationChannelsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public Builder setNotificationChannels(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel value) {
+        if (notificationChannelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNotificationChannelsIsMutable();
+          notificationChannels_.set(index, value);
+          onChanged();
+        } else {
+          notificationChannelsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public Builder setNotificationChannels(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.Builder builderForValue) {
+        if (notificationChannelsBuilder_ == null) {
+          ensureNotificationChannelsIsMutable();
+          notificationChannels_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          notificationChannelsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public Builder addNotificationChannels(yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel value) {
+        if (notificationChannelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNotificationChannelsIsMutable();
+          notificationChannels_.add(value);
+          onChanged();
+        } else {
+          notificationChannelsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public Builder addNotificationChannels(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel value) {
+        if (notificationChannelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNotificationChannelsIsMutable();
+          notificationChannels_.add(index, value);
+          onChanged();
+        } else {
+          notificationChannelsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public Builder addNotificationChannels(
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.Builder builderForValue) {
+        if (notificationChannelsBuilder_ == null) {
+          ensureNotificationChannelsIsMutable();
+          notificationChannels_.add(builderForValue.build());
+          onChanged();
+        } else {
+          notificationChannelsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public Builder addNotificationChannels(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.Builder builderForValue) {
+        if (notificationChannelsBuilder_ == null) {
+          ensureNotificationChannelsIsMutable();
+          notificationChannels_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          notificationChannelsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public Builder addAllNotificationChannels(
+          java.lang.Iterable<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel> values) {
+        if (notificationChannelsBuilder_ == null) {
+          ensureNotificationChannelsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, notificationChannels_);
+          onChanged();
+        } else {
+          notificationChannelsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public Builder clearNotificationChannels() {
+        if (notificationChannelsBuilder_ == null) {
+          notificationChannels_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          notificationChannelsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public Builder removeNotificationChannels(int index) {
+        if (notificationChannelsBuilder_ == null) {
+          ensureNotificationChannelsIsMutable();
+          notificationChannels_.remove(index);
+          onChanged();
+        } else {
+          notificationChannelsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.Builder getNotificationChannelsBuilder(
+          int index) {
+        return getNotificationChannelsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannelOrBuilder getNotificationChannelsOrBuilder(
+          int index) {
+        if (notificationChannelsBuilder_ == null) {
+          return notificationChannels_.get(index);  } else {
+          return notificationChannelsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannelOrBuilder> 
+           getNotificationChannelsOrBuilderList() {
+        if (notificationChannelsBuilder_ != null) {
+          return notificationChannelsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(notificationChannels_);
+        }
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.Builder addNotificationChannelsBuilder() {
+        return getNotificationChannelsFieldBuilder().addBuilder(
+            yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.Builder addNotificationChannelsBuilder(
+          int index) {
+        return getNotificationChannelsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * the notification channels of the alert.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.NotificationChannel notification_channels = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.Builder> 
+           getNotificationChannelsBuilderList() {
+        return getNotificationChannelsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel, yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannelOrBuilder> 
+          getNotificationChannelsFieldBuilder() {
+        if (notificationChannelsBuilder_ == null) {
+          notificationChannelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel, yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannel.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.NotificationChannelOrBuilder>(
+                  notificationChannels_,
+                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  getParentForChildren(),
+                  isClean());
+          notificationChannels_ = null;
+        }
+        return notificationChannelsBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter> alertParameters_ =
+        java.util.Collections.emptyList();
+      private void ensureAlertParametersIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          alertParameters_ = new java.util.ArrayList<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter>(alertParameters_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder> alertParametersBuilder_;
+
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter> getAlertParametersList() {
+        if (alertParametersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(alertParameters_);
+        } else {
+          return alertParametersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public int getAlertParametersCount() {
+        if (alertParametersBuilder_ == null) {
+          return alertParameters_.size();
+        } else {
+          return alertParametersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter getAlertParameters(int index) {
+        if (alertParametersBuilder_ == null) {
+          return alertParameters_.get(index);
+        } else {
+          return alertParametersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public Builder setAlertParameters(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter value) {
+        if (alertParametersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAlertParametersIsMutable();
+          alertParameters_.set(index, value);
+          onChanged();
+        } else {
+          alertParametersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public Builder setAlertParameters(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder builderForValue) {
+        if (alertParametersBuilder_ == null) {
+          ensureAlertParametersIsMutable();
+          alertParameters_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          alertParametersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public Builder addAlertParameters(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter value) {
+        if (alertParametersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAlertParametersIsMutable();
+          alertParameters_.add(value);
+          onChanged();
+        } else {
+          alertParametersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public Builder addAlertParameters(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter value) {
+        if (alertParametersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAlertParametersIsMutable();
+          alertParameters_.add(index, value);
+          onChanged();
+        } else {
+          alertParametersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public Builder addAlertParameters(
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder builderForValue) {
+        if (alertParametersBuilder_ == null) {
+          ensureAlertParametersIsMutable();
+          alertParameters_.add(builderForValue.build());
+          onChanged();
+        } else {
+          alertParametersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public Builder addAlertParameters(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder builderForValue) {
+        if (alertParametersBuilder_ == null) {
+          ensureAlertParametersIsMutable();
+          alertParameters_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          alertParametersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public Builder addAllAlertParameters(
+          java.lang.Iterable<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter> values) {
+        if (alertParametersBuilder_ == null) {
+          ensureAlertParametersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, alertParameters_);
+          onChanged();
+        } else {
+          alertParametersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public Builder clearAlertParameters() {
+        if (alertParametersBuilder_ == null) {
+          alertParameters_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          alertParametersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public Builder removeAlertParameters(int index) {
+        if (alertParametersBuilder_ == null) {
+          ensureAlertParametersIsMutable();
+          alertParameters_.remove(index);
+          onChanged();
+        } else {
+          alertParametersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder getAlertParametersBuilder(
+          int index) {
+        return getAlertParametersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder getAlertParametersOrBuilder(
+          int index) {
+        if (alertParametersBuilder_ == null) {
+          return alertParameters_.get(index);  } else {
+          return alertParametersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder> 
+           getAlertParametersOrBuilderList() {
+        if (alertParametersBuilder_ != null) {
+          return alertParametersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(alertParameters_);
+        }
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder addAlertParametersBuilder() {
+        return getAlertParametersFieldBuilder().addBuilder(
+            yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder addAlertParametersBuilder(
+          int index) {
+        return getAlertParametersFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * alert parameters to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_parameters = 6;</code>
+       */
+      public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder> 
+           getAlertParametersBuilderList() {
+        return getAlertParametersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder> 
+          getAlertParametersFieldBuilder() {
+        if (alertParametersBuilder_ == null) {
+          alertParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder>(
+                  alertParameters_,
+                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  getParentForChildren(),
+                  isClean());
+          alertParameters_ = null;
+        }
+        return alertParametersBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter> alertThresholds_ =
+        java.util.Collections.emptyList();
+      private void ensureAlertThresholdsIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          alertThresholds_ = new java.util.ArrayList<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter>(alertThresholds_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder> alertThresholdsBuilder_;
+
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter> getAlertThresholdsList() {
+        if (alertThresholdsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(alertThresholds_);
+        } else {
+          return alertThresholdsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public int getAlertThresholdsCount() {
+        if (alertThresholdsBuilder_ == null) {
+          return alertThresholds_.size();
+        } else {
+          return alertThresholdsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter getAlertThresholds(int index) {
+        if (alertThresholdsBuilder_ == null) {
+          return alertThresholds_.get(index);
+        } else {
+          return alertThresholdsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public Builder setAlertThresholds(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter value) {
+        if (alertThresholdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAlertThresholdsIsMutable();
+          alertThresholds_.set(index, value);
+          onChanged();
+        } else {
+          alertThresholdsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public Builder setAlertThresholds(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder builderForValue) {
+        if (alertThresholdsBuilder_ == null) {
+          ensureAlertThresholdsIsMutable();
+          alertThresholds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          alertThresholdsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public Builder addAlertThresholds(yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter value) {
+        if (alertThresholdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAlertThresholdsIsMutable();
+          alertThresholds_.add(value);
+          onChanged();
+        } else {
+          alertThresholdsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public Builder addAlertThresholds(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter value) {
+        if (alertThresholdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAlertThresholdsIsMutable();
+          alertThresholds_.add(index, value);
+          onChanged();
+        } else {
+          alertThresholdsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public Builder addAlertThresholds(
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder builderForValue) {
+        if (alertThresholdsBuilder_ == null) {
+          ensureAlertThresholdsIsMutable();
+          alertThresholds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          alertThresholdsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public Builder addAlertThresholds(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder builderForValue) {
+        if (alertThresholdsBuilder_ == null) {
+          ensureAlertThresholdsIsMutable();
+          alertThresholds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          alertThresholdsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public Builder addAllAlertThresholds(
+          java.lang.Iterable<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter> values) {
+        if (alertThresholdsBuilder_ == null) {
+          ensureAlertThresholdsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, alertThresholds_);
+          onChanged();
+        } else {
+          alertThresholdsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public Builder clearAlertThresholds() {
+        if (alertThresholdsBuilder_ == null) {
+          alertThresholds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          alertThresholdsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public Builder removeAlertThresholds(int index) {
+        if (alertThresholdsBuilder_ == null) {
+          ensureAlertThresholdsIsMutable();
+          alertThresholds_.remove(index);
+          onChanged();
+        } else {
+          alertThresholdsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder getAlertThresholdsBuilder(
+          int index) {
+        return getAlertThresholdsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder getAlertThresholdsOrBuilder(
+          int index) {
+        if (alertThresholdsBuilder_ == null) {
+          return alertThresholds_.get(index);  } else {
+          return alertThresholdsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder> 
+           getAlertThresholdsOrBuilderList() {
+        if (alertThresholdsBuilder_ != null) {
+          return alertThresholdsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(alertThresholds_);
+        }
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder addAlertThresholdsBuilder() {
+        return getAlertThresholdsFieldBuilder().addBuilder(
+            yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder addAlertThresholdsBuilder(
+          int index) {
+        return getAlertThresholdsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * alert paratemers to override.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ydb.v1.AlertParameter alert_thresholds = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder> 
+           getAlertThresholdsBuilderList() {
+        return getAlertThresholdsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder> 
+          getAlertThresholdsFieldBuilder() {
+        if (alertThresholdsBuilder_ == null) {
+          alertThresholdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameter.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertParameterOrBuilder>(
+                  alertThresholds_,
+                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  getParentForChildren(),
+                  isClean());
+          alertThresholds_ = null;
+        }
+        return alertThresholdsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.Alert)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.Alert)
+    private static final yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert();
+    }
+
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Alert>
+        PARSER = new com.google.protobuf.AbstractParser<Alert>() {
+      @java.lang.Override
+      public Alert parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Alert(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Alert> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Alert> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MonitoringConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ydb.v1.MonitoringConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert> 
+        getAlertsList();
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert getAlerts(int index);
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+     */
+    int getAlertsCount();
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertOrBuilder> 
+        getAlertsOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+     */
+    yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertOrBuilder getAlertsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ydb.v1.MonitoringConfig}
+   */
+  public  static final class MonitoringConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ydb.v1.MonitoringConfig)
+      MonitoringConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MonitoringConfig.newBuilder() to construct.
+    private MonitoringConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MonitoringConfig() {
+      alerts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MonitoringConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                alerts_ = new java.util.ArrayList<yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              alerts_.add(
+                  input.readMessage(yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          alerts_ = java.util.Collections.unmodifiableList(alerts_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_MonitoringConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_MonitoringConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.Builder.class);
+    }
+
+    public static final int ALERTS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert> alerts_;
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+     */
+    public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert> getAlertsList() {
+      return alerts_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+     */
+    public java.util.List<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertOrBuilder> 
+        getAlertsOrBuilderList() {
+      return alerts_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+     */
+    public int getAlertsCount() {
+      return alerts_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert getAlerts(int index) {
+      return alerts_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+     */
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertOrBuilder getAlertsOrBuilder(
+        int index) {
+      return alerts_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < alerts_.size(); i++) {
+        output.writeMessage(1, alerts_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < alerts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, alerts_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig other = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig) obj;
+
+      boolean result = true;
+      result = result && getAlertsList()
+          .equals(other.getAlertsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAlertsCount() > 0) {
+        hash = (37 * hash) + ALERTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAlertsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ydb.v1.MonitoringConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ydb.v1.MonitoringConfig)
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_MonitoringConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_MonitoringConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.class, yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getAlertsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (alertsBuilder_ == null) {
+          alerts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          alertsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.internal_static_yandex_cloud_ydb_v1_MonitoringConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig getDefaultInstanceForType() {
+        return yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig build() {
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig buildPartial() {
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig result = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig(this);
+        int from_bitField0_ = bitField0_;
+        if (alertsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            alerts_ = java.util.Collections.unmodifiableList(alerts_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.alerts_ = alerts_;
+        } else {
+          result.alerts_ = alertsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig) {
+          return mergeFrom((yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig other) {
+        if (other == yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig.getDefaultInstance()) return this;
+        if (alertsBuilder_ == null) {
+          if (!other.alerts_.isEmpty()) {
+            if (alerts_.isEmpty()) {
+              alerts_ = other.alerts_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAlertsIsMutable();
+              alerts_.addAll(other.alerts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.alerts_.isEmpty()) {
+            if (alertsBuilder_.isEmpty()) {
+              alertsBuilder_.dispose();
+              alertsBuilder_ = null;
+              alerts_ = other.alerts_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              alertsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAlertsFieldBuilder() : null;
+            } else {
+              alertsBuilder_.addAllMessages(other.alerts_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert> alerts_ =
+        java.util.Collections.emptyList();
+      private void ensureAlertsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          alerts_ = new java.util.ArrayList<yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert>(alerts_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert, yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertOrBuilder> alertsBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert> getAlertsList() {
+        if (alertsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(alerts_);
+        } else {
+          return alertsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public int getAlertsCount() {
+        if (alertsBuilder_ == null) {
+          return alerts_.size();
+        } else {
+          return alertsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert getAlerts(int index) {
+        if (alertsBuilder_ == null) {
+          return alerts_.get(index);
+        } else {
+          return alertsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public Builder setAlerts(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert value) {
+        if (alertsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAlertsIsMutable();
+          alerts_.set(index, value);
+          onChanged();
+        } else {
+          alertsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public Builder setAlerts(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.Builder builderForValue) {
+        if (alertsBuilder_ == null) {
+          ensureAlertsIsMutable();
+          alerts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          alertsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public Builder addAlerts(yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert value) {
+        if (alertsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAlertsIsMutable();
+          alerts_.add(value);
+          onChanged();
+        } else {
+          alertsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public Builder addAlerts(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert value) {
+        if (alertsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAlertsIsMutable();
+          alerts_.add(index, value);
+          onChanged();
+        } else {
+          alertsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public Builder addAlerts(
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.Builder builderForValue) {
+        if (alertsBuilder_ == null) {
+          ensureAlertsIsMutable();
+          alerts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          alertsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public Builder addAlerts(
+          int index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.Builder builderForValue) {
+        if (alertsBuilder_ == null) {
+          ensureAlertsIsMutable();
+          alerts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          alertsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public Builder addAllAlerts(
+          java.lang.Iterable<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert> values) {
+        if (alertsBuilder_ == null) {
+          ensureAlertsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, alerts_);
+          onChanged();
+        } else {
+          alertsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public Builder clearAlerts() {
+        if (alertsBuilder_ == null) {
+          alerts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          alertsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public Builder removeAlerts(int index) {
+        if (alertsBuilder_ == null) {
+          ensureAlertsIsMutable();
+          alerts_.remove(index);
+          onChanged();
+        } else {
+          alertsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.Builder getAlertsBuilder(
+          int index) {
+        return getAlertsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertOrBuilder getAlertsOrBuilder(
+          int index) {
+        if (alertsBuilder_ == null) {
+          return alerts_.get(index);  } else {
+          return alertsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertOrBuilder> 
+           getAlertsOrBuilderList() {
+        if (alertsBuilder_ != null) {
+          return alertsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(alerts_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.Builder addAlertsBuilder() {
+        return getAlertsFieldBuilder().addBuilder(
+            yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.Builder addAlertsBuilder(
+          int index) {
+        return getAlertsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ydb.v1.Alert alerts = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.Builder> 
+           getAlertsBuilderList() {
+        return getAlertsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert, yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertOrBuilder> 
+          getAlertsFieldBuilder() {
+        if (alertsBuilder_ == null) {
+          alertsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert, yandex.cloud.api.ydb.v1.DatabaseOuterClass.Alert.Builder, yandex.cloud.api.ydb.v1.DatabaseOuterClass.AlertOrBuilder>(
+                  alerts_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          alerts_ = null;
+        }
+        return alertsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ydb.v1.MonitoringConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ydb.v1.MonitoringConfig)
+    private static final yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig();
+    }
+
+    public static yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MonitoringConfig>
+        PARSER = new com.google.protobuf.AbstractParser<MonitoringConfig>() {
+      @java.lang.Override
+      public MonitoringConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MonitoringConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MonitoringConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MonitoringConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10333,6 +20229,51 @@ public final class DatabaseOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ydb_v1_Database_LabelsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_AlertParameter_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_DoubleParameterValue_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_AlertParameter_DoubleParameterValue_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_IntegerParameterValue_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_AlertParameter_IntegerParameterValue_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_TextParameterValue_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_AlertParameter_TextParameterValue_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_TextListParameterValue_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_AlertParameter_TextListParameterValue_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_LabelListParameterValue_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_AlertParameter_LabelListParameterValue_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_NotificationChannel_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_NotificationChannel_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_Alert_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_Alert_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ydb_v1_MonitoringConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ydb_v1_MonitoringConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ydb_v1_DedicatedDatabase_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -10384,7 +20325,7 @@ public final class DatabaseOuterClass {
       "\n\"yandex/cloud/ydb/v1/database.proto\022\023ya" +
       "ndex.cloud.ydb.v1\032\037google/protobuf/times" +
       "tamp.proto\032\035yandex/cloud/validation.prot" +
-      "o\032 yandex/cloud/ydb/v1/backup.proto\"\262\010\n\010" +
+      "o\032 yandex/cloud/ydb/v1/backup.proto\"\364\010\n\010" +
       "Database\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022" +
       ".\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Ti" +
       "mestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001" +
@@ -10406,34 +20347,71 @@ public final class DatabaseOuterClass {
       "dex.cloud.ydb.v1.Database.LabelsEntry\0228\n" +
       "\rbackup_config\030\025 \001(\0132!.yandex.cloud.ydb." +
       "v1.BackupConfig\022\035\n\025document_api_endpoint" +
-      "\030\026 \001(\t\022\034\n\024kinesis_api_endpoint\030\027 \001(\t\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\"\201\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\020" +
-      "\n\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022\014\n\010UPDATIN" +
-      "G\020\004\022\t\n\005ERROR\020\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING" +
-      "\020\007\022\013\n\007STOPPED\020\010B\017\n\rdatabase_type\"\346\001\n\021Ded" +
-      "icatedDatabase\022\032\n\022resource_preset_id\030\001 \001" +
-      "(\t\022:\n\016storage_config\030\002 \001(\0132\".yandex.clou" +
-      "d.ydb.v1.StorageConfig\0226\n\014scale_policy\030\003" +
-      " \001(\0132 .yandex.cloud.ydb.v1.ScalePolicy\022\022" +
-      "\n\nnetwork_id\030\004 \001(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\031" +
-      "\n\021assign_public_ips\030\006 \001(\010\"\222\001\n\022Serverless" +
-      "Database\022\034\n\024throttling_rcu_limit\030\001 \001(\003\022\032" +
-      "\n\022storage_size_limit\030\002 \001(\003\022#\n\033enable_thr" +
-      "ottling_rcu_limit\030\003 \001(\010\022\035\n\025provisioned_r" +
-      "cu_limit\030\004 \001(\003\"&\n\rZonalDatabase\022\025\n\007zone_" +
-      "id\030\001 \001(\tB\004\350\3071\001\"+\n\020RegionalDatabase\022\027\n\tre" +
-      "gion_id\030\001 \001(\tB\004\350\3071\001\"\212\001\n\013ScalePolicy\022B\n\013f" +
-      "ixed_scale\030\001 \001(\0132+.yandex.cloud.ydb.v1.S" +
-      "calePolicy.FixedScaleH\000\032#\n\nFixedScale\022\025\n" +
-      "\004size\030\001 \001(\003B\007\372\3071\003>=1B\022\n\nscale_type\022\004\300\3011\001" +
-      "\"q\n\rStorageConfig\022D\n\017storage_options\030\001 \003" +
-      "(\0132\".yandex.cloud.ydb.v1.StorageOptionB\007" +
-      "\202\3101\003>=1\022\032\n\022storage_size_limit\030\002 \001(\003\"=\n\rS" +
-      "torageOption\022\027\n\017storage_type_id\030\001 \001(\t\022\023\n" +
-      "\013group_count\030\002 \001(\003BV\n\027yandex.cloud.api.y" +
-      "db.v1Z;github.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/ydb/v1;ydbb\006proto3"
+      "\030\026 \001(\t\022\034\n\024kinesis_api_endpoint\030\027 \001(\t\022@\n\021" +
+      "monitoring_config\030\030 \001(\0132%.yandex.cloud.y" +
+      "db.v1.MonitoringConfig\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\201\001\n\006Status" +
+      "\022\026\n\022STATUS_UNSPECIFIED\020\000\022\020\n\014PROVISIONING" +
+      "\020\001\022\013\n\007RUNNING\020\002\022\014\n\010UPDATING\020\004\022\t\n\005ERROR\020\005" +
+      "\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\022\013\n\007STOPPED\020" +
+      "\010B\017\n\rdatabase_type\"\202\006\n\016AlertParameter\022Z\n" +
+      "\026double_parameter_value\030\001 \001(\01328.yandex.c" +
+      "loud.ydb.v1.AlertParameter.DoubleParamet" +
+      "erValueH\000\022\\\n\027integer_parameter_value\030\002 \001" +
+      "(\01329.yandex.cloud.ydb.v1.AlertParameter." +
+      "IntegerParameterValueH\000\022V\n\024text_paramete" +
+      "r_value\030\003 \001(\01326.yandex.cloud.ydb.v1.Aler" +
+      "tParameter.TextParameterValueH\000\022_\n\031text_" +
+      "list_parameter_value\030\004 \001(\0132:.yandex.clou" +
+      "d.ydb.v1.AlertParameter.TextListParamete" +
+      "rValueH\000\022a\n\032label_list_parameter_value\030\005" +
+      " \001(\0132;.yandex.cloud.ydb.v1.AlertParamete" +
+      "r.LabelListParameterValueH\000\0323\n\024DoublePar" +
+      "ameterValue\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\001" +
+      "\0324\n\025IntegerParameterValue\022\014\n\004name\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\003\0321\n\022TextParameterValue\022\014\n\004" +
+      "name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\0326\n\026TextListPar" +
+      "ameterValue\022\014\n\004name\030\001 \001(\t\022\016\n\006values\030\002 \003(" +
+      "\t\0327\n\027LabelListParameterValue\022\014\n\004name\030\001 \001" +
+      "(\t\022\016\n\006values\030\002 \003(\tB\013\n\tparameter\"\242\001\n\023Noti" +
+      "ficationChannel\022\037\n\027notification_channel_" +
+      "id\030\001 \001(\t\022I\n\025notify_about_statuses\030\002 \003(\0162" +
+      "*.yandex.cloud.ydb.v1.AlertEvaluationSta" +
+      "tus\022\037\n\027repeate_notify_delay_ms\030\003 \001(\003\"\236\002\n" +
+      "\005Alert\022\020\n\010alert_id\030\001 \001(\t\022\031\n\021alert_templa" +
+      "te_id\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\023\n\013description" +
+      "\030\004 \001(\t\022G\n\025notification_channels\030\005 \003(\0132(." +
+      "yandex.cloud.ydb.v1.NotificationChannel\022" +
+      "=\n\020alert_parameters\030\006 \003(\0132#.yandex.cloud" +
+      ".ydb.v1.AlertParameter\022=\n\020alert_threshol" +
+      "ds\030\007 \003(\0132#.yandex.cloud.ydb.v1.AlertPara" +
+      "meter\">\n\020MonitoringConfig\022*\n\006alerts\030\001 \003(" +
+      "\0132\032.yandex.cloud.ydb.v1.Alert\"\346\001\n\021Dedica" +
+      "tedDatabase\022\032\n\022resource_preset_id\030\001 \001(\t\022" +
+      ":\n\016storage_config\030\002 \001(\0132\".yandex.cloud.y" +
+      "db.v1.StorageConfig\0226\n\014scale_policy\030\003 \001(" +
+      "\0132 .yandex.cloud.ydb.v1.ScalePolicy\022\022\n\nn" +
+      "etwork_id\030\004 \001(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\031\n\021a" +
+      "ssign_public_ips\030\006 \001(\010\"\222\001\n\022ServerlessDat" +
+      "abase\022\034\n\024throttling_rcu_limit\030\001 \001(\003\022\032\n\022s" +
+      "torage_size_limit\030\002 \001(\003\022#\n\033enable_thrott" +
+      "ling_rcu_limit\030\003 \001(\010\022\035\n\025provisioned_rcu_" +
+      "limit\030\004 \001(\003\"&\n\rZonalDatabase\022\025\n\007zone_id\030" +
+      "\001 \001(\tB\004\350\3071\001\"+\n\020RegionalDatabase\022\027\n\tregio" +
+      "n_id\030\001 \001(\tB\004\350\3071\001\"\212\001\n\013ScalePolicy\022B\n\013fixe" +
+      "d_scale\030\001 \001(\0132+.yandex.cloud.ydb.v1.Scal" +
+      "ePolicy.FixedScaleH\000\032#\n\nFixedScale\022\025\n\004si" +
+      "ze\030\001 \001(\003B\007\372\3071\003>=1B\022\n\nscale_type\022\004\300\3011\001\"q\n" +
+      "\rStorageConfig\022D\n\017storage_options\030\001 \003(\0132" +
+      "\".yandex.cloud.ydb.v1.StorageOptionB\007\202\3101" +
+      "\003>=1\022\032\n\022storage_size_limit\030\002 \001(\003\"=\n\rStor" +
+      "ageOption\022\027\n\017storage_type_id\030\001 \001(\t\022\023\n\013gr" +
+      "oup_count\030\002 \001(\003*u\n\025AlertEvaluationStatus" +
+      "\022\'\n#ALERT_EVALUATION_STATUS_UNSPECIFIED\020" +
+      "\000\022\006\n\002OK\020\001\022\013\n\007NO_DATA\020\002\022\t\n\005ERROR\020\003\022\t\n\005ALA" +
+      "RM\020\004\022\010\n\004WARN\020\005BV\n\027yandex.cloud.api.ydb.v" +
+      "1Z;github.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/ydb/v1;ydbb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10455,39 +20433,93 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_ydb_v1_Database_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_Database_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Status", "Endpoint", "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "ZonalDatabase", "RegionalDatabase", "DedicatedDatabase", "ServerlessDatabase", "AssignPublicIps", "LocationId", "Labels", "BackupConfig", "DocumentApiEndpoint", "KinesisApiEndpoint", "DatabaseType", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Status", "Endpoint", "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "ZonalDatabase", "RegionalDatabase", "DedicatedDatabase", "ServerlessDatabase", "AssignPublicIps", "LocationId", "Labels", "BackupConfig", "DocumentApiEndpoint", "KinesisApiEndpoint", "MonitoringConfig", "DatabaseType", });
     internal_static_yandex_cloud_ydb_v1_Database_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ydb_v1_Database_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ydb_v1_Database_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_Database_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_yandex_cloud_ydb_v1_DedicatedDatabase_descriptor =
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_AlertParameter_descriptor,
+        new java.lang.String[] { "DoubleParameterValue", "IntegerParameterValue", "TextParameterValue", "TextListParameterValue", "LabelListParameterValue", "Parameter", });
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_DoubleParameterValue_descriptor =
+      internal_static_yandex_cloud_ydb_v1_AlertParameter_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_DoubleParameterValue_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_AlertParameter_DoubleParameterValue_descriptor,
+        new java.lang.String[] { "Name", "Value", });
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_IntegerParameterValue_descriptor =
+      internal_static_yandex_cloud_ydb_v1_AlertParameter_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_IntegerParameterValue_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_AlertParameter_IntegerParameterValue_descriptor,
+        new java.lang.String[] { "Name", "Value", });
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_TextParameterValue_descriptor =
+      internal_static_yandex_cloud_ydb_v1_AlertParameter_descriptor.getNestedTypes().get(2);
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_TextParameterValue_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_AlertParameter_TextParameterValue_descriptor,
+        new java.lang.String[] { "Name", "Value", });
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_TextListParameterValue_descriptor =
+      internal_static_yandex_cloud_ydb_v1_AlertParameter_descriptor.getNestedTypes().get(3);
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_TextListParameterValue_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_AlertParameter_TextListParameterValue_descriptor,
+        new java.lang.String[] { "Name", "Values", });
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_LabelListParameterValue_descriptor =
+      internal_static_yandex_cloud_ydb_v1_AlertParameter_descriptor.getNestedTypes().get(4);
+    internal_static_yandex_cloud_ydb_v1_AlertParameter_LabelListParameterValue_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_AlertParameter_LabelListParameterValue_descriptor,
+        new java.lang.String[] { "Name", "Values", });
+    internal_static_yandex_cloud_ydb_v1_NotificationChannel_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_ydb_v1_NotificationChannel_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_NotificationChannel_descriptor,
+        new java.lang.String[] { "NotificationChannelId", "NotifyAboutStatuses", "RepeateNotifyDelayMs", });
+    internal_static_yandex_cloud_ydb_v1_Alert_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_ydb_v1_Alert_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_Alert_descriptor,
+        new java.lang.String[] { "AlertId", "AlertTemplateId", "Name", "Description", "NotificationChannels", "AlertParameters", "AlertThresholds", });
+    internal_static_yandex_cloud_ydb_v1_MonitoringConfig_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_ydb_v1_MonitoringConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ydb_v1_MonitoringConfig_descriptor,
+        new java.lang.String[] { "Alerts", });
+    internal_static_yandex_cloud_ydb_v1_DedicatedDatabase_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_ydb_v1_DedicatedDatabase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_DedicatedDatabase_descriptor,
         new java.lang.String[] { "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "AssignPublicIps", });
     internal_static_yandex_cloud_ydb_v1_ServerlessDatabase_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_ydb_v1_ServerlessDatabase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_ServerlessDatabase_descriptor,
         new java.lang.String[] { "ThrottlingRcuLimit", "StorageSizeLimit", "EnableThrottlingRcuLimit", "ProvisionedRcuLimit", });
     internal_static_yandex_cloud_ydb_v1_ZonalDatabase_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_ydb_v1_ZonalDatabase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_ZonalDatabase_descriptor,
         new java.lang.String[] { "ZoneId", });
     internal_static_yandex_cloud_ydb_v1_RegionalDatabase_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_ydb_v1_RegionalDatabase_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_RegionalDatabase_descriptor,
         new java.lang.String[] { "RegionId", });
     internal_static_yandex_cloud_ydb_v1_ScalePolicy_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_ydb_v1_ScalePolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_ScalePolicy_descriptor,
@@ -10499,13 +20531,13 @@ public final class DatabaseOuterClass {
         internal_static_yandex_cloud_ydb_v1_ScalePolicy_FixedScale_descriptor,
         new java.lang.String[] { "Size", });
     internal_static_yandex_cloud_ydb_v1_StorageConfig_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_ydb_v1_StorageConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_StorageConfig_descriptor,
         new java.lang.String[] { "StorageOptions", "StorageSizeLimit", });
     internal_static_yandex_cloud_ydb_v1_StorageOption_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_ydb_v1_StorageOption_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_StorageOption_descriptor,

@@ -204,7 +204,7 @@ public final class DiskOuterClass {
 
     /**
      * <pre>
-     * Block size of the disk, specifiedin bytes.
+     * Block size of the disk, specified in bytes.
      * </pre>
      *
      * <code>int64 block_size = 15;</code>
@@ -1184,7 +1184,7 @@ public final class DiskOuterClass {
     private long blockSize_;
     /**
      * <pre>
-     * Block size of the disk, specifiedin bytes.
+     * Block size of the disk, specified in bytes.
      * </pre>
      *
      * <code>int64 block_size = 15;</code>
@@ -3011,7 +3011,7 @@ public final class DiskOuterClass {
       private long blockSize_ ;
       /**
        * <pre>
-       * Block size of the disk, specifiedin bytes.
+       * Block size of the disk, specified in bytes.
        * </pre>
        *
        * <code>int64 block_size = 15;</code>
@@ -3021,7 +3021,7 @@ public final class DiskOuterClass {
       }
       /**
        * <pre>
-       * Block size of the disk, specifiedin bytes.
+       * Block size of the disk, specified in bytes.
        * </pre>
        *
        * <code>int64 block_size = 15;</code>
@@ -3034,7 +3034,7 @@ public final class DiskOuterClass {
       }
       /**
        * <pre>
-       * Block size of the disk, specifiedin bytes.
+       * Block size of the disk, specified in bytes.
        * </pre>
        *
        * <code>int64 block_size = 15;</code>

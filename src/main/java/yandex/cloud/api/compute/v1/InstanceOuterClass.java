@@ -7884,7 +7884,7 @@ public final class InstanceOuterClass {
 
     /**
      * <pre>
-     * Access mode to the Filesystem resource.
+     * Access mode to the filesystem.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystem.Mode mode = 1;</code>
@@ -7892,7 +7892,7 @@ public final class InstanceOuterClass {
     int getModeValue();
     /**
      * <pre>
-     * Access mode to the Filesystem resource.
+     * Access mode to the filesystem.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystem.Mode mode = 1;</code>
@@ -7901,7 +7901,9 @@ public final class InstanceOuterClass {
 
     /**
      * <pre>
-     * Tag of the filesystem that should be detached.
+     * Name of the device representing the filesystem on the instance.
+     * The name should be used for referencing the filesystem from within the instance
+     * when it's being mounted, resized etc.
      * </pre>
      *
      * <code>string device_name = 2;</code>
@@ -7909,7 +7911,9 @@ public final class InstanceOuterClass {
     java.lang.String getDeviceName();
     /**
      * <pre>
-     * Tag of the filesystem that should be detached.
+     * Name of the device representing the filesystem on the instance.
+     * The name should be used for referencing the filesystem from within the instance
+     * when it's being mounted, resized etc.
      * </pre>
      *
      * <code>string device_name = 2;</code>
@@ -8154,7 +8158,7 @@ public final class InstanceOuterClass {
     private int mode_;
     /**
      * <pre>
-     * Access mode to the Filesystem resource.
+     * Access mode to the filesystem.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystem.Mode mode = 1;</code>
@@ -8164,7 +8168,7 @@ public final class InstanceOuterClass {
     }
     /**
      * <pre>
-     * Access mode to the Filesystem resource.
+     * Access mode to the filesystem.
      * </pre>
      *
      * <code>.yandex.cloud.compute.v1.AttachedFilesystem.Mode mode = 1;</code>
@@ -8179,7 +8183,9 @@ public final class InstanceOuterClass {
     private volatile java.lang.Object deviceName_;
     /**
      * <pre>
-     * Tag of the filesystem that should be detached.
+     * Name of the device representing the filesystem on the instance.
+     * The name should be used for referencing the filesystem from within the instance
+     * when it's being mounted, resized etc.
      * </pre>
      *
      * <code>string device_name = 2;</code>
@@ -8198,7 +8204,9 @@ public final class InstanceOuterClass {
     }
     /**
      * <pre>
-     * Tag of the filesystem that should be detached.
+     * Name of the device representing the filesystem on the instance.
+     * The name should be used for referencing the filesystem from within the instance
+     * when it's being mounted, resized etc.
      * </pre>
      *
      * <code>string device_name = 2;</code>
@@ -8598,7 +8606,7 @@ public final class InstanceOuterClass {
       private int mode_ = 0;
       /**
        * <pre>
-       * Access mode to the Filesystem resource.
+       * Access mode to the filesystem.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystem.Mode mode = 1;</code>
@@ -8608,7 +8616,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Access mode to the Filesystem resource.
+       * Access mode to the filesystem.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystem.Mode mode = 1;</code>
@@ -8620,7 +8628,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Access mode to the Filesystem resource.
+       * Access mode to the filesystem.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystem.Mode mode = 1;</code>
@@ -8632,7 +8640,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Access mode to the Filesystem resource.
+       * Access mode to the filesystem.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystem.Mode mode = 1;</code>
@@ -8648,7 +8656,7 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Access mode to the Filesystem resource.
+       * Access mode to the filesystem.
        * </pre>
        *
        * <code>.yandex.cloud.compute.v1.AttachedFilesystem.Mode mode = 1;</code>
@@ -8663,7 +8671,9 @@ public final class InstanceOuterClass {
       private java.lang.Object deviceName_ = "";
       /**
        * <pre>
-       * Tag of the filesystem that should be detached.
+       * Name of the device representing the filesystem on the instance.
+       * The name should be used for referencing the filesystem from within the instance
+       * when it's being mounted, resized etc.
        * </pre>
        *
        * <code>string device_name = 2;</code>
@@ -8682,7 +8692,9 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Tag of the filesystem that should be detached.
+       * Name of the device representing the filesystem on the instance.
+       * The name should be used for referencing the filesystem from within the instance
+       * when it's being mounted, resized etc.
        * </pre>
        *
        * <code>string device_name = 2;</code>
@@ -8702,7 +8714,9 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Tag of the filesystem that should be detached.
+       * Name of the device representing the filesystem on the instance.
+       * The name should be used for referencing the filesystem from within the instance
+       * when it's being mounted, resized etc.
        * </pre>
        *
        * <code>string device_name = 2;</code>
@@ -8719,7 +8733,9 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Tag of the filesystem that should be detached.
+       * Name of the device representing the filesystem on the instance.
+       * The name should be used for referencing the filesystem from within the instance
+       * when it's being mounted, resized etc.
        * </pre>
        *
        * <code>string device_name = 2;</code>
@@ -8732,7 +8748,9 @@ public final class InstanceOuterClass {
       }
       /**
        * <pre>
-       * Tag of the filesystem that should be detached.
+       * Name of the device representing the filesystem on the instance.
+       * The name should be used for referencing the filesystem from within the instance
+       * when it's being mounted, resized etc.
        * </pre>
        *
        * <code>string device_name = 2;</code>

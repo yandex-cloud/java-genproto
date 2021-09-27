@@ -126,6 +126,38 @@ public final class ClusterServiceGrpc {
      return getCreateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Update",
+      requestType = yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod;
+    if ((getUpdateMethod = ClusterServiceGrpc.getUpdateMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getUpdateMethod = ClusterServiceGrpc.getUpdateMethod) == null) {
+          ClusterServiceGrpc.getUpdateMethod = getUpdateMethod = 
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "yandex.cloud.mdb.greenplum.v1.ClusterService", "Update"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+                  .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Update"))
+                  .build();
+          }
+        }
+     }
+     return getUpdateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.GPCS.DeleteClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
 
@@ -382,6 +414,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified Greenplum cluster.
+     * </pre>
+     */
+    public void update(yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified Greenplum cluster.
      * </pre>
      */
@@ -463,6 +505,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
+          .addMethod(
+            getUpdateMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE)))
           .addMethod(
             getDeleteMethod(),
             asyncUnaryCall(
@@ -563,6 +612,17 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the specified Greenplum cluster.
+     * </pre>
+     */
+    public void update(yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -687,6 +747,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified Greenplum cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified Greenplum cluster.
      * </pre>
      */
@@ -804,6 +874,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Updates the specified Greenplum cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
+        yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes the specified Greenplum cluster.
      * </pre>
      */
@@ -872,12 +953,13 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_GET = 0;
   private static final int METHODID_LIST = 1;
   private static final int METHODID_CREATE = 2;
-  private static final int METHODID_DELETE = 3;
-  private static final int METHODID_START = 4;
-  private static final int METHODID_STOP = 5;
-  private static final int METHODID_LIST_OPERATIONS = 6;
-  private static final int METHODID_LIST_MASTER_HOSTS = 7;
-  private static final int METHODID_LIST_SEGMENT_HOSTS = 8;
+  private static final int METHODID_UPDATE = 3;
+  private static final int METHODID_DELETE = 4;
+  private static final int METHODID_START = 5;
+  private static final int METHODID_STOP = 6;
+  private static final int METHODID_LIST_OPERATIONS = 7;
+  private static final int METHODID_LIST_MASTER_HOSTS = 8;
+  private static final int METHODID_LIST_SEGMENT_HOSTS = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -906,6 +988,10 @@ public final class ClusterServiceGrpc {
           break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.mdb.greenplum.v1.GPCS.CreateClusterRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE:
+          serviceImpl.update((yandex.cloud.api.mdb.greenplum.v1.GPCS.UpdateClusterRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE:
@@ -996,6 +1082,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getGetMethod())
               .addMethod(getListMethod())
               .addMethod(getCreateMethod())
+              .addMethod(getUpdateMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getStartMethod())
               .addMethod(getStopMethod())
